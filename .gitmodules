@@ -1,0 +1,3 @@
+[submodule "sierra-core"]
+	path = sierra-core
+	url = git@github.com:hivdb/sierra-core.git

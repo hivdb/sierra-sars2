@@ -1,0 +1,2 @@
+include 'sierra-core'
+rootProject.name = 'Sierra-SARS2'
