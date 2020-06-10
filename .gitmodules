@@ -1,3 +1,6 @@
 [submodule "sierra-core"]
 	path = sierra-core
 	url = git@github.com:hivdb/sierra-core.git
+[submodule "asi_interpreter"]
+	path = asi_interpreter
+	url = git@github.com:hivdb/asi_interpreter.git

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE ALGORITHM SYSTEM "https://cms.hivdb.org/prod/downloads/asi/ASI2.2.dtd">
+<ALGORITHM>
+  <ALGNAME>Stanford-SARS2</ALGNAME>
+  <ALGVERSION>0.1</ALGVERSION>
+  <ALGDATE>2020-06-09</ALGDATE>
+  <DEFINITIONS>
+    <GENE_DEFINITION>
+      <NAME>RdRP</NAME>
+      <DRUGCLASSLIST>Unknown</DRUGCLASSLIST>
+    </GENE_DEFINITION>
+    <GENE_DEFINITION>
+      <NAME>S</NAME>
+      <DRUGCLASSLIST>Unknown</DRUGCLASSLIST>
+    </GENE_DEFINITION>
+    <LEVEL_DEFINITION>
+      <ORDER>1</ORDER>
+      <ORIGINAL>Susceptible</ORIGINAL>
+      <SIR>S</SIR>
+    </LEVEL_DEFINITION>
+    <LEVEL_DEFINITION>
+      <ORDER>2</ORDER>
+      <ORIGINAL>Potential Low-Level Resistance</ORIGINAL>
+      <SIR>S</SIR>
+    </LEVEL_DEFINITION>
+    <LEVEL_DEFINITION>
+      <ORDER>3</ORDER>
+      <ORIGINAL>Low-Level Resistance</ORIGINAL>
+      <SIR>I</SIR>
+    </LEVEL_DEFINITION>
+    <LEVEL_DEFINITION>
+      <ORDER>4</ORDER>
+      <ORIGINAL>Intermediate Resistance</ORIGINAL>
+      <SIR>I</SIR>
+    </LEVEL_DEFINITION>
+    <LEVEL_DEFINITION>
+      <ORDER>5</ORDER>
+      <ORIGINAL>High-Level Resistance</ORIGINAL>
+      <SIR>R</SIR>
+    </LEVEL_DEFINITION>
+    <DRUGCLASS>
+      <NAME>Unknown</NAME>
+      <DRUGLIST>UnknownDrug</DRUGLIST>
+    </DRUGCLASS>
+    <GLOBALRANGE><![CDATA[(-INF TO 9 => 1,  10 TO 14 => 2,  15 TO 29 => 3,  30 TO 59 => 4,  60 TO INF => 5)]]></GLOBALRANGE>
+    <COMMENT_DEFINITIONS/>
+  </DEFINITIONS>
+  <DRUG>
+    <NAME>UnknownDrug</NAME>
+    <FULLNAME>unknown drug</FULLNAME>
+  </DRUG>
+  <MUTATION_COMMENTS/>
+  <RESULT_COMMENTS/>
+</ALGORITHM>
