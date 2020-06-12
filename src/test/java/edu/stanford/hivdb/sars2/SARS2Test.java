@@ -42,6 +42,7 @@ public class SARS2Test {
 		assertEquals("S", genes.get(1).getAbstractGene());
 		assertEquals("SARS2RdRP", genes.get(0).getName());
 		assertEquals("SARS2S", genes.get(1).getName());
+		assertEquals(2L, virusIns.getGenes(virusIns.getMainStrain()).size());
 	}
 	
 	@Test

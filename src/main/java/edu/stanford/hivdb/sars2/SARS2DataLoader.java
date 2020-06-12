@@ -27,6 +27,7 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
@@ -350,7 +351,7 @@ public class SARS2DataLoader<T extends Virus<T>> {
 			genes.values()
 			.stream()
 			.filter(gene -> gene.getStrain() == strain)
-			.collect(Collectors.toList())
+			.collect(Collectors.toCollection(LinkedHashSet::new))
 		);
 	}
 	

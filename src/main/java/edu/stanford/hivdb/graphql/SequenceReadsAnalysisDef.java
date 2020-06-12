@@ -67,7 +67,9 @@ public class SequenceReadsAnalysisDef {
 			if (subtypeResult == null) {
 				return Collections.emptyList();
 			}
-			return subtypeResult.getAllMatches().subList(0, first);
+			List<BoundGenotype<VirusT>> matches = subtypeResult.getAllMatches();
+			first = Math.min(first, matches.size());
+			return matches.subList(0, first);
 		};
 	};
 
