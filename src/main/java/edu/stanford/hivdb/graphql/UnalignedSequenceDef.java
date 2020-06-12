@@ -36,7 +36,7 @@ import static graphql.schema.GraphQLInputObjectType.newInputObject;
 
 public class UnalignedSequenceDef {
 
-	private static final int MAXIMUM_SEQUENCE_SIZE = 15000;
+	private static final int MAXIMUM_SEQUENCE_SIZE = 100000;
 
 	public static List<Sequence> toSequenceList(List<Map<String, String>> input) {
 		if (input == null) {

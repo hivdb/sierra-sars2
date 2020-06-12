@@ -67,7 +67,9 @@ public class SequenceAnalysisDef {
 			if (subtypeResult == null) {
 				return Collections.emptyList();
 			}
-			List<BoundGenotype<VirusT>> subtypes = subtypeResult.getAllMatches().subList(0, first);
+			List<BoundGenotype<VirusT>> matches = subtypeResult.getAllMatches();
+			first = Math.min(first, matches.size());
+			List<BoundGenotype<VirusT>> subtypes = matches.subList(0, first);
 			return subtypes
 			.stream()
 			.map(g -> {
@@ -91,7 +93,9 @@ public class SequenceAnalysisDef {
 			if (subtypeResult == null) {
 				return Collections.emptyList();
 			}
-			return subtypeResult.getAllMatches().subList(0, first);
+			List<BoundGenotype<VirusT>> matches = subtypeResult.getAllMatches();
+			first = Math.min(first, matches.size());
+			return matches.subList(0, first);
 		};
 	};
 
@@ -258,7 +262,7 @@ public class SequenceAnalysisDef {
 				.argument(arg -> arg
 					.name("algorithm")
 					.type(oASIAlgorithm.get(virusName))
-					.defaultValue(Virus.getInstance(virusName).getLatestDrugResistAlgorithm("HIVDB").getName())
+					.defaultValue(Virus.getInstance(virusName).getDefaultDrugResistAlgorithm().getName())
 					.description("One of the built-in ASI algorithms."))
 				.description("List of drug resistance results by genes."))
 			.field(field -> field

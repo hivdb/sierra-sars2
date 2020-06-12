@@ -76,7 +76,7 @@ public class DrugResistanceAlgorithmDef {
 
 	public static <VirusT extends Virus<VirusT>> DataFetcher<DrugResistanceAlgorithm<VirusT>> makeCurrentHIVDBVersionFetcher(VirusT virusIns) {
 		return env -> {
-			DrugResistanceAlgorithm<VirusT> latestAlg = virusIns.getLatestDrugResistAlgorithm("HIVDB");
+			DrugResistanceAlgorithm<VirusT> latestAlg = virusIns.getDefaultDrugResistAlgorithm();
 			return latestAlg;
 		};
 	};

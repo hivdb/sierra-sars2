@@ -306,7 +306,7 @@ public class SequenceReadsAnalysisDef {
 				.argument(arg -> arg
 					.name("algorithm")
 					.type(oASIAlgorithm.get(virusName))
-					.defaultValue(Virus.getInstance(virusName).getLatestDrugResistAlgorithm("HIVDB").getName())
+					.defaultValue(Virus.getInstance(virusName).getDefaultDrugResistAlgorithm().getName())
 					.description("One of the built-in ASI algorithms."))
 				.description("List of drug resistance results by genes."))
 			.field(oSeqReadsHistogramBuilder)

@@ -17,7 +17,7 @@ dev: build
 	@docker run \
 		--name=hivdb-sierra-sars2-dev \
 		--volume ~/.aws:/root/.aws:ro \
-		--env NUCAMINO_AWS_LAMBDA=nucamino:3 \
+		--env NUCAMINO_AWS_LAMBDA=nucamino-align-with:5 \
 		--rm -it --publish=8113:8080 ${DOCKERREPO} dev
 
 release: build

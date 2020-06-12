@@ -240,7 +240,7 @@ public class SARS2DefaultSequenceValidator implements SequenceValidator<SARS2> {
 			rightIgnored = Math.max(rightIgnored, geneSeq.getLastNA());
 		}
 		rightIgnored = alignedSequence.getInputSequence().getLength() - rightIgnored;
-		if (!availableGenes.contains(strain.getGene("PR")) && leftIgnored > 210) {
+		/*if (!availableGenes.contains(strain.getGene("PR")) && leftIgnored > 210) {
 			discardedGenes.add(strain.getGene("PR"));
 		}
 		if (!availableGenes.contains(strain.getGene("RT")) && leftIgnored > 800) {
@@ -250,7 +250,7 @@ public class SARS2DefaultSequenceValidator implements SequenceValidator<SARS2> {
 		}
 		if (!availableGenes.contains(strain.getGene("IN")) && rightIgnored > 600) {
 			discardedGenes.add(strain.getGene("IN"));
-		}
+		}*/
 		if (!discardedGenes.isEmpty()) {
 			String textDiscardedGenes = discardedGenes
 				.stream().map(g -> g.getName())
@@ -262,13 +262,13 @@ public class SARS2DefaultSequenceValidator implements SequenceValidator<SARS2> {
 
 	protected static List<ValidationResult> validateSequenceSize(AlignedSequence<SARS2> alignedSequence) {
 		int size;
-		AlignedGeneSeq<?> geneSeq;
+		/* AlignedGeneSeq<?> geneSeq;
 		int[] muchTooShortSize = new int[] {60, 150, 100};
 		int[] tooShortSize = new int[] {80, 200, 200};
-		String[] geneNames = new String[] {"PR", "RT", "IN"};
+		String[] geneNames = new String[] {"PR", "RT", "IN"}; */
 		List<ValidationResult> result = new ArrayList<>();
 		
-		for (int i = 0; i < 3; i ++) {
+		/*for (int i = 0; i < 3; i ++) {
 			geneSeq = alignedSequence.getAlignedGeneSequence(geneNames[i]);
 			if (geneSeq != null) {
 				size = geneSeq.getSize();
@@ -278,7 +278,7 @@ public class SARS2DefaultSequenceValidator implements SequenceValidator<SARS2> {
 					result.add(newValidationResult("sequence-too-short", geneNames[i], size));
 				}
 			}
-		}
+		}*/
 		return result;
 	}
 

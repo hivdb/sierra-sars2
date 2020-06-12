@@ -3,6 +3,7 @@
     "name": "SARS2",
     "ordinal": 1,
     "displayText": "SARS-CoV-2",
+    "absoluteFirstNA": "1",
     "nucaminoStopCodonPenalty": 4,
     "nucaminoGapOpeningPenalty": 10,
     "nucaminoGapExtensionPenalty": 2,

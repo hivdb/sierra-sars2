@@ -43,7 +43,6 @@
       <DRUGLIST>UnknownDrug</DRUGLIST>
     </DRUGCLASS>
     <GLOBALRANGE><![CDATA[(-INF TO 9 => 1,  10 TO 14 => 2,  15 TO 29 => 3,  30 TO 59 => 4,  60 TO INF => 5)]]></GLOBALRANGE>
-    <COMMENT_DEFINITIONS/>
   </DEFINITIONS>
   <DRUG>
     <NAME>UnknownDrug</NAME>

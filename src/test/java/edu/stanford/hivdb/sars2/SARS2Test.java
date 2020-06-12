@@ -9,6 +9,7 @@ import org.junit.Test;
 
 import com.google.common.collect.Lists;
 
+import edu.stanford.hivdb.graphql.SierraSchema;
 import edu.stanford.hivdb.mutations.FrameShift;
 import edu.stanford.hivdb.mutations.MutationSet;
 import edu.stanford.hivdb.sequences.AlignedSequence;
@@ -16,6 +17,8 @@ import edu.stanford.hivdb.sequences.NucAminoAligner;
 import edu.stanford.hivdb.sequences.Sequence;
 import edu.stanford.hivdb.utilities.FastaUtils;
 import edu.stanford.hivdb.viruses.Gene;
+import graphql.GraphQL;
+import graphql.schema.GraphQLSchema;
 
 public class SARS2Test {
 	
@@ -66,6 +69,12 @@ public class SARS2Test {
 			1, alignedSeq.getAlignedGeneSequence("S").getFirstAA());
 		assertEquals(
 			1273, alignedSeq.getAlignedGeneSequence("S").getLastAA());
+	}
+	
+	@Test
+	public void testBuildGraphQLSchema() {
+		GraphQLSchema schema = SierraSchema.makeSchema(SARS2.getInstance());
+		GraphQL.newGraphQL(schema).build();
 	}
 	
 }

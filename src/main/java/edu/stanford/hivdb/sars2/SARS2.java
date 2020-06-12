@@ -317,5 +317,10 @@ public class SARS2 implements Virus<SARS2> {
 		// SARS2 instance is a singleton
 		return false;
 	}
+	
+	@Override
+	public DrugResistanceAlgorithm<SARS2> getDefaultDrugResistAlgorithm() {
+		return getLatestDrugResistAlgorithm("Stanford-SARS2");
+	}
 
 }

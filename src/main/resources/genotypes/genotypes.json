@@ -1,1 +1,11 @@
-{}
+{
+  "U": {
+    "classificationLevel": null,
+    "displayName": "Unknown",
+    "distanceUpperLimit": 0.0,
+    "isSimpleCRF": false,
+    "name": "U",
+    "parentGenotypes": null,
+    "regions": null
+  }
+}
