@@ -6,6 +6,9 @@ plugins {
 
 version = '3.0.5a1'
 
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
 repositories {
     mavenCentral()
     maven {
