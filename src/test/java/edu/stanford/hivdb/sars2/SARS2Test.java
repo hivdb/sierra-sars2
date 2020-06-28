@@ -11,6 +11,7 @@ import com.google.common.collect.Lists;
 
 import edu.stanford.hivdb.graphql.SierraSchema;
 import edu.stanford.hivdb.mutations.FrameShift;
+import edu.stanford.hivdb.mutations.Mutation;
 import edu.stanford.hivdb.mutations.MutationSet;
 import edu.stanford.hivdb.sequences.AlignedSequence;
 import edu.stanford.hivdb.sequences.NucAminoAligner;
@@ -76,6 +77,12 @@ public class SARS2Test {
 	public void testBuildGraphQLSchema() {
 		GraphQLSchema schema = SierraSchema.makeSchema(SARS2.getInstance());
 		GraphQL.newGraphQL(schema).build();
+	}
+	
+	@Test
+	public void testUnusualMutation() {
+		Mutation<SARS2> mutation = virusIns.parseMutationString("RdRP:164V");
+		assertTrue(mutation.isUnusual());
 	}
 	
 }
