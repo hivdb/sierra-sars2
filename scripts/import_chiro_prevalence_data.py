@@ -4,7 +4,7 @@ import sys
 import json
 
 
-def postprocess_sars2(data, all_data):
+def postprocess(data, all_data):
     usual_aas = set()
     for rows in all_data:
         for row in rows:
@@ -48,7 +48,6 @@ DIST_FILE_CONFIGS = [
         'taxonomy': 'SARS2',
         'unusual_cutoff': 0.01,
         'genes': {'S', 'RdRP'},
-        'postprocess': postprocess_sars2
     },
     {
         'filename': 'rx-all_taxon-SARS.json',
@@ -61,6 +60,7 @@ DIST_FILE_CONFIGS = [
         'taxonomy': 'SARSr+NC_004718+NC_045512',
         'unusual_cutoff': 0.02,
         'genes': {'S', 'RdRP'},
+        'postprocess': lambda data, all_data: postprocess(data, all_data[1:])
     },
 ]
 JSON_PREFIX = 'prevalence.with-mixtures.'

@@ -71,6 +71,7 @@ public class GeneSequenceReadsDef {
 				coordinates("GeneSequenceReads", "mutations"),
 				new MutationSetDataFetcher<>(virusIns, "mutations")
 			)
+			.dataFetchers(seqReadsHistogramCodeRegistry)
 			.build()
 		);
 	}

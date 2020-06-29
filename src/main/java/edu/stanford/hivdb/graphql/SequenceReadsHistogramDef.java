@@ -2,6 +2,8 @@ package edu.stanford.hivdb.graphql;
 
 import graphql.schema.*;
 import graphql.schema.GraphQLFieldDefinition.Builder;
+import static graphql.schema.GraphQLCodeRegistry.newCodeRegistry;
+import static graphql.schema.FieldCoordinates.coordinates;
 
 import static graphql.Scalars.*;
 import static graphql.schema.GraphQLObjectType.newObject;
@@ -12,6 +14,7 @@ import java.util.function.UnaryOperator;
 
 import edu.stanford.hivdb.seqreads.SequenceReadsHistogram;
 import edu.stanford.hivdb.seqreads.SequenceReadsHistogram.AggregationOption;
+import edu.stanford.hivdb.seqreads.SequenceReadsHistogram.HistogramBin;
 import edu.stanford.hivdb.seqreads.SequenceReadsHistogram.WithSequenceReadsHistogram;
 
 public class SequenceReadsHistogramDef {
@@ -39,6 +42,19 @@ public class SequenceReadsHistogramDef {
 				cumulative, aggBy);
 		}
 	};
+	
+	private static DataFetcher<List<HistogramBin>> seqReadsHistogramUsualSitesByDataFetcher = env -> {
+		SequenceReadsHistogram<?> histogram = env.getSource();
+		String treatment = env.getArgument("treatment");
+		String subtype = env.getArgument("subtype");
+		return histogram.getUsualSites(treatment, subtype);
+	};
+	
+	public static GraphQLCodeRegistry seqReadsHistogramCodeRegistry = newCodeRegistry()
+		.dataFetcher(
+			coordinates("SequenceReadsHistogram", "usualSitesBy"),
+			seqReadsHistogramUsualSitesByDataFetcher
+		).build();
 	
 	static {
 		GraphQLEnumType.Builder newEnumAggregatesOption =
@@ -73,6 +89,20 @@ public class SequenceReadsHistogramDef {
 			.type(new GraphQLList(oSeqReadsHistogramBin))
 			.name("usualSites")
 			.description("Usual sites histogram data."))
+		.field(field -> field
+			.type(new GraphQLList(oSeqReadsHistogramBin))
+			.name("usualSitesBy")
+			.argument(arg -> arg
+				.type(GraphQLString)
+				.name("treatment")
+				.defaultValue("all")
+				.description("Specify treatment group."))
+			.argument(arg -> arg
+				.type(GraphQLString)
+				.name("subtype")
+				.defaultValue("all")
+				.description("Specify subtype group."))
+			.description("Usual sites histogram data. This attribute allows to specify the group of treatment and subtype."))
 		.field(field -> field
 			.type(new GraphQLList(oSeqReadsHistogramBin))
 			.name("drmSites")
