@@ -4,6 +4,15 @@ import sys
 import json
 
 
+def sort_posaas(posaas):
+    genes = ['RdRP', 'S']
+    return sorted(posaas, key=lambda r: (
+        genes.index(r['gene']),
+        r['position'],
+        r['aa']
+    ))
+
+
 def postprocess(data, all_data):
     usual_aas = set()
     for rows in all_data:
@@ -36,10 +45,7 @@ def postprocess(data, all_data):
                 'reason': 'IN_SIMILAR_VIRUS',
                 'isUnusual': False
             })
-    return sorted(
-        posaamap.values(),
-        key=lambda r: (r['gene'], r['position'], r['aa'])
-    )
+    return list(posaamap.values())
 
 
 DIST_FILE_CONFIGS = [
@@ -63,7 +69,7 @@ DIST_FILE_CONFIGS = [
         'postprocess': lambda data, all_data: postprocess(data, all_data[1:])
     },
 ]
-JSON_PREFIX = 'prevalence.with-mixtures.'
+JSON_PREFIX = 'prevalence.with-mixtures.verbose.'
 
 
 def export_compat_data(data, output_config):
@@ -121,6 +127,7 @@ def main():
         postprocess = config.get('postprocess')
         if postprocess:
             output = postprocess(output, all_outputs)
+        output = sort_posaas(output)
         with open(
             os.path.join(outdir, config['filename']),
             'w'

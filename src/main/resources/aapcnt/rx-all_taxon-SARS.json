@@ -52,22 +52,22 @@
   {
     "gene": "RdRP",
     "position": 6,
-    "aa": "T",
-    "percent": 0.9966887417218543,
-    "count": 301,
-    "total": 302,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "RdRP",
-    "position": 6,
     "aa": "N",
     "percent": 0.0033112582781456954,
     "count": 1,
     "total": 302,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "RdRP",
+    "position": 6,
+    "aa": "T",
+    "percent": 0.9966887417218543,
+    "count": 301,
+    "total": 302,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "RdRP",
@@ -92,16 +92,6 @@
   {
     "gene": "RdRP",
     "position": 8,
-    "aa": "L",
-    "percent": 0.9966887417218543,
-    "count": 301,
-    "total": 302,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "RdRP",
-    "position": 8,
     "aa": "F",
     "percent": 0.0033112582781456954,
     "count": 1,
@@ -111,8 +101,8 @@
   },
   {
     "gene": "RdRP",
-    "position": 9,
-    "aa": "N",
+    "position": 8,
+    "aa": "L",
     "percent": 0.9966887417218543,
     "count": 301,
     "total": 302,
@@ -128,6 +118,16 @@
     "total": 302,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "RdRP",
+    "position": 9,
+    "aa": "N",
+    "percent": 0.9966887417218543,
+    "count": 301,
+    "total": 302,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "RdRP",
@@ -492,22 +492,22 @@
   {
     "gene": "RdRP",
     "position": 42,
-    "aa": "V",
-    "percent": 0.9934640522875817,
-    "count": 304,
-    "total": 306,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "RdRP",
-    "position": 42,
     "aa": "S",
     "percent": 0.006535947712418301,
     "count": 2,
     "total": 306,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "RdRP",
+    "position": 42,
+    "aa": "V",
+    "percent": 0.9934640522875817,
+    "count": 304,
+    "total": 306,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "RdRP",
@@ -982,22 +982,22 @@
   {
     "gene": "RdRP",
     "position": 90,
-    "aa": "V",
-    "percent": 0.9934640522875817,
-    "count": 304,
-    "total": 306,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "RdRP",
-    "position": 90,
     "aa": "I",
     "percent": 0.006535947712418301,
     "count": 2,
     "total": 306,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "RdRP",
+    "position": 90,
+    "aa": "V",
+    "percent": 0.9934640522875817,
+    "count": 304,
+    "total": 306,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "RdRP",
@@ -1842,22 +1842,22 @@
   {
     "gene": "RdRP",
     "position": 174,
-    "aa": "V",
-    "percent": 0.9967320261437909,
-    "count": 305,
-    "total": 306,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "RdRP",
-    "position": 174,
     "aa": "I",
     "percent": 0.0032679738562091504,
     "count": 1,
     "total": 306,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "RdRP",
+    "position": 174,
+    "aa": "V",
+    "percent": 0.9967320261437909,
+    "count": 305,
+    "total": 306,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "RdRP",
@@ -2372,22 +2372,22 @@
   {
     "gene": "RdRP",
     "position": 223,
-    "aa": "V",
-    "percent": 0.9901960784313726,
-    "count": 303,
-    "total": 306,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "RdRP",
-    "position": 223,
     "aa": "E",
     "percent": 0.00980392156862745,
     "count": 3,
     "total": 306,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "RdRP",
+    "position": 223,
+    "aa": "V",
+    "percent": 0.9901960784313726,
+    "count": 303,
+    "total": 306,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "RdRP",
@@ -2662,9 +2662,9 @@
   {
     "gene": "RdRP",
     "position": 248,
-    "aa": "T",
-    "percent": 0.9868421052631579,
-    "count": 300,
+    "aa": "I",
+    "percent": 0.013157894736842105,
+    "count": 4,
     "total": 304,
     "reason": "PCNT",
     "isUnusual": false
@@ -2672,9 +2672,9 @@
   {
     "gene": "RdRP",
     "position": 248,
-    "aa": "I",
-    "percent": 0.013157894736842105,
-    "count": 4,
+    "aa": "T",
+    "percent": 0.9868421052631579,
+    "count": 300,
     "total": 304,
     "reason": "PCNT",
     "isUnusual": false
@@ -2832,22 +2832,22 @@
   {
     "gene": "RdRP",
     "position": 261,
-    "aa": "L",
-    "percent": 0.9901639344262295,
-    "count": 302,
-    "total": 305,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "RdRP",
-    "position": 261,
     "aa": "F",
     "percent": 0.006557377049180328,
     "count": 2,
     "total": 305,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "RdRP",
+    "position": 261,
+    "aa": "L",
+    "percent": 0.9901639344262295,
+    "count": 302,
+    "total": 305,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "RdRP",
@@ -3082,7 +3082,7 @@
   {
     "gene": "RdRP",
     "position": 272,
-    "aa": "d",
+    "aa": "N",
     "percent": 0.003278688524590164,
     "count": 1,
     "total": 305,
@@ -3092,7 +3092,7 @@
   {
     "gene": "RdRP",
     "position": 272,
-    "aa": "N",
+    "aa": "d",
     "percent": 0.003278688524590164,
     "count": 1,
     "total": 305,
@@ -4432,6 +4432,16 @@
   {
     "gene": "RdRP",
     "position": 338,
+    "aa": "A",
+    "percent": 0.0032679738562091504,
+    "count": 1,
+    "total": 306,
+    "reason": "PCNT",
+    "isUnusual": true
+  },
+  {
+    "gene": "RdRP",
+    "position": 338,
     "aa": "V",
     "percent": 0.9934640522875817,
     "count": 304,
@@ -4443,16 +4453,6 @@
     "gene": "RdRP",
     "position": 338,
     "aa": "d",
-    "percent": 0.0032679738562091504,
-    "count": 1,
-    "total": 306,
-    "reason": "PCNT",
-    "isUnusual": true
-  },
-  {
-    "gene": "RdRP",
-    "position": 338,
-    "aa": "A",
     "percent": 0.0032679738562091504,
     "count": 1,
     "total": 306,
@@ -4572,22 +4572,22 @@
   {
     "gene": "RdRP",
     "position": 347,
-    "aa": "H",
-    "percent": 0.9902912621359223,
-    "count": 306,
-    "total": 309,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "RdRP",
-    "position": 347,
     "aa": "D",
     "percent": 0.003236245954692557,
     "count": 1,
     "total": 309,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "RdRP",
+    "position": 347,
+    "aa": "H",
+    "percent": 0.9902912621359223,
+    "count": 306,
+    "total": 309,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "RdRP",
@@ -5982,22 +5982,22 @@
   {
     "gene": "RdRP",
     "position": 483,
-    "aa": "Y",
-    "percent": 0.9967213114754099,
-    "count": 304,
-    "total": 305,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "RdRP",
-    "position": 483,
     "aa": "H",
     "percent": 0.003278688524590164,
     "count": 1,
     "total": 305,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "RdRP",
+    "position": 483,
+    "aa": "Y",
+    "percent": 0.9967213114754099,
+    "count": 304,
+    "total": 305,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "RdRP",
@@ -6592,22 +6592,22 @@
   {
     "gene": "RdRP",
     "position": 541,
-    "aa": "Q",
-    "percent": 0.9901639344262295,
-    "count": 302,
-    "total": 305,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "RdRP",
-    "position": 541,
     "aa": "L",
     "percent": 0.009836065573770493,
     "count": 3,
     "total": 305,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "RdRP",
+    "position": 541,
+    "aa": "Q",
+    "percent": 0.9901639344262295,
+    "count": 302,
+    "total": 305,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "RdRP",
@@ -7032,22 +7032,22 @@
   {
     "gene": "RdRP",
     "position": 583,
-    "aa": "R",
-    "percent": 0.996742671009772,
-    "count": 306,
-    "total": 307,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "RdRP",
-    "position": 583,
     "aa": "K",
     "percent": 0.003257328990228013,
     "count": 1,
     "total": 307,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "RdRP",
+    "position": 583,
+    "aa": "R",
+    "percent": 0.996742671009772,
+    "count": 306,
+    "total": 307,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "RdRP",
@@ -7672,22 +7672,22 @@
   {
     "gene": "RdRP",
     "position": 644,
-    "aa": "T",
-    "percent": 0.996742671009772,
-    "count": 306,
-    "total": 307,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "RdRP",
-    "position": 644,
     "aa": "S",
     "percent": 0.003257328990228013,
     "count": 1,
     "total": 307,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "RdRP",
+    "position": 644,
+    "aa": "T",
+    "percent": 0.996742671009772,
+    "count": 306,
+    "total": 307,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "RdRP",
@@ -7722,22 +7722,22 @@
   {
     "gene": "RdRP",
     "position": 647,
-    "aa": "N",
-    "percent": 0.9967320261437909,
-    "count": 305,
-    "total": 306,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "RdRP",
-    "position": 647,
     "aa": "K",
     "percent": 0.0032679738562091504,
     "count": 1,
     "total": 306,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "RdRP",
+    "position": 647,
+    "aa": "N",
+    "percent": 0.9967320261437909,
+    "count": 305,
+    "total": 306,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "RdRP",
@@ -8602,22 +8602,22 @@
   {
     "gene": "RdRP",
     "position": 733,
-    "aa": "R",
-    "percent": 0.9967320261437909,
-    "count": 305,
-    "total": 306,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "RdRP",
-    "position": 733,
     "aa": "M",
     "percent": 0.0032679738562091504,
     "count": 1,
     "total": 306,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "RdRP",
+    "position": 733,
+    "aa": "R",
+    "percent": 0.9967320261437909,
+    "count": 305,
+    "total": 306,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "RdRP",
@@ -9362,22 +9362,22 @@
   {
     "gene": "RdRP",
     "position": 805,
-    "aa": "L",
-    "percent": 0.9967320261437909,
-    "count": 305,
-    "total": 306,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "RdRP",
-    "position": 805,
     "aa": "F",
     "percent": 0.0032679738562091504,
     "count": 1,
     "total": 306,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "RdRP",
+    "position": 805,
+    "aa": "L",
+    "percent": 0.9967320261437909,
+    "count": 305,
+    "total": 306,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "RdRP",
@@ -9602,22 +9602,22 @@
   {
     "gene": "RdRP",
     "position": 828,
-    "aa": "Y",
-    "percent": 0.9967320261437909,
-    "count": 305,
-    "total": 306,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "RdRP",
-    "position": 828,
     "aa": "H",
     "percent": 0.0032679738562091504,
     "count": 1,
     "total": 306,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "RdRP",
+    "position": 828,
+    "aa": "Y",
+    "percent": 0.9967320261437909,
+    "count": 305,
+    "total": 306,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "RdRP",
@@ -10052,22 +10052,22 @@
   {
     "gene": "RdRP",
     "position": 870,
-    "aa": "T",
-    "percent": 0.9967320261437909,
-    "count": 305,
-    "total": 306,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "RdRP",
-    "position": 870,
     "aa": "I",
     "percent": 0.0032679738562091504,
     "count": 1,
     "total": 306,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "RdRP",
+    "position": 870,
+    "aa": "T",
+    "percent": 0.9967320261437909,
+    "count": 305,
+    "total": 306,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "RdRP",
@@ -10152,22 +10152,22 @@
   {
     "gene": "RdRP",
     "position": 879,
-    "aa": "D",
-    "percent": 0.9967320261437909,
-    "count": 305,
-    "total": 306,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "RdRP",
-    "position": 879,
     "aa": "A",
     "percent": 0.0032679738562091504,
     "count": 1,
     "total": 306,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "RdRP",
+    "position": 879,
+    "aa": "D",
+    "percent": 0.9967320261437909,
+    "count": 305,
+    "total": 306,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "RdRP",
@@ -10272,22 +10272,22 @@
   {
     "gene": "RdRP",
     "position": 889,
-    "aa": "R",
-    "percent": 0.9967320261437909,
-    "count": 305,
-    "total": 306,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "RdRP",
-    "position": 889,
     "aa": "K",
     "percent": 0.0032679738562091504,
     "count": 1,
     "total": 306,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "RdRP",
+    "position": 889,
+    "aa": "R",
+    "percent": 0.9967320261437909,
+    "count": 305,
+    "total": 306,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "RdRP",
@@ -10722,6 +10722,16 @@
   {
     "gene": "S",
     "position": 1,
+    "aa": "K",
+    "percent": 0.002109704641350211,
+    "count": 1,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 1,
     "aa": "M",
     "percent": 0.9978902953586498,
     "count": 473,
@@ -10731,8 +10741,8 @@
   },
   {
     "gene": "S",
-    "position": 1,
-    "aa": "K",
+    "position": 2,
+    "aa": "A",
     "percent": 0.002109704641350211,
     "count": 1,
     "total": 474,
@@ -10755,16 +10765,6 @@
     "aa": "L",
     "percent": 0.004219409282700422,
     "count": 2,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": true
-  },
-  {
-    "gene": "S",
-    "position": 2,
-    "aa": "A",
-    "percent": 0.002109704641350211,
-    "count": 1,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
@@ -10812,22 +10812,22 @@
   {
     "gene": "S",
     "position": 5,
-    "aa": "L",
-    "percent": 0.9978902953586498,
-    "count": 473,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 5,
     "aa": "I",
     "percent": 0.002109704641350211,
     "count": 1,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 5,
+    "aa": "L",
+    "percent": 0.9978902953586498,
+    "count": 473,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -10862,12 +10862,12 @@
   {
     "gene": "S",
     "position": 8,
-    "aa": "L",
-    "percent": 0.9873417721518988,
-    "count": 468,
+    "aa": "A",
+    "percent": 0.002109704641350211,
+    "count": 1,
     "total": 474,
     "reason": "PCNT",
-    "isUnusual": false
+    "isUnusual": true
   },
   {
     "gene": "S",
@@ -10882,12 +10882,12 @@
   {
     "gene": "S",
     "position": 8,
-    "aa": "A",
-    "percent": 0.002109704641350211,
-    "count": 1,
+    "aa": "L",
+    "percent": 0.9873417721518988,
+    "count": 468,
     "total": 474,
     "reason": "PCNT",
-    "isUnusual": true
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -10932,12 +10932,12 @@
   {
     "gene": "S",
     "position": 12,
-    "aa": "S",
-    "percent": 0.9831223628691983,
-    "count": 466,
+    "aa": "N",
+    "percent": 0.002109704641350211,
+    "count": 1,
     "total": 474,
     "reason": "PCNT",
-    "isUnusual": false
+    "isUnusual": true
   },
   {
     "gene": "S",
@@ -10952,12 +10952,12 @@
   {
     "gene": "S",
     "position": 12,
-    "aa": "N",
-    "percent": 0.002109704641350211,
-    "count": 1,
+    "aa": "S",
+    "percent": 0.9831223628691983,
+    "count": 466,
     "total": 474,
     "reason": "PCNT",
-    "isUnusual": true
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -10992,22 +10992,22 @@
   {
     "gene": "S",
     "position": 15,
-    "aa": "L",
-    "percent": 0.9978902953586498,
-    "count": 473,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 15,
     "aa": "I",
     "percent": 0.002109704641350211,
     "count": 1,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 15,
+    "aa": "L",
+    "percent": 0.9978902953586498,
+    "count": 473,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -11032,22 +11032,22 @@
   {
     "gene": "S",
     "position": 17,
-    "aa": "R",
-    "percent": 0.9978902953586498,
-    "count": 473,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 17,
     "aa": "K",
     "percent": 0.002109704641350211,
     "count": 1,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 17,
+    "aa": "R",
+    "percent": 0.9978902953586498,
+    "count": 473,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -11062,12 +11062,12 @@
   {
     "gene": "S",
     "position": 19,
-    "aa": "T",
-    "percent": 0.9957805907172996,
-    "count": 472,
+    "aa": "I",
+    "percent": 0.002109704641350211,
+    "count": 1,
     "total": 474,
     "reason": "PCNT",
-    "isUnusual": false
+    "isUnusual": true
   },
   {
     "gene": "S",
@@ -11082,7 +11082,17 @@
   {
     "gene": "S",
     "position": 19,
-    "aa": "I",
+    "aa": "T",
+    "percent": 0.9957805907172996,
+    "count": 472,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
+  },
+  {
+    "gene": "S",
+    "position": 20,
+    "aa": "D",
     "percent": 0.002109704641350211,
     "count": 1,
     "total": 474,
@@ -11098,16 +11108,6 @@
     "total": 474,
     "reason": "PCNT",
     "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 20,
-    "aa": "D",
-    "percent": 0.002109704641350211,
-    "count": 1,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": true
   },
   {
     "gene": "S",
@@ -11142,22 +11142,22 @@
   {
     "gene": "S",
     "position": 24,
-    "aa": "V",
-    "percent": 0.9978902953586498,
-    "count": 473,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 24,
     "aa": "R",
     "percent": 0.002109704641350211,
     "count": 1,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 24,
+    "aa": "V",
+    "percent": 0.9978902953586498,
+    "count": 473,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -11192,6 +11192,16 @@
   {
     "gene": "S",
     "position": 27,
+    "aa": "A",
+    "percent": 0.002109704641350211,
+    "count": 1,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 27,
     "aa": "N",
     "percent": 0.9978902953586498,
     "count": 473,
@@ -11201,8 +11211,8 @@
   },
   {
     "gene": "S",
-    "position": 27,
-    "aa": "A",
+    "position": 28,
+    "aa": "N",
     "percent": 0.002109704641350211,
     "count": 1,
     "total": 474,
@@ -11218,16 +11228,6 @@
     "total": 474,
     "reason": "PCNT",
     "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 28,
-    "aa": "N",
-    "percent": 0.002109704641350211,
-    "count": 1,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": true
   },
   {
     "gene": "S",
@@ -11272,22 +11272,22 @@
   {
     "gene": "S",
     "position": 33,
-    "aa": "M",
-    "percent": 0.9978902953586498,
-    "count": 473,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 33,
     "aa": "H",
     "percent": 0.002109704641350211,
     "count": 1,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 33,
+    "aa": "M",
+    "percent": 0.9978902953586498,
+    "count": 473,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -11322,22 +11322,22 @@
   {
     "gene": "S",
     "position": 37,
-    "aa": "Y",
-    "percent": 0.9978858350951374,
-    "count": 472,
-    "total": 473,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 37,
     "aa": "N",
     "percent": 0.0021141649048625794,
     "count": 1,
     "total": 473,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 37,
+    "aa": "Y",
+    "percent": 0.9978858350951374,
+    "count": 472,
+    "total": 473,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -11372,22 +11372,22 @@
   {
     "gene": "S",
     "position": 41,
-    "aa": "E",
-    "percent": 0.9978902953586498,
-    "count": 473,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 41,
     "aa": "D",
     "percent": 0.002109704641350211,
     "count": 1,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 41,
+    "aa": "E",
+    "percent": 0.9978902953586498,
+    "count": 473,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -11422,22 +11422,22 @@
   {
     "gene": "S",
     "position": 45,
-    "aa": "S",
-    "percent": 0.9936708860759493,
-    "count": 471,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 45,
     "aa": "L",
     "percent": 0.006329113924050633,
     "count": 3,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 45,
+    "aa": "S",
+    "percent": 0.9936708860759493,
+    "count": 471,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -11492,22 +11492,22 @@
   {
     "gene": "S",
     "position": 49,
-    "aa": "Y",
-    "percent": 0.9978902953586498,
-    "count": 473,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 49,
     "aa": "H",
     "percent": 0.002109704641350211,
     "count": 1,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 49,
+    "aa": "Y",
+    "percent": 0.9978902953586498,
+    "count": 473,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -11562,22 +11562,22 @@
   {
     "gene": "S",
     "position": 54,
-    "aa": "L",
-    "percent": 0.9978902953586498,
-    "count": 473,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 54,
     "aa": "H",
     "percent": 0.002109704641350211,
     "count": 1,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 54,
+    "aa": "L",
+    "percent": 0.9978902953586498,
+    "count": 473,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -11632,22 +11632,22 @@
   {
     "gene": "S",
     "position": 59,
-    "aa": "Y",
-    "percent": 0.9978902953586498,
-    "count": 473,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 59,
     "aa": "D",
     "percent": 0.002109704641350211,
     "count": 1,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 59,
+    "aa": "Y",
+    "percent": 0.9978902953586498,
+    "count": 473,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -11752,6 +11752,16 @@
   {
     "gene": "S",
     "position": 68,
+    "aa": "F",
+    "percent": 0.002109704641350211,
+    "count": 1,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 68,
     "aa": "I",
     "percent": 0.9936708860759493,
     "count": 471,
@@ -11762,7 +11772,7 @@
   {
     "gene": "S",
     "position": 68,
-    "aa": "F",
+    "aa": "N",
     "percent": 0.002109704641350211,
     "count": 1,
     "total": 474,
@@ -11778,26 +11788,6 @@
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
-  },
-  {
-    "gene": "S",
-    "position": 68,
-    "aa": "N",
-    "percent": 0.002109704641350211,
-    "count": 1,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": true
-  },
-  {
-    "gene": "S",
-    "position": 69,
-    "aa": "N",
-    "percent": 0.9957805907172996,
-    "count": 472,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
   },
   {
     "gene": "S",
@@ -11818,6 +11808,16 @@
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 69,
+    "aa": "N",
+    "percent": 0.9957805907172996,
+    "count": 472,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -11852,12 +11852,12 @@
   {
     "gene": "S",
     "position": 71,
-    "aa": "T",
-    "percent": 0.9831223628691983,
-    "count": 466,
+    "aa": "N",
+    "percent": 0.002109704641350211,
+    "count": 1,
     "total": 474,
     "reason": "PCNT",
-    "isUnusual": false
+    "isUnusual": true
   },
   {
     "gene": "S",
@@ -11872,12 +11872,12 @@
   {
     "gene": "S",
     "position": 71,
-    "aa": "N",
-    "percent": 0.002109704641350211,
-    "count": 1,
+    "aa": "T",
+    "percent": 0.9831223628691983,
+    "count": 466,
     "total": 474,
     "reason": "PCNT",
-    "isUnusual": true
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -11982,16 +11982,6 @@
   {
     "gene": "S",
     "position": 80,
-    "aa": "G",
-    "percent": 0.7869198312236287,
-    "count": 373,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 80,
     "aa": "D",
     "percent": 0.21308016877637131,
     "count": 101,
@@ -12001,10 +11991,10 @@
   },
   {
     "gene": "S",
-    "position": 81,
-    "aa": "N",
-    "percent": 0.989451476793249,
-    "count": 469,
+    "position": 80,
+    "aa": "G",
+    "percent": 0.7869198312236287,
+    "count": 373,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": false
@@ -12015,6 +12005,16 @@
     "aa": "D",
     "percent": 0.010548523206751054,
     "count": 5,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
+  },
+  {
+    "gene": "S",
+    "position": 81,
+    "aa": "N",
+    "percent": 0.989451476793249,
+    "count": 469,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": false
@@ -12032,22 +12032,22 @@
   {
     "gene": "S",
     "position": 83,
-    "aa": "V",
-    "percent": 0.9936708860759493,
-    "count": 471,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 83,
     "aa": "I",
     "percent": 0.006329113924050633,
     "count": 3,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 83,
+    "aa": "V",
+    "percent": 0.9936708860759493,
+    "count": 471,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -12242,22 +12242,22 @@
   {
     "gene": "S",
     "position": 101,
-    "aa": "V",
-    "percent": 0.9978902953586498,
-    "count": 473,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 101,
     "aa": "I",
     "percent": 0.002109704641350211,
     "count": 1,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 101,
+    "aa": "V",
+    "percent": 0.9978902953586498,
+    "count": 473,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -12352,22 +12352,22 @@
   {
     "gene": "S",
     "position": 111,
-    "aa": "N",
-    "percent": 0.9957805907172996,
-    "count": 472,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 111,
     "aa": "D",
     "percent": 0.004219409282700422,
     "count": 2,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 111,
+    "aa": "N",
+    "percent": 0.9957805907172996,
+    "count": 472,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -12532,22 +12532,22 @@
   {
     "gene": "S",
     "position": 126,
-    "aa": "V",
-    "percent": 0.9978902953586498,
-    "count": 473,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 126,
     "aa": "L",
     "percent": 0.002109704641350211,
     "count": 1,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 126,
+    "aa": "V",
+    "percent": 0.9978902953586498,
+    "count": 473,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -12602,22 +12602,22 @@
   {
     "gene": "S",
     "position": 132,
-    "aa": "N",
-    "percent": 0.9957805907172996,
-    "count": 472,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 132,
     "aa": "I",
     "percent": 0.004219409282700422,
     "count": 2,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 132,
+    "aa": "N",
+    "percent": 0.9957805907172996,
+    "count": 472,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -12752,22 +12752,22 @@
   {
     "gene": "S",
     "position": 144,
-    "aa": "S",
-    "percent": 0.9978902953586498,
-    "count": 473,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 144,
     "aa": "L",
     "percent": 0.002109704641350211,
     "count": 1,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 144,
+    "aa": "S",
+    "percent": 0.9978902953586498,
+    "count": 473,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -12812,6 +12812,16 @@
   {
     "gene": "S",
     "position": 148,
+    "aa": "L",
+    "percent": 0.002109704641350211,
+    "count": 1,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 148,
     "aa": "M",
     "percent": 0.9957805907172996,
     "count": 472,
@@ -12823,16 +12833,6 @@
     "gene": "S",
     "position": 148,
     "aa": "N",
-    "percent": 0.002109704641350211,
-    "count": 1,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": true
-  },
-  {
-    "gene": "S",
-    "position": 148,
-    "aa": "L",
     "percent": 0.002109704641350211,
     "count": 1,
     "total": 474,
@@ -12922,22 +12922,22 @@
   {
     "gene": "S",
     "position": 155,
-    "aa": "T",
-    "percent": 0.9978902953586498,
-    "count": 473,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 155,
     "aa": "I",
     "percent": 0.002109704641350211,
     "count": 1,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 155,
+    "aa": "T",
+    "percent": 0.9978902953586498,
+    "count": 473,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -12962,22 +12962,22 @@
   {
     "gene": "S",
     "position": 157,
-    "aa": "T",
-    "percent": 0.9978902953586498,
-    "count": 473,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 157,
     "aa": "S",
     "percent": 0.002109704641350211,
     "count": 1,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 157,
+    "aa": "T",
+    "percent": 0.9978902953586498,
+    "count": 473,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -13122,22 +13122,22 @@
   {
     "gene": "S",
     "position": 170,
-    "aa": "Y",
-    "percent": 0.9978947368421053,
-    "count": 474,
-    "total": 475,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 170,
     "aa": "H",
     "percent": 0.002105263157894737,
     "count": 1,
     "total": 475,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 170,
+    "aa": "Y",
+    "percent": 0.9978947368421053,
+    "count": 474,
+    "total": 475,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -13222,22 +13222,22 @@
   {
     "gene": "S",
     "position": 176,
-    "aa": "S",
-    "percent": 0.9978902953586498,
-    "count": 473,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 176,
     "aa": "N",
     "percent": 0.002109704641350211,
     "count": 1,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 176,
+    "aa": "S",
+    "percent": 0.9978902953586498,
+    "count": 473,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -13262,16 +13262,6 @@
   {
     "gene": "S",
     "position": 179,
-    "aa": "V",
-    "percent": 0.9978902953586498,
-    "count": 473,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 179,
     "aa": "L",
     "percent": 0.002109704641350211,
     "count": 1,
@@ -13281,8 +13271,8 @@
   },
   {
     "gene": "S",
-    "position": 180,
-    "aa": "S",
+    "position": 179,
+    "aa": "V",
     "percent": 0.9978902953586498,
     "count": 473,
     "total": 474,
@@ -13298,6 +13288,16 @@
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 180,
+    "aa": "S",
+    "percent": 0.9978902953586498,
+    "count": 473,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -13322,22 +13322,22 @@
   {
     "gene": "S",
     "position": 183,
-    "aa": "S",
-    "percent": 0.9978902953586498,
-    "count": 473,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 183,
     "aa": "P",
     "percent": 0.002109704641350211,
     "count": 1,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 183,
+    "aa": "S",
+    "percent": 0.9978902953586498,
+    "count": 473,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -13382,22 +13382,22 @@
   {
     "gene": "S",
     "position": 188,
-    "aa": "H",
-    "percent": 0.9978902953586498,
-    "count": 473,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 188,
     "aa": "D",
     "percent": 0.002109704641350211,
     "count": 1,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 188,
+    "aa": "H",
+    "percent": 0.9978902953586498,
+    "count": 473,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -13552,22 +13552,22 @@
   {
     "gene": "S",
     "position": 202,
-    "aa": "Y",
-    "percent": 0.9978902953586498,
-    "count": 473,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 202,
     "aa": "H",
     "percent": 0.002109704641350211,
     "count": 1,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 202,
+    "aa": "Y",
+    "percent": 0.9978902953586498,
+    "count": 473,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -13682,26 +13682,16 @@
   {
     "gene": "S",
     "position": 212,
-    "aa": "V",
-    "percent": 0.9978902953586498,
-    "count": 473,
+    "aa": "A",
+    "percent": 0.002109704641350211,
+    "count": 1,
     "total": 474,
     "reason": "PCNT",
-    "isUnusual": false
+    "isUnusual": true
   },
   {
     "gene": "S",
     "position": 212,
-    "aa": "A",
-    "percent": 0.002109704641350211,
-    "count": 1,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": true
-  },
-  {
-    "gene": "S",
-    "position": 213,
     "aa": "V",
     "percent": 0.9978902953586498,
     "count": 473,
@@ -13718,6 +13708,16 @@
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 213,
+    "aa": "V",
+    "percent": 0.9978902953586498,
+    "count": 473,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -13832,22 +13832,22 @@
   {
     "gene": "S",
     "position": 222,
-    "aa": "T",
-    "percent": 0.9978902953586498,
-    "count": 473,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 222,
     "aa": "A",
     "percent": 0.002109704641350211,
     "count": 1,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 222,
+    "aa": "T",
+    "percent": 0.9978902953586498,
+    "count": 473,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -13962,9 +13962,9 @@
   {
     "gene": "S",
     "position": 234,
-    "aa": "N",
-    "percent": 0.9704641350210971,
-    "count": 460,
+    "aa": "K",
+    "percent": 0.029535864978902954,
+    "count": 14,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": false
@@ -13972,9 +13972,9 @@
   {
     "gene": "S",
     "position": 234,
-    "aa": "K",
-    "percent": 0.029535864978902954,
-    "count": 14,
+    "aa": "N",
+    "percent": 0.9704641350210971,
+    "count": 460,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": false
@@ -14132,16 +14132,6 @@
   {
     "gene": "S",
     "position": 248,
-    "aa": "S",
-    "percent": 0.9662447257383966,
-    "count": 458,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 248,
     "aa": "L",
     "percent": 0.029535864978902954,
     "count": 14,
@@ -14158,6 +14148,16 @@
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 248,
+    "aa": "S",
+    "percent": 0.9662447257383966,
+    "count": 458,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -14192,22 +14192,22 @@
   {
     "gene": "S",
     "position": 251,
-    "aa": "Q",
-    "percent": 0.9978902953586498,
-    "count": 473,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 251,
     "aa": "P",
     "percent": 0.002109704641350211,
     "count": 1,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 251,
+    "aa": "Q",
+    "percent": 0.9978902953586498,
+    "count": 473,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -14392,22 +14392,22 @@
   {
     "gene": "S",
     "position": 267,
-    "aa": "V",
-    "percent": 0.9978902953586498,
-    "count": 473,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 267,
     "aa": "F",
     "percent": 0.002109704641350211,
     "count": 1,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 267,
+    "aa": "V",
+    "percent": 0.9978902953586498,
+    "count": 473,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -14422,22 +14422,22 @@
   {
     "gene": "S",
     "position": 269,
-    "aa": "Y",
-    "percent": 0.9957805907172996,
-    "count": 472,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 269,
     "aa": "D",
     "percent": 0.004219409282700422,
     "count": 2,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 269,
+    "aa": "Y",
+    "percent": 0.9957805907172996,
+    "count": 472,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -14482,22 +14482,22 @@
   {
     "gene": "S",
     "position": 274,
-    "aa": "T",
-    "percent": 0.9915611814345991,
-    "count": 470,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 274,
     "aa": "K",
     "percent": 0.008438818565400843,
     "count": 4,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 274,
+    "aa": "T",
+    "percent": 0.9915611814345991,
+    "count": 470,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -14972,22 +14972,22 @@
   {
     "gene": "S",
     "position": 321,
-    "aa": "V",
-    "percent": 0.9978902953586498,
-    "count": 473,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 321,
     "aa": "A",
     "percent": 0.002109704641350211,
     "count": 1,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 321,
+    "aa": "V",
+    "percent": 0.9978902953586498,
+    "count": 473,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -15022,22 +15022,22 @@
   {
     "gene": "S",
     "position": 324,
-    "aa": "R",
-    "percent": 0.02531645569620253,
-    "count": 12,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 324,
     "aa": "K",
     "percent": 0.002109704641350211,
     "count": 1,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 324,
+    "aa": "R",
+    "percent": 0.02531645569620253,
+    "count": 12,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -15262,22 +15262,22 @@
   {
     "gene": "S",
     "position": 345,
-    "aa": "T",
-    "percent": 0.9978902953586498,
-    "count": 473,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 345,
     "aa": "I",
     "percent": 0.002109704641350211,
     "count": 1,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 345,
+    "aa": "T",
+    "percent": 0.9978902953586498,
+    "count": 473,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -15322,22 +15322,22 @@
   {
     "gene": "S",
     "position": 349,
-    "aa": "S",
-    "percent": 0.9978902953586498,
-    "count": 473,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 349,
     "aa": "P",
     "percent": 0.002109704641350211,
     "count": 1,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 349,
+    "aa": "S",
+    "percent": 0.9978902953586498,
+    "count": 473,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -15422,6 +15422,16 @@
   {
     "gene": "S",
     "position": 357,
+    "aa": "E",
+    "percent": 0.002109704641350211,
+    "count": 1,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 357,
     "aa": "K",
     "percent": 0.8481012658227848,
     "count": 402,
@@ -15438,16 +15448,6 @@
     "total": 474,
     "reason": "PCNT",
     "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 357,
-    "aa": "E",
-    "percent": 0.002109704641350211,
-    "count": 1,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": true
   },
   {
     "gene": "S",
@@ -15552,9 +15552,9 @@
   {
     "gene": "S",
     "position": 366,
-    "aa": "S",
-    "percent": 0.9746835443037974,
-    "count": 462,
+    "aa": "F",
+    "percent": 0.02531645569620253,
+    "count": 12,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": false
@@ -15562,9 +15562,9 @@
   {
     "gene": "S",
     "position": 366,
-    "aa": "F",
-    "percent": 0.02531645569620253,
-    "count": 12,
+    "aa": "S",
+    "percent": 0.9746835443037974,
+    "count": 462,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": false
@@ -16252,22 +16252,22 @@
   {
     "gene": "S",
     "position": 430,
-    "aa": "M",
-    "percent": 0.9978858350951374,
-    "count": 472,
-    "total": 473,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 430,
     "aa": "L",
     "percent": 0.0021141649048625794,
     "count": 1,
     "total": 473,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 430,
+    "aa": "M",
+    "percent": 0.9978858350951374,
+    "count": 472,
+    "total": 473,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -16342,16 +16342,6 @@
   {
     "gene": "S",
     "position": 438,
-    "aa": "T",
-    "percent": 0.9978858350951374,
-    "count": 472,
-    "total": 473,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 438,
     "aa": "I",
     "percent": 0.0021141649048625794,
     "count": 1,
@@ -16361,8 +16351,8 @@
   },
   {
     "gene": "S",
-    "position": 439,
-    "aa": "R",
+    "position": 438,
+    "aa": "T",
     "percent": 0.9978858350951374,
     "count": 472,
     "total": 473,
@@ -16378,6 +16368,16 @@
     "total": 473,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 439,
+    "aa": "R",
+    "percent": 0.9978858350951374,
+    "count": 472,
+    "total": 473,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -16452,22 +16452,22 @@
   {
     "gene": "S",
     "position": 444,
-    "aa": "T",
-    "percent": 0.9978858350951374,
-    "count": 472,
+    "aa": "S",
+    "percent": 0.0021141649048625794,
+    "count": 1,
     "total": 473,
     "reason": "PCNT",
-    "isUnusual": false
+    "isUnusual": true
   },
   {
     "gene": "S",
     "position": 444,
-    "aa": "S",
-    "percent": 0.0021141649048625794,
-    "count": 1,
+    "aa": "T",
+    "percent": 0.9978858350951374,
+    "count": 472,
     "total": 473,
     "reason": "PCNT",
-    "isUnusual": true
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -16492,22 +16492,22 @@
   {
     "gene": "S",
     "position": 446,
-    "aa": "T",
-    "percent": 0.9978858350951374,
-    "count": 472,
-    "total": 473,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 446,
     "aa": "S",
     "percent": 0.0021141649048625794,
     "count": 1,
     "total": 473,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 446,
+    "aa": "T",
+    "percent": 0.9978858350951374,
+    "count": 472,
+    "total": 473,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -16532,16 +16532,6 @@
   {
     "gene": "S",
     "position": 449,
-    "aa": "Y",
-    "percent": 0.879492600422833,
-    "count": 416,
-    "total": 473,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 449,
     "aa": "H",
     "percent": 0.12050739957716702,
     "count": 57,
@@ -16551,10 +16541,10 @@
   },
   {
     "gene": "S",
-    "position": 450,
-    "aa": "N",
-    "percent": 0.9978858350951374,
-    "count": 472,
+    "position": 449,
+    "aa": "Y",
+    "percent": 0.879492600422833,
+    "count": 416,
     "total": 473,
     "reason": "PCNT",
     "isUnusual": false
@@ -16568,6 +16558,16 @@
     "total": 473,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 450,
+    "aa": "N",
+    "percent": 0.9978858350951374,
+    "count": 472,
+    "total": 473,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -16602,12 +16602,12 @@
   {
     "gene": "S",
     "position": 453,
-    "aa": "Y",
-    "percent": 0.9915611814345991,
-    "count": 470,
+    "aa": "F",
+    "percent": 0.002109704641350211,
+    "count": 1,
     "total": 474,
     "reason": "PCNT",
-    "isUnusual": false
+    "isUnusual": true
   },
   {
     "gene": "S",
@@ -16622,12 +16622,12 @@
   {
     "gene": "S",
     "position": 453,
-    "aa": "F",
-    "percent": 0.002109704641350211,
-    "count": 1,
+    "aa": "Y",
+    "percent": 0.9915611814345991,
+    "count": 470,
     "total": 474,
     "reason": "PCNT",
-    "isUnusual": true
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -16642,12 +16642,12 @@
   {
     "gene": "S",
     "position": 455,
-    "aa": "Y",
-    "percent": 0.9915433403805497,
-    "count": 469,
+    "aa": "C",
+    "percent": 0.0021141649048625794,
+    "count": 1,
     "total": 473,
     "reason": "PCNT",
-    "isUnusual": false
+    "isUnusual": true
   },
   {
     "gene": "S",
@@ -16672,12 +16672,12 @@
   {
     "gene": "S",
     "position": 455,
-    "aa": "C",
-    "percent": 0.0021141649048625794,
-    "count": 1,
+    "aa": "Y",
+    "percent": 0.9915433403805497,
+    "count": 469,
     "total": 473,
     "reason": "PCNT",
-    "isUnusual": true
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -16702,9 +16702,9 @@
   {
     "gene": "S",
     "position": 457,
-    "aa": "R",
-    "percent": 0.989517819706499,
-    "count": 472,
+    "aa": "K",
+    "percent": 0.010482180293501049,
+    "count": 5,
     "total": 477,
     "reason": "PCNT",
     "isUnusual": false
@@ -16712,9 +16712,9 @@
   {
     "gene": "S",
     "position": 457,
-    "aa": "K",
-    "percent": 0.010482180293501049,
-    "count": 5,
+    "aa": "R",
+    "percent": 0.989517819706499,
+    "count": 472,
     "total": 477,
     "reason": "PCNT",
     "isUnusual": false
@@ -16782,22 +16782,22 @@
   {
     "gene": "S",
     "position": 462,
-    "aa": "R",
-    "percent": 0.9978858350951374,
-    "count": 472,
-    "total": 473,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 462,
     "aa": "N",
     "percent": 0.0021141649048625794,
     "count": 1,
     "total": 473,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 462,
+    "aa": "R",
+    "percent": 0.9978858350951374,
+    "count": 472,
+    "total": 473,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -16902,16 +16902,6 @@
   {
     "gene": "S",
     "position": 471,
-    "aa": "V",
-    "percent": 0.9978858350951374,
-    "count": 472,
-    "total": 473,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 471,
     "aa": "D",
     "percent": 0.0021141649048625794,
     "count": 1,
@@ -16921,8 +16911,8 @@
   },
   {
     "gene": "S",
-    "position": 472,
-    "aa": "P",
+    "position": 471,
+    "aa": "V",
     "percent": 0.9978858350951374,
     "count": 472,
     "total": 473,
@@ -16938,6 +16928,16 @@
     "total": 473,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 472,
+    "aa": "P",
+    "percent": 0.9978858350951374,
+    "count": 472,
+    "total": 473,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -17092,16 +17092,6 @@
   {
     "gene": "S",
     "position": 481,
-    "aa": "T",
-    "percent": 0.9978858350951374,
-    "count": 472,
-    "total": 473,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 481,
     "aa": "S",
     "percent": 0.0021141649048625794,
     "count": 1,
@@ -17111,8 +17101,8 @@
   },
   {
     "gene": "S",
-    "position": 482,
-    "aa": "P",
+    "position": 481,
+    "aa": "T",
     "percent": 0.9978858350951374,
     "count": 472,
     "total": 473,
@@ -17128,6 +17118,16 @@
     "total": 473,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 482,
+    "aa": "P",
+    "percent": 0.9978858350951374,
+    "count": 472,
+    "total": 473,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -17182,6 +17182,16 @@
   {
     "gene": "S",
     "position": 486,
+    "aa": "F",
+    "percent": 0.0021141649048625794,
+    "count": 1,
+    "total": 473,
+    "reason": "PCNT",
+    "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 486,
     "aa": "L",
     "percent": 0.8773784355179705,
     "count": 415,
@@ -17198,16 +17208,6 @@
     "total": 473,
     "reason": "PCNT",
     "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 486,
-    "aa": "F",
-    "percent": 0.0021141649048625794,
-    "count": 1,
-    "total": 473,
-    "reason": "PCNT",
-    "isUnusual": true
   },
   {
     "gene": "S",
@@ -17242,22 +17242,22 @@
   {
     "gene": "S",
     "position": 490,
-    "aa": "W",
-    "percent": 0.9978858350951374,
-    "count": 472,
-    "total": 473,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 490,
     "aa": "N",
     "percent": 0.0021141649048625794,
     "count": 1,
     "total": 473,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 490,
+    "aa": "W",
+    "percent": 0.9978858350951374,
+    "count": 472,
+    "total": 473,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -17282,6 +17282,16 @@
   {
     "gene": "S",
     "position": 493,
+    "aa": "K",
+    "percent": 0.012684989429175475,
+    "count": 6,
+    "total": 473,
+    "reason": "PCNT",
+    "isUnusual": false
+  },
+  {
+    "gene": "S",
+    "position": 493,
     "aa": "N",
     "percent": 0.8985200845665962,
     "count": 425,
@@ -17295,16 +17305,6 @@
     "aa": "R",
     "percent": 0.07610993657505286,
     "count": 36,
-    "total": 473,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 493,
-    "aa": "K",
-    "percent": 0.012684989429175475,
-    "count": 6,
     "total": 473,
     "reason": "PCNT",
     "isUnusual": false
@@ -17382,22 +17382,22 @@
   {
     "gene": "S",
     "position": 498,
-    "aa": "Y",
-    "percent": 0.9978858350951374,
-    "count": 472,
-    "total": 473,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 498,
     "aa": "F",
     "percent": 0.0021141649048625794,
     "count": 1,
     "total": 473,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 498,
+    "aa": "Y",
+    "percent": 0.9978858350951374,
+    "count": 472,
+    "total": 473,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -17422,12 +17422,12 @@
   {
     "gene": "S",
     "position": 501,
-    "aa": "T",
-    "percent": 0.8710359408033826,
-    "count": 412,
+    "aa": "A",
+    "percent": 0.0021141649048625794,
+    "count": 1,
     "total": 473,
     "reason": "PCNT",
-    "isUnusual": false
+    "isUnusual": true
   },
   {
     "gene": "S",
@@ -17442,20 +17442,10 @@
   {
     "gene": "S",
     "position": 501,
-    "aa": "A",
-    "percent": 0.0021141649048625794,
-    "count": 1,
+    "aa": "T",
+    "percent": 0.8710359408033826,
+    "count": 412,
     "total": 473,
-    "reason": "PCNT",
-    "isUnusual": true
-  },
-  {
-    "gene": "S",
-    "position": 502,
-    "aa": "G",
-    "percent": 0.9937106918238994,
-    "count": 474,
-    "total": 477,
     "reason": "PCNT",
     "isUnusual": false
   },
@@ -17468,6 +17458,16 @@
     "total": 477,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 502,
+    "aa": "G",
+    "percent": 0.9937106918238994,
+    "count": 474,
+    "total": 477,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -17522,22 +17522,22 @@
   {
     "gene": "S",
     "position": 505,
-    "aa": "Y",
-    "percent": 0.9978902953586498,
-    "count": 473,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 505,
     "aa": "H",
     "percent": 0.002109704641350211,
     "count": 1,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 505,
+    "aa": "Y",
+    "percent": 0.9978902953586498,
+    "count": 473,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -18432,9 +18432,9 @@
   {
     "gene": "S",
     "position": 591,
-    "aa": "S",
-    "percent": 0.9351464435146444,
-    "count": 447,
+    "aa": "A",
+    "percent": 0.06485355648535565,
+    "count": 31,
     "total": 478,
     "reason": "PCNT",
     "isUnusual": false
@@ -18442,9 +18442,9 @@
   {
     "gene": "S",
     "position": 591,
-    "aa": "A",
-    "percent": 0.06485355648535565,
-    "count": 31,
+    "aa": "S",
+    "percent": 0.9351464435146444,
+    "count": 447,
     "total": 478,
     "reason": "PCNT",
     "isUnusual": false
@@ -18632,16 +18632,6 @@
   {
     "gene": "S",
     "position": 608,
-    "aa": "V",
-    "percent": 0.9978902953586498,
-    "count": 473,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 608,
     "aa": "F",
     "percent": 0.002109704641350211,
     "count": 1,
@@ -18651,21 +18641,21 @@
   },
   {
     "gene": "S",
-    "position": 609,
-    "aa": "A",
-    "percent": 1.0,
+    "position": 608,
+    "aa": "V",
+    "percent": 0.9978902953586498,
     "count": 473,
-    "total": 473,
+    "total": 474,
     "reason": "PCNT",
     "isUnusual": false
   },
   {
     "gene": "S",
-    "position": 610,
-    "aa": "V",
-    "percent": 0.9937106918238994,
-    "count": 474,
-    "total": 477,
+    "position": 609,
+    "aa": "A",
+    "percent": 1.0,
+    "count": 473,
+    "total": 473,
     "reason": "PCNT",
     "isUnusual": false
   },
@@ -18698,6 +18688,16 @@
     "total": 477,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 610,
+    "aa": "V",
+    "percent": 0.9937106918238994,
+    "count": 474,
+    "total": 477,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -18822,16 +18822,6 @@
   {
     "gene": "S",
     "position": 621,
-    "aa": "S",
-    "percent": 0.989451476793249,
-    "count": 469,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 621,
     "aa": "P",
     "percent": 0.010548523206751054,
     "count": 5,
@@ -18841,10 +18831,10 @@
   },
   {
     "gene": "S",
-    "position": 622,
-    "aa": "T",
-    "percent": 0.9915611814345991,
-    "count": 470,
+    "position": 621,
+    "aa": "S",
+    "percent": 0.989451476793249,
+    "count": 469,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": false
@@ -18862,7 +18852,7 @@
   {
     "gene": "S",
     "position": 622,
-    "aa": "V",
+    "aa": "I",
     "percent": 0.002109704641350211,
     "count": 1,
     "total": 474,
@@ -18872,7 +18862,17 @@
   {
     "gene": "S",
     "position": 622,
-    "aa": "I",
+    "aa": "T",
+    "percent": 0.9915611814345991,
+    "count": 470,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
+  },
+  {
+    "gene": "S",
+    "position": 622,
+    "aa": "V",
     "percent": 0.002109704641350211,
     "count": 1,
     "total": 474,
@@ -19072,22 +19072,22 @@
   {
     "gene": "S",
     "position": 637,
-    "aa": "S",
-    "percent": 0.9978902953586498,
-    "count": 473,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 637,
     "aa": "F",
     "percent": 0.002109704641350211,
     "count": 1,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 637,
+    "aa": "S",
+    "percent": 0.9978902953586498,
+    "count": 473,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -19132,22 +19132,22 @@
   {
     "gene": "S",
     "position": 642,
-    "aa": "V",
-    "percent": 0.9978902953586498,
-    "count": 473,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 642,
     "aa": "A",
     "percent": 0.002109704641350211,
     "count": 1,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 642,
+    "aa": "V",
+    "percent": 0.9978902953586498,
+    "count": 473,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -19182,22 +19182,22 @@
   {
     "gene": "S",
     "position": 646,
-    "aa": "Q",
-    "percent": 0.9978902953586498,
-    "count": 473,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 646,
     "aa": "L",
     "percent": 0.002109704641350211,
     "count": 1,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 646,
+    "aa": "Q",
+    "percent": 0.9978902953586498,
+    "count": 473,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -19322,22 +19322,22 @@
   {
     "gene": "S",
     "position": 658,
-    "aa": "T",
-    "percent": 0.9978902953586498,
-    "count": 473,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 658,
     "aa": "S",
     "percent": 0.002109704641350211,
     "count": 1,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 658,
+    "aa": "T",
+    "percent": 0.9978902953586498,
+    "count": 473,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -19362,22 +19362,22 @@
   {
     "gene": "S",
     "position": 661,
-    "aa": "E",
-    "percent": 0.9978902953586498,
-    "count": 473,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 661,
     "aa": "D",
     "percent": 0.002109704641350211,
     "count": 1,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 661,
+    "aa": "E",
+    "percent": 0.9978902953586498,
+    "count": 473,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -19672,22 +19672,22 @@
   {
     "gene": "S",
     "position": 686,
-    "aa": "S",
-    "percent": 0.9978902953586498,
-    "count": 473,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 686,
     "aa": "N",
     "percent": 0.002109704641350211,
     "count": 1,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 686,
+    "aa": "S",
+    "percent": 0.9978902953586498,
+    "count": 473,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -20052,22 +20052,22 @@
   {
     "gene": "S",
     "position": 719,
-    "aa": "S",
-    "percent": 0.9915611814345991,
-    "count": 470,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 719,
     "aa": "L",
     "percent": 0.008438818565400843,
     "count": 4,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 719,
+    "aa": "S",
+    "percent": 0.9915611814345991,
+    "count": 470,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -20092,22 +20092,22 @@
   {
     "gene": "S",
     "position": 721,
-    "aa": "S",
-    "percent": 0.9978902953586498,
-    "count": 473,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 721,
     "aa": "G",
     "percent": 0.002109704641350211,
     "count": 1,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 721,
+    "aa": "S",
+    "percent": 0.9978902953586498,
+    "count": 473,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -20122,22 +20122,22 @@
   {
     "gene": "S",
     "position": 723,
-    "aa": "T",
-    "percent": 0.9957805907172996,
-    "count": 472,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 723,
     "aa": "A",
     "percent": 0.004219409282700422,
     "count": 2,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 723,
+    "aa": "T",
+    "percent": 0.9957805907172996,
+    "count": 472,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -20272,9 +20272,9 @@
   {
     "gene": "S",
     "position": 734,
-    "aa": "T",
-    "percent": 0.983402489626556,
-    "count": 474,
+    "aa": "I",
+    "percent": 0.016597510373443983,
+    "count": 8,
     "total": 482,
     "reason": "PCNT",
     "isUnusual": false
@@ -20282,9 +20282,9 @@
   {
     "gene": "S",
     "position": 734,
-    "aa": "I",
-    "percent": 0.016597510373443983,
-    "count": 8,
+    "aa": "T",
+    "percent": 0.983402489626556,
+    "count": 474,
     "total": 482,
     "reason": "PCNT",
     "isUnusual": false
@@ -20552,12 +20552,12 @@
   {
     "gene": "S",
     "position": 761,
-    "aa": "T",
-    "percent": 0.8839662447257384,
-    "count": 419,
+    "aa": "A",
+    "percent": 0.008438818565400843,
+    "count": 4,
     "total": 474,
     "reason": "PCNT",
-    "isUnusual": false
+    "isUnusual": true
   },
   {
     "gene": "S",
@@ -20572,12 +20572,12 @@
   {
     "gene": "S",
     "position": 761,
-    "aa": "A",
-    "percent": 0.008438818565400843,
-    "count": 4,
+    "aa": "T",
+    "percent": 0.8839662447257384,
+    "count": 419,
     "total": 474,
     "reason": "PCNT",
-    "isUnusual": true
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -20942,16 +20942,6 @@
   {
     "gene": "S",
     "position": 796,
-    "aa": "Y",
-    "percent": 0.84,
-    "count": 399,
-    "total": 475,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 796,
     "aa": "D",
     "percent": 0.15789473684210525,
     "count": 75,
@@ -20971,6 +20961,16 @@
   },
   {
     "gene": "S",
+    "position": 796,
+    "aa": "Y",
+    "percent": 0.84,
+    "count": 399,
+    "total": 475,
+    "reason": "PCNT",
+    "isUnusual": false
+  },
+  {
+    "gene": "S",
     "position": 797,
     "aa": "F",
     "percent": 1.0,
@@ -20982,9 +20982,9 @@
   {
     "gene": "S",
     "position": 798,
-    "aa": "G",
-    "percent": 0.989451476793249,
-    "count": 469,
+    "aa": "D",
+    "percent": 0.010548523206751054,
+    "count": 5,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": false
@@ -20992,9 +20992,9 @@
   {
     "gene": "S",
     "position": 798,
-    "aa": "D",
-    "percent": 0.010548523206751054,
-    "count": 5,
+    "aa": "G",
+    "percent": 0.989451476793249,
+    "count": 469,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": false
@@ -21162,22 +21162,22 @@
   {
     "gene": "S",
     "position": 813,
-    "aa": "T",
-    "percent": 0.9978902953586498,
-    "count": 473,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 813,
     "aa": "I",
     "percent": 0.002109704641350211,
     "count": 1,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 813,
+    "aa": "T",
+    "percent": 0.9978902953586498,
+    "count": 473,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -21632,22 +21632,22 @@
   {
     "gene": "S",
     "position": 857,
-    "aa": "G",
-    "percent": 0.9978902953586498,
-    "count": 473,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 857,
     "aa": "A",
     "percent": 0.002109704641350211,
     "count": 1,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 857,
+    "aa": "G",
+    "percent": 0.9978902953586498,
+    "count": 473,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -21832,22 +21832,22 @@
   {
     "gene": "S",
     "position": 874,
-    "aa": "T",
-    "percent": 0.9978902953586498,
-    "count": 473,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 874,
     "aa": "S",
     "percent": 0.002109704641350211,
     "count": 1,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 874,
+    "aa": "T",
+    "percent": 0.9978902953586498,
+    "count": 473,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -21882,16 +21882,6 @@
   {
     "gene": "S",
     "position": 878,
-    "aa": "V",
-    "percent": 0.9978902953586498,
-    "count": 473,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 878,
     "aa": "L",
     "percent": 0.002109704641350211,
     "count": 1,
@@ -21901,8 +21891,8 @@
   },
   {
     "gene": "S",
-    "position": 879,
-    "aa": "S",
+    "position": 878,
+    "aa": "V",
     "percent": 0.9978902953586498,
     "count": 473,
     "total": 474,
@@ -21921,20 +21911,20 @@
   },
   {
     "gene": "S",
-    "position": 880,
-    "aa": "G",
-    "percent": 1.0,
-    "count": 474,
+    "position": 879,
+    "aa": "S",
+    "percent": 0.9978902953586498,
+    "count": 473,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": false
   },
   {
     "gene": "S",
-    "position": 881,
-    "aa": "T",
-    "percent": 0.9957805907172996,
-    "count": 472,
+    "position": 880,
+    "aa": "G",
+    "percent": 1.0,
+    "count": 474,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": false
@@ -21948,6 +21938,16 @@
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 881,
+    "aa": "T",
+    "percent": 0.9957805907172996,
+    "count": 472,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -22012,22 +22012,22 @@
   {
     "gene": "S",
     "position": 887,
-    "aa": "T",
-    "percent": 0.9957805907172996,
-    "count": 472,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 887,
     "aa": "A",
     "percent": 0.004219409282700422,
     "count": 2,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 887,
+    "aa": "T",
+    "percent": 0.9957805907172996,
+    "count": 472,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -22152,22 +22152,22 @@
   {
     "gene": "S",
     "position": 900,
-    "aa": "M",
-    "percent": 0.9978902953586498,
-    "count": 473,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 900,
     "aa": "K",
     "percent": 0.002109704641350211,
     "count": 1,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 900,
+    "aa": "M",
+    "percent": 0.9978902953586498,
+    "count": 473,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -22282,22 +22282,22 @@
   {
     "gene": "S",
     "position": 912,
-    "aa": "T",
-    "percent": 0.9915611814345991,
-    "count": 470,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 912,
     "aa": "A",
     "percent": 0.008438818565400843,
     "count": 4,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 912,
+    "aa": "T",
+    "percent": 0.9915611814345991,
+    "count": 470,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -22352,22 +22352,22 @@
   {
     "gene": "S",
     "position": 918,
-    "aa": "E",
-    "percent": 0.9978902953586498,
-    "count": 473,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 918,
     "aa": "D",
     "percent": 0.002109704641350211,
     "count": 1,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 918,
+    "aa": "E",
+    "percent": 0.9978902953586498,
+    "count": 473,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -22562,22 +22562,22 @@
   {
     "gene": "S",
     "position": 938,
-    "aa": "L",
-    "percent": 0.9978902953586498,
-    "count": 473,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 938,
     "aa": "F",
     "percent": 0.002109704641350211,
     "count": 1,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 938,
+    "aa": "L",
+    "percent": 0.9978902953586498,
+    "count": 473,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -22872,22 +22872,22 @@
   {
     "gene": "S",
     "position": 968,
-    "aa": "S",
-    "percent": 0.9978902953586498,
-    "count": 473,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 968,
     "aa": "F",
     "percent": 0.002109704641350211,
     "count": 1,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 968,
+    "aa": "S",
+    "percent": 0.9978902953586498,
+    "count": 473,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -23082,22 +23082,22 @@
   {
     "gene": "S",
     "position": 987,
-    "aa": "V",
-    "percent": 0.9978902953586498,
-    "count": 473,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 987,
     "aa": "A",
     "percent": 0.002109704641350211,
     "count": 1,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 987,
+    "aa": "V",
+    "percent": 0.9978902953586498,
+    "count": 473,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -23412,22 +23412,22 @@
   {
     "gene": "S",
     "position": 1019,
-    "aa": "R",
-    "percent": 0.9957805907172996,
-    "count": 472,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 1019,
     "aa": "M",
     "percent": 0.004219409282700422,
     "count": 2,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 1019,
+    "aa": "R",
+    "percent": 0.9957805907172996,
+    "count": 472,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -23742,22 +23742,22 @@
   {
     "gene": "S",
     "position": 1049,
-    "aa": "L",
-    "percent": 0.9978902953586498,
-    "count": 473,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 1049,
     "aa": "F",
     "percent": 0.002109704641350211,
     "count": 1,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 1049,
+    "aa": "L",
+    "percent": 0.9978902953586498,
+    "count": 473,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -23942,22 +23942,22 @@
   {
     "gene": "S",
     "position": 1068,
-    "aa": "V",
-    "percent": 0.9957805907172996,
-    "count": 472,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 1068,
     "aa": "A",
     "percent": 0.004219409282700422,
     "count": 2,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 1068,
+    "aa": "V",
+    "percent": 0.9957805907172996,
+    "count": 472,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -23972,22 +23972,22 @@
   {
     "gene": "S",
     "position": 1070,
-    "aa": "S",
-    "percent": 0.9957805907172996,
-    "count": 472,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 1070,
     "aa": "F",
     "percent": 0.004219409282700422,
     "count": 2,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 1070,
+    "aa": "S",
+    "percent": 0.9957805907172996,
+    "count": 472,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -24302,22 +24302,22 @@
   {
     "gene": "S",
     "position": 1101,
-    "aa": "S",
-    "percent": 0.9978902953586498,
-    "count": 473,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 1101,
     "aa": "P",
     "percent": 0.002109704641350211,
     "count": 1,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 1101,
+    "aa": "S",
+    "percent": 0.9978902953586498,
+    "count": 473,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -24552,6 +24552,16 @@
   {
     "gene": "S",
     "position": 1125,
+    "aa": "K",
+    "percent": 0.002109704641350211,
+    "count": 1,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 1125,
     "aa": "N",
     "percent": 0.9936708860759493,
     "count": 471,
@@ -24565,16 +24575,6 @@
     "aa": "S",
     "percent": 0.004219409282700422,
     "count": 2,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": true
-  },
-  {
-    "gene": "S",
-    "position": 1125,
-    "aa": "K",
-    "percent": 0.002109704641350211,
-    "count": 1,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
@@ -24922,22 +24922,22 @@
   {
     "gene": "S",
     "position": 1158,
-    "aa": "N",
-    "percent": 0.9978902953586498,
-    "count": 473,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 1158,
     "aa": "I",
     "percent": 0.002109704641350211,
     "count": 1,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 1158,
+    "aa": "N",
+    "percent": 0.9978902953586498,
+    "count": 473,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -25012,9 +25012,9 @@
   {
     "gene": "S",
     "position": 1166,
-    "aa": "L",
-    "percent": 0.9810126582278481,
-    "count": 465,
+    "aa": "F",
+    "percent": 0.0189873417721519,
+    "count": 9,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": false
@@ -25022,9 +25022,9 @@
   {
     "gene": "S",
     "position": 1166,
-    "aa": "F",
-    "percent": 0.0189873417721519,
-    "count": 9,
+    "aa": "L",
+    "percent": 0.9810126582278481,
+    "count": 465,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": false
@@ -25122,22 +25122,22 @@
   {
     "gene": "S",
     "position": 1175,
-    "aa": "S",
-    "percent": 0.9978902953586498,
-    "count": 473,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 1175,
     "aa": "P",
     "percent": 0.002109704641350211,
     "count": 1,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 1175,
+    "aa": "S",
+    "percent": 0.9978902953586498,
+    "count": 473,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -25192,9 +25192,9 @@
   {
     "gene": "S",
     "position": 1181,
-    "aa": "K",
-    "percent": 0.8713080168776371,
-    "count": 413,
+    "aa": "E",
+    "percent": 0.12869198312236288,
+    "count": 61,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": false
@@ -25202,9 +25202,9 @@
   {
     "gene": "S",
     "position": 1181,
-    "aa": "E",
-    "percent": 0.12869198312236288,
-    "count": 61,
+    "aa": "K",
+    "percent": 0.8713080168776371,
+    "count": 413,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": false
@@ -25262,22 +25262,22 @@
   {
     "gene": "S",
     "position": 1187,
-    "aa": "N",
-    "percent": 0.9978902953586498,
-    "count": 473,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 1187,
     "aa": "D",
     "percent": 0.002109704641350211,
     "count": 1,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 1187,
+    "aa": "N",
+    "percent": 0.9978902953586498,
+    "count": 473,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -25292,22 +25292,22 @@
   {
     "gene": "S",
     "position": 1189,
-    "aa": "V",
-    "percent": 0.9978902953586498,
-    "count": 473,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 1189,
     "aa": "I",
     "percent": 0.002109704641350211,
     "count": 1,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 1189,
+    "aa": "V",
+    "percent": 0.9978902953586498,
+    "count": 473,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -25382,6 +25382,16 @@
   {
     "gene": "S",
     "position": 1197,
+    "aa": "F",
+    "percent": 0.002109704641350211,
+    "count": 1,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 1197,
     "aa": "L",
     "percent": 0.9936708860759493,
     "count": 471,
@@ -25395,16 +25405,6 @@
     "aa": "P",
     "percent": 0.004219409282700422,
     "count": 2,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": true
-  },
-  {
-    "gene": "S",
-    "position": 1197,
-    "aa": "F",
-    "percent": 0.002109704641350211,
-    "count": 1,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
@@ -25442,26 +25442,6 @@
   {
     "gene": "S",
     "position": 1201,
-    "aa": "Q",
-    "percent": 0.9852631578947368,
-    "count": 468,
-    "total": 475,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 1201,
-    "aa": "R",
-    "percent": 0.010526315789473684,
-    "count": 5,
-    "total": 475,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 1201,
     "aa": "H",
     "percent": 0.002105263157894737,
     "count": 1,
@@ -25478,6 +25458,26 @@
     "total": 475,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 1201,
+    "aa": "Q",
+    "percent": 0.9852631578947368,
+    "count": 468,
+    "total": 475,
+    "reason": "PCNT",
+    "isUnusual": false
+  },
+  {
+    "gene": "S",
+    "position": 1201,
+    "aa": "R",
+    "percent": 0.010526315789473684,
+    "count": 5,
+    "total": 475,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -25802,22 +25802,22 @@
   {
     "gene": "S",
     "position": 1229,
-    "aa": "M",
-    "percent": 0.9978858350951374,
-    "count": 472,
-    "total": 473,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 1229,
     "aa": "I",
     "percent": 0.0021141649048625794,
     "count": 1,
     "total": 473,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 1229,
+    "aa": "M",
+    "percent": 0.9978858350951374,
+    "count": 472,
+    "total": 473,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -25922,12 +25922,12 @@
   {
     "gene": "S",
     "position": 1238,
-    "aa": "T",
-    "percent": 0.9957805907172996,
-    "count": 472,
+    "aa": "A",
+    "percent": 0.002109704641350211,
+    "count": 1,
     "total": 474,
     "reason": "PCNT",
-    "isUnusual": false
+    "isUnusual": true
   },
   {
     "gene": "S",
@@ -25942,19 +25942,9 @@
   {
     "gene": "S",
     "position": 1238,
-    "aa": "A",
-    "percent": 0.002109704641350211,
-    "count": 1,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": true
-  },
-  {
-    "gene": "S",
-    "position": 1239,
-    "aa": "S",
-    "percent": 0.9978902953586498,
-    "count": 473,
+    "aa": "T",
+    "percent": 0.9957805907172996,
+    "count": 472,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": false
@@ -25971,8 +25961,8 @@
   },
   {
     "gene": "S",
-    "position": 1240,
-    "aa": "C",
+    "position": 1239,
+    "aa": "S",
     "percent": 0.9978902953586498,
     "count": 473,
     "total": 474,
@@ -25991,6 +25981,16 @@
   },
   {
     "gene": "S",
+    "position": 1240,
+    "aa": "C",
+    "percent": 0.9978902953586498,
+    "count": 473,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
+  },
+  {
+    "gene": "S",
     "position": 1241,
     "aa": "C",
     "percent": 0.9978902953586498,
@@ -26008,16 +26008,6 @@
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
-  },
-  {
-    "gene": "S",
-    "position": 1242,
-    "aa": "S",
-    "percent": 0.9978902953586498,
-    "count": 473,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
   },
   {
     "gene": "S",
@@ -26031,6 +26021,16 @@
   },
   {
     "gene": "S",
+    "position": 1242,
+    "aa": "S",
+    "percent": 0.9978902953586498,
+    "count": 473,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
+  },
+  {
+    "gene": "S",
     "position": 1243,
     "aa": "C",
     "percent": 0.9978902953586498,
@@ -26042,6 +26042,16 @@
   {
     "gene": "S",
     "position": 1243,
+    "aa": "I",
+    "percent": 0.002109704641350211,
+    "count": 1,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 1244,
     "aa": "I",
     "percent": 0.002109704641350211,
     "count": 1,
@@ -26058,16 +26068,6 @@
     "total": 474,
     "reason": "PCNT",
     "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 1244,
-    "aa": "I",
-    "percent": 0.002109704641350211,
-    "count": 1,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": true
   },
   {
     "gene": "S",
@@ -26172,22 +26172,22 @@
   {
     "gene": "S",
     "position": 1249,
-    "aa": "S",
-    "percent": 0.9978902953586498,
-    "count": 473,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 1249,
     "aa": "L",
     "percent": 0.002109704641350211,
     "count": 1,
     "total": 474,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 1249,
+    "aa": "S",
+    "percent": 0.9978902953586498,
+    "count": 473,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -26198,26 +26198,6 @@
     "total": 474,
     "reason": "PCNT",
     "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 1251,
-    "aa": "G",
-    "percent": 0.9916142557651991,
-    "count": 473,
-    "total": 477,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 1251,
-    "aa": "W",
-    "percent": 0.0020964360587002098,
-    "count": 1,
-    "total": 477,
-    "reason": "PCNT",
-    "isUnusual": true
   },
   {
     "gene": "S",
@@ -26242,10 +26222,40 @@
   {
     "gene": "S",
     "position": 1251,
+    "aa": "G",
+    "percent": 0.9916142557651991,
+    "count": 473,
+    "total": 477,
+    "reason": "PCNT",
+    "isUnusual": false
+  },
+  {
+    "gene": "S",
+    "position": 1251,
     "aa": "V",
     "percent": 0.0020964360587002098,
     "count": 1,
     "total": 477,
+    "reason": "PCNT",
+    "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 1251,
+    "aa": "W",
+    "percent": 0.0020964360587002098,
+    "count": 1,
+    "total": 477,
+    "reason": "PCNT",
+    "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 1252,
+    "aa": "K",
+    "percent": 0.002109704641350211,
+    "count": 1,
+    "total": 474,
     "reason": "PCNT",
     "isUnusual": true
   },
@@ -26258,16 +26268,6 @@
     "total": 474,
     "reason": "PCNT",
     "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 1252,
-    "aa": "K",
-    "percent": 0.002109704641350211,
-    "count": 1,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": true
   },
   {
     "gene": "S",
@@ -26382,32 +26382,22 @@
   {
     "gene": "S",
     "position": 1258,
-    "aa": "E",
-    "percent": 0.9916142557651991,
-    "count": 473,
-    "total": 477,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 1258,
-    "aa": "P",
-    "percent": 0.0020964360587002098,
-    "count": 1,
-    "total": 477,
-    "reason": "PCNT",
-    "isUnusual": true
-  },
-  {
-    "gene": "S",
-    "position": 1258,
     "aa": "A",
     "percent": 0.0020964360587002098,
     "count": 1,
     "total": 477,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 1258,
+    "aa": "E",
+    "percent": 0.9916142557651991,
+    "count": 473,
+    "total": 477,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -26422,7 +26412,27 @@
   {
     "gene": "S",
     "position": 1258,
+    "aa": "P",
+    "percent": 0.0020964360587002098,
+    "count": 1,
+    "total": 477,
+    "reason": "PCNT",
+    "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 1258,
     "aa": "V",
+    "percent": 0.0020964360587002098,
+    "count": 1,
+    "total": 477,
+    "reason": "PCNT",
+    "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 1259,
+    "aa": "A",
     "percent": 0.0020964360587002098,
     "count": 1,
     "total": 477,
@@ -26442,27 +26452,17 @@
   {
     "gene": "S",
     "position": 1259,
-    "aa": "L",
-    "percent": 0.0020964360587002098,
-    "count": 1,
-    "total": 477,
-    "reason": "PCNT",
-    "isUnusual": true
-  },
-  {
-    "gene": "S",
-    "position": 1259,
-    "aa": "A",
-    "percent": 0.0020964360587002098,
-    "count": 1,
-    "total": 477,
-    "reason": "PCNT",
-    "isUnusual": true
-  },
-  {
-    "gene": "S",
-    "position": 1259,
     "aa": "G",
+    "percent": 0.0020964360587002098,
+    "count": 1,
+    "total": 477,
+    "reason": "PCNT",
+    "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 1259,
+    "aa": "L",
     "percent": 0.0020964360587002098,
     "count": 1,
     "total": 477,
@@ -26476,6 +26476,16 @@
     "percent": 0.0020964360587002098,
     "count": 1,
     "total": 477,
+    "reason": "PCNT",
+    "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 1260,
+    "aa": "A",
+    "percent": 0.0020920502092050207,
+    "count": 1,
+    "total": 478,
     "reason": "PCNT",
     "isUnusual": true
   },
@@ -26492,26 +26502,6 @@
   {
     "gene": "S",
     "position": 1260,
-    "aa": "L",
-    "percent": 0.0020920502092050207,
-    "count": 1,
-    "total": 478,
-    "reason": "PCNT",
-    "isUnusual": true
-  },
-  {
-    "gene": "S",
-    "position": 1260,
-    "aa": "A",
-    "percent": 0.0020920502092050207,
-    "count": 1,
-    "total": 478,
-    "reason": "PCNT",
-    "isUnusual": true
-  },
-  {
-    "gene": "S",
-    "position": 1260,
     "aa": "E",
     "percent": 0.0020920502092050207,
     "count": 1,
@@ -26532,7 +26522,7 @@
   {
     "gene": "S",
     "position": 1260,
-    "aa": "V",
+    "aa": "L",
     "percent": 0.0020920502092050207,
     "count": 1,
     "total": 478,
@@ -26541,21 +26531,11 @@
   },
   {
     "gene": "S",
-    "position": 1261,
-    "aa": "S",
-    "percent": 0.9874213836477987,
-    "count": 471,
-    "total": 477,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 1261,
-    "aa": "Y",
-    "percent": 0.0041928721174004195,
-    "count": 2,
-    "total": 477,
+    "position": 1260,
+    "aa": "V",
+    "percent": 0.0020920502092050207,
+    "count": 1,
+    "total": 478,
     "reason": "PCNT",
     "isUnusual": true
   },
@@ -26591,13 +26571,23 @@
   },
   {
     "gene": "S",
-    "position": 1262,
-    "aa": "E",
-    "percent": 0.9957894736842106,
-    "count": 473,
-    "total": 475,
+    "position": 1261,
+    "aa": "S",
+    "percent": 0.9874213836477987,
+    "count": 471,
+    "total": 477,
     "reason": "PCNT",
     "isUnusual": false
+  },
+  {
+    "gene": "S",
+    "position": 1261,
+    "aa": "Y",
+    "percent": 0.0041928721174004195,
+    "count": 2,
+    "total": 477,
+    "reason": "PCNT",
+    "isUnusual": true
   },
   {
     "gene": "S",
@@ -26608,6 +26598,16 @@
     "total": 475,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 1262,
+    "aa": "E",
+    "percent": 0.9957894736842106,
+    "count": 473,
+    "total": 475,
+    "reason": "PCNT",
+    "isUnusual": false
   },
   {
     "gene": "S",
@@ -26632,16 +26632,6 @@
   {
     "gene": "S",
     "position": 1264,
-    "aa": "V",
-    "percent": 0.9978902953586498,
-    "count": 473,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 1264,
     "aa": "T",
     "percent": 0.002109704641350211,
     "count": 1,
@@ -26651,11 +26641,11 @@
   },
   {
     "gene": "S",
-    "position": 1265,
-    "aa": "L",
-    "percent": 0.9874213836477987,
-    "count": 471,
-    "total": 477,
+    "position": 1264,
+    "aa": "V",
+    "percent": 0.9978902953586498,
+    "count": 473,
+    "total": 474,
     "reason": "PCNT",
     "isUnusual": false
   },
@@ -26672,7 +26662,7 @@
   {
     "gene": "S",
     "position": 1265,
-    "aa": "T",
+    "aa": "I",
     "percent": 0.0020964360587002098,
     "count": 1,
     "total": 477,
@@ -26682,7 +26672,17 @@
   {
     "gene": "S",
     "position": 1265,
-    "aa": "I",
+    "aa": "L",
+    "percent": 0.9874213836477987,
+    "count": 471,
+    "total": 477,
+    "reason": "PCNT",
+    "isUnusual": false
+  },
+  {
+    "gene": "S",
+    "position": 1265,
+    "aa": "T",
     "percent": 0.0020964360587002098,
     "count": 1,
     "total": 477,
@@ -26722,16 +26722,6 @@
   {
     "gene": "S",
     "position": 1267,
-    "aa": "G",
-    "percent": 0.9978902953586498,
-    "count": 473,
-    "total": 474,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 1267,
     "aa": "F",
     "percent": 0.002109704641350211,
     "count": 1,
@@ -26741,8 +26731,8 @@
   },
   {
     "gene": "S",
-    "position": 1268,
-    "aa": "V",
+    "position": 1267,
+    "aa": "G",
     "percent": 0.9978902953586498,
     "count": 473,
     "total": 474,
@@ -26761,8 +26751,8 @@
   },
   {
     "gene": "S",
-    "position": 1269,
-    "aa": "K",
+    "position": 1268,
+    "aa": "V",
     "percent": 0.9978902953586498,
     "count": 473,
     "total": 474,
@@ -26781,6 +26771,26 @@
   },
   {
     "gene": "S",
+    "position": 1269,
+    "aa": "K",
+    "percent": 0.9978902953586498,
+    "count": 473,
+    "total": 474,
+    "reason": "PCNT",
+    "isUnusual": false
+  },
+  {
+    "gene": "S",
+    "position": 1270,
+    "aa": "F",
+    "percent": 0.002105263157894737,
+    "count": 1,
+    "total": 475,
+    "reason": "PCNT",
+    "isUnusual": true
+  },
+  {
+    "gene": "S",
     "position": 1270,
     "aa": "L",
     "percent": 0.9957894736842106,
@@ -26793,16 +26803,6 @@
     "gene": "S",
     "position": 1270,
     "aa": "T",
-    "percent": 0.002105263157894737,
-    "count": 1,
-    "total": 475,
-    "reason": "PCNT",
-    "isUnusual": true
-  },
-  {
-    "gene": "S",
-    "position": 1270,
-    "aa": "F",
     "percent": 0.002105263157894737,
     "count": 1,
     "total": 475,
@@ -26852,26 +26852,6 @@
   {
     "gene": "S",
     "position": 1272,
-    "aa": "Y",
-    "percent": 0.9916142557651991,
-    "count": 473,
-    "total": 477,
-    "reason": "PCNT",
-    "isUnusual": false
-  },
-  {
-    "gene": "S",
-    "position": 1272,
-    "aa": "I",
-    "percent": 0.0020964360587002098,
-    "count": 1,
-    "total": 477,
-    "reason": "PCNT",
-    "isUnusual": true
-  },
-  {
-    "gene": "S",
-    "position": 1272,
     "aa": "C",
     "percent": 0.0020964360587002098,
     "count": 1,
@@ -26892,6 +26872,16 @@
   {
     "gene": "S",
     "position": 1272,
+    "aa": "I",
+    "percent": 0.0020964360587002098,
+    "count": 1,
+    "total": 477,
+    "reason": "PCNT",
+    "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 1272,
     "aa": "S",
     "percent": 0.0020964360587002098,
     "count": 1,
@@ -26901,10 +26891,10 @@
   },
   {
     "gene": "S",
-    "position": 1273,
-    "aa": "T",
-    "percent": 0.9937106918238994,
-    "count": 474,
+    "position": 1272,
+    "aa": "Y",
+    "percent": 0.9916142557651991,
+    "count": 473,
     "total": 477,
     "reason": "PCNT",
     "isUnusual": false
@@ -26938,5 +26928,15 @@
     "total": 477,
     "reason": "PCNT",
     "isUnusual": true
+  },
+  {
+    "gene": "S",
+    "position": 1273,
+    "aa": "T",
+    "percent": 0.9937106918238994,
+    "count": 474,
+    "total": 477,
+    "reason": "PCNT",
+    "isUnusual": false
   }
 ]
