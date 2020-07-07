@@ -4,48 +4,13 @@ import sys
 import json
 
 
-def sort_posaas(posaas):
+def sort_poscodons(poscodons):
     genes = ['RdRP', 'S']
-    return sorted(posaas, key=lambda r: (
+    return sorted(poscodons, key=lambda r: (
         genes.index(r['gene']),
         r['position'],
-        r['aa']
+        r['codon']
     ))
-
-
-def postprocess(data, all_data):
-    usual_aas = set()
-    for rows in all_data:
-        for row in rows:
-            if not row['isUnusual']:
-                usual_aas.add((row['gene'], row['position'], row['aa']))
-    totals = {
-        (r['gene'], r['position']): r['total']
-        for r in data
-    }
-    posaamap = {
-        (r['gene'], r['position'], r['aa']): r
-        for r in data
-    }
-    for usual_aa in usual_aas:
-        gene, pos, aa = usual_aa
-        if usual_aa not in posaamap:
-            posaamap[usual_aa] = {
-                'gene': gene,
-                'position': pos,
-                'aa': aa,
-                'percent': 0,
-                'count': 0,
-                'total': totals[(gene, pos)],
-                'reason': 'IN_SIMILAR_VIRUS',
-                'isUnusual': False
-            }
-        elif posaamap[usual_aa]['isUnusual']:
-            posaamap[usual_aa].update({
-                'reason': 'IN_SIMILAR_VIRUS',
-                'isUnusual': False
-            })
-    return list(posaamap.values())
 
 
 DIST_FILE_CONFIGS = [
@@ -66,16 +31,14 @@ DIST_FILE_CONFIGS = [
         'taxonomy': 'SARSr+NC_004718+NC_045512',
         'unusual_cutoff': 0.02,
         'genes': {'S', 'RdRP'},
-        'postprocess': lambda data, all_data: postprocess(data, all_data[1:])
     },
 ]
-JSON_PREFIX = 'prevalence.with-mixtures.verbose.'
+JSON_PREFIX = 'codon.prevalence.with-mixtures.verbose.'
 
 
 def export_compat_data(data, output_config):
     genes = output_config['genes']
     taxonomy = output_config['taxonomy']
-    cutoff = output_config['unusual_cutoff']
     rows = []
     for gene, genedata in data.items():
         if gene not in genes:
@@ -84,16 +47,14 @@ def export_compat_data(data, output_config):
             for taxondata in posdata['taxon_detail']:
                 if taxondata['taxonomy'] != taxonomy:
                     continue
-                for aadata in taxondata['aa_variants']:
+                for cddata in taxondata['codon_variants']:
                     rows.append({
                         'gene': gene,
                         'position': posdata['position'],
-                        'aa': aadata['seq_aa'],
-                        'percent': aadata['prevalence'],
-                        'count': aadata['count'],
-                        'total': taxondata['total'],
-                        'reason': 'PCNT',
-                        'isUnusual': aadata['prevalence'] < cutoff
+                        'codon': cddata['seq_codon'],
+                        'percent': cddata['prevalence'],
+                        'count': cddata['count'],
+                        'total': taxondata['total']
                     })
     return rows
 
@@ -126,7 +87,7 @@ def main():
         postprocess = config.get('postprocess')
         if postprocess:
             output = postprocess(output, all_outputs)
-        output = sort_posaas(output)
+        output = sort_poscodons(output)
         with open(
             os.path.join(outdir, config['filename']),
             'w'

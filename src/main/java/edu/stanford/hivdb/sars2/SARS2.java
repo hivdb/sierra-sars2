@@ -55,7 +55,7 @@ public class SARS2 implements Virus<SARS2> {
 	private static final String APOBECS_RESPATH = "apobecs/apobecs.json";
 	private static final String APOBEC_DRMS_RESPATH = "apobecs/apobec_drms.json";
 	private static final String AAPCNTS_RESPATH = "aapcnt/rx-%s_taxon-%s.json";
-	private static final String CODONPCNTS_RESPATH = "codonpcnt/rx-%s_subtype-%s.json";
+	private static final String CODONPCNTS_RESPATH = "codonpcnt/rx-%s_taxon-%s.json";
 	private static final String MUTTYPES_RESPATH = "mutation-types.json";
 	private static final String MUTTYPE_PAIRS_RESPATH = "mutation-type-pairs.json";
 	private static final String MAIN_SUBTYPES_RESPATH = "main-subtypes.json";
@@ -269,6 +269,11 @@ public class SARS2 implements Virus<SARS2> {
 	@Override
 	public CodonPercents<SARS2> getCodonPercents(Strain<SARS2> strain, String treatment, String subtype) {
 		return dl.getCodonPercents(strain, treatment, subtype);
+	}
+
+	@Override
+	public CodonPercents<SARS2> getMainCodonPercents(Strain<SARS2> strain) {
+		return dl.getCodonPercents(strain, "all", "SARS2");
 	}
 
 	@Override
