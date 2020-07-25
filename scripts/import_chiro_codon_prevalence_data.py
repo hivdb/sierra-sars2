@@ -16,46 +16,47 @@ def sort_poscodons(poscodons):
 DIST_FILE_CONFIGS = [
     {
         'filename': 'rx-all_taxon-SARS2.json',
-        'taxonomy': 'SARS2',
-        'unusual_cutoff': 0.01,
+        'taxon_group': 'SARS2',
+        'unusual_cutoff': 0.0005,
         'genes': {'S', 'RdRP'},
     },
     {
         'filename': 'rx-all_taxon-SARS.json',
-        'taxonomy': 'SARS',
+        'taxon_group': 'SARS',
         'unusual_cutoff': 0.01,
         'genes': {'S', 'RdRP'},
     },
     {
         'filename': 'rx-all_taxon-SARSr.json',
-        'taxonomy': 'SARSr+NC_004718+NC_045512',
+        'taxon_group': 'SARSr',
         'unusual_cutoff': 0.02,
         'genes': {'S', 'RdRP'},
     },
 ]
-JSON_PREFIX = 'codon.prevalence.with-mixtures.verbose.'
+JSON_PREFIX = 'codon.prevalence.'
+JSON_SUFFIX = '.verbose.json'
 
 
 def export_compat_data(data, output_config):
     genes = output_config['genes']
-    taxonomy = output_config['taxonomy']
+    taxon_group = output_config['taxon_group']
     rows = []
-    for gene, genedata in data.items():
+    for posdata in data[taxon_group]:
+        gene = posdata['gene']
         if gene not in genes:
             continue
-        for posdata in genedata:
-            for taxondata in posdata['taxon_detail']:
-                if taxondata['taxonomy'] != taxonomy:
-                    continue
-                for cddata in taxondata['codon_variants']:
-                    rows.append({
-                        'gene': gene,
-                        'position': posdata['position'],
-                        'codon': cddata['seq_codon'],
-                        'percent': cddata['prevalence'],
-                        'count': cddata['count'],
-                        'total': taxondata['total']
-                    })
+        for taxondata in posdata['taxon_detail']:
+            if taxondata['taxonomy'] != taxon_group:
+                continue
+            for cddata in taxondata['codon_variants']:
+                rows.append({
+                    'gene': gene,
+                    'position': posdata['position'],
+                    'codon': cddata['seq_codon'],
+                    'percent': cddata['prevalence'],
+                    'count': cddata['count'],
+                    'total': taxondata['total']
+                })
     return rows
 
 
@@ -69,11 +70,11 @@ def main():
     all_data = {}
     for root, _, files in os.walk(indir):
         for jsonfile in files:
-            if not jsonfile.endswith('.json'):
+            if not jsonfile.endswith(JSON_SUFFIX):
                 continue
             if not jsonfile.startswith(JSON_PREFIX):
                 continue
-            gene = jsonfile[len(JSON_PREFIX):-5]
+            gene = jsonfile[len(JSON_PREFIX):-len(JSON_SUFFIX)]
             with open(
                 os.path.join(root, jsonfile),
                 'r',

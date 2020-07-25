@@ -51,50 +51,51 @@ def postprocess(data, all_data):
 DIST_FILE_CONFIGS = [
     {
         'filename': 'rx-all_taxon-SARS2.json',
-        'taxonomy': 'SARS2',
-        'unusual_cutoff': 0.01,
-        'genes': {'S', 'RdRP'},
+        'taxon_group': 'SARS2',
+        'unusual_cutoff': 0.0005,
+        'genes': {'S', 'RdRP'}
     },
     {
         'filename': 'rx-all_taxon-SARS.json',
-        'taxonomy': 'SARS',
+        'taxon_group': 'SARS',
         'unusual_cutoff': 0.01,
         'genes': {'S', 'RdRP'},
     },
     {
         'filename': 'rx-all_taxon-SARSr.json',
-        'taxonomy': 'SARSr+NC_004718+NC_045512',
+        'taxon_group': 'SARSr',
         'unusual_cutoff': 0.02,
         'genes': {'S', 'RdRP'},
         'postprocess': lambda data, all_data: postprocess(data, all_data[1:])
     },
 ]
-JSON_PREFIX = 'prevalence.with-mixtures.verbose.'
+JSON_PREFIX = 'prevalence.'
+JSON_SUFFIX = '.verbose.json'
 
 
 def export_compat_data(data, output_config):
     genes = output_config['genes']
-    taxonomy = output_config['taxonomy']
+    taxon_group = output_config['taxon_group']
     cutoff = output_config['unusual_cutoff']
     rows = []
-    for gene, genedata in data.items():
+    for posdata in data[taxon_group]:
+        gene = posdata['gene']
         if gene not in genes:
             continue
-        for posdata in genedata:
-            for taxondata in posdata['taxon_detail']:
-                if taxondata['taxonomy'] != taxonomy:
-                    continue
-                for aadata in taxondata['aa_variants']:
-                    rows.append({
-                        'gene': gene,
-                        'position': posdata['position'],
-                        'aa': aadata['seq_aa'],
-                        'percent': aadata['prevalence'],
-                        'count': aadata['count'],
-                        'total': taxondata['total'],
-                        'reason': 'PCNT',
-                        'isUnusual': aadata['prevalence'] < cutoff
-                    })
+        for taxondata in posdata['taxon_detail']:
+            if taxondata['taxonomy'] != taxon_group:
+                continue
+            for aadata in taxondata['aa_variants']:
+                rows.append({
+                    'gene': gene,
+                    'position': posdata['position'],
+                    'aa': aadata['seq_aa'],
+                    'percent': aadata['prevalence'],
+                    'count': aadata['count'],
+                    'total': taxondata['total'],
+                    'reason': 'PCNT',
+                    'isUnusual': aadata['prevalence'] < cutoff
+                })
     return rows
 
 
@@ -108,17 +109,17 @@ def main():
     all_data = {}
     for root, _, files in os.walk(indir):
         for jsonfile in files:
-            if not jsonfile.endswith('.json'):
+            if not jsonfile.endswith(JSON_SUFFIX):
                 continue
             if not jsonfile.startswith(JSON_PREFIX):
                 continue
-            gene = jsonfile[len(JSON_PREFIX):-5]
+            taxon_group = jsonfile[len(JSON_PREFIX):-len(JSON_SUFFIX)]
             with open(
                 os.path.join(root, jsonfile),
                 'r',
                 encoding='utf-8-sig'
             ) as fp:
-                all_data[gene] = json.load(fp)
+                all_data[taxon_group] = json.load(fp)
     all_outputs = []
     for config in DIST_FILE_CONFIGS:
         all_outputs.append(export_compat_data(all_data, config))
