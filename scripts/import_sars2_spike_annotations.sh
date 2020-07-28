@@ -18,4 +18,4 @@ CSV_PATH=$(mktemp)
 trap "rm $CSV_PATH" EXIT
 
 ssconvert $XLSX_PATH $CSV_PATH --export-type="Gnumeric_stf:stf_csv"
-scripts/import_annotations.py scripts/sars2_spike_annotations.json $CSV_PATH src/main/resources/mutation-annotations_S.json
+scripts/import_annotations.py scripts/sars2_spike_annotations.json $CSV_PATH src/main/resources/mutation-annotations_SARS2S.json
