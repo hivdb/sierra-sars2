@@ -10,9 +10,13 @@ def load_config(config_file):
     citations = {}
     reverse_citations = {}
     cite_autoincur = 1
+    annotation_names = []
     for key, attrs in config['annotations'].items():
         if key.startswith('#'):
             continue
+        annot_name = attrs['name']
+        if annot_name not in annotation_names:
+            annotation_names.append(annot_name)
         for citation in attrs['citations']:
             author = citation['author']
             year = citation['year']
@@ -37,17 +41,18 @@ def load_config(config_file):
                     r_citation['idx'],
                     sections[section]
                 )] = {
-                    'citation_id': r_citation['idx'],
-                    'section_id': sections[section],
+                    'citationId': r_citation['idx'],
+                    'sectionId': sections[section],
                     **citation
                 }
     config['citations'] = citations
-    config['reverse_citations'] = reverse_citations
+    config['annotationNames'] = annotation_names
+    config['reverseCitations'] = reverse_citations
     return config
 
 
 def get_citation_ids(attrs, config):
-    all_citations = config['reverse_citations']
+    all_citations = config['reverseCitations']
     citation_ids = []
     for c in attrs['citations']:
         citation = all_citations[c['doi']]
@@ -60,9 +65,9 @@ def get_citation_ids(attrs, config):
 def reform_posdata(posdata):
     posdata['annotations'] = [{
         **annotation,
-        'citation_ids': [
+        'citationIds': [
             '{}.{}'.format(*idx)
-            for idx in sorted(annotation['citation_ids'])
+            for idx in sorted(annotation['citationIds'])
         ]
     } for annotation in posdata['annotations'].values()]
     posdata['aminoAcids'] = sorted(
@@ -70,9 +75,9 @@ def reform_posdata(posdata):
             **aadata,
             'annotations': [{
                 **annotation,
-                'citation_ids': [
+                'citationIds': [
                     '{}.{}'.format(*idx)
-                    for idx in sorted(annotation['citation_ids'])
+                    for idx in sorted(annotation['citationIds'])
                 ]
             } for annotation in aadata['annotations'].values()]
         } for aadata in posdata['aminoAcids'].values()),
@@ -116,8 +121,8 @@ def main():
                     annotations.setdefault(name, {
                         'name': name,
                         'value': value,
-                        'citation_ids': set()
-                    })['citation_ids'] |= citation_ids
+                        'citationIds': set()
+                    })['citationIds'] |= citation_ids
                 elif level == 'amino acid':
                     aadata = posdata['aminoAcids']
                     value = (
@@ -140,16 +145,17 @@ def main():
                         )
                         annotations.setdefault(name, {
                             'name': name,
-                            'citation_ids': set()
-                        })['citation_ids'] |= citation_ids
+                            'citationIds': set()
+                        })['citationIds'] |= citation_ids
             posdata = reform_posdata(posdata)
             if posdata:
                 all_posdata.append(posdata)
         json.dump({
             'gene': config['gene'],
             'taxonomy': config['taxonomy'],
+            'annotationNames': config['annotationNames'],
+            'citations': config['citations'],
             'positions': sorted(all_posdata, key=lambda d: d['position']),
-            'citations': config['citations']
         }, outfile, indent=2)
 
 
