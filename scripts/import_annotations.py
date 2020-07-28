@@ -10,13 +10,15 @@ def load_config(config_file):
     citations = {}
     reverse_citations = {}
     cite_autoincur = 1
-    annotation_names = []
+    annotation_defs = {}
     for key, attrs in config['annotations'].items():
         if key.startswith('#'):
             continue
         annot_name = attrs['name']
-        if annot_name not in annotation_names:
-            annotation_names.append(annot_name)
+        annotation_defs[annot_name] = {
+            'name': annot_name,
+            'level': attrs['level']
+        }
         for citation in attrs['citations']:
             author = citation['author']
             year = citation['year']
@@ -46,7 +48,7 @@ def load_config(config_file):
                     **citation
                 }
     config['citations'] = citations
-    config['annotationNames'] = annotation_names
+    config['annotationDefs'] = list(annotation_defs.values())
     config['reverseCitations'] = reverse_citations
     return config
 
@@ -153,7 +155,7 @@ def main():
         json.dump({
             'gene': config['gene'],
             'taxonomy': config['taxonomy'],
-            'annotationNames': config['annotationNames'],
+            'annotations': config['annotationDefs'],
             'citations': config['citations'],
             'positions': sorted(all_posdata, key=lambda d: d['position']),
         }, outfile, indent=2)

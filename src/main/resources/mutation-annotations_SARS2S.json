@@ -1,19 +1,55 @@
 {
   "gene": "SARS2S",
   "taxonomy": "SARS2",
-  "annotationNames": [
-    "landmark",
-    "secondary structure",
-    "ACE2-binding residue",
-    "CR3022-binding residue",
-    "S309-binding residue",
-    "CB6-biding residue",
-    "P2B-2F6-binding residue",
-    "B38-binding residue",
-    "known SARS-CoV amino acid",
-    "known RaTG13 amino acid",
-    "known Pangolin isolate MP789 amino acid",
-    "recurrent mutation (homoplasies)"
+  "annotations": [
+    {
+      "name": "landmark",
+      "level": "position"
+    },
+    {
+      "name": "secondary structure",
+      "level": "position"
+    },
+    {
+      "name": "ACE2-binding residue",
+      "level": "position"
+    },
+    {
+      "name": "CR3022-binding residue",
+      "level": "position"
+    },
+    {
+      "name": "S309-binding residue",
+      "level": "position"
+    },
+    {
+      "name": "CB6-biding residue",
+      "level": "position"
+    },
+    {
+      "name": "P2B-2F6-binding residue",
+      "level": "position"
+    },
+    {
+      "name": "B38-binding residue",
+      "level": "position"
+    },
+    {
+      "name": "known SARS-CoV amino acid",
+      "level": "amino acid"
+    },
+    {
+      "name": "known RaTG13 amino acid",
+      "level": "amino acid"
+    },
+    {
+      "name": "known Pangolin isolate MP789 amino acid",
+      "level": "amino acid"
+    },
+    {
+      "name": "recurrent mutation (homoplasies)",
+      "level": "amino acid"
+    }
   ],
   "citations": {
     "1.1": {
