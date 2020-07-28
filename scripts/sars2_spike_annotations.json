@@ -1,0 +1,223 @@
+{
+  "gene": "S",
+  "taxonomy": "SARS2",
+  "annotations": {
+    "Landmark": {
+      "name": "landmark",
+      "level": "position",
+      "citations": [{
+        "author": "Coutard",
+        "year": 2020,
+        "doi": "10.1016/j.antiviral.2020.104742",
+        "section": "Figure 2"
+      },
+      {
+        "author": "Wrapp",
+        "year": 2020,
+        "doi": "10.1126/science.abb2507",
+        "section": "Figure S5"
+      },
+      {
+        "author": "Xia",
+        "year": 2020,
+        "doi": "10.1038/s41423-020-0374-2",
+        "section": "Figure 1a"
+      },
+      {
+        "author": "Xu",
+        "year": 2020,
+        "doi": "10.1101/2020.06.30.177097",
+        "section": "Figure S6"
+      }]
+    },
+    "SecondaryStr(Xu)": {
+      "name": "secondary structure",
+      "level": "position",
+      "citations": [{
+        "author": "Xu",
+        "year": 2020,
+        "doi": "10.1101/2020.06.30.177097",
+        "section": "Figure S6"
+      }]
+    },
+    "ACE2(Shang)": {
+      "name": "ACE2-binding residue",
+      "level": "position",
+      "citations": [{
+        "author": "Shang",
+        "year": 2020,
+        "doi": "10.1038/s41586-020-2179-y",
+        "section": "Extended Data Fig. 4b"
+      }]
+    },
+    "ACE2(Pinto)": {
+      "name": "ACE2-binding residue",
+      "level": "position",
+      "citations": [{
+        "author": "Pinto",
+        "year": 2020,
+        "doi": "10.1038/s41586-020-2349-y",
+        "section": "Extended Data Fig. 6a"
+      }]
+    },
+    "ACE2(Lan)": {
+      "name": "ACE2-binding residue",
+      "level": "position",
+      "citations": [{
+        "author": "Lan",
+        "year": 2020,
+        "doi": "10.1038/s41586-020-2180-5",
+        "section": "Figure 2b"
+      }]
+    },
+    "ACE2(Wang)": {
+      "name": "ACE2-binding residue",
+      "level": "position",
+      "citations": [{
+        "author": "Wang",
+        "year": 2020,
+        "doi": "10.1016/j.cell.2020.03.045",
+        "section": "Figure S1D"
+      }]
+    },
+    "ACE2(Huo)": {
+      "name": "ACE2-binding residue",
+      "level": "position",
+      "citations": [{
+        "author": "Huo",
+        "year": 2020,
+        "doi": "10.1038/s41594-020-0469-6",
+        "section": "Figure 1b"
+      }]
+    },
+    "ACE2(Xu)": {
+      "name": "ACE2-binding residue",
+      "level": "position",
+      "citations": [{
+        "author": "Xu",
+        "year": 2020,
+        "doi": "10.1101/2020.06.30.177097",
+        "section": "Table S3"
+      }]
+    },
+    "ACE2(Shi)": {
+      "name": "ACE2-binding residue",
+      "level": "position",
+      "citations": [{
+        "author": "Shi",
+        "year": 2020,
+        "doi": "10.1038/s41586-020-2381-y",
+        "section": "Extended Data Table 4"
+      }]
+    },
+    "CR3022(Yuan)": {
+      "name": "CR3022-binding residue",
+      "level": "position",
+      "citations": [{
+        "author": "Yuan",
+        "year": 2020,
+        "doi": "10.1126/science.abb7269",
+        "section": "Table S3"
+      }]
+    },
+    "CR3022 (Huo)": {
+      "name": "CR3022-binding residue",
+      "level": "position",
+      "citations": [{
+        "author": "Huo",
+        "year": 2020,
+        "doi": "10.1016/j.chom.2020.06.010",
+        "section": "Figure 1"
+      }]
+    },
+    "S309(Pinto)": {
+      "name": "S309-binding residue",
+      "level": "position",
+      "citations": [{
+        "author": "Pinto",
+        "year": 2020,
+        "doi": "10.1038/s41586-020-2349-y",
+        "section": "Extended Data Fig. 6a"
+      }]
+    },
+    "CB6 (Shi)": {
+      "name": "CB6-biding residue",
+      "level": "position",
+      "citations": [{
+        "author": "Shi",
+        "year": 2020,
+        "doi": "10.1038/s41586-020-2381-y",
+        "section": "Extended Data Table 4"
+      }]
+    },
+    "P2B-2F6 (Ju)": {
+      "name": "P2B-2F6-binding residue",
+      "level": "position",
+      "citations": [{
+        "author": "Ju",
+        "year": 2020,
+        "doi": "10.1038/s41586-020-2380-z",
+        "section": "Table S2"
+      }]
+    },
+    "B38(Wu)": {
+      "name": "B38-binding residue",
+      "level": "position",
+      "citations": [{
+        "author": "Wu",
+        "year": 2020,
+        "doi": "10.1126/science.abc2241",
+        "section": "Table S3"
+      }]
+    },
+    "# VHH-72": {
+      "name": "VHH-72-biding residue TODO",
+      "level": "position",
+      "citations": [{
+        "author": "TODO",
+        "year": 2020,
+        "doi": ""
+      }]
+    },
+    "SARS-1-dif": {
+      "name": "known SARS-CoV amino acid",
+      "level": "amino acid",
+      "citations": [{
+        "author": "He",
+        "year": 2004,
+        "doi": "10.1016/j.bbrc.2004.02.074",
+        "section": "genbank:NC_004718"
+      }]
+    },
+    "RaTG13-dif": {
+      "name": "known RaTG13 amino acid",
+      "level": "amino acid",
+      "citations": [{
+        "author": "Zhou",
+        "year": 2020,
+        "doi": "10.1038/s41586-020-2012-7",
+        "section": "genbank:MN996532"
+      }]
+    },
+    "GD-Pang-Dif (MT084071)": {
+      "name": "known Pangolin isolate MP789 amino acid",
+      "level": "amino acid",
+      "citations": [{
+        "author": "Liu",
+        "year": 2020,
+        "doi": "10.1371/journal.ppat.1008421",
+        "section": "genbank:MT121216"
+      }]
+    },
+    "Homoplasies(VanDorp)": {
+      "name": "recurrent mutation (homoplasies)",
+      "level": "amino acid",
+      "citations": [{
+        "author": "van Dorp",
+        "year": 2020,
+        "doi": "10.1016/j.meegid.2020.104351",
+        "section": "Table S4"
+      }]
+    }
+  }
+}
