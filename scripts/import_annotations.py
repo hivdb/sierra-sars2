@@ -105,7 +105,7 @@ def main():
         for row in rows:
             pos = row['position']
             posdata = {
-                'position': pos,
+                'position': int(pos),
                 'annotations': {},
                 'aminoAcids': {}
             }
