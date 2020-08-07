@@ -10,7 +10,14 @@
     {
       "name": "secondary structure",
       "level": "position",
-      "hideCitations": true
+      "hideCitations": true,
+      "colorRules": [
+        "^\u03b2",
+        "^T$",
+        "^\u03b1",
+        "^\u03b7",
+        "^\u03c0"
+      ]
     },
     {
       "name": "ACE2-binding residue",
