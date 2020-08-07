@@ -4,11 +4,13 @@
   "annotations": [
     {
       "name": "landmark",
-      "level": "position"
+      "level": "position",
+      "hideCitations": true
     },
     {
       "name": "secondary structure",
-      "level": "position"
+      "level": "position",
+      "hideCitations": true
     },
     {
       "name": "ACE2-binding residue",
