@@ -60,6 +60,9 @@
       "level": "amino acid"
     }
   ],
+  "defaultExtraAnnots": [
+    "landmark"
+  ],
   "citations": {
     "1.1": {
       "citationId": 1,
