@@ -32,6 +32,11 @@
       "colorRules": []
     },
     {
+      "name": "Cysteine residue",
+      "level": "position",
+      "colorRules": []
+    },
+    {
       "name": "CR3022-binding residue",
       "level": "position"
     },
@@ -244,6 +249,14 @@
       "year": 2020,
       "doi": "10.1126/science.abb9983",
       "section": "Figure 1A"
+    },
+    "7.2": {
+      "citationId": 7,
+      "sectionId": 2,
+      "author": "Lan",
+      "year": 2020,
+      "doi": "10.1038/s41586-020-2180-5",
+      "section": "Section \"Main\" paragraph 6"
     }
   },
   "positions": [
@@ -8669,6 +8682,20 @@
       "aminoAcids": []
     },
     {
+      "position": 336,
+      "annotations": [
+        {
+          "name": "Cysteine residue",
+          "citationIds": [
+            "7.2"
+          ],
+          "value": "336-361",
+          "description": "Cys336-Cys361 pair"
+        }
+      ],
+      "aminoAcids": []
+    },
+    {
       "position": 337,
       "annotations": [
         {
@@ -9267,6 +9294,14 @@
           ],
           "value": "S1B",
           "description": "Receptor binding domain (RBD)"
+        },
+        {
+          "name": "Cysteine residue",
+          "citationIds": [
+            "7.2"
+          ],
+          "value": "336-361",
+          "description": "Cys336-Cys361 pair"
         }
       ],
       "aminoAcids": []
@@ -9714,6 +9749,14 @@
           ],
           "value": "S1B",
           "description": "Receptor binding domain (RBD)"
+        },
+        {
+          "name": "Cysteine residue",
+          "citationIds": [
+            "7.2"
+          ],
+          "value": "379-432",
+          "description": "Cys379-Cys432 pair"
         }
       ],
       "aminoAcids": []
@@ -9985,6 +10028,14 @@
           ],
           "value": "S1B",
           "description": "Receptor binding domain (RBD)"
+        },
+        {
+          "name": "Cysteine residue",
+          "citationIds": [
+            "7.2"
+          ],
+          "value": "391-525",
+          "description": "Cys391-Cys525 pair"
         }
       ],
       "aminoAcids": []
@@ -11022,6 +11073,14 @@
           ],
           "value": "S1B",
           "description": "Receptor binding domain (RBD)"
+        },
+        {
+          "name": "Cysteine residue",
+          "citationIds": [
+            "7.2"
+          ],
+          "value": "379-432",
+          "description": "Cys379-Cys432 pair"
         }
       ],
       "aminoAcids": []
@@ -12487,6 +12546,14 @@
           ],
           "value": "S1B-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
+        },
+        {
+          "name": "Cysteine residue",
+          "citationIds": [
+            "7.2"
+          ],
+          "value": "480-488",
+          "description": "Cys480-Cys488 pair"
         }
       ],
       "aminoAcids": []
@@ -12821,6 +12888,14 @@
           ],
           "value": "S1B-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
+        },
+        {
+          "name": "Cysteine residue",
+          "citationIds": [
+            "7.2"
+          ],
+          "value": "480-488",
+          "description": "Cys480-Cys488 pair"
         }
       ],
       "aminoAcids": []
@@ -13722,6 +13797,20 @@
           ]
         }
       ]
+    },
+    {
+      "position": 525,
+      "annotations": [
+        {
+          "name": "Cysteine residue",
+          "citationIds": [
+            "7.2"
+          ],
+          "value": "391-525",
+          "description": "Cys391-Cys525 pair"
+        }
+      ],
+      "aminoAcids": []
     },
     {
       "position": 529,
