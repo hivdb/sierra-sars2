@@ -21,7 +21,15 @@
     },
     {
       "name": "ACE2-binding residue",
-      "level": "position"
+      "level": "position",
+      "hideCitations": true,
+      "colorRules": []
+    },
+    {
+      "name": "Glycan-binding residue",
+      "level": "position",
+      "hideCitations": true,
+      "colorRules": []
     },
     {
       "name": "CR3022-binding residue",
@@ -220,6 +228,22 @@
       "year": 2020,
       "doi": "10.1016/j.meegid.2020.104351",
       "section": "Table S4"
+    },
+    "19.1": {
+      "citationId": 19,
+      "sectionId": 1,
+      "author": "Walls",
+      "year": 2020,
+      "doi": "10.1016/j.cell.2020.02.058",
+      "section": "Table 2"
+    },
+    "20.1": {
+      "citationId": 20,
+      "sectionId": 1,
+      "author": "Watanabe",
+      "year": 2020,
+      "doi": "10.1126/science.abb9983",
+      "section": "Figure 1A"
     }
   },
   "positions": [
@@ -535,6 +559,15 @@
             "2.1"
           ],
           "description": "S1A - N terminal domain (NTD)"
+        },
+        {
+          "name": "Glycan-binding residue",
+          "citationIds": [
+            "19.1",
+            "20.1"
+          ],
+          "value": "Glycan",
+          "description": ""
         }
       ],
       "aminoAcids": [
@@ -764,6 +797,14 @@
             "2.1"
           ],
           "description": "S1A - N terminal domain (NTD)"
+        },
+        {
+          "name": "Glycan-binding residue",
+          "citationIds": [
+            "19.1"
+          ],
+          "value": "Glycan",
+          "description": ""
         }
       ],
       "aminoAcids": [
@@ -1703,6 +1744,15 @@
           "citationIds": [
             "4.1"
           ]
+        },
+        {
+          "name": "Glycan-binding residue",
+          "citationIds": [
+            "19.1",
+            "20.1"
+          ],
+          "value": "Glycan",
+          "description": ""
         }
       ],
       "aminoAcids": []
@@ -1922,6 +1972,14 @@
             "2.1"
           ],
           "description": "S1A - N terminal domain (NTD)"
+        },
+        {
+          "name": "Glycan-binding residue",
+          "citationIds": [
+            "19.1"
+          ],
+          "value": "Glycan",
+          "description": ""
         }
       ],
       "aminoAcids": [
@@ -2107,6 +2165,15 @@
             "2.1"
           ],
           "description": "S1A - N terminal domain (NTD)"
+        },
+        {
+          "name": "Glycan-binding residue",
+          "citationIds": [
+            "19.1",
+            "20.1"
+          ],
+          "value": "Glycan",
+          "description": ""
         }
       ],
       "aminoAcids": [
@@ -3049,6 +3116,14 @@
           "citationIds": [
             "4.1"
           ]
+        },
+        {
+          "name": "Glycan-binding residue",
+          "citationIds": [
+            "19.1"
+          ],
+          "value": "Glycan",
+          "description": ""
         }
       ],
       "aminoAcids": [
@@ -3308,6 +3383,14 @@
           "citationIds": [
             "4.1"
           ]
+        },
+        {
+          "name": "Glycan-binding residue",
+          "citationIds": [
+            "19.1"
+          ],
+          "value": "Glycan",
+          "description": ""
         }
       ],
       "aminoAcids": []
@@ -3322,6 +3405,15 @@
             "2.1"
           ],
           "description": "S1A - N terminal domain (NTD)"
+        },
+        {
+          "name": "Glycan-binding residue",
+          "citationIds": [
+            "19.1",
+            "20.1"
+          ],
+          "value": "Glycan",
+          "description": ""
         }
       ],
       "aminoAcids": []
@@ -4041,6 +4133,15 @@
             "2.1"
           ],
           "description": "S1A - N terminal domain (NTD)"
+        },
+        {
+          "name": "Glycan-binding residue",
+          "citationIds": [
+            "19.1",
+            "20.1"
+          ],
+          "value": "Glycan",
+          "description": ""
         }
       ],
       "aminoAcids": [
@@ -4593,6 +4694,15 @@
           "citationIds": [
             "4.1"
           ]
+        },
+        {
+          "name": "Glycan-binding residue",
+          "citationIds": [
+            "19.1",
+            "20.1"
+          ],
+          "value": "Glycan",
+          "description": ""
         }
       ],
       "aminoAcids": []
@@ -6379,6 +6489,15 @@
             "2.1"
           ],
           "description": "S1A - N terminal domain (NTD)"
+        },
+        {
+          "name": "Glycan-binding residue",
+          "citationIds": [
+            "19.1",
+            "20.1"
+          ],
+          "value": "Glycan",
+          "description": ""
         }
       ],
       "aminoAcids": []
@@ -7688,6 +7807,15 @@
           "citationIds": [
             "4.1"
           ]
+        },
+        {
+          "name": "Glycan-binding residue",
+          "citationIds": [
+            "19.1",
+            "20.1"
+          ],
+          "value": "Glycan",
+          "description": ""
         }
       ],
       "aminoAcids": []
@@ -8487,6 +8615,21 @@
       "aminoAcids": []
     },
     {
+      "position": 331,
+      "annotations": [
+        {
+          "name": "Glycan-binding residue",
+          "citationIds": [
+            "19.1",
+            "20.1"
+          ],
+          "value": "Glycan",
+          "description": ""
+        }
+      ],
+      "aminoAcids": []
+    },
+    {
       "position": 333,
       "annotations": [
         {
@@ -8686,6 +8829,15 @@
           ],
           "value": "S1B",
           "description": "Receptor binding domain (RBD)"
+        },
+        {
+          "name": "Glycan-binding residue",
+          "citationIds": [
+            "19.1",
+            "20.1"
+          ],
+          "value": "Glycan",
+          "description": ""
         }
       ],
       "aminoAcids": []
@@ -9301,6 +9453,14 @@
           ],
           "value": "S1B",
           "description": "Receptor binding domain (RBD)"
+        },
+        {
+          "name": "Glycan-binding residue",
+          "citationIds": [
+            "19.1"
+          ],
+          "value": "Glycan",
+          "description": ""
         }
       ],
       "aminoAcids": []
@@ -14986,6 +15146,15 @@
           ],
           "value": "S1D",
           "description": "Also known as SD2"
+        },
+        {
+          "name": "Glycan-binding residue",
+          "citationIds": [
+            "19.1",
+            "20.1"
+          ],
+          "value": "Glycan",
+          "description": ""
         }
       ],
       "aminoAcids": []
@@ -15257,6 +15426,15 @@
           ],
           "value": "S1D",
           "description": "Also known as SD2"
+        },
+        {
+          "name": "Glycan-binding residue",
+          "citationIds": [
+            "19.1",
+            "20.1"
+          ],
+          "value": "Glycan",
+          "description": ""
         }
       ],
       "aminoAcids": []
@@ -15985,6 +16163,15 @@
           ],
           "value": "S1D",
           "description": "Also known as SD2"
+        },
+        {
+          "name": "Glycan-binding residue",
+          "citationIds": [
+            "19.1",
+            "20.1"
+          ],
+          "value": "Glycan",
+          "description": ""
         }
       ],
       "aminoAcids": [
@@ -16991,6 +17178,15 @@
           "citationIds": [
             "4.1"
           ]
+        },
+        {
+          "name": "Glycan-binding residue",
+          "citationIds": [
+            "19.1",
+            "20.1"
+          ],
+          "value": "Glycan",
+          "description": ""
         }
       ],
       "aminoAcids": []
@@ -17081,6 +17277,21 @@
           "citationIds": [
             "4.1"
           ]
+        }
+      ],
+      "aminoAcids": []
+    },
+    {
+      "position": 717,
+      "annotations": [
+        {
+          "name": "Glycan-binding residue",
+          "citationIds": [
+            "19.1",
+            "20.1"
+          ],
+          "value": "Glycan",
+          "description": ""
         }
       ],
       "aminoAcids": []
@@ -18189,6 +18400,15 @@
           "citationIds": [
             "2.1"
           ]
+        },
+        {
+          "name": "Glycan-binding residue",
+          "citationIds": [
+            "19.1",
+            "20.1"
+          ],
+          "value": "Glycan",
+          "description": ""
         }
       ],
       "aminoAcids": []
@@ -21639,6 +21859,15 @@
           "citationIds": [
             "4.1"
           ]
+        },
+        {
+          "name": "Glycan-binding residue",
+          "citationIds": [
+            "19.1",
+            "20.1"
+          ],
+          "value": "Glycan",
+          "description": ""
         }
       ],
       "aminoAcids": []
@@ -21883,6 +22112,21 @@
           ]
         }
       ]
+    },
+    {
+      "position": 1098,
+      "annotations": [
+        {
+          "name": "Glycan-binding residue",
+          "citationIds": [
+            "19.1",
+            "20.1"
+          ],
+          "value": "Glycan",
+          "description": ""
+        }
+      ],
+      "aminoAcids": []
     },
     {
       "position": 1101,
@@ -22160,6 +22404,15 @@
           "citationIds": [
             "4.1"
           ]
+        },
+        {
+          "name": "Glycan-binding residue",
+          "citationIds": [
+            "19.1",
+            "20.1"
+          ],
+          "value": "Glycan",
+          "description": ""
         }
       ],
       "aminoAcids": []
@@ -22257,6 +22510,21 @@
           "citationIds": [
             "4.1"
           ]
+        }
+      ],
+      "aminoAcids": []
+    },
+    {
+      "position": 1158,
+      "annotations": [
+        {
+          "name": "Glycan-binding residue",
+          "citationIds": [
+            "19.1",
+            "20.1"
+          ],
+          "value": "Glycan",
+          "description": ""
         }
       ],
       "aminoAcids": []
@@ -22457,6 +22725,15 @@
           "citationIds": [
             "2.1"
           ]
+        },
+        {
+          "name": "Glycan-binding residue",
+          "citationIds": [
+            "19.1",
+            "20.1"
+          ],
+          "value": "Glycan",
+          "description": ""
         }
       ],
       "aminoAcids": []
@@ -22730,6 +23007,15 @@
           "citationIds": [
             "2.1"
           ]
+        },
+        {
+          "name": "Glycan-binding residue",
+          "citationIds": [
+            "19.1",
+            "20.1"
+          ],
+          "value": "Glycan",
+          "description": ""
         }
       ],
       "aminoAcids": []
