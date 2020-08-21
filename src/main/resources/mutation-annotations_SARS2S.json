@@ -103,11 +103,15 @@
   "defaultExtraAnnots": [
     "polymorphic position",
     "ACE2-binding residue",
+    "REGN1098-binding residue",
+    "REGN1093-binding residue",
     "CR3022-binding residue",
     "S309-binding residue",
     "CB6-biding residue",
     "P2B-2F6-binding residue",
-    "B38-binding residue"
+    "B38-binding residue",
+    "BD23-binding residue",
+    "C105-binding residue"
   ],
   "citations": {
     "1.1": {
