@@ -53,6 +53,7 @@ def citation_id_sortkey(idx):
 
 def clean_positions(data):
     positions = []
+    known_annots = {a['name'] for a in data['annotations']}
 
     for posdata in data['positions']:
         position = posdata['position']
@@ -80,10 +81,12 @@ def clean_positions(data):
                     key=citation_id_sortkey)
             annotations.extend(new_aa_annots)
             annotations.sort(key=lambda a: a['name'])
-        positions.append({
-            'position': position,
-            'annotations': annotations
-        })
+        annotations = [a for a in annotations if a['name'] in known_annots]
+        if annotations:
+            positions.append({
+                'position': position,
+                'annotations': annotations
+            })
     data['positions'] = sorted(positions, key=lambda p: p['position'])
 
 

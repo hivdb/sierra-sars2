@@ -1,0 +1,24 @@
+[
+  {
+    "mutAnnotPath": "src/main/resources/mutation-annotations_SARS2S.json",
+    "dataSourcePath": "src/main/resources/aapcnt/rx-all_taxon-SARS2.json",
+    "dataSourceType": "AAPCNT",
+    "geneDefPath": "src/main/resources/genes.json",
+    "annotDef": {
+      "name": "polymorphic position",
+      "level": "aminoAcid",
+      "hideCitations": true,
+      "colorRules": []
+    },
+    "citationDefs": [
+      {
+        "author": "Tzou",
+        "year": 2020,
+        "doi": "10.20944/preprints202007.0551.v1",
+        "section": "Psuedo section"
+      }
+    ],
+    "dataSourceGene": "S",
+    "geneDefGene": "SARS2S"
+  }
+]

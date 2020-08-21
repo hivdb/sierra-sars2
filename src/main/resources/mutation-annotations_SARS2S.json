@@ -70,31 +70,14 @@
       "colorRules": []
     },
     {
-      "name": "known SARS-CoV amino acid",
+      "name": "polymorphic position",
       "level": "aminoAcid",
-      "hideCitations": false,
-      "colorRules": []
-    },
-    {
-      "name": "known RaTG13 amino acid",
-      "level": "aminoAcid",
-      "hideCitations": false,
-      "colorRules": []
-    },
-    {
-      "name": "known Pangolin isolate MP789 amino acid",
-      "level": "aminoAcid",
-      "hideCitations": false,
-      "colorRules": []
-    },
-    {
-      "name": "recurrent mutation (homoplasies)",
-      "level": "aminoAcid",
-      "hideCitations": false,
+      "hideCitations": true,
       "colorRules": []
     }
   ],
   "defaultExtraAnnots": [
+    "polymorphic position",
     "ACE2-binding residue",
     "CR3022-binding residue",
     "S309-binding residue",
@@ -278,70 +261,28 @@
       "year": 2020,
       "doi": "10.1038/s41586-020-2180-5",
       "section": "Section \"Main\" paragraph 6"
+    },
+    "21.1": {
+      "citationId": 21,
+      "sectionId": 1,
+      "author": "Tzou",
+      "year": 2020,
+      "doi": "10.20944/preprints202007.0551.v1",
+      "section": "Psuedo section"
     }
   },
   "positions": [
     {
-      "position": 1,
-      "annotations": [
-        {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "L"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        }
-      ]
-    },
-    {
-      "position": 3,
-      "annotations": [
-        {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "F"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "I"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        }
-      ]
-    },
-    {
       "position": 5,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
+          "name": "polymorphic position",
           "aminoAcids": [
             "F"
           ],
           "description": "",
           "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "recurrent mutation (homoplasies)",
-          "aminoAcids": [
-            "F"
-          ],
-          "description": "",
-          "citationIds": [
-            "18.1"
+            "21.1"
           ]
         }
       ]
@@ -350,48 +291,13 @@
       "position": 6,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "L"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "L"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        }
-      ]
-    },
-    {
-      "position": 7,
-      "annotations": [
-        {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "H"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
+          "name": "polymorphic position",
           "aminoAcids": [
             "F"
           ],
           "description": "",
           "citationIds": [
-            "15.1"
+            "21.1"
           ]
         }
       ]
@@ -400,53 +306,13 @@
       "position": 8,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
+          "name": "polymorphic position",
           "aminoAcids": [
-            "F"
+            "V"
           ],
           "description": "",
           "citationIds": [
-            "17.1"
-          ]
-        }
-      ]
-    },
-    {
-      "position": 9,
-      "annotations": [
-        {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "A"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "T"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        }
-      ]
-    },
-    {
-      "position": 11,
-      "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "T"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
+            "21.1"
           ]
         }
       ]
@@ -455,13 +321,13 @@
       "position": 12,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
+          "name": "polymorphic position",
           "aminoAcids": [
-            "N"
+            "F"
           ],
           "description": "",
           "citationIds": [
-            "17.1"
+            "21.1"
           ]
         }
       ]
@@ -469,16 +335,6 @@
     {
       "position": 13,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "i"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "citationIds": [
@@ -493,16 +349,6 @@
       "position": 14,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "D"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -516,16 +362,6 @@
       "position": 15,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "L"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -538,16 +374,6 @@
     {
       "position": 16,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "D"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -571,16 +397,6 @@
           "description": ""
         },
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "R"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -594,22 +410,22 @@
       "position": 18,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "C"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
             "2.1"
           ],
           "description": "S1A - N terminal domain (NTD)"
+        },
+        {
+          "name": "polymorphic position",
+          "aminoAcids": [
+            "F"
+          ],
+          "description": "",
+          "citationIds": [
+            "21.1"
+          ]
         }
       ]
     },
@@ -630,16 +446,6 @@
       "position": 20,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "G"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -653,48 +459,28 @@
       "position": 21,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "F"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
             "2.1"
           ],
           "description": "S1A - N terminal domain (NTD)"
+        },
+        {
+          "name": "polymorphic position",
+          "aminoAcids": [
+            "I"
+          ],
+          "description": "",
+          "citationIds": [
+            "21.1"
+          ]
         }
       ]
     },
     {
       "position": 22,
       "annotations": [
-        {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "A"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "D"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -709,26 +495,6 @@
       "position": 23,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "A"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "D"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -741,26 +507,6 @@
     {
       "position": 24,
       "annotations": [
-        {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "I"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "V"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -783,26 +529,6 @@
           "description": ""
         },
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "Q"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "Q"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -815,16 +541,6 @@
     {
       "position": 26,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "i"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -839,26 +555,6 @@
       "position": 27,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "S"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "N"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -871,16 +567,6 @@
     {
       "position": 28,
       "annotations": [
-        {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "F"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -910,20 +596,20 @@
           "description": "S1A - N terminal domain (NTD)"
         },
         {
-          "name": "recurrent mutation (homoplasies)",
+          "name": "secondary structure",
+          "value": "\u03b21",
+          "citationIds": [
+            "4.1"
+          ]
+        },
+        {
+          "name": "polymorphic position",
           "aminoAcids": [
             "I"
           ],
           "description": "",
           "citationIds": [
-            "18.1"
-          ]
-        },
-        {
-          "name": "secondary structure",
-          "value": "\u03b21",
-          "citationIds": [
-            "4.1"
+            "21.1"
           ]
         }
       ]
@@ -931,16 +617,6 @@
     {
       "position": 30,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "Q"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -962,16 +638,6 @@
       "position": 31,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "i"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -985,36 +651,6 @@
       "position": 32,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "S"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known RaTG13 amino acid",
-          "aminoAcids": [
-            "S"
-          ],
-          "description": "",
-          "citationIds": [
-            "16.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "S"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -1027,26 +663,6 @@
     {
       "position": 33,
       "annotations": [
-        {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "Q"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "M"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -1152,26 +768,6 @@
       "position": 41,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "T"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "E"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -1184,26 +780,6 @@
     {
       "position": 42,
       "annotations": [
-        {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "I"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "I"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -1257,26 +833,6 @@
       "position": 46,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "N"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "D"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -1289,26 +845,6 @@
     {
       "position": 47,
       "annotations": [
-        {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "T"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "T"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -1343,26 +879,6 @@
       "position": 49,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "V"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "Y"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -1371,20 +887,20 @@
           "description": "S1A - N terminal domain (NTD)"
         },
         {
-          "name": "recurrent mutation (homoplasies)",
+          "name": "secondary structure",
+          "value": "\u03b22",
+          "citationIds": [
+            "4.1"
+          ]
+        },
+        {
+          "name": "polymorphic position",
           "aminoAcids": [
             "Y"
           ],
           "description": "",
           "citationIds": [
-            "18.1"
-          ]
-        },
-        {
-          "name": "secondary structure",
-          "value": "\u03b22",
-          "citationIds": [
-            "4.1"
+            "21.1"
           ]
         }
       ]
@@ -1393,36 +909,6 @@
       "position": 50,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "L"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known RaTG13 amino acid",
-          "aminoAcids": [
-            "L"
-          ],
-          "description": "",
-          "citationIds": [
-            "16.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "L"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -1436,22 +922,22 @@
           "citationIds": [
             "4.1"
           ]
+        },
+        {
+          "name": "polymorphic position",
+          "aminoAcids": [
+            "L"
+          ],
+          "description": "",
+          "citationIds": [
+            "21.1"
+          ]
         }
       ]
     },
     {
       "position": 51,
       "annotations": [
-        {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "S"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -1493,16 +979,6 @@
       "position": 53,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "G"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -1523,16 +999,6 @@
       "position": 54,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "Y"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -1545,6 +1011,16 @@
           "value": "\u03b22",
           "citationIds": [
             "4.1"
+          ]
+        },
+        {
+          "name": "polymorphic position",
+          "aminoAcids": [
+            "F"
+          ],
+          "description": "",
+          "citationIds": [
+            "21.1"
           ]
         }
       ]
@@ -1618,26 +1094,6 @@
     {
       "position": 59,
       "annotations": [
-        {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "Y"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "Y"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -1721,16 +1177,6 @@
       "position": 63,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "S"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -1751,16 +1197,6 @@
       "position": 64,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "G"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -1773,16 +1209,6 @@
     {
       "position": 65,
       "annotations": [
-        {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "Y"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -1804,16 +1230,6 @@
       "position": 66,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "Y"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -1834,16 +1250,6 @@
       "position": 67,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "T"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -1863,16 +1269,6 @@
     {
       "position": 68,
       "annotations": [
-        {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "L"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -1895,26 +1291,6 @@
           "description": ""
         },
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "d"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "N"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -1927,26 +1303,6 @@
     {
       "position": 70,
       "annotations": [
-        {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "T"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "H"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -1961,26 +1317,6 @@
       "position": 71,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "K"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "T"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -1993,26 +1329,6 @@
     {
       "position": 72,
       "annotations": [
-        {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "T"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "d"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -2027,32 +1343,22 @@
       "position": 73,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "N"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "d"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
             "2.1"
           ],
           "description": "S1A - N terminal domain (NTD)"
+        },
+        {
+          "name": "polymorphic position",
+          "aminoAcids": [
+            "I"
+          ],
+          "description": "",
+          "citationIds": [
+            "21.1"
+          ]
         }
       ]
     },
@@ -2069,26 +1375,6 @@
           "description": ""
         },
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "S"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "d"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -2101,26 +1387,6 @@
     {
       "position": 75,
       "annotations": [
-        {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "A"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "d"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -2135,58 +1401,28 @@
       "position": 76,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "E"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known RaTG13 amino acid",
-          "aminoAcids": [
-            "I"
-          ],
-          "description": "",
-          "citationIds": [
-            "16.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "d"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
             "2.1"
           ],
           "description": "S1A - N terminal domain (NTD)"
+        },
+        {
+          "name": "polymorphic position",
+          "aminoAcids": [
+            "I"
+          ],
+          "description": "",
+          "citationIds": [
+            "21.1"
+          ]
         }
       ]
     },
     {
       "position": 77,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "d"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -2201,16 +1437,6 @@
       "position": 78,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "d"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -2223,16 +1449,6 @@
     {
       "position": 79,
       "annotations": [
-        {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "V"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -2247,22 +1463,22 @@
       "position": 80,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "G"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
             "2.1"
           ],
           "description": "S1A - N terminal domain (NTD)"
+        },
+        {
+          "name": "polymorphic position",
+          "aminoAcids": [
+            "Y"
+          ],
+          "description": "",
+          "citationIds": [
+            "21.1"
+          ]
         }
       ]
     },
@@ -2309,16 +1525,6 @@
       "position": 84,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "I"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -2338,16 +1544,6 @@
     {
       "position": 85,
       "annotations": [
-        {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "D"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -2381,26 +1577,6 @@
     {
       "position": 87,
       "annotations": [
-        {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "K"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "K"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -2461,26 +1637,6 @@
     {
       "position": 90,
       "annotations": [
-        {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "I"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "I"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -2562,26 +1718,6 @@
       "position": 94,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "A"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "A"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -2614,6 +1750,16 @@
           "value": "\u03b26",
           "citationIds": [
             "4.1"
+          ]
+        },
+        {
+          "name": "polymorphic position",
+          "aminoAcids": [
+            "I"
+          ],
+          "description": "",
+          "citationIds": [
+            "21.1"
           ]
         }
       ]
@@ -2661,6 +1807,16 @@
             "2.1"
           ],
           "description": "S1A - N terminal domain (NTD)"
+        },
+        {
+          "name": "polymorphic position",
+          "aminoAcids": [
+            "F"
+          ],
+          "description": "",
+          "citationIds": [
+            "21.1"
+          ]
         }
       ]
     },
@@ -2681,16 +1837,6 @@
       "position": 100,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "V"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -2703,26 +1849,6 @@
     {
       "position": 101,
       "annotations": [
-        {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "V"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "V"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -2743,6 +1869,16 @@
             "2.1"
           ],
           "description": "S1A - N terminal domain (NTD)"
+        },
+        {
+          "name": "polymorphic position",
+          "aminoAcids": [
+            "I"
+          ],
+          "description": "",
+          "citationIds": [
+            "21.1"
+          ]
         }
       ]
     },
@@ -2789,16 +1925,6 @@
     {
       "position": 105,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "V"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -2860,16 +1986,6 @@
       "position": 108,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "S"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -2896,16 +2012,6 @@
       "position": 110,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "M"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -2918,16 +2024,6 @@
     {
       "position": 111,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "N"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -2950,26 +2046,6 @@
           "description": ""
         },
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "N"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "N"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -2990,16 +2066,6 @@
       "position": 113,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "T"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -3019,26 +2085,6 @@
     {
       "position": 114,
       "annotations": [
-        {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "S"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "S"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -3086,16 +2132,6 @@
       "position": 117,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "V"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -3115,16 +2151,6 @@
     {
       "position": 118,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "I"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -3165,16 +2191,6 @@
     {
       "position": 120,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "I"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -3246,16 +2262,6 @@
       "position": 123,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "S"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -3315,16 +2321,6 @@
       "position": 127,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "I"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -3365,16 +2361,6 @@
       "position": 129,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "R"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -3394,16 +2380,6 @@
     {
       "position": 130,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "A"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -3445,26 +2421,6 @@
       "position": 132,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "N"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "N"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -3505,16 +2461,6 @@
       "position": 134,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "E"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -3534,16 +2480,6 @@
     {
       "position": 135,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "L"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -3578,26 +2514,6 @@
       "position": 137,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "Y"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "D"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -3611,22 +2527,22 @@
       "position": 138,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "N"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
             "2.1"
           ],
           "description": "S1A - N terminal domain (NTD)"
+        },
+        {
+          "name": "polymorphic position",
+          "aminoAcids": [
+            "H"
+          ],
+          "description": "",
+          "citationIds": [
+            "21.1"
+          ]
         }
       ]
     },
@@ -3647,16 +2563,6 @@
       "position": 140,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "Y"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -3669,16 +2575,6 @@
     {
       "position": 141,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "F"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -3700,26 +2596,6 @@
       "position": 142,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "S"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "A"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -3739,16 +2615,6 @@
     {
       "position": 143,
       "annotations": [
-        {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "G"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -3770,16 +2636,6 @@
       "position": 144,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "S"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -3793,22 +2649,22 @@
       "position": 145,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "K"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
             "2.1"
           ],
           "description": "S1A - N terminal domain (NTD)"
+        },
+        {
+          "name": "polymorphic position",
+          "aminoAcids": [
+            "d"
+          ],
+          "description": "",
+          "citationIds": [
+            "21.1"
+          ]
         }
       ]
     },
@@ -3816,48 +2672,28 @@
       "position": 146,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "P"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
             "2.1"
           ],
           "description": "S1A - N terminal domain (NTD)"
+        },
+        {
+          "name": "polymorphic position",
+          "aminoAcids": [
+            "Y"
+          ],
+          "description": "",
+          "citationIds": [
+            "21.1"
+          ]
         }
       ]
     },
     {
       "position": 147,
       "annotations": [
-        {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "d"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "d"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -3871,16 +2707,6 @@
     {
       "position": 148,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "M"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -3904,16 +2730,6 @@
           "description": ""
         },
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "G"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -3926,16 +2742,6 @@
     {
       "position": 150,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "d"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -3950,26 +2756,6 @@
       "position": 151,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "T"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "d"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -3982,16 +2768,6 @@
     {
       "position": 152,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "d"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -4006,58 +2782,28 @@
       "position": 153,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "S"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "T"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
             "2.1"
           ],
           "description": "S1A - N terminal domain (NTD)"
+        },
+        {
+          "name": "polymorphic position",
+          "aminoAcids": [
+            "I"
+          ],
+          "description": "",
+          "citationIds": [
+            "21.1"
+          ]
         }
       ]
     },
     {
       "position": 154,
       "annotations": [
-        {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "T"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "Q"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -4079,26 +2825,6 @@
       "position": 155,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "R"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "T"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -4118,16 +2844,6 @@
     {
       "position": 156,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "H"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -4149,16 +2865,6 @@
       "position": 157,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "T"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -4179,26 +2885,6 @@
       "position": 158,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "A"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "M"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -4212,16 +2898,6 @@
       "position": 159,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "I"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -4234,16 +2910,6 @@
     {
       "position": 160,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "F"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -4265,16 +2931,6 @@
       "position": 161,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "D"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -4294,16 +2950,6 @@
     {
       "position": 162,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "N"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -4325,16 +2971,6 @@
       "position": 163,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "Y"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -4354,26 +2990,6 @@
     {
       "position": 164,
       "annotations": [
-        {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "A"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "F"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -4524,16 +3140,6 @@
       "position": 171,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "I"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -4567,26 +3173,6 @@
       "position": 173,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "K"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "D"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -4599,26 +3185,6 @@
     {
       "position": 174,
       "annotations": [
-        {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "S"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "A"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -4646,32 +3212,22 @@
       "position": 176,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "M"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "S"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
             "2.1"
           ],
           "description": "S1A - N terminal domain (NTD)"
+        },
+        {
+          "name": "polymorphic position",
+          "aminoAcids": [
+            "F"
+          ],
+          "description": "",
+          "citationIds": [
+            "21.1"
+          ]
         }
       ]
     },
@@ -4679,32 +3235,22 @@
       "position": 177,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "L"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "L"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
             "2.1"
           ],
           "description": "S1A - N terminal domain (NTD)"
+        },
+        {
+          "name": "polymorphic position",
+          "aminoAcids": [
+            "I"
+          ],
+          "description": "",
+          "citationIds": [
+            "21.1"
+          ]
         }
       ]
     },
@@ -4725,26 +3271,6 @@
       "position": 179,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "I"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "V"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -4758,26 +3284,6 @@
       "position": 180,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "A"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "S"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -4790,16 +3296,6 @@
     {
       "position": 181,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "E"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -4827,26 +3323,6 @@
       "position": 183,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "S"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "S"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -4872,16 +3348,6 @@
     {
       "position": 185,
       "annotations": [
-        {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "L"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -4909,16 +3375,6 @@
       "position": 187,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "D"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -4931,26 +3387,6 @@
     {
       "position": 188,
       "annotations": [
-        {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "T"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "H"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -5092,16 +3528,6 @@
       "position": 195,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "R"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -5142,26 +3568,6 @@
       "position": 197,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "V"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "K"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -5174,6 +3580,16 @@
           "value": "\u03b213",
           "citationIds": [
             "4.1"
+          ]
+        },
+        {
+          "name": "polymorphic position",
+          "aminoAcids": [
+            "V"
+          ],
+          "description": "",
+          "citationIds": [
+            "21.1"
           ]
         }
       ]
@@ -5222,16 +3638,6 @@
       "position": 200,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "F"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -5251,16 +3657,6 @@
     {
       "position": 201,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "L"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -5282,16 +3678,6 @@
       "position": 202,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "Y"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -5311,16 +3697,6 @@
     {
       "position": 203,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "V"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -5362,16 +3738,6 @@
       "position": 205,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "K"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -5391,16 +3757,6 @@
     {
       "position": 206,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "G"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -5422,26 +3778,6 @@
       "position": 207,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "Y"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "Y"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -5461,16 +3797,6 @@
     {
       "position": 208,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "Q"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -5505,16 +3831,6 @@
       "position": 210,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "V"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -5527,16 +3843,6 @@
     {
       "position": 211,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "D"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -5551,26 +3857,6 @@
       "position": 212,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "V"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "V"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -5584,22 +3870,22 @@
       "position": 213,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "N"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
             "2.1"
           ],
           "description": "S1A - N terminal domain (NTD)"
+        },
+        {
+          "name": "polymorphic position",
+          "aminoAcids": [
+            "L"
+          ],
+          "description": "",
+          "citationIds": [
+            "21.1"
+          ]
         }
       ]
     },
@@ -5607,22 +3893,22 @@
       "position": 214,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "S"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
             "2.1"
           ],
           "description": "S1A - N terminal domain (NTD)"
+        },
+        {
+          "name": "polymorphic position",
+          "aminoAcids": [
+            "L"
+          ],
+          "description": "",
+          "citationIds": [
+            "21.1"
+          ]
         }
       ]
     },
@@ -5630,22 +3916,23 @@
       "position": 215,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "N"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
             "2.1"
           ],
           "description": "S1A - N terminal domain (NTD)"
+        },
+        {
+          "name": "polymorphic position",
+          "aminoAcids": [
+            "G",
+            "H"
+          ],
+          "description": "",
+          "citationIds": [
+            "21.1"
+          ]
         }
       ]
     },
@@ -5678,36 +3965,6 @@
     {
       "position": 218,
       "annotations": [
-        {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "I"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known RaTG13 amino acid",
-          "aminoAcids": [
-            "P"
-          ],
-          "description": "",
-          "citationIds": [
-            "16.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "S"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -5748,38 +4005,28 @@
       "position": 221,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "N"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
             "2.1"
           ],
           "description": "S1A - N terminal domain (NTD)"
+        },
+        {
+          "name": "polymorphic position",
+          "aminoAcids": [
+            "L"
+          ],
+          "description": "",
+          "citationIds": [
+            "21.1"
+          ]
         }
       ]
     },
     {
       "position": 222,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "T"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -5806,16 +4053,6 @@
     {
       "position": 224,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "K"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -5857,16 +4094,6 @@
       "position": 226,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "I"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -5886,16 +4113,6 @@
     {
       "position": 227,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "F"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -5917,26 +4134,6 @@
       "position": 228,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "E"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "K"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -5956,16 +4153,6 @@
     {
       "position": 229,
       "annotations": [
-        {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "I"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -5999,26 +4186,6 @@
     {
       "position": 231,
       "annotations": [
-        {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "A"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "L"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -6107,26 +4274,6 @@
       "position": 237,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "K"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "N"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -6167,26 +4314,6 @@
       "position": 239,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "R"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "R"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -6207,16 +4334,6 @@
       "position": 240,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "A"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -6236,16 +4353,6 @@
     {
       "position": 241,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "I"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -6273,26 +4380,6 @@
       "position": 243,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "T"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "T"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -6312,26 +4399,6 @@
     {
       "position": 244,
       "annotations": [
-        {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "I"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "A"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -6353,16 +4420,6 @@
       "position": 245,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "d"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -6383,16 +4440,6 @@
       "position": 246,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "d"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -6405,26 +4452,6 @@
     {
       "position": 247,
       "annotations": [
-        {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "G"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "F"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -6439,26 +4466,6 @@
       "position": 248,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "D"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "S"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -6471,26 +4478,6 @@
     {
       "position": 249,
       "annotations": [
-        {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "P"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "P"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -6505,26 +4492,6 @@
       "position": 250,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "M"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "A"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -6537,16 +4504,6 @@
     {
       "position": 251,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "Q"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -6561,27 +4518,6 @@
       "position": 252,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "K",
-            "N"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "D"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -6594,16 +4530,6 @@
     {
       "position": 253,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "I"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -6618,38 +4544,28 @@
       "position": 254,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "d"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
             "2.1"
           ],
           "description": "S1A - N terminal domain (NTD)"
+        },
+        {
+          "name": "polymorphic position",
+          "aminoAcids": [
+            "F"
+          ],
+          "description": "",
+          "citationIds": [
+            "21.1"
+          ]
         }
       ]
     },
     {
       "position": 255,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "d"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -6664,16 +4580,6 @@
       "position": 256,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "d"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -6686,16 +4592,6 @@
     {
       "position": 257,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "d"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -6723,16 +4619,6 @@
       "position": 259,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "G"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -6753,16 +4639,6 @@
       "position": 260,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "T"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -6782,16 +4658,6 @@
     {
       "position": 261,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "S"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -6878,16 +4744,6 @@
     {
       "position": 266,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "F"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -6982,26 +4838,6 @@
       "position": 271,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "A"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "K"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -7041,16 +4877,6 @@
     {
       "position": 273,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "T"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -7112,26 +4938,6 @@
       "position": 276,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "M"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "M"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -7172,16 +4978,6 @@
       "position": 278,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "N"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -7221,16 +5017,6 @@
     {
       "position": 280,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "D"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -7460,16 +5246,6 @@
       "position": 292,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "S"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -7490,16 +5266,6 @@
       "position": 293,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "Q"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -7512,16 +5278,6 @@
     {
       "position": 294,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "N"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -7576,16 +5332,6 @@
       "position": 297,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "A"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -7625,26 +5371,6 @@
     {
       "position": 299,
       "annotations": [
-        {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "A"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "L"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -7706,16 +5432,6 @@
       "position": 302,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "S"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1A",
           "citationIds": [
@@ -7735,16 +5451,6 @@
     {
       "position": 303,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "V"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1A",
@@ -7789,31 +5495,16 @@
       ]
     },
     {
-      "position": 306,
-      "annotations": [
-        {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "L"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        }
-      ]
-    },
-    {
       "position": 307,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
+          "name": "polymorphic position",
           "aminoAcids": [
-            "E"
+            "I"
           ],
           "description": "",
           "citationIds": [
-            "15.1"
+            "21.1"
           ]
         }
       ]
@@ -7822,28 +5513,13 @@
       "position": 308,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
+          "name": "polymorphic position",
           "aminoAcids": [
-            "I"
+            "L"
           ],
           "description": "",
           "citationIds": [
-            "15.1"
-          ]
-        }
-      ]
-    },
-    {
-      "position": 309,
-      "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "D"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
+            "21.1"
           ]
         }
       ]
@@ -7897,73 +5573,8 @@
       ]
     },
     {
-      "position": 321,
-      "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "V"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        }
-      ]
-    },
-    {
-      "position": 323,
-      "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "S"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        }
-      ]
-    },
-    {
-      "position": 324,
-      "annotations": [
-        {
-          "name": "known RaTG13 amino acid",
-          "aminoAcids": [
-            "D"
-          ],
-          "description": "",
-          "citationIds": [
-            "16.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "G"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        }
-      ]
-    },
-    {
       "position": 325,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "D"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "secondary structure",
           "value": "\u03b223",
@@ -7976,16 +5587,6 @@
     {
       "position": 326,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "V"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "secondary structure",
           "value": "\u03b223",
@@ -8090,16 +5691,6 @@
           "value": "X",
           "citationIds": [
             "6.1"
-          ]
-        },
-        {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "T"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
           ]
         }
       ]
@@ -8264,6 +5855,16 @@
           ],
           "value": "S1B",
           "description": "Receptor binding domain (RBD)"
+        },
+        {
+          "name": "polymorphic position",
+          "aminoAcids": [
+            "S"
+          ],
+          "description": "",
+          "citationIds": [
+            "21.1"
+          ]
         }
       ]
     },
@@ -8305,36 +5906,6 @@
           ]
         },
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "T"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known RaTG13 amino acid",
-          "aminoAcids": [
-            "T"
-          ],
-          "description": "",
-          "citationIds": [
-            "16.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "K"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "citationIds": [
             "2.1"
@@ -8360,16 +5931,6 @@
     {
       "position": 348,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "P"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "citationIds": [
@@ -8456,16 +6017,6 @@
           ]
         },
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "E"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "citationIds": [
             "2.1"
@@ -8537,16 +6088,6 @@
           "value": "X",
           "citationIds": [
             "6.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "K"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
           ]
         },
         {
@@ -8738,21 +6279,20 @@
           "description": "Receptor binding domain (RBD)"
         },
         {
-          "name": "recurrent mutation (homoplasies)",
-          "aminoAcids": [
-            "A",
-            "F"
-          ],
-          "description": "",
-          "citationIds": [
-            "18.1"
-          ]
-        },
-        {
           "name": "secondary structure",
           "value": "\u03b71",
           "citationIds": [
             "4.1"
+          ]
+        },
+        {
+          "name": "polymorphic position",
+          "aminoAcids": [
+            "F"
+          ],
+          "description": "",
+          "citationIds": [
+            "21.1"
           ]
         }
       ]
@@ -8866,36 +6406,6 @@
           ]
         },
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "T"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known RaTG13 amino acid",
-          "aminoAcids": [
-            "T"
-          ],
-          "description": "",
-          "citationIds": [
-            "16.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "T"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "citationIds": [
             "2.1"
@@ -8908,16 +6418,6 @@
     {
       "position": 373,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "F"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "citationIds": [
@@ -9186,16 +6686,6 @@
           ]
         },
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "A"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "citationIds": [
             "2.1"
@@ -9380,16 +6870,6 @@
       "position": 393,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "S"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "citationIds": [
             "2.1"
@@ -9556,26 +7036,6 @@
       "position": 402,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "V"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "V"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "citationIds": [
             "2.1"
@@ -9607,26 +7067,6 @@
           "value": "X",
           "citationIds": [
             "10.1"
-          ]
-        },
-        {
-          "name": "known RaTG13 amino acid",
-          "aminoAcids": [
-            "T"
-          ],
-          "description": "",
-          "citationIds": [
-            "16.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "K"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
           ]
         },
         {
@@ -9715,16 +7155,6 @@
           "value": "X",
           "citationIds": [
             "10.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "D"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
           ]
         },
         {
@@ -9974,26 +7404,6 @@
           "value": "X",
           "citationIds": [
             "10.1"
-          ]
-        },
-        {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "R"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "V"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
           ]
         },
         {
@@ -10282,16 +7692,6 @@
           ]
         },
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "M"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "citationIds": [
             "2.1"
@@ -10373,16 +7773,6 @@
       "position": 434,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "L"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "citationIds": [
             "2.1"
@@ -10463,16 +7853,6 @@
       "position": 438,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "T"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "citationIds": [
             "2.1"
@@ -10493,26 +7873,6 @@
           ]
         },
         {
-          "name": "known RaTG13 amino acid",
-          "aminoAcids": [
-            "K"
-          ],
-          "description": "",
-          "citationIds": [
-            "16.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "R"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "citationIds": [
             "2.1"
@@ -10526,22 +7886,22 @@
           "citationIds": [
             "4.1"
           ]
+        },
+        {
+          "name": "polymorphic position",
+          "aminoAcids": [
+            "K"
+          ],
+          "description": "",
+          "citationIds": [
+            "21.1"
+          ]
         }
       ]
     },
     {
       "position": 440,
       "annotations": [
-        {
-          "name": "known RaTG13 amino acid",
-          "aminoAcids": [
-            "H"
-          ],
-          "description": "",
-          "citationIds": [
-            "16.1"
-          ]
-        },
         {
           "name": "landmark",
           "citationIds": [
@@ -10562,26 +7922,6 @@
     {
       "position": 441,
       "annotations": [
-        {
-          "name": "known RaTG13 amino acid",
-          "aminoAcids": [
-            "I"
-          ],
-          "description": "",
-          "citationIds": [
-            "16.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "I"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "citationIds": [
@@ -10623,26 +7963,6 @@
       "position": 443,
       "annotations": [
         {
-          "name": "known RaTG13 amino acid",
-          "aminoAcids": [
-            "A"
-          ],
-          "description": "",
-          "citationIds": [
-            "16.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "A"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "citationIds": [
             "2.1"
@@ -10663,16 +7983,6 @@
           ]
         },
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "T"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "citationIds": [
             "2.1"
@@ -10685,26 +7995,6 @@
     {
       "position": 445,
       "annotations": [
-        {
-          "name": "known RaTG13 amino acid",
-          "aminoAcids": [
-            "E"
-          ],
-          "description": "",
-          "citationIds": [
-            "16.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "S"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "citationIds": [
@@ -10740,16 +8030,6 @@
           "value": "X",
           "citationIds": [
             "13.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "T"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
           ]
         },
         {
@@ -10829,16 +8109,6 @@
           ]
         },
         {
-          "name": "known RaTG13 amino acid",
-          "aminoAcids": [
-            "F"
-          ],
-          "description": "",
-          "citationIds": [
-            "16.1"
-          ]
-        },
-        {
           "name": "landmark",
           "citationIds": [
             "2.1"
@@ -10889,16 +8159,6 @@
           "value": "X",
           "citationIds": [
             "13.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "K"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
           ]
         },
         {
@@ -11003,16 +8263,6 @@
           ]
         },
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "Y"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "citationIds": [
             "2.1"
@@ -11047,16 +8297,6 @@
           "value": "X",
           "citationIds": [
             "10.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "L"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
           ]
         },
         {
@@ -11114,16 +8354,6 @@
           ]
         },
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "H"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "citationIds": [
             "2.1"
@@ -11148,26 +8378,6 @@
           "value": "X",
           "citationIds": [
             "10.1"
-          ]
-        },
-        {
-          "name": "known RaTG13 amino acid",
-          "aminoAcids": [
-            "A"
-          ],
-          "description": "",
-          "citationIds": [
-            "16.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "G"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
           ]
         },
         {
@@ -11198,16 +8408,6 @@
           ]
         },
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "K"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "citationIds": [
             "2.1"
@@ -11233,16 +8433,6 @@
     {
       "position": 462,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "R"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "citationIds": [
@@ -11362,16 +8552,6 @@
       "position": 470,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "N"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "citationIds": [
             "2.1"
@@ -11385,16 +8565,6 @@
       "position": 471,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "V"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "citationIds": [
             "2.1"
@@ -11407,16 +8577,6 @@
     {
       "position": 472,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "P"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "citationIds": [
@@ -11453,16 +8613,6 @@
           ]
         },
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "F"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "citationIds": [
             "2.1"
@@ -11494,16 +8644,6 @@
           "value": "X",
           "citationIds": [
             "10.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "S"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
           ]
         },
         {
@@ -11551,16 +8691,6 @@
           ]
         },
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "P"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "citationIds": [
             "2.1"
@@ -11597,32 +8727,12 @@
           ]
         },
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "D"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "citationIds": [
             "2.1"
           ],
           "value": "S1B-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
-        },
-        {
-          "name": "recurrent mutation (homoplasies)",
-          "aminoAcids": [
-            "S"
-          ],
-          "description": "",
-          "citationIds": [
-            "18.1"
-          ]
         }
       ]
     },
@@ -11644,22 +8754,22 @@
           ]
         },
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "G"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "citationIds": [
             "2.1"
           ],
           "value": "S1B-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
+        },
+        {
+          "name": "polymorphic position",
+          "aminoAcids": [
+            "N"
+          ],
+          "description": "",
+          "citationIds": [
+            "21.1"
+          ]
         }
       ]
     },
@@ -11667,32 +8777,22 @@
       "position": 478,
       "annotations": [
         {
-          "name": "known RaTG13 amino acid",
-          "aminoAcids": [
-            "K"
-          ],
-          "description": "",
-          "citationIds": [
-            "16.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "K"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "citationIds": [
             "2.1"
           ],
           "value": "S1B-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
+        },
+        {
+          "name": "polymorphic position",
+          "aminoAcids": [
+            "I"
+          ],
+          "description": "",
+          "citationIds": [
+            "21.1"
+          ]
         }
       ]
     },
@@ -11706,6 +8806,16 @@
           ],
           "value": "S1B-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
+        },
+        {
+          "name": "polymorphic position",
+          "aminoAcids": [
+            "S"
+          ],
+          "description": "",
+          "citationIds": [
+            "21.1"
+          ]
         }
       ]
     },
@@ -11734,16 +8844,6 @@
       "position": 481,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "T"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "citationIds": [
             "2.1"
@@ -11763,16 +8863,6 @@
     {
       "position": 482,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "P"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "citationIds": [
@@ -11801,26 +8891,6 @@
           ]
         },
         {
-          "name": "known RaTG13 amino acid",
-          "aminoAcids": [
-            "Q"
-          ],
-          "description": "",
-          "citationIds": [
-            "16.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "d"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "citationIds": [
             "2.1"
@@ -11829,13 +8899,13 @@
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         },
         {
-          "name": "recurrent mutation (homoplasies)",
+          "name": "polymorphic position",
           "aminoAcids": [
             "A"
           ],
           "description": "",
           "citationIds": [
-            "18.1"
+            "21.1"
           ]
         }
       ]
@@ -11858,26 +8928,6 @@
           ]
         },
         {
-          "name": "known RaTG13 amino acid",
-          "aminoAcids": [
-            "T"
-          ],
-          "description": "",
-          "citationIds": [
-            "16.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "P"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "citationIds": [
             "2.1"
@@ -11895,16 +8945,6 @@
           "value": "X",
           "citationIds": [
             "13.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "A"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
           ]
         },
         {
@@ -11942,26 +8982,6 @@
           "value": "X",
           "citationIds": [
             "10.1"
-          ]
-        },
-        {
-          "name": "known RaTG13 amino acid",
-          "aminoAcids": [
-            "L"
-          ],
-          "description": "",
-          "citationIds": [
-            "16.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "L"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
           ]
         },
         {
@@ -12123,26 +9143,6 @@
           ]
         },
         {
-          "name": "known RaTG13 amino acid",
-          "aminoAcids": [
-            "Y"
-          ],
-          "description": "",
-          "citationIds": [
-            "16.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "W"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "citationIds": [
             "2.1"
@@ -12213,26 +9213,6 @@
           ]
         },
         {
-          "name": "known RaTG13 amino acid",
-          "aminoAcids": [
-            "Y"
-          ],
-          "description": "",
-          "citationIds": [
-            "16.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "N"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "citationIds": [
             "2.1"
@@ -12271,26 +9251,6 @@
           "value": "X",
           "citationIds": [
             "13.1"
-          ]
-        },
-        {
-          "name": "known RaTG13 amino acid",
-          "aminoAcids": [
-            "R"
-          ],
-          "description": "",
-          "citationIds": [
-            "16.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "D"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
           ]
         },
         {
@@ -12408,36 +9368,6 @@
           ]
         },
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "H"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known RaTG13 amino acid",
-          "aminoAcids": [
-            "Y"
-          ],
-          "description": "",
-          "citationIds": [
-            "16.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "Y"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "citationIds": [
             "2.1"
@@ -12450,16 +9380,6 @@
     {
       "position": 499,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "T"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "citationIds": [
@@ -12542,26 +9462,6 @@
           ]
         },
         {
-          "name": "known RaTG13 amino acid",
-          "aminoAcids": [
-            "D"
-          ],
-          "description": "",
-          "citationIds": [
-            "16.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "T"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "citationIds": [
             "2.1"
@@ -12619,16 +9519,6 @@
           ]
         },
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "I"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "citationIds": [
             "2.1"
@@ -12683,16 +9573,6 @@
           "value": "X",
           "citationIds": [
             "10.1"
-          ]
-        },
-        {
-          "name": "known RaTG13 amino acid",
-          "aminoAcids": [
-            "H"
-          ],
-          "description": "",
-          "citationIds": [
-            "16.1"
           ]
         },
         {
@@ -12866,37 +9746,6 @@
           "citationIds": [
             "11.1"
           ]
-        },
-        {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "K",
-            "N"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known RaTG13 amino acid",
-          "aminoAcids": [
-            "N"
-          ],
-          "description": "",
-          "citationIds": [
-            "16.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "N"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
         }
       ]
     },
@@ -12910,61 +9759,6 @@
           ],
           "value": "391-525",
           "description": "Cys391-Cys525 pair"
-        }
-      ]
-    },
-    {
-      "position": 529,
-      "annotations": [
-        {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "Q"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "L"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        }
-      ]
-    },
-    {
-      "position": 532,
-      "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "D"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        }
-      ]
-    },
-    {
-      "position": 534,
-      "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "I"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
         }
       ]
     },
@@ -12997,16 +9791,6 @@
     {
       "position": 537,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "Q"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "citationIds": [
@@ -13341,16 +10125,6 @@
       "position": 554,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "P"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "citationIds": [
             "2.1"
@@ -13384,16 +10158,6 @@
       "position": 556,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "S"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "citationIds": [
             "2.1"
@@ -13420,16 +10184,6 @@
       "position": 558,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "R"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "citationIds": [
             "2.1"
@@ -13455,16 +10209,6 @@
     {
       "position": 560,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "Q"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "citationIds": [
@@ -13611,16 +10355,6 @@
       "position": 569,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "V"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "citationIds": [
             "2.1"
@@ -13640,16 +10374,6 @@
     {
       "position": 570,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "S"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "citationIds": [
@@ -13684,22 +10408,22 @@
       "position": 572,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "F"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "citationIds": [
             "2.1"
           ],
           "value": "S1C",
           "description": "Also known as SD1"
+        },
+        {
+          "name": "polymorphic position",
+          "aminoAcids": [
+            "I"
+          ],
+          "description": "",
+          "citationIds": [
+            "21.1"
+          ]
         }
       ]
     },
@@ -13746,16 +10470,6 @@
     {
       "position": 575,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "S"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "citationIds": [
@@ -13843,16 +10557,6 @@
       "position": 580,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "K"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "citationIds": [
             "2.1"
@@ -13879,16 +10583,6 @@
       "position": 582,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "S"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "citationIds": [
             "2.1"
@@ -13908,6 +10602,16 @@
           ],
           "value": "S1C",
           "description": "Also known as SD1"
+        },
+        {
+          "name": "polymorphic position",
+          "aminoAcids": [
+            "D"
+          ],
+          "description": "",
+          "citationIds": [
+            "21.1"
+          ]
         }
       ]
     },
@@ -13995,16 +10699,6 @@
       "position": 588,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "S"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "citationIds": [
             "2.1"
@@ -14044,21 +10738,6 @@
           ],
           "value": "S1C",
           "description": "Also known as SD1"
-        }
-      ]
-    },
-    {
-      "position": 591,
-      "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "A"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
         }
       ]
     },
@@ -14253,26 +10932,6 @@
       "position": 604,
       "annotations": [
         {
-          "name": "known RaTG13 amino acid",
-          "aminoAcids": [
-            "A"
-          ],
-          "description": "",
-          "citationIds": [
-            "16.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "A"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "citationIds": [
             "2.1"
@@ -14299,16 +10958,6 @@
       "position": 606,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "S"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "citationIds": [
             "2.1"
@@ -14321,16 +10970,6 @@
     {
       "position": 607,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "E"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "citationIds": [
@@ -14466,13 +11105,13 @@
           "description": "Also known as SD2"
         },
         {
-          "name": "recurrent mutation (homoplasies)",
+          "name": "polymorphic position",
           "aminoAcids": [
             "G"
           ],
           "description": "",
           "citationIds": [
-            "18.1"
+            "21.1"
           ]
         }
       ]
@@ -14542,16 +11181,6 @@
       "position": 619,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "D"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "citationIds": [
             "2.1"
@@ -14578,16 +11207,6 @@
       "position": 621,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "S"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "citationIds": [
             "2.1"
@@ -14601,22 +11220,22 @@
       "position": 622,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "T"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "citationIds": [
             "2.1"
           ],
           "value": "S1D",
           "description": "Also known as SD2"
+        },
+        {
+          "name": "polymorphic position",
+          "aminoAcids": [
+            "F"
+          ],
+          "description": "",
+          "citationIds": [
+            "21.1"
+          ]
         }
       ]
     },
@@ -14741,16 +11360,6 @@
       "position": 632,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "A"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "citationIds": [
             "2.1"
@@ -14789,16 +11398,6 @@
     {
       "position": 635,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "I"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "citationIds": [
@@ -14864,16 +11463,6 @@
     {
       "position": 640,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "N"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "citationIds": [
@@ -14973,16 +11562,6 @@
     {
       "position": 646,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "Q"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "citationIds": [
@@ -15149,6 +11728,16 @@
           ],
           "value": "S1D",
           "description": "Also known as SD2"
+        },
+        {
+          "name": "polymorphic position",
+          "aminoAcids": [
+            "Y"
+          ],
+          "description": "",
+          "citationIds": [
+            "21.1"
+          ]
         }
       ]
     },
@@ -15185,16 +11774,6 @@
           "description": ""
         },
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "D"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "citationIds": [
             "2.1"
@@ -15207,16 +11786,6 @@
     {
       "position": 658,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "T"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "citationIds": [
@@ -15516,16 +12085,6 @@
       "position": 675,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "H"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "citationIds": [
             "2.1"
@@ -15534,20 +12093,21 @@
           "description": "Also known as SD2"
         },
         {
-          "name": "recurrent mutation (homoplasies)",
-          "aminoAcids": [
-            "H"
-          ],
-          "description": "",
-          "citationIds": [
-            "18.1"
-          ]
-        },
-        {
           "name": "secondary structure",
           "value": "\u03b244",
           "citationIds": [
             "4.1"
+          ]
+        },
+        {
+          "name": "polymorphic position",
+          "aminoAcids": [
+            "H",
+            "R"
+          ],
+          "description": "",
+          "citationIds": [
+            "21.1"
           ]
         }
       ]
@@ -15569,38 +12129,28 @@
       "position": 677,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "V"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "citationIds": [
             "2.1"
           ],
           "value": "S1D",
           "description": "Also known as SD2"
+        },
+        {
+          "name": "polymorphic position",
+          "aminoAcids": [
+            "H"
+          ],
+          "description": "",
+          "citationIds": [
+            "21.1"
+          ]
         }
       ]
     },
     {
       "position": 678,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "S"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "citationIds": [
@@ -15615,16 +12165,6 @@
       "position": 679,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "L"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "citationIds": [
             "2.1"
@@ -15637,16 +12177,6 @@
     {
       "position": 680,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "L"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "citationIds": [
@@ -15661,78 +12191,28 @@
       "position": 681,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "d"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known RaTG13 amino acid",
-          "aminoAcids": [
-            "d"
-          ],
-          "description": "",
-          "citationIds": [
-            "16.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "d"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "citationIds": [
             "2.1"
           ],
           "value": "S1/S2",
           "description": ""
+        },
+        {
+          "name": "polymorphic position",
+          "aminoAcids": [
+            "L"
+          ],
+          "description": "",
+          "citationIds": [
+            "21.1"
+          ]
         }
       ]
     },
     {
       "position": 682,
       "annotations": [
-        {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "d"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known RaTG13 amino acid",
-          "aminoAcids": [
-            "d"
-          ],
-          "description": "",
-          "citationIds": [
-            "16.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "d"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1/S2",
@@ -15747,36 +12227,6 @@
       "position": 683,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "d"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known RaTG13 amino acid",
-          "aminoAcids": [
-            "d"
-          ],
-          "description": "",
-          "citationIds": [
-            "16.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "d"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "S1/S2",
           "citationIds": [
@@ -15789,36 +12239,6 @@
     {
       "position": 684,
       "annotations": [
-        {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "d"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known RaTG13 amino acid",
-          "aminoAcids": [
-            "d"
-          ],
-          "description": "",
-          "citationIds": [
-            "16.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "d"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "S1/S2",
@@ -15856,84 +12276,16 @@
       ]
     },
     {
-      "position": 687,
-      "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "T"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        }
-      ]
-    },
-    {
       "position": 688,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
+          "name": "polymorphic position",
           "aminoAcids": [
-            "S"
+            "V"
           ],
           "description": "",
           "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "S"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        }
-      ]
-    },
-    {
-      "position": 689,
-      "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "Q"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        }
-      ]
-    },
-    {
-      "position": 690,
-      "annotations": [
-        {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "L",
-            "P",
-            "Q",
-            "R"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "K"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
+            "21.1"
           ]
         }
       ]
@@ -15941,16 +12293,6 @@
     {
       "position": 691,
       "annotations": [
-        {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "A"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
         {
           "name": "secondary structure",
           "value": "\u03b245",
@@ -15975,16 +12317,6 @@
     {
       "position": 693,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "V"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "secondary structure",
           "value": "\u03b245",
@@ -16034,16 +12366,6 @@
       "position": 702,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "D"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "secondary structure",
           "value": "\u03b246",
           "citationIds": [
@@ -16055,16 +12377,6 @@
     {
       "position": 703,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "S"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "secondary structure",
           "value": "\u03b246",
@@ -16082,36 +12394,6 @@
           "value": "\u03b246",
           "citationIds": [
             "4.1"
-          ]
-        }
-      ]
-    },
-    {
-      "position": 705,
-      "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "I"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        }
-      ]
-    },
-    {
-      "position": 708,
-      "annotations": [
-        {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "A"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
           ]
         }
       ]
@@ -16152,16 +12434,6 @@
     {
       "position": 711,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "T"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "secondary structure",
           "value": "\u03b247",
@@ -16249,16 +12521,6 @@
       "position": 719,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "S"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "secondary structure",
           "value": "\u03b248",
           "citationIds": [
@@ -16294,16 +12556,6 @@
     {
       "position": 722,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "I"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "secondary structure",
           "value": "\u03b248",
@@ -16353,16 +12605,6 @@
       "position": 726,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "V"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "secondary structure",
           "value": "\u03b248",
           "citationIds": [
@@ -16374,16 +12616,6 @@
     {
       "position": 727,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "M"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "secondary structure",
           "value": "\u03b248",
@@ -16401,21 +12633,6 @@
           "value": "\u03b248",
           "citationIds": [
             "4.1"
-          ]
-        }
-      ]
-    },
-    {
-      "position": 732,
-      "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "A"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
           ]
         }
       ]
@@ -16460,19 +12677,6 @@
       "position": 736,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "A",
-            "E",
-            "G",
-            "V"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
           "name": "secondary structure",
           "value": "\u03b249",
           "citationIds": [
@@ -16496,16 +12700,6 @@
     {
       "position": 739,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "N"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "secondary structure",
           "value": "\u03b14",
@@ -16555,16 +12749,6 @@
       "position": 747,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "I"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
           "name": "secondary structure",
           "value": "\u03b15",
           "citationIds": [
@@ -16600,16 +12784,6 @@
     {
       "position": 750,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "A"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "secondary structure",
           "value": "\u03b15",
@@ -16767,16 +12941,6 @@
       "position": 768,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "S"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "secondary structure",
           "value": "\u03b16",
           "citationIds": [
@@ -16793,6 +12957,16 @@
           "value": "\u03b16",
           "citationIds": [
             "4.1"
+          ]
+        },
+        {
+          "name": "polymorphic position",
+          "aminoAcids": [
+            "V"
+          ],
+          "description": "",
+          "citationIds": [
+            "21.1"
           ]
         }
       ]
@@ -16824,16 +12998,6 @@
     {
       "position": 772,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "A"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "secondary structure",
           "value": "\u03b16",
@@ -16883,16 +13047,6 @@
       "position": 776,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "R"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "secondary structure",
           "value": "\u03b16",
           "citationIds": [
@@ -16928,16 +13082,6 @@
     {
       "position": 779,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "R"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "secondary structure",
           "value": "\u03b16",
@@ -16986,16 +13130,6 @@
     {
       "position": 788,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "M"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "FP",
@@ -17078,16 +13212,6 @@
       "position": 793,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "T"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "FP",
           "citationIds": [
@@ -17099,16 +13223,6 @@
     {
       "position": 794,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "L"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "FP",
@@ -17133,16 +13247,6 @@
     {
       "position": 796,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "Y"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "FP",
@@ -17321,35 +13425,10 @@
       "position": 810,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "L"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "secondary structure",
           "value": "T",
           "citationIds": [
             "4.1"
-          ]
-        }
-      ]
-    },
-    {
-      "position": 813,
-      "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "T"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
           ]
         }
       ]
@@ -17475,31 +13554,16 @@
       ]
     },
     {
-      "position": 831,
+      "position": 829,
       "annotations": [
         {
-          "name": "recurrent mutation (homoplasies)",
+          "name": "polymorphic position",
           "aminoAcids": [
-            "V"
+            "T"
           ],
           "description": "",
           "citationIds": [
-            "18.1"
-          ]
-        }
-      ]
-    },
-    {
-      "position": 834,
-      "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "M"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
+            "21.1"
           ]
         }
       ]
@@ -17532,20 +13596,20 @@
       "position": 839,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "E"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "secondary structure",
           "value": "\u03b18",
           "citationIds": [
             "4.1"
+          ]
+        },
+        {
+          "name": "polymorphic position",
+          "aminoAcids": [
+            "Y"
+          ],
+          "description": "",
+          "citationIds": [
+            "21.1"
           ]
         }
       ]
@@ -17590,13 +13654,43 @@
       "position": 845,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
+          "name": "polymorphic position",
           "aminoAcids": [
-            "N"
+            "S"
           ],
           "description": "",
           "citationIds": [
-            "15.1"
+            "21.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 846,
+      "annotations": [
+        {
+          "name": "polymorphic position",
+          "aminoAcids": [
+            "V"
+          ],
+          "description": "",
+          "citationIds": [
+            "21.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 847,
+      "annotations": [
+        {
+          "name": "polymorphic position",
+          "aminoAcids": [
+            "K"
+          ],
+          "description": "",
+          "citationIds": [
+            "21.1"
           ]
         }
       ]
@@ -17706,6 +13800,16 @@
           "citationIds": [
             "4.1"
           ]
+        },
+        {
+          "name": "polymorphic position",
+          "aminoAcids": [
+            "I"
+          ],
+          "description": "",
+          "citationIds": [
+            "21.1"
+          ]
         }
       ]
     },
@@ -17748,16 +13852,6 @@
     {
       "position": 868,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "D"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "secondary structure",
           "value": "\u03b110",
@@ -17807,16 +13901,6 @@
       "position": 872,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "A"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "secondary structure",
           "value": "\u03b110",
           "citationIds": [
@@ -17852,16 +13936,6 @@
     {
       "position": 875,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "A"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "secondary structure",
           "value": "\u03b110",
@@ -17899,16 +13973,6 @@
       "position": 878,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "V"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "secondary structure",
           "value": "\u03b110",
           "citationIds": [
@@ -17921,20 +13985,20 @@
       "position": 879,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
+          "name": "secondary structure",
+          "value": "\u03b110",
+          "citationIds": [
+            "4.1"
+          ]
+        },
+        {
+          "name": "polymorphic position",
           "aminoAcids": [
             "S"
           ],
           "description": "",
           "citationIds": [
-            "15.1"
-          ]
-        },
-        {
-          "name": "secondary structure",
-          "value": "\u03b110",
-          "citationIds": [
-            "4.1"
+            "21.1"
           ]
         }
       ]
@@ -17967,16 +14031,6 @@
       "position": 882,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "A"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "secondary structure",
           "value": "\u03b110",
           "citationIds": [
@@ -18000,16 +14054,6 @@
     {
       "position": 884,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "A"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "secondary structure",
           "value": "\u03b110",
@@ -18051,6 +14095,16 @@
           "value": "\u03b111",
           "citationIds": [
             "4.1"
+          ]
+        },
+        {
+          "name": "polymorphic position",
+          "aminoAcids": [
+            "I"
+          ],
+          "description": "",
+          "citationIds": [
+            "21.1"
           ]
         }
       ]
@@ -18343,16 +14397,6 @@
       "position": 922,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "Q"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "HR1",
           "citationIds": [
@@ -18486,16 +14530,6 @@
       "position": 929,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "K"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "HR1",
           "citationIds": [
@@ -18553,16 +14587,6 @@
       "position": 932,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "S"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "HR1",
           "citationIds": [
@@ -18581,16 +14605,6 @@
     {
       "position": 933,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "Q"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "HR1",
@@ -18649,16 +14663,6 @@
       "position": 936,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "E"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "HR1",
           "citationIds": [
@@ -18666,20 +14670,20 @@
           ]
         },
         {
-          "name": "recurrent mutation (homoplasies)",
+          "name": "secondary structure",
+          "value": "\u03b112",
+          "citationIds": [
+            "4.1"
+          ]
+        },
+        {
+          "name": "polymorphic position",
           "aminoAcids": [
             "Y"
           ],
           "description": "",
           "citationIds": [
-            "18.1"
-          ]
-        },
-        {
-          "name": "secondary structure",
-          "value": "\u03b112",
-          "citationIds": [
-            "4.1"
+            "21.1"
           ]
         }
       ]
@@ -18726,16 +14730,6 @@
       "position": 939,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "T"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "HR1",
           "citationIds": [
@@ -18748,22 +14742,22 @@
           "citationIds": [
             "4.1"
           ]
+        },
+        {
+          "name": "polymorphic position",
+          "aminoAcids": [
+            "F"
+          ],
+          "description": "",
+          "citationIds": [
+            "21.1"
+          ]
         }
       ]
     },
     {
       "position": 940,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "T"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "HR1",
@@ -18796,16 +14790,6 @@
       "position": 942,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "S"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "HR1",
           "citationIds": [
@@ -18817,16 +14801,6 @@
     {
       "position": 943,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "T"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "HR1",
@@ -19934,6 +15908,16 @@
           "citationIds": [
             "4.1"
           ]
+        },
+        {
+          "name": "polymorphic position",
+          "aminoAcids": [
+            "V"
+          ],
+          "description": "",
+          "citationIds": [
+            "21.1"
+          ]
         }
       ]
     },
@@ -20157,16 +16141,6 @@
       "position": 1055,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "A"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "secondary structure",
           "value": "\u03b254",
           "citationIds": [
@@ -20344,31 +16318,6 @@
       ]
     },
     {
-      "position": 1070,
-      "annotations": [
-        {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "S"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "S"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        }
-      ]
-    },
-    {
       "position": 1072,
       "annotations": [
         {
@@ -20384,20 +16333,20 @@
       "position": 1073,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "R"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "secondary structure",
           "value": "\u03b256",
           "citationIds": [
             "4.1"
+          ]
+        },
+        {
+          "name": "polymorphic position",
+          "aminoAcids": [
+            "N"
+          ],
+          "description": "",
+          "citationIds": [
+            "21.1"
           ]
         }
       ]
@@ -20463,20 +16412,20 @@
       "position": 1078,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "T"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
           "name": "secondary structure",
           "value": "\u03b256",
           "citationIds": [
             "4.1"
+          ]
+        },
+        {
+          "name": "polymorphic position",
+          "aminoAcids": [
+            "S"
+          ],
+          "description": "",
+          "citationIds": [
+            "21.1"
           ]
         }
       ]
@@ -20506,31 +16455,6 @@
       ]
     },
     {
-      "position": 1084,
-      "annotations": [
-        {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "E"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "E"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        }
-      ]
-    },
-    {
       "position": 1087,
       "annotations": [
         {
@@ -20545,16 +16469,6 @@
     {
       "position": 1088,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "Y"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "secondary structure",
           "value": "\u03b258",
@@ -20628,16 +16542,6 @@
       "position": 1097,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "F"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "secondary structure",
           "value": "\u03b259",
           "citationIds": [
@@ -20657,21 +16561,6 @@
           ],
           "value": "Glycan",
           "description": ""
-        }
-      ]
-    },
-    {
-      "position": 1101,
-      "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "S"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
         }
       ]
     },
@@ -20703,20 +16592,20 @@
       "position": 1104,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "I"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "secondary structure",
           "value": "\u03b260",
           "citationIds": [
             "4.1"
+          ]
+        },
+        {
+          "name": "polymorphic position",
+          "aminoAcids": [
+            "L"
+          ],
+          "description": "",
+          "citationIds": [
+            "21.1"
           ]
         }
       ]
@@ -20729,36 +16618,6 @@
           "value": "\u03b260",
           "citationIds": [
             "4.1"
-          ]
-        }
-      ]
-    },
-    {
-      "position": 1110,
-      "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "F"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        }
-      ]
-    },
-    {
-      "position": 1111,
-      "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "S"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
           ]
         }
       ]
@@ -20844,6 +16703,16 @@
           "citationIds": [
             "4.1"
           ]
+        },
+        {
+          "name": "polymorphic position",
+          "aminoAcids": [
+            "L"
+          ],
+          "description": "",
+          "citationIds": [
+            "21.1"
+          ]
         }
       ]
     },
@@ -20860,26 +16729,16 @@
       ]
     },
     {
-      "position": 1125,
+      "position": 1124,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
+          "name": "polymorphic position",
           "aminoAcids": [
-            "S"
+            "V"
           ],
           "description": "",
           "citationIds": [
-            "17.1"
-          ]
-        },
-        {
-          "name": "known RaTG13 amino acid",
-          "aminoAcids": [
-            "S"
-          ],
-          "description": "",
-          "citationIds": [
-            "16.1"
+            "21.1"
           ]
         }
       ]
@@ -20887,16 +16746,6 @@
     {
       "position": 1133,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "I"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "secondary structure",
           "value": "\u03b263",
@@ -20955,19 +16804,6 @@
       "position": 1144,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "*",
-            "E",
-            "K",
-            "Q"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
           "name": "secondary structure",
           "value": "\u03b75",
           "citationIds": [
@@ -20989,6 +16825,21 @@
       ]
     },
     {
+      "position": 1146,
+      "annotations": [
+        {
+          "name": "polymorphic position",
+          "aminoAcids": [
+            "H"
+          ],
+          "description": "",
+          "citationIds": [
+            "21.1"
+          ]
+        }
+      ]
+    },
+    {
       "position": 1158,
       "annotations": [
         {
@@ -20999,6 +16850,21 @@
           ],
           "value": "Glycan",
           "description": ""
+        }
+      ]
+    },
+    {
+      "position": 1162,
+      "annotations": [
+        {
+          "name": "polymorphic position",
+          "aminoAcids": [
+            "L"
+          ],
+          "description": "",
+          "citationIds": [
+            "21.1"
+          ]
         }
       ]
     },
@@ -21054,19 +16920,6 @@
       "position": 1167,
       "annotations": [
         {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "C",
-            "G",
-            "R",
-            "S"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "HR2",
           "citationIds": [
@@ -21090,16 +16943,6 @@
     {
       "position": 1169,
       "annotations": [
-        {
-          "name": "known Pangolin isolate MP789 amino acid",
-          "aminoAcids": [
-            "K"
-          ],
-          "description": "",
-          "citationIds": [
-            "17.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "HR2",
@@ -21198,6 +17041,16 @@
           "value": "HR2",
           "citationIds": [
             "2.1"
+          ]
+        },
+        {
+          "name": "polymorphic position",
+          "aminoAcids": [
+            "F"
+          ],
+          "description": "",
+          "citationIds": [
+            "21.1"
           ]
         }
       ]
@@ -21592,6 +17445,16 @@
           "citationIds": [
             "2.1"
           ]
+        },
+        {
+          "name": "polymorphic position",
+          "aminoAcids": [
+            "H"
+          ],
+          "description": "",
+          "citationIds": [
+            "21.1"
+          ]
         }
       ]
     },
@@ -21683,16 +17546,6 @@
       "position": 1216,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "V"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "TM",
           "citationIds": [
@@ -21733,6 +17586,17 @@
           "value": "TM",
           "citationIds": [
             "2.1"
+          ]
+        },
+        {
+          "name": "polymorphic position",
+          "aminoAcids": [
+            "C",
+            "V"
+          ],
+          "description": "",
+          "citationIds": [
+            "21.1"
           ]
         }
       ]
@@ -21837,16 +17701,6 @@
       "position": 1228,
       "annotations": [
         {
-          "name": "known RaTG13 amino acid",
-          "aminoAcids": [
-            "I"
-          ],
-          "description": "",
-          "citationIds": [
-            "16.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "TM",
           "citationIds": [
@@ -21863,6 +17717,16 @@
           "value": "TM",
           "citationIds": [
             "2.1"
+          ]
+        },
+        {
+          "name": "polymorphic position",
+          "aminoAcids": [
+            "I"
+          ],
+          "description": "",
+          "citationIds": [
+            "21.1"
           ]
         }
       ]
@@ -21906,16 +17770,6 @@
     {
       "position": 1233,
       "annotations": [
-        {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "L"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
         {
           "name": "landmark",
           "value": "TM",
@@ -21983,6 +17837,16 @@
             "2.1"
           ],
           "description": "TM/CP overlapping"
+        },
+        {
+          "name": "polymorphic position",
+          "aminoAcids": [
+            "I"
+          ],
+          "description": "",
+          "citationIds": [
+            "21.1"
+          ]
         }
       ]
     },
@@ -22094,16 +17958,6 @@
       "position": 1247,
       "annotations": [
         {
-          "name": "known SARS-CoV amino acid",
-          "aminoAcids": [
-            "A"
-          ],
-          "description": "",
-          "citationIds": [
-            "15.1"
-          ]
-        },
-        {
           "name": "landmark",
           "value": "CP",
           "citationIds": [
@@ -22175,6 +18029,16 @@
             "2.1"
           ],
           "description": ""
+        },
+        {
+          "name": "polymorphic position",
+          "aminoAcids": [
+            "P"
+          ],
+          "description": "",
+          "citationIds": [
+            "21.1"
+          ]
         }
       ]
     },
@@ -22318,6 +18182,16 @@
             "2.1"
           ],
           "description": ""
+        },
+        {
+          "name": "polymorphic position",
+          "aminoAcids": [
+            "L"
+          ],
+          "description": "",
+          "citationIds": [
+            "21.1"
+          ]
         }
       ]
     },
