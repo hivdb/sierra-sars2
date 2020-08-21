@@ -40,6 +40,18 @@
       "colorRules": []
     },
     {
+      "name": "REGN1098-binding residue",
+      "level": "position",
+      "hideCitations": false,
+      "colorRules": []
+    },
+    {
+      "name": "REGN1093-binding residue",
+      "level": "position",
+      "hideCitations": false,
+      "colorRules": []
+    },
+    {
       "name": "CR3022-binding residue",
       "level": "position",
       "hideCitations": false,
@@ -297,6 +309,14 @@
       "year": 2020,
       "doi": "10.1016/j.cell.2020.06.025",
       "section": "PDB: 6XCM; PDB: 6XCN"
+    },
+    "24.1": {
+      "citationId": 24,
+      "sectionId": 1,
+      "author": "Hansen",
+      "year": 2020,
+      "doi": "10.1126/science.abd0827",
+      "section": "PDB: 6XDG"
     }
   },
   "positions": [
@@ -7192,6 +7212,22 @@
           ],
           "value": "C105",
           "description": ""
+        },
+        {
+          "name": "REGN1098-binding residue",
+          "citationIds": [
+            "24.1"
+          ],
+          "value": "REGN1098",
+          "description": ""
+        },
+        {
+          "name": "REGN1093-binding residue",
+          "citationIds": [
+            "24.1"
+          ],
+          "value": "REGN1093",
+          "description": ""
         }
       ]
     },
@@ -7566,6 +7602,14 @@
           ],
           "value": "C105",
           "description": ""
+        },
+        {
+          "name": "REGN1093-binding residue",
+          "citationIds": [
+            "24.1"
+          ],
+          "value": "REGN1093",
+          "description": ""
         }
       ]
     },
@@ -7709,6 +7753,14 @@
             "23.1"
           ],
           "value": "C105",
+          "description": ""
+        },
+        {
+          "name": "REGN1093-binding residue",
+          "citationIds": [
+            "24.1"
+          ],
+          "value": "REGN1093",
           "description": ""
         }
       ]
@@ -8082,6 +8134,14 @@
           "citationIds": [
             "21.1"
           ]
+        },
+        {
+          "name": "REGN1098-binding residue",
+          "citationIds": [
+            "24.1"
+          ],
+          "value": "REGN1098",
+          "description": ""
         }
       ]
     },
@@ -8110,6 +8170,14 @@
           ],
           "value": "S309",
           "description": ""
+        },
+        {
+          "name": "REGN1098-binding residue",
+          "citationIds": [
+            "24.1"
+          ],
+          "value": "REGN1098",
+          "description": ""
         }
       ]
     },
@@ -8137,6 +8205,14 @@
             "6.1"
           ],
           "value": "S309",
+          "description": ""
+        },
+        {
+          "name": "REGN1098-binding residue",
+          "citationIds": [
+            "24.1"
+          ],
+          "value": "REGN1098",
           "description": ""
         }
       ]
@@ -8200,6 +8276,14 @@
           ],
           "value": "S309",
           "description": ""
+        },
+        {
+          "name": "REGN1098-binding residue",
+          "citationIds": [
+            "24.1"
+          ],
+          "value": "REGN1098",
+          "description": ""
         }
       ]
     },
@@ -8220,6 +8304,14 @@
           "citationIds": [
             "4.1"
           ]
+        },
+        {
+          "name": "REGN1098-binding residue",
+          "citationIds": [
+            "24.1"
+          ],
+          "value": "REGN1098",
+          "description": ""
         }
       ]
     },
@@ -8266,6 +8358,14 @@
           ],
           "value": "BD23",
           "description": ""
+        },
+        {
+          "name": "REGN1098-binding residue",
+          "citationIds": [
+            "24.1"
+          ],
+          "value": "REGN1098",
+          "description": ""
         }
       ]
     },
@@ -8287,6 +8387,14 @@
           ],
           "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
+        },
+        {
+          "name": "REGN1098-binding residue",
+          "citationIds": [
+            "24.1"
+          ],
+          "value": "REGN1098",
+          "description": ""
         }
       ]
     },
@@ -8308,6 +8416,14 @@
           ],
           "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
+        },
+        {
+          "name": "REGN1098-binding residue",
+          "citationIds": [
+            "24.1"
+          ],
+          "value": "REGN1098",
+          "description": ""
         }
       ]
     },
@@ -8346,6 +8462,14 @@
           ],
           "value": "BD23",
           "description": ""
+        },
+        {
+          "name": "REGN1098-binding residue",
+          "citationIds": [
+            "24.1"
+          ],
+          "value": "REGN1098",
+          "description": ""
         }
       ]
     },
@@ -8367,6 +8491,14 @@
           ],
           "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
+        },
+        {
+          "name": "REGN1098-binding residue",
+          "citationIds": [
+            "24.1"
+          ],
+          "value": "REGN1098",
+          "description": ""
         }
       ]
     },
@@ -8462,6 +8594,14 @@
           ],
           "value": "C105",
           "description": ""
+        },
+        {
+          "name": "REGN1093-binding residue",
+          "citationIds": [
+            "24.1"
+          ],
+          "value": "REGN1093",
+          "description": ""
         }
       ]
     },
@@ -8529,6 +8669,14 @@
           ],
           "value": "C105",
           "description": ""
+        },
+        {
+          "name": "REGN1093-binding residue",
+          "citationIds": [
+            "24.1"
+          ],
+          "value": "REGN1093",
+          "description": ""
         }
       ]
     },
@@ -8575,6 +8723,14 @@
             "23.1"
           ],
           "value": "C105",
+          "description": ""
+        },
+        {
+          "name": "REGN1093-binding residue",
+          "citationIds": [
+            "24.1"
+          ],
+          "value": "REGN1093",
           "description": ""
         }
       ]
@@ -9037,6 +9193,14 @@
           ],
           "value": "C105",
           "description": ""
+        },
+        {
+          "name": "REGN1093-binding residue",
+          "citationIds": [
+            "24.1"
+          ],
+          "value": "REGN1093",
+          "description": ""
         }
       ]
     },
@@ -9082,6 +9246,14 @@
             "23.1"
           ],
           "value": "C105",
+          "description": ""
+        },
+        {
+          "name": "REGN1093-binding residue",
+          "citationIds": [
+            "24.1"
+          ],
+          "value": "REGN1093",
           "description": ""
         }
       ]
@@ -9304,6 +9476,14 @@
           ],
           "value": "BD23",
           "description": ""
+        },
+        {
+          "name": "REGN1093-binding residue",
+          "citationIds": [
+            "24.1"
+          ],
+          "value": "REGN1093",
+          "description": ""
         }
       ]
     },
@@ -9332,6 +9512,14 @@
             "22.1"
           ],
           "value": "BD23",
+          "description": ""
+        },
+        {
+          "name": "REGN1093-binding residue",
+          "citationIds": [
+            "24.1"
+          ],
+          "value": "REGN1093",
           "description": ""
         }
       ]
@@ -9395,6 +9583,14 @@
           ],
           "value": "C105",
           "description": ""
+        },
+        {
+          "name": "REGN1093-binding residue",
+          "citationIds": [
+            "24.1"
+          ],
+          "value": "REGN1093",
+          "description": ""
         }
       ]
     },
@@ -9449,6 +9645,14 @@
           ],
           "value": "C105",
           "description": ""
+        },
+        {
+          "name": "REGN1093-binding residue",
+          "citationIds": [
+            "24.1"
+          ],
+          "value": "REGN1093",
+          "description": ""
         }
       ]
     },
@@ -9484,6 +9688,14 @@
             "14.1"
           ],
           "value": "B38",
+          "description": ""
+        },
+        {
+          "name": "REGN1093-binding residue",
+          "citationIds": [
+            "24.1"
+          ],
+          "value": "REGN1093",
           "description": ""
         }
       ]
@@ -9538,6 +9750,14 @@
             "22.1"
           ],
           "value": "BD23",
+          "description": ""
+        },
+        {
+          "name": "REGN1093-binding residue",
+          "citationIds": [
+            "24.1"
+          ],
+          "value": "REGN1093",
           "description": ""
         }
       ]
@@ -9711,6 +9931,14 @@
           ],
           "value": "BD23",
           "description": ""
+        },
+        {
+          "name": "REGN1093-binding residue",
+          "citationIds": [
+            "24.1"
+          ],
+          "value": "REGN1093",
+          "description": ""
         }
       ]
     },
@@ -9873,6 +10101,14 @@
           ],
           "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
+        },
+        {
+          "name": "REGN1098-binding residue",
+          "citationIds": [
+            "24.1"
+          ],
+          "value": "REGN1098",
+          "description": ""
         }
       ]
     },
@@ -9946,6 +10182,14 @@
             "23.1"
           ],
           "value": "C105",
+          "description": ""
+        },
+        {
+          "name": "REGN1098-binding residue",
+          "citationIds": [
+            "24.1"
+          ],
+          "value": "REGN1098",
           "description": ""
         }
       ]
