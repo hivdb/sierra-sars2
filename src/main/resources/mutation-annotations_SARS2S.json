@@ -5631,6 +5631,27 @@
           ],
           "value": "Glycan",
           "description": ""
+        },
+        {
+          "name": "S309-binding residue",
+          "citationIds": [
+            "6.1"
+          ],
+          "value": "S309",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "position": 332,
+      "annotations": [
+        {
+          "name": "S309-binding residue",
+          "citationIds": [
+            "6.1"
+          ],
+          "value": "S309",
+          "description": ""
         }
       ]
     },
@@ -5639,10 +5660,11 @@
       "annotations": [
         {
           "name": "S309-binding residue",
-          "value": "X",
+          "value": "S309",
           "citationIds": [
             "6.1"
-          ]
+          ],
+          "description": ""
         }
       ]
     },
@@ -5651,10 +5673,11 @@
       "annotations": [
         {
           "name": "S309-binding residue",
-          "value": "X",
+          "value": "S309",
           "citationIds": [
             "6.1"
-          ]
+          ],
+          "description": ""
         }
       ]
     },
@@ -5663,10 +5686,11 @@
       "annotations": [
         {
           "name": "S309-binding residue",
-          "value": "X",
+          "value": "S309",
           "citationIds": [
             "6.1"
-          ]
+          ],
+          "description": ""
         }
       ]
     },
@@ -5680,6 +5704,14 @@
           ],
           "value": "336-361",
           "description": "Cys336-Cys361 pair"
+        },
+        {
+          "name": "S309-binding residue",
+          "citationIds": [
+            "6.1"
+          ],
+          "value": "S309",
+          "description": ""
         }
       ]
     },
@@ -5688,10 +5720,11 @@
       "annotations": [
         {
           "name": "S309-binding residue",
-          "value": "X",
+          "value": "S309",
           "citationIds": [
             "6.1"
-          ]
+          ],
+          "description": ""
         }
       ]
     },
@@ -5727,10 +5760,11 @@
         },
         {
           "name": "S309-binding residue",
-          "value": "X",
+          "value": "S309",
           "citationIds": [
             "6.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -5754,10 +5788,11 @@
         },
         {
           "name": "S309-binding residue",
-          "value": "X",
+          "value": "S309",
           "citationIds": [
             "6.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -5781,10 +5816,11 @@
         },
         {
           "name": "S309-binding residue",
-          "value": "X",
+          "value": "S309",
           "citationIds": [
             "6.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -5814,10 +5850,11 @@
       "annotations": [
         {
           "name": "S309-binding residue",
-          "value": "X?",
+          "value": "S309",
           "citationIds": [
             "6.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -5843,10 +5880,11 @@
       "annotations": [
         {
           "name": "S309-binding residue",
-          "value": "X",
+          "value": "S309",
           "citationIds": [
             "6.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -5873,10 +5911,11 @@
       "annotations": [
         {
           "name": "S309-binding residue",
-          "value": "X",
+          "value": "S309",
           "citationIds": [
             "6.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -5893,17 +5932,19 @@
       "annotations": [
         {
           "name": "P2B-2F6-binding residue",
-          "value": "X",
+          "value": "P2B-2F6",
           "citationIds": [
             "13.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "S309-binding residue",
-          "value": "X",
+          "value": "S309",
           "citationIds": [
             "6.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -6011,10 +6052,11 @@
       "annotations": [
         {
           "name": "S309-binding residue",
-          "value": "X",
+          "value": "S309",
           "citationIds": [
             "6.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -6065,10 +6107,11 @@
         },
         {
           "name": "S309-binding residue",
-          "value": "X",
+          "value": "S309",
           "citationIds": [
             "6.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -6085,10 +6128,11 @@
       "annotations": [
         {
           "name": "S309-binding residue",
-          "value": "X",
+          "value": "S309",
           "citationIds": [
             "6.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -6119,10 +6163,11 @@
         },
         {
           "name": "S309-binding residue",
-          "value": "X",
+          "value": "S309",
           "citationIds": [
             "6.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -6139,10 +6184,11 @@
       "annotations": [
         {
           "name": "S309-binding residue",
-          "value": "X",
+          "value": "S309",
           "citationIds": [
             "6.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -6159,10 +6205,11 @@
       "annotations": [
         {
           "name": "S309-binding residue",
-          "value": "X",
+          "value": "S309",
           "citationIds": [
             "6.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -6179,10 +6226,11 @@
       "annotations": [
         {
           "name": "S309-binding residue",
-          "value": "X",
+          "value": "S309",
           "citationIds": [
             "6.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -6329,11 +6377,12 @@
         },
         {
           "name": "CR3022-binding residue",
-          "value": "X",
+          "value": "CR3022",
           "citationIds": [
             "11.1",
             "12.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -6350,11 +6399,12 @@
       "annotations": [
         {
           "name": "CR3022-binding residue",
-          "value": "X",
+          "value": "CR3022",
           "citationIds": [
             "11.1",
             "12.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -6379,10 +6429,12 @@
       "annotations": [
         {
           "name": "CR3022-binding residue",
-          "value": "X",
+          "value": "CR3022",
           "citationIds": [
-            "11.1"
-          ]
+            "11.1",
+            "12.1"
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -6399,11 +6451,12 @@
       "annotations": [
         {
           "name": "CR3022-binding residue",
-          "value": "X",
+          "value": "CR3022",
           "citationIds": [
             "11.1",
             "12.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -6433,11 +6486,12 @@
       "annotations": [
         {
           "name": "CR3022-binding residue",
-          "value": "X",
+          "value": "CR3022",
           "citationIds": [
             "11.1",
             "12.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -6454,11 +6508,12 @@
       "annotations": [
         {
           "name": "CR3022-binding residue",
-          "value": "X",
+          "value": "CR3022",
           "citationIds": [
             "11.1",
             "12.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -6482,11 +6537,12 @@
         },
         {
           "name": "CR3022-binding residue",
-          "value": "X",
+          "value": "CR3022",
           "citationIds": [
             "11.1",
             "12.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -6510,11 +6566,12 @@
         },
         {
           "name": "CR3022-binding residue",
-          "value": "X",
+          "value": "CR3022",
           "citationIds": [
             "11.1",
             "12.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -6538,11 +6595,12 @@
         },
         {
           "name": "CR3022-binding residue",
-          "value": "X",
+          "value": "CR3022",
           "citationIds": [
             "11.1",
             "12.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -6566,11 +6624,12 @@
         },
         {
           "name": "CR3022-binding residue",
-          "value": "X",
+          "value": "CR3022",
           "citationIds": [
             "11.1",
             "12.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -6595,11 +6654,12 @@
       "annotations": [
         {
           "name": "CR3022-binding residue",
-          "value": "X",
+          "value": "CR3022",
           "citationIds": [
             "11.1",
             "12.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -6616,11 +6676,12 @@
       "annotations": [
         {
           "name": "CR3022-binding residue",
-          "value": "X",
+          "value": "CR3022",
           "citationIds": [
             "11.1",
             "12.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -6637,11 +6698,12 @@
       "annotations": [
         {
           "name": "CR3022-binding residue",
-          "value": "X",
+          "value": "CR3022",
           "citationIds": [
             "11.1",
             "12.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -6658,11 +6720,12 @@
       "annotations": [
         {
           "name": "CR3022-binding residue",
-          "value": "X",
+          "value": "CR3022",
           "citationIds": [
             "11.1",
             "12.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -6679,11 +6742,12 @@
       "annotations": [
         {
           "name": "CR3022-binding residue",
-          "value": "X",
+          "value": "CR3022",
           "citationIds": [
             "11.1",
             "12.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -6714,11 +6778,12 @@
         },
         {
           "name": "CR3022-binding residue",
-          "value": "X",
+          "value": "CR3022",
           "citationIds": [
             "11.1",
             "12.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -6742,11 +6807,12 @@
         },
         {
           "name": "CR3022-binding residue",
-          "value": "X",
+          "value": "CR3022",
           "citationIds": [
             "11.1",
             "12.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -6789,10 +6855,12 @@
       "annotations": [
         {
           "name": "CR3022-binding residue",
-          "value": "X",
+          "value": "CR3022",
           "citationIds": [
-            "11.1"
-          ]
+            "11.1",
+            "12.1"
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -6809,10 +6877,12 @@
       "annotations": [
         {
           "name": "CR3022-binding residue",
-          "value": "X",
+          "value": "CR3022",
           "citationIds": [
-            "11.1"
-          ]
+            "11.1",
+            "12.1"
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -6850,11 +6920,12 @@
       "annotations": [
         {
           "name": "CR3022-binding residue",
-          "value": "X",
+          "value": "CR3022",
           "citationIds": [
             "11.1",
             "12.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -7057,17 +7128,19 @@
       "annotations": [
         {
           "name": "B38-binding residue",
-          "value": "X",
+          "value": "B38",
           "citationIds": [
             "14.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "CB6-biding residue",
-          "value": "X",
+          "value": "CB6",
           "citationIds": [
             "10.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -7103,6 +7176,14 @@
           ],
           "value": "RBD",
           "description": "Receptor binding domain (also known as S1B)"
+        },
+        {
+          "name": "CB6-biding residue",
+          "citationIds": [
+            "10.1"
+          ],
+          "value": "CB6",
+          "description": ""
         }
       ]
     },
@@ -7118,17 +7199,19 @@
         },
         {
           "name": "CB6-biding residue",
-          "value": "X",
+          "value": "CB6",
           "citationIds": [
             "10.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "B38-binding residue",
-          "value": "X",
+          "value": "B38",
           "citationIds": [
             "14.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -7145,17 +7228,19 @@
       "annotations": [
         {
           "name": "B38-binding residue",
-          "value": "X",
+          "value": "B38",
           "citationIds": [
             "14.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "CB6-biding residue",
-          "value": "X",
+          "value": "CB6",
           "citationIds": [
             "10.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -7199,10 +7284,11 @@
         },
         {
           "name": "CB6-biding residue",
-          "value": "X",
+          "value": "CB6",
           "citationIds": [
             "10.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -7226,17 +7312,19 @@
         },
         {
           "name": "CB6-biding residue",
-          "value": "X",
+          "value": "CB6",
           "citationIds": [
             "10.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "B38-binding residue",
-          "value": "X",
+          "value": "B38",
           "citationIds": [
             "14.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -7332,17 +7420,19 @@
       "annotations": [
         {
           "name": "CB6-biding residue",
-          "value": "X",
+          "value": "CB6",
           "citationIds": [
             "10.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "B38-binding residue",
-          "value": "X",
+          "value": "B38",
           "citationIds": [
             "14.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -7359,17 +7449,19 @@
       "annotations": [
         {
           "name": "CB6-biding residue",
-          "value": "X",
+          "value": "CB6",
           "citationIds": [
             "10.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "B38-binding residue",
-          "value": "X",
+          "value": "B38",
           "citationIds": [
             "14.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -7394,17 +7486,19 @@
         },
         {
           "name": "B38-binding residue",
-          "value": "X",
+          "value": "B38",
           "citationIds": [
             "14.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "CB6-biding residue",
-          "value": "X",
+          "value": "CB6",
           "citationIds": [
             "10.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -7440,6 +7534,14 @@
           ],
           "value": "RBD",
           "description": "Receptor binding domain (also known as S1B)"
+        },
+        {
+          "name": "CB6-biding residue",
+          "citationIds": [
+            "10.1"
+          ],
+          "value": "CB6",
+          "description": ""
         }
       ]
     },
@@ -7460,6 +7562,22 @@
           ],
           "value": "RBD",
           "description": "Receptor binding domain (also known as S1B)"
+        },
+        {
+          "name": "CB6-biding residue",
+          "citationIds": [
+            "10.1"
+          ],
+          "value": "CB6",
+          "description": ""
+        },
+        {
+          "name": "B38-binding residue",
+          "citationIds": [
+            "14.1"
+          ],
+          "value": "B38",
+          "description": ""
         }
       ]
     },
@@ -7475,17 +7593,19 @@
         },
         {
           "name": "CB6-biding residue",
-          "value": "X",
+          "value": "CB6",
           "citationIds": [
             "10.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "B38-binding residue",
-          "value": "X",
+          "value": "B38",
           "citationIds": [
             "14.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -7508,18 +7628,12 @@
           ]
         },
         {
-          "name": "CB6-biding residue",
-          "value": "X",
-          "citationIds": [
-            "10.1"
-          ]
-        },
-        {
           "name": "B38-binding residue",
-          "value": "X",
+          "value": "B38",
           "citationIds": [
             "14.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -7615,11 +7729,12 @@
         },
         {
           "name": "CR3022-binding residue",
-          "value": "X ?not in supp",
+          "value": "CR3022",
           "citationIds": [
             "11.1",
             "12.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -7643,11 +7758,12 @@
         },
         {
           "name": "CR3022-binding residue",
-          "value": "X ?not in supp",
+          "value": "CR3022",
           "citationIds": [
             "11.1",
             "12.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -7664,11 +7780,12 @@
       "annotations": [
         {
           "name": "CR3022-binding residue",
-          "value": "X",
+          "value": "CR3022",
           "citationIds": [
             "11.1",
             "12.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -7685,11 +7802,12 @@
       "annotations": [
         {
           "name": "CR3022-binding residue",
-          "value": "X",
+          "value": "CR3022",
           "citationIds": [
             "11.1",
             "12.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -7916,6 +8034,14 @@
           "citationIds": [
             "4.1"
           ]
+        },
+        {
+          "name": "S309-binding residue",
+          "citationIds": [
+            "6.1"
+          ],
+          "value": "S309",
+          "description": ""
         }
       ]
     },
@@ -7936,6 +8062,14 @@
           "citationIds": [
             "4.1"
           ]
+        },
+        {
+          "name": "S309-binding residue",
+          "citationIds": [
+            "6.1"
+          ],
+          "value": "S309",
+          "description": ""
         }
       ]
     },
@@ -7977,10 +8111,11 @@
       "annotations": [
         {
           "name": "P2B-2F6-binding residue",
-          "value": "X",
+          "value": "P2B-2F6",
           "citationIds": [
             "13.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -7989,6 +8124,14 @@
           ],
           "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
+        },
+        {
+          "name": "S309-binding residue",
+          "citationIds": [
+            "6.1"
+          ],
+          "value": "S309",
+          "description": ""
         }
       ]
     },
@@ -8027,10 +8170,11 @@
         },
         {
           "name": "P2B-2F6-binding residue",
-          "value": "X",
+          "value": "P2B-2F6",
           "citationIds": [
             "13.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -8054,10 +8198,11 @@
       "annotations": [
         {
           "name": "P2B-2F6-binding residue",
-          "value": "X",
+          "value": "P2B-2F6",
           "citationIds": [
             "13.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -8074,10 +8219,11 @@
       "annotations": [
         {
           "name": "P2B-2F6-binding residue",
-          "value": "X",
+          "value": "P2B-2F6",
           "citationIds": [
             "13.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -8103,10 +8249,11 @@
         },
         {
           "name": "P2B-2F6-binding residue",
-          "value": "X",
+          "value": "P2B-2F6",
           "citationIds": [
             "13.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -8123,10 +8270,11 @@
       "annotations": [
         {
           "name": "P2B-2F6-binding residue",
-          "value": "X",
+          "value": "P2B-2F6",
           "citationIds": [
             "13.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -8156,10 +8304,11 @@
       "annotations": [
         {
           "name": "P2B-2F6-binding residue",
-          "value": "X",
+          "value": "P2B-2F6",
           "citationIds": [
             "13.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -8200,10 +8349,11 @@
         },
         {
           "name": "B38-binding residue",
-          "value": "X",
+          "value": "B38",
           "citationIds": [
             "14.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -8250,17 +8400,19 @@
         },
         {
           "name": "B38-binding residue",
-          "value": "X",
+          "value": "B38",
           "citationIds": [
             "14.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "CB6-biding residue",
-          "value": "X",
+          "value": "CB6",
           "citationIds": [
             "10.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -8287,17 +8439,19 @@
         },
         {
           "name": "B38-binding residue",
-          "value": "X",
+          "value": "B38",
           "citationIds": [
             "14.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "CB6-biding residue",
-          "value": "X",
+          "value": "CB6",
           "citationIds": [
             "10.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -8314,17 +8468,19 @@
       "annotations": [
         {
           "name": "CB6-biding residue",
-          "value": "X",
+          "value": "CB6",
           "citationIds": [
             "10.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "B38-binding residue",
-          "value": "X",
+          "value": "B38",
           "citationIds": [
             "14.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -8341,17 +8497,19 @@
       "annotations": [
         {
           "name": "B38-binding residue",
-          "value": "X",
+          "value": "B38",
           "citationIds": [
             "14.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "CB6-biding residue",
-          "value": "X",
+          "value": "CB6",
           "citationIds": [
             "10.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -8368,17 +8526,19 @@
       "annotations": [
         {
           "name": "B38-binding residue",
-          "value": "X",
+          "value": "B38",
           "citationIds": [
             "14.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "CB6-biding residue",
-          "value": "X",
+          "value": "CB6",
           "citationIds": [
             "10.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -8395,17 +8555,19 @@
       "annotations": [
         {
           "name": "B38-binding residue",
-          "value": "X",
+          "value": "B38",
           "citationIds": [
             "14.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "CB6-biding residue",
-          "value": "X",
+          "value": "CB6",
           "citationIds": [
             "10.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -8600,17 +8762,19 @@
         },
         {
           "name": "B38-binding residue",
-          "value": "X",
+          "value": "B38",
           "citationIds": [
             "14.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "CB6-biding residue",
-          "value": "X",
+          "value": "CB6",
           "citationIds": [
             "10.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -8634,17 +8798,19 @@
       "annotations": [
         {
           "name": "B38-binding residue",
-          "value": "X",
+          "value": "B38",
           "citationIds": [
             "14.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "CB6-biding residue",
-          "value": "X",
+          "value": "CB6",
           "citationIds": [
             "10.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -8678,17 +8844,19 @@
         },
         {
           "name": "B38-binding residue",
-          "value": "X",
+          "value": "B38",
           "citationIds": [
             "14.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "CB6-biding residue",
-          "value": "X",
+          "value": "CB6",
           "citationIds": [
             "10.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -8714,17 +8882,19 @@
         },
         {
           "name": "B38-binding residue",
-          "value": "X",
+          "value": "B38",
           "citationIds": [
             "14.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "CB6-biding residue",
-          "value": "X",
+          "value": "CB6",
           "citationIds": [
             "10.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -8741,17 +8911,19 @@
       "annotations": [
         {
           "name": "B38-binding residue",
-          "value": "X",
+          "value": "B38",
           "citationIds": [
             "14.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "CB6-biding residue",
-          "value": "X",
+          "value": "CB6",
           "citationIds": [
             "10.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -8885,10 +9057,11 @@
       "annotations": [
         {
           "name": "P2B-2F6-binding residue",
-          "value": "X",
+          "value": "P2B-2F6",
           "citationIds": [
             "13.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -8922,10 +9095,11 @@
         },
         {
           "name": "P2B-2F6-binding residue",
-          "value": "X",
+          "value": "P2B-2F6",
           "citationIds": [
             "13.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -8934,6 +9108,14 @@
           ],
           "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
+        },
+        {
+          "name": "B38-binding residue",
+          "citationIds": [
+            "14.1"
+          ],
+          "value": "B38",
+          "description": ""
         }
       ]
     },
@@ -8942,10 +9124,11 @@
       "annotations": [
         {
           "name": "P2B-2F6-binding residue",
-          "value": "X",
+          "value": "P2B-2F6",
           "citationIds": [
             "13.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -8972,17 +9155,19 @@
         },
         {
           "name": "B38-binding residue",
-          "value": "X",
+          "value": "B38",
           "citationIds": [
             "14.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "CB6-biding residue",
-          "value": "X",
+          "value": "CB6",
           "citationIds": [
             "10.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -9023,17 +9208,19 @@
         },
         {
           "name": "CB6-biding residue",
-          "value": "X",
+          "value": "CB6",
           "citationIds": [
             "10.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "B38-binding residue",
-          "value": "X",
+          "value": "B38",
           "citationIds": [
             "14.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -9070,6 +9257,14 @@
           ],
           "value": "480-488",
           "description": "Cys480-Cys488 pair"
+        },
+        {
+          "name": "B38-binding residue",
+          "citationIds": [
+            "14.1"
+          ],
+          "value": "B38",
+          "description": ""
         }
       ]
     },
@@ -9095,17 +9290,19 @@
         },
         {
           "name": "CB6-biding residue",
-          "value": "X",
+          "value": "CB6",
           "citationIds": [
             "10.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "B38-binding residue",
-          "value": "X",
+          "value": "B38",
           "citationIds": [
             "14.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -9130,17 +9327,19 @@
         },
         {
           "name": "B38-binding residue",
-          "value": "X",
+          "value": "B38",
           "citationIds": [
             "14.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "P2B-2F6-binding residue",
-          "value": "X",
+          "value": "P2B-2F6",
           "citationIds": [
             "13.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -9162,6 +9361,14 @@
           ],
           "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
+        },
+        {
+          "name": "B38-binding residue",
+          "citationIds": [
+            "14.1"
+          ],
+          "value": "B38",
+          "description": ""
         }
       ]
     },
@@ -9182,6 +9389,22 @@
           ],
           "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
+        },
+        {
+          "name": "P2B-2F6-binding residue",
+          "citationIds": [
+            "13.1"
+          ],
+          "value": "P2B-2F6",
+          "description": ""
+        },
+        {
+          "name": "B38-binding residue",
+          "citationIds": [
+            "14.1"
+          ],
+          "value": "B38",
+          "description": ""
         }
       ]
     },
@@ -9200,17 +9423,19 @@
         },
         {
           "name": "B38-binding residue",
-          "value": "X",
+          "value": "B38",
           "citationIds": [
             "14.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "CB6-biding residue",
-          "value": "X",
+          "value": "CB6",
           "citationIds": [
             "10.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -9226,6 +9451,14 @@
           "citationIds": [
             "4.1"
           ]
+        },
+        {
+          "name": "P2B-2F6-binding residue",
+          "citationIds": [
+            "13.1"
+          ],
+          "value": "P2B-2F6",
+          "description": ""
         }
       ]
     },
@@ -9241,17 +9474,19 @@
         },
         {
           "name": "B38-binding residue",
-          "value": "X",
+          "value": "B38",
           "citationIds": [
             "14.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "P2B-2F6-binding residue",
-          "value": "X",
+          "value": "P2B-2F6",
           "citationIds": [
             "13.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -9282,17 +9517,19 @@
         },
         {
           "name": "CB6-biding residue",
-          "value": "X",
+          "value": "CB6",
           "citationIds": [
             "10.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "B38-binding residue",
-          "value": "X",
+          "value": "B38",
           "citationIds": [
             "14.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -9319,10 +9556,11 @@
         },
         {
           "name": "B38-binding residue",
-          "value": "X",
+          "value": "B38",
           "citationIds": [
             "14.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -9362,10 +9600,11 @@
         },
         {
           "name": "B38-binding residue",
-          "value": "X",
+          "value": "B38",
           "citationIds": [
             "14.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -9419,10 +9658,11 @@
         },
         {
           "name": "B38-binding residue",
-          "value": "X",
+          "value": "B38",
           "citationIds": [
             "14.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -9449,17 +9689,19 @@
         },
         {
           "name": "B38-binding residue",
-          "value": "X",
+          "value": "B38",
           "citationIds": [
             "14.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "CB6-biding residue",
-          "value": "X",
+          "value": "CB6",
           "citationIds": [
             "10.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -9486,17 +9728,19 @@
         },
         {
           "name": "CB6-biding residue",
-          "value": "X",
+          "value": "CB6",
           "citationIds": [
             "10.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "B38-binding residue",
-          "value": "X",
+          "value": "B38",
           "citationIds": [
             "14.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -9513,10 +9757,11 @@
       "annotations": [
         {
           "name": "B38-binding residue",
-          "value": "X",
+          "value": "B38",
           "citationIds": [
             "14.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -9533,10 +9778,11 @@
       "annotations": [
         {
           "name": "CB6-biding residue",
-          "value": "X",
+          "value": "CB6",
           "citationIds": [
             "10.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -9563,17 +9809,19 @@
         },
         {
           "name": "B38-binding residue",
-          "value": "X",
+          "value": "B38",
           "citationIds": [
             "14.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "CB6-biding residue",
-          "value": "X",
+          "value": "CB6",
           "citationIds": [
             "10.1"
-          ]
+          ],
+          "description": ""
         },
         {
           "name": "landmark",
@@ -9631,6 +9879,14 @@
           "citationIds": [
             "4.1"
           ]
+        },
+        {
+          "name": "S309-binding residue",
+          "citationIds": [
+            "6.1"
+          ],
+          "value": "S309",
+          "description": ""
         }
       ]
     },
@@ -9706,10 +9962,12 @@
         },
         {
           "name": "CR3022-binding residue",
-          "value": "X",
+          "value": "CR3022",
           "citationIds": [
-            "11.1"
-          ]
+            "11.1",
+            "12.1"
+          ],
+          "description": ""
         }
       ]
     },
@@ -9718,10 +9976,12 @@
       "annotations": [
         {
           "name": "CR3022-binding residue",
-          "value": "X",
+          "value": "CR3022",
           "citationIds": [
-            "11.1"
-          ]
+            "11.1",
+            "12.1"
+          ],
+          "description": ""
         }
       ]
     },
@@ -9730,10 +9990,12 @@
       "annotations": [
         {
           "name": "CR3022-binding residue",
-          "value": "X",
+          "value": "CR3022",
           "citationIds": [
-            "11.1"
-          ]
+            "11.1",
+            "12.1"
+          ],
+          "description": ""
         }
       ]
     },
@@ -9742,10 +10004,12 @@
       "annotations": [
         {
           "name": "CR3022-binding residue",
-          "value": "X",
+          "value": "CR3022",
           "citationIds": [
-            "11.1"
-          ]
+            "11.1",
+            "12.1"
+          ],
+          "description": ""
         }
       ]
     },
