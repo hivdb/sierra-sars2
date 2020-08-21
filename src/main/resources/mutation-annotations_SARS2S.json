@@ -70,6 +70,18 @@
       "colorRules": []
     },
     {
+      "name": "BD23-binding residue",
+      "level": "position",
+      "hideCitations": false,
+      "colorRules": []
+    },
+    {
+      "name": "C105-binding residue",
+      "level": "position",
+      "hideCitations": false,
+      "colorRules": []
+    },
+    {
       "name": "polymorphic position",
       "level": "aminoAcid",
       "hideCitations": true,
@@ -269,6 +281,22 @@
       "year": 2020,
       "doi": "10.20944/preprints202007.0551.v1",
       "section": "Psuedo section"
+    },
+    "22.1": {
+      "citationId": 22,
+      "sectionId": 1,
+      "author": "Cao",
+      "year": 2020,
+      "doi": "10.1016/j.cell.2020.05.025 ",
+      "section": "PDB: 7BYR"
+    },
+    "23.1": {
+      "citationId": 23,
+      "sectionId": 1,
+      "author": "Barnes",
+      "year": 2020,
+      "doi": "10.1016/j.cell.2020.06.025",
+      "section": "PDB: 6XCM; PDB: 6XCN"
     }
   },
   "positions": [
@@ -7156,6 +7184,14 @@
           "citationIds": [
             "4.1"
           ]
+        },
+        {
+          "name": "C105-binding residue",
+          "citationIds": [
+            "23.1"
+          ],
+          "value": "C105",
+          "description": ""
         }
       ]
     },
@@ -7220,6 +7256,14 @@
           ],
           "value": "RBD",
           "description": "Receptor binding domain (also known as S1B)"
+        },
+        {
+          "name": "C105-binding residue",
+          "citationIds": [
+            "23.1"
+          ],
+          "value": "C105",
+          "description": ""
         }
       ]
     },
@@ -7514,6 +7558,14 @@
           "citationIds": [
             "4.1"
           ]
+        },
+        {
+          "name": "C105-binding residue",
+          "citationIds": [
+            "23.1"
+          ],
+          "value": "C105",
+          "description": ""
         }
       ]
     },
@@ -7614,6 +7666,14 @@
           ],
           "value": "RBD",
           "description": "Receptor binding domain (also known as S1B)"
+        },
+        {
+          "name": "C105-binding residue",
+          "citationIds": [
+            "23.1"
+          ],
+          "value": "C105",
+          "description": ""
         }
       ]
     },
@@ -7642,6 +7702,14 @@
           ],
           "value": "RBD",
           "description": "Receptor binding domain (also known as S1B)"
+        },
+        {
+          "name": "C105-binding residue",
+          "citationIds": [
+            "23.1"
+          ],
+          "value": "C105",
+          "description": ""
         }
       ]
     },
@@ -8190,6 +8258,14 @@
           "citationIds": [
             "4.1"
           ]
+        },
+        {
+          "name": "BD23-binding residue",
+          "citationIds": [
+            "22.1"
+          ],
+          "value": "BD23",
+          "description": ""
         }
       ]
     },
@@ -8262,6 +8338,14 @@
           ],
           "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
+        },
+        {
+          "name": "BD23-binding residue",
+          "citationIds": [
+            "22.1"
+          ],
+          "value": "BD23",
+          "description": ""
         }
       ]
     },
@@ -8324,6 +8408,14 @@
           "citationIds": [
             "4.1"
           ]
+        },
+        {
+          "name": "BD23-binding residue",
+          "citationIds": [
+            "22.1"
+          ],
+          "value": "BD23",
+          "description": ""
         }
       ]
     },
@@ -8362,6 +8454,14 @@
           ],
           "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
+        },
+        {
+          "name": "C105-binding residue",
+          "citationIds": [
+            "23.1"
+          ],
+          "value": "C105",
+          "description": ""
         }
       ]
     },
@@ -8421,6 +8521,14 @@
           ],
           "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
+        },
+        {
+          "name": "C105-binding residue",
+          "citationIds": [
+            "23.1"
+          ],
+          "value": "C105",
+          "description": ""
         }
       ]
     },
@@ -8460,6 +8568,14 @@
           ],
           "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
+        },
+        {
+          "name": "C105-binding residue",
+          "citationIds": [
+            "23.1"
+          ],
+          "value": "C105",
+          "description": ""
         }
       ]
     },
@@ -8489,6 +8605,14 @@
           ],
           "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
+        },
+        {
+          "name": "C105-binding residue",
+          "citationIds": [
+            "23.1"
+          ],
+          "value": "C105",
+          "description": ""
         }
       ]
     },
@@ -8518,6 +8642,14 @@
           ],
           "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
+        },
+        {
+          "name": "C105-binding residue",
+          "citationIds": [
+            "23.1"
+          ],
+          "value": "C105",
+          "description": ""
         }
       ]
     },
@@ -8547,6 +8679,14 @@
           ],
           "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
+        },
+        {
+          "name": "C105-binding residue",
+          "citationIds": [
+            "23.1"
+          ],
+          "value": "C105",
+          "description": ""
         }
       ]
     },
@@ -8720,6 +8860,14 @@
           ],
           "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
+        },
+        {
+          "name": "BD23-binding residue",
+          "citationIds": [
+            "22.1"
+          ],
+          "value": "BD23",
+          "description": ""
         }
       ]
     },
@@ -8790,6 +8938,14 @@
           "citationIds": [
             "4.1"
           ]
+        },
+        {
+          "name": "C105-binding residue",
+          "citationIds": [
+            "23.1"
+          ],
+          "value": "C105",
+          "description": ""
         }
       ]
     },
@@ -8826,6 +8982,14 @@
           "citationIds": [
             "4.1"
           ]
+        },
+        {
+          "name": "C105-binding residue",
+          "citationIds": [
+            "23.1"
+          ],
+          "value": "C105",
+          "description": ""
         }
       ]
     },
@@ -8865,6 +9029,14 @@
           ],
           "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
+        },
+        {
+          "name": "C105-binding residue",
+          "citationIds": [
+            "23.1"
+          ],
+          "value": "C105",
+          "description": ""
         }
       ]
     },
@@ -8903,6 +9075,14 @@
           ],
           "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
+        },
+        {
+          "name": "C105-binding residue",
+          "citationIds": [
+            "23.1"
+          ],
+          "value": "C105",
+          "description": ""
         }
       ]
     },
@@ -9116,6 +9296,14 @@
           ],
           "value": "B38",
           "description": ""
+        },
+        {
+          "name": "BD23-binding residue",
+          "citationIds": [
+            "22.1"
+          ],
+          "value": "BD23",
+          "description": ""
         }
       ]
     },
@@ -9137,6 +9325,14 @@
           ],
           "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
+        },
+        {
+          "name": "BD23-binding residue",
+          "citationIds": [
+            "22.1"
+          ],
+          "value": "BD23",
+          "description": ""
         }
       ]
     },
@@ -9183,6 +9379,22 @@
           "citationIds": [
             "4.1"
           ]
+        },
+        {
+          "name": "BD23-binding residue",
+          "citationIds": [
+            "22.1"
+          ],
+          "value": "BD23",
+          "description": ""
+        },
+        {
+          "name": "C105-binding residue",
+          "citationIds": [
+            "23.1"
+          ],
+          "value": "C105",
+          "description": ""
         }
       ]
     },
@@ -9229,6 +9441,14 @@
           ],
           "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
+        },
+        {
+          "name": "C105-binding residue",
+          "citationIds": [
+            "23.1"
+          ],
+          "value": "C105",
+          "description": ""
         }
       ]
     },
@@ -9311,6 +9531,14 @@
           ],
           "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
+        },
+        {
+          "name": "BD23-binding residue",
+          "citationIds": [
+            "22.1"
+          ],
+          "value": "BD23",
+          "description": ""
         }
       ]
     },
@@ -9348,6 +9576,14 @@
           ],
           "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
+        },
+        {
+          "name": "BD23-binding residue",
+          "citationIds": [
+            "22.1"
+          ],
+          "value": "BD23",
+          "description": ""
         }
       ]
     },
@@ -9405,6 +9641,14 @@
           ],
           "value": "B38",
           "description": ""
+        },
+        {
+          "name": "BD23-binding residue",
+          "citationIds": [
+            "22.1"
+          ],
+          "value": "BD23",
+          "description": ""
         }
       ]
     },
@@ -9459,6 +9703,14 @@
           ],
           "value": "P2B-2F6",
           "description": ""
+        },
+        {
+          "name": "BD23-binding residue",
+          "citationIds": [
+            "22.1"
+          ],
+          "value": "BD23",
+          "description": ""
         }
       ]
     },
@@ -9502,6 +9754,14 @@
           "citationIds": [
             "4.1"
           ]
+        },
+        {
+          "name": "BD23-binding residue",
+          "citationIds": [
+            "22.1"
+          ],
+          "value": "BD23",
+          "description": ""
         }
       ]
     },
@@ -9671,6 +9931,22 @@
           ],
           "value": "RBD",
           "description": "Receptor binding domain (also known as S1B)"
+        },
+        {
+          "name": "BD23-binding residue",
+          "citationIds": [
+            "22.1"
+          ],
+          "value": "BD23",
+          "description": ""
+        },
+        {
+          "name": "C105-binding residue",
+          "citationIds": [
+            "23.1"
+          ],
+          "value": "C105",
+          "description": ""
         }
       ]
     },
@@ -9710,6 +9986,14 @@
           ],
           "value": "RBD",
           "description": "Receptor binding domain (also known as S1B)"
+        },
+        {
+          "name": "C105-binding residue",
+          "citationIds": [
+            "23.1"
+          ],
+          "value": "C105",
+          "description": ""
         }
       ]
     },
@@ -9749,6 +10033,14 @@
           ],
           "value": "RBD",
           "description": "Receptor binding domain (also known as S1B)"
+        },
+        {
+          "name": "C105-binding residue",
+          "citationIds": [
+            "23.1"
+          ],
+          "value": "C105",
+          "description": ""
         }
       ]
     },
@@ -9830,6 +10122,14 @@
           ],
           "value": "RBD",
           "description": "Receptor binding domain (also known as S1B)"
+        },
+        {
+          "name": "C105-binding residue",
+          "citationIds": [
+            "23.1"
+          ],
+          "value": "C105",
+          "description": ""
         }
       ]
     },
