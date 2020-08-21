@@ -340,8 +340,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1A",
-          "description": "S1A - N terminal domain (NTD)"
+          "value": "NTD",
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -350,11 +350,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -363,11 +363,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -376,11 +376,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -398,11 +398,11 @@
         },
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -411,11 +411,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "polymorphic position",
@@ -434,11 +434,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -447,11 +447,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -460,11 +460,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "polymorphic position",
@@ -483,11 +483,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -496,11 +496,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -509,11 +509,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -530,11 +530,11 @@
         },
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -543,11 +543,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -556,11 +556,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -569,11 +569,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -589,11 +589,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -619,11 +619,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -639,11 +639,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -652,11 +652,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -665,11 +665,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -678,11 +678,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -691,11 +691,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -704,11 +704,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -717,11 +717,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -730,11 +730,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -743,11 +743,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -756,11 +756,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -769,11 +769,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -782,11 +782,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -795,11 +795,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -808,11 +808,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -821,11 +821,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -834,11 +834,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -847,11 +847,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -860,11 +860,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -880,11 +880,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -910,11 +910,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -940,11 +940,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -960,11 +960,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -980,11 +980,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -1000,11 +1000,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -1030,11 +1030,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -1050,11 +1050,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -1063,11 +1063,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -1076,11 +1076,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -1096,11 +1096,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -1116,11 +1116,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -1129,11 +1129,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -1158,11 +1158,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -1178,11 +1178,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -1198,11 +1198,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -1211,11 +1211,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -1231,11 +1231,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -1251,11 +1251,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -1271,11 +1271,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -1292,11 +1292,11 @@
         },
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -1305,11 +1305,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -1318,11 +1318,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -1331,11 +1331,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -1344,11 +1344,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "polymorphic position",
@@ -1376,11 +1376,11 @@
         },
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -1389,11 +1389,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -1402,11 +1402,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "polymorphic position",
@@ -1425,11 +1425,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -1438,11 +1438,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -1451,11 +1451,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -1464,11 +1464,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "polymorphic position",
@@ -1487,11 +1487,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -1500,11 +1500,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -1513,11 +1513,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -1526,11 +1526,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -1546,11 +1546,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -1566,11 +1566,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -1579,11 +1579,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -1599,11 +1599,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -1619,11 +1619,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -1639,11 +1639,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -1659,11 +1659,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -1679,11 +1679,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -1699,11 +1699,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -1719,11 +1719,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -1739,11 +1739,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -1769,11 +1769,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -1789,11 +1789,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -1802,11 +1802,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "polymorphic position",
@@ -1825,11 +1825,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -1838,11 +1838,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -1851,11 +1851,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -1864,11 +1864,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "polymorphic position",
@@ -1887,11 +1887,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -1907,11 +1907,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -1927,11 +1927,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -1947,11 +1947,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -1967,11 +1967,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -1987,11 +1987,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -2000,11 +2000,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -2013,11 +2013,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -2026,11 +2026,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -2047,11 +2047,11 @@
         },
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -2067,11 +2067,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -2087,11 +2087,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -2100,11 +2100,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -2113,11 +2113,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -2133,11 +2133,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -2153,11 +2153,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -2173,11 +2173,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -2193,11 +2193,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -2213,11 +2213,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -2241,11 +2241,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "Glycan-binding residue",
@@ -2263,11 +2263,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -2276,11 +2276,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -2289,11 +2289,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -2302,11 +2302,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -2322,11 +2322,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -2342,11 +2342,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -2362,11 +2362,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -2382,11 +2382,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -2402,11 +2402,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -2422,11 +2422,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -2442,11 +2442,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -2462,11 +2462,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -2482,11 +2482,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -2502,11 +2502,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -2515,11 +2515,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -2528,11 +2528,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "polymorphic position",
@@ -2551,11 +2551,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -2564,11 +2564,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -2577,11 +2577,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -2597,11 +2597,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -2617,11 +2617,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -2637,11 +2637,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -2650,11 +2650,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "polymorphic position",
@@ -2673,11 +2673,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "polymorphic position",
@@ -2696,11 +2696,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -2709,11 +2709,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -2731,11 +2731,11 @@
         },
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -2744,11 +2744,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -2757,11 +2757,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -2770,11 +2770,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -2783,11 +2783,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "polymorphic position",
@@ -2806,11 +2806,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -2826,11 +2826,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -2846,11 +2846,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -2866,11 +2866,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -2886,11 +2886,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -2899,11 +2899,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -2912,11 +2912,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -2932,11 +2932,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -2952,11 +2952,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -2972,11 +2972,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -2992,11 +2992,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -3012,11 +3012,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -3041,11 +3041,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -3061,11 +3061,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -3081,11 +3081,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -3101,11 +3101,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -3121,11 +3121,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -3141,11 +3141,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -3161,11 +3161,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -3174,11 +3174,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -3187,11 +3187,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -3200,11 +3200,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -3213,11 +3213,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "polymorphic position",
@@ -3236,11 +3236,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "polymorphic position",
@@ -3259,11 +3259,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -3272,11 +3272,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -3285,11 +3285,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -3298,11 +3298,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -3311,11 +3311,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -3324,11 +3324,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -3337,11 +3337,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -3350,11 +3350,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -3363,11 +3363,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -3376,11 +3376,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -3389,11 +3389,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -3409,11 +3409,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -3429,11 +3429,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -3449,11 +3449,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -3469,11 +3469,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -3489,11 +3489,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -3509,11 +3509,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -3529,11 +3529,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -3549,11 +3549,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -3569,11 +3569,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -3599,11 +3599,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -3619,11 +3619,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -3639,11 +3639,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -3659,11 +3659,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -3679,11 +3679,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -3699,11 +3699,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -3719,11 +3719,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -3739,11 +3739,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -3759,11 +3759,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -3779,11 +3779,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -3799,11 +3799,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -3819,11 +3819,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -3832,11 +3832,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -3845,11 +3845,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -3858,11 +3858,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -3871,11 +3871,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "polymorphic position",
@@ -3894,11 +3894,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "polymorphic position",
@@ -3917,11 +3917,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "polymorphic position",
@@ -3941,11 +3941,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -3954,11 +3954,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -3967,11 +3967,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -3980,11 +3980,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -3993,11 +3993,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -4006,11 +4006,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "polymorphic position",
@@ -4029,11 +4029,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -4042,11 +4042,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -4055,11 +4055,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -4075,11 +4075,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -4095,11 +4095,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -4115,11 +4115,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -4135,11 +4135,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -4155,11 +4155,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -4175,11 +4175,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -4188,11 +4188,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -4201,11 +4201,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -4214,11 +4214,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -4227,11 +4227,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "Glycan-binding residue",
@@ -4249,11 +4249,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -4262,11 +4262,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -4275,11 +4275,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -4295,11 +4295,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -4315,11 +4315,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -4335,11 +4335,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -4355,11 +4355,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -4368,11 +4368,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -4381,11 +4381,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -4401,11 +4401,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -4421,11 +4421,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -4441,11 +4441,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -4454,11 +4454,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -4467,11 +4467,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -4480,11 +4480,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -4493,11 +4493,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -4506,11 +4506,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -4519,11 +4519,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -4532,11 +4532,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -4545,11 +4545,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "polymorphic position",
@@ -4568,11 +4568,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -4581,11 +4581,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -4594,11 +4594,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -4607,11 +4607,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -4620,11 +4620,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -4640,11 +4640,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -4660,11 +4660,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -4673,11 +4673,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -4686,11 +4686,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -4706,11 +4706,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -4726,11 +4726,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -4746,11 +4746,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -4766,11 +4766,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -4786,11 +4786,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -4806,11 +4806,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -4826,11 +4826,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -4839,11 +4839,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -4859,11 +4859,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -4879,11 +4879,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -4899,11 +4899,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -4919,11 +4919,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -4939,11 +4939,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -4959,11 +4959,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -4979,11 +4979,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -4999,11 +4999,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -5019,11 +5019,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -5032,11 +5032,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -5052,11 +5052,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -5081,11 +5081,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -5094,11 +5094,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -5107,11 +5107,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -5127,11 +5127,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -5147,11 +5147,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -5167,11 +5167,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -5187,11 +5187,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -5207,11 +5207,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -5227,11 +5227,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -5247,11 +5247,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -5267,11 +5267,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -5280,11 +5280,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -5293,11 +5293,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -5313,11 +5313,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -5333,11 +5333,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -5353,11 +5353,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -5373,11 +5373,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -5393,11 +5393,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -5413,11 +5413,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -5433,11 +5433,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -5453,11 +5453,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         },
         {
           "name": "secondary structure",
@@ -5473,11 +5473,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -5486,11 +5486,11 @@
       "annotations": [
         {
           "name": "landmark",
-          "value": "S1A",
+          "value": "NTD",
           "citationIds": [
             "2.1"
           ],
-          "description": "S1A - N terminal domain (NTD)"
+          "description": "N terminal domain (also known as S1A)"
         }
       ]
     },
@@ -5710,8 +5710,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -5737,8 +5737,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -5764,8 +5764,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -5791,8 +5791,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -5804,8 +5804,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -5824,8 +5824,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         },
         {
           "name": "Glycan-binding residue",
@@ -5853,8 +5853,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         },
         {
           "name": "polymorphic position",
@@ -5883,8 +5883,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -5910,8 +5910,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -5923,8 +5923,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -5936,8 +5936,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -5949,8 +5949,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -5962,8 +5962,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -5975,8 +5975,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -5988,8 +5988,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -6001,8 +6001,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -6021,8 +6021,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         },
         {
           "name": "secondary structure",
@@ -6048,8 +6048,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -6075,8 +6075,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -6095,8 +6095,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         },
         {
           "name": "secondary structure",
@@ -6129,8 +6129,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -6149,8 +6149,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -6169,8 +6169,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -6189,8 +6189,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         },
         {
           "name": "Cysteine residue",
@@ -6210,8 +6210,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -6223,8 +6223,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -6236,8 +6236,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -6249,8 +6249,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -6262,8 +6262,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -6275,8 +6275,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         },
         {
           "name": "secondary structure",
@@ -6312,8 +6312,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -6340,8 +6340,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -6361,8 +6361,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         },
         {
           "name": "Glycan-binding residue",
@@ -6389,8 +6389,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -6410,8 +6410,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -6423,8 +6423,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -6444,8 +6444,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -6465,8 +6465,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -6493,8 +6493,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -6521,8 +6521,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -6549,8 +6549,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -6577,8 +6577,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         },
         {
           "name": "Cysteine residue",
@@ -6606,8 +6606,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -6627,8 +6627,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -6648,8 +6648,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -6669,8 +6669,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -6690,8 +6690,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         },
         {
           "name": "secondary structure",
@@ -6725,8 +6725,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -6753,8 +6753,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -6766,8 +6766,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -6779,8 +6779,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -6799,8 +6799,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -6819,8 +6819,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -6832,8 +6832,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         },
         {
           "name": "Cysteine residue",
@@ -6861,8 +6861,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -6874,8 +6874,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -6887,8 +6887,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -6907,8 +6907,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -6927,8 +6927,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -6947,8 +6947,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -6967,8 +6967,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -6987,8 +6987,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -7007,8 +7007,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -7027,8 +7027,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -7040,8 +7040,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         },
         {
           "name": "secondary structure",
@@ -7074,8 +7074,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         },
         {
           "name": "secondary structure",
@@ -7101,8 +7101,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -7135,8 +7135,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -7162,8 +7162,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         },
         {
           "name": "secondary structure",
@@ -7182,8 +7182,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -7209,8 +7209,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -7243,8 +7243,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -7256,8 +7256,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -7269,8 +7269,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -7289,8 +7289,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -7309,8 +7309,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -7322,8 +7322,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -7349,8 +7349,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -7376,8 +7376,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -7411,8 +7411,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         },
         {
           "name": "secondary structure",
@@ -7438,8 +7438,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -7458,8 +7458,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -7492,8 +7492,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -7526,8 +7526,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -7546,8 +7546,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -7559,8 +7559,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -7572,8 +7572,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -7585,8 +7585,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -7598,8 +7598,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -7626,8 +7626,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -7654,8 +7654,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -7675,8 +7675,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -7696,8 +7696,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -7716,8 +7716,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -7736,8 +7736,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         },
         {
           "name": "Cysteine residue",
@@ -7764,8 +7764,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -7777,8 +7777,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         },
         {
           "name": "secondary structure",
@@ -7804,8 +7804,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -7824,8 +7824,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -7844,8 +7844,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -7857,7 +7857,7 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B-RBM",
+          "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         }
       ]
@@ -7877,7 +7877,7 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B-RBM",
+          "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         },
         {
@@ -7907,7 +7907,7 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B-RBM",
+          "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         },
         {
@@ -7927,7 +7927,7 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B-RBM",
+          "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         },
         {
@@ -7954,7 +7954,7 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B-RBM",
+          "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         }
       ]
@@ -7967,7 +7967,7 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B-RBM",
+          "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         }
       ]
@@ -7987,7 +7987,7 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B-RBM",
+          "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         }
       ]
@@ -8000,7 +8000,7 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B-RBM",
+          "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         },
         {
@@ -8037,7 +8037,7 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B-RBM",
+          "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         },
         {
@@ -8064,7 +8064,7 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B-RBM",
+          "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         }
       ]
@@ -8084,7 +8084,7 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B-RBM",
+          "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         }
       ]
@@ -8113,7 +8113,7 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B-RBM",
+          "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         }
       ]
@@ -8133,7 +8133,7 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B-RBM",
+          "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         }
       ]
@@ -8146,7 +8146,7 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B-RBM",
+          "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         }
       ]
@@ -8166,7 +8166,7 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B-RBM",
+          "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         },
         {
@@ -8210,7 +8210,7 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B-RBM",
+          "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         }
       ]
@@ -8230,7 +8230,7 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B-RBM",
+          "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         }
       ]
@@ -8267,7 +8267,7 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B-RBM",
+          "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         }
       ]
@@ -8304,7 +8304,7 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B-RBM",
+          "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         }
       ]
@@ -8331,7 +8331,7 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B-RBM",
+          "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         }
       ]
@@ -8358,7 +8358,7 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B-RBM",
+          "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         }
       ]
@@ -8385,7 +8385,7 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B-RBM",
+          "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         }
       ]
@@ -8412,7 +8412,7 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B-RBM",
+          "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         }
       ]
@@ -8425,7 +8425,7 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B-RBM",
+          "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         }
       ]
@@ -8438,7 +8438,7 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B-RBM",
+          "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         }
       ]
@@ -8458,7 +8458,7 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B-RBM",
+          "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         }
       ]
@@ -8478,7 +8478,7 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B-RBM",
+          "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         }
       ]
@@ -8491,7 +8491,7 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B-RBM",
+          "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         }
       ]
@@ -8504,7 +8504,7 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B-RBM",
+          "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         }
       ]
@@ -8517,7 +8517,7 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B-RBM",
+          "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         }
       ]
@@ -8530,7 +8530,7 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B-RBM",
+          "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         }
       ]
@@ -8543,7 +8543,7 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B-RBM",
+          "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         }
       ]
@@ -8556,7 +8556,7 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B-RBM",
+          "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         }
       ]
@@ -8569,7 +8569,7 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B-RBM",
+          "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         }
       ]
@@ -8582,7 +8582,7 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B-RBM",
+          "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         }
       ]
@@ -8617,7 +8617,7 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B-RBM",
+          "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         },
         {
@@ -8651,7 +8651,7 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B-RBM",
+          "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         },
         {
@@ -8695,7 +8695,7 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B-RBM",
+          "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         }
       ]
@@ -8731,7 +8731,7 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B-RBM",
+          "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         }
       ]
@@ -8758,7 +8758,7 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B-RBM",
+          "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         },
         {
@@ -8781,7 +8781,7 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B-RBM",
+          "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         },
         {
@@ -8804,7 +8804,7 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B-RBM",
+          "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         },
         {
@@ -8827,7 +8827,7 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B-RBM",
+          "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         },
         {
@@ -8848,7 +8848,7 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B-RBM",
+          "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         },
         {
@@ -8868,7 +8868,7 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B-RBM",
+          "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         },
         {
@@ -8895,7 +8895,7 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B-RBM",
+          "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         },
         {
@@ -8932,7 +8932,7 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B-RBM",
+          "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         }
       ]
@@ -8952,7 +8952,7 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B-RBM",
+          "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         }
       ]
@@ -8989,7 +8989,7 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B-RBM",
+          "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         },
         {
@@ -9040,7 +9040,7 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B-RBM",
+          "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         }
       ]
@@ -9060,7 +9060,7 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B-RBM",
+          "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         },
         {
@@ -9112,7 +9112,7 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B-RBM",
+          "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         }
       ]
@@ -9147,7 +9147,7 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B-RBM",
+          "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         }
       ]
@@ -9160,7 +9160,7 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B-RBM",
+          "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         }
       ]
@@ -9180,7 +9180,7 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B-RBM",
+          "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         }
       ]
@@ -9217,7 +9217,7 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B-RBM",
+          "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         },
         {
@@ -9258,7 +9258,7 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B-RBM",
+          "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         },
         {
@@ -9299,7 +9299,7 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B-RBM",
+          "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         }
       ]
@@ -9329,7 +9329,7 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B-RBM",
+          "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         }
       ]
@@ -9342,7 +9342,7 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B-RBM",
+          "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         }
       ]
@@ -9372,7 +9372,7 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B-RBM",
+          "value": "RBD-RBM",
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         }
       ]
@@ -9385,8 +9385,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         },
         {
           "name": "secondary structure",
@@ -9429,8 +9429,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -9466,8 +9466,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -9503,8 +9503,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -9523,8 +9523,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -9543,8 +9543,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -9580,8 +9580,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -9593,8 +9593,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1B",
-          "description": "Receptor binding domain (RBD)"
+          "value": "RBD",
+          "description": "Receptor binding domain (also known as S1B)"
         }
       ]
     },
@@ -9770,8 +9770,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1C",
-          "description": "Also known as SD1"
+          "value": "SD1",
+          "description": "Also known as S1C"
         }
       ]
     },
@@ -9783,8 +9783,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1C",
-          "description": "Also known as SD1"
+          "value": "SD1",
+          "description": "Also known as S1C"
         }
       ]
     },
@@ -9796,8 +9796,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1C",
-          "description": "Also known as SD1"
+          "value": "SD1",
+          "description": "Also known as S1C"
         }
       ]
     },
@@ -9816,8 +9816,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1C",
-          "description": "Also known as SD1"
+          "value": "SD1",
+          "description": "Also known as S1C"
         }
       ]
     },
@@ -9836,8 +9836,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1C",
-          "description": "Also known as SD1"
+          "value": "SD1",
+          "description": "Also known as S1C"
         }
       ]
     },
@@ -9856,8 +9856,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1C",
-          "description": "Also known as SD1"
+          "value": "SD1",
+          "description": "Also known as S1C"
         }
       ]
     },
@@ -9876,8 +9876,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1C",
-          "description": "Also known as SD1"
+          "value": "SD1",
+          "description": "Also known as S1C"
         }
       ]
     },
@@ -9896,8 +9896,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1C",
-          "description": "Also known as SD1"
+          "value": "SD1",
+          "description": "Also known as S1C"
         }
       ]
     },
@@ -9916,8 +9916,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1C",
-          "description": "Also known as SD1"
+          "value": "SD1",
+          "description": "Also known as S1C"
         }
       ]
     },
@@ -9936,8 +9936,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1C",
-          "description": "Also known as SD1"
+          "value": "SD1",
+          "description": "Also known as S1C"
         }
       ]
     },
@@ -9956,8 +9956,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1C",
-          "description": "Also known as SD1"
+          "value": "SD1",
+          "description": "Also known as S1C"
         }
       ]
     },
@@ -9976,8 +9976,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1C",
-          "description": "Also known as SD1"
+          "value": "SD1",
+          "description": "Also known as S1C"
         }
       ]
     },
@@ -9996,8 +9996,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1C",
-          "description": "Also known as SD1"
+          "value": "SD1",
+          "description": "Also known as S1C"
         }
       ]
     },
@@ -10016,8 +10016,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1C",
-          "description": "Also known as SD1"
+          "value": "SD1",
+          "description": "Also known as S1C"
         }
       ]
     },
@@ -10036,8 +10036,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1C",
-          "description": "Also known as SD1"
+          "value": "SD1",
+          "description": "Also known as S1C"
         }
       ]
     },
@@ -10056,8 +10056,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1C",
-          "description": "Also known as SD1"
+          "value": "SD1",
+          "description": "Also known as S1C"
         }
       ]
     },
@@ -10076,8 +10076,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1C",
-          "description": "Also known as SD1"
+          "value": "SD1",
+          "description": "Also known as S1C"
         }
       ]
     },
@@ -10096,8 +10096,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1C",
-          "description": "Also known as SD1"
+          "value": "SD1",
+          "description": "Also known as S1C"
         }
       ]
     },
@@ -10116,8 +10116,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1C",
-          "description": "Also known as SD1"
+          "value": "SD1",
+          "description": "Also known as S1C"
         }
       ]
     },
@@ -10129,8 +10129,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1C",
-          "description": "Also known as SD1"
+          "value": "SD1",
+          "description": "Also known as S1C"
         },
         {
           "name": "secondary structure",
@@ -10149,8 +10149,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1C",
-          "description": "Also known as SD1"
+          "value": "SD1",
+          "description": "Also known as S1C"
         }
       ]
     },
@@ -10162,8 +10162,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1C",
-          "description": "Also known as SD1"
+          "value": "SD1",
+          "description": "Also known as S1C"
         }
       ]
     },
@@ -10175,8 +10175,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1C",
-          "description": "Also known as SD1"
+          "value": "SD1",
+          "description": "Also known as S1C"
         }
       ]
     },
@@ -10188,8 +10188,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1C",
-          "description": "Also known as SD1"
+          "value": "SD1",
+          "description": "Also known as S1C"
         }
       ]
     },
@@ -10201,8 +10201,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1C",
-          "description": "Also known as SD1"
+          "value": "SD1",
+          "description": "Also known as S1C"
         }
       ]
     },
@@ -10214,8 +10214,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1C",
-          "description": "Also known as SD1"
+          "value": "SD1",
+          "description": "Also known as S1C"
         }
       ]
     },
@@ -10234,8 +10234,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1C",
-          "description": "Also known as SD1"
+          "value": "SD1",
+          "description": "Also known as S1C"
         }
       ]
     },
@@ -10254,8 +10254,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1C",
-          "description": "Also known as SD1"
+          "value": "SD1",
+          "description": "Also known as S1C"
         }
       ]
     },
@@ -10267,8 +10267,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1C",
-          "description": "Also known as SD1"
+          "value": "SD1",
+          "description": "Also known as S1C"
         }
       ]
     },
@@ -10280,8 +10280,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1C",
-          "description": "Also known as SD1"
+          "value": "SD1",
+          "description": "Also known as S1C"
         }
       ]
     },
@@ -10293,8 +10293,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1C",
-          "description": "Also known as SD1"
+          "value": "SD1",
+          "description": "Also known as S1C"
         }
       ]
     },
@@ -10313,8 +10313,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1C",
-          "description": "Also known as SD1"
+          "value": "SD1",
+          "description": "Also known as S1C"
         }
       ]
     },
@@ -10333,8 +10333,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1C",
-          "description": "Also known as SD1"
+          "value": "SD1",
+          "description": "Also known as S1C"
         }
       ]
     },
@@ -10346,8 +10346,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1C",
-          "description": "Also known as SD1"
+          "value": "SD1",
+          "description": "Also known as S1C"
         }
       ]
     },
@@ -10359,8 +10359,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1C",
-          "description": "Also known as SD1"
+          "value": "SD1",
+          "description": "Also known as S1C"
         },
         {
           "name": "secondary structure",
@@ -10379,8 +10379,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1C",
-          "description": "Also known as SD1"
+          "value": "SD1",
+          "description": "Also known as S1C"
         },
         {
           "name": "secondary structure",
@@ -10399,8 +10399,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1C",
-          "description": "Also known as SD1"
+          "value": "SD1",
+          "description": "Also known as S1C"
         }
       ]
     },
@@ -10412,8 +10412,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1C",
-          "description": "Also known as SD1"
+          "value": "SD1",
+          "description": "Also known as S1C"
         },
         {
           "name": "polymorphic position",
@@ -10442,8 +10442,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1C",
-          "description": "Also known as SD1"
+          "value": "SD1",
+          "description": "Also known as S1C"
         }
       ]
     },
@@ -10462,8 +10462,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1C",
-          "description": "Also known as SD1"
+          "value": "SD1",
+          "description": "Also known as S1C"
         }
       ]
     },
@@ -10475,8 +10475,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1C",
-          "description": "Also known as SD1"
+          "value": "SD1",
+          "description": "Also known as S1C"
         },
         {
           "name": "secondary structure",
@@ -10502,8 +10502,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1C",
-          "description": "Also known as SD1"
+          "value": "SD1",
+          "description": "Also known as S1C"
         }
       ]
     },
@@ -10522,8 +10522,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1C",
-          "description": "Also known as SD1"
+          "value": "SD1",
+          "description": "Also known as S1C"
         }
       ]
     },
@@ -10535,8 +10535,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1C",
-          "description": "Also known as SD1"
+          "value": "SD1",
+          "description": "Also known as S1C"
         }
       ]
     },
@@ -10548,8 +10548,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1C",
-          "description": "Also known as SD1"
+          "value": "SD1",
+          "description": "Also known as S1C"
         }
       ]
     },
@@ -10561,8 +10561,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1C",
-          "description": "Also known as SD1"
+          "value": "SD1",
+          "description": "Also known as S1C"
         }
       ]
     },
@@ -10574,8 +10574,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1C",
-          "description": "Also known as SD1"
+          "value": "SD1",
+          "description": "Also known as S1C"
         }
       ]
     },
@@ -10587,8 +10587,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1C",
-          "description": "Also known as SD1"
+          "value": "SD1",
+          "description": "Also known as S1C"
         }
       ]
     },
@@ -10600,8 +10600,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1C",
-          "description": "Also known as SD1"
+          "value": "SD1",
+          "description": "Also known as S1C"
         },
         {
           "name": "polymorphic position",
@@ -10630,8 +10630,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1C",
-          "description": "Also known as SD1"
+          "value": "SD1",
+          "description": "Also known as S1C"
         }
       ]
     },
@@ -10650,8 +10650,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1C",
-          "description": "Also known as SD1"
+          "value": "SD1",
+          "description": "Also known as S1C"
         }
       ]
     },
@@ -10670,8 +10670,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1C",
-          "description": "Also known as SD1"
+          "value": "SD1",
+          "description": "Also known as S1C"
         }
       ]
     },
@@ -10690,8 +10690,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1C",
-          "description": "Also known as SD1"
+          "value": "SD1",
+          "description": "Also known as S1C"
         }
       ]
     },
@@ -10703,8 +10703,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1C",
-          "description": "Also known as SD1"
+          "value": "SD1",
+          "description": "Also known as S1C"
         },
         {
           "name": "secondary structure",
@@ -10723,8 +10723,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1C",
-          "description": "Also known as SD1"
+          "value": "SD1",
+          "description": "Also known as S1C"
         }
       ]
     },
@@ -10736,8 +10736,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1C",
-          "description": "Also known as SD1"
+          "value": "SD1",
+          "description": "Also known as S1C"
         }
       ]
     },
@@ -10749,8 +10749,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -10762,8 +10762,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -10782,8 +10782,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -10802,8 +10802,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -10822,8 +10822,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -10842,8 +10842,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -10862,8 +10862,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -10875,8 +10875,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -10888,8 +10888,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -10901,8 +10901,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -10914,8 +10914,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         },
         {
           "name": "Glycan-binding residue",
@@ -10936,8 +10936,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -10949,8 +10949,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -10962,8 +10962,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -10975,8 +10975,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -10988,8 +10988,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -11008,8 +11008,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -11028,8 +11028,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -11048,8 +11048,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -11068,8 +11068,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -11088,8 +11088,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -11101,8 +11101,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         },
         {
           "name": "polymorphic position",
@@ -11124,8 +11124,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -11137,8 +11137,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         },
         {
           "name": "Glycan-binding residue",
@@ -11159,8 +11159,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -11172,8 +11172,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -11185,8 +11185,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -11198,8 +11198,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -11211,8 +11211,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -11224,8 +11224,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         },
         {
           "name": "polymorphic position",
@@ -11247,8 +11247,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -11260,8 +11260,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -11273,8 +11273,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -11286,8 +11286,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -11299,8 +11299,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -11312,8 +11312,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -11325,8 +11325,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -11338,8 +11338,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -11351,8 +11351,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -11364,8 +11364,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -11377,8 +11377,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -11390,8 +11390,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -11403,8 +11403,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -11416,8 +11416,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -11429,8 +11429,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -11442,8 +11442,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -11455,8 +11455,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -11468,8 +11468,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -11481,8 +11481,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -11501,8 +11501,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -11521,8 +11521,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -11541,8 +11541,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -11554,8 +11554,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -11567,8 +11567,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -11580,8 +11580,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -11600,8 +11600,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -11620,8 +11620,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -11640,8 +11640,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -11660,8 +11660,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -11673,8 +11673,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -11686,8 +11686,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -11706,8 +11706,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -11726,8 +11726,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         },
         {
           "name": "polymorphic position",
@@ -11756,8 +11756,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -11778,8 +11778,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -11791,8 +11791,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -11804,8 +11804,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -11817,8 +11817,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -11830,8 +11830,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -11843,8 +11843,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -11856,8 +11856,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -11876,8 +11876,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -11896,8 +11896,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -11916,8 +11916,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -11936,8 +11936,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -11956,8 +11956,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -11976,8 +11976,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -11996,8 +11996,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -12016,8 +12016,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -12036,8 +12036,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -12056,8 +12056,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -12076,8 +12076,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -12089,8 +12089,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         },
         {
           "name": "secondary structure",
@@ -12120,8 +12120,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -12133,8 +12133,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         },
         {
           "name": "polymorphic position",
@@ -12156,8 +12156,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -12169,8 +12169,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
@@ -12182,8 +12182,8 @@
           "citationIds": [
             "2.1"
           ],
-          "value": "S1D",
-          "description": "Also known as SD2"
+          "value": "SD2",
+          "description": "Also known as S1D"
         }
       ]
     },
