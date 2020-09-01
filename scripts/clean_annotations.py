@@ -53,7 +53,7 @@ def clean_annot_categories(data):
         if annot_style:
             new_cat['annotStyle'] = annot_style
         else:
-            new_cat['annotStyle'] = None
+            new_cat['annotStyle'] = 'hide'
         categories.append(new_cat)
     data['annotCategories'] = categories
 

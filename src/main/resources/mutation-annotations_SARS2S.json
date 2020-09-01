@@ -45,7 +45,7 @@
       "dropdown": false,
       "defaultAnnot": null,
       "multiSelect": false,
-      "annotStyle": null
+      "annotStyle": "hide"
     }
   ],
   "annotations": [
