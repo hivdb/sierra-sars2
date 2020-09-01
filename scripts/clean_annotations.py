@@ -147,7 +147,7 @@ def main():
         clean_annot_categories(data)
         clean_annotations(data)
         clean_positions(data)
-    data['version'] = '20200831173134'
+    data['version'] = '20200901153542'
     with open(json_path, 'w') as write_fp:
         json.dump(data, write_fp, indent=2)
 

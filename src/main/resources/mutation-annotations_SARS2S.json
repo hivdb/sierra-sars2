@@ -1,7 +1,25 @@
 {
-  "version": "20200831173134",
+  "version": "20200901153542",
   "gene": "SARS2S",
   "taxonomy": "SARS2",
+  "fragmentOptions": [
+    {
+      "name": "All",
+      "seqFragment": [1, 1273]
+    },
+    {
+      "name": "RBD",
+      "seqFragment": [306, 534]
+    },
+    {
+      "name": "S1",
+      "seqFragment": [1, 686]
+    },
+    {
+      "name": "S2",
+      "seqFragment": [681, 1273]
+    }
+  ],
   "annotCategories": [
     {
       "name": "subdomain",
