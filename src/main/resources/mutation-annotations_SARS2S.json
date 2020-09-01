@@ -20,7 +20,7 @@
     {
       "name": "antibody",
       "display": "Antibodies",
-      "dropdown": false,
+      "dropdown": true,
       "defaultAnnots": [],
       "multiSelect": true,
       "annotStyle": "underscore"

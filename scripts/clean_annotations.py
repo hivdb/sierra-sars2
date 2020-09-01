@@ -29,7 +29,7 @@ def clean_annot_categories(data):
             abort('Duplicate annot category: {!r}', name)
         dupnames.add(name)
         display = orig_cat.get('display')
-        dropdown = bool(orig_cat.get('dropdown'))
+        dropdown = bool(orig_cat.get('dropdown', True))
         default_annot = orig_cat.get('defaultAnnot')
         default_annots = orig_cat.get('defaultAnnots', [])
         multi_select = bool(orig_cat.get('multiSelect'))
