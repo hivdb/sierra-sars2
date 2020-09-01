@@ -5,8 +5,10 @@
     "dataSourceType": "AAPCNT",
     "geneDefPath": "src/main/resources/genes.json",
     "annotDef": {
-      "name": "polymorphic position",
+      "name": "var2000",
+      "label": "≥0.05%",
       "level": "aminoAcid",
+      "category": "polymorphism",
       "hideCitations": true,
       "colorRules": []
     },
@@ -19,6 +21,32 @@
       }
     ],
     "dataSourceGene": "S",
+    "dataSourceCutoff": 0.0005,
+    "geneDefGene": "SARS2S"
+  },
+  {
+    "mutAnnotPath": "src/main/resources/mutation-annotations_SARS2S.json",
+    "dataSourcePath": "src/main/resources/aapcnt/rx-all_taxon-SARS2.json",
+    "dataSourceType": "AAPCNT",
+    "geneDefPath": "src/main/resources/genes.json",
+    "annotDef": {
+      "name": "var1000",
+      "label": "≥0.1%",
+      "level": "aminoAcid",
+      "category": "polymorphism",
+      "hideCitations": true,
+      "colorRules": []
+    },
+    "citationDefs": [
+      {
+        "author": "Tzou",
+        "year": 2020,
+        "doi": "10.20944/preprints202007.0551.v1",
+        "section": "Psuedo section"
+      }
+    ],
+    "dataSourceGene": "S",
+    "dataSourceCutoff": 0.001,
     "geneDefGene": "SARS2S"
   }
 ]

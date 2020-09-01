@@ -65,6 +65,7 @@ def clean_annotations(data):
 
     for orig_annot in data['annotations']:
         name = orig_annot['name']
+        label = orig_annot.get('label')
         level = orig_annot['level']
         category = orig_annot['category']
         if level == 'amino acid':
@@ -80,13 +81,15 @@ def clean_annotations(data):
         color_rules = orig_annot.get('colorRules') or []
         if not all(valid_re(r) for r in color_rules):
             abort('Some color rules of annot group {!r} is invalid', name)
-        new_annot = {
-            'name': name,
+        new_annot = {'name': name}
+        if label:
+            new_annot['label'] = label
+        new_annot.update({
             'level': level,
             'category': category,
             'hideCitations': hide_citations,
             'colorRules': color_rules
-        }
+        })
         annotations.append(new_annot)
     data['annotations'] = annotations
 

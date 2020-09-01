@@ -58,7 +58,7 @@ def update_from_aapcnt(config):
         if aapcnt['gene'] != config['dataSourceGene']:
             continue
         pos = aapcnt['position']
-        if aapcnt['isUnusual']:
+        if aapcnt['percent'] < config['dataSourceCutoff']:
             continue
         ref_aa = refseq[pos - 1]
         aa = aapcnt['aa']
