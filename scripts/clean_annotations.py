@@ -18,13 +18,55 @@ def valid_re(pattern):
         return False
 
 
+def clean_annot_categories(data):
+    categories = []
+    dupnames = set()
+    known_annots = {a['name'] for a in data['annotations']}
+
+    for orig_cat in data['annotCategories']:
+        name = orig_cat['name']
+        if name in dupnames:
+            abort('Duplicate annot category: {!r}', name)
+        dupnames.add(name)
+        display = orig_cat.get('display')
+        dropdown = bool(orig_cat.get('dropdown'))
+        default_annot = orig_cat.get('defaultAnnot')
+        default_annots = orig_cat.get('defaultAnnots', [])
+        multi_select = bool(orig_cat.get('multiSelect'))
+        annot_style = orig_cat.get('annotStyle')
+        new_cat = {'name': name}
+        if display is False or display:
+            new_cat['display'] = display
+        new_cat['dropdown'] = dropdown
+        if multi_select:
+            for annot in default_annots:
+                if annot not in known_annots:
+                    abort('Unknown annotation: {!r}', annot)
+            new_cat['defaultAnnots'] = default_annots
+        else:
+            if default_annot is not None and \
+                    default_annot not in known_annots:
+                abort('Unknown annotation: {!r}', default_annot)
+
+            new_cat['defaultAnnot'] = default_annot
+        new_cat['multiSelect'] = multi_select
+        if annot_style:
+            new_cat['annotStyle'] = annot_style
+        else:
+            new_cat['annotStyle'] = None
+        categories.append(new_cat)
+    data['annotCategories'] = categories
+
+
 def clean_annotations(data):
     annotations = []
     dupnames = set()
+    known_cats = {c['name'] for c in data['annotCategories']}
 
     for orig_annot in data['annotations']:
         name = orig_annot['name']
         level = orig_annot['level']
+        category = orig_annot['category']
         if level == 'amino acid':
             level = 'aminoAcid'
         if name in dupnames:
@@ -32,6 +74,8 @@ def clean_annotations(data):
         dupnames.add(name)
         if level not in ('position', 'aminoAcid'):
             abort('Invalid level {!r} for annot group {!r}', level, name)
+        if category not in known_cats:
+            abort('Unknown annot category: {!r}', category)
         hide_citations = bool(orig_annot.get('hideCitations'))
         color_rules = orig_annot.get('colorRules') or []
         if not all(valid_re(r) for r in color_rules):
@@ -39,6 +83,7 @@ def clean_annotations(data):
         new_annot = {
             'name': name,
             'level': level,
+            'category': category,
             'hideCitations': hide_citations,
             'colorRules': color_rules
         }
@@ -96,9 +141,10 @@ def main():
     json_path = sys.argv[1]
     with open(json_path) as read_fp:
         data = json.load(read_fp)
+        clean_annot_categories(data)
         clean_annotations(data)
         clean_positions(data)
-    data['version'] = '20200821093821'
+    data['version'] = '20200831173134'
     with open(json_path, 'w') as write_fp:
         json.dump(data, write_fp, indent=2)
 

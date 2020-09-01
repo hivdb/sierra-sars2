@@ -1,17 +1,65 @@
 {
-  "version": "20200821093821",
+  "version": "20200831173134",
   "gene": "SARS2S",
   "taxonomy": "SARS2",
+  "annotCategories": [
+    {
+      "name": "subdomain",
+      "dropdown": false,
+      "defaultAnnot": "subdomain",
+      "multiSelect": false,
+      "annotStyle": "colorBox"
+    },
+    {
+      "name": "ace2",
+      "dropdown": false,
+      "defaultAnnot": "ACE2-binding residue",
+      "multiSelect": false,
+      "annotStyle": "circleInBox"
+    },
+    {
+      "name": "antibody",
+      "display": "Antibodies",
+      "dropdown": false,
+      "defaultAnnots": [],
+      "multiSelect": true,
+      "annotStyle": "underscore"
+    },
+    {
+      "name": "polymorphism",
+      "dropdown": false,
+      "defaultAnnot": "var2000",
+      "multiSelect": false,
+      "annotStyle": "aminoAcids"
+    },
+    {
+      "name": "escapeMutants",
+      "dropdown": false,
+      "defaultAnnot": null,
+      "multiSelect": false,
+      "annotStyle": "aminoAcids"
+    },
+    {
+      "name": "_hide",
+      "display": false,
+      "dropdown": false,
+      "defaultAnnot": null,
+      "multiSelect": false,
+      "annotStyle": null
+    }
+  ],
   "annotations": [
     {
-      "name": "landmark",
+      "name": "subdomain",
       "level": "position",
+      "category": "subdomain",
       "hideCitations": true,
       "colorRules": []
     },
     {
       "name": "secondary structure",
       "level": "position",
+      "category": "_hide",
       "hideCitations": true,
       "colorRules": [
         "^\u03b2",
@@ -24,94 +72,94 @@
     {
       "name": "ACE2-binding residue",
       "level": "position",
+      "category": "ace2",
       "hideCitations": true,
       "colorRules": []
     },
     {
       "name": "Glycan-binding residue",
       "level": "position",
+      "category": "_hide",
       "hideCitations": true,
       "colorRules": []
     },
     {
       "name": "Cysteine residue",
       "level": "position",
+      "category": "_hide",
       "hideCitations": false,
       "colorRules": []
     },
     {
       "name": "REGN1098-binding residue",
       "level": "position",
+      "category": "antibody",
       "hideCitations": false,
       "colorRules": []
     },
     {
       "name": "REGN1093-binding residue",
       "level": "position",
+      "category": "antibody",
       "hideCitations": false,
       "colorRules": []
     },
     {
       "name": "CR3022-binding residue",
       "level": "position",
+      "category": "antibody",
       "hideCitations": false,
       "colorRules": []
     },
     {
       "name": "S309-binding residue",
       "level": "position",
+      "category": "antibody",
       "hideCitations": false,
       "colorRules": []
     },
     {
       "name": "CB6-biding residue",
       "level": "position",
+      "category": "antibody",
       "hideCitations": false,
       "colorRules": []
     },
     {
       "name": "P2B-2F6-binding residue",
       "level": "position",
+      "category": "antibody",
       "hideCitations": false,
       "colorRules": []
     },
     {
       "name": "B38-binding residue",
       "level": "position",
+      "category": "antibody",
       "hideCitations": false,
       "colorRules": []
     },
     {
       "name": "BD23-binding residue",
       "level": "position",
+      "category": "antibody",
       "hideCitations": false,
       "colorRules": []
     },
     {
       "name": "C105-binding residue",
       "level": "position",
+      "category": "antibody",
       "hideCitations": false,
       "colorRules": []
     },
     {
-      "name": "polymorphic position",
+      "name": "var2000",
       "level": "aminoAcid",
+      "category": "polymorphism",
       "hideCitations": true,
       "colorRules": []
     }
-  ],
-  "defaultExtraAnnots": [
-    "polymorphic position",
-    "ACE2-binding residue",
-    "REGN1098-binding residue",
-    "REGN1093-binding residue",
-    "CR3022-binding residue",
-    "S309-binding residue",
-    "CB6-biding residue",
-    "P2B-2F6-binding residue",
-    "B38-binding residue",
-    "BD23-binding residue",
-    "C105-binding residue"
   ],
   "citations": {
     "1.1": {
@@ -146,6 +194,14 @@
       "doi": "10.1101/2020.06.30.177097",
       "section": "Figure S6"
     },
+    "4.2": {
+      "citationId": 4,
+      "sectionId": 2,
+      "author": "Xu",
+      "year": 2020,
+      "doi": "10.1101/2020.06.30.177097",
+      "section": "Table S3"
+    },
     "5.1": {
       "citationId": 5,
       "sectionId": 1,
@@ -170,6 +226,14 @@
       "doi": "10.1038/s41586-020-2180-5",
       "section": "Figure 2b"
     },
+    "7.2": {
+      "citationId": 7,
+      "sectionId": 2,
+      "author": "Lan",
+      "year": 2020,
+      "doi": "10.1038/s41586-020-2180-5",
+      "section": "Section \"Main\" paragraph 6"
+    },
     "8.1": {
       "citationId": 8,
       "sectionId": 1,
@@ -185,14 +249,6 @@
       "year": 2020,
       "doi": "10.1038/s41594-020-0469-6",
       "section": "Figure 1b"
-    },
-    "4.2": {
-      "citationId": 4,
-      "sectionId": 2,
-      "author": "Xu",
-      "year": 2020,
-      "doi": "10.1101/2020.06.30.177097",
-      "section": "Table S3"
     },
     "10.1": {
       "citationId": 10,
@@ -282,14 +338,6 @@
       "doi": "10.1126/science.abb9983",
       "section": "Figure 1A"
     },
-    "7.2": {
-      "citationId": 7,
-      "sectionId": 2,
-      "author": "Lan",
-      "year": 2020,
-      "doi": "10.1038/s41586-020-2180-5",
-      "section": "Section \"Main\" paragraph 6"
-    },
     "21.1": {
       "citationId": 21,
       "sectionId": 1,
@@ -328,7 +376,7 @@
       "position": 5,
       "annotations": [
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "F"
           ],
@@ -343,7 +391,7 @@
       "position": 6,
       "annotations": [
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "F"
           ],
@@ -358,7 +406,7 @@
       "position": 8,
       "annotations": [
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "V"
           ],
@@ -373,7 +421,7 @@
       "position": 12,
       "annotations": [
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "F"
           ],
@@ -388,7 +436,7 @@
       "position": 13,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -401,7 +449,7 @@
       "position": 14,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -414,7 +462,7 @@
       "position": 15,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -427,7 +475,7 @@
       "position": 16,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -449,7 +497,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -462,7 +510,7 @@
       "position": 18,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -470,7 +518,7 @@
           "description": "N terminal domain (also known as S1A)"
         },
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "F"
           ],
@@ -485,7 +533,7 @@
       "position": 19,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -498,7 +546,7 @@
       "position": 20,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -511,7 +559,7 @@
       "position": 21,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -519,7 +567,7 @@
           "description": "N terminal domain (also known as S1A)"
         },
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "I"
           ],
@@ -534,7 +582,7 @@
       "position": 22,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -547,7 +595,7 @@
       "position": 23,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -560,7 +608,7 @@
       "position": 24,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -581,7 +629,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -594,7 +642,7 @@
       "position": 26,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -607,7 +655,7 @@
       "position": 27,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -620,7 +668,7 @@
       "position": 28,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -640,7 +688,7 @@
       "position": 29,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -655,7 +703,7 @@
           ]
         },
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "I"
           ],
@@ -670,7 +718,7 @@
       "position": 30,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -690,7 +738,7 @@
       "position": 31,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -703,7 +751,7 @@
       "position": 32,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -716,7 +764,7 @@
       "position": 33,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -729,7 +777,7 @@
       "position": 34,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -742,7 +790,7 @@
       "position": 35,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -755,7 +803,7 @@
       "position": 36,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -768,7 +816,7 @@
       "position": 37,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -781,7 +829,7 @@
       "position": 38,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -794,7 +842,7 @@
       "position": 39,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -807,7 +855,7 @@
       "position": 40,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -820,7 +868,7 @@
       "position": 41,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -833,7 +881,7 @@
       "position": 42,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -846,7 +894,7 @@
       "position": 43,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -859,7 +907,7 @@
       "position": 44,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -872,7 +920,7 @@
       "position": 45,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -885,7 +933,7 @@
       "position": 46,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -898,7 +946,7 @@
       "position": 47,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -911,7 +959,7 @@
       "position": 48,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -931,7 +979,7 @@
       "position": 49,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -946,7 +994,7 @@
           ]
         },
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "Y"
           ],
@@ -961,7 +1009,7 @@
       "position": 50,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -976,7 +1024,7 @@
           ]
         },
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "L"
           ],
@@ -991,7 +1039,7 @@
       "position": 51,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -1011,7 +1059,7 @@
       "position": 52,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -1031,7 +1079,7 @@
       "position": 53,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -1051,7 +1099,7 @@
       "position": 54,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -1066,7 +1114,7 @@
           ]
         },
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "F"
           ],
@@ -1081,7 +1129,7 @@
       "position": 55,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -1101,7 +1149,7 @@
       "position": 56,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -1114,7 +1162,7 @@
       "position": 57,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -1127,7 +1175,7 @@
       "position": 58,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -1147,7 +1195,7 @@
       "position": 59,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -1167,7 +1215,7 @@
       "position": 60,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -1180,7 +1228,7 @@
       "position": 61,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -1209,7 +1257,7 @@
       "position": 62,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -1229,7 +1277,7 @@
       "position": 63,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -1249,7 +1297,7 @@
       "position": 64,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -1262,7 +1310,7 @@
       "position": 65,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -1282,7 +1330,7 @@
       "position": 66,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -1302,7 +1350,7 @@
       "position": 67,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -1322,7 +1370,7 @@
       "position": 68,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -1343,7 +1391,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -1356,7 +1404,7 @@
       "position": 70,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -1369,7 +1417,7 @@
       "position": 71,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -1382,7 +1430,7 @@
       "position": 72,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -1395,7 +1443,7 @@
       "position": 73,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -1403,7 +1451,7 @@
           "description": "N terminal domain (also known as S1A)"
         },
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "I"
           ],
@@ -1427,7 +1475,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -1440,7 +1488,7 @@
       "position": 75,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -1453,7 +1501,7 @@
       "position": 76,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -1461,7 +1509,7 @@
           "description": "N terminal domain (also known as S1A)"
         },
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "I"
           ],
@@ -1476,7 +1524,7 @@
       "position": 77,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -1489,7 +1537,7 @@
       "position": 78,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -1502,7 +1550,7 @@
       "position": 79,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -1515,7 +1563,7 @@
       "position": 80,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -1523,7 +1571,7 @@
           "description": "N terminal domain (also known as S1A)"
         },
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "Y"
           ],
@@ -1538,7 +1586,7 @@
       "position": 81,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -1551,7 +1599,7 @@
       "position": 82,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -1564,7 +1612,7 @@
       "position": 83,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -1577,7 +1625,7 @@
       "position": 84,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -1597,7 +1645,7 @@
       "position": 85,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -1617,7 +1665,7 @@
       "position": 86,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -1630,7 +1678,7 @@
       "position": 87,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -1650,7 +1698,7 @@
       "position": 88,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -1670,7 +1718,7 @@
       "position": 89,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -1690,7 +1738,7 @@
       "position": 90,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -1710,7 +1758,7 @@
       "position": 91,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -1730,7 +1778,7 @@
       "position": 92,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -1750,7 +1798,7 @@
       "position": 93,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -1770,7 +1818,7 @@
       "position": 94,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -1790,7 +1838,7 @@
       "position": 95,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -1805,7 +1853,7 @@
           ]
         },
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "I"
           ],
@@ -1820,7 +1868,7 @@
       "position": 96,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -1840,7 +1888,7 @@
       "position": 97,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -1853,7 +1901,7 @@
       "position": 98,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -1861,7 +1909,7 @@
           "description": "N terminal domain (also known as S1A)"
         },
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "F"
           ],
@@ -1876,7 +1924,7 @@
       "position": 99,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -1889,7 +1937,7 @@
       "position": 100,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -1902,7 +1950,7 @@
       "position": 101,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -1915,7 +1963,7 @@
       "position": 102,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -1923,7 +1971,7 @@
           "description": "N terminal domain (also known as S1A)"
         },
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "I"
           ],
@@ -1938,7 +1986,7 @@
       "position": 103,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -1958,7 +2006,7 @@
       "position": 104,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -1978,7 +2026,7 @@
       "position": 105,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -1998,7 +2046,7 @@
       "position": 106,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -2018,7 +2066,7 @@
       "position": 107,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -2038,7 +2086,7 @@
       "position": 108,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -2051,7 +2099,7 @@
       "position": 109,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -2064,7 +2112,7 @@
       "position": 110,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -2077,7 +2125,7 @@
       "position": 111,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -2098,7 +2146,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -2118,7 +2166,7 @@
       "position": 113,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -2138,7 +2186,7 @@
       "position": 114,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -2151,7 +2199,7 @@
       "position": 115,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -2164,7 +2212,7 @@
       "position": 116,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -2184,7 +2232,7 @@
       "position": 117,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -2204,7 +2252,7 @@
       "position": 118,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -2224,7 +2272,7 @@
       "position": 119,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -2244,7 +2292,7 @@
       "position": 120,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -2264,7 +2312,7 @@
       "position": 121,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -2292,7 +2340,7 @@
       "position": 122,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -2314,7 +2362,7 @@
       "position": 123,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -2327,7 +2375,7 @@
       "position": 124,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -2340,7 +2388,7 @@
       "position": 125,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -2353,7 +2401,7 @@
       "position": 126,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -2373,7 +2421,7 @@
       "position": 127,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -2393,7 +2441,7 @@
       "position": 128,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -2413,7 +2461,7 @@
       "position": 129,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -2433,7 +2481,7 @@
       "position": 130,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -2453,7 +2501,7 @@
       "position": 131,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -2473,7 +2521,7 @@
       "position": 132,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -2493,7 +2541,7 @@
       "position": 133,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -2513,7 +2561,7 @@
       "position": 134,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -2533,7 +2581,7 @@
       "position": 135,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -2553,7 +2601,7 @@
       "position": 136,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -2566,7 +2614,7 @@
       "position": 137,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -2579,7 +2627,7 @@
       "position": 138,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -2587,7 +2635,7 @@
           "description": "N terminal domain (also known as S1A)"
         },
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "H"
           ],
@@ -2602,7 +2650,7 @@
       "position": 139,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -2615,7 +2663,7 @@
       "position": 140,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -2628,7 +2676,7 @@
       "position": 141,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -2648,7 +2696,7 @@
       "position": 142,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -2668,7 +2716,7 @@
       "position": 143,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -2688,7 +2736,7 @@
       "position": 144,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -2701,7 +2749,7 @@
       "position": 145,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -2709,7 +2757,7 @@
           "description": "N terminal domain (also known as S1A)"
         },
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "d"
           ],
@@ -2724,7 +2772,7 @@
       "position": 146,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -2732,7 +2780,7 @@
           "description": "N terminal domain (also known as S1A)"
         },
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "Y"
           ],
@@ -2747,7 +2795,7 @@
       "position": 147,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -2760,7 +2808,7 @@
       "position": 148,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -2782,7 +2830,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -2795,7 +2843,7 @@
       "position": 150,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -2808,7 +2856,7 @@
       "position": 151,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -2821,7 +2869,7 @@
       "position": 152,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -2834,7 +2882,7 @@
       "position": 153,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -2842,7 +2890,7 @@
           "description": "N terminal domain (also known as S1A)"
         },
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "I"
           ],
@@ -2857,7 +2905,7 @@
       "position": 154,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -2877,7 +2925,7 @@
       "position": 155,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -2897,7 +2945,7 @@
       "position": 156,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -2917,7 +2965,7 @@
       "position": 157,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -2937,7 +2985,7 @@
       "position": 158,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -2950,7 +2998,7 @@
       "position": 159,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -2963,7 +3011,7 @@
       "position": 160,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -2983,7 +3031,7 @@
       "position": 161,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -3003,7 +3051,7 @@
       "position": 162,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -3023,7 +3071,7 @@
       "position": 163,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -3043,7 +3091,7 @@
       "position": 164,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -3063,7 +3111,7 @@
       "position": 165,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -3092,7 +3140,7 @@
       "position": 166,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -3112,7 +3160,7 @@
       "position": 167,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -3132,7 +3180,7 @@
       "position": 168,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -3152,7 +3200,7 @@
       "position": 169,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -3172,7 +3220,7 @@
       "position": 170,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -3192,7 +3240,7 @@
       "position": 171,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -3212,7 +3260,7 @@
       "position": 172,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -3225,7 +3273,7 @@
       "position": 173,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -3238,7 +3286,7 @@
       "position": 174,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -3251,7 +3299,7 @@
       "position": 175,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -3264,7 +3312,7 @@
       "position": 176,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -3272,7 +3320,7 @@
           "description": "N terminal domain (also known as S1A)"
         },
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "F"
           ],
@@ -3287,7 +3335,7 @@
       "position": 177,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -3295,7 +3343,7 @@
           "description": "N terminal domain (also known as S1A)"
         },
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "I"
           ],
@@ -3310,7 +3358,7 @@
       "position": 178,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -3323,7 +3371,7 @@
       "position": 179,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -3336,7 +3384,7 @@
       "position": 180,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -3349,7 +3397,7 @@
       "position": 181,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -3362,7 +3410,7 @@
       "position": 182,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -3375,7 +3423,7 @@
       "position": 183,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -3388,7 +3436,7 @@
       "position": 184,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -3401,7 +3449,7 @@
       "position": 185,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -3414,7 +3462,7 @@
       "position": 186,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -3427,7 +3475,7 @@
       "position": 187,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -3440,7 +3488,7 @@
       "position": 188,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -3460,7 +3508,7 @@
       "position": 189,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -3480,7 +3528,7 @@
       "position": 190,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -3500,7 +3548,7 @@
       "position": 191,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -3520,7 +3568,7 @@
       "position": 192,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -3540,7 +3588,7 @@
       "position": 193,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -3560,7 +3608,7 @@
       "position": 194,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -3580,7 +3628,7 @@
       "position": 195,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -3600,7 +3648,7 @@
       "position": 196,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -3620,7 +3668,7 @@
       "position": 197,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -3635,7 +3683,7 @@
           ]
         },
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "V"
           ],
@@ -3650,7 +3698,7 @@
       "position": 198,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -3670,7 +3718,7 @@
       "position": 199,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -3690,7 +3738,7 @@
       "position": 200,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -3710,7 +3758,7 @@
       "position": 201,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -3730,7 +3778,7 @@
       "position": 202,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -3750,7 +3798,7 @@
       "position": 203,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -3770,7 +3818,7 @@
       "position": 204,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -3790,7 +3838,7 @@
       "position": 205,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -3810,7 +3858,7 @@
       "position": 206,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -3830,7 +3878,7 @@
       "position": 207,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -3850,7 +3898,7 @@
       "position": 208,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -3870,7 +3918,7 @@
       "position": 209,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -3883,7 +3931,7 @@
       "position": 210,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -3896,7 +3944,7 @@
       "position": 211,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -3909,7 +3957,7 @@
       "position": 212,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -3922,7 +3970,7 @@
       "position": 213,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -3930,7 +3978,7 @@
           "description": "N terminal domain (also known as S1A)"
         },
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "L"
           ],
@@ -3945,7 +3993,7 @@
       "position": 214,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -3953,7 +4001,7 @@
           "description": "N terminal domain (also known as S1A)"
         },
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "L"
           ],
@@ -3968,7 +4016,7 @@
       "position": 215,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -3976,7 +4024,7 @@
           "description": "N terminal domain (also known as S1A)"
         },
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "G",
             "H"
@@ -3992,7 +4040,7 @@
       "position": 216,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -4005,7 +4053,7 @@
       "position": 217,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -4018,7 +4066,7 @@
       "position": 218,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -4031,7 +4079,7 @@
       "position": 219,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -4044,7 +4092,7 @@
       "position": 220,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -4057,7 +4105,7 @@
       "position": 221,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -4065,7 +4113,7 @@
           "description": "N terminal domain (also known as S1A)"
         },
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "L"
           ],
@@ -4080,7 +4128,7 @@
       "position": 222,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -4093,7 +4141,7 @@
       "position": 223,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -4106,7 +4154,7 @@
       "position": 224,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -4126,7 +4174,7 @@
       "position": 225,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -4146,7 +4194,7 @@
       "position": 226,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -4166,7 +4214,7 @@
       "position": 227,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -4186,7 +4234,7 @@
       "position": 228,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -4206,7 +4254,7 @@
       "position": 229,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -4226,7 +4274,7 @@
       "position": 230,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -4239,7 +4287,7 @@
       "position": 231,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -4252,7 +4300,7 @@
       "position": 232,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -4265,7 +4313,7 @@
       "position": 233,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -4278,7 +4326,7 @@
       "position": 234,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -4300,7 +4348,7 @@
       "position": 235,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -4313,7 +4361,7 @@
       "position": 236,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -4326,7 +4374,7 @@
       "position": 237,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -4346,7 +4394,7 @@
       "position": 238,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -4366,7 +4414,7 @@
       "position": 239,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -4386,7 +4434,7 @@
       "position": 240,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -4406,7 +4454,7 @@
       "position": 241,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -4419,7 +4467,7 @@
       "position": 242,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -4432,7 +4480,7 @@
       "position": 243,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -4452,7 +4500,7 @@
       "position": 244,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -4472,7 +4520,7 @@
       "position": 245,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -4492,7 +4540,7 @@
       "position": 246,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -4505,7 +4553,7 @@
       "position": 247,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -4518,7 +4566,7 @@
       "position": 248,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -4531,7 +4579,7 @@
       "position": 249,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -4544,7 +4592,7 @@
       "position": 250,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -4557,7 +4605,7 @@
       "position": 251,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -4570,7 +4618,7 @@
       "position": 252,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -4583,7 +4631,7 @@
       "position": 253,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -4596,7 +4644,7 @@
       "position": 254,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -4604,7 +4652,7 @@
           "description": "N terminal domain (also known as S1A)"
         },
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "F"
           ],
@@ -4619,7 +4667,7 @@
       "position": 255,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -4632,7 +4680,7 @@
       "position": 256,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -4645,7 +4693,7 @@
       "position": 257,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -4658,7 +4706,7 @@
       "position": 258,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -4671,7 +4719,7 @@
       "position": 259,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -4691,7 +4739,7 @@
       "position": 260,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -4711,7 +4759,7 @@
       "position": 261,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -4724,7 +4772,7 @@
       "position": 262,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -4737,7 +4785,7 @@
       "position": 263,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -4757,7 +4805,7 @@
       "position": 264,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -4777,7 +4825,7 @@
       "position": 265,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -4797,7 +4845,7 @@
       "position": 266,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -4817,7 +4865,7 @@
       "position": 267,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -4837,7 +4885,7 @@
       "position": 268,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -4857,7 +4905,7 @@
       "position": 269,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -4877,7 +4925,7 @@
       "position": 270,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -4890,7 +4938,7 @@
       "position": 271,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -4910,7 +4958,7 @@
       "position": 272,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -4930,7 +4978,7 @@
       "position": 273,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -4950,7 +4998,7 @@
       "position": 274,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -4970,7 +5018,7 @@
       "position": 275,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -4990,7 +5038,7 @@
       "position": 276,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -5010,7 +5058,7 @@
       "position": 277,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -5030,7 +5078,7 @@
       "position": 278,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -5050,7 +5098,7 @@
       "position": 279,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -5070,7 +5118,7 @@
       "position": 280,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -5083,7 +5131,7 @@
       "position": 281,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -5103,7 +5151,7 @@
       "position": 282,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -5132,7 +5180,7 @@
       "position": 283,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -5145,7 +5193,7 @@
       "position": 284,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -5158,7 +5206,7 @@
       "position": 285,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -5178,7 +5226,7 @@
       "position": 286,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -5198,7 +5246,7 @@
       "position": 287,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -5218,7 +5266,7 @@
       "position": 288,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -5238,7 +5286,7 @@
       "position": 289,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -5258,7 +5306,7 @@
       "position": 290,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -5278,7 +5326,7 @@
       "position": 291,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -5298,7 +5346,7 @@
       "position": 292,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -5318,7 +5366,7 @@
       "position": 293,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -5331,7 +5379,7 @@
       "position": 294,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -5344,7 +5392,7 @@
       "position": 295,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -5364,7 +5412,7 @@
       "position": 296,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -5384,7 +5432,7 @@
       "position": 297,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -5404,7 +5452,7 @@
       "position": 298,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -5424,7 +5472,7 @@
       "position": 299,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -5444,7 +5492,7 @@
       "position": 300,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -5464,7 +5512,7 @@
       "position": 301,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -5484,7 +5532,7 @@
       "position": 302,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -5504,7 +5552,7 @@
       "position": 303,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -5524,7 +5572,7 @@
       "position": 304,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -5537,7 +5585,7 @@
       "position": 305,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "NTD",
           "citationIds": [
             "2.1"
@@ -5550,7 +5598,7 @@
       "position": 307,
       "annotations": [
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "I"
           ],
@@ -5565,7 +5613,7 @@
       "position": 308,
       "annotations": [
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "L"
           ],
@@ -5791,7 +5839,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -5819,7 +5867,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -5847,7 +5895,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -5875,7 +5923,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -5888,7 +5936,7 @@
       "position": 342,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -5909,7 +5957,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -5939,7 +5987,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -5947,7 +5995,7 @@
           "description": "Receptor binding domain (also known as S1B)"
         },
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "S"
           ],
@@ -5970,7 +6018,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -5999,7 +6047,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -6012,7 +6060,7 @@
       "position": 347,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -6025,7 +6073,7 @@
       "position": 348,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -6038,7 +6086,7 @@
       "position": 349,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -6051,7 +6099,7 @@
       "position": 350,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -6064,7 +6112,7 @@
       "position": 351,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -6077,7 +6125,7 @@
       "position": 352,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -6090,7 +6138,7 @@
       "position": 353,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -6111,7 +6159,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -6138,7 +6186,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -6166,7 +6214,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -6187,7 +6235,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -6222,7 +6270,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -6243,7 +6291,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -6264,7 +6312,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -6285,7 +6333,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -6306,7 +6354,7 @@
       "position": 362,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -6319,7 +6367,7 @@
       "position": 363,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -6332,7 +6380,7 @@
       "position": 364,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -6345,7 +6393,7 @@
       "position": 365,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -6358,7 +6406,7 @@
       "position": 366,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -6371,7 +6419,7 @@
       "position": 367,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -6386,7 +6434,7 @@
           ]
         },
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "F"
           ],
@@ -6408,7 +6456,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -6437,7 +6485,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -6459,7 +6507,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -6489,7 +6537,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -6511,7 +6559,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -6524,7 +6572,7 @@
       "position": 373,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -6546,7 +6594,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -6568,7 +6616,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -6597,7 +6645,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -6626,7 +6674,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -6655,7 +6703,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -6684,7 +6732,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -6714,7 +6762,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -6736,7 +6784,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -6758,7 +6806,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -6780,7 +6828,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -6802,7 +6850,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -6838,7 +6886,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -6867,7 +6915,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -6880,7 +6928,7 @@
       "position": 387,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -6893,7 +6941,7 @@
       "position": 388,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -6915,7 +6963,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -6937,7 +6985,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -6950,7 +6998,7 @@
       "position": 391,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -6980,7 +7028,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -6993,7 +7041,7 @@
       "position": 393,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -7006,7 +7054,7 @@
       "position": 394,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -7026,7 +7074,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -7046,7 +7094,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -7066,7 +7114,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -7086,7 +7134,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -7106,7 +7154,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -7126,7 +7174,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -7146,7 +7194,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -7159,7 +7207,7 @@
       "position": 402,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -7195,7 +7243,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -7246,7 +7294,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -7290,7 +7338,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -7327,7 +7375,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -7347,7 +7395,7 @@
       "position": 407,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -7375,7 +7423,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -7411,7 +7459,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -7424,7 +7472,7 @@
       "position": 410,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -7437,7 +7485,7 @@
       "position": 411,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -7457,7 +7505,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -7477,7 +7525,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -7490,7 +7538,7 @@
       "position": 414,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -7519,7 +7567,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -7548,7 +7596,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -7585,7 +7633,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -7628,7 +7676,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -7656,7 +7704,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -7708,7 +7756,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -7744,7 +7792,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -7780,7 +7828,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -7793,7 +7841,7 @@
       "position": 423,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -7806,7 +7854,7 @@
       "position": 424,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -7819,7 +7867,7 @@
       "position": 425,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -7832,7 +7880,7 @@
       "position": 426,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -7861,7 +7909,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -7890,7 +7938,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -7912,7 +7960,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -7934,7 +7982,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -7954,7 +8002,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -7974,7 +8022,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -8002,7 +8050,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -8015,7 +8063,7 @@
       "position": 434,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -8042,7 +8090,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -8062,7 +8110,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -8082,7 +8130,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -8095,7 +8143,7 @@
       "position": 438,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -8115,7 +8163,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -8130,7 +8178,7 @@
           ]
         },
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "K"
           ],
@@ -8153,7 +8201,7 @@
       "position": 440,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -8189,7 +8237,7 @@
       "position": 441,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -8232,7 +8280,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -8245,7 +8293,7 @@
       "position": 443,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -8266,7 +8314,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -8295,7 +8343,7 @@
       "position": 445,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -8341,7 +8389,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -8385,7 +8433,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -8414,7 +8462,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -8452,7 +8500,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -8489,7 +8537,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -8510,7 +8558,7 @@
       "position": 451,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -8531,7 +8579,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -8584,7 +8632,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -8620,7 +8668,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -8659,7 +8707,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -8714,7 +8762,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -8759,7 +8807,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -8796,7 +8844,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -8833,7 +8881,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -8870,7 +8918,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -8883,7 +8931,7 @@
       "position": 461,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -8896,7 +8944,7 @@
       "position": 462,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -8916,7 +8964,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -8936,7 +8984,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -8949,7 +8997,7 @@
       "position": 465,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -8962,7 +9010,7 @@
       "position": 466,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -8975,7 +9023,7 @@
       "position": 467,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -8988,7 +9036,7 @@
       "position": 468,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -9001,7 +9049,7 @@
       "position": 469,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -9014,7 +9062,7 @@
       "position": 470,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -9035,7 +9083,7 @@
       "position": 471,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -9048,7 +9096,7 @@
       "position": 472,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -9085,7 +9133,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -9129,7 +9177,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -9183,7 +9231,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -9237,7 +9285,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -9282,7 +9330,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -9290,7 +9338,7 @@
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         },
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "N"
           ],
@@ -9305,7 +9353,7 @@
       "position": 478,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -9313,7 +9361,7 @@
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         },
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "I"
           ],
@@ -9328,7 +9376,7 @@
       "position": 479,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -9336,7 +9384,7 @@
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         },
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "S"
           ],
@@ -9351,7 +9399,7 @@
       "position": 480,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -9372,7 +9420,7 @@
       "position": 481,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -9392,7 +9440,7 @@
       "position": 482,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -9420,7 +9468,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -9428,7 +9476,7 @@
           "description": "RBD receptor binding subdomain (aka receptor binding motif; RBM)"
         },
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "A"
           ],
@@ -9458,7 +9506,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -9503,7 +9551,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -9558,7 +9606,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -9635,7 +9683,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -9671,7 +9719,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -9741,7 +9789,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -9794,7 +9842,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -9815,7 +9863,7 @@
       "position": 491,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -9843,7 +9891,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -9906,7 +9954,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -9973,7 +10021,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -10024,7 +10072,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -10055,7 +10103,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -10068,7 +10116,7 @@
       "position": 497,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -10099,7 +10147,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -10120,7 +10168,7 @@
       "position": 499,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -10165,7 +10213,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -10228,7 +10276,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -10275,7 +10323,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -10304,7 +10352,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -10325,7 +10373,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -10364,7 +10412,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -10385,7 +10433,7 @@
       "position": 506,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -10578,7 +10626,7 @@
       "position": 535,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -10591,7 +10639,7 @@
       "position": 536,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -10604,7 +10652,7 @@
       "position": 537,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -10624,7 +10672,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -10644,7 +10692,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -10664,7 +10712,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -10684,7 +10732,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -10704,7 +10752,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -10724,7 +10772,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -10744,7 +10792,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -10764,7 +10812,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -10784,7 +10832,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -10804,7 +10852,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -10824,7 +10872,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -10844,7 +10892,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -10864,7 +10912,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -10884,7 +10932,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -10904,7 +10952,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -10924,7 +10972,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -10937,7 +10985,7 @@
       "position": 554,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -10957,7 +11005,7 @@
       "position": 555,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -10970,7 +11018,7 @@
       "position": 556,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -10983,7 +11031,7 @@
       "position": 557,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -10996,7 +11044,7 @@
       "position": 558,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -11009,7 +11057,7 @@
       "position": 559,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -11022,7 +11070,7 @@
       "position": 560,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -11042,7 +11090,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -11062,7 +11110,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -11075,7 +11123,7 @@
       "position": 563,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -11088,7 +11136,7 @@
       "position": 564,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -11101,7 +11149,7 @@
       "position": 565,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -11121,7 +11169,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -11141,7 +11189,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -11154,7 +11202,7 @@
       "position": 568,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -11167,7 +11215,7 @@
       "position": 569,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -11187,7 +11235,7 @@
       "position": 570,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -11207,7 +11255,7 @@
       "position": 571,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -11220,7 +11268,7 @@
       "position": 572,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -11228,7 +11276,7 @@
           "description": "Also known as S1C"
         },
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "I"
           ],
@@ -11250,7 +11298,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -11270,7 +11318,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -11283,7 +11331,7 @@
       "position": 575,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -11310,7 +11358,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -11330,7 +11378,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -11343,7 +11391,7 @@
       "position": 578,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -11356,7 +11404,7 @@
       "position": 579,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -11369,7 +11417,7 @@
       "position": 580,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -11382,7 +11430,7 @@
       "position": 581,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -11395,7 +11443,7 @@
       "position": 582,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -11408,7 +11456,7 @@
       "position": 583,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -11416,7 +11464,7 @@
           "description": "Also known as S1C"
         },
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "D"
           ],
@@ -11438,7 +11486,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -11458,7 +11506,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -11478,7 +11526,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -11498,7 +11546,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -11511,7 +11559,7 @@
       "position": 588,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -11531,7 +11579,7 @@
       "position": 589,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -11544,7 +11592,7 @@
       "position": 590,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -11557,7 +11605,7 @@
       "position": 593,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -11570,7 +11618,7 @@
       "position": 594,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -11590,7 +11638,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -11610,7 +11658,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -11630,7 +11678,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -11650,7 +11698,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -11670,7 +11718,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -11683,7 +11731,7 @@
       "position": 600,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -11696,7 +11744,7 @@
       "position": 601,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -11709,7 +11757,7 @@
       "position": 602,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -11722,7 +11770,7 @@
       "position": 603,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -11744,7 +11792,7 @@
       "position": 604,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -11757,7 +11805,7 @@
       "position": 605,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -11770,7 +11818,7 @@
       "position": 606,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -11783,7 +11831,7 @@
       "position": 607,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -11796,7 +11844,7 @@
       "position": 608,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -11816,7 +11864,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -11836,7 +11884,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -11856,7 +11904,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -11876,7 +11924,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -11896,7 +11944,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -11909,7 +11957,7 @@
       "position": 614,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -11917,7 +11965,7 @@
           "description": "Also known as S1D"
         },
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "G"
           ],
@@ -11932,7 +11980,7 @@
       "position": 615,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -11945,7 +11993,7 @@
       "position": 616,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -11967,7 +12015,7 @@
       "position": 617,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -11980,7 +12028,7 @@
       "position": 618,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -11993,7 +12041,7 @@
       "position": 619,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -12006,7 +12054,7 @@
       "position": 620,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -12019,7 +12067,7 @@
       "position": 621,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -12032,7 +12080,7 @@
       "position": 622,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -12040,7 +12088,7 @@
           "description": "Also known as S1D"
         },
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "F"
           ],
@@ -12055,7 +12103,7 @@
       "position": 623,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -12068,7 +12116,7 @@
       "position": 624,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -12081,7 +12129,7 @@
       "position": 625,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -12094,7 +12142,7 @@
       "position": 626,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -12107,7 +12155,7 @@
       "position": 627,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -12120,7 +12168,7 @@
       "position": 628,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -12133,7 +12181,7 @@
       "position": 629,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -12146,7 +12194,7 @@
       "position": 630,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -12159,7 +12207,7 @@
       "position": 631,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -12172,7 +12220,7 @@
       "position": 632,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -12185,7 +12233,7 @@
       "position": 633,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -12198,7 +12246,7 @@
       "position": 634,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -12211,7 +12259,7 @@
       "position": 635,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -12224,7 +12272,7 @@
       "position": 636,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -12237,7 +12285,7 @@
       "position": 637,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -12250,7 +12298,7 @@
       "position": 638,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -12263,7 +12311,7 @@
       "position": 639,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -12276,7 +12324,7 @@
       "position": 640,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -12289,7 +12337,7 @@
       "position": 641,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -12309,7 +12357,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -12329,7 +12377,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -12349,7 +12397,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -12362,7 +12410,7 @@
       "position": 645,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -12375,7 +12423,7 @@
       "position": 646,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -12388,7 +12436,7 @@
       "position": 647,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -12408,7 +12456,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -12428,7 +12476,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -12448,7 +12496,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -12468,7 +12516,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -12481,7 +12529,7 @@
       "position": 652,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -12494,7 +12542,7 @@
       "position": 653,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -12514,7 +12562,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -12534,7 +12582,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -12542,7 +12590,7 @@
           "description": "Also known as S1D"
         },
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "Y"
           ],
@@ -12564,7 +12612,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -12586,7 +12634,7 @@
           "description": ""
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -12599,7 +12647,7 @@
       "position": 658,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -12612,7 +12660,7 @@
       "position": 659,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -12625,7 +12673,7 @@
       "position": 660,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -12638,7 +12686,7 @@
       "position": 661,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -12651,7 +12699,7 @@
       "position": 662,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -12664,7 +12712,7 @@
       "position": 663,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -12684,7 +12732,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -12704,7 +12752,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -12724,7 +12772,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -12744,7 +12792,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -12764,7 +12812,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -12784,7 +12832,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -12804,7 +12852,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -12824,7 +12872,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -12844,7 +12892,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -12864,7 +12912,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -12884,7 +12932,7 @@
           ]
         },
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -12897,7 +12945,7 @@
       "position": 675,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -12912,7 +12960,7 @@
           ]
         },
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "H",
             "R"
@@ -12928,7 +12976,7 @@
       "position": 676,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -12941,7 +12989,7 @@
       "position": 677,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -12949,7 +12997,7 @@
           "description": "Also known as S1D"
         },
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "H"
           ],
@@ -12964,7 +13012,7 @@
       "position": 678,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -12977,7 +13025,7 @@
       "position": 679,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -12990,7 +13038,7 @@
       "position": 680,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -13003,7 +13051,7 @@
       "position": 681,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -13011,7 +13059,7 @@
           "description": ""
         },
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "L"
           ],
@@ -13026,7 +13074,7 @@
       "position": 682,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "S1/S2",
           "citationIds": [
             "2.1"
@@ -13039,7 +13087,7 @@
       "position": 683,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "S1/S2",
           "citationIds": [
             "2.1"
@@ -13052,7 +13100,7 @@
       "position": 684,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "S1/S2",
           "citationIds": [
             "2.1"
@@ -13065,7 +13113,7 @@
       "position": 685,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "S1/S2",
           "citationIds": [
             "2.1"
@@ -13078,7 +13126,7 @@
       "position": 686,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "citationIds": [
             "2.1"
           ],
@@ -13091,7 +13139,7 @@
       "position": 688,
       "annotations": [
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "V"
           ],
@@ -13772,7 +13820,7 @@
           ]
         },
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "V"
           ],
@@ -13943,7 +13991,7 @@
       "position": 788,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "FP",
           "citationIds": [
             "2.1"
@@ -13962,7 +14010,7 @@
       "position": 789,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "FP",
           "citationIds": [
             "2.1"
@@ -13981,7 +14029,7 @@
       "position": 790,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "FP",
           "citationIds": [
             "2.1"
@@ -14000,7 +14048,7 @@
       "position": 791,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "FP",
           "citationIds": [
             "2.1"
@@ -14012,7 +14060,7 @@
       "position": 792,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "FP",
           "citationIds": [
             "2.1"
@@ -14024,7 +14072,7 @@
       "position": 793,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "FP",
           "citationIds": [
             "2.1"
@@ -14036,7 +14084,7 @@
       "position": 794,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "FP",
           "citationIds": [
             "2.1"
@@ -14048,7 +14096,7 @@
       "position": 795,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "FP",
           "citationIds": [
             "2.1"
@@ -14060,7 +14108,7 @@
       "position": 796,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "FP",
           "citationIds": [
             "2.1"
@@ -14072,7 +14120,7 @@
       "position": 797,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "FP",
           "citationIds": [
             "2.1"
@@ -14084,7 +14132,7 @@
       "position": 798,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "FP",
           "citationIds": [
             "2.1"
@@ -14096,7 +14144,7 @@
       "position": 799,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "FP",
           "citationIds": [
             "2.1"
@@ -14108,7 +14156,7 @@
       "position": 800,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "FP",
           "citationIds": [
             "2.1"
@@ -14120,7 +14168,7 @@
       "position": 801,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "FP",
           "citationIds": [
             "2.1"
@@ -14141,7 +14189,7 @@
       "position": 802,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "FP",
           "citationIds": [
             "2.1"
@@ -14153,7 +14201,7 @@
       "position": 803,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "FP",
           "citationIds": [
             "2.1"
@@ -14165,7 +14213,7 @@
       "position": 804,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "FP",
           "citationIds": [
             "2.1"
@@ -14177,7 +14225,7 @@
       "position": 805,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "FP",
           "citationIds": [
             "2.1"
@@ -14189,7 +14237,7 @@
       "position": 806,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "FP",
           "citationIds": [
             "2.1"
@@ -14369,7 +14417,7 @@
       "position": 829,
       "annotations": [
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "T"
           ],
@@ -14415,7 +14463,7 @@
           ]
         },
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "Y"
           ],
@@ -14466,7 +14514,7 @@
       "position": 845,
       "annotations": [
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "S"
           ],
@@ -14481,7 +14529,7 @@
       "position": 846,
       "annotations": [
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "V"
           ],
@@ -14496,7 +14544,7 @@
       "position": 847,
       "annotations": [
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "K"
           ],
@@ -14614,7 +14662,7 @@
           ]
         },
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "I"
           ],
@@ -14804,7 +14852,7 @@
           ]
         },
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "S"
           ],
@@ -14910,7 +14958,7 @@
           ]
         },
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "I"
           ],
@@ -15033,7 +15081,7 @@
       "position": 912,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -15045,7 +15093,7 @@
       "position": 913,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -15057,7 +15105,7 @@
       "position": 914,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -15076,7 +15124,7 @@
       "position": 915,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -15095,7 +15143,7 @@
       "position": 916,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -15114,7 +15162,7 @@
       "position": 917,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -15133,7 +15181,7 @@
       "position": 918,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -15152,7 +15200,7 @@
       "position": 919,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -15171,7 +15219,7 @@
       "position": 920,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -15190,7 +15238,7 @@
       "position": 921,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -15209,7 +15257,7 @@
       "position": 922,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -15228,7 +15276,7 @@
       "position": 923,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -15247,7 +15295,7 @@
       "position": 924,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -15266,7 +15314,7 @@
       "position": 925,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -15285,7 +15333,7 @@
       "position": 926,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -15304,7 +15352,7 @@
       "position": 927,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -15323,7 +15371,7 @@
       "position": 928,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -15342,7 +15390,7 @@
       "position": 929,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -15361,7 +15409,7 @@
       "position": 930,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -15380,7 +15428,7 @@
       "position": 931,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -15399,7 +15447,7 @@
       "position": 932,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -15418,7 +15466,7 @@
       "position": 933,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -15437,7 +15485,7 @@
       "position": 934,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -15456,7 +15504,7 @@
       "position": 935,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -15475,7 +15523,7 @@
       "position": 936,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -15489,7 +15537,7 @@
           ]
         },
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "Y"
           ],
@@ -15504,7 +15552,7 @@
       "position": 937,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -15523,7 +15571,7 @@
       "position": 938,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -15542,7 +15590,7 @@
       "position": 939,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -15556,7 +15604,7 @@
           ]
         },
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "F"
           ],
@@ -15571,7 +15619,7 @@
       "position": 940,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -15590,7 +15638,7 @@
       "position": 941,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -15602,7 +15650,7 @@
       "position": 942,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -15614,7 +15662,7 @@
       "position": 943,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -15626,7 +15674,7 @@
       "position": 944,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -15638,7 +15686,7 @@
       "position": 945,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -15650,7 +15698,7 @@
       "position": 946,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -15669,7 +15717,7 @@
       "position": 947,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -15688,7 +15736,7 @@
       "position": 948,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -15707,7 +15755,7 @@
       "position": 949,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -15726,7 +15774,7 @@
       "position": 950,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -15745,7 +15793,7 @@
       "position": 951,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -15764,7 +15812,7 @@
       "position": 952,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -15783,7 +15831,7 @@
       "position": 953,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -15802,7 +15850,7 @@
       "position": 954,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -15821,7 +15869,7 @@
       "position": 955,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -15840,7 +15888,7 @@
       "position": 956,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -15859,7 +15907,7 @@
       "position": 957,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -15878,7 +15926,7 @@
       "position": 958,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -15897,7 +15945,7 @@
       "position": 959,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -15916,7 +15964,7 @@
       "position": 960,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -15935,7 +15983,7 @@
       "position": 961,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -15954,7 +16002,7 @@
       "position": 962,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -15973,7 +16021,7 @@
       "position": 963,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -15992,7 +16040,7 @@
       "position": 964,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -16011,7 +16059,7 @@
       "position": 965,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -16030,7 +16078,7 @@
       "position": 966,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -16049,7 +16097,7 @@
       "position": 967,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -16068,7 +16116,7 @@
       "position": 968,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -16080,7 +16128,7 @@
       "position": 969,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -16092,7 +16140,7 @@
       "position": 970,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -16104,7 +16152,7 @@
       "position": 971,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -16116,7 +16164,7 @@
       "position": 972,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -16128,7 +16176,7 @@
       "position": 973,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -16140,7 +16188,7 @@
       "position": 974,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -16152,7 +16200,7 @@
       "position": 975,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -16164,7 +16212,7 @@
       "position": 976,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -16176,7 +16224,7 @@
       "position": 977,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -16195,7 +16243,7 @@
       "position": 978,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -16214,7 +16262,7 @@
       "position": 979,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -16233,7 +16281,7 @@
       "position": 980,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -16252,7 +16300,7 @@
       "position": 981,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -16271,7 +16319,7 @@
       "position": 982,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -16283,7 +16331,7 @@
       "position": 983,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -16295,7 +16343,7 @@
       "position": 984,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR1",
           "citationIds": [
             "2.1"
@@ -16722,7 +16770,7 @@
           ]
         },
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "V"
           ],
@@ -17152,7 +17200,7 @@
           ]
         },
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "N"
           ],
@@ -17231,7 +17279,7 @@
           ]
         },
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "S"
           ],
@@ -17411,7 +17459,7 @@
           ]
         },
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "L"
           ],
@@ -17517,7 +17565,7 @@
           ]
         },
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "L"
           ],
@@ -17544,7 +17592,7 @@
       "position": 1124,
       "annotations": [
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "V"
           ],
@@ -17640,7 +17688,7 @@
       "position": 1146,
       "annotations": [
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "H"
           ],
@@ -17669,7 +17717,7 @@
       "position": 1162,
       "annotations": [
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "L"
           ],
@@ -17684,7 +17732,7 @@
       "position": 1163,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR2",
           "citationIds": [
             "2.1"
@@ -17696,7 +17744,7 @@
       "position": 1164,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR2",
           "citationIds": [
             "2.1"
@@ -17708,7 +17756,7 @@
       "position": 1165,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR2",
           "citationIds": [
             "2.1"
@@ -17720,7 +17768,7 @@
       "position": 1166,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR2",
           "citationIds": [
             "2.1"
@@ -17732,7 +17780,7 @@
       "position": 1167,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR2",
           "citationIds": [
             "2.1"
@@ -17744,7 +17792,7 @@
       "position": 1168,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR2",
           "citationIds": [
             "2.1"
@@ -17756,7 +17804,7 @@
       "position": 1169,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR2",
           "citationIds": [
             "2.1"
@@ -17768,7 +17816,7 @@
       "position": 1170,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR2",
           "citationIds": [
             "2.1"
@@ -17780,7 +17828,7 @@
       "position": 1171,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR2",
           "citationIds": [
             "2.1"
@@ -17792,7 +17840,7 @@
       "position": 1172,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR2",
           "citationIds": [
             "2.1"
@@ -17804,7 +17852,7 @@
       "position": 1173,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR2",
           "citationIds": [
             "2.1"
@@ -17825,7 +17873,7 @@
       "position": 1174,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR2",
           "citationIds": [
             "2.1"
@@ -17837,7 +17885,7 @@
       "position": 1175,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR2",
           "citationIds": [
             "2.1"
@@ -17849,14 +17897,14 @@
       "position": 1176,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR2",
           "citationIds": [
             "2.1"
           ]
         },
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "F"
           ],
@@ -17871,7 +17919,7 @@
       "position": 1177,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR2",
           "citationIds": [
             "2.1"
@@ -17883,7 +17931,7 @@
       "position": 1178,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR2",
           "citationIds": [
             "2.1"
@@ -17895,7 +17943,7 @@
       "position": 1179,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR2",
           "citationIds": [
             "2.1"
@@ -17907,7 +17955,7 @@
       "position": 1180,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR2",
           "citationIds": [
             "2.1"
@@ -17919,7 +17967,7 @@
       "position": 1181,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR2",
           "citationIds": [
             "2.1"
@@ -17931,7 +17979,7 @@
       "position": 1182,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR2",
           "citationIds": [
             "2.1"
@@ -17943,7 +17991,7 @@
       "position": 1183,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR2",
           "citationIds": [
             "2.1"
@@ -17955,7 +18003,7 @@
       "position": 1184,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR2",
           "citationIds": [
             "2.1"
@@ -17967,7 +18015,7 @@
       "position": 1185,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR2",
           "citationIds": [
             "2.1"
@@ -17979,7 +18027,7 @@
       "position": 1186,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR2",
           "citationIds": [
             "2.1"
@@ -17991,7 +18039,7 @@
       "position": 1187,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR2",
           "citationIds": [
             "2.1"
@@ -18003,7 +18051,7 @@
       "position": 1188,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR2",
           "citationIds": [
             "2.1"
@@ -18015,7 +18063,7 @@
       "position": 1189,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR2",
           "citationIds": [
             "2.1"
@@ -18027,7 +18075,7 @@
       "position": 1190,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR2",
           "citationIds": [
             "2.1"
@@ -18039,7 +18087,7 @@
       "position": 1191,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR2",
           "citationIds": [
             "2.1"
@@ -18051,7 +18099,7 @@
       "position": 1192,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR2",
           "citationIds": [
             "2.1"
@@ -18063,7 +18111,7 @@
       "position": 1193,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR2",
           "citationIds": [
             "2.1"
@@ -18075,7 +18123,7 @@
       "position": 1194,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR2",
           "citationIds": [
             "2.1"
@@ -18096,7 +18144,7 @@
       "position": 1195,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR2",
           "citationIds": [
             "2.1"
@@ -18108,7 +18156,7 @@
       "position": 1196,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR2",
           "citationIds": [
             "2.1"
@@ -18120,7 +18168,7 @@
       "position": 1197,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR2",
           "citationIds": [
             "2.1"
@@ -18132,7 +18180,7 @@
       "position": 1198,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR2",
           "citationIds": [
             "2.1"
@@ -18144,7 +18192,7 @@
       "position": 1199,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR2",
           "citationIds": [
             "2.1"
@@ -18156,7 +18204,7 @@
       "position": 1200,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR2",
           "citationIds": [
             "2.1"
@@ -18168,7 +18216,7 @@
       "position": 1201,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR2",
           "citationIds": [
             "2.1"
@@ -18180,7 +18228,7 @@
       "position": 1202,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR2",
           "citationIds": [
             "2.1"
@@ -18192,7 +18240,7 @@
       "position": 1203,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR2",
           "citationIds": [
             "2.1"
@@ -18204,7 +18252,7 @@
       "position": 1204,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR2",
           "citationIds": [
             "2.1"
@@ -18216,7 +18264,7 @@
       "position": 1205,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR2",
           "citationIds": [
             "2.1"
@@ -18228,7 +18276,7 @@
       "position": 1206,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR2",
           "citationIds": [
             "2.1"
@@ -18240,7 +18288,7 @@
       "position": 1207,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR2",
           "citationIds": [
             "2.1"
@@ -18252,14 +18300,14 @@
       "position": 1208,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR2",
           "citationIds": [
             "2.1"
           ]
         },
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "H"
           ],
@@ -18274,7 +18322,7 @@
       "position": 1209,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR2",
           "citationIds": [
             "2.1"
@@ -18286,7 +18334,7 @@
       "position": 1210,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR2",
           "citationIds": [
             "2.1"
@@ -18298,7 +18346,7 @@
       "position": 1211,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR2",
           "citationIds": [
             "2.1"
@@ -18310,7 +18358,7 @@
       "position": 1212,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR2",
           "citationIds": [
             "2.1"
@@ -18322,7 +18370,7 @@
       "position": 1213,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "HR2",
           "citationIds": [
             "2.1"
@@ -18334,7 +18382,7 @@
       "position": 1214,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "TM",
           "citationIds": [
             "2.1"
@@ -18346,7 +18394,7 @@
       "position": 1215,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "TM",
           "citationIds": [
             "2.1"
@@ -18358,7 +18406,7 @@
       "position": 1216,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "TM",
           "citationIds": [
             "2.1"
@@ -18370,7 +18418,7 @@
       "position": 1217,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "TM",
           "citationIds": [
             "2.1"
@@ -18382,7 +18430,7 @@
       "position": 1218,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "TM",
           "citationIds": [
             "2.1"
@@ -18394,14 +18442,14 @@
       "position": 1219,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "TM",
           "citationIds": [
             "2.1"
           ]
         },
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "C",
             "V"
@@ -18417,7 +18465,7 @@
       "position": 1220,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "TM",
           "citationIds": [
             "2.1"
@@ -18429,7 +18477,7 @@
       "position": 1221,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "TM",
           "citationIds": [
             "2.1"
@@ -18441,7 +18489,7 @@
       "position": 1222,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "TM",
           "citationIds": [
             "2.1"
@@ -18453,7 +18501,7 @@
       "position": 1223,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "TM",
           "citationIds": [
             "2.1"
@@ -18465,7 +18513,7 @@
       "position": 1224,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "TM",
           "citationIds": [
             "2.1"
@@ -18477,7 +18525,7 @@
       "position": 1225,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "TM",
           "citationIds": [
             "2.1"
@@ -18489,7 +18537,7 @@
       "position": 1226,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "TM",
           "citationIds": [
             "2.1"
@@ -18501,7 +18549,7 @@
       "position": 1227,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "TM",
           "citationIds": [
             "2.1"
@@ -18513,7 +18561,7 @@
       "position": 1228,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "TM",
           "citationIds": [
             "2.1"
@@ -18525,14 +18573,14 @@
       "position": 1229,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "TM",
           "citationIds": [
             "2.1"
           ]
         },
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "I"
           ],
@@ -18547,7 +18595,7 @@
       "position": 1230,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "TM",
           "citationIds": [
             "2.1"
@@ -18559,7 +18607,7 @@
       "position": 1231,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "TM",
           "citationIds": [
             "2.1"
@@ -18571,7 +18619,7 @@
       "position": 1232,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "TM",
           "citationIds": [
             "2.1"
@@ -18583,7 +18631,7 @@
       "position": 1233,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "TM",
           "citationIds": [
             "2.1"
@@ -18595,7 +18643,7 @@
       "position": 1234,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "TM",
           "citationIds": [
             "2.1"
@@ -18607,7 +18655,7 @@
       "position": 1235,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "TM",
           "citationIds": [
             "2.1"
@@ -18619,7 +18667,7 @@
       "position": 1236,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "TM",
           "citationIds": [
             "2.1"
@@ -18631,7 +18679,7 @@
       "position": 1237,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "TM",
           "citationIds": [
             "2.1"
@@ -18643,7 +18691,7 @@
       "position": 1238,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "TM/CP",
           "citationIds": [
             "2.1"
@@ -18651,7 +18699,7 @@
           "description": "TM/CP overlapping"
         },
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "I"
           ],
@@ -18666,7 +18714,7 @@
       "position": 1239,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "TM/CP",
           "citationIds": [
             "2.1"
@@ -18679,7 +18727,7 @@
       "position": 1240,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "TM/CP",
           "citationIds": [
             "2.1"
@@ -18692,7 +18740,7 @@
       "position": 1241,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "TM/CP",
           "citationIds": [
             "2.1"
@@ -18705,7 +18753,7 @@
       "position": 1242,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "TM/CP",
           "citationIds": [
             "2.1"
@@ -18718,7 +18766,7 @@
       "position": 1243,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "TM/CP",
           "citationIds": [
             "2.1"
@@ -18731,7 +18779,7 @@
       "position": 1244,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "TM/CP",
           "citationIds": [
             "2.1"
@@ -18744,7 +18792,7 @@
       "position": 1245,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "CP",
           "citationIds": [
             "2.1"
@@ -18757,7 +18805,7 @@
       "position": 1246,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "CP",
           "citationIds": [
             "2.1"
@@ -18770,7 +18818,7 @@
       "position": 1247,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "CP",
           "citationIds": [
             "2.1"
@@ -18783,7 +18831,7 @@
       "position": 1248,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "CP",
           "citationIds": [
             "2.1"
@@ -18796,7 +18844,7 @@
       "position": 1249,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "CP",
           "citationIds": [
             "2.1"
@@ -18809,7 +18857,7 @@
       "position": 1250,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "CP",
           "citationIds": [
             "2.1"
@@ -18822,7 +18870,7 @@
       "position": 1251,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "CP",
           "citationIds": [
             "2.1"
@@ -18835,7 +18883,7 @@
       "position": 1252,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "CP",
           "citationIds": [
             "2.1"
@@ -18843,7 +18891,7 @@
           "description": ""
         },
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "P"
           ],
@@ -18858,7 +18906,7 @@
       "position": 1253,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "CP",
           "citationIds": [
             "2.1"
@@ -18871,7 +18919,7 @@
       "position": 1254,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "CP",
           "citationIds": [
             "2.1"
@@ -18884,7 +18932,7 @@
       "position": 1255,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "CP",
           "citationIds": [
             "2.1"
@@ -18897,7 +18945,7 @@
       "position": 1256,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "CP",
           "citationIds": [
             "2.1"
@@ -18910,7 +18958,7 @@
       "position": 1257,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "CP",
           "citationIds": [
             "2.1"
@@ -18923,7 +18971,7 @@
       "position": 1258,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "CP",
           "citationIds": [
             "2.1"
@@ -18936,7 +18984,7 @@
       "position": 1259,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "CP",
           "citationIds": [
             "2.1"
@@ -18949,7 +18997,7 @@
       "position": 1260,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "CP",
           "citationIds": [
             "2.1"
@@ -18962,7 +19010,7 @@
       "position": 1261,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "CP",
           "citationIds": [
             "2.1"
@@ -18975,7 +19023,7 @@
       "position": 1262,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "CP",
           "citationIds": [
             "2.1"
@@ -18988,7 +19036,7 @@
       "position": 1263,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "CP",
           "citationIds": [
             "2.1"
@@ -18996,7 +19044,7 @@
           "description": ""
         },
         {
-          "name": "polymorphic position",
+          "name": "var2000",
           "aminoAcids": [
             "L"
           ],
@@ -19011,7 +19059,7 @@
       "position": 1264,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "CP",
           "citationIds": [
             "2.1"
@@ -19024,7 +19072,7 @@
       "position": 1265,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "CP",
           "citationIds": [
             "2.1"
@@ -19037,7 +19085,7 @@
       "position": 1266,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "CP",
           "citationIds": [
             "2.1"
@@ -19050,7 +19098,7 @@
       "position": 1267,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "CP",
           "citationIds": [
             "2.1"
@@ -19063,7 +19111,7 @@
       "position": 1268,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "CP",
           "citationIds": [
             "2.1"
@@ -19076,7 +19124,7 @@
       "position": 1269,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "CP",
           "citationIds": [
             "2.1"
@@ -19089,7 +19137,7 @@
       "position": 1270,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "CP",
           "citationIds": [
             "2.1"
@@ -19102,7 +19150,7 @@
       "position": 1271,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "CP",
           "citationIds": [
             "2.1"
@@ -19115,7 +19163,7 @@
       "position": 1272,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "CP",
           "citationIds": [
             "2.1"
@@ -19128,7 +19176,7 @@
       "position": 1273,
       "annotations": [
         {
-          "name": "landmark",
+          "name": "subdomain",
           "value": "CP",
           "citationIds": [
             "2.1"
