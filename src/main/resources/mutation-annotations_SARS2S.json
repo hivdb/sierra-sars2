@@ -64,8 +64,8 @@
     },
     {
       "name": "escapeMutants",
-      "dropdown": false,
-      "defaultAnnot": null,
+      "dropdown": true,
+      "defaultAnnot": "escape mutants Baum20",
       "multiSelect": false,
       "annotStyle": "aminoAcids"
     },
