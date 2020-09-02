@@ -1,6 +1,77 @@
 [
   {
     "mutAnnotPath": "src/main/resources/mutation-annotations_SARS2S.json",
+    "dataSourceType": "POS_ANNOTS",
+    "annotDef": {
+      "name": "subdomain",
+      "level": "position",
+      "category": "subdomain",
+      "hideCitations": "true",
+      "colorRules": []
+    },
+    "citationDefs": [
+      {
+        "author": "Wrapp",
+        "year": 2020,
+        "doi": "10.1126/science.abb2507",
+        "section": "Figure S5"
+      }
+    ],
+    "annotations": [
+      {
+        "value": "NTD",
+        "description": "N-terminal domain (S1A)",
+        "positions": [[13, 305]]
+      },
+      {
+        "value": "RBD",
+        "description": "Receptor-finding domain (S1B)",
+        "positions": [[306, 534]]
+      },
+      {
+        "value": "SD1",
+        "description": "S1C",
+        "positions": [[535, 590]]
+      },
+      {
+        "value": "SD2",
+        "description": "S1D",
+        "positions": [[591, 680]]
+      },
+      {
+        "value": "S1/S2",
+        "description": "Furin cleavage site",
+        "positions": [[681, 686]]
+      },
+      {
+        "value": "FP",
+        "description": "Fusion peptide",
+        "positions": [[788, 806]]
+      },
+      {
+        "value": "HR1",
+        "description": "Heptad repeat 1",
+        "positions": [[912, 984]]
+      },
+      {
+        "value": "HR2",
+        "description": "Heptad repeat 2",
+        "positions": [[1163, 1213]]
+      },
+      {
+        "value": "TM",
+        "description": "Transmembrane",
+        "positions": [[1214, 1237]]
+      },
+      {
+        "value": "CP",
+        "description": "Cytoplasmic",
+        "positions": [[1238, 1273]]
+      }
+    ]
+  },
+  {
+    "mutAnnotPath": "src/main/resources/mutation-annotations_SARS2S.json",
     "dataSourcePath": "src/main/resources/aapcnt/rx-all_taxon-SARS2.json",
     "dataSourceType": "AAPCNT",
     "geneDefPath": "src/main/resources/genes.json",

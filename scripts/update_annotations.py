@@ -8,23 +8,7 @@ def get_max_citation_id(citations):
     return max(cite['citationId'] for cite in citations.values())
 
 
-def update_from_aapcnt(config):
-    with open(config['mutAnnotPath']) as mut_annot_fp:
-        mutannot_data = json.load(mut_annot_fp)
-
-    with open(config['dataSourcePath']) as aapcnt_fp:
-        aapcnt_data = json.load(aapcnt_fp)
-
-    with open(config['geneDefPath']) as genedef_fp:
-        genedef_data = json.load(genedef_fp)
-        refseq = None
-        for one in genedef_data:
-            if one['name'] == config['geneDefGene']:
-                refseq = one['refSequence']
-                break
-        else:
-            raise RuntimeError('Can not locate gene')
-
+def merge_annotation_group(config, mutannot_data):
     for group in mutannot_data['annotations']:
         if group['name'] == config['annotDef']['name']:
             group.update(config['annotDef'])
@@ -34,6 +18,8 @@ def update_from_aapcnt(config):
             config['annotDef']
         )
 
+
+def merge_citations(config, mutannot_data):
     max_cite_id = get_max_citation_id(mutannot_data['citations'])
     ref_cite_ids = []
     for cite_def in config['citationDefs']:
@@ -52,6 +38,89 @@ def update_from_aapcnt(config):
                 **cite_def
             }
             ref_cite_ids.append(full_cite_id)
+    return ref_cite_ids
+
+
+def update_pos_annots(config):
+    with open(config['mutAnnotPath']) as mut_annot_fp:
+        mutannot_data = json.load(mut_annot_fp)
+    merge_annotation_group(config, mutannot_data)
+    ref_cite_ids = merge_citations(config, mutannot_data)
+    # pos_lookup = {p['position']: p for p in mutannot_data['positions']}
+    annot_name = config['annotDef']['name']
+    pos_lookup = {}
+    for annot in config['annotations']:
+        value = annot['value']
+        description = annot.get('description', '')
+        for pos_range in annot['positions']:
+            if isinstance(pos_range, int):
+                pos_range = [pos_range, pos_range]
+            for pos in range(pos_range[0], pos_range[1] + 1):
+                pos_lookup[pos] = {
+                    'value': value,
+                    'description': description
+                }
+    for posdata in mutannot_data['positions']:
+        pos = posdata['position']
+        annotdata = pos_lookup.pop(pos, None)
+        if annotdata:
+            target_annot = None
+            for annot in posdata['annotations']:
+                if annot['name'] == annot_name:
+                    # update annotation
+                    target_annot = annot
+                    break
+            else:
+                target_annot = {
+                    'name': annot_name
+                }
+                # create annotation
+                posdata['annotations'].append(target_annot)
+            target_annot['citationIds'] = ref_cite_ids
+            target_annot.update(annotdata)
+        else:
+            # delete annotation
+            posdata['annotations'] = [
+                annot for annot in posdata['annotations']
+                if annot['name'] == annot_name
+            ]
+    if pos_lookup:
+        for pos, annotdata in pos_lookup.items():
+            # create position
+            mutannot_data['positions'].append({
+                'position': pos,
+                'annotations': [{
+                    'name': annot_name,
+                    'citationIds': ref_cite_ids,
+                    **annotdata
+                }]
+            })
+    mutannot_data['positions'] = sorted(
+        mutannot_data['positions'], key=lambda p: p['position']
+    )
+    with open(config['mutAnnotPath'], 'w') as mut_annot_fp:
+        json.dump(mutannot_data, mut_annot_fp, indent=2)
+
+
+def update_from_aapcnt(config):
+    with open(config['mutAnnotPath']) as mut_annot_fp:
+        mutannot_data = json.load(mut_annot_fp)
+
+    with open(config['dataSourcePath']) as aapcnt_fp:
+        aapcnt_data = json.load(aapcnt_fp)
+
+    with open(config['geneDefPath']) as genedef_fp:
+        genedef_data = json.load(genedef_fp)
+        refseq = None
+        for one in genedef_data:
+            if one['name'] == config['geneDefGene']:
+                refseq = one['refSequence']
+                break
+        else:
+            raise RuntimeError('Can not locate gene')
+
+    merge_annotation_group(config, mutannot_data)
+    ref_cite_ids = merge_citations(config, mutannot_data)
 
     pos_lookup = {p['position']: p for p in mutannot_data['positions']}
     for aapcnt in aapcnt_data:
@@ -98,6 +167,8 @@ def main():
     for config in all_config:
         if config['dataSourceType'] == 'AAPCNT':
             update_from_aapcnt(config)
+        elif config['dataSourceType'] == 'POS_ANNOTS':
+            update_pos_annots(config)
 
 
 if __name__ == '__main__':
