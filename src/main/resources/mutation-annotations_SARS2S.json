@@ -198,6 +198,30 @@
       "category": "polymorphism",
       "hideCitations": true,
       "colorRules": []
+    },
+    {
+      "name": "escape mutants Baum20",
+      "label": "Baum, 2020",
+      "level": "aminoAcid",
+      "category": "escapeMutants",
+      "hideCitations": true,
+      "colorRules": []
+    },
+    {
+      "name": "escape mutants Weisblum20",
+      "label": "Weisblum, 2020",
+      "level": "aminoAcid",
+      "category": "escapeMutants",
+      "hideCitations": true,
+      "colorRules": []
+    },
+    {
+      "name": "escape mutants Rogers20",
+      "label": "Rogers, 2020",
+      "level": "aminoAcid",
+      "category": "escapeMutants",
+      "hideCitations": true,
+      "colorRules": []
     }
   ],
   "citations": {
@@ -408,6 +432,30 @@
       "year": 2020,
       "doi": "10.1126/science.abd0827",
       "section": "PDB: 6XDG"
+    },
+    "25.1": {
+      "citationId": 25,
+      "sectionId": 1,
+      "author": "Baum",
+      "year": 2020,
+      "doi": "10.1126/science.abd0831",
+      "section": "Figure 2"
+    },
+    "26.1": {
+      "citationId": 26,
+      "sectionId": 1,
+      "author": "Weisblum",
+      "year": 2020,
+      "doi": "10.1101/2020.07.21.214759",
+      "section": "Figure 3, 4, 6, 7"
+    },
+    "27.1": {
+      "citationId": 27,
+      "sectionId": 1,
+      "author": "Rogers",
+      "year": 2020,
+      "doi": "10.1126/science.abc7520",
+      "section": "Figure S10B"
     }
   },
   "positions": [
@@ -1580,6 +1628,15 @@
             "2.1"
           ],
           "description": "N-terminal domain (S1A)"
+        },
+        {
+          "name": "escape mutants Baum20",
+          "citationIds": [
+            "25.1"
+          ],
+          "aminoAcids": [
+            "K"
+          ]
         }
       ]
     },
@@ -1655,6 +1712,15 @@
             "2.1"
           ],
           "description": "N-terminal domain (S1A)"
+        },
+        {
+          "name": "escape mutants Baum20",
+          "citationIds": [
+            "25.1"
+          ],
+          "aminoAcids": [
+            "I"
+          ]
         }
       ]
     },
@@ -2923,6 +2989,15 @@
             "2.1"
           ],
           "description": "N-terminal domain (S1A)"
+        },
+        {
+          "name": "escape mutants Weisblum20",
+          "citationIds": [
+            "26.1"
+          ],
+          "aminoAcids": [
+            "S"
+          ]
         }
       ]
     },
@@ -2958,6 +3033,16 @@
             "2.1"
           ],
           "description": "N-terminal domain (S1A)"
+        },
+        {
+          "name": "escape mutants Weisblum20",
+          "citationIds": [
+            "26.1"
+          ],
+          "aminoAcids": [
+            "E",
+            "R"
+          ]
         }
       ]
     },
@@ -2971,6 +3056,15 @@
             "2.1"
           ],
           "description": "N-terminal domain (S1A)"
+        },
+        {
+          "name": "escape mutants Weisblum20",
+          "citationIds": [
+            "26.1"
+          ],
+          "aminoAcids": [
+            "P"
+          ]
         }
       ]
     },
@@ -4841,6 +4935,15 @@
           "citationIds": [
             "4.1"
           ]
+        },
+        {
+          "name": "escape mutants Baum20",
+          "citationIds": [
+            "25.1"
+          ],
+          "aminoAcids": [
+            "K"
+          ]
         }
       ]
     },
@@ -6493,6 +6596,16 @@
           ],
           "value": "RBD",
           "description": "Receptor-finding domain (S1B)"
+        },
+        {
+          "name": "escape mutants Weisblum20",
+          "citationIds": [
+            "26.1"
+          ],
+          "aminoAcids": [
+            "K",
+            "S"
+          ]
         }
       ]
     },
@@ -6881,6 +6994,15 @@
           "description": "",
           "citationIds": [
             "21.1"
+          ]
+        },
+        {
+          "name": "escape mutants Rogers20",
+          "citationIds": [
+            "27.1"
+          ],
+          "aminoAcids": [
+            "F"
           ]
         }
       ]
@@ -8102,6 +8224,15 @@
           ],
           "value": "REGN1093",
           "description": ""
+        },
+        {
+          "name": "escape mutants Baum20",
+          "citationIds": [
+            "25.1"
+          ],
+          "aminoAcids": [
+            "E"
+          ]
         }
       ]
     },
@@ -8644,6 +8775,15 @@
           "citationIds": [
             "21.1"
           ]
+        },
+        {
+          "name": "escape mutants Weisblum20",
+          "citationIds": [
+            "26.1"
+          ],
+          "aminoAcids": [
+            "K"
+          ]
         }
       ]
     },
@@ -8680,6 +8820,15 @@
           ],
           "value": "REGN1098",
           "description": ""
+        },
+        {
+          "name": "escape mutants Weisblum20",
+          "citationIds": [
+            "26.1"
+          ],
+          "aminoAcids": [
+            "K"
+          ]
         }
       ]
     },
@@ -8786,6 +8935,26 @@
           ],
           "value": "REGN1098",
           "description": ""
+        },
+        {
+          "name": "escape mutants Baum20",
+          "citationIds": [
+            "25.1"
+          ],
+          "aminoAcids": [
+            "Q"
+          ]
+        },
+        {
+          "name": "escape mutants Weisblum20",
+          "citationIds": [
+            "26.1"
+          ],
+          "aminoAcids": [
+            "N",
+            "Q",
+            "T"
+          ]
         }
       ]
     },
@@ -8814,6 +8983,28 @@
           ],
           "value": "REGN1098",
           "description": ""
+        },
+        {
+          "name": "escape mutants Baum20",
+          "citationIds": [
+            "25.1"
+          ],
+          "aminoAcids": [
+            "A"
+          ]
+        },
+        {
+          "name": "escape mutants Weisblum20",
+          "citationIds": [
+            "26.1"
+          ],
+          "aminoAcids": [
+            "E",
+            "G",
+            "I",
+            "K",
+            "L"
+          ]
         }
       ]
     },
@@ -8868,6 +9059,16 @@
           ],
           "value": "REGN1098",
           "description": ""
+        },
+        {
+          "name": "escape mutants Weisblum20",
+          "citationIds": [
+            "26.1"
+          ],
+          "aminoAcids": [
+            "S",
+            "V"
+          ]
         }
       ]
     },
@@ -9001,6 +9202,15 @@
           ],
           "value": "REGN1098",
           "description": ""
+        },
+        {
+          "name": "escape mutants Baum20",
+          "citationIds": [
+            "25.1"
+          ],
+          "aminoAcids": [
+            "D"
+          ]
         }
       ]
     },
@@ -9104,6 +9314,15 @@
           ],
           "value": "REGN1093",
           "description": ""
+        },
+        {
+          "name": "escape mutants Baum20",
+          "citationIds": [
+            "25.1"
+          ],
+          "aminoAcids": [
+            "F"
+          ]
         }
       ]
     },
@@ -9179,6 +9398,26 @@
           ],
           "value": "REGN1093",
           "description": ""
+        },
+        {
+          "name": "escape mutants Baum20",
+          "citationIds": [
+            "25.1"
+          ],
+          "aminoAcids": [
+            "F"
+          ]
+        },
+        {
+          "name": "escape mutants Weisblum20",
+          "citationIds": [
+            "26.1"
+          ],
+          "aminoAcids": [
+            "F",
+            "I",
+            "R"
+          ]
         }
       ]
     },
@@ -9234,6 +9473,15 @@
           ],
           "value": "REGN1093",
           "description": ""
+        },
+        {
+          "name": "escape mutants Weisblum20",
+          "citationIds": [
+            "26.1"
+          ],
+          "aminoAcids": [
+            "V"
+          ]
         }
       ]
     },
@@ -9757,6 +10005,15 @@
           ],
           "value": "REGN1093",
           "description": ""
+        },
+        {
+          "name": "escape mutants Rogers20",
+          "citationIds": [
+            "27.1"
+          ],
+          "aminoAcids": [
+            "S"
+          ]
         }
       ]
     },
@@ -9954,6 +10211,15 @@
           "citationIds": [
             "21.1"
           ]
+        },
+        {
+          "name": "escape mutants Weisblum20",
+          "citationIds": [
+            "26.1"
+          ],
+          "aminoAcids": [
+            "A"
+          ]
         }
       ]
     },
@@ -10006,6 +10272,27 @@
           ],
           "value": "REGN1093",
           "description": ""
+        },
+        {
+          "name": "escape mutants Baum20",
+          "citationIds": [
+            "25.1"
+          ],
+          "aminoAcids": [
+            "K"
+          ]
+        },
+        {
+          "name": "escape mutants Weisblum20",
+          "citationIds": [
+            "26.1"
+          ],
+          "aminoAcids": [
+            "A",
+            "D",
+            "K",
+            "Q"
+          ]
         }
       ]
     },
@@ -10043,6 +10330,15 @@
           ],
           "value": "REGN1093",
           "description": ""
+        },
+        {
+          "name": "escape mutants Baum20",
+          "citationIds": [
+            "25.1"
+          ],
+          "aminoAcids": [
+            "D"
+          ]
         }
       ]
     },
@@ -10113,6 +10409,15 @@
           ],
           "value": "REGN1093",
           "description": ""
+        },
+        {
+          "name": "escape mutants Baum20",
+          "citationIds": [
+            "25.1"
+          ],
+          "aminoAcids": [
+            "V"
+          ]
         }
       ]
     },
@@ -10326,6 +10631,25 @@
           ],
           "value": "BD23",
           "description": ""
+        },
+        {
+          "name": "escape mutants Baum20",
+          "citationIds": [
+            "25.1"
+          ],
+          "aminoAcids": [
+            "P"
+          ]
+        },
+        {
+          "name": "escape mutants Weisblum20",
+          "citationIds": [
+            "26.1"
+          ],
+          "aminoAcids": [
+            "L",
+            "S"
+          ]
         }
       ]
     },
@@ -10461,6 +10785,26 @@
           ],
           "value": "REGN1093",
           "description": ""
+        },
+        {
+          "name": "escape mutants Baum20",
+          "citationIds": [
+            "25.1"
+          ],
+          "aminoAcids": [
+            "K"
+          ]
+        },
+        {
+          "name": "escape mutants Weisblum20",
+          "citationIds": [
+            "26.1"
+          ],
+          "aminoAcids": [
+            "K",
+            "L",
+            "R"
+          ]
         }
       ]
     },
@@ -10512,6 +10856,15 @@
           ],
           "value": "BD23",
           "description": ""
+        },
+        {
+          "name": "escape mutants Weisblum20",
+          "citationIds": [
+            "26.1"
+          ],
+          "aminoAcids": [
+            "P"
+          ]
         }
       ]
     },
@@ -13413,6 +13766,15 @@
           "citationIds": [
             "21.1"
           ]
+        },
+        {
+          "name": "escape mutants Baum20",
+          "citationIds": [
+            "25.1"
+          ],
+          "aminoAcids": [
+            "Y"
+          ]
         }
       ]
     },
@@ -13916,6 +14278,15 @@
             "2.1"
           ],
           "description": "Furin cleavage site"
+        },
+        {
+          "name": "escape mutants Baum20",
+          "citationIds": [
+            "25.1"
+          ],
+          "aminoAcids": [
+            "Q"
+          ]
         }
       ]
     },
@@ -13955,6 +14326,15 @@
             "2.1"
           ],
           "description": "Furin cleavage site"
+        },
+        {
+          "name": "escape mutants Baum20",
+          "citationIds": [
+            "25.1"
+          ],
+          "aminoAcids": [
+            "S"
+          ]
         }
       ]
     },
@@ -13968,6 +14348,20 @@
           ],
           "value": "S1/S2",
           "description": "Furin cleavage site"
+        }
+      ]
+    },
+    {
+      "position": 687,
+      "annotations": [
+        {
+          "name": "escape mutants Baum20",
+          "citationIds": [
+            "25.1"
+          ],
+          "aminoAcids": [
+            "G"
+          ]
         }
       ]
     },
@@ -13987,8 +14381,674 @@
       ]
     },
     {
+      "position": 691,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b245",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 692,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b245",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 693,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b245",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 694,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b245",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 695,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b245",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 696,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b245",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 702,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b246",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 703,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b246",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 704,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b246",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 709,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "T",
+          "citationIds": [
+            "4.1"
+          ]
+        },
+        {
+          "name": "Glycan-binding residue",
+          "citationIds": [
+            "19.1",
+            "20.1"
+          ],
+          "value": "Glycan",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "position": 710,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "T",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 711,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b247",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 712,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b247",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 713,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b247",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 714,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b247",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 715,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b247",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 717,
+      "annotations": [
+        {
+          "name": "Glycan-binding residue",
+          "citationIds": [
+            "19.1",
+            "20.1"
+          ],
+          "value": "Glycan",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "position": 718,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b248",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 719,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b248",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 720,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b248",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 721,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b248",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 722,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b248",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 723,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b248",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 724,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b248",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 725,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b248",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 726,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b248",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 727,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b248",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 728,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b248",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 733,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b249",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 734,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b249",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 735,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b249",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 736,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b249",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 738,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b14",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 739,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b14",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 740,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b14",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 741,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b14",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 742,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b14",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 747,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b15",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 748,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b15",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 749,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b15",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 750,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b15",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 751,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b15",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 752,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b15",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 753,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b15",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 759,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b16",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 760,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b16",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 761,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b16",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 762,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b16",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 763,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b16",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 764,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b16",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 765,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b16",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 766,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b16",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 767,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b16",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 768,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b16",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
       "position": 769,
       "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b16",
+          "citationIds": [
+            "4.1"
+          ]
+        },
         {
           "name": "var2000",
           "aminoAcids": [
@@ -14007,6 +15067,180 @@
           "description": "",
           "citationIds": [
             "21.1"
+          ]
+        },
+        {
+          "name": "escape mutants Baum20",
+          "citationIds": [
+            "25.1"
+          ],
+          "aminoAcids": [
+            "E"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 770,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b16",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 771,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b16",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 772,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b16",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 773,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b16",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 774,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b16",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 775,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b16",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 776,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b16",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 777,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b16",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 778,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b16",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 779,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b16",
+          "citationIds": [
+            "4.1"
+          ]
+        },
+        {
+          "name": "escape mutants Baum20",
+          "citationIds": [
+            "25.1"
+          ],
+          "aminoAcids": [
+            "K"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 780,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b16",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 781,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b16",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 782,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b16",
+          "citationIds": [
+            "4.1"
           ]
         }
       ]
@@ -14289,6 +15523,174 @@
       ]
     },
     {
+      "position": 807,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b251",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 808,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b251",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 809,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "T",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 810,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "T",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 815,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b252",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 816,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b252",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 817,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b17",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 818,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b17",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 819,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b17",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 820,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b17",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 821,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b17",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 822,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b17",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 823,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b17",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 824,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b17",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
       "position": 829,
       "annotations": [
         {
@@ -14314,8 +15716,39 @@
       ]
     },
     {
+      "position": 837,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b18",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 838,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b18",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
       "position": 839,
       "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b18",
+          "citationIds": [
+            "4.1"
+          ]
+        },
         {
           "name": "var2000",
           "aminoAcids": [
@@ -14334,6 +15767,42 @@
           "description": "",
           "citationIds": [
             "21.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 840,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b18",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 841,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b18",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 842,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b18",
+          "citationIds": [
+            "4.1"
           ]
         }
       ]
@@ -14394,8 +15863,111 @@
       ]
     },
     {
+      "position": 849,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b19",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 850,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b19",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 851,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b19",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 852,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b19",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 853,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b19",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 854,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b19",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 855,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b19",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 858,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b253",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
       "position": 859,
       "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b253",
+          "citationIds": [
+            "4.1"
+          ]
+        },
         {
           "name": "var2000",
           "aminoAcids": [
@@ -14414,6 +15986,174 @@
           "description": "",
           "citationIds": [
             "21.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 860,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b253",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 861,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b253",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 867,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b110",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 868,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b110",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 869,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b110",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 870,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b110",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 871,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b110",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 872,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b110",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 873,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b110",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 874,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b110",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 875,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b110",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 876,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b110",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 877,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b110",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 878,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b110",
+          "citationIds": [
+            "4.1"
           ]
         }
       ]
@@ -14422,6 +16162,13 @@
       "position": 879,
       "annotations": [
         {
+          "name": "secondary structure",
+          "value": "\u03b110",
+          "citationIds": [
+            "4.1"
+          ]
+        },
+        {
           "name": "var2000",
           "aminoAcids": [
             "S"
@@ -14444,8 +16191,99 @@
       ]
     },
     {
+      "position": 880,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b110",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 881,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b110",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 882,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b110",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 883,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b110",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 884,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b110",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 898,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b111",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 899,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b111",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
       "position": 900,
       "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b111",
+          "citationIds": [
+            "4.1"
+          ]
+        },
         {
           "name": "var2000",
           "aminoAcids": [
@@ -14454,6 +16292,114 @@
           "description": "",
           "citationIds": [
             "21.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 901,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b111",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 902,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b111",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 903,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b111",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 904,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b111",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 905,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b111",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 906,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b111",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 907,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b111",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 908,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b111",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 909,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b111",
+          "citationIds": [
+            "4.1"
           ]
         }
       ]
@@ -15826,8 +17772,423 @@
       ]
     },
     {
+      "position": 986,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b115",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 987,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b115",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 988,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b115",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 989,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b115",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 990,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b115",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 991,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b115",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 992,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b115",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 993,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b115",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 994,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b115",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 995,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b115",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 996,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b115",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 997,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b115",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 998,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b115",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 999,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b115",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1000,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b115",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1001,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b115",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1002,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b115",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1003,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b115",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1004,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b115",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1005,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b115",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1006,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b115",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1007,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b115",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1008,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b115",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1009,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b115",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1010,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b115",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1011,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b115",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1012,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b115",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1013,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b115",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1014,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b115",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1015,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b115",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1016,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b115",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1017,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b115",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1018,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b115",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1019,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b115",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
       "position": 1020,
       "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b115",
+          "citationIds": [
+            "4.1"
+          ]
+        },
         {
           "name": "var2000",
           "aminoAcids": [
@@ -15841,8 +18202,423 @@
       ]
     },
     {
+      "position": 1021,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b115",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1022,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b115",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1023,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b115",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1024,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b115",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1025,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b115",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1026,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b115",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1027,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b115",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1028,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b115",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1029,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b115",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1030,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b115",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1047,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b254",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1048,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b254",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1049,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b254",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1050,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b254",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1051,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b254",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1052,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b254",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1053,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b254",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1054,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b254",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1055,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b254",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1056,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b254",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1057,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "T",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1058,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "T",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1059,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b255",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1060,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b255",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1061,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b255",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1062,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b255",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1063,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b255",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1064,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b255",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1065,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b255",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1066,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b255",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1067,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b255",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1068,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b255",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1069,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b255",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1072,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b256",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
       "position": 1073,
       "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b256",
+          "citationIds": [
+            "4.1"
+          ]
+        },
         {
           "name": "var2000",
           "aminoAcids": [
@@ -15861,6 +18637,63 @@
           "description": "",
           "citationIds": [
             "21.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1074,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b256",
+          "citationIds": [
+            "4.1"
+          ]
+        },
+        {
+          "name": "Glycan-binding residue",
+          "citationIds": [
+            "19.1",
+            "20.1"
+          ],
+          "value": "Glycan",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "position": 1075,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b256",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1076,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b256",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1077,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b256",
+          "citationIds": [
+            "4.1"
           ]
         }
       ]
@@ -15869,6 +18702,13 @@
       "position": 1078,
       "annotations": [
         {
+          "name": "secondary structure",
+          "value": "\u03b256",
+          "citationIds": [
+            "4.1"
+          ]
+        },
+        {
           "name": "var2000",
           "aminoAcids": [
             "S"
@@ -15886,6 +18726,164 @@
           "description": "",
           "citationIds": [
             "21.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1081,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b257",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1082,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b257",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1087,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b258",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1088,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b258",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1089,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b258",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1090,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b258",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1094,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b259",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1095,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b259",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1096,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b259",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1097,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b259",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1098,
+      "annotations": [
+        {
+          "name": "Glycan-binding residue",
+          "citationIds": [
+            "19.1",
+            "20.1"
+          ],
+          "value": "Glycan",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "position": 1102,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b260",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1103,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b260",
+          "citationIds": [
+            "4.1"
           ]
         }
       ]
@@ -15894,6 +18892,13 @@
       "position": 1104,
       "annotations": [
         {
+          "name": "secondary structure",
+          "value": "\u03b260",
+          "citationIds": [
+            "4.1"
+          ]
+        },
+        {
           "name": "var2000",
           "aminoAcids": [
             "L"
@@ -15906,8 +18911,99 @@
       ]
     },
     {
+      "position": 1105,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b260",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1113,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b261",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1114,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b261",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1117,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "T",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1118,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "T",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1119,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "T",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1120,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b262",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
       "position": 1121,
       "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b262",
+          "citationIds": [
+            "4.1"
+          ]
+        },
         {
           "name": "var2000",
           "aminoAcids": [
@@ -15926,6 +19022,18 @@
           "description": "",
           "citationIds": [
             "21.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1122,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b262",
+          "citationIds": [
+            "4.1"
           ]
         }
       ]
@@ -15946,6 +19054,101 @@
       ]
     },
     {
+      "position": 1128,
+      "annotations": [
+        {
+          "name": "escape mutants Baum20",
+          "citationIds": [
+            "25.1"
+          ],
+          "aminoAcids": [
+            "A"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1133,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b263",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1134,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b263",
+          "citationIds": [
+            "4.1"
+          ]
+        },
+        {
+          "name": "Glycan-binding residue",
+          "citationIds": [
+            "19.1",
+            "20.1"
+          ],
+          "value": "Glycan",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "position": 1142,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b75",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1143,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b75",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1144,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b75",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 1145,
+      "annotations": [
+        {
+          "name": "secondary structure",
+          "value": "\u03b75",
+          "citationIds": [
+            "4.1"
+          ]
+        }
+      ]
+    },
+    {
       "position": 1146,
       "annotations": [
         {
@@ -15957,6 +19160,20 @@
           "citationIds": [
             "21.1"
           ]
+        }
+      ]
+    },
+    {
+      "position": 1158,
+      "annotations": [
+        {
+          "name": "Glycan-binding residue",
+          "citationIds": [
+            "19.1",
+            "20.1"
+          ],
+          "value": "Glycan",
+          "description": ""
         }
       ]
     },

@@ -41,6 +41,71 @@ def merge_citations(config, mutannot_data):
     return ref_cite_ids
 
 
+def merge_annotations(positions, annot_lookup, annot_name, ref_cite_ids):
+    for posdata in positions:
+        pos = posdata['position']
+        annotdata = annot_lookup.pop(pos, None)
+        if annotdata:
+            target_annot = None
+            for annot in posdata['annotations']:
+                if annot['name'] == annot_name:
+                    target_annot = annot
+                    break
+            else:
+                target_annot = {
+                    'name': annot_name
+                }
+                posdata['annotations'].append(target_annot)
+            target_annot['citationIds'] = ref_cite_ids
+            target_annot.update(annotdata)
+        else:
+            # delete annotation
+            posdata['annotations'] = [
+                annot for annot in posdata['annotations']
+                if annot['name'] != annot_name
+            ]
+    if annot_lookup:
+        for pos, annotdata in annot_lookup.items():
+            # create position
+            positions.append({
+                'position': pos,
+                'annotations': [{
+                    'name': annot_name,
+                    'citationIds': ref_cite_ids,
+                    **annotdata
+                }]
+            })
+    return sorted(positions, key=lambda p: p['position'])
+
+
+def update_aa_annots(config):
+    with open(config['mutAnnotPath']) as mut_annot_fp:
+        mutannot_data = json.load(mut_annot_fp)
+
+    with open(config['dataSourcePath']) as aapcnt_fp:
+        annots = json.load(aapcnt_fp)
+
+    merge_annotation_group(config, mutannot_data)
+    ref_cite_ids = merge_citations(config, mutannot_data)
+
+    annot_name = config['annotDef']['name']
+    pos_lookup = {}
+    for annot in annots:
+        pos = annot['position']
+        aas = annot[config['dataSourceAAColumn']]
+        if not aas:
+            continue
+        aas = sorted(aas)
+        pos_lookup[pos] = {
+            'aminoAcids': aas
+        }
+    mutannot_data['positions'] = merge_annotations(
+        mutannot_data['positions'], pos_lookup, annot_name, ref_cite_ids
+    )
+    with open(config['mutAnnotPath'], 'w') as mut_annot_fp:
+        json.dump(mutannot_data, mut_annot_fp, indent=2)
+
+
 def update_pos_annots(config):
     with open(config['mutAnnotPath']) as mut_annot_fp:
         mutannot_data = json.load(mut_annot_fp)
@@ -60,43 +125,8 @@ def update_pos_annots(config):
                     'value': value,
                     'description': description
                 }
-    for posdata in mutannot_data['positions']:
-        pos = posdata['position']
-        annotdata = pos_lookup.pop(pos, None)
-        if annotdata:
-            target_annot = None
-            for annot in posdata['annotations']:
-                if annot['name'] == annot_name:
-                    # update annotation
-                    target_annot = annot
-                    break
-            else:
-                target_annot = {
-                    'name': annot_name
-                }
-                # create annotation
-                posdata['annotations'].append(target_annot)
-            target_annot['citationIds'] = ref_cite_ids
-            target_annot.update(annotdata)
-        else:
-            # delete annotation
-            posdata['annotations'] = [
-                annot for annot in posdata['annotations']
-                if annot['name'] == annot_name
-            ]
-    if pos_lookup:
-        for pos, annotdata in pos_lookup.items():
-            # create position
-            mutannot_data['positions'].append({
-                'position': pos,
-                'annotations': [{
-                    'name': annot_name,
-                    'citationIds': ref_cite_ids,
-                    **annotdata
-                }]
-            })
-    mutannot_data['positions'] = sorted(
-        mutannot_data['positions'], key=lambda p: p['position']
+    mutannot_data['positions'] = merge_annotations(
+        mutannot_data['positions'], pos_lookup, annot_name, ref_cite_ids
     )
     with open(config['mutAnnotPath'], 'w') as mut_annot_fp:
         json.dump(mutannot_data, mut_annot_fp, indent=2)
@@ -169,6 +199,8 @@ def main():
             update_from_aapcnt(config)
         elif config['dataSourceType'] == 'POS_ANNOTS':
             update_pos_annots(config)
+        elif config['dataSourceType'] == 'AA_ANNOTS':
+            update_aa_annots(config)
 
 
 if __name__ == '__main__':

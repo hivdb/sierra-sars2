@@ -72,6 +72,94 @@
   },
   {
     "mutAnnotPath": "src/main/resources/mutation-annotations_SARS2S.json",
+    "dataSourcePath": "scripts/escape-mutants-S.json",
+    "dataSourceType": "AA_ANNOTS",
+    "annotDef": {
+      "name": "escape mutants Baum20",
+      "label": "Baum, 2020",
+      "level": "aminoAcid",
+      "category": "escapeMutants",
+      "hideCitations": "false",
+      "colorRules": []
+    },
+    "citationDefs": [
+      {
+        "author": "Baum",
+        "year": 2020,
+        "doi": "10.1126/science.abd0831",
+        "section": "Figure 2"
+      }
+    ],
+    "dataSourceAAColumn": "Baum20"
+  },
+  {
+    "mutAnnotPath": "src/main/resources/mutation-annotations_SARS2S.json",
+    "dataSourcePath": "scripts/escape-mutants-S.json",
+    "dataSourceType": "AA_ANNOTS",
+    "annotDef": {
+      "name": "escape mutants Weisblum20",
+      "label": "Weisblum, 2020",
+      "level": "aminoAcid",
+      "category": "escapeMutants",
+      "hideCitations": "false",
+      "colorRules": []
+    },
+    "citationDefs": [
+      {
+        "author": "Weisblum",
+        "year": 2020,
+        "doi": "10.1101/2020.07.21.214759",
+        "section": "Figure 3, 4, 6, 7"
+      }
+    ],
+    "dataSourceAAColumn": "Weisblum20"
+  },
+  {
+    "mutAnnotPath": "src/main/resources/mutation-annotations_SARS2S.json",
+    "dataSourcePath": "scripts/escape-mutants-S.json",
+    "dataSourceType": "AA_ANNOTS",
+    "annotDef": {
+      "name": "escape mutants Weisblum20",
+      "label": "Weisblum, 2020",
+      "level": "aminoAcid",
+      "category": "escapeMutants",
+      "hideCitations": "false",
+      "colorRules": []
+    },
+    "citationDefs": [
+      {
+        "author": "Weisblum",
+        "year": 2020,
+        "doi": "10.1101/2020.07.21.214759",
+        "section": "Figure 3, 4, 6, 7"
+      }
+    ],
+    "dataSourceAAColumn": "Weisblum20"
+  },
+  {
+    "mutAnnotPath": "src/main/resources/mutation-annotations_SARS2S.json",
+    "dataSourcePath": "scripts/escape-mutants-S.json",
+    "dataSourceType": "AA_ANNOTS",
+    "annotDef": {
+      "name": "escape mutants Rogers20",
+      "label": "Rogers, 2020",
+      "level": "aminoAcid",
+      "category": "escapeMutants",
+      "hideCitations": "false",
+      "colorRules": []
+    },
+    "citationDefs": [
+      {
+        "author": "Rogers",
+        "year": 2020,
+        "doi": "10.1126/science.abc7520",
+        "section": "Figure S10B"
+      }
+    ],
+    "dataSourceAAColumn": "Rogers20"
+  },
+  {
+    "mutAnnotPath": "src/main/resources/mutation-annotations_SARS2S.json",
     "dataSourcePath": "src/main/resources/aapcnt/rx-all_taxon-SARS2.json",
     "dataSourceType": "AAPCNT",
     "geneDefPath": "src/main/resources/genes.json",
