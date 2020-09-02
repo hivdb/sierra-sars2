@@ -64,6 +64,7 @@
     },
     {
       "name": "escapeMutants",
+      "display": "Escape mutants",
       "dropdown": true,
       "defaultAnnot": "escape mutants Baum20",
       "multiSelect": false,
