@@ -43,7 +43,7 @@
     {
       "name": "ace2",
       "dropdown": false,
-      "defaultAnnot": "ACE2-binding residue",
+      "defaultAnnot": "ACE2",
       "multiSelect": false,
       "annotStyle": "circleInBox"
     },
@@ -64,7 +64,7 @@
     },
     {
       "name": "escapeMutants",
-      "display": "Escape mutants",
+      "display": "escape mutants",
       "dropdown": true,
       "defaultAnnot": "escape mutants Baum20",
       "multiSelect": false,
@@ -101,14 +101,14 @@
       ]
     },
     {
-      "name": "ACE2-binding residue",
+      "name": "ACE2",
       "level": "position",
       "category": "ace2",
       "hideCitations": true,
       "colorRules": []
     },
     {
-      "name": "Glycan-binding residue",
+      "name": "Glycan",
       "level": "position",
       "category": "_hide",
       "hideCitations": true,
@@ -122,28 +122,28 @@
       "colorRules": []
     },
     {
-      "name": "REGN1098-binding residue",
+      "name": "REGN1098",
       "level": "position",
       "category": "antibody",
       "hideCitations": false,
       "colorRules": []
     },
     {
-      "name": "REGN1093-binding residue",
+      "name": "REGN1093",
       "level": "position",
       "category": "antibody",
       "hideCitations": false,
       "colorRules": []
     },
     {
-      "name": "CR3022-binding residue",
+      "name": "CR3022",
       "level": "position",
       "category": "antibody",
       "hideCitations": false,
       "colorRules": []
     },
     {
-      "name": "S309-binding residue",
+      "name": "S309",
       "level": "position",
       "category": "antibody",
       "hideCitations": false,
@@ -157,28 +157,28 @@
       "colorRules": []
     },
     {
-      "name": "P2B-2F6-binding residue",
+      "name": "P2B-2F6",
       "level": "position",
       "category": "antibody",
       "hideCitations": false,
       "colorRules": []
     },
     {
-      "name": "B38-binding residue",
+      "name": "B38",
       "level": "position",
       "category": "antibody",
       "hideCitations": false,
       "colorRules": []
     },
     {
-      "name": "BD23-binding residue",
+      "name": "BD23",
       "level": "position",
       "category": "antibody",
       "hideCitations": false,
       "colorRules": []
     },
     {
-      "name": "C105-binding residue",
+      "name": "C105",
       "level": "position",
       "category": "antibody",
       "hideCitations": false,
@@ -586,7 +586,7 @@
       "position": 17,
       "annotations": [
         {
-          "name": "Glycan-binding residue",
+          "name": "Glycan",
           "citationIds": [
             "19.1",
             "20.1"
@@ -739,7 +739,7 @@
       "position": 25,
       "annotations": [
         {
-          "name": "Glycan-binding residue",
+          "name": "Glycan",
           "citationIds": [
             "19.1"
           ],
@@ -1391,7 +1391,7 @@
           ]
         },
         {
-          "name": "Glycan-binding residue",
+          "name": "Glycan",
           "citationIds": [
             "19.1",
             "20.1"
@@ -1531,7 +1531,7 @@
       "position": 69,
       "annotations": [
         {
-          "name": "Glycan-binding residue",
+          "name": "Glycan",
           "citationIds": [
             "19.1"
           ],
@@ -1614,7 +1614,7 @@
       "position": 74,
       "annotations": [
         {
-          "name": "Glycan-binding residue",
+          "name": "Glycan",
           "citationIds": [
             "19.1",
             "20.1"
@@ -2304,7 +2304,7 @@
       "position": 112,
       "annotations": [
         {
-          "name": "Glycan-binding residue",
+          "name": "Glycan",
           "citationIds": [
             "19.1"
           ],
@@ -2493,7 +2493,7 @@
           ]
         },
         {
-          "name": "Glycan-binding residue",
+          "name": "Glycan",
           "citationIds": [
             "19.1"
           ],
@@ -2514,7 +2514,7 @@
           "description": "N-terminal domain (S1A)"
         },
         {
-          "name": "Glycan-binding residue",
+          "name": "Glycan",
           "citationIds": [
             "19.1",
             "20.1"
@@ -3006,7 +3006,7 @@
       "position": 149,
       "annotations": [
         {
-          "name": "Glycan-binding residue",
+          "name": "Glycan",
           "citationIds": [
             "19.1",
             "20.1"
@@ -3330,7 +3330,7 @@
           ]
         },
         {
-          "name": "Glycan-binding residue",
+          "name": "Glycan",
           "citationIds": [
             "19.1",
             "20.1"
@@ -4538,7 +4538,7 @@
           "description": "N-terminal domain (S1A)"
         },
         {
-          "name": "Glycan-binding residue",
+          "name": "Glycan",
           "citationIds": [
             "19.1",
             "20.1"
@@ -5379,7 +5379,7 @@
           ]
         },
         {
-          "name": "Glycan-binding residue",
+          "name": "Glycan",
           "citationIds": [
             "19.1",
             "20.1"
@@ -6212,7 +6212,7 @@
       "position": 331,
       "annotations": [
         {
-          "name": "Glycan-binding residue",
+          "name": "Glycan",
           "citationIds": [
             "19.1",
             "20.1"
@@ -6221,7 +6221,7 @@
           "description": ""
         },
         {
-          "name": "S309-binding residue",
+          "name": "S309",
           "citationIds": [
             "6.1"
           ],
@@ -6242,7 +6242,7 @@
       "position": 332,
       "annotations": [
         {
-          "name": "S309-binding residue",
+          "name": "S309",
           "citationIds": [
             "6.1"
           ],
@@ -6263,7 +6263,7 @@
       "position": 333,
       "annotations": [
         {
-          "name": "S309-binding residue",
+          "name": "S309",
           "value": "S309",
           "citationIds": [
             "6.1"
@@ -6284,7 +6284,7 @@
       "position": 334,
       "annotations": [
         {
-          "name": "S309-binding residue",
+          "name": "S309",
           "value": "S309",
           "citationIds": [
             "6.1"
@@ -6305,7 +6305,7 @@
       "position": 335,
       "annotations": [
         {
-          "name": "S309-binding residue",
+          "name": "S309",
           "value": "S309",
           "citationIds": [
             "6.1"
@@ -6334,7 +6334,7 @@
           "description": "Cys336-Cys361 pair"
         },
         {
-          "name": "S309-binding residue",
+          "name": "S309",
           "citationIds": [
             "6.1"
           ],
@@ -6355,7 +6355,7 @@
       "position": 337,
       "annotations": [
         {
-          "name": "S309-binding residue",
+          "name": "S309",
           "value": "S309",
           "citationIds": [
             "6.1"
@@ -6403,7 +6403,7 @@
           ]
         },
         {
-          "name": "S309-binding residue",
+          "name": "S309",
           "value": "S309",
           "citationIds": [
             "6.1"
@@ -6431,7 +6431,7 @@
           ]
         },
         {
-          "name": "S309-binding residue",
+          "name": "S309",
           "value": "S309",
           "citationIds": [
             "6.1"
@@ -6459,7 +6459,7 @@
           ]
         },
         {
-          "name": "S309-binding residue",
+          "name": "S309",
           "value": "S309",
           "citationIds": [
             "6.1"
@@ -6493,7 +6493,7 @@
       "position": 343,
       "annotations": [
         {
-          "name": "S309-binding residue",
+          "name": "S309",
           "value": "S309",
           "citationIds": [
             "6.1"
@@ -6509,7 +6509,7 @@
           "description": "Receptor-finding domain (S1B)"
         },
         {
-          "name": "Glycan-binding residue",
+          "name": "Glycan",
           "citationIds": [
             "19.1",
             "20.1"
@@ -6523,7 +6523,7 @@
       "position": 344,
       "annotations": [
         {
-          "name": "S309-binding residue",
+          "name": "S309",
           "value": "S309",
           "citationIds": [
             "6.1"
@@ -6554,7 +6554,7 @@
       "position": 345,
       "annotations": [
         {
-          "name": "S309-binding residue",
+          "name": "S309",
           "value": "S309",
           "citationIds": [
             "6.1"
@@ -6575,7 +6575,7 @@
       "position": 346,
       "annotations": [
         {
-          "name": "P2B-2F6-binding residue",
+          "name": "P2B-2F6",
           "value": "P2B-2F6",
           "citationIds": [
             "13.1"
@@ -6583,7 +6583,7 @@
           "description": ""
         },
         {
-          "name": "S309-binding residue",
+          "name": "S309",
           "value": "S309",
           "citationIds": [
             "6.1"
@@ -6705,7 +6705,7 @@
       "position": 354,
       "annotations": [
         {
-          "name": "S309-binding residue",
+          "name": "S309",
           "value": "S309",
           "citationIds": [
             "6.1"
@@ -6760,7 +6760,7 @@
           ]
         },
         {
-          "name": "S309-binding residue",
+          "name": "S309",
           "value": "S309",
           "citationIds": [
             "6.1"
@@ -6781,7 +6781,7 @@
       "position": 357,
       "annotations": [
         {
-          "name": "S309-binding residue",
+          "name": "S309",
           "value": "S309",
           "citationIds": [
             "6.1"
@@ -6816,7 +6816,7 @@
           ]
         },
         {
-          "name": "S309-binding residue",
+          "name": "S309",
           "value": "S309",
           "citationIds": [
             "6.1"
@@ -6837,7 +6837,7 @@
       "position": 359,
       "annotations": [
         {
-          "name": "S309-binding residue",
+          "name": "S309",
           "value": "S309",
           "citationIds": [
             "6.1"
@@ -6858,7 +6858,7 @@
       "position": 360,
       "annotations": [
         {
-          "name": "S309-binding residue",
+          "name": "S309",
           "value": "S309",
           "citationIds": [
             "6.1"
@@ -6879,7 +6879,7 @@
       "position": 361,
       "annotations": [
         {
-          "name": "S309-binding residue",
+          "name": "S309",
           "value": "S309",
           "citationIds": [
             "6.1"
@@ -7039,7 +7039,7 @@
           ]
         },
         {
-          "name": "CR3022-binding residue",
+          "name": "CR3022",
           "value": "CR3022",
           "citationIds": [
             "11.1",
@@ -7061,7 +7061,7 @@
       "position": 370,
       "annotations": [
         {
-          "name": "CR3022-binding residue",
+          "name": "CR3022",
           "value": "CR3022",
           "citationIds": [
             "11.1",
@@ -7078,7 +7078,7 @@
           "description": "Receptor-finding domain (S1B)"
         },
         {
-          "name": "Glycan-binding residue",
+          "name": "Glycan",
           "citationIds": [
             "19.1"
           ],
@@ -7091,7 +7091,7 @@
       "position": 371,
       "annotations": [
         {
-          "name": "CR3022-binding residue",
+          "name": "CR3022",
           "value": "CR3022",
           "citationIds": [
             "11.1",
@@ -7113,7 +7113,7 @@
       "position": 372,
       "annotations": [
         {
-          "name": "CR3022-binding residue",
+          "name": "CR3022",
           "value": "CR3022",
           "citationIds": [
             "11.1",
@@ -7148,7 +7148,7 @@
       "position": 374,
       "annotations": [
         {
-          "name": "CR3022-binding residue",
+          "name": "CR3022",
           "value": "CR3022",
           "citationIds": [
             "11.1",
@@ -7170,7 +7170,7 @@
       "position": 375,
       "annotations": [
         {
-          "name": "CR3022-binding residue",
+          "name": "CR3022",
           "value": "CR3022",
           "citationIds": [
             "11.1",
@@ -7199,7 +7199,7 @@
           ]
         },
         {
-          "name": "CR3022-binding residue",
+          "name": "CR3022",
           "value": "CR3022",
           "citationIds": [
             "11.1",
@@ -7228,7 +7228,7 @@
           ]
         },
         {
-          "name": "CR3022-binding residue",
+          "name": "CR3022",
           "value": "CR3022",
           "citationIds": [
             "11.1",
@@ -7257,7 +7257,7 @@
           ]
         },
         {
-          "name": "CR3022-binding residue",
+          "name": "CR3022",
           "value": "CR3022",
           "citationIds": [
             "11.1",
@@ -7286,7 +7286,7 @@
           ]
         },
         {
-          "name": "CR3022-binding residue",
+          "name": "CR3022",
           "value": "CR3022",
           "citationIds": [
             "11.1",
@@ -7316,7 +7316,7 @@
       "position": 380,
       "annotations": [
         {
-          "name": "CR3022-binding residue",
+          "name": "CR3022",
           "value": "CR3022",
           "citationIds": [
             "11.1",
@@ -7338,7 +7338,7 @@
       "position": 381,
       "annotations": [
         {
-          "name": "CR3022-binding residue",
+          "name": "CR3022",
           "value": "CR3022",
           "citationIds": [
             "11.1",
@@ -7360,7 +7360,7 @@
       "position": 382,
       "annotations": [
         {
-          "name": "CR3022-binding residue",
+          "name": "CR3022",
           "value": "CR3022",
           "citationIds": [
             "11.1",
@@ -7382,7 +7382,7 @@
       "position": 383,
       "annotations": [
         {
-          "name": "CR3022-binding residue",
+          "name": "CR3022",
           "value": "CR3022",
           "citationIds": [
             "11.1",
@@ -7404,7 +7404,7 @@
       "position": 384,
       "annotations": [
         {
-          "name": "CR3022-binding residue",
+          "name": "CR3022",
           "value": "CR3022",
           "citationIds": [
             "11.1",
@@ -7440,7 +7440,7 @@
           ]
         },
         {
-          "name": "CR3022-binding residue",
+          "name": "CR3022",
           "value": "CR3022",
           "citationIds": [
             "11.1",
@@ -7469,7 +7469,7 @@
           ]
         },
         {
-          "name": "CR3022-binding residue",
+          "name": "CR3022",
           "value": "CR3022",
           "citationIds": [
             "11.1",
@@ -7517,7 +7517,7 @@
       "position": 389,
       "annotations": [
         {
-          "name": "CR3022-binding residue",
+          "name": "CR3022",
           "value": "CR3022",
           "citationIds": [
             "11.1",
@@ -7539,7 +7539,7 @@
       "position": 390,
       "annotations": [
         {
-          "name": "CR3022-binding residue",
+          "name": "CR3022",
           "value": "CR3022",
           "citationIds": [
             "11.1",
@@ -7582,7 +7582,7 @@
       "position": 392,
       "annotations": [
         {
-          "name": "CR3022-binding residue",
+          "name": "CR3022",
           "value": "CR3022",
           "citationIds": [
             "11.1",
@@ -7790,7 +7790,7 @@
       "position": 403,
       "annotations": [
         {
-          "name": "B38-binding residue",
+          "name": "B38",
           "value": "B38",
           "citationIds": [
             "14.1"
@@ -7821,7 +7821,7 @@
           ]
         },
         {
-          "name": "C105-binding residue",
+          "name": "C105",
           "citationIds": [
             "23.1"
           ],
@@ -7829,7 +7829,7 @@
           "description": ""
         },
         {
-          "name": "REGN1098-binding residue",
+          "name": "REGN1098",
           "citationIds": [
             "24.1"
           ],
@@ -7837,7 +7837,7 @@
           "description": ""
         },
         {
-          "name": "REGN1093-binding residue",
+          "name": "REGN1093",
           "citationIds": [
             "24.1"
           ],
@@ -7893,7 +7893,7 @@
           "description": ""
         },
         {
-          "name": "B38-binding residue",
+          "name": "B38",
           "value": "B38",
           "citationIds": [
             "14.1"
@@ -7909,7 +7909,7 @@
           "description": "Receptor-finding domain (S1B)"
         },
         {
-          "name": "C105-binding residue",
+          "name": "C105",
           "citationIds": [
             "23.1"
           ],
@@ -7922,7 +7922,7 @@
       "position": 406,
       "annotations": [
         {
-          "name": "B38-binding residue",
+          "name": "B38",
           "value": "B38",
           "citationIds": [
             "14.1"
@@ -8014,7 +8014,7 @@
           "description": ""
         },
         {
-          "name": "B38-binding residue",
+          "name": "B38",
           "value": "B38",
           "citationIds": [
             "14.1"
@@ -8122,7 +8122,7 @@
           "description": ""
         },
         {
-          "name": "B38-binding residue",
+          "name": "B38",
           "value": "B38",
           "citationIds": [
             "14.1"
@@ -8151,7 +8151,7 @@
           "description": ""
         },
         {
-          "name": "B38-binding residue",
+          "name": "B38",
           "value": "B38",
           "citationIds": [
             "14.1"
@@ -8172,7 +8172,7 @@
       "position": 417,
       "annotations": [
         {
-          "name": "ACE2-binding residue",
+          "name": "ACE2",
           "value": "ACE2",
           "citationIds": [
             "7.1",
@@ -8180,7 +8180,7 @@
           ]
         },
         {
-          "name": "B38-binding residue",
+          "name": "B38",
           "value": "B38",
           "citationIds": [
             "14.1"
@@ -8211,7 +8211,7 @@
           ]
         },
         {
-          "name": "C105-binding residue",
+          "name": "C105",
           "citationIds": [
             "23.1"
           ],
@@ -8219,7 +8219,7 @@
           "description": ""
         },
         {
-          "name": "REGN1093-binding residue",
+          "name": "REGN1093",
           "citationIds": [
             "24.1"
           ],
@@ -8292,7 +8292,7 @@
           "description": ""
         },
         {
-          "name": "B38-binding residue",
+          "name": "B38",
           "citationIds": [
             "14.1"
           ],
@@ -8320,7 +8320,7 @@
           "description": ""
         },
         {
-          "name": "B38-binding residue",
+          "name": "B38",
           "value": "B38",
           "citationIds": [
             "14.1"
@@ -8336,7 +8336,7 @@
           "description": "Receptor-finding domain (S1B)"
         },
         {
-          "name": "C105-binding residue",
+          "name": "C105",
           "citationIds": [
             "23.1"
           ],
@@ -8356,7 +8356,7 @@
           ]
         },
         {
-          "name": "B38-binding residue",
+          "name": "B38",
           "value": "B38",
           "citationIds": [
             "14.1"
@@ -8372,7 +8372,7 @@
           "description": "Receptor-finding domain (S1B)"
         },
         {
-          "name": "C105-binding residue",
+          "name": "C105",
           "citationIds": [
             "23.1"
           ],
@@ -8380,7 +8380,7 @@
           "description": ""
         },
         {
-          "name": "REGN1093-binding residue",
+          "name": "REGN1093",
           "citationIds": [
             "24.1"
           ],
@@ -8472,7 +8472,7 @@
           ]
         },
         {
-          "name": "CR3022-binding residue",
+          "name": "CR3022",
           "value": "CR3022",
           "citationIds": [
             "11.1",
@@ -8501,7 +8501,7 @@
           ]
         },
         {
-          "name": "CR3022-binding residue",
+          "name": "CR3022",
           "value": "CR3022",
           "citationIds": [
             "11.1",
@@ -8523,7 +8523,7 @@
       "position": 429,
       "annotations": [
         {
-          "name": "CR3022-binding residue",
+          "name": "CR3022",
           "value": "CR3022",
           "citationIds": [
             "11.1",
@@ -8545,7 +8545,7 @@
       "position": 430,
       "annotations": [
         {
-          "name": "CR3022-binding residue",
+          "name": "CR3022",
           "value": "CR3022",
           "citationIds": [
             "11.1",
@@ -8728,7 +8728,7 @@
       "position": 439,
       "annotations": [
         {
-          "name": "ACE2-binding residue",
+          "name": "ACE2",
           "value": "ACE2",
           "citationIds": [
             "5.1"
@@ -8760,7 +8760,7 @@
           ]
         },
         {
-          "name": "REGN1098-binding residue",
+          "name": "REGN1098",
           "citationIds": [
             "24.1"
           ],
@@ -8807,7 +8807,7 @@
           ]
         },
         {
-          "name": "S309-binding residue",
+          "name": "S309",
           "citationIds": [
             "6.1"
           ],
@@ -8815,7 +8815,7 @@
           "description": ""
         },
         {
-          "name": "REGN1098-binding residue",
+          "name": "REGN1098",
           "citationIds": [
             "24.1"
           ],
@@ -8852,7 +8852,7 @@
           ]
         },
         {
-          "name": "S309-binding residue",
+          "name": "S309",
           "citationIds": [
             "6.1"
           ],
@@ -8860,7 +8860,7 @@
           "description": ""
         },
         {
-          "name": "REGN1098-binding residue",
+          "name": "REGN1098",
           "citationIds": [
             "24.1"
           ],
@@ -8906,7 +8906,7 @@
       "position": 444,
       "annotations": [
         {
-          "name": "P2B-2F6-binding residue",
+          "name": "P2B-2F6",
           "value": "P2B-2F6",
           "citationIds": [
             "13.1"
@@ -8922,7 +8922,7 @@
           "description": "Receptor-finding domain (S1B)"
         },
         {
-          "name": "S309-binding residue",
+          "name": "S309",
           "citationIds": [
             "6.1"
           ],
@@ -8930,7 +8930,7 @@
           "description": ""
         },
         {
-          "name": "REGN1098-binding residue",
+          "name": "REGN1098",
           "citationIds": [
             "24.1"
           ],
@@ -8978,7 +8978,7 @@
           ]
         },
         {
-          "name": "REGN1098-binding residue",
+          "name": "REGN1098",
           "citationIds": [
             "24.1"
           ],
@@ -9013,7 +9013,7 @@
       "position": 446,
       "annotations": [
         {
-          "name": "ACE2-binding residue",
+          "name": "ACE2",
           "value": "ACE2",
           "citationIds": [
             "7.1",
@@ -9023,7 +9023,7 @@
           "description": "Xu 2020 (H-Bonds)"
         },
         {
-          "name": "P2B-2F6-binding residue",
+          "name": "P2B-2F6",
           "value": "P2B-2F6",
           "citationIds": [
             "13.1"
@@ -9046,7 +9046,7 @@
           ]
         },
         {
-          "name": "BD23-binding residue",
+          "name": "BD23",
           "citationIds": [
             "22.1"
           ],
@@ -9054,7 +9054,7 @@
           "description": ""
         },
         {
-          "name": "REGN1098-binding residue",
+          "name": "REGN1098",
           "citationIds": [
             "24.1"
           ],
@@ -9077,7 +9077,7 @@
       "position": 447,
       "annotations": [
         {
-          "name": "P2B-2F6-binding residue",
+          "name": "P2B-2F6",
           "value": "P2B-2F6",
           "citationIds": [
             "13.1"
@@ -9093,7 +9093,7 @@
           "description": "Receptor-finding domain (S1B)"
         },
         {
-          "name": "REGN1098-binding residue",
+          "name": "REGN1098",
           "citationIds": [
             "24.1"
           ],
@@ -9106,7 +9106,7 @@
       "position": 448,
       "annotations": [
         {
-          "name": "P2B-2F6-binding residue",
+          "name": "P2B-2F6",
           "value": "P2B-2F6",
           "citationIds": [
             "13.1"
@@ -9122,7 +9122,7 @@
           "description": "Receptor-finding domain (S1B)"
         },
         {
-          "name": "REGN1098-binding residue",
+          "name": "REGN1098",
           "citationIds": [
             "24.1"
           ],
@@ -9135,7 +9135,7 @@
       "position": 449,
       "annotations": [
         {
-          "name": "ACE2-binding residue",
+          "name": "ACE2",
           "value": "ACE2",
           "citationIds": [
             "5.1",
@@ -9144,7 +9144,7 @@
           ]
         },
         {
-          "name": "P2B-2F6-binding residue",
+          "name": "P2B-2F6",
           "value": "P2B-2F6",
           "citationIds": [
             "13.1"
@@ -9160,7 +9160,7 @@
           "description": "Receptor-finding domain (S1B)"
         },
         {
-          "name": "BD23-binding residue",
+          "name": "BD23",
           "citationIds": [
             "22.1"
           ],
@@ -9168,7 +9168,7 @@
           "description": ""
         },
         {
-          "name": "REGN1098-binding residue",
+          "name": "REGN1098",
           "citationIds": [
             "24.1"
           ],
@@ -9181,7 +9181,7 @@
       "position": 450,
       "annotations": [
         {
-          "name": "P2B-2F6-binding residue",
+          "name": "P2B-2F6",
           "value": "P2B-2F6",
           "citationIds": [
             "13.1"
@@ -9197,7 +9197,7 @@
           "description": "Receptor-finding domain (S1B)"
         },
         {
-          "name": "REGN1098-binding residue",
+          "name": "REGN1098",
           "citationIds": [
             "24.1"
           ],
@@ -9232,7 +9232,7 @@
       "position": 452,
       "annotations": [
         {
-          "name": "P2B-2F6-binding residue",
+          "name": "P2B-2F6",
           "value": "P2B-2F6",
           "citationIds": [
             "13.1"
@@ -9255,7 +9255,7 @@
           ]
         },
         {
-          "name": "BD23-binding residue",
+          "name": "BD23",
           "citationIds": [
             "22.1"
           ],
@@ -9275,7 +9275,7 @@
           ]
         },
         {
-          "name": "ACE2-binding residue",
+          "name": "ACE2",
           "value": "ACE2",
           "citationIds": [
             "4.2",
@@ -9285,7 +9285,7 @@
           ]
         },
         {
-          "name": "B38-binding residue",
+          "name": "B38",
           "value": "B38",
           "citationIds": [
             "14.1"
@@ -9301,7 +9301,7 @@
           "description": "Receptor-finding domain (S1B)"
         },
         {
-          "name": "C105-binding residue",
+          "name": "C105",
           "citationIds": [
             "23.1"
           ],
@@ -9309,7 +9309,7 @@
           "description": ""
         },
         {
-          "name": "REGN1093-binding residue",
+          "name": "REGN1093",
           "citationIds": [
             "24.1"
           ],
@@ -9351,7 +9351,7 @@
       "position": 455,
       "annotations": [
         {
-          "name": "ACE2-binding residue",
+          "name": "ACE2",
           "value": "ACE2",
           "citationIds": [
             "4.2",
@@ -9361,7 +9361,7 @@
           ]
         },
         {
-          "name": "B38-binding residue",
+          "name": "B38",
           "value": "B38",
           "citationIds": [
             "14.1"
@@ -9385,7 +9385,7 @@
           "description": "Receptor-finding domain (S1B)"
         },
         {
-          "name": "C105-binding residue",
+          "name": "C105",
           "citationIds": [
             "23.1"
           ],
@@ -9393,7 +9393,7 @@
           "description": ""
         },
         {
-          "name": "REGN1093-binding residue",
+          "name": "REGN1093",
           "citationIds": [
             "24.1"
           ],
@@ -9426,7 +9426,7 @@
       "position": 456,
       "annotations": [
         {
-          "name": "ACE2-binding residue",
+          "name": "ACE2",
           "value": "ACE2",
           "citationIds": [
             "4.2",
@@ -9436,7 +9436,7 @@
           ]
         },
         {
-          "name": "B38-binding residue",
+          "name": "B38",
           "value": "B38",
           "citationIds": [
             "14.1"
@@ -9460,7 +9460,7 @@
           "description": "Receptor-finding domain (S1B)"
         },
         {
-          "name": "C105-binding residue",
+          "name": "C105",
           "citationIds": [
             "23.1"
           ],
@@ -9468,7 +9468,7 @@
           "description": ""
         },
         {
-          "name": "REGN1093-binding residue",
+          "name": "REGN1093",
           "citationIds": [
             "24.1"
           ],
@@ -9498,7 +9498,7 @@
           "description": ""
         },
         {
-          "name": "B38-binding residue",
+          "name": "B38",
           "value": "B38",
           "citationIds": [
             "14.1"
@@ -9514,7 +9514,7 @@
           "description": "Receptor-finding domain (S1B)"
         },
         {
-          "name": "C105-binding residue",
+          "name": "C105",
           "citationIds": [
             "23.1"
           ],
@@ -9527,7 +9527,7 @@
       "position": 458,
       "annotations": [
         {
-          "name": "B38-binding residue",
+          "name": "B38",
           "value": "B38",
           "citationIds": [
             "14.1"
@@ -9551,7 +9551,7 @@
           "description": "Receptor-finding domain (S1B)"
         },
         {
-          "name": "C105-binding residue",
+          "name": "C105",
           "citationIds": [
             "23.1"
           ],
@@ -9564,7 +9564,7 @@
       "position": 459,
       "annotations": [
         {
-          "name": "B38-binding residue",
+          "name": "B38",
           "value": "B38",
           "citationIds": [
             "14.1"
@@ -9588,7 +9588,7 @@
           "description": "Receptor-finding domain (S1B)"
         },
         {
-          "name": "C105-binding residue",
+          "name": "C105",
           "citationIds": [
             "23.1"
           ],
@@ -9601,7 +9601,7 @@
       "position": 460,
       "annotations": [
         {
-          "name": "B38-binding residue",
+          "name": "B38",
           "value": "B38",
           "citationIds": [
             "14.1"
@@ -9769,7 +9769,7 @@
           "description": "Receptor-finding domain (S1B)"
         },
         {
-          "name": "BD23-binding residue",
+          "name": "BD23",
           "citationIds": [
             "22.1"
           ],
@@ -9808,7 +9808,7 @@
       "position": 473,
       "annotations": [
         {
-          "name": "ACE2-binding residue",
+          "name": "ACE2",
           "value": "ACE2",
           "citationIds": [
             "4.2",
@@ -9816,7 +9816,7 @@
           ]
         },
         {
-          "name": "B38-binding residue",
+          "name": "B38",
           "value": "B38",
           "citationIds": [
             "14.1"
@@ -9847,7 +9847,7 @@
           ]
         },
         {
-          "name": "C105-binding residue",
+          "name": "C105",
           "citationIds": [
             "23.1"
           ],
@@ -9860,7 +9860,7 @@
       "position": 474,
       "annotations": [
         {
-          "name": "B38-binding residue",
+          "name": "B38",
           "value": "B38",
           "citationIds": [
             "14.1"
@@ -9891,7 +9891,7 @@
           ]
         },
         {
-          "name": "C105-binding residue",
+          "name": "C105",
           "citationIds": [
             "23.1"
           ],
@@ -9904,7 +9904,7 @@
       "position": 475,
       "annotations": [
         {
-          "name": "ACE2-binding residue",
+          "name": "ACE2",
           "value": "ACE2",
           "citationIds": [
             "4.2",
@@ -9914,7 +9914,7 @@
           ]
         },
         {
-          "name": "B38-binding residue",
+          "name": "B38",
           "value": "B38",
           "citationIds": [
             "14.1"
@@ -9938,7 +9938,7 @@
           "description": "Receptor-finding domain (S1B)"
         },
         {
-          "name": "C105-binding residue",
+          "name": "C105",
           "citationIds": [
             "23.1"
           ],
@@ -9946,7 +9946,7 @@
           "description": ""
         },
         {
-          "name": "REGN1093-binding residue",
+          "name": "REGN1093",
           "citationIds": [
             "24.1"
           ],
@@ -9959,7 +9959,7 @@
       "position": 476,
       "annotations": [
         {
-          "name": "ACE2-binding residue",
+          "name": "ACE2",
           "value": "ACE2",
           "citationIds": [
             "4.2",
@@ -9968,7 +9968,7 @@
           ]
         },
         {
-          "name": "B38-binding residue",
+          "name": "B38",
           "value": "B38",
           "citationIds": [
             "14.1"
@@ -9992,7 +9992,7 @@
           "description": "Receptor-finding domain (S1B)"
         },
         {
-          "name": "C105-binding residue",
+          "name": "C105",
           "citationIds": [
             "23.1"
           ],
@@ -10000,7 +10000,7 @@
           "description": ""
         },
         {
-          "name": "REGN1093-binding residue",
+          "name": "REGN1093",
           "citationIds": [
             "24.1"
           ],
@@ -10022,7 +10022,7 @@
       "position": 477,
       "annotations": [
         {
-          "name": "B38-binding residue",
+          "name": "B38",
           "value": "B38",
           "citationIds": [
             "14.1"
@@ -10188,7 +10188,7 @@
       "position": 483,
       "annotations": [
         {
-          "name": "P2B-2F6-binding residue",
+          "name": "P2B-2F6",
           "value": "P2B-2F6",
           "citationIds": [
             "13.1"
@@ -10228,14 +10228,14 @@
       "position": 484,
       "annotations": [
         {
-          "name": "ACE2-binding residue",
+          "name": "ACE2",
           "value": "ACE2",
           "citationIds": [
             "8.1"
           ]
         },
         {
-          "name": "P2B-2F6-binding residue",
+          "name": "P2B-2F6",
           "value": "P2B-2F6",
           "citationIds": [
             "13.1"
@@ -10251,7 +10251,7 @@
           "description": "Receptor-finding domain (S1B)"
         },
         {
-          "name": "B38-binding residue",
+          "name": "B38",
           "citationIds": [
             "14.1"
           ],
@@ -10259,7 +10259,7 @@
           "description": ""
         },
         {
-          "name": "BD23-binding residue",
+          "name": "BD23",
           "citationIds": [
             "22.1"
           ],
@@ -10267,7 +10267,7 @@
           "description": ""
         },
         {
-          "name": "REGN1093-binding residue",
+          "name": "REGN1093",
           "citationIds": [
             "24.1"
           ],
@@ -10301,7 +10301,7 @@
       "position": 485,
       "annotations": [
         {
-          "name": "P2B-2F6-binding residue",
+          "name": "P2B-2F6",
           "value": "P2B-2F6",
           "citationIds": [
             "13.1"
@@ -10317,7 +10317,7 @@
           "description": "Receptor-finding domain (S1B)"
         },
         {
-          "name": "BD23-binding residue",
+          "name": "BD23",
           "citationIds": [
             "22.1"
           ],
@@ -10325,7 +10325,7 @@
           "description": ""
         },
         {
-          "name": "REGN1093-binding residue",
+          "name": "REGN1093",
           "citationIds": [
             "24.1"
           ],
@@ -10347,7 +10347,7 @@
       "position": 486,
       "annotations": [
         {
-          "name": "ACE2-binding residue",
+          "name": "ACE2",
           "value": "ACE2",
           "citationIds": [
             "4.2",
@@ -10357,7 +10357,7 @@
           ]
         },
         {
-          "name": "B38-binding residue",
+          "name": "B38",
           "value": "B38",
           "citationIds": [
             "14.1"
@@ -10388,7 +10388,7 @@
           ]
         },
         {
-          "name": "BD23-binding residue",
+          "name": "BD23",
           "citationIds": [
             "22.1"
           ],
@@ -10396,7 +10396,7 @@
           "description": ""
         },
         {
-          "name": "C105-binding residue",
+          "name": "C105",
           "citationIds": [
             "23.1"
           ],
@@ -10404,7 +10404,7 @@
           "description": ""
         },
         {
-          "name": "REGN1093-binding residue",
+          "name": "REGN1093",
           "citationIds": [
             "24.1"
           ],
@@ -10433,7 +10433,7 @@
           ]
         },
         {
-          "name": "ACE2-binding residue",
+          "name": "ACE2",
           "value": "ACE2",
           "citationIds": [
             "4.2",
@@ -10451,7 +10451,7 @@
           "description": ""
         },
         {
-          "name": "B38-binding residue",
+          "name": "B38",
           "value": "B38",
           "citationIds": [
             "14.1"
@@ -10467,7 +10467,7 @@
           "description": "Receptor-finding domain (S1B)"
         },
         {
-          "name": "C105-binding residue",
+          "name": "C105",
           "citationIds": [
             "23.1"
           ],
@@ -10475,7 +10475,7 @@
           "description": ""
         },
         {
-          "name": "REGN1093-binding residue",
+          "name": "REGN1093",
           "citationIds": [
             "24.1"
           ],
@@ -10511,7 +10511,7 @@
           "description": "Cys480-Cys488 pair"
         },
         {
-          "name": "B38-binding residue",
+          "name": "B38",
           "citationIds": [
             "14.1"
           ],
@@ -10519,7 +10519,7 @@
           "description": ""
         },
         {
-          "name": "REGN1093-binding residue",
+          "name": "REGN1093",
           "citationIds": [
             "24.1"
           ],
@@ -10539,7 +10539,7 @@
           ]
         },
         {
-          "name": "ACE2-binding residue",
+          "name": "ACE2",
           "value": "ACE2",
           "citationIds": [
             "4.2",
@@ -10557,7 +10557,7 @@
           "description": ""
         },
         {
-          "name": "B38-binding residue",
+          "name": "B38",
           "value": "B38",
           "citationIds": [
             "14.1"
@@ -10573,7 +10573,7 @@
           "description": "Receptor-finding domain (S1B)"
         },
         {
-          "name": "BD23-binding residue",
+          "name": "BD23",
           "citationIds": [
             "22.1"
           ],
@@ -10581,7 +10581,7 @@
           "description": ""
         },
         {
-          "name": "REGN1093-binding residue",
+          "name": "REGN1093",
           "citationIds": [
             "24.1"
           ],
@@ -10594,7 +10594,7 @@
       "position": 490,
       "annotations": [
         {
-          "name": "ACE2-binding residue",
+          "name": "ACE2",
           "value": "ACE2",
           "citationIds": [
             "4.2",
@@ -10602,7 +10602,7 @@
           ]
         },
         {
-          "name": "B38-binding residue",
+          "name": "B38",
           "value": "B38",
           "citationIds": [
             "14.1"
@@ -10610,7 +10610,7 @@
           "description": ""
         },
         {
-          "name": "P2B-2F6-binding residue",
+          "name": "P2B-2F6",
           "value": "P2B-2F6",
           "citationIds": [
             "13.1"
@@ -10626,7 +10626,7 @@
           "description": "Receptor-finding domain (S1B)"
         },
         {
-          "name": "BD23-binding residue",
+          "name": "BD23",
           "citationIds": [
             "22.1"
           ],
@@ -10666,7 +10666,7 @@
           "description": "Receptor-finding domain (S1B)"
         },
         {
-          "name": "B38-binding residue",
+          "name": "B38",
           "citationIds": [
             "14.1"
           ],
@@ -10694,7 +10694,7 @@
           "description": "Receptor-finding domain (S1B)"
         },
         {
-          "name": "P2B-2F6-binding residue",
+          "name": "P2B-2F6",
           "citationIds": [
             "13.1"
           ],
@@ -10702,7 +10702,7 @@
           "description": ""
         },
         {
-          "name": "B38-binding residue",
+          "name": "B38",
           "citationIds": [
             "14.1"
           ],
@@ -10710,7 +10710,7 @@
           "description": ""
         },
         {
-          "name": "BD23-binding residue",
+          "name": "BD23",
           "citationIds": [
             "22.1"
           ],
@@ -10723,7 +10723,7 @@
       "position": 493,
       "annotations": [
         {
-          "name": "ACE2-binding residue",
+          "name": "ACE2",
           "value": "ACE2",
           "citationIds": [
             "4.2",
@@ -10733,7 +10733,7 @@
           ]
         },
         {
-          "name": "B38-binding residue",
+          "name": "B38",
           "value": "B38",
           "citationIds": [
             "14.1"
@@ -10764,7 +10764,7 @@
           ]
         },
         {
-          "name": "P2B-2F6-binding residue",
+          "name": "P2B-2F6",
           "citationIds": [
             "13.1"
           ],
@@ -10772,7 +10772,7 @@
           "description": ""
         },
         {
-          "name": "BD23-binding residue",
+          "name": "BD23",
           "citationIds": [
             "22.1"
           ],
@@ -10780,7 +10780,7 @@
           "description": ""
         },
         {
-          "name": "REGN1093-binding residue",
+          "name": "REGN1093",
           "citationIds": [
             "24.1"
           ],
@@ -10813,14 +10813,14 @@
       "position": 494,
       "annotations": [
         {
-          "name": "ACE2-binding residue",
+          "name": "ACE2",
           "value": "ACE2",
           "citationIds": [
             "4.2"
           ]
         },
         {
-          "name": "B38-binding residue",
+          "name": "B38",
           "value": "B38",
           "citationIds": [
             "14.1"
@@ -10828,7 +10828,7 @@
           "description": ""
         },
         {
-          "name": "P2B-2F6-binding residue",
+          "name": "P2B-2F6",
           "value": "P2B-2F6",
           "citationIds": [
             "13.1"
@@ -10851,7 +10851,7 @@
           ]
         },
         {
-          "name": "BD23-binding residue",
+          "name": "BD23",
           "citationIds": [
             "22.1"
           ],
@@ -10873,7 +10873,7 @@
       "position": 495,
       "annotations": [
         {
-          "name": "ACE2-binding residue",
+          "name": "ACE2",
           "value": "ACE2",
           "citationIds": [
             "4.2"
@@ -10888,7 +10888,7 @@
           "description": ""
         },
         {
-          "name": "B38-binding residue",
+          "name": "B38",
           "value": "B38",
           "citationIds": [
             "14.1"
@@ -10909,7 +10909,7 @@
       "position": 496,
       "annotations": [
         {
-          "name": "ACE2-binding residue",
+          "name": "ACE2",
           "value": "ACE2",
           "citationIds": [
             "4.2",
@@ -10919,7 +10919,7 @@
           ]
         },
         {
-          "name": "B38-binding residue",
+          "name": "B38",
           "value": "B38",
           "citationIds": [
             "14.1"
@@ -10953,7 +10953,7 @@
       "position": 498,
       "annotations": [
         {
-          "name": "ACE2-binding residue",
+          "name": "ACE2",
           "value": "ACE2",
           "citationIds": [
             "4.2",
@@ -10963,7 +10963,7 @@
           ]
         },
         {
-          "name": "B38-binding residue",
+          "name": "B38",
           "value": "B38",
           "citationIds": [
             "14.1"
@@ -10979,7 +10979,7 @@
           "description": "Receptor-finding domain (S1B)"
         },
         {
-          "name": "REGN1098-binding residue",
+          "name": "REGN1098",
           "citationIds": [
             "24.1"
           ],
@@ -11019,7 +11019,7 @@
           ]
         },
         {
-          "name": "ACE2-binding residue",
+          "name": "ACE2",
           "value": "ACE2",
           "citationIds": [
             "4.2",
@@ -11029,7 +11029,7 @@
           ]
         },
         {
-          "name": "B38-binding residue",
+          "name": "B38",
           "value": "B38",
           "citationIds": [
             "14.1"
@@ -11045,7 +11045,7 @@
           "description": "Receptor-finding domain (S1B)"
         },
         {
-          "name": "BD23-binding residue",
+          "name": "BD23",
           "citationIds": [
             "22.1"
           ],
@@ -11053,7 +11053,7 @@
           "description": ""
         },
         {
-          "name": "C105-binding residue",
+          "name": "C105",
           "citationIds": [
             "23.1"
           ],
@@ -11061,7 +11061,7 @@
           "description": ""
         },
         {
-          "name": "REGN1098-binding residue",
+          "name": "REGN1098",
           "citationIds": [
             "24.1"
           ],
@@ -11074,7 +11074,7 @@
       "position": 501,
       "annotations": [
         {
-          "name": "ACE2-binding residue",
+          "name": "ACE2",
           "value": "ACE2",
           "citationIds": [
             "4.2",
@@ -11084,7 +11084,7 @@
           ]
         },
         {
-          "name": "B38-binding residue",
+          "name": "B38",
           "value": "B38",
           "citationIds": [
             "14.1"
@@ -11108,7 +11108,7 @@
           "description": "Receptor-finding domain (S1B)"
         },
         {
-          "name": "C105-binding residue",
+          "name": "C105",
           "citationIds": [
             "23.1"
           ],
@@ -11121,7 +11121,7 @@
       "position": 502,
       "annotations": [
         {
-          "name": "ACE2-binding residue",
+          "name": "ACE2",
           "value": "ACE2",
           "citationIds": [
             "4.2",
@@ -11139,7 +11139,7 @@
           "description": ""
         },
         {
-          "name": "B38-binding residue",
+          "name": "B38",
           "value": "B38",
           "citationIds": [
             "14.1"
@@ -11155,7 +11155,7 @@
           "description": "Receptor-finding domain (S1B)"
         },
         {
-          "name": "C105-binding residue",
+          "name": "C105",
           "citationIds": [
             "23.1"
           ],
@@ -11168,7 +11168,7 @@
       "position": 503,
       "annotations": [
         {
-          "name": "B38-binding residue",
+          "name": "B38",
           "value": "B38",
           "citationIds": [
             "14.1"
@@ -11210,7 +11210,7 @@
       "position": 505,
       "annotations": [
         {
-          "name": "ACE2-binding residue",
+          "name": "ACE2",
           "value": "ACE2",
           "citationIds": [
             "4.2",
@@ -11220,7 +11220,7 @@
           ]
         },
         {
-          "name": "B38-binding residue",
+          "name": "B38",
           "value": "B38",
           "citationIds": [
             "14.1"
@@ -11244,7 +11244,7 @@
           "description": "Receptor-finding domain (S1B)"
         },
         {
-          "name": "C105-binding residue",
+          "name": "C105",
           "citationIds": [
             "23.1"
           ],
@@ -11317,7 +11317,7 @@
           ]
         },
         {
-          "name": "S309-binding residue",
+          "name": "S309",
           "citationIds": [
             "6.1"
           ],
@@ -11445,7 +11445,7 @@
           ]
         },
         {
-          "name": "CR3022-binding residue",
+          "name": "CR3022",
           "value": "CR3022",
           "citationIds": [
             "11.1",
@@ -11467,7 +11467,7 @@
       "position": 516,
       "annotations": [
         {
-          "name": "CR3022-binding residue",
+          "name": "CR3022",
           "value": "CR3022",
           "citationIds": [
             "11.1",
@@ -11489,7 +11489,7 @@
       "position": 517,
       "annotations": [
         {
-          "name": "CR3022-binding residue",
+          "name": "CR3022",
           "value": "CR3022",
           "citationIds": [
             "11.1",
@@ -11524,7 +11524,7 @@
       "position": 519,
       "annotations": [
         {
-          "name": "CR3022-binding residue",
+          "name": "CR3022",
           "value": "CR3022",
           "citationIds": [
             "11.1",
@@ -12937,7 +12937,7 @@
           "description": "S1D"
         },
         {
-          "name": "Glycan-binding residue",
+          "name": "Glycan",
           "citationIds": [
             "19.1",
             "20.1"
@@ -13170,7 +13170,7 @@
           "description": "S1D"
         },
         {
-          "name": "Glycan-binding residue",
+          "name": "Glycan",
           "citationIds": [
             "19.1",
             "20.1"
@@ -13803,7 +13803,7 @@
       "position": 657,
       "annotations": [
         {
-          "name": "Glycan-binding residue",
+          "name": "Glycan",
           "citationIds": [
             "19.1",
             "20.1"
@@ -14500,7 +14500,7 @@
           ]
         },
         {
-          "name": "Glycan-binding residue",
+          "name": "Glycan",
           "citationIds": [
             "19.1",
             "20.1"
@@ -14586,7 +14586,7 @@
       "position": 717,
       "annotations": [
         {
-          "name": "Glycan-binding residue",
+          "name": "Glycan",
           "citationIds": [
             "19.1",
             "20.1"
@@ -15448,7 +15448,7 @@
           "description": "Fusion peptide"
         },
         {
-          "name": "Glycan-binding residue",
+          "name": "Glycan",
           "citationIds": [
             "19.1",
             "20.1"
@@ -18653,7 +18653,7 @@
           ]
         },
         {
-          "name": "Glycan-binding residue",
+          "name": "Glycan",
           "citationIds": [
             "19.1",
             "20.1"
@@ -18855,7 +18855,7 @@
       "position": 1098,
       "annotations": [
         {
-          "name": "Glycan-binding residue",
+          "name": "Glycan",
           "citationIds": [
             "19.1",
             "20.1"
@@ -19091,7 +19091,7 @@
           ]
         },
         {
-          "name": "Glycan-binding residue",
+          "name": "Glycan",
           "citationIds": [
             "19.1",
             "20.1"
@@ -19168,7 +19168,7 @@
       "position": 1158,
       "annotations": [
         {
-          "name": "Glycan-binding residue",
+          "name": "Glycan",
           "citationIds": [
             "19.1",
             "20.1"
@@ -19335,7 +19335,7 @@
           "description": "Heptad repeat 2"
         },
         {
-          "name": "Glycan-binding residue",
+          "name": "Glycan",
           "citationIds": [
             "19.1",
             "20.1"
@@ -19637,7 +19637,7 @@
           "description": "Heptad repeat 2"
         },
         {
-          "name": "Glycan-binding residue",
+          "name": "Glycan",
           "citationIds": [
             "19.1",
             "20.1"
