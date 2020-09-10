@@ -1,5 +1,5 @@
 {
-  "version": "20200901153542",
+  "version": "20200910120644",
   "gene": "SARS2S",
   "taxonomy": "SARS2",
   "fragmentOptions": [
@@ -49,7 +49,7 @@
     },
     {
       "name": "antibody",
-      "display": "Antibodies",
+      "display": "antibodies",
       "dropdown": true,
       "defaultAnnots": [],
       "multiSelect": true,
@@ -60,7 +60,8 @@
       "dropdown": true,
       "defaultAnnot": "var2000",
       "multiSelect": false,
-      "annotStyle": "aminoAcids"
+      "annotStyle": "aminoAcids",
+      "color": "#000"
     },
     {
       "name": "escapeMutants",

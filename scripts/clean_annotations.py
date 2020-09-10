@@ -34,6 +34,7 @@ def clean_annot_categories(data):
         default_annots = orig_cat.get('defaultAnnots', [])
         multi_select = bool(orig_cat.get('multiSelect'))
         annot_style = orig_cat.get('annotStyle')
+        color = orig_cat.get('color')
         new_cat = {'name': name}
         if display is False or display:
             new_cat['display'] = display
@@ -52,6 +53,8 @@ def clean_annot_categories(data):
         new_cat['multiSelect'] = multi_select
         if annot_style:
             new_cat['annotStyle'] = annot_style
+            if annot_style == 'aminoAcids' and color:
+                new_cat['color'] = color
         else:
             new_cat['annotStyle'] = 'hide'
         categories.append(new_cat)
@@ -147,7 +150,7 @@ def main():
         clean_annot_categories(data)
         clean_annotations(data)
         clean_positions(data)
-    data['version'] = '20200901153542'
+    data['version'] = '20200910120644'
     with open(json_path, 'w') as write_fp:
         json.dump(data, write_fp, indent=2)
 
