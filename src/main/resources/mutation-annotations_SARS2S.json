@@ -151,7 +151,7 @@
       "colorRules": []
     },
     {
-      "name": "CB6-biding residue",
+      "name": "CB6",
       "level": "position",
       "category": "antibody",
       "hideCitations": false,
@@ -7799,7 +7799,7 @@
           "description": ""
         },
         {
-          "name": "CB6-biding residue",
+          "name": "CB6",
           "value": "CB6",
           "citationIds": [
             "10.1"
@@ -7866,7 +7866,7 @@
           "description": "Receptor-finding domain (S1B)"
         },
         {
-          "name": "CB6-biding residue",
+          "name": "CB6",
           "citationIds": [
             "10.1"
           ],
@@ -7886,7 +7886,7 @@
           ]
         },
         {
-          "name": "CB6-biding residue",
+          "name": "CB6",
           "value": "CB6",
           "citationIds": [
             "10.1"
@@ -7931,7 +7931,7 @@
           "description": ""
         },
         {
-          "name": "CB6-biding residue",
+          "name": "CB6",
           "value": "CB6",
           "citationIds": [
             "10.1"
@@ -7979,7 +7979,7 @@
           ]
         },
         {
-          "name": "CB6-biding residue",
+          "name": "CB6",
           "value": "CB6",
           "citationIds": [
             "10.1"
@@ -8007,7 +8007,7 @@
           ]
         },
         {
-          "name": "CB6-biding residue",
+          "name": "CB6",
           "value": "CB6",
           "citationIds": [
             "10.1"
@@ -8115,7 +8115,7 @@
       "position": 415,
       "annotations": [
         {
-          "name": "CB6-biding residue",
+          "name": "CB6",
           "value": "CB6",
           "citationIds": [
             "10.1"
@@ -8144,7 +8144,7 @@
       "position": 416,
       "annotations": [
         {
-          "name": "CB6-biding residue",
+          "name": "CB6",
           "value": "CB6",
           "citationIds": [
             "10.1"
@@ -8189,7 +8189,7 @@
           "description": ""
         },
         {
-          "name": "CB6-biding residue",
+          "name": "CB6",
           "value": "CB6",
           "citationIds": [
             "10.1"
@@ -8257,7 +8257,7 @@
           "description": "Receptor-finding domain (S1B)"
         },
         {
-          "name": "CB6-biding residue",
+          "name": "CB6",
           "citationIds": [
             "10.1"
           ],
@@ -8285,7 +8285,7 @@
           "description": "Receptor-finding domain (S1B)"
         },
         {
-          "name": "CB6-biding residue",
+          "name": "CB6",
           "citationIds": [
             "10.1"
           ],
@@ -8313,7 +8313,7 @@
           ]
         },
         {
-          "name": "CB6-biding residue",
+          "name": "CB6",
           "value": "CB6",
           "citationIds": [
             "10.1"
@@ -9370,7 +9370,7 @@
           "description": ""
         },
         {
-          "name": "CB6-biding residue",
+          "name": "CB6",
           "value": "CB6",
           "citationIds": [
             "10.1"
@@ -9445,7 +9445,7 @@
           "description": ""
         },
         {
-          "name": "CB6-biding residue",
+          "name": "CB6",
           "value": "CB6",
           "citationIds": [
             "10.1"
@@ -9491,7 +9491,7 @@
       "position": 457,
       "annotations": [
         {
-          "name": "CB6-biding residue",
+          "name": "CB6",
           "value": "CB6",
           "citationIds": [
             "10.1"
@@ -9536,7 +9536,7 @@
           "description": ""
         },
         {
-          "name": "CB6-biding residue",
+          "name": "CB6",
           "value": "CB6",
           "citationIds": [
             "10.1"
@@ -9573,7 +9573,7 @@
           "description": ""
         },
         {
-          "name": "CB6-biding residue",
+          "name": "CB6",
           "value": "CB6",
           "citationIds": [
             "10.1"
@@ -9610,7 +9610,7 @@
           "description": ""
         },
         {
-          "name": "CB6-biding residue",
+          "name": "CB6",
           "value": "CB6",
           "citationIds": [
             "10.1"
@@ -9825,7 +9825,7 @@
           "description": ""
         },
         {
-          "name": "CB6-biding residue",
+          "name": "CB6",
           "value": "CB6",
           "citationIds": [
             "10.1"
@@ -9869,7 +9869,7 @@
           "description": ""
         },
         {
-          "name": "CB6-biding residue",
+          "name": "CB6",
           "value": "CB6",
           "citationIds": [
             "10.1"
@@ -9923,7 +9923,7 @@
           "description": ""
         },
         {
-          "name": "CB6-biding residue",
+          "name": "CB6",
           "value": "CB6",
           "citationIds": [
             "10.1"
@@ -9977,7 +9977,7 @@
           "description": ""
         },
         {
-          "name": "CB6-biding residue",
+          "name": "CB6",
           "value": "CB6",
           "citationIds": [
             "10.1"
@@ -10031,7 +10031,7 @@
           "description": ""
         },
         {
-          "name": "CB6-biding residue",
+          "name": "CB6",
           "value": "CB6",
           "citationIds": [
             "10.1"
@@ -10366,7 +10366,7 @@
           "description": ""
         },
         {
-          "name": "CB6-biding residue",
+          "name": "CB6",
           "value": "CB6",
           "citationIds": [
             "10.1"
@@ -10444,7 +10444,7 @@
           ]
         },
         {
-          "name": "CB6-biding residue",
+          "name": "CB6",
           "value": "CB6",
           "citationIds": [
             "10.1"
@@ -10550,7 +10550,7 @@
           ]
         },
         {
-          "name": "CB6-biding residue",
+          "name": "CB6",
           "value": "CB6",
           "citationIds": [
             "10.1"
@@ -10742,7 +10742,7 @@
           "description": ""
         },
         {
-          "name": "CB6-biding residue",
+          "name": "CB6",
           "value": "CB6",
           "citationIds": [
             "10.1"
@@ -10881,7 +10881,7 @@
           ]
         },
         {
-          "name": "CB6-biding residue",
+          "name": "CB6",
           "value": "CB6",
           "citationIds": [
             "10.1"
@@ -11093,7 +11093,7 @@
           "description": ""
         },
         {
-          "name": "CB6-biding residue",
+          "name": "CB6",
           "value": "CB6",
           "citationIds": [
             "10.1"
@@ -11132,7 +11132,7 @@
           ]
         },
         {
-          "name": "CB6-biding residue",
+          "name": "CB6",
           "value": "CB6",
           "citationIds": [
             "10.1"
@@ -11190,7 +11190,7 @@
       "position": 504,
       "annotations": [
         {
-          "name": "CB6-biding residue",
+          "name": "CB6",
           "value": "CB6",
           "citationIds": [
             "10.1"
@@ -11229,7 +11229,7 @@
           "description": ""
         },
         {
-          "name": "CB6-biding residue",
+          "name": "CB6",
           "value": "CB6",
           "citationIds": [
             "10.1"
