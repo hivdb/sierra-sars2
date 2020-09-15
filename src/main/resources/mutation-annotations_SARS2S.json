@@ -206,7 +206,7 @@
       "label": "Baum, 2020",
       "level": "aminoAcid",
       "category": "escapeMutants",
-      "hideCitations": true,
+      "hideCitations": false,
       "colorRules": []
     },
     {
@@ -214,15 +214,22 @@
       "label": "Weisblum, 2020",
       "level": "aminoAcid",
       "category": "escapeMutants",
-      "hideCitations": true,
+      "hideCitations": false,
       "colorRules": []
     },
     {
-      "name": "escape mutants Rogers20",
-      "label": "Rogers, 2020",
+      "name": "EY6A",
+      "level": "position",
+      "category": "antibody",
+      "hideCitations": false,
+      "colorRules": []
+    },
+    {
+      "name": "escape mutants",
+      "label": "All",
       "level": "aminoAcid",
       "category": "escapeMutants",
-      "hideCitations": true,
+      "hideCitations": false,
       "colorRules": []
     }
   ],
@@ -454,10 +461,10 @@
     "27.1": {
       "citationId": 27,
       "sectionId": 1,
-      "author": "Rogers",
+      "author": "Zhou",
       "year": 2020,
-      "doi": "10.1126/science.abc7520",
-      "section": "Figure S10B"
+      "doi": "10.1038/s41594-020-0480-y",
+      "section": "PDB: 6ZCZ"
     }
   },
   "positions": [
@@ -1639,6 +1646,16 @@
           "aminoAcids": [
             "K"
           ]
+        },
+        {
+          "name": "escape mutants",
+          "citationIds": [
+            "25.1",
+            "26.1"
+          ],
+          "aminoAcids": [
+            "K"
+          ]
         }
       ]
     },
@@ -1719,6 +1736,16 @@
           "name": "escape mutants Baum20",
           "citationIds": [
             "25.1"
+          ],
+          "aminoAcids": [
+            "I"
+          ]
+        },
+        {
+          "name": "escape mutants",
+          "citationIds": [
+            "25.1",
+            "26.1"
           ],
           "aminoAcids": [
             "I"
@@ -3000,6 +3027,16 @@
           "aminoAcids": [
             "S"
           ]
+        },
+        {
+          "name": "escape mutants",
+          "citationIds": [
+            "25.1",
+            "26.1"
+          ],
+          "aminoAcids": [
+            "S"
+          ]
         }
       ]
     },
@@ -3045,6 +3082,17 @@
             "E",
             "R"
           ]
+        },
+        {
+          "name": "escape mutants",
+          "citationIds": [
+            "25.1",
+            "26.1"
+          ],
+          "aminoAcids": [
+            "E",
+            "R"
+          ]
         }
       ]
     },
@@ -3062,6 +3110,16 @@
         {
           "name": "escape mutants Weisblum20",
           "citationIds": [
+            "26.1"
+          ],
+          "aminoAcids": [
+            "P"
+          ]
+        },
+        {
+          "name": "escape mutants",
+          "citationIds": [
+            "25.1",
             "26.1"
           ],
           "aminoAcids": [
@@ -4946,6 +5004,16 @@
           "aminoAcids": [
             "K"
           ]
+        },
+        {
+          "name": "escape mutants",
+          "citationIds": [
+            "25.1",
+            "26.1"
+          ],
+          "aminoAcids": [
+            "K"
+          ]
         }
       ]
     },
@@ -6608,6 +6676,17 @@
             "K",
             "S"
           ]
+        },
+        {
+          "name": "escape mutants",
+          "citationIds": [
+            "25.1",
+            "26.1"
+          ],
+          "aminoAcids": [
+            "K",
+            "S"
+          ]
         }
       ]
     },
@@ -6997,15 +7076,6 @@
           "citationIds": [
             "21.1"
           ]
-        },
-        {
-          "name": "escape mutants Rogers20",
-          "citationIds": [
-            "27.1"
-          ],
-          "aminoAcids": [
-            "F"
-          ]
         }
       ]
     },
@@ -7026,6 +7096,14 @@
           ],
           "value": "RBD",
           "description": "Receptor-finding domain (S1B)"
+        },
+        {
+          "name": "EY6A",
+          "citationIds": [
+            "27.1"
+          ],
+          "value": "EY6A",
+          "description": ""
         }
       ]
     },
@@ -7055,6 +7133,14 @@
           ],
           "value": "RBD",
           "description": "Receptor-finding domain (S1B)"
+        },
+        {
+          "name": "EY6A",
+          "citationIds": [
+            "27.1"
+          ],
+          "value": "EY6A",
+          "description": ""
         }
       ]
     },
@@ -7084,6 +7170,14 @@
             "19.1"
           ],
           "value": "Glycan",
+          "description": ""
+        },
+        {
+          "name": "EY6A",
+          "citationIds": [
+            "27.1"
+          ],
+          "value": "EY6A",
           "description": ""
         }
       ]
@@ -7164,6 +7258,14 @@
           ],
           "value": "RBD",
           "description": "Receptor-finding domain (S1B)"
+        },
+        {
+          "name": "EY6A",
+          "citationIds": [
+            "27.1"
+          ],
+          "value": "EY6A",
+          "description": ""
         }
       ]
     },
@@ -7186,6 +7288,14 @@
           ],
           "value": "RBD",
           "description": "Receptor-finding domain (S1B)"
+        },
+        {
+          "name": "EY6A",
+          "citationIds": [
+            "27.1"
+          ],
+          "value": "EY6A",
+          "description": ""
         }
       ]
     },
@@ -7215,6 +7325,14 @@
           ],
           "value": "RBD",
           "description": "Receptor-finding domain (S1B)"
+        },
+        {
+          "name": "EY6A",
+          "citationIds": [
+            "27.1"
+          ],
+          "value": "EY6A",
+          "description": ""
         }
       ]
     },
@@ -7244,6 +7362,14 @@
           ],
           "value": "RBD",
           "description": "Receptor-finding domain (S1B)"
+        },
+        {
+          "name": "EY6A",
+          "citationIds": [
+            "27.1"
+          ],
+          "value": "EY6A",
+          "description": ""
         }
       ]
     },
@@ -7273,6 +7399,14 @@
           ],
           "value": "RBD",
           "description": "Receptor-finding domain (S1B)"
+        },
+        {
+          "name": "EY6A",
+          "citationIds": [
+            "27.1"
+          ],
+          "value": "EY6A",
+          "description": ""
         }
       ]
     },
@@ -7310,6 +7444,14 @@
           ],
           "value": "379-432",
           "description": "Cys379-Cys432 pair"
+        },
+        {
+          "name": "EY6A",
+          "citationIds": [
+            "27.1"
+          ],
+          "value": "EY6A",
+          "description": ""
         }
       ]
     },
@@ -7332,6 +7474,14 @@
           ],
           "value": "RBD",
           "description": "Receptor-finding domain (S1B)"
+        },
+        {
+          "name": "EY6A",
+          "citationIds": [
+            "27.1"
+          ],
+          "value": "EY6A",
+          "description": ""
         }
       ]
     },
@@ -7354,6 +7504,14 @@
           ],
           "value": "RBD",
           "description": "Receptor-finding domain (S1B)"
+        },
+        {
+          "name": "EY6A",
+          "citationIds": [
+            "27.1"
+          ],
+          "value": "EY6A",
+          "description": ""
         }
       ]
     },
@@ -7376,6 +7534,14 @@
           ],
           "value": "RBD",
           "description": "Receptor-finding domain (S1B)"
+        },
+        {
+          "name": "EY6A",
+          "citationIds": [
+            "27.1"
+          ],
+          "value": "EY6A",
+          "description": ""
         }
       ]
     },
@@ -7398,6 +7564,14 @@
           ],
           "value": "RBD",
           "description": "Receptor-finding domain (S1B)"
+        },
+        {
+          "name": "EY6A",
+          "citationIds": [
+            "27.1"
+          ],
+          "value": "EY6A",
+          "description": ""
         }
       ]
     },
@@ -7427,6 +7601,14 @@
           "citationIds": [
             "4.1"
           ]
+        },
+        {
+          "name": "EY6A",
+          "citationIds": [
+            "27.1"
+          ],
+          "value": "EY6A",
+          "description": ""
         }
       ]
     },
@@ -7456,6 +7638,14 @@
           ],
           "value": "RBD",
           "description": "Receptor-finding domain (S1B)"
+        },
+        {
+          "name": "EY6A",
+          "citationIds": [
+            "27.1"
+          ],
+          "value": "EY6A",
+          "description": ""
         }
       ]
     },
@@ -7485,6 +7675,14 @@
           ],
           "value": "RBD",
           "description": "Receptor-finding domain (S1B)"
+        },
+        {
+          "name": "EY6A",
+          "citationIds": [
+            "27.1"
+          ],
+          "value": "EY6A",
+          "description": ""
         }
       ]
     },
@@ -7511,6 +7709,14 @@
           ],
           "value": "RBD",
           "description": "Receptor-finding domain (S1B)"
+        },
+        {
+          "name": "EY6A",
+          "citationIds": [
+            "27.1"
+          ],
+          "value": "EY6A",
+          "description": ""
         }
       ]
     },
@@ -7533,6 +7739,14 @@
           ],
           "value": "RBD",
           "description": "Receptor-finding domain (S1B)"
+        },
+        {
+          "name": "EY6A",
+          "citationIds": [
+            "27.1"
+          ],
+          "value": "EY6A",
+          "description": ""
         }
       ]
     },
@@ -7555,6 +7769,14 @@
           ],
           "value": "RBD",
           "description": "Receptor-finding domain (S1B)"
+        },
+        {
+          "name": "EY6A",
+          "citationIds": [
+            "27.1"
+          ],
+          "value": "EY6A",
+          "description": ""
         }
       ]
     },
@@ -7598,6 +7820,14 @@
           ],
           "value": "RBD",
           "description": "Receptor-finding domain (S1B)"
+        },
+        {
+          "name": "EY6A",
+          "citationIds": [
+            "27.1"
+          ],
+          "value": "EY6A",
+          "description": ""
         }
       ]
     },
@@ -8055,6 +8285,14 @@
           ],
           "value": "RBD",
           "description": "Receptor-finding domain (S1B)"
+        },
+        {
+          "name": "EY6A",
+          "citationIds": [
+            "27.1"
+          ],
+          "value": "EY6A",
+          "description": ""
         }
       ]
     },
@@ -8075,6 +8313,14 @@
           ],
           "value": "RBD",
           "description": "Receptor-finding domain (S1B)"
+        },
+        {
+          "name": "EY6A",
+          "citationIds": [
+            "27.1"
+          ],
+          "value": "EY6A",
+          "description": ""
         }
       ]
     },
@@ -8095,6 +8341,14 @@
           ],
           "value": "RBD",
           "description": "Receptor-finding domain (S1B)"
+        },
+        {
+          "name": "EY6A",
+          "citationIds": [
+            "27.1"
+          ],
+          "value": "EY6A",
+          "description": ""
         }
       ]
     },
@@ -8108,6 +8362,14 @@
           ],
           "value": "RBD",
           "description": "Receptor-finding domain (S1B)"
+        },
+        {
+          "name": "EY6A",
+          "citationIds": [
+            "27.1"
+          ],
+          "value": "EY6A",
+          "description": ""
         }
       ]
     },
@@ -8231,6 +8493,16 @@
           "name": "escape mutants Baum20",
           "citationIds": [
             "25.1"
+          ],
+          "aminoAcids": [
+            "E"
+          ]
+        },
+        {
+          "name": "escape mutants",
+          "citationIds": [
+            "25.1",
+            "26.1"
           ],
           "aminoAcids": [
             "E"
@@ -8459,6 +8731,14 @@
           ],
           "value": "RBD",
           "description": "Receptor-finding domain (S1B)"
+        },
+        {
+          "name": "EY6A",
+          "citationIds": [
+            "27.1"
+          ],
+          "value": "EY6A",
+          "description": ""
         }
       ]
     },
@@ -8488,6 +8768,14 @@
           ],
           "value": "RBD",
           "description": "Receptor-finding domain (S1B)"
+        },
+        {
+          "name": "EY6A",
+          "citationIds": [
+            "27.1"
+          ],
+          "value": "EY6A",
+          "description": ""
         }
       ]
     },
@@ -8517,6 +8805,14 @@
           ],
           "value": "RBD",
           "description": "Receptor-finding domain (S1B)"
+        },
+        {
+          "name": "EY6A",
+          "citationIds": [
+            "27.1"
+          ],
+          "value": "EY6A",
+          "description": ""
         }
       ]
     },
@@ -8539,6 +8835,14 @@
           ],
           "value": "RBD",
           "description": "Receptor-finding domain (S1B)"
+        },
+        {
+          "name": "EY6A",
+          "citationIds": [
+            "27.1"
+          ],
+          "value": "EY6A",
+          "description": ""
         }
       ]
     },
@@ -8561,6 +8865,14 @@
           ],
           "value": "RBD",
           "description": "Receptor-finding domain (S1B)"
+        },
+        {
+          "name": "EY6A",
+          "citationIds": [
+            "27.1"
+          ],
+          "value": "EY6A",
+          "description": ""
         }
       ]
     },
@@ -8786,6 +9098,16 @@
           "aminoAcids": [
             "K"
           ]
+        },
+        {
+          "name": "escape mutants",
+          "citationIds": [
+            "25.1",
+            "26.1"
+          ],
+          "aminoAcids": [
+            "K"
+          ]
         }
       ]
     },
@@ -8826,6 +9148,16 @@
         {
           "name": "escape mutants Weisblum20",
           "citationIds": [
+            "26.1"
+          ],
+          "aminoAcids": [
+            "K"
+          ]
+        },
+        {
+          "name": "escape mutants",
+          "citationIds": [
+            "25.1",
             "26.1"
           ],
           "aminoAcids": [
@@ -8957,6 +9289,18 @@
             "Q",
             "T"
           ]
+        },
+        {
+          "name": "escape mutants",
+          "citationIds": [
+            "25.1",
+            "26.1"
+          ],
+          "aminoAcids": [
+            "N",
+            "Q",
+            "T"
+          ]
         }
       ]
     },
@@ -9001,6 +9345,21 @@
             "26.1"
           ],
           "aminoAcids": [
+            "E",
+            "G",
+            "I",
+            "K",
+            "L"
+          ]
+        },
+        {
+          "name": "escape mutants",
+          "citationIds": [
+            "25.1",
+            "26.1"
+          ],
+          "aminoAcids": [
+            "A",
             "E",
             "G",
             "I",
@@ -9065,6 +9424,17 @@
         {
           "name": "escape mutants Weisblum20",
           "citationIds": [
+            "26.1"
+          ],
+          "aminoAcids": [
+            "S",
+            "V"
+          ]
+        },
+        {
+          "name": "escape mutants",
+          "citationIds": [
+            "25.1",
             "26.1"
           ],
           "aminoAcids": [
@@ -9213,6 +9583,16 @@
           "aminoAcids": [
             "D"
           ]
+        },
+        {
+          "name": "escape mutants",
+          "citationIds": [
+            "25.1",
+            "26.1"
+          ],
+          "aminoAcids": [
+            "D"
+          ]
         }
       ]
     },
@@ -9325,6 +9705,16 @@
           "aminoAcids": [
             "F"
           ]
+        },
+        {
+          "name": "escape mutants",
+          "citationIds": [
+            "25.1",
+            "26.1"
+          ],
+          "aminoAcids": [
+            "F"
+          ]
         }
       ]
     },
@@ -9420,6 +9810,18 @@
             "I",
             "R"
           ]
+        },
+        {
+          "name": "escape mutants",
+          "citationIds": [
+            "25.1",
+            "26.1"
+          ],
+          "aminoAcids": [
+            "F",
+            "I",
+            "R"
+          ]
         }
       ]
     },
@@ -9479,6 +9881,16 @@
         {
           "name": "escape mutants Weisblum20",
           "citationIds": [
+            "26.1"
+          ],
+          "aminoAcids": [
+            "V"
+          ]
+        },
+        {
+          "name": "escape mutants",
+          "citationIds": [
+            "25.1",
             "26.1"
           ],
           "aminoAcids": [
@@ -10007,15 +10419,6 @@
           ],
           "value": "REGN1093",
           "description": ""
-        },
-        {
-          "name": "escape mutants Rogers20",
-          "citationIds": [
-            "27.1"
-          ],
-          "aminoAcids": [
-            "S"
-          ]
         }
       ]
     },
@@ -10222,6 +10625,16 @@
           "aminoAcids": [
             "A"
           ]
+        },
+        {
+          "name": "escape mutants",
+          "citationIds": [
+            "25.1",
+            "26.1"
+          ],
+          "aminoAcids": [
+            "A"
+          ]
         }
       ]
     },
@@ -10295,6 +10708,19 @@
             "K",
             "Q"
           ]
+        },
+        {
+          "name": "escape mutants",
+          "citationIds": [
+            "25.1",
+            "26.1"
+          ],
+          "aminoAcids": [
+            "A",
+            "D",
+            "K",
+            "Q"
+          ]
         }
       ]
     },
@@ -10337,6 +10763,16 @@
           "name": "escape mutants Baum20",
           "citationIds": [
             "25.1"
+          ],
+          "aminoAcids": [
+            "D"
+          ]
+        },
+        {
+          "name": "escape mutants",
+          "citationIds": [
+            "25.1",
+            "26.1"
           ],
           "aminoAcids": [
             "D"
@@ -10416,6 +10852,16 @@
           "name": "escape mutants Baum20",
           "citationIds": [
             "25.1"
+          ],
+          "aminoAcids": [
+            "V"
+          ]
+        },
+        {
+          "name": "escape mutants",
+          "citationIds": [
+            "25.1",
+            "26.1"
           ],
           "aminoAcids": [
             "V"
@@ -10652,6 +11098,18 @@
             "L",
             "S"
           ]
+        },
+        {
+          "name": "escape mutants",
+          "citationIds": [
+            "25.1",
+            "26.1"
+          ],
+          "aminoAcids": [
+            "L",
+            "P",
+            "S"
+          ]
         }
       ]
     },
@@ -10807,6 +11265,18 @@
             "L",
             "R"
           ]
+        },
+        {
+          "name": "escape mutants",
+          "citationIds": [
+            "25.1",
+            "26.1"
+          ],
+          "aminoAcids": [
+            "K",
+            "L",
+            "R"
+          ]
         }
       ]
     },
@@ -10862,6 +11332,16 @@
         {
           "name": "escape mutants Weisblum20",
           "citationIds": [
+            "26.1"
+          ],
+          "aminoAcids": [
+            "P"
+          ]
+        },
+        {
+          "name": "escape mutants",
+          "citationIds": [
+            "25.1",
             "26.1"
           ],
           "aminoAcids": [
@@ -11461,6 +11941,14 @@
           ],
           "value": "RBD",
           "description": "Receptor-finding domain (S1B)"
+        },
+        {
+          "name": "EY6A",
+          "citationIds": [
+            "27.1"
+          ],
+          "value": "EY6A",
+          "description": ""
         }
       ]
     },
@@ -11505,6 +11993,14 @@
           ],
           "value": "RBD",
           "description": "Receptor-finding domain (S1B)"
+        },
+        {
+          "name": "EY6A",
+          "citationIds": [
+            "27.1"
+          ],
+          "value": "EY6A",
+          "description": ""
         }
       ]
     },
@@ -13777,6 +14273,16 @@
           "aminoAcids": [
             "Y"
           ]
+        },
+        {
+          "name": "escape mutants",
+          "citationIds": [
+            "25.1",
+            "26.1"
+          ],
+          "aminoAcids": [
+            "Y"
+          ]
         }
       ]
     },
@@ -14289,6 +14795,16 @@
           "aminoAcids": [
             "Q"
           ]
+        },
+        {
+          "name": "escape mutants",
+          "citationIds": [
+            "25.1",
+            "26.1"
+          ],
+          "aminoAcids": [
+            "Q"
+          ]
         }
       ]
     },
@@ -14337,6 +14853,16 @@
           "aminoAcids": [
             "S"
           ]
+        },
+        {
+          "name": "escape mutants",
+          "citationIds": [
+            "25.1",
+            "26.1"
+          ],
+          "aminoAcids": [
+            "S"
+          ]
         }
       ]
     },
@@ -14360,6 +14886,16 @@
           "name": "escape mutants Baum20",
           "citationIds": [
             "25.1"
+          ],
+          "aminoAcids": [
+            "G"
+          ]
+        },
+        {
+          "name": "escape mutants",
+          "citationIds": [
+            "25.1",
+            "26.1"
           ],
           "aminoAcids": [
             "G"
@@ -15079,6 +15615,16 @@
           "aminoAcids": [
             "E"
           ]
+        },
+        {
+          "name": "escape mutants",
+          "citationIds": [
+            "25.1",
+            "26.1"
+          ],
+          "aminoAcids": [
+            "E"
+          ]
         }
       ]
     },
@@ -15204,6 +15750,16 @@
           "name": "escape mutants Baum20",
           "citationIds": [
             "25.1"
+          ],
+          "aminoAcids": [
+            "K"
+          ]
+        },
+        {
+          "name": "escape mutants",
+          "citationIds": [
+            "25.1",
+            "26.1"
           ],
           "aminoAcids": [
             "K"
@@ -19062,6 +19618,16 @@
           "name": "escape mutants Baum20",
           "citationIds": [
             "25.1"
+          ],
+          "aminoAcids": [
+            "A"
+          ]
+        },
+        {
+          "name": "escape mutants",
+          "citationIds": [
+            "25.1",
+            "26.1"
           ],
           "aminoAcids": [
             "A"

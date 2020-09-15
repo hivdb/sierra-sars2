@@ -40,14 +40,14 @@ def clean_annot_categories(data):
             new_cat['display'] = display
         new_cat['dropdown'] = dropdown
         if multi_select:
-            for annot in default_annots:
-                if annot not in known_annots:
-                    abort('Unknown annotation: {!r}', annot)
-            new_cat['defaultAnnots'] = default_annots
+            new_cat['defaultAnnots'] = [
+                annot for annot in default_annots
+                if annot in known_annots
+            ]
         else:
             if default_annot is not None and \
                     default_annot not in known_annots:
-                abort('Unknown annotation: {!r}', default_annot)
+                default_annot = None
 
             new_cat['defaultAnnot'] = default_annot
         new_cat['multiSelect'] = multi_select

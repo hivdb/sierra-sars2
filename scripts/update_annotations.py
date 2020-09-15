@@ -92,7 +92,9 @@ def update_aa_annots(config):
     pos_lookup = {}
     for annot in annots:
         pos = annot['position']
-        aas = annot[config['dataSourceAAColumn']]
+        aas = set()
+        for col_name in config['dataSourceAAColumns']:
+            aas |= set(annot[col_name])
         if not aas:
             continue
         aas = sorted(aas)
@@ -102,6 +104,22 @@ def update_aa_annots(config):
     mutannot_data['positions'] = merge_annotations(
         mutannot_data['positions'], pos_lookup, annot_name, ref_cite_ids
     )
+    with open(config['mutAnnotPath'], 'w') as mut_annot_fp:
+        json.dump(mutannot_data, mut_annot_fp, indent=2)
+
+
+def remove_annots(config):
+    with open(config['mutAnnotPath']) as mut_annot_fp:
+        mutannot_data = json.load(mut_annot_fp)
+    mutannot_data['annotations'] = [
+        annot for annot in mutannot_data['annotations']
+        if annot['name'] != config['annotName']
+    ]
+    for posdata in mutannot_data['positions']:
+        posdata['annotations'] = [
+            annot for annot in posdata['annotations']
+            if annot['name'] != config['annotName']
+        ]
     with open(config['mutAnnotPath'], 'w') as mut_annot_fp:
         json.dump(mutannot_data, mut_annot_fp, indent=2)
 
@@ -201,6 +219,8 @@ def main():
             update_pos_annots(config)
         elif config['dataSourceType'] == 'AA_ANNOTS':
             update_aa_annots(config)
+        elif config['dataSourceType'] == 'DEL_ANNOTS':
+            remove_annots(config)
 
 
 if __name__ == '__main__':
