@@ -202,6 +202,14 @@
       "colorRules": []
     },
     {
+      "name": "escape mutants",
+      "label": "All",
+      "level": "aminoAcid",
+      "category": "escapeMutants",
+      "hideCitations": false,
+      "colorRules": []
+    },
+    {
       "name": "escape mutants Baum20",
       "label": "Baum, 2020",
       "level": "aminoAcid",
@@ -221,14 +229,6 @@
       "name": "EY6A",
       "level": "position",
       "category": "antibody",
-      "hideCitations": false,
-      "colorRules": []
-    },
-    {
-      "name": "escape mutants",
-      "label": "All",
-      "level": "aminoAcid",
-      "category": "escapeMutants",
       "hideCitations": false,
       "colorRules": []
     }
