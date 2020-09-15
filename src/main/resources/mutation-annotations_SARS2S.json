@@ -105,7 +105,7 @@
       "name": "ACE2",
       "level": "position",
       "category": "ace2",
-      "hideCitations": true,
+      "hideCitations": false,
       "colorRules": []
     },
     {
@@ -119,70 +119,70 @@
       "name": "Cysteine residue",
       "level": "position",
       "category": "_hide",
-      "hideCitations": false,
+      "hideCitations": true,
       "colorRules": []
     },
     {
       "name": "REGN1098",
       "level": "position",
       "category": "antibody",
-      "hideCitations": false,
+      "hideCitations": true,
       "colorRules": []
     },
     {
       "name": "REGN1093",
       "level": "position",
       "category": "antibody",
-      "hideCitations": false,
+      "hideCitations": true,
       "colorRules": []
     },
     {
       "name": "CR3022",
       "level": "position",
       "category": "antibody",
-      "hideCitations": false,
+      "hideCitations": true,
       "colorRules": []
     },
     {
       "name": "S309",
       "level": "position",
       "category": "antibody",
-      "hideCitations": false,
+      "hideCitations": true,
       "colorRules": []
     },
     {
       "name": "CB6",
       "level": "position",
       "category": "antibody",
-      "hideCitations": false,
+      "hideCitations": true,
       "colorRules": []
     },
     {
       "name": "P2B-2F6",
       "level": "position",
       "category": "antibody",
-      "hideCitations": false,
+      "hideCitations": true,
       "colorRules": []
     },
     {
       "name": "B38",
       "level": "position",
       "category": "antibody",
-      "hideCitations": false,
+      "hideCitations": true,
       "colorRules": []
     },
     {
       "name": "BD23",
       "level": "position",
       "category": "antibody",
-      "hideCitations": false,
+      "hideCitations": true,
       "colorRules": []
     },
     {
       "name": "C105",
       "level": "position",
       "category": "antibody",
-      "hideCitations": false,
+      "hideCitations": true,
       "colorRules": []
     },
     {
@@ -202,11 +202,18 @@
       "colorRules": []
     },
     {
+      "name": "EY6A",
+      "level": "position",
+      "category": "antibody",
+      "hideCitations": true,
+      "colorRules": []
+    },
+    {
       "name": "escape mutants",
       "label": "All",
       "level": "aminoAcid",
       "category": "escapeMutants",
-      "hideCitations": false,
+      "hideCitations": true,
       "colorRules": []
     },
     {
@@ -214,7 +221,7 @@
       "label": "Baum, 2020",
       "level": "aminoAcid",
       "category": "escapeMutants",
-      "hideCitations": false,
+      "hideCitations": true,
       "colorRules": []
     },
     {
@@ -222,14 +229,7 @@
       "label": "Weisblum, 2020",
       "level": "aminoAcid",
       "category": "escapeMutants",
-      "hideCitations": false,
-      "colorRules": []
-    },
-    {
-      "name": "EY6A",
-      "level": "position",
-      "category": "antibody",
-      "hideCitations": false,
+      "hideCitations": true,
       "colorRules": []
     }
   ],

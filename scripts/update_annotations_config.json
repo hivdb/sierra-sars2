@@ -77,7 +77,7 @@
       "name": "EY6A",
       "level": "position",
       "category": "antibody",
-      "hideCitations": false,
+      "hideCitations": true,
       "colorRules": []
     },
     "citationDefs": [
@@ -113,7 +113,7 @@
       "label": "All",
       "level": "aminoAcid",
       "category": "escapeMutants",
-      "hideCitations": false,
+      "hideCitations": true,
       "colorRules": []
     },
     "citationDefs": [
@@ -141,7 +141,7 @@
       "label": "Baum, 2020",
       "level": "aminoAcid",
       "category": "escapeMutants",
-      "hideCitations": false,
+      "hideCitations": true,
       "colorRules": []
     },
     "citationDefs": [
@@ -163,7 +163,7 @@
       "label": "Weisblum, 2020",
       "level": "aminoAcid",
       "category": "escapeMutants",
-      "hideCitations": false,
+      "hideCitations": true,
       "colorRules": []
     },
     "citationDefs": [
