@@ -2,6 +2,36 @@
   "version": "20200916160100",
   "gene": "SARS2RdRP",
   "taxonomy": "SARS2",
+  "fragmentOptions": [
+    {
+      "name": "Fingers",
+      "seqFragment": [
+        336,
+        581
+      ]
+    },
+    {
+      "name": "Palm",
+      "seqFragment": [
+        680,
+        815
+      ]
+    },
+    {
+      "name": "Thumb",
+      "seqFragment": [
+        816,
+        932
+      ]
+    },
+    {
+      "name": "All",
+      "seqFragment": [
+        1,
+        932
+      ]
+    }
+  ],
   "annotCategories": [
     {
       "name": "subdomain",
