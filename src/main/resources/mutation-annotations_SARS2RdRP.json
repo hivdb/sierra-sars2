@@ -44,7 +44,7 @@
       "name": "_hide1",
       "display": false,
       "dropdown": false,
-      "defaultAnnot": "_hide1",
+      "defaultAnnot": null,
       "multiSelect": false,
       "annotStyle": "circleInBox"
     },
@@ -52,7 +52,7 @@
       "name": "_hide2",
       "display": false,
       "dropdown": false,
-      "defaultAnnot": "_hide2",
+      "defaultAnnot": null,
       "multiSelect": false,
       "annotStyle": "underscore"
     },
