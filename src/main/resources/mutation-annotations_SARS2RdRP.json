@@ -39,6 +39,30 @@
       "defaultAnnot": "subdomain",
       "multiSelect": false,
       "annotStyle": "colorBox"
+    },
+    {
+      "name": "_hide1",
+      "display": false,
+      "dropdown": false,
+      "defaultAnnots": "",
+      "multiSelect": false,
+      "annotStyle": "circleInBox"
+    },
+    {
+      "name": "_hide2",
+      "display": false,
+      "dropdown": false,
+      "defaultAnnots": [],
+      "multiSelect": false,
+      "annotStyle": "underscore"
+    },
+    {
+      "name": "_hide",
+      "display": false,
+      "dropdown": false,
+      "defaultAnnot": null,
+      "multiSelect": false,
+      "annotStyle": "hide"
     }
   ],
   "annotations": [
