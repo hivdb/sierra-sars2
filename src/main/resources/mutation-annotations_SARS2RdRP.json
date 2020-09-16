@@ -74,6 +74,20 @@
       "colorRules": []
     },
     {
+      "name": "_hide1",
+      "level": "position",
+      "category": "_hide",
+      "hideCitations": true,
+      "colorRules": []
+    },
+    {
+      "name": "_hide2",
+      "level": "position",
+      "category": "_hide",
+      "hideCitations": true,
+      "colorRules": []
+    },
+    {
       "name": "var2000",
       "label": "\u22650.1%",
       "level": "aminoAcid",
