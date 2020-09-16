@@ -1,4 +1,16 @@
 {
+  "version": "20200916160100",
+  "gene": "SARS2RdRP",
+  "taxonomy": "SARS2",
+  "annotCategories": [
+    {
+      "name": "subdomain",
+      "dropdown": false,
+      "defaultAnnot": "subdomain",
+      "multiSelect": false,
+      "annotStyle": "colorBox"
+    }
+  ],
   "annotations": [
     {
       "name": "subdomain",
