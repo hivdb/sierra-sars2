@@ -74,14 +74,14 @@
       "colorRules": []
     },
     {
-      "name": "hide1",
+      "name": "_hide1",
       "level": "position",
       "category": "_hide",
       "hideCitations": false,
       "colorRules": []
     },
     {
-      "name": "hide2",
+      "name": "_hide2",
       "level": "position",
       "category": "_hide",
       "hideCitations": false,
