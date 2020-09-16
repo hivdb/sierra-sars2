@@ -44,7 +44,7 @@
       "name": "_hide1",
       "display": false,
       "dropdown": false,
-      "defaultAnnots": "_hide1",
+      "defaultAnnot": "_hide1",
       "multiSelect": false,
       "annotStyle": "circleInBox"
     },
@@ -52,7 +52,7 @@
       "name": "_hide2",
       "display": false,
       "dropdown": false,
-      "defaultAnnots": "_hide2",
+      "defaultAnnot": "_hide2",
       "multiSelect": false,
       "annotStyle": "underscore"
     },
@@ -71,20 +71,6 @@
       "level": "position",
       "category": "subdomain",
       "hideCitations": true,
-      "colorRules": []
-    },
-    {
-      "name": "_hide1",
-      "level": "position",
-      "category": "_hide",
-      "hideCitations": false,
-      "colorRules": []
-    },
-    {
-      "name": "_hide2",
-      "level": "position",
-      "category": "_hide",
-      "hideCitations": false,
       "colorRules": []
     },
     {
