@@ -5,10 +5,13 @@ import json
 
 
 def get_max_citation_id(citations):
+    if not citations:
+        return 1
     return max(cite['citationId'] for cite in citations.values())
 
 
 def merge_annotation_group(config, mutannot_data):
+    mutannot_data['annotations'] = mutannot_data.get('annotations', [])
     for group in mutannot_data['annotations']:
         if group['name'] == config['annotDef']['name']:
             group.update(config['annotDef'])
@@ -20,10 +23,10 @@ def merge_annotation_group(config, mutannot_data):
 
 
 def merge_citations(config, mutannot_data):
-    max_cite_id = get_max_citation_id(mutannot_data['citations'])
+    max_cite_id = get_max_citation_id(mutannot_data.get('citations'))
     ref_cite_ids = []
     for cite_def in config['citationDefs']:
-        for full_cite_id, cite in mutannot_data['citations'].items():
+        for full_cite_id, cite in mutannot_data.get('citations', {}).items():
             if cite_def['doi'] == cite['doi'] and \
                     cite_def['section'] == cite['section']:
                 cite.update(cite_def)
@@ -32,7 +35,7 @@ def merge_citations(config, mutannot_data):
         else:
             max_cite_id += 1
             full_cite_id = '{}.1'.format(max_cite_id)
-            mutannot_data['citations'][full_cite_id] = {
+            mutannot_data.get('citations', {})[full_cite_id] = {
                 'citationId': max_cite_id,
                 'sectionId': 1,
                 **cite_def
@@ -144,7 +147,7 @@ def update_pos_annots(config):
                     'description': description
                 }
     mutannot_data['positions'] = merge_annotations(
-        mutannot_data['positions'], pos_lookup, annot_name, ref_cite_ids
+        mutannot_data.get('positions', []), pos_lookup, annot_name, ref_cite_ids
     )
     with open(config['mutAnnotPath'], 'w') as mut_annot_fp:
         json.dump(mutannot_data, mut_annot_fp, indent=2)

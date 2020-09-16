@@ -230,5 +230,81 @@
     "dataSourceGene": "S",
     "dataSourceCutoff": 0.001,
     "geneDefGene": "SARS2S"
+  },
+  {
+    "mutAnnotPath": "src/main/resources/mutation-annotations_SARS2RdRP.json",
+    "dataSourceType": "POS_ANNOTS",
+    "annotDef": {
+      "name": "subdomain",
+      "level": "position",
+      "category": "subdomain",
+      "hideCitations": true,
+      "colorRules": []
+    },
+    "citationDefs": [
+      {
+        "author": "Gao",
+        "year": 2020,
+        "doi": "10.1126/science.abb7498",
+        "section": "Figure 1"
+      }
+    ],
+    "annotations": [
+      {
+        "value": "β-hairpin",
+        "description": "β-hairpin",
+        "positions": [[29, 50]]
+      },
+      {
+        "value": "NiRAN",
+        "description": "nidovirus RdRP-associated nucleotidyltransferase",
+        "positions": [[51, 249]]
+      },
+      {
+        "value": "Interface",
+        "description": "Interface",
+        "positions": [[250, 365]]
+      },
+      {
+        "value": "Fingers",
+        "description": "Fingers",
+        "positions": [[366, 581]]
+      },
+      {
+        "value": "Palm",
+        "description": "Palm",
+        "positions": [[680, 815]]
+      },
+      {
+        "value": "Thumb",
+        "description": "Thumb",
+        "positions": [[816, 932]]
+      }
+    ]
+  },
+  {
+    "mutAnnotPath": "src/main/resources/mutation-annotations_SARS2RdRP.json",
+    "dataSourcePath": "src/main/resources/aapcnt/rx-all_taxon-SARS2.json",
+    "dataSourceType": "AAPCNT",
+    "geneDefPath": "src/main/resources/genes.json",
+    "annotDef": {
+      "name": "var2000",
+      "label": "≥0.1%",
+      "level": "aminoAcid",
+      "category": "polymorphism",
+      "hideCitations": true,
+      "colorRules": []
+    },
+    "citationDefs": [
+      {
+        "author": "Tzou",
+        "year": 2020,
+        "doi": "10.20944/preprints202007.0551.v1",
+        "section": "Psuedo section"
+      }
+    ],
+    "dataSourceGene": "RdRP",
+    "dataSourceCutoff": 0.001,
+    "geneDefGene": "SARS2RdRP"
   }
 ]
