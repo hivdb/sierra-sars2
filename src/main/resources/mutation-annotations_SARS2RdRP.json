@@ -106,22 +106,6 @@
       ]
     },
     {
-      "position": 10,
-      "annotations": [
-        {
-          "name": "var2000",
-          "aminoAcids": [
-            "E",
-            "G"
-          ],
-          "description": "",
-          "citationIds": [
-            "2.1"
-          ]
-        }
-      ]
-    },
-    {
       "position": 29,
       "annotations": [
         {
