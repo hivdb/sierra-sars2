@@ -41,14 +41,6 @@
       "annotStyle": "colorBox"
     },
     {
-      "name": "_hide1",
-      "display": false,
-      "dropdown": false,
-      "defaultAnnot": "_hide1",
-      "multiSelect": false,
-      "annotStyle": "circleInBox"
-    },
-    {
       "name": "_hide2",
       "display": false,
       "dropdown": false,
@@ -78,13 +70,6 @@
       "name": "subdomain",
       "level": "position",
       "category": "subdomain",
-      "hideCitations": true,
-      "colorRules": []
-    },
-    {
-      "name": "_hide1",
-      "level": "position",
-      "category": "_hide",
       "hideCitations": true,
       "colorRules": []
     },
