@@ -44,7 +44,7 @@
       "name": "_hide1",
       "display": false,
       "dropdown": false,
-      "defaultAnnot": null,
+      "defaultAnnot": "_hide1",
       "multiSelect": false,
       "annotStyle": "circleInBox"
     },
@@ -52,9 +52,17 @@
       "name": "_hide2",
       "display": false,
       "dropdown": false,
-      "defaultAnnot": null,
+      "defaultAnnot": "_hide2",
       "multiSelect": false,
       "annotStyle": "underscore"
+    },
+    {
+      "name": "polymorphism",
+      "dropdown": true,
+      "defaultAnnot": "var2000",
+      "multiSelect": false,
+      "annotStyle": "aminoAcids",
+      "color": "#000"
     },
     {
       "name": "_hide",
