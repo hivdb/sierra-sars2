@@ -1,1 +1,2798 @@
-[]
+[
+  {
+    "strain": "SARS2",
+    "commentName": "S5F",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 5,
+      "aas": "F"
+    },
+    "comment": "L5F is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S6F",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 6,
+      "aas": "F"
+    },
+    "comment": "V6F is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S8V",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 8,
+      "aas": "V"
+    },
+    "comment": "L8V is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S12F",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 12,
+      "aas": "F"
+    },
+    "comment": "S12F is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S17ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 17,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "N17 is located in subdomain NTD, and the position of a N-linked glycosylation sequon."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S18F",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 18,
+      "aas": "F"
+    },
+    "comment": "L18 is located in subdomain NTD. L18F is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S21I",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 21,
+      "aas": "I"
+    },
+    "comment": "R21 is located in subdomain NTD. R21I is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S29I",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 29,
+      "aas": "I"
+    },
+    "comment": "T29 is located in subdomain NTD. T29I is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S49Y",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 49,
+      "aas": "Y"
+    },
+    "comment": "H49 is located in subdomain NTD. H49Y is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S50L",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 50,
+      "aas": "L"
+    },
+    "comment": "S50 is located in subdomain NTD. S50L is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S54F",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 54,
+      "aas": "F"
+    },
+    "comment": "L54 is located in subdomain NTD. L54F is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S61ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 61,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "N61 is located in subdomain NTD, and the position of a N-linked glycosylation sequon."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S73I",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 73,
+      "aas": "I"
+    },
+    "comment": "T73 is located in subdomain NTD. T73I is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S74ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 74,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "N74 is located in subdomain NTD, and the position of a N-linked glycosylation sequon. N74K is a mutation that escape antibody neutralization."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S76I",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 76,
+      "aas": "I"
+    },
+    "comment": "T76 is located in subdomain NTD. T76I is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S79I",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 79,
+      "aas": "I"
+    },
+    "comment": "F79 is located in subdomain NTD. F79I is a mutation that escape antibody neutralization."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S80Y",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 80,
+      "aas": "Y"
+    },
+    "comment": "D80 is located in subdomain NTD. D80Y is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S95I",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 95,
+      "aas": "I"
+    },
+    "comment": "T95 is located in subdomain NTD. T95I is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S98F",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 98,
+      "aas": "F"
+    },
+    "comment": "S98 is located in subdomain NTD. S98F is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S102I",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 102,
+      "aas": "I"
+    },
+    "comment": "R102 is located in subdomain NTD. R102I is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S122ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 122,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "N122 is located in subdomain NTD, and the position of a N-linked glycosylation sequon."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S138H",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 138,
+      "aas": "H"
+    },
+    "comment": "D138 is located in subdomain NTD. D138H is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S145d",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 145,
+      "aas": "d"
+    },
+    "comment": "Y145 is located in subdomain NTD. Y145d is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S146Y",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 146,
+      "aas": "Y"
+    },
+    "comment": "H146 is located in subdomain NTD. H146Y is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S148S",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 148,
+      "aas": "S"
+    },
+    "comment": "N148 is located in subdomain NTD. N148S is a mutation that escape antibody neutralization."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S149ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 149,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "N149 is located in subdomain NTD, and the position of a N-linked glycosylation sequon."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S150ER",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 150,
+      "aas": "ER"
+    },
+    "comment": "K150 is located in subdomain NTD. K150E/R are mutations that escape antibody neutralization."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S151P",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 151,
+      "aas": "P"
+    },
+    "comment": "S151 is located in subdomain NTD. S151P is a mutation that escape antibody neutralization."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S153I",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 153,
+      "aas": "I"
+    },
+    "comment": "M153 is located in subdomain NTD. M153I is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S165ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 165,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "N165 is located in subdomain NTD, and the position of a N-linked glycosylation sequon."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S176F",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 176,
+      "aas": "F"
+    },
+    "comment": "L176 is located in subdomain NTD. L176F is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S177I",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 177,
+      "aas": "I"
+    },
+    "comment": "M177 is located in subdomain NTD. M177I is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S197V",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 197,
+      "aas": "V"
+    },
+    "comment": "I197 is located in subdomain NTD. I197V is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S213L",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 213,
+      "aas": "L"
+    },
+    "comment": "V213 is located in subdomain NTD. V213L is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S214L",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 214,
+      "aas": "L"
+    },
+    "comment": "R214 is located in subdomain NTD. R214L is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S215GH",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 215,
+      "aas": "GH"
+    },
+    "comment": "D215 is located in subdomain NTD. D215G/H are polymorphic mutations."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S221L",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 221,
+      "aas": "L"
+    },
+    "comment": "S221 is located in subdomain NTD. S221L is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S234ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 234,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "N234 is located in subdomain NTD, and the position of a N-linked glycosylation sequon."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S254F",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 254,
+      "aas": "F"
+    },
+    "comment": "S254 is located in subdomain NTD. S254F is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S259K",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 259,
+      "aas": "K"
+    },
+    "comment": "T259 is located in subdomain NTD. T259K is a mutation that escape antibody neutralization."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S282ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 282,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "N282 is located in subdomain NTD, and the position of a N-linked glycosylation sequon."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S307I",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 307,
+      "aas": "I"
+    },
+    "comment": "T307 is located in subdomain RBD. T307I is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S308L",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 308,
+      "aas": "L"
+    },
+    "comment": "V308 is located in subdomain RBD. V308L is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S331ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 331,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "N331 is located in subdomain RBD, the position of a N-linked glycosylation sequon, and an epitope binding to S309.[^10.1038/s41586-020-2349-y]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S332ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 332,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "I332 is located in subdomain RBD, and an epitope binding to S309.[^10.1038/s41586-020-2349-y]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S333ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 333,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "T333 is located in subdomain RBD, and an epitope binding to S309.[^10.1038/s41586-020-2349-y]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S334ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 334,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "N334 is located in subdomain RBD, and an epitope binding to S309.[^10.1038/s41586-020-2349-y]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S335ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 335,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "L335 is located in subdomain RBD, and an epitope binding to S309.[^10.1038/s41586-020-2349-y]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S336ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 336,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "C336 is located in subdomain RBD, an epitope binding to S309,[^10.1038/s41586-020-2349-y] and one of the nine cysteine residues found in RBD."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S337ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 337,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "P337 is located in subdomain RBD, and an epitope binding to S309.[^10.1038/s41586-020-2349-y]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S339ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 339,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "G339 is located in subdomain RBD, and an epitope binding to S309.[^10.1038/s41586-020-2349-y]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S340ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 340,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "E340 is located in subdomain RBD, and an epitope binding to S309.[^10.1038/s41586-020-2349-y]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S341ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 341,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "V341 is located in subdomain RBD, and an epitope binding to S309.[^10.1038/s41586-020-2349-y]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S343ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 343,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "N343 is located in subdomain RBD, the position of a N-linked glycosylation sequon, and an epitope binding to S309.[^10.1038/s41586-020-2349-y]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S344ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 344,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "A344 is located in subdomain RBD, and an epitope binding to S309.[^10.1038/s41586-020-2349-y] A344S is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S345ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 345,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "T345 is located in subdomain RBD, and an epitope binding to S309.[^10.1038/s41586-020-2349-y]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S346ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 346,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "R346 is located in subdomain RBD, and an epitope binding to S309[^10.1038/s41586-020-2349-y] and P2B-2F6.[^10.1038/s41586-020-2380-z] R346K/S are mutations that escape antibody neutralization."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S354ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 354,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "N354 is located in subdomain RBD, and an epitope binding to S309.[^10.1038/s41586-020-2349-y]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S356ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 356,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "K356 is located in subdomain RBD, and an epitope binding to S309.[^10.1038/s41586-020-2349-y]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S357ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 357,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "R357 is located in subdomain RBD, and an epitope binding to S309.[^10.1038/s41586-020-2349-y]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S358ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 358,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "I358 is located in subdomain RBD, and an epitope binding to S309.[^10.1038/s41586-020-2349-y]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S359ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 359,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "S359 is located in subdomain RBD, and an epitope binding to S309.[^10.1038/s41586-020-2349-y]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S360ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 360,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "N360 is located in subdomain RBD, and an epitope binding to S309.[^10.1038/s41586-020-2349-y]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S361ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 361,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "C361 is located in subdomain RBD, an epitope binding to S309,[^10.1038/s41586-020-2349-y] and one of the nine cysteine residues found in RBD."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S367F",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 367,
+      "aas": "F"
+    },
+    "comment": "V367 is located in subdomain RBD. V367F is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S368ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 368,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "L368 is located in subdomain RBD, and an epitope binding to EY6A.[^10.1038/s41594-020-0480-y]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S369ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 369,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "Y369 is located in subdomain RBD, and an epitope binding to CR3022[^10.1126/science.abb7269][^10.1016/j.chom.2020.06.010] and EY6A.[^10.1038/s41594-020-0480-y]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S370ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 370,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "N370 is located in subdomain RBD, and an epitope binding to CR3022[^10.1126/science.abb7269][^10.1016/j.chom.2020.06.010] and EY6A.[^10.1038/s41594-020-0480-y]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S371ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 371,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "S371 is located in subdomain RBD, and an epitope binding to CR3022.[^10.1126/science.abb7269][^10.1016/j.chom.2020.06.010]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S372ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 372,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "A372 is located in subdomain RBD, and an epitope binding to CR3022.[^10.1126/science.abb7269][^10.1016/j.chom.2020.06.010]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S374ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 374,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "F374 is located in subdomain RBD, and an epitope binding to CR3022[^10.1126/science.abb7269][^10.1016/j.chom.2020.06.010] and EY6A.[^10.1038/s41594-020-0480-y]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S375ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 375,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "S375 is located in subdomain RBD, and an epitope binding to CR3022[^10.1126/science.abb7269][^10.1016/j.chom.2020.06.010] and EY6A.[^10.1038/s41594-020-0480-y]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S376ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 376,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "T376 is located in subdomain RBD, and an epitope binding to CR3022[^10.1126/science.abb7269][^10.1016/j.chom.2020.06.010] and EY6A.[^10.1038/s41594-020-0480-y]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S377ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 377,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "F377 is located in subdomain RBD, and an epitope binding to CR3022[^10.1126/science.abb7269][^10.1016/j.chom.2020.06.010] and EY6A.[^10.1038/s41594-020-0480-y]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S378ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 378,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "K378 is located in subdomain RBD, and an epitope binding to CR3022[^10.1126/science.abb7269][^10.1016/j.chom.2020.06.010] and EY6A.[^10.1038/s41594-020-0480-y]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S379ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 379,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "C379 is located in subdomain RBD, an epitope binding to CR3022[^10.1126/science.abb7269][^10.1016/j.chom.2020.06.010] and EY6A,[^10.1038/s41594-020-0480-y] and one of the nine cysteine residues found in RBD."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S380ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 380,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "Y380 is located in subdomain RBD, and an epitope binding to CR3022[^10.1126/science.abb7269][^10.1016/j.chom.2020.06.010] and EY6A.[^10.1038/s41594-020-0480-y]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S381ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 381,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "G381 is located in subdomain RBD, and an epitope binding to CR3022[^10.1126/science.abb7269][^10.1016/j.chom.2020.06.010] and EY6A.[^10.1038/s41594-020-0480-y]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S382ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 382,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "V382 is located in subdomain RBD, and an epitope binding to CR3022[^10.1126/science.abb7269][^10.1016/j.chom.2020.06.010] and EY6A.[^10.1038/s41594-020-0480-y]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S383ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 383,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "S383 is located in subdomain RBD, and an epitope binding to CR3022[^10.1126/science.abb7269][^10.1016/j.chom.2020.06.010] and EY6A.[^10.1038/s41594-020-0480-y]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S384ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 384,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "P384 is located in subdomain RBD, and an epitope binding to CR3022[^10.1126/science.abb7269][^10.1016/j.chom.2020.06.010] and EY6A.[^10.1038/s41594-020-0480-y]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S385ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 385,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "T385 is located in subdomain RBD, and an epitope binding to CR3022[^10.1126/science.abb7269][^10.1016/j.chom.2020.06.010] and EY6A.[^10.1038/s41594-020-0480-y]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S386ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 386,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "K386 is located in subdomain RBD, and an epitope binding to CR3022[^10.1126/science.abb7269][^10.1016/j.chom.2020.06.010] and EY6A.[^10.1038/s41594-020-0480-y]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S388ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 388,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "N388 is located in subdomain RBD, and an epitope binding to EY6A.[^10.1038/s41594-020-0480-y]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S389ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 389,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "D389 is located in subdomain RBD, and an epitope binding to CR3022[^10.1126/science.abb7269][^10.1016/j.chom.2020.06.010] and EY6A.[^10.1038/s41594-020-0480-y]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S390ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 390,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "L390 is located in subdomain RBD, and an epitope binding to CR3022[^10.1126/science.abb7269][^10.1016/j.chom.2020.06.010] and EY6A.[^10.1038/s41594-020-0480-y]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S391ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 391,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "C391 is located in subdomain RBD, and one of the nine cysteine residues found in RBD."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S392ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 392,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "F392 is located in subdomain RBD, and an epitope binding to CR3022[^10.1126/science.abb7269][^10.1016/j.chom.2020.06.010] and EY6A.[^10.1038/s41594-020-0480-y]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S403ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 403,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "R403 is located in subdomain RBD, and an epitope binding to B38,[^10.1126/science.abc2241] CB6,[^10.1038/s41586-020-2381-y] C105,[^10.1016/j.cell.2020.06.025] CC12.1,[^10.1126/science.abc7520] CC12.3,[^10.1126/science.abc7520] CV30,[^10.1101/2020.06.12.148692] REGN10987[^10.1126/science.abd0827] and REGN10933.[^10.1126/science.abd0827]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S404ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 404,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "G404 is located in subdomain RBD, and an epitope binding to CB6.[^10.1038/s41586-020-2381-y]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S405ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 405,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "D405 is located in subdomain RBD, and an epitope binding to B38,[^10.1126/science.abc2241] CB6,[^10.1038/s41586-020-2381-y] C105,[^10.1016/j.cell.2020.06.025] CC12.1,[^10.1126/science.abc7520] CC12.3[^10.1126/science.abc7520] and CV30.[^10.1101/2020.06.12.148692]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S406ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 406,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "E406 is located in subdomain RBD, and an epitope binding to B38[^10.1126/science.abc2241] and CB6.[^10.1038/s41586-020-2381-y]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S408ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 408,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "R408 is located in subdomain RBD, and an epitope binding to CB6[^10.1038/s41586-020-2381-y] and CC12.1.[^10.1126/science.abc7520]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S409ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 409,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "Q409 is located in subdomain RBD, and an epitope binding to B38[^10.1126/science.abc2241] and CB6.[^10.1038/s41586-020-2381-y]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S411ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 411,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "A411 is located in subdomain RBD, and an epitope binding to EY6A.[^10.1038/s41594-020-0480-y]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S412ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 412,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "P412 is located in subdomain RBD, and an epitope binding to EY6A.[^10.1038/s41594-020-0480-y]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S413ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 413,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "G413 is located in subdomain RBD, and an epitope binding to EY6A.[^10.1038/s41594-020-0480-y]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S414ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 414,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "Q414 is located in subdomain RBD, and an epitope binding to EY6A.[^10.1038/s41594-020-0480-y]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S415ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 415,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "T415 is located in subdomain RBD, and an epitope binding to B38,[^10.1126/science.abc2241] CB6,[^10.1038/s41586-020-2381-y] CC12.1,[^10.1126/science.abc7520] CC12.3[^10.1126/science.abc7520] and CV30.[^10.1101/2020.06.12.148692]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S416ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 416,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "G416 is located in subdomain RBD, and an epitope binding to B38,[^10.1126/science.abc2241] CB6,[^10.1038/s41586-020-2381-y] CC12.1,[^10.1126/science.abc7520] CC12.3[^10.1126/science.abc7520] and CV30.[^10.1101/2020.06.12.148692]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S417ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 417,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "K417 is located in subdomain RBD, involved in ACE2 binding,[^10.1038/s41586-020-2180-5][^10.1016/j.cell.2020.03.045] and an epitope binding to B38,[^10.1126/science.abc2241] CB6,[^10.1038/s41586-020-2381-y] C105,[^10.1016/j.cell.2020.06.025] CC12.1,[^10.1126/science.abc7520] CC12.3,[^10.1126/science.abc7520] CV30[^10.1101/2020.06.12.148692] and REGN10933.[^10.1126/science.abd0827] K417E is a mutation that escape antibody neutralization."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S418ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 418,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "I418 is located in subdomain RBD, and an epitope binding to CB6.[^10.1038/s41586-020-2381-y]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S419ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 419,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "A419 is located in subdomain RBD, and an epitope binding to B38[^10.1126/science.abc2241] and CB6.[^10.1038/s41586-020-2381-y]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S420ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 420,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "D420 is located in subdomain RBD, and an epitope binding to B38,[^10.1126/science.abc2241] CB6,[^10.1038/s41586-020-2381-y] C105,[^10.1016/j.cell.2020.06.025] CC12.1,[^10.1126/science.abc7520] CC12.3[^10.1126/science.abc7520] and CV30.[^10.1101/2020.06.12.148692]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S421ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 421,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "Y421 is located in subdomain RBD, and an epitope binding to B38,[^10.1126/science.abc2241] C105,[^10.1016/j.cell.2020.06.025] CC12.1,[^10.1126/science.abc7520] CC12.3,[^10.1126/science.abc7520] CV30[^10.1101/2020.06.12.148692] and REGN10933.[^10.1126/science.abd0827]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S426ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 426,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "P426 is located in subdomain RBD, and an epitope binding to EY6A.[^10.1038/s41594-020-0480-y]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S427ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 427,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "D427 is located in subdomain RBD, and an epitope binding to CR3022[^10.1126/science.abb7269][^10.1016/j.chom.2020.06.010] and EY6A.[^10.1038/s41594-020-0480-y]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S428ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 428,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "D428 is located in subdomain RBD, and an epitope binding to CR3022[^10.1126/science.abb7269][^10.1016/j.chom.2020.06.010] and EY6A.[^10.1038/s41594-020-0480-y]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S429ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 429,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "F429 is located in subdomain RBD, and an epitope binding to CR3022[^10.1126/science.abb7269][^10.1016/j.chom.2020.06.010] and EY6A.[^10.1038/s41594-020-0480-y]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S430ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 430,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "T430 is located in subdomain RBD, and an epitope binding to CR3022[^10.1126/science.abb7269][^10.1016/j.chom.2020.06.010] and EY6A.[^10.1038/s41594-020-0480-y]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S432ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 432,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "C432 is located in subdomain RBD, and one of the nine cysteine residues found in RBD."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S439ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 439,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "N439 is located in subdomain RBD, involved in ACE2 binding,[^10.1038/s41586-020-2179-y] and an epitope binding to REGN10987.[^10.1126/science.abd0827] N439K is a mutation that escape antibody neutralization, and a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S440ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 440,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "N440 is located in subdomain RBD, and an epitope binding to S309[^10.1038/s41586-020-2349-y] and REGN10987.[^10.1126/science.abd0827] N440K is a mutation that escape antibody neutralization."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S441ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 441,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "L441 is located in subdomain RBD, and an epitope binding to S309[^10.1038/s41586-020-2349-y] and REGN10987.[^10.1126/science.abd0827]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S444ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 444,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "K444 is located in subdomain RBD, and an epitope binding to S309,[^10.1038/s41586-020-2349-y] P2B-2F6,[^10.1038/s41586-020-2380-z] H11-D4,[^10.1038/s41594-020-0469-6] H11-H4[^10.1038/s41594-020-0469-6][^10.1038/s41594-020-0480-y] and REGN10987.[^10.1126/science.abd0827] K444N/Q/T are mutations that escape antibody neutralization."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S445ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 445,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "V445 is located in subdomain RBD, and an epitope binding to REGN10987.[^10.1126/science.abd0827] V445A/E/G/I/K/L are mutations that escape antibody neutralization."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S446ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 446,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "G446 is located in subdomain RBD, involved in ACE2 binding,[^10.1038/s41586-020-2180-5][^10.1016/j.cell.2020.03.045][^10.1101/2020.06.30.177097] and an epitope binding to P2B-2F6,[^10.1038/s41586-020-2380-z] BD23,[^10.1016/j.cell.2020.05.025] H11-D4[^10.1038/s41594-020-0469-6] and REGN10987.[^10.1126/science.abd0827] G446S/V are mutations that escape antibody neutralization."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S447ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 447,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "G447 is located in subdomain RBD, and an epitope binding to P2B-2F6,[^10.1038/s41586-020-2380-z] H11-H4[^10.1038/s41594-020-0469-6][^10.1038/s41594-020-0480-y] and REGN10987.[^10.1126/science.abd0827]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S448ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 448,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "N448 is located in subdomain RBD, and an epitope binding to P2B-2F6,[^10.1038/s41586-020-2380-z] H11-H4[^10.1038/s41594-020-0469-6][^10.1038/s41594-020-0480-y] and REGN10987.[^10.1126/science.abd0827]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S449ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 449,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "Y449 is located in subdomain RBD, involved in ACE2 binding,[^10.1038/s41586-020-2180-5][^10.1016/j.cell.2020.03.045][^10.1038/s41586-020-2179-y] and an epitope binding to P2B-2F6,[^10.1038/s41586-020-2380-z] BD23,[^10.1016/j.cell.2020.05.025] 2-4,[^10.1038/s41586-020-2571-7] H11-D4,[^10.1038/s41594-020-0469-6] H11-H4[^10.1038/s41594-020-0469-6][^10.1038/s41594-020-0480-y] and REGN10987.[^10.1126/science.abd0827]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S450ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 450,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "N450 is located in subdomain RBD, and an epitope binding to P2B-2F6,[^10.1038/s41586-020-2380-z] H11-D4,[^10.1038/s41594-020-0469-6] H11-H4[^10.1038/s41594-020-0469-6][^10.1038/s41594-020-0480-y] and REGN10987.[^10.1126/science.abd0827] N450D is a mutation that escape antibody neutralization."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S452ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 452,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "L452 is located in subdomain RBD, and an epitope binding to P2B-2F6,[^10.1038/s41586-020-2380-z] BD23,[^10.1016/j.cell.2020.05.025] H11-D4[^10.1038/s41594-020-0469-6] and H11-H4.[^10.1038/s41594-020-0469-6][^10.1038/s41594-020-0480-y]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S453ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 453,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "Y453 is located in subdomain RBD, involved in ACE2 binding,[^10.1038/s41586-020-2180-5][^10.1016/j.cell.2020.03.045][^10.1038/s41586-020-2179-y][^10.1101/2020.06.30.177097] and an epitope binding to 2-4,[^10.1038/s41586-020-2571-7] B38,[^10.1126/science.abc2241] C105,[^10.1016/j.cell.2020.06.025] CC12.1,[^10.1126/science.abc7520] CC12.3,[^10.1126/science.abc7520] CV30[^10.1101/2020.06.12.148692] and REGN10933.[^10.1126/science.abd0827] Y453F is a mutation that escape antibody neutralization."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S455ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 455,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "L455 is located in subdomain RBD, involved in ACE2 binding,[^10.1038/s41586-020-2180-5][^10.1016/j.cell.2020.03.045][^10.1038/s41586-020-2179-y][^10.1101/2020.06.30.177097] and an epitope binding to 2-4,[^10.1038/s41586-020-2571-7] H11-D4,[^10.1038/s41594-020-0469-6] H11-H4,[^10.1038/s41594-020-0469-6][^10.1038/s41594-020-0480-y] B38,[^10.1126/science.abc2241] CB6,[^10.1038/s41586-020-2381-y] C105,[^10.1016/j.cell.2020.06.025] CC12.1,[^10.1126/science.abc7520] CC12.3,[^10.1126/science.abc7520] CV30[^10.1101/2020.06.12.148692] and REGN10933.[^10.1126/science.abd0827] L455F/I/R are mutations that escape antibody neutralization."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S456ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 456,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "F456 is located in subdomain RBD, involved in ACE2 binding,[^10.1038/s41586-020-2180-5][^10.1016/j.cell.2020.03.045][^10.1038/s41586-020-2179-y][^10.1101/2020.06.30.177097] and an epitope binding to 2-4,[^10.1038/s41586-020-2571-7] H11-D4,[^10.1038/s41594-020-0469-6] H11-H4,[^10.1038/s41594-020-0469-6][^10.1038/s41594-020-0480-y] B38,[^10.1126/science.abc2241] CB6,[^10.1038/s41586-020-2381-y] C105,[^10.1016/j.cell.2020.06.025] CC12.1,[^10.1126/science.abc7520] CC12.3,[^10.1126/science.abc7520] CV30[^10.1101/2020.06.12.148692] and REGN10933.[^10.1126/science.abd0827] F456V is a mutation that escape antibody neutralization."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S457ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 457,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "R457 is located in subdomain RBD, and an epitope binding to B38,[^10.1126/science.abc2241] CB6,[^10.1038/s41586-020-2381-y] C105,[^10.1016/j.cell.2020.06.025] CC12.1,[^10.1126/science.abc7520] CC12.3[^10.1126/science.abc7520] and CV30.[^10.1101/2020.06.12.148692]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S458ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 458,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "K458 is located in subdomain RBD, and an epitope binding to B38,[^10.1126/science.abc2241] CB6,[^10.1038/s41586-020-2381-y] C105,[^10.1016/j.cell.2020.06.025] CC12.1,[^10.1126/science.abc7520] CC12.3[^10.1126/science.abc7520] and CV30.[^10.1101/2020.06.12.148692]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S459ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 459,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "S459 is located in subdomain RBD, and an epitope binding to B38,[^10.1126/science.abc2241] CB6,[^10.1038/s41586-020-2381-y] C105,[^10.1016/j.cell.2020.06.025] CC12.1,[^10.1126/science.abc7520] CC12.3[^10.1126/science.abc7520] and CV30.[^10.1101/2020.06.12.148692]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S460ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 460,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "N460 is located in subdomain RBD, and an epitope binding to B38,[^10.1126/science.abc2241] CB6,[^10.1038/s41586-020-2381-y] CC12.1,[^10.1126/science.abc7520] CC12.3[^10.1126/science.abc7520] and CV30.[^10.1101/2020.06.12.148692]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S470ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 470,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "T470 is located in subdomain RBD, and an epitope binding to BD23[^10.1016/j.cell.2020.05.025] and H11-H4.[^10.1038/s41594-020-0469-6][^10.1038/s41594-020-0480-y]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S473ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 473,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "Y473 is located in subdomain RBD, involved in ACE2 binding,[^10.1016/j.cell.2020.03.045][^10.1101/2020.06.30.177097] and an epitope binding to B38,[^10.1126/science.abc2241] CB6,[^10.1038/s41586-020-2381-y] C105,[^10.1016/j.cell.2020.06.025] CC12.1,[^10.1126/science.abc7520] CC12.3[^10.1126/science.abc7520] and CV30.[^10.1101/2020.06.12.148692]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S474ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 474,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "Q474 is located in subdomain RBD, and an epitope binding to B38,[^10.1126/science.abc2241] CB6,[^10.1038/s41586-020-2381-y] C105,[^10.1016/j.cell.2020.06.025] CC12.1,[^10.1126/science.abc7520] CC12.3[^10.1126/science.abc7520] and CV30.[^10.1101/2020.06.12.148692]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S475ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 475,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "A475 is located in subdomain RBD, involved in ACE2 binding,[^10.1038/s41586-020-2180-5][^10.1016/j.cell.2020.03.045][^10.1038/s41586-020-2179-y][^10.1101/2020.06.30.177097] and an epitope binding to B38,[^10.1126/science.abc2241] CB6,[^10.1038/s41586-020-2381-y] C105,[^10.1016/j.cell.2020.06.025] CC12.1,[^10.1126/science.abc7520] CC12.3,[^10.1126/science.abc7520] CV30[^10.1101/2020.06.12.148692] and REGN10933.[^10.1126/science.abd0827]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S476ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 476,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "G476 is located in subdomain RBD, involved in ACE2 binding,[^10.1016/j.cell.2020.03.045][^10.1038/s41586-020-2179-y][^10.1101/2020.06.30.177097] and an epitope binding to B38,[^10.1126/science.abc2241] CB6,[^10.1038/s41586-020-2381-y] C105,[^10.1016/j.cell.2020.06.025] CC12.1,[^10.1126/science.abc7520] CC12.3,[^10.1126/science.abc7520] CV30[^10.1101/2020.06.12.148692] and REGN10933.[^10.1126/science.abd0827]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S477ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 477,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "S477 is located in subdomain RBD, and an epitope binding to B38,[^10.1126/science.abc2241] CB6,[^10.1038/s41586-020-2381-y] CC12.1[^10.1126/science.abc7520] and CV30.[^10.1101/2020.06.12.148692] S477N is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S478I",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 478,
+      "aas": "I"
+    },
+    "comment": "T478 is located in subdomain RBD. T478I is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S479S",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 479,
+      "aas": "S"
+    },
+    "comment": "P479 is located in subdomain RBD. P479S is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S480ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 480,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "C480 is located in subdomain RBD, and one of the nine cysteine residues found in RBD."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S482ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 482,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "G482 is located in subdomain RBD, and an epitope binding to H11-D4[^10.1038/s41594-020-0469-6] and H11-H4.[^10.1038/s41594-020-0469-6][^10.1038/s41594-020-0480-y]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S483ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 483,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "V483 is located in subdomain RBD, and an epitope binding to P2B-2F6,[^10.1038/s41586-020-2380-z] H11-D4[^10.1038/s41594-020-0469-6] and H11-H4.[^10.1038/s41594-020-0469-6][^10.1038/s41594-020-0480-y] V483A is a mutation that escape antibody neutralization, and a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S484ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 484,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "E484 is located in subdomain RBD, involved in ACE2 binding,[^10.1016/j.cell.2020.03.045] and an epitope binding to P2B-2F6,[^10.1038/s41586-020-2380-z] BD23,[^10.1016/j.cell.2020.05.025] 2-4,[^10.1038/s41586-020-2571-7] H11-D4,[^10.1038/s41594-020-0469-6] H11-H4,[^10.1038/s41594-020-0469-6][^10.1038/s41594-020-0480-y] B38,[^10.1126/science.abc2241] CC12.1[^10.1126/science.abc7520] and REGN10933.[^10.1126/science.abd0827] E484A/D/K/Q are mutations that escape antibody neutralization."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S485ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 485,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "G485 is located in subdomain RBD, and an epitope binding to P2B-2F6,[^10.1038/s41586-020-2380-z] BD23,[^10.1016/j.cell.2020.05.025] 2-4[^10.1038/s41586-020-2571-7] and REGN10933.[^10.1126/science.abd0827] G485D is a mutation that escape antibody neutralization."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S486ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 486,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "F486 is located in subdomain RBD, involved in ACE2 binding,[^10.1038/s41586-020-2180-5][^10.1016/j.cell.2020.03.045][^10.1038/s41586-020-2179-y][^10.1101/2020.06.30.177097] and an epitope binding to BD23,[^10.1016/j.cell.2020.05.025] 2-4,[^10.1038/s41586-020-2571-7] B38,[^10.1126/science.abc2241] CB6,[^10.1038/s41586-020-2381-y] C105,[^10.1016/j.cell.2020.06.025] CC12.1,[^10.1126/science.abc7520] CC12.3,[^10.1126/science.abc7520] CV30[^10.1101/2020.06.12.148692] and REGN10933.[^10.1126/science.abd0827] F486V is a mutation that escape antibody neutralization."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S487ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 487,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "N487 is located in subdomain RBD, involved in ACE2 binding,[^10.1038/s41586-020-2180-5][^10.1016/j.cell.2020.03.045][^10.1038/s41586-020-2179-y][^10.1101/2020.06.30.177097] and an epitope binding to B38,[^10.1126/science.abc2241] CB6,[^10.1038/s41586-020-2381-y] C105,[^10.1016/j.cell.2020.06.025] CC12.1,[^10.1126/science.abc7520] CC12.3,[^10.1126/science.abc7520] CV30[^10.1101/2020.06.12.148692] and REGN10933.[^10.1126/science.abd0827]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S488ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 488,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "C488 is located in subdomain RBD, an epitope binding to B38[^10.1126/science.abc2241] and REGN10933,[^10.1126/science.abd0827] and one of the nine cysteine residues found in RBD."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S489ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 489,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "Y489 is located in subdomain RBD, involved in ACE2 binding,[^10.1038/s41586-020-2180-5][^10.1016/j.cell.2020.03.045][^10.1038/s41586-020-2179-y][^10.1101/2020.06.30.177097] and an epitope binding to BD23,[^10.1016/j.cell.2020.05.025] 2-4,[^10.1038/s41586-020-2571-7] H11-D4,[^10.1038/s41594-020-0469-6] H11-H4,[^10.1038/s41594-020-0469-6][^10.1038/s41594-020-0480-y] B38,[^10.1126/science.abc2241] CB6,[^10.1038/s41586-020-2381-y] CC12.1,[^10.1126/science.abc7520] CC12.3,[^10.1126/science.abc7520] CV30[^10.1101/2020.06.12.148692] and REGN10933.[^10.1126/science.abd0827]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S490ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 490,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "F490 is located in subdomain RBD, involved in ACE2 binding,[^10.1016/j.cell.2020.03.045][^10.1101/2020.06.30.177097] and an epitope binding to P2B-2F6,[^10.1038/s41586-020-2380-z] BD23,[^10.1016/j.cell.2020.05.025] 2-4,[^10.1038/s41586-020-2571-7] H11-D4,[^10.1038/s41594-020-0469-6] H11-H4,[^10.1038/s41594-020-0469-6][^10.1038/s41594-020-0480-y] B38[^10.1126/science.abc2241] and CV30.[^10.1101/2020.06.12.148692] F490L/P/S are mutations that escape antibody neutralization."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S491ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 491,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "P491 is located in subdomain RBD, and an epitope binding to B38.[^10.1126/science.abc2241]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S492ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 492,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "L492 is located in subdomain RBD, and an epitope binding to P2B-2F6,[^10.1038/s41586-020-2380-z] BD23,[^10.1016/j.cell.2020.05.025] 2-4,[^10.1038/s41586-020-2571-7] H11-D4,[^10.1038/s41594-020-0469-6] H11-H4[^10.1038/s41594-020-0469-6][^10.1038/s41594-020-0480-y] and B38.[^10.1126/science.abc2241]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S493ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 493,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "Q493 is located in subdomain RBD, involved in ACE2 binding,[^10.1038/s41586-020-2180-5][^10.1016/j.cell.2020.03.045][^10.1038/s41586-020-2179-y][^10.1101/2020.06.30.177097] and an epitope binding to P2B-2F6,[^10.1038/s41586-020-2380-z] BD23,[^10.1016/j.cell.2020.05.025] 2-4,[^10.1038/s41586-020-2571-7] H11-D4,[^10.1038/s41594-020-0469-6] H11-H4,[^10.1038/s41594-020-0469-6][^10.1038/s41594-020-0480-y] B38,[^10.1126/science.abc2241] CB6,[^10.1038/s41586-020-2381-y] CC12.1,[^10.1126/science.abc7520] CC12.3,[^10.1126/science.abc7520] CV30[^10.1101/2020.06.12.148692] and REGN10933.[^10.1126/science.abd0827] Q493K/L/R are mutations that escape antibody neutralization."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S494ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 494,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "S494 is located in subdomain RBD, involved in ACE2 binding,[^10.1101/2020.06.30.177097] and an epitope binding to P2B-2F6,[^10.1038/s41586-020-2380-z] BD23,[^10.1016/j.cell.2020.05.025] 2-4,[^10.1038/s41586-020-2571-7] H11-D4,[^10.1038/s41594-020-0469-6] B38,[^10.1126/science.abc2241] CC12.1[^10.1126/science.abc7520] and CV30.[^10.1101/2020.06.12.148692] S494P is a mutation that escape antibody neutralization."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S495ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 495,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "Y495 is located in subdomain RBD, involved in ACE2 binding,[^10.1101/2020.06.30.177097] and an epitope binding to B38,[^10.1126/science.abc2241] CB6,[^10.1038/s41586-020-2381-y] CC12.1,[^10.1126/science.abc7520] CC12.3[^10.1126/science.abc7520] and CV30.[^10.1101/2020.06.12.148692]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S496ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 496,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "G496 is located in subdomain RBD, involved in ACE2 binding,[^10.1038/s41586-020-2180-5][^10.1016/j.cell.2020.03.045][^10.1038/s41586-020-2179-y][^10.1101/2020.06.30.177097] and an epitope binding to B38,[^10.1126/science.abc2241] CC12.1[^10.1126/science.abc7520] and CV30.[^10.1101/2020.06.12.148692]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S498ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 498,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "Q498 is located in subdomain RBD, involved in ACE2 binding,[^10.1038/s41586-020-2180-5][^10.1016/j.cell.2020.03.045][^10.1038/s41586-020-2179-y][^10.1101/2020.06.30.177097] and an epitope binding to B38,[^10.1126/science.abc2241] CC12.1,[^10.1126/science.abc7520] CV30[^10.1101/2020.06.12.148692] and REGN10987.[^10.1126/science.abd0827]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S500ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 500,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "T500 is located in subdomain RBD, involved in ACE2 binding,[^10.1038/s41586-020-2180-5][^10.1016/j.cell.2020.03.045][^10.1038/s41586-020-2179-y][^10.1101/2020.06.30.177097] and an epitope binding to BD23,[^10.1016/j.cell.2020.05.025] B38,[^10.1126/science.abc2241] C105,[^10.1016/j.cell.2020.06.025] CC12.1,[^10.1126/science.abc7520] CV30[^10.1101/2020.06.12.148692] and REGN10987.[^10.1126/science.abd0827]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S501ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 501,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "N501 is located in subdomain RBD, involved in ACE2 binding,[^10.1038/s41586-020-2180-5][^10.1016/j.cell.2020.03.045][^10.1038/s41586-020-2179-y][^10.1101/2020.06.30.177097] and an epitope binding to B38,[^10.1126/science.abc2241] CB6,[^10.1038/s41586-020-2381-y] C105,[^10.1016/j.cell.2020.06.025] CC12.1,[^10.1126/science.abc7520] CC12.3[^10.1126/science.abc7520] and CV30.[^10.1101/2020.06.12.148692]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S502ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 502,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "G502 is located in subdomain RBD, involved in ACE2 binding,[^10.1038/s41586-020-2180-5][^10.1016/j.cell.2020.03.045][^10.1038/s41586-020-2179-y][^10.1101/2020.06.30.177097] and an epitope binding to B38,[^10.1126/science.abc2241] CB6,[^10.1038/s41586-020-2381-y] C105,[^10.1016/j.cell.2020.06.025] CC12.1[^10.1126/science.abc7520] and CV30.[^10.1101/2020.06.12.148692]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S503ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 503,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "V503 is located in subdomain RBD, and an epitope binding to B38[^10.1126/science.abc2241] and CC12.1.[^10.1126/science.abc7520]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S504ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 504,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "G504 is located in subdomain RBD, and an epitope binding to CB6.[^10.1038/s41586-020-2381-y]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S505ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 505,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "Y505 is located in subdomain RBD, involved in ACE2 binding,[^10.1038/s41586-020-2180-5][^10.1016/j.cell.2020.03.045][^10.1038/s41586-020-2179-y][^10.1101/2020.06.30.177097] and an epitope binding to B38,[^10.1126/science.abc2241] CB6,[^10.1038/s41586-020-2381-y] C105,[^10.1016/j.cell.2020.06.025] CC12.1,[^10.1126/science.abc7520] CC12.3[^10.1126/science.abc7520] and CV30.[^10.1101/2020.06.12.148692]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S509ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 509,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "R509 is located in subdomain RBD, and an epitope binding to S309.[^10.1038/s41586-020-2349-y]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S515ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 515,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "F515 is located in subdomain RBD, and an epitope binding to CR3022[^10.1126/science.abb7269][^10.1016/j.chom.2020.06.010] and EY6A.[^10.1038/s41594-020-0480-y]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S516ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 516,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "E516 is located in subdomain RBD, and an epitope binding to CR3022.[^10.1126/science.abb7269][^10.1016/j.chom.2020.06.010]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S517ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 517,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "L517 is located in subdomain RBD, and an epitope binding to CR3022[^10.1126/science.abb7269][^10.1016/j.chom.2020.06.010] and EY6A.[^10.1038/s41594-020-0480-y]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S519ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 519,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "H519 is located in subdomain RBD, and an epitope binding to CR3022.[^10.1126/science.abb7269][^10.1016/j.chom.2020.06.010]"
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S525ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 525,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "C525 is located in subdomain RBD, and one of the nine cysteine residues found in RBD."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S572I",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 572,
+      "aas": "I"
+    },
+    "comment": "T572 is located in subdomain SD1. T572I is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S583D",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 583,
+      "aas": "D"
+    },
+    "comment": "E583 is located in subdomain SD1. E583D is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S603ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 603,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "N603 is located in subdomain SD2, and the position of a N-linked glycosylation sequon."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S614G",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 614,
+      "aas": "G"
+    },
+    "comment": "D614 is located in subdomain SD2. D614G is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S616ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 616,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "N616 is located in subdomain SD2, and the position of a N-linked glycosylation sequon."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S622F",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 622,
+      "aas": "F"
+    },
+    "comment": "V622 is located in subdomain SD2. V622F is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S655Y",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 655,
+      "aas": "Y"
+    },
+    "comment": "H655 is located in subdomain SD2. H655Y is a mutation that escape antibody neutralization, and a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S657ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 657,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "N657 is located in subdomain SD2, and the position of a N-linked glycosylation sequon."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S675HR",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 675,
+      "aas": "HR"
+    },
+    "comment": "Q675 is located in subdomain SD2. Q675H/R are polymorphic mutations."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S677H",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 677,
+      "aas": "H"
+    },
+    "comment": "Q677 is located in subdomain SD2. Q677H is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S681ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 681,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "P681 is located in cleavage site S1/S2. P681L is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S682ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 682,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "R682 is located in cleavage site S1/S2. R682Q is a mutation that escape antibody neutralization."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S683ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 683,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "R683 is located in cleavage site S1/S2."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S684ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 684,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "A684 is located in cleavage site S1/S2."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S685ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 685,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "R685 is located in cleavage site S1/S2. R685S is a mutation that escape antibody neutralization."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S686ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 686,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "S686 is located in cleavage site S1/S2."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S687ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 687,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "V687 is located in cleavage site S1/S2. V687G is a mutation that escape antibody neutralization."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S688ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 688,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "A688 is located in cleavage site S1/S2. A688V is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S689ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 689,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "S689 is located in cleavage site S1/S2."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S690ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 690,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "Q690 is located in cleavage site S1/S2."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S709ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 709,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "N709 is the position of a N-linked glycosylation sequon."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S717ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 717,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "N717 is the position of a N-linked glycosylation sequon."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S769EV",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 769,
+      "aas": "EV"
+    },
+    "comment": "G769E is a mutation that escape antibody neutralization. G769V is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S779K",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 779,
+      "aas": "K"
+    },
+    "comment": "Q779K is a mutation that escape antibody neutralization."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S801ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 801,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "N801 is the position of a N-linked glycosylation sequon."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S811ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 811,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "K811 is located in cleavage site S2'."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S812ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 812,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "P812 is located in cleavage site S2'."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S813ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 813,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "S813 is located in cleavage site S2'."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S814ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 814,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "K814 is located in cleavage site S2'."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S815ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 815,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "R815 is located in cleavage site S2'."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S816ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 816,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "S816 is located in cleavage site S2'."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S817ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 817,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "F817 is located in cleavage site S2'."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S818ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 818,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "I818 is located in cleavage site S2'."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S819ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 819,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "E819 is located in cleavage site S2'."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S820ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 820,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "D820 is located in cleavage site S2'."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S829T",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 829,
+      "aas": "T"
+    },
+    "comment": "A829 is located in subdomain FP. A829T is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S839Y",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 839,
+      "aas": "Y"
+    },
+    "comment": "D839Y is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S845S",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 845,
+      "aas": "S"
+    },
+    "comment": "A845S is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S846V",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 846,
+      "aas": "V"
+    },
+    "comment": "A846V is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S847K",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 847,
+      "aas": "K"
+    },
+    "comment": "R847K is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S859I",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 859,
+      "aas": "I"
+    },
+    "comment": "T859I is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S879S",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 879,
+      "aas": "S"
+    },
+    "comment": "A879S is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S900I",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 900,
+      "aas": "I"
+    },
+    "comment": "M900I is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S936Y",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 936,
+      "aas": "Y"
+    },
+    "comment": "D936 is located in subdomain HR1. D936Y is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S939F",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 939,
+      "aas": "F"
+    },
+    "comment": "S939 is located in subdomain HR1. S939F is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S1020V",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 1020,
+      "aas": "V"
+    },
+    "comment": "A1020V is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S1073N",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 1073,
+      "aas": "N"
+    },
+    "comment": "K1073N is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S1074ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 1074,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "N1074 is the position of a N-linked glycosylation sequon."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S1078S",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 1078,
+      "aas": "S"
+    },
+    "comment": "A1078S is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S1098ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 1098,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "N1098 is the position of a N-linked glycosylation sequon."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S1104L",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 1104,
+      "aas": "L"
+    },
+    "comment": "V1104L is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S1121L",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 1121,
+      "aas": "L"
+    },
+    "comment": "F1121L is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S1124V",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 1124,
+      "aas": "V"
+    },
+    "comment": "G1124V is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S1128A",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 1128,
+      "aas": "A"
+    },
+    "comment": "V1128A is a mutation that escape antibody neutralization."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S1134ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 1134,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "N1134 is the position of a N-linked glycosylation sequon."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S1146H",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 1146,
+      "aas": "H"
+    },
+    "comment": "D1146H is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S1158ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 1158,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "N1158 is the position of a N-linked glycosylation sequon."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S1162L",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 1162,
+      "aas": "L"
+    },
+    "comment": "P1162L is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S1173ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 1173,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "N1173 is located in subdomain HR2, and the position of a N-linked glycosylation sequon."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S1176F",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 1176,
+      "aas": "F"
+    },
+    "comment": "V1176 is located in subdomain HR2. V1176F is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S1194ACDEFGHIKLMNPQRSTVWYdi",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 1194,
+      "aas": "ACDEFGHIKLMNPQRSTVWYdi"
+    },
+    "comment": "N1194 is located in subdomain HR2, and the position of a N-linked glycosylation sequon."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S1208H",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 1208,
+      "aas": "H"
+    },
+    "comment": "Q1208 is located in subdomain HR2. Q1208H is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S1219CV",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 1219,
+      "aas": "CV"
+    },
+    "comment": "G1219 is located in subdomain TM. G1219C/V are polymorphic mutations."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S1229I",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 1229,
+      "aas": "I"
+    },
+    "comment": "M1229 is located in subdomain TM. M1229I is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S1238I",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 1238,
+      "aas": "I"
+    },
+    "comment": "T1238 is located in subdomain CP. T1238I is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S1252P",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 1252,
+      "aas": "P"
+    },
+    "comment": "S1252 is located in subdomain CP. S1252P is a polymorphic mutation."
+  },
+  {
+    "strain": "SARS2",
+    "commentName": "S1263L",
+    "drugClass": null,
+    "conditionType": "MUTATION",
+    "conditionValue": {
+      "gene": "S",
+      "pos": 1263,
+      "aas": "L"
+    },
+    "comment": "P1263 is located in subdomain CP. P1263L is a polymorphic mutation."
+  }
+]
