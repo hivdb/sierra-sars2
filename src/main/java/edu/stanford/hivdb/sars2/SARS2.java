@@ -37,6 +37,7 @@ import edu.stanford.hivdb.mutations.MutationPrevalence;
 import edu.stanford.hivdb.mutations.MutationSet;
 import edu.stanford.hivdb.mutations.MutationType;
 import edu.stanford.hivdb.mutations.MutationTypePair;
+import edu.stanford.hivdb.sequences.AlignmentConfig;
 import edu.stanford.hivdb.viruses.Gene;
 import edu.stanford.hivdb.viruses.Strain;
 import edu.stanford.hivdb.viruses.Virus;
@@ -64,6 +65,7 @@ public class SARS2 implements Virus<SARS2> {
 	private static final String ALGORITHMS_INDEXPATH = "algorithms/versions.json";
 	private static final String ALGORITHMS_RESPATH = "algorithms/%s_%s.xml";
 	private static final String CONDCOMMENTS_RESPATH = "conditional-comments.json";
+	private static final String ALIGNCONFIG_RESPATH = "alignment-config.json";
 
 	static {
 		Virus.registerInstance(new SARS2());
@@ -101,7 +103,8 @@ public class SARS2 implements Virus<SARS2> {
 			GENOTYPES_RESPATH,
 			ALGORITHMS_INDEXPATH,
 			ALGORITHMS_RESPATH,
-			CONDCOMMENTS_RESPATH
+			CONDCOMMENTS_RESPATH,
+			ALIGNCONFIG_RESPATH
 		);
 	}
 
@@ -331,6 +334,11 @@ public class SARS2 implements Virus<SARS2> {
 	@Override
 	public DrugResistanceAlgorithm<SARS2> getDefaultDrugResistAlgorithm() {
 		return getLatestDrugResistAlgorithm("Stanford-SARS2");
+	}
+	
+	@Override
+	public AlignmentConfig<SARS2> getAlignmentConfig() {
+		return dl.getAlignmentConfig();
 	}
 
 }

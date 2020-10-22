@@ -2,4 +2,6 @@
 bin
 .gradle
 sierra-core/.git
+sierra-core/bin
 asi_interpreter/.git
+asi_interpreter/bin

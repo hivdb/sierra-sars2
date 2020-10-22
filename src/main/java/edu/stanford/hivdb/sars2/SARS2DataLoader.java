@@ -56,6 +56,7 @@ import edu.stanford.hivdb.mutations.MutationPrevalence;
 import edu.stanford.hivdb.mutations.MutationSet;
 import edu.stanford.hivdb.mutations.MutationType;
 import edu.stanford.hivdb.mutations.MutationTypePair;
+import edu.stanford.hivdb.sequences.AlignmentConfig;
 import edu.stanford.hivdb.utilities.AAUtils;
 import edu.stanford.hivdb.utilities.AssertUtils;
 import edu.stanford.hivdb.utilities.Json;
@@ -114,6 +115,7 @@ public class SARS2DataLoader<T extends Virus<T>> {
 	private final String ALGORITHMS_INDEXPATH;
 	private final String ALGORITHMS_RESPATH;
 	private final String CONDCOMMENTS_RESPATH;
+	private final String ALIGNCONFIG_RESPATH;
 
 	private transient Map<String, Strain<T>> strains;
 	private transient Map<String, Gene<T>> genes;
@@ -137,6 +139,7 @@ public class SARS2DataLoader<T extends Virus<T>> {
 	private transient List<DrugResistanceAlgorithm<T>> drugResistAlgs;
 	private transient Map<String, DrugResistanceAlgorithm<T>> drugResistAlgLookup;
 	private transient ConditionalComments<T> condComments;
+	private transient AlignmentConfig<T> alignmentConfig;
 	
 	public SARS2DataLoader(
 		T virus,
@@ -160,7 +163,8 @@ public class SARS2DataLoader<T extends Virus<T>> {
 		final String GENOTYPES_RESPATH,
 		final String ALGORITHMS_INDEXPATH,
 		final String ALGORITHMS_RESPATH,
-		final String CONDCOMMENTS_RESPATH
+		final String CONDCOMMENTS_RESPATH,
+		final String ALIGNCONFIG_RESPATH
 	) {
 		this.virus = virus;
 		this.VIRUS_NAME = VIRUS_NAME;
@@ -184,6 +188,7 @@ public class SARS2DataLoader<T extends Virus<T>> {
 		this.ALGORITHMS_INDEXPATH = ALGORITHMS_INDEXPATH;
 		this.ALGORITHMS_RESPATH = ALGORITHMS_RESPATH;
 		this.CONDCOMMENTS_RESPATH = CONDCOMMENTS_RESPATH;
+		this.ALIGNCONFIG_RESPATH = ALIGNCONFIG_RESPATH;
 	}
 	
 	private MutationSet<T> loadMutationSetFromRes(String resPath, Collection<Strain<T>> strains) {
@@ -750,6 +755,14 @@ public class SARS2DataLoader<T extends Virus<T>> {
 			genotyper = new Genotyper<>(virus);
 		}
 		return genotyper;
+	}
+
+	public AlignmentConfig<T> getAlignmentConfig() {
+		if (alignmentConfig == null) {
+			String raw = loadResource(ALIGNCONFIG_RESPATH);
+			alignmentConfig = AlignmentConfig.loadJson(raw, virus);
+		}
+		return alignmentConfig;
 	}
 	
 	

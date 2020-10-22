@@ -14,7 +14,7 @@ import edu.stanford.hivdb.mutations.FrameShift;
 import edu.stanford.hivdb.mutations.Mutation;
 import edu.stanford.hivdb.mutations.MutationSet;
 import edu.stanford.hivdb.sequences.AlignedSequence;
-import edu.stanford.hivdb.sequences.NucAminoAligner;
+import edu.stanford.hivdb.sequences.Aligner;
 import edu.stanford.hivdb.sequences.Sequence;
 import edu.stanford.hivdb.utilities.FastaUtils;
 import edu.stanford.hivdb.viruses.Gene;
@@ -52,7 +52,7 @@ public class SARS2Test {
 		InputStream input = classLoader.getResourceAsStream("EPI_ISL_455161.fas");
 		Sequence seq = FastaUtils.readStream(input).get(0);
 		
-		AlignedSequence<SARS2> alignedSeq = NucAminoAligner.getInstance(virusIns).align(seq);
+		AlignedSequence<SARS2> alignedSeq = Aligner.getInstance(virusIns).align(seq);
 		assertEquals(0.0, alignedSeq.getMixturePcnt(), 1e-5);
 		assertEquals(
 			Lists.newArrayList(FrameShift.createDeletion(virusIns.getGene("SARS2RdRP"), 10, 1)),

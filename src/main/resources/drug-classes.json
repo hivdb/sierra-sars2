@@ -1,1 +1,20 @@
-[]
+[
+  {
+    "name": "UNKS",
+    "ordinal": 1,
+    "abstractGene": "S",
+    "fullName": "Unknown Spike Drug Class",
+    "strains": ["SARS2"],
+    "synonyms": [],
+    "mutationTypes": ["Other"]
+  },
+  {
+    "name": "UNKRDRP",
+    "ordinal": 2,
+    "abstractGene": "RdRP",
+    "fullName": "Unknown RdRP Drug Class",
+    "strains": ["SARS2"],
+    "synonyms": [],
+    "mutationTypes": ["Other"]
+  }
+]

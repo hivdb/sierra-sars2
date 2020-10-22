@@ -7,6 +7,9 @@ build:
 force-build: build/libs/Sierra-SARS2.war
 	@docker build --no-cache -t ${DOCKERREPO} .
 
+inspect-dev:
+	@docker exec -it hivdb-sierra-sars2-dev /bin/bash
+
 dev: build
 	@docker rm -f hivdb-sierra-sars2-dev 2>/dev/null || true
 	@docker run \

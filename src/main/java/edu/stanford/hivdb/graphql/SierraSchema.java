@@ -44,7 +44,7 @@ import org.apache.commons.lang3.tuple.Triple;
 import edu.stanford.hivdb.mutations.MutationSet;
 import edu.stanford.hivdb.seqreads.SequenceReads;
 import edu.stanford.hivdb.sequences.AlignedSequence;
-import edu.stanford.hivdb.sequences.NucAminoAligner;
+import edu.stanford.hivdb.sequences.Aligner;
 import edu.stanford.hivdb.sequences.Sequence;
 import edu.stanford.hivdb.utilities.SimpleMemoizer;
 import edu.stanford.hivdb.viruses.Gene;
@@ -87,7 +87,7 @@ public class SierraSchema {
 					seqs.size(), MAXIMUM_SEQUENCES_PER_PAYLOAD));
 			}
 			List<Sequence> seqList = toSequenceList(seqs);
-			return NucAminoAligner.getInstance(virusIns).parallelAlign(seqList);
+			return Aligner.getInstance(virusIns).parallelAlign(seqList);
 		};
 	};
 

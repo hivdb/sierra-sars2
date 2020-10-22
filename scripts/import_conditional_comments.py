@@ -2,7 +2,6 @@ import sys
 import json
 
 DEFAULT_STRAIN = 'SARS2'
-DEFAULT_DRUG_CLASS = None
 
 
 def main():
@@ -29,7 +28,7 @@ def main():
             pos = row['position']
             comment = row['comment']
             strain = row.get('strain', DEFAULT_STRAIN)
-            drug_class = row.get('drugClass', DEFAULT_DRUG_CLASS)
+            drug_class = row.get('drugClass', 'UNK{}'.format(gene_name))
             results.append({
                 'strain': strain,
                 'commentName': '{}{}{}'.format(gene_name, pos, triggered_aas),

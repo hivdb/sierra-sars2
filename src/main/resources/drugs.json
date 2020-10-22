@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "name": "DrugS",
+    "fullName": "unknown drug for S",
+    "displayAbbr": "DrugS",
+    "drugClass": "UNKS"
+  },
+  {
+    "name": "DrugRdRP",
+    "fullName": "unknown drug for RdRP",
+    "displayAbbr": "DrugRdRP",
+    "drugClass": "UNKRDRP"
+  }
+]
