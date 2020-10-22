@@ -2,9 +2,9 @@ VERSION=$(shell date -u +"%Y%m%d%H%M%S")
 DOCKERREPO=$(shell ./scripts/get-docker-repo.sh)
 
 build:
-	@docker build -t ${DOCKERREPO} .
+	@docker build --no-cache -t ${DOCKERREPO} .
 
-force-build: build/libs/Sierra-SARS2.war
+force-build:
 	@docker build --no-cache -t ${DOCKERREPO} .
 
 inspect-dev:
