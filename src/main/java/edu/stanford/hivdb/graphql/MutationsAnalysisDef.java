@@ -152,8 +152,8 @@ public class MutationsAnalysisDef {
 	};
 	
 	public static SimpleMemoizer<GraphQLObjectType> oMutationsAnalysis = new SimpleMemoizer<>(
-		name -> (
-			newObject()
+		name -> {
+			GraphQLObjectType.Builder builder = newObject()
 			.name("MutationsAnalysis")
 			.field(field -> field
 				.type(GraphQLString)
@@ -181,9 +181,11 @@ public class MutationsAnalysisDef {
 				.name("algorithmComparison")
 				.description("List of ASI comparison results.")
 				.argument(aASIAlgorithmArgument.get(name))
-				.argument(aASICustomAlgorithmArgument))
-			.build()
-		)
+				.argument(aASICustomAlgorithmArgument));
+			Virus<?> virusIns = Virus.getInstance(name);
+			builder = virusIns.getVirusGraphQLExtension().extendObjectBuilder("MutationsAnalysis", builder);
+			return builder.build();
+		}
 	);
 
 }

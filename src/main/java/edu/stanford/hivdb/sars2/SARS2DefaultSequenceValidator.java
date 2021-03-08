@@ -31,7 +31,7 @@ import java.util.stream.Collectors;
 import com.google.common.collect.Lists;
 
 import edu.stanford.hivdb.viruses.Gene;
-import edu.stanford.hivdb.viruses.Strain;
+// import edu.stanford.hivdb.viruses.Strain;
 import edu.stanford.hivdb.mutations.Mutation;
 import edu.stanford.hivdb.mutations.FrameShift;
 import edu.stanford.hivdb.mutations.MutationSet;
@@ -233,8 +233,8 @@ public class SARS2DefaultSequenceValidator implements SequenceValidator<SARS2> {
 		Set<Gene<?>> discardedGenes = new LinkedHashSet<>(alignedSequence.getDiscardedGenes().keySet());
 		int leftIgnored = 0x7fffffff;
 		int rightIgnored = 0;
-		Strain<?> strain = alignedSequence.getStrain();
-		List<?> availableGenes = alignedSequence.getAvailableGenes();
+		// Strain<?> strain = alignedSequence.getStrain();
+		// List<?> availableGenes = alignedSequence.getAvailableGenes();
 		for (AlignedGeneSeq<?> geneSeq : alignedSequence.getAlignedGeneSequences()) {
 			leftIgnored = Math.min(leftIgnored, geneSeq.getFirstNA() - 1);
 			rightIgnored = Math.max(rightIgnored, geneSeq.getLastNA());
@@ -261,8 +261,8 @@ public class SARS2DefaultSequenceValidator implements SequenceValidator<SARS2> {
 	}
 
 	protected static List<ValidationResult> validateSequenceSize(AlignedSequence<SARS2> alignedSequence) {
-		int size;
-		/* AlignedGeneSeq<?> geneSeq;
+		/* int size;
+		AlignedGeneSeq<?> geneSeq;
 		int[] muchTooShortSize = new int[] {60, 150, 100};
 		int[] tooShortSize = new int[] {80, 200, 200};
 		String[] geneNames = new String[] {"PR", "RT", "IN"}; */

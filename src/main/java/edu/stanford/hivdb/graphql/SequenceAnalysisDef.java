@@ -179,124 +179,126 @@ public class SequenceAnalysisDef {
 	}
 
 	public static SimpleMemoizer<GraphQLObjectType> oSequenceAnalysis = new SimpleMemoizer<>(
-		virusName -> (
-			newObject()
-			.name("SequenceAnalysis")
-			.field(field -> field
-				.type(oUnalignedSequence)
-				.name("inputSequence")
-				.description("The original unaligned sequence."))
-			.field(field -> field
-				.type(oStrain)
-				.name("strain")
-				.description("Virus strain of this sequence."))
-			.field(field -> field
-				.type(GraphQLBoolean)
-				.name("isReverseComplement")
-				.description("True if the alignment result was based on the reverse complement of input sequence."))
-			.field(field -> field
-				.type(new GraphQLList(oGene.get(virusName)))
-				.name("availableGenes")
-				.description("Available genes found in the sequence."))
-			.field(field -> field
-				.type(new GraphQLList(oValidationResult))
-				.name("validationResults")
-				.description("Validation results for this sequence."))
-			.field(field -> field
-				.type(new GraphQLList(oAlignedGeneSequence.get(virusName)))
-				.name("alignedGeneSequences")
-				.description("List of aligned sequence distinguished by genes."))
-			.field(field -> field
-				.type(new GraphQLList(oBoundSubtypeV2))
-				.name("subtypesV2")
-				.argument(newArgument()
-					.type(GraphQLInt)
-					.name("first")
-					.defaultValue(2)
+		virusName -> {
+			GraphQLObjectType.Builder builder = newObject()
+				.name("SequenceAnalysis")
+					.field(field -> field
+						.type(oUnalignedSequence)
+						.name("inputSequence")
+						.description("The original unaligned sequence."))
+					.field(field -> field
+						.type(oStrain)
+						.name("strain")
+						.description("Virus strain of this sequence."))
+					.field(field -> field
+						.type(GraphQLBoolean)
+						.name("isReverseComplement")
+						.description("True if the alignment result was based on the reverse complement of input sequence."))
+					.field(field -> field
+						.type(new GraphQLList(oGene.get(virusName)))
+						.name("availableGenes")
+						.description("Available genes found in the sequence."))
+					.field(field -> field
+						.type(new GraphQLList(oValidationResult))
+						.name("validationResults")
+						.description("Validation results for this sequence."))
+					.field(field -> field
+						.type(new GraphQLList(oAlignedGeneSequence.get(virusName)))
+						.name("alignedGeneSequences")
+						.description("List of aligned sequence distinguished by genes."))
+					.field(field -> field
+						.type(new GraphQLList(oBoundSubtypeV2))
+						.name("subtypesV2")
+						.argument(newArgument()
+							.type(GraphQLInt)
+							.name("first")
+							.defaultValue(2)
+							.description(
+								"Fetch only the first nth closest subtypes. Default to 2.")
+							.build())
+						.description(
+							"List of virus groups or subtypes, or species. " +
+							"Sorted by the similarity from most to least."))
+					.field(field -> field
+						.type(oBoundSubtypeV2)
+						.name("bestMatchingSubtype")
+						.description(
+							"The best matching subtype."))
+					.field(field -> field
+						.type(new GraphQLList(oBoundSubtypeV2))
+						.name("genotypes")
+						.argument(newArgument()
+							.type(GraphQLInt)
+							.name("first")
+							.defaultValue(2)
+							.description(
+								"Fetch only the first nth closest genotypes. Default to 2.")
+							.build())
+						.deprecate("Use field `subtypesV2` instead.")
+						.description(
+							"List of virus groups or subtypes, or species. " +
+							"Sorted by the similarity from most to least."))
+					.field(field -> field
+						.type(oBoundSubtypeV2)
+						.name("bestMatchingGenotype")
+						.deprecate("Use field `bestMatchingSubtype` instead.")
+						.description(
+							"The best matching genotype."))
+					.field(field -> field
+						.type(GraphQLFloat)
+						.name("mixturePcnt")
+						.description(
+							"Mixture pecentage of the sequence. Notes only RYMWKS " +
+							"are counted."))
+					.field(field -> newMutationSet(virusName, field, "mutations")
+						.description("All mutations found in the aligned sequence."))
+					.field(field -> field
+						.type(new GraphQLList(oFrameShift.get(virusName)))
+						.name("frameShifts")
+						.description("All frame shifts found in the aligned sequence."))
+					.field(field -> field
+						.type(new GraphQLList(oDrugResistance.get(virusName)))
+						.name("drugResistance")
+						.argument(arg -> arg
+							.name("algorithm")
+							.type(oASIAlgorithm.get(virusName))
+							.defaultValue(Virus.getInstance(virusName).getDefaultDrugResistAlgorithm().getName())
+							.description("One of the built-in ASI algorithms."))
+						.description("List of drug resistance results by genes."))
+					.field(field -> field
+						.type(new GraphQLList(oBoundMutationPrevalence.get(virusName)))
+						.name("mutationPrevalences")
+						.description("List of mutation prevalence results."))
+					.field(field -> field
+						.type(new GraphQLList(oBoundSubtype.get(virusName)))
+						.name("subtypes")
+						.deprecate("Use field `subtypesV2` instead.")
+						.argument(newArgument()
+							.type(GraphQLInt)
+							.name("first")
+							.defaultValue(2)
+							.description(
+							"Fetch only the first nth closest subtypes. Default to 2.")
+						.build())
 					.description(
-						"Fetch only the first nth closest subtypes. Default to 2.")
-					.build())
-				.description(
-					"List of virus groups or subtypes, or species. " +
-					"Sorted by the similarity from most to least."))
-			.field(field -> field
-				.type(oBoundSubtypeV2)
-				.name("bestMatchingSubtype")
-				.description(
-					"The best matching subtype."))
-			.field(field -> field
-				.type(new GraphQLList(oBoundSubtypeV2))
-				.name("genotypes")
-				.argument(newArgument()
-					.type(GraphQLInt)
-					.name("first")
-					.defaultValue(2)
-					.description(
-						"Fetch only the first nth closest genotypes. Default to 2.")
-					.build())
-				.deprecate("Use field `subtypesV2` instead.")
-				.description(
-					"List of virus groups or subtypes, or species. " +
-					"Sorted by the similarity from most to least."))
-			.field(field -> field
-				.type(oBoundSubtypeV2)
-				.name("bestMatchingGenotype")
-				.deprecate("Use field `bestMatchingSubtype` instead.")
-				.description(
-					"The best matching genotype."))
-			.field(field -> field
-				.type(GraphQLFloat)
-				.name("mixturePcnt")
-				.description(
-					"Mixture pecentage of the sequence. Notes only RYMWKS " +
-					"are counted."))
-			.field(field -> newMutationSet(virusName, field, "mutations")
-				.description("All mutations found in the aligned sequence."))
-			.field(field -> field
-				.type(new GraphQLList(oFrameShift.get(virusName)))
-				.name("frameShifts")
-				.description("All frame shifts found in the aligned sequence."))
-			.field(field -> field
-				.type(new GraphQLList(oDrugResistance.get(virusName)))
-				.name("drugResistance")
-				.argument(arg -> arg
-					.name("algorithm")
-					.type(oASIAlgorithm.get(virusName))
-					.defaultValue(Virus.getInstance(virusName).getDefaultDrugResistAlgorithm().getName())
-					.description("One of the built-in ASI algorithms."))
-				.description("List of drug resistance results by genes."))
-			.field(field -> field
-				.type(new GraphQLList(oBoundMutationPrevalence.get(virusName)))
-				.name("mutationPrevalences")
-				.description("List of mutation prevalence results."))
-			.field(field -> field
-				.type(new GraphQLList(oBoundSubtype.get(virusName)))
-				.name("subtypes")
-				.deprecate("Use field `subtypesV2` instead.")
-				.argument(newArgument()
-					.type(GraphQLInt)
-					.name("first")
-					.defaultValue(2)
-					.description(
-					"Fetch only the first nth closest subtypes. Default to 2.")
-				.build())
-			.description(
-				"List of virus groups or subtypes, or species. " +
-				"Sorted by the similarity from most to least."))
-			.field(field -> field
-				.type(GraphQLString)
-				.name("subtypeText")
-				.deprecate("Use field `bestMatchingSubtype { display }` instead.")
-				.description(
-					"Formatted text for best matching subtype."))
-			.field(field -> field
-				.type(new GraphQLList(oAlgorithmComparison.get(virusName)))
-				.name("algorithmComparison")
-				.description("List of ASI comparison results.")
-				.argument(aASIAlgorithmArgument.get(virusName))
-				.argument(aASICustomAlgorithmArgument))
-			.build()
-		)
+						"List of virus groups or subtypes, or species. " +
+						"Sorted by the similarity from most to least."))
+					.field(field -> field
+						.type(GraphQLString)
+						.name("subtypeText")
+						.deprecate("Use field `bestMatchingSubtype { display }` instead.")
+						.description(
+							"Formatted text for best matching subtype."))
+					.field(field -> field
+						.type(new GraphQLList(oAlgorithmComparison.get(virusName)))
+						.name("algorithmComparison")
+						.description("List of ASI comparison results.")
+						.argument(aASIAlgorithmArgument.get(virusName))
+						.argument(aASICustomAlgorithmArgument));
+			Virus<?> virusIns = Virus.getInstance(virusName);
+			builder = virusIns.getVirusGraphQLExtension().extendObjectBuilder("SequenceAnalysis", builder);
+			return builder.build();
+		}
 	);
 
 }

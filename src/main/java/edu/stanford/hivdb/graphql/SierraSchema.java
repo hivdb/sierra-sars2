@@ -331,6 +331,7 @@ public class SierraSchema {
 			.dataFetchers(makePositionCodonCodeRegistry(virusIns))
 			.dataFetchers(makeSequenceReadsCodeRegistry(virusIns))
 			.dataFetchers(strainCodeRegistry)
+			.dataFetchers(virusIns.getVirusGraphQLExtension().getExtendedCodonRegistry())
 			.build()
 		);
 	}
