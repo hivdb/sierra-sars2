@@ -380,7 +380,7 @@ public class SARS2 implements Virus<SARS2> {
 	public String execAnnotationFunction(String funcName, AlignedSequence<SARS2> alignedSeq) {
 		return execAnnotationFunctionForMutations(funcName, alignedSeq.getMutations()); 
 	}
-	
+
 	@Override
 	public String execAnnotationFunction(String funcName, SequenceReads<SARS2> seqReads) {
 		return execAnnotationFunctionForMutations(funcName, seqReads.getMutations()); 

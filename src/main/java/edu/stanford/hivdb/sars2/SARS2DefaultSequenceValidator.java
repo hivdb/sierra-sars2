@@ -53,8 +53,8 @@ public class SARS2DefaultSequenceValidator implements SequenceValidator<SARS2> {
 
 		levels.put("no-gene-found", ValidationLevel.CRITICAL);
 		messages.put("no-gene-found",
-					"There were no Protease, Reverse Transcriptase, or " +
-					"Integrase genes found, refuse to process.");
+					"The input is probably not a SARS-CoV-2 sequence, " +
+					"refuse to process.");
 
 		levels.put("not-aligned-gene", ValidationLevel.SEVERE_WARNING);
 		messages.put(

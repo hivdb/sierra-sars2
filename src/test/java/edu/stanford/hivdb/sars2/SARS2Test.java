@@ -4,13 +4,13 @@ import static org.junit.Assert.*;
 
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import org.junit.Test;
 
 import com.google.common.collect.Lists;
 
 import edu.stanford.hivdb.graphql.SierraSchema;
-import edu.stanford.hivdb.mutations.FrameShift;
 import edu.stanford.hivdb.mutations.Mutation;
 import edu.stanford.hivdb.mutations.MutationSet;
 import edu.stanford.hivdb.sequences.AlignedSequence;
@@ -39,11 +39,11 @@ public class SARS2Test {
 	@Test
 	public void testGetGenes() {
 		List<Gene<SARS2>> genes = new ArrayList<>(virusIns.getGenes(virusIns.getStrain("SARS2")));
-		assertEquals("RdRP", genes.get(0).getAbstractGene());
-		assertEquals("S", genes.get(1).getAbstractGene());
-		assertEquals("SARS2RdRP", genes.get(0).getName());
-		assertEquals("SARS2S", genes.get(1).getName());
-		assertEquals(2L, virusIns.getGenes(virusIns.getMainStrain()).size());
+		assertEquals("RdRP", genes.get(10).getAbstractGene());
+		assertEquals("S", genes.get(15).getAbstractGene());
+		assertEquals("SARS2nsp1", genes.get(0).getName());
+		assertEquals("SARS2S", genes.get(15).getName());
+		assertEquals(25L, virusIns.getGenes(virusIns.getMainStrain()).size());
 	}
 	
 	@Test
@@ -55,10 +55,10 @@ public class SARS2Test {
 		AlignedSequence<SARS2> alignedSeq = Aligner.getInstance(virusIns).align(seq);
 		assertEquals(0.0, alignedSeq.getMixturePcnt(), 1e-5);
 		assertEquals(
-			Lists.newArrayList(FrameShift.createDeletion(virusIns.getGene("SARS2RdRP"), 10, 1)),
+			Collections.emptyList(),
 			alignedSeq.getFrameShifts());
 		assertEquals(
-			MutationSet.parseString(virusIns, Lists.newArrayList("RdRP:R10X", "RdRP:P323L")),
+			MutationSet.parseString(virusIns, Lists.newArrayList("RdRP:P323L")),
 			alignedSeq.getAlignedGeneSequence("RdRP").getMutations());
 		assertEquals(
 			MutationSet.parseString(virusIns, "S:D614G"),
