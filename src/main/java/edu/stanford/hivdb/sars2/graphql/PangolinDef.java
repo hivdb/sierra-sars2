@@ -84,11 +84,11 @@ public class PangolinDef {
 		.field(field -> field
 			.type(GraphQLFloat)
 			.name("probability")
-			.deprecate("Pangolin probability."))
+			.description("Pangolin probability."))
 		.field(field -> field
 			.type(GraphQLString)
 			.name("status")
-			.deprecate("Pangolin status."))
+			.description("Pangolin status."))
 		.field(field -> field
 			.type(GraphQLString)
 			.name("note")

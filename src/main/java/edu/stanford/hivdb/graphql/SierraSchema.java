@@ -87,7 +87,8 @@ public class SierraSchema {
 					seqs.size(), MAXIMUM_SEQUENCES_PER_PAYLOAD));
 			}
 			List<Sequence> seqList = toSequenceList(seqs);
-			return Aligner.getInstance(virusIns).parallelAlign(seqList);
+			List<AlignedSequence<VirusT>> results = Aligner.getInstance(virusIns).parallelAlign(seqList);
+			return results;
 		};
 	};
 

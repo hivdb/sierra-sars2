@@ -61,6 +61,14 @@ public class GeneDef {
 			coordinates("Gene", "nameWithStrain"),
 			new ExtPropertyDataFetcher<String>("name")
 		)
+		.dataFetcher(
+			coordinates("Gene", "AASize"),
+			new ExtPropertyDataFetcher<Integer>("getAASize")
+		)
+		.dataFetcher(
+			coordinates("Gene", "NASize"),
+			new ExtPropertyDataFetcher<Integer>("getNASize")
+		)
 		.build();
 		
 	public static SimpleMemoizer<GraphQLObjectType> oGene = new SimpleMemoizer<>(
@@ -95,7 +103,15 @@ public class GeneDef {
 			.field(field -> field
 				.type(GraphQLInt)
 				.name("length")
-				.description("Length of current gene."))
+				.deprecate("Use `AASize` instead."))
+			.field(field -> field
+				.type(GraphQLInt)
+				.name("AASize")
+				.description("AA length of current gene."))
+			.field(field -> field
+				.type(GraphQLInt)
+				.name("NASize")
+				.description("NA length of current gene."))
 			.field(field -> field
 				.type(new GraphQLList(new GraphQLTypeReference("DrugClass")))
 				.name("drugClasses")

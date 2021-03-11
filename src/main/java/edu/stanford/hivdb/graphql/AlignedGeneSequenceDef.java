@@ -31,6 +31,7 @@ import static graphql.schema.FieldCoordinates.coordinates;
 import static edu.stanford.hivdb.graphql.PrettyPairwiseDef.*;
 import static edu.stanford.hivdb.graphql.MutationSetDef.*;
 import static edu.stanford.hivdb.graphql.GeneDef.*;
+import static edu.stanford.hivdb.graphql.UnsequencedRegionsDef.*;
 import static edu.stanford.hivdb.graphql.FrameShiftDef.*;
 
 public class AlignedGeneSequenceDef {
@@ -133,7 +134,12 @@ public class AlignedGeneSequenceDef {
 			.field(field -> field
 				.type(new GraphQLList(oFrameShift.get(virusName)))
 				.name("frameShifts")
-				.description("All frame shifts found in the aligned sequence.")
+				.description("All frame shifts found in this aligned gene sequence.")
+			)
+			.field(field -> field
+				.type(oUnsequencedRegions.get(virusName))
+				.name("unsequencedRegions")
+				.description("The unsequenced regions of this aligned gene sequence.")
 			)
 			.build()
 		)

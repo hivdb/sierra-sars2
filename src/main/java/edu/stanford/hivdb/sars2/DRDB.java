@@ -69,6 +69,9 @@ public class DRDB {
 			))
 			.collect(Collectors.joining(" OR "))
 		);
+		if (genePosQuery.length() == 0) {
+			genePosQuery = "false";
+		}
 		try (
 			Statement stmt = conn.createStatement();
 			ResultSet rs = stmt.executeQuery(
@@ -80,9 +83,9 @@ public class DRDB {
 				joins +
 				"  WHERE EXISTS(" +
 				"    SELECT 1 FROM strain_mutations M " +
-				"    WHERE S.strain_name = M.strain_name AND " +
+				"    WHERE S.strain_name = M.strain_name AND (" +
 				genePosQuery +
-				"  ) AND " +
+				"  )) AND " +
 				where
 			)
 		) {
@@ -135,11 +138,13 @@ public class DRDB {
 			"A.doi, " +
 			"A.url, " +
 			"S.rx_name, " +
+			"S.control_strain_name, " +
 			"S.strain_name, " +
 			"ordinal_number, " +
 			"section, " +
 			"fold_cmp, " +
 			"fold, " +
+			"S.ineffective, " +
 			"resistance_level, " +
 			"cumulative_count, " +
 
@@ -175,12 +180,14 @@ public class DRDB {
 					result.put("refURL", rs.getString("url"));
 					result.put("rxName", rs.getString("rx_name"));
 					result.put("antibodies", rs.getString("ab_names").split(QUOTED_LIST_JOIN_UNIQ));
+					result.put("controlStrainName", rs.getString("control_strain_name"));
 					result.put("strainName", rs.getString("strain_name"));
 					result.put("mutations", rs.getString("mutations").split(QUOTED_LIST_JOIN_UNIQ));
 					result.put("section", rs.getString("section"));
-					result.put("ordinalNumber", rs.getString("ordinal_number"));
+					result.put("ordinalNumber", rs.getInt("ordinal_number"));
 					result.put("foldCmp", foldCmp);
 					result.put("fold", fold);
+					result.put("ineffective", rs.getString("ineffective"));
 					result.put("resistanceLevel", calcResistanceLevel(foldCmp, fold, fbLevel));
 					result.put("cumulativeCount", rs.getString("cumulative_count"));
 					return result;
@@ -202,11 +209,13 @@ public class DRDB {
 			"A.doi, " +
 			"A.url, " +
 			"S.rx_name, " +
+			"S.control_strain_name, " +
 			"S.strain_name, " +
 			"section, " +
 			"ordinal_number, " +
 			"fold_cmp, " +
 			"fold, " +
+			"S.ineffective, " +
 			"resistance_level, " +
 			"cumulative_count, " +
 			"RXCP.cumulative_group, " +
@@ -234,12 +243,14 @@ public class DRDB {
 					result.put("refDOI", rs.getString("doi"));
 					result.put("refURL", rs.getString("url"));
 					result.put("rxName", rs.getString("rx_name"));
+					result.put("controlStrainName", rs.getString("control_strain_name"));
 					result.put("strainName", rs.getString("strain_name"));
 					result.put("mutations", rs.getString("mutations").split(QUOTED_LIST_JOIN_UNIQ));
 					result.put("section", rs.getString("section"));
 					result.put("ordinalNumber", rs.getString("ordinal_number"));
 					result.put("foldCmp", foldCmp);
 					result.put("fold", fold);
+					result.put("ineffective", rs.getString("ineffective"));
 					result.put("resistanceLevel", calcResistanceLevel(foldCmp, fold, fbLevel));
 					result.put("cumulativeCount", rs.getString("cumulative_count"));
 					result.put("cumulativeGroup", rs.getString("cumulative_group"));
@@ -262,11 +273,13 @@ public class DRDB {
 			"A.doi, " +
 			"A.url, " +
 			"S.rx_name, " +
+			"S.control_strain_name, " +
 			"S.strain_name, " +
 			"section, " +
 			"ordinal_number, " +
 			"fold_cmp, " +
 			"fold, " +
+			"S.ineffective, " +
 			"resistance_level, " +
 			"cumulative_count, " +
 			"RXIP.cumulative_group, " +
@@ -296,12 +309,14 @@ public class DRDB {
 					result.put("refURL", rs.getString("url"));
 					result.put("rxName", rs.getString("rx_name"));
 					result.put("vaccineName", rs.getString("vaccine_name"));
+					result.put("controlStrainName", rs.getString("control_strain_name"));
 					result.put("strainName", rs.getString("strain_name"));
 					result.put("mutations", rs.getString("mutations").split(QUOTED_LIST_JOIN_UNIQ));
 					result.put("section", rs.getString("section"));
 					result.put("ordinalNumber", rs.getString("ordinal_number"));
 					result.put("foldCmp", foldCmp);
 					result.put("fold", fold);
+					result.put("ineffective", rs.getString("ineffective"));
 					result.put("resistanceLevel", calcResistanceLevel(foldCmp, fold, fbLevel));
 					result.put("cumulativeCount", rs.getString("cumulative_count"));
 					result.put("cumulativeGroup", rs.getString("cumulative_group"));
