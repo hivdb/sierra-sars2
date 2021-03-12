@@ -54,7 +54,7 @@ import static edu.stanford.hivdb.graphql.DrugResistanceDef.*;
 import static edu.stanford.hivdb.graphql.SubtypeV2Def.*;
 import static edu.stanford.hivdb.graphql.PositionCodonReadsDef.*;
 import static edu.stanford.hivdb.graphql.SequenceReadsHistogramDef.*;
-import static edu.stanford.hivdb.graphql.SequenceReadsHistogramByCodonCountDef.*;
+import static edu.stanford.hivdb.graphql.SequenceReadsHistogramByCodonReadsDef.*;
 import static edu.stanford.hivdb.graphql.DrugResistanceAlgorithmDef.*;
 import static edu.stanford.hivdb.graphql.DescriptiveStatisticsDef.*;
 import static edu.stanford.hivdb.graphql.VirusAnnotationQueryDef.*;
@@ -109,10 +109,10 @@ public class SequenceReadsAnalysisDef {
 			throw new GraphQLException("`allReads` is a required field but doesn't have value");
 		}
 		Double minPrevalence = (Double) input.get("minPrevalence");
-		Long minCodonCount = (Long) input.get("minCodonCount");
-		if (minPrevalence == null && minCodonCount == null) {
+		Long minCodonReads = (Long) input.get("minCodonReads");
+		if (minPrevalence == null && minCodonReads == null) {
 			throw new GraphQLException(
-				"Must specify prevalence cutoff via `minPrevalence` (percentage) or `minCodonCount` (fixed number)"
+				"Must specify prevalence cutoff via `minPrevalence` (percentage) or `minCodonReads` (fixed number)"
 			);
 		}
 		
@@ -121,8 +121,8 @@ public class SequenceReadsAnalysisDef {
 			strain,
 			allReads,
 			minPrevalence,
-			minCodonCount,
-			(Long) input.get("minReadDepth"));
+			minCodonReads,
+			(Long) input.get("minPositionReads"));
 	}
 
 	public static SimpleMemoizer<GraphQLInputType> iSequenceReads = new SimpleMemoizer<>(
@@ -151,20 +151,20 @@ public class SequenceReadsAnalysisDef {
 					"negative number specified."))
 			.field(field -> field
 				.type(GraphQLLong)
-				.name("minCodonCount")
-				.defaultValue(0L)
+				.name("minCodonReads")
+				.defaultValue(1L)
 				.description(
-					"The minimal read count cutoff to apply on each **codon**. " +
-					"Default to zero if this field was left empty or had a " +
+					"The minimal read depth for **codons**. " +
+					"Default to one if this field was left empty or had a " +
 					"negative number specified."))
 			.field(field -> field
 				.type(GraphQLLong)
-				.name("minReadDepth")
-				.defaultValue(1000L)
+				.name("minPositionReads")
+				.defaultValue(1L)
 				.description(
-					"The minal read depth for each **position**. Default to 1000 " +
-					"if this field was left empty or had a negative number" +
-					"specified."))
+					"The minimal read depth for **positions**. " +
+					"Default to one if this field was left empty or had a " +
+					"negative number specified."))
 			.build()
 		)
 	);
@@ -244,8 +244,8 @@ public class SequenceReadsAnalysisDef {
 				makeVirusAnnotationDataFetcher(virusIns)
 			)
 			.dataFetcher(
-				coordinates("SequenceReadsAnalysis", "histogramByCodonCount"),
-				seqReadsHistogramByCodonCountDataFetcher
+				coordinates("SequenceReadsAnalysis", "histogramByCodonReads"),
+				seqReadsHistogramByCodonReadsDataFetcher
 			)
 			.dataFetcher(
 				coordinates("SequenceReadsAnalysis", "mutations"),
@@ -293,13 +293,13 @@ public class SequenceReadsAnalysisDef {
 					))
 				.field(field -> field
 					.type(GraphQLLong)
-					.name("minCodonCount")
+					.name("minCodonReads")
 					.description(
 						"The minimal codon count cutoff applied on this sequence."
 					))
 				.field(field -> field
 					.type(GraphQLLong)
-					.name("minReadDepth")
+					.name("minPositionReads")
 					.description(
 						"The minimal read depth for each position of the sequence reads."
 					))
@@ -346,7 +346,7 @@ public class SequenceReadsAnalysisDef {
 						.description("One of the built-in ASI algorithms."))
 					.description("List of drug resistance results by genes."))
 				.field(oSeqReadsHistogramBuilder)
-				.field(oSeqReadsHistogramByCodonCountBuilder)
+				.field(oSeqReadsHistogramByCodonReadsBuilder)
 				.field(field -> field
 					.name("readDepthStats")
 					.type(oDescriptiveStatistics)

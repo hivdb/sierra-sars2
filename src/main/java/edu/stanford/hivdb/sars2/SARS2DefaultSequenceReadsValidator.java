@@ -213,13 +213,13 @@ public class SARS2DefaultSequenceReadsValidator implements SequenceReadsValidato
 		if (trimmedPos > 0) {
 			double totalPos = crcs.size();
 			double pcnt = (double) trimmedPos / totalPos;
-			long minReadDepth = seqReads.getMinReadDepth();
+			long minPositionReads = seqReads.getMinPositionReads();
 			results.add(newValidationResult(
 				"min-read-depth-too-low",
-				minReadDepth, trimmedPos, pcnt * 100,
+				minPositionReads, trimmedPos, pcnt * 100,
 				trimmedPos == 1 ? "" : "s",
 				trimmedPos == 1 ? "has" : "have",
-				minReadDepth
+				minPositionReads
 			));
 		}
 		return results;

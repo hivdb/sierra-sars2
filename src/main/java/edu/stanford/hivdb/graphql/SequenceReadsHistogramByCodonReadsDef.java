@@ -12,27 +12,27 @@ import java.util.function.UnaryOperator;
 
 import static edu.stanford.hivdb.graphql.SequenceReadsHistogramDef.enumAggregationOption;
 import static edu.stanford.hivdb.seqreads.SequenceReadsHistogram.AggregationOption;
-import static edu.stanford.hivdb.seqreads.SequenceReadsHistogramByCodonCount.WithSequenceReadsHistogramByCodonCount;
+import static edu.stanford.hivdb.seqreads.SequenceReadsHistogramByCodonReads.WithSequenceReadsHistogramByCodonReads;
 
-import edu.stanford.hivdb.seqreads.SequenceReadsHistogramByCodonCount;
+import edu.stanford.hivdb.seqreads.SequenceReadsHistogramByCodonReads;
 
 
-public class SequenceReadsHistogramByCodonCountDef {
+public class SequenceReadsHistogramByCodonReadsDef {
 
-	public static GraphQLObjectType oSeqReadsHistogramByCodonCountBin;
+	public static GraphQLObjectType oSeqReadsHistogramByCodonReadsBin;
 
-	public static DataFetcher<SequenceReadsHistogramByCodonCount<?>> seqReadsHistogramByCodonCountDataFetcher = env -> {
-		WithSequenceReadsHistogramByCodonCount<?> seqReads = env.getSource();
-		List<Double> codonCountCutoffs = env.getArgument("codonCountCutoffs");
+	public static DataFetcher<SequenceReadsHistogramByCodonReads<?>> seqReadsHistogramByCodonReadsDataFetcher = env -> {
+		WithSequenceReadsHistogramByCodonReads<?> seqReads = env.getSource();
+		List<Double> codonReadsCutoffs = env.getArgument("codonReadsCutoffs");
 		AggregationOption aggBy = env.getArgument("aggregatesBy");
-		return seqReads.getHistogramByCodonCount(
-			codonCountCutoffs.toArray(new Long[codonCountCutoffs.size()]),
+		return seqReads.getHistogramByCodonReads(
+			codonReadsCutoffs.toArray(new Long[codonReadsCutoffs.size()]),
 			aggBy);
 	};
 	
 	static {		
-		oSeqReadsHistogramByCodonCountBin = newObject()
-			.name("SequenceReadsHistogramByCodonCountBin")
+		oSeqReadsHistogramByCodonReadsBin = newObject()
+			.name("SequenceReadsHistogramByCodonReadsBin")
 			.description("A single bin data of the histogram.")
 			.field(field -> field
 				.name("cutoff")
@@ -45,39 +45,39 @@ public class SequenceReadsHistogramByCodonCountDef {
 			.build();
 	}
 
-	public static GraphQLObjectType oSeqReadsHistogramByCodonCount = newObject()
-		.name("SequenceReadsHistogramByCodonCount")
+	public static GraphQLObjectType oSeqReadsHistogramByCodonReads = newObject()
+		.name("SequenceReadsHistogramByCodonReads")
 		.description("Histogram data for sequence reads.")
 		.field(field -> field
-			.type(new GraphQLList(oSeqReadsHistogramByCodonCountBin))
+			.type(new GraphQLList(oSeqReadsHistogramByCodonReadsBin))
 			.name("usualSites")
 			.description("Usual sites histogram data."))
 		.field(field -> field
-			.type(new GraphQLList(oSeqReadsHistogramByCodonCountBin))
+			.type(new GraphQLList(oSeqReadsHistogramByCodonReadsBin))
 			.name("drmSites")
 			.description("Sites with drug resistance mutations histogram data."))
 		.field(field -> field
-			.type(new GraphQLList(oSeqReadsHistogramByCodonCountBin))
+			.type(new GraphQLList(oSeqReadsHistogramByCodonReadsBin))
 			.name("unusualSites")
 			.description("Unusual sites histogram data."))
 		.field(field -> field
-			.type(new GraphQLList(oSeqReadsHistogramByCodonCountBin))
+			.type(new GraphQLList(oSeqReadsHistogramByCodonReadsBin))
 			.name("unusualApobecSites")
 			.description("Unusual & APOBEC sites histogram data."))
 		.field(field -> field
-			.type(new GraphQLList(oSeqReadsHistogramByCodonCountBin))
+			.type(new GraphQLList(oSeqReadsHistogramByCodonReadsBin))
 			.name("unusualNonApobecSites")
 			.description("Unusual & Non-APOBEC sites histogram data."))
 		.field(field -> field
-			.type(new GraphQLList(oSeqReadsHistogramByCodonCountBin))
+			.type(new GraphQLList(oSeqReadsHistogramByCodonReadsBin))
 			.name("apobecSites")
 			.description("APOBEC sites histogram data."))
 		.field(field -> field
-			.type(new GraphQLList(oSeqReadsHistogramByCodonCountBin))
+			.type(new GraphQLList(oSeqReadsHistogramByCodonReadsBin))
 			.name("apobecDrmSites")
 			.description("APOBEC DRM sites histogram data."))
 		.field(field -> field
-			.type(new GraphQLList(oSeqReadsHistogramByCodonCountBin))
+			.type(new GraphQLList(oSeqReadsHistogramByCodonReadsBin))
 			.name("stopCodonSites")
 			.description("Stop codon sites histogram data."))
 		.field(field -> field
@@ -86,12 +86,12 @@ public class SequenceReadsHistogramByCodonCountDef {
 			.description("Total number of positions."))
 		.build();
 
-	public static UnaryOperator<Builder> oSeqReadsHistogramByCodonCountBuilder = field -> field
-		.type(oSeqReadsHistogramByCodonCount)
-		.name("histogramByCodonCount")
+	public static UnaryOperator<Builder> oSeqReadsHistogramByCodonReadsBuilder = field -> field
+		.type(oSeqReadsHistogramByCodonReads)
+		.name("histogramByCodonReads")
 		.description("Histogram data for sequence reads.")
 		.argument(arg -> arg
-		 	.name("codonCountCutoffs")
+		 	.name("codonReadsCutoffs")
 		 	.type(new GraphQLList(GraphQLLong))
 		 	.defaultValue(Arrays.asList(16, 32, 64, 128, 256, 512, 1024, 2048))
 		 	.description("Codon count cutoffs wanted in this histogram."))
