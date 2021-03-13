@@ -38,6 +38,7 @@ import static edu.stanford.hivdb.graphql.MutationSetDef.*;
 import static edu.stanford.hivdb.graphql.PositionCodonReadsDef.*;
 import static edu.stanford.hivdb.graphql.SequenceReadsHistogramDef.*;
 import static edu.stanford.hivdb.graphql.GeneDef.*;
+import static edu.stanford.hivdb.graphql.UnsequencedRegionsDef.*;
 import static edu.stanford.hivdb.graphql.DescriptiveStatisticsDef.*;
 
 public class GeneSequenceReadsDef {
@@ -151,6 +152,11 @@ public class GeneSequenceReadsDef {
 				.description("All mutations found in the aligned sequence.")
 			)
 			.field(oSeqReadsHistogramBuilder)
+			.field(field -> field
+				.type(oUnsequencedRegions.get(virusName))
+				.name("unsequencedRegions")
+				.description("The unsequenced regions of this aligned gene sequence.")
+			)
 			.build()
 		)
 	);
