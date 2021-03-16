@@ -1,5 +1,6 @@
 package edu.stanford.hivdb.sars2.graphql;
 
+import static graphql.Scalars.*;
 import edu.stanford.hivdb.viruses.VirusGraphQLExtension;
 import graphql.schema.GraphQLCodeRegistry;
 import graphql.schema.GraphQLList;
@@ -27,15 +28,27 @@ public class SARS2GraphQLExtension implements VirusGraphQLExtension {
 		)
 		.dataFetcher(
 			coordinates("SequenceAnalysis", "suscResultsForAntibodies"),
-			DRDBDef.suscResultsForAntibodiesDataFetcher
+			AntibodySuscResultDef.antibodySuscResultListFetcher
+		)
+		.dataFetcher(
+			coordinates("SequenceAnalysis", "antibodySuscSummary"),
+			AntibodySuscResultDef.antibodySuscSummaryFetcher
 		)
 		.dataFetcher(
 			coordinates("SequenceReadsAnalysis", "suscResultsForAntibodies"),
-			DRDBDef.suscResultsForAntibodiesDataFetcher
+			AntibodySuscResultDef.antibodySuscResultListFetcher
+		)
+		.dataFetcher(
+			coordinates("SequenceReadsAnalysis", "antibodySuscSummary"),
+			AntibodySuscResultDef.antibodySuscSummaryFetcher
 		)
 		.dataFetcher(
 			coordinates("MutationsAnalysis", "suscResultsForAntibodies"),
-			DRDBDef.suscResultsForAntibodiesDataFetcher
+			AntibodySuscResultDef.antibodySuscResultListFetcher
+		)
+		.dataFetcher(
+			coordinates("MutationsAnalysis", "antibodySuscSummary"),
+			AntibodySuscResultDef.antibodySuscSummaryFetcher
 		)
 		.dataFetcher(
 			coordinates("SequenceAnalysis", "suscResultsForConvPlasma"),
@@ -61,6 +74,8 @@ public class SARS2GraphQLExtension implements VirusGraphQLExtension {
 			coordinates("MutationsAnalysis", "suscResultsForImmuPlasma"),
 			DRDBDef.suscResultsForImmuPlasmaDataFetcher
 		)
+		.dataFetchers(AntibodyDef.antibodyCodeRegistry)
+		.dataFetchers(ArticleDef.articleCodeRegistry)
 		.build();
 	}
 	
@@ -69,13 +84,16 @@ public class SARS2GraphQLExtension implements VirusGraphQLExtension {
 		switch (objectName) {
 			case "SequenceAnalysis":
 				builder = addPangolinField(builder);
+				builder = addSuscResultsForAntibodiesField(builder);
 				builder = addDRDBFields(builder);
 				break;
 			case "SequenceReadsAnalysis":
 				builder = addPangolinField(builder);
+				builder = addSuscResultsForAntibodiesField(builder);
 				builder = addDRDBFields(builder);
 				break;
 			case "MutationsAnalysis":
+				builder = addSuscResultsForAntibodiesField(builder);
 				builder = addDRDBFields(builder);
 				break;
 			default:
@@ -92,14 +110,34 @@ public class SARS2GraphQLExtension implements VirusGraphQLExtension {
 				.description("Pangolin lineage result for this sequence.")
 			);
 	}
+
+	private GraphQLObjectType.Builder addSuscResultsForAntibodiesField(GraphQLObjectType.Builder builder) {
+		return builder
+			.field(field -> field
+				.type(new GraphQLList(AntibodySuscResultDef.oAntibodySuscResult))
+				.name("suscResultsForAntibodies")
+				.argument(arg -> arg
+					.type(GraphQLBoolean)
+					.name("includeAll")
+					.defaultValue(false)
+					.description(
+						"By default, this field only returns susceptibility results for " +
+						"antibodies in clinical trials/with structural data. By changing" +
+						"this argument to `true`, all results will be included."
+					)
+				)
+				.description("Susceptilibity results for antibodies linked to this sequence/mutation set.")
+			)
+			.field(field -> field
+				.type(new GraphQLList(AntibodySuscResultDef.oSuscSummaryByMutationSet))
+				.name("antibodySuscSummary")
+				.description("Susceptibility summary for antibodies linked to this sequence/mutation set.")
+			);
+	}
+	
 	
 	private GraphQLObjectType.Builder addDRDBFields(GraphQLObjectType.Builder builder) {
 		return builder
-			.field(field -> field
-				.type(new GraphQLList(DRDBDef.oAntibodySuscResult))
-				.name("suscResultsForAntibodies")
-				.description("Susceptilibity results for antibodies linked to this sequence/mutation set.")
-			)
 			.field(field -> field
 				.type(new GraphQLList(DRDBDef.oConvPlasmaSuscResult))
 				.name("suscResultsForConvPlasma")

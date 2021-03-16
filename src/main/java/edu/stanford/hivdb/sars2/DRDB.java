@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -13,6 +14,10 @@ import java.util.function.Function;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
+import org.apache.commons.lang3.tuple.Pair;
+
+import edu.stanford.hivdb.mutations.AAMutation;
+import edu.stanford.hivdb.mutations.Mutation;
 import edu.stanford.hivdb.mutations.MutationSet;
 import edu.stanford.hivdb.viruses.Gene;
 
@@ -39,6 +44,55 @@ public class DRDB {
 			// TODO Auto-generated catch block
 			throw new RuntimeException(e);
 		}
+	}
+	
+	protected <T> List<T> queryAll(String sql, Function<ResultSet, T> processor) {
+		try (
+			Statement stmt = conn.createStatement();
+			ResultSet rs = stmt.executeQuery(sql)
+		) {
+			List<T> results = new ArrayList<>();
+			while (rs.next()) {
+				results.add(processor.apply(rs));
+			}			
+			return results;
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+	}
+	
+	protected <T, R> Map<T, List<R>> groupAll(String sql, Function<R, T> classifier, Function<ResultSet, R> processor) {
+		return (
+			queryAll(sql, processor).stream()
+			.collect(
+				Collectors.groupingBy(
+					classifier,
+					LinkedHashMap::new,
+					Collectors.toList()
+				)
+			)
+		);
+	}
+	
+	protected <T, R> Map<T, R> queryAll(String sql, Function<R, T> keyGetter, Function<ResultSet, R> processor) {
+		return (
+			queryAll(sql, processor).stream()
+			.collect(
+				Collectors.toMap(
+					keyGetter,
+					one -> one,
+					(a, b) -> {
+						throw new RuntimeException(
+							String.format(
+								"Conflict records was detected: %s and %s",
+								a, b
+							)
+						);
+					},
+					LinkedHashMap::new
+				)
+			)
+		);
 	}
 	
 	protected <T> List<T> querySuscResults(
@@ -72,31 +126,23 @@ public class DRDB {
 		if (genePosQuery.length() == 0) {
 			genePosQuery = "false";
 		}
-		try (
-			Statement stmt = conn.createStatement();
-			ResultSet rs = stmt.executeQuery(
-				"SELECT " +
-				columns +
-				// "  ref_name, rx_name, strain_name, fold_cmp, " +
-				// "  fold, cumulative_count, date_added " +
-				"  FROM susc_results S " +
-				joins +
-				"  WHERE EXISTS(" +
-				"    SELECT 1 FROM strain_mutations M " +
-				"    WHERE S.strain_name = M.strain_name AND (" +
-				genePosQuery +
-				"  )) AND " +
-				where
-			)
-		) {
-			List<T> results = new ArrayList<>();
-			while (rs.next()) {
-				results.add(processor.apply(rs));
-			}			
-			return results;
-		} catch (SQLException e) {
-			throw new RuntimeException(e);
-		}
+		return queryAll(
+			"SELECT " +
+			columns +
+			// "  ref_name, rx_name, strain_name, fold_cmp, " +
+			// "  fold, cumulative_count, date_added " +
+			"  FROM susc_results S " +
+			joins +
+			"  WHERE EXISTS(" +
+			"    SELECT 1 FROM strain_mutations M " +
+			"    WHERE S.strain_name = M.strain_name AND (" +
+			genePosQuery +
+			"  )) AND " +
+			// exclude results that are ineffective to control
+			"  (ineffective == 'experimental' OR ineffective IS NULL) AND " +
+			where,
+			processor
+		);
 	}
 	
 	private String calcResistanceLevel(String foldCmp, Double fold, String fallbackLevel) {
@@ -129,8 +175,151 @@ public class DRDB {
 		}
 	}
 	
-	public List<Map<String, ?>> querySuscResultsForAntibodies(MutationSet<SARS2> mutations) {
-		List<Map<String, ?>> results = querySuscResults(
+	public List<Map<String, Object>> queryAllArticles() {
+		return queryAll(
+			"SELECT ref_name, doi, url, first_author, year " +
+			"FROM articles",
+			rs -> {
+				try {
+					Map<String, Object> result = new LinkedHashMap<>();
+					result.put("refName", rs.getString("ref_name"));
+					result.put("doi", rs.getString("doi"));
+					result.put("url", rs.getString("url"));
+					result.put("firstAuthor", rs.getString("first_author"));
+					result.put("year", rs.getInt("year"));
+					return result;
+				}
+				catch(SQLException e) {
+					throw new RuntimeException(e);
+				}
+			}
+		);
+	}
+	
+	public List<Map<String, Object>> queryAllVirusStrains() {
+		List<Map<String, Object>> strains = queryAll(
+			"SELECT strain_name FROM virus_strains",
+			rs -> {
+				try {
+					Map<String, Object> result = new LinkedHashMap<>();
+					result.put("strainName", rs.getString("strain_name"));
+					return result;
+				}
+				catch(SQLException e) {
+					throw new RuntimeException(e);
+				}
+			}
+		);
+		SARS2 sars2 = SARS2.getInstance();
+		Map<String, List<Pair<String, Mutation<SARS2>>>> mutations = groupAll(
+			"SELECT strain_name, gene, position, amino_acid " +
+			"FROM strain_mutations WHERE gene='S'",
+			r -> r.getLeft(),
+			rs -> {
+				try {
+					return Pair.of(
+						rs.getString("strain_name"),
+						new AAMutation<>(
+							sars2.getMainStrain().getGene(rs.getString("gene")),
+							rs.getInt("position"),
+							(rs.getString("amino_acid")
+							 .replaceAll("^del$", "-")
+							 .replaceAll("^ins$", "_")
+							 .replaceAll("^stop$", "*")
+							 .toCharArray())
+						)
+					);
+				}
+				catch(SQLException e) {
+					throw new RuntimeException(e);
+				}
+			}
+		);
+		for (Map<String, Object> strain : strains) {
+			strain.put(
+				"mutations",
+				mutations.getOrDefault(
+					(String) strain.get("strainName"),
+					Collections.emptyList()
+				)
+				.stream()
+				.map(r -> r.getRight())
+				.collect(Collectors.toList())
+			);
+		}
+		return strains;
+	}
+	
+	public List<Map<String, Object>> queryAllAntibodies() {
+		List<Map<String, Object>> antibodies = queryAll(
+			"SELECT ab_name, pdb_id, abbreviation_name, availability " +
+			"FROM antibodies",
+			rs -> {
+				try {
+					Map<String, Object> result = new LinkedHashMap<>();
+					result.put("abName", rs.getString("ab_name"));
+					result.put("pdbID", rs.getString("pdb_id"));
+					result.put("abbrName", rs.getString("abbreviation_name"));
+					result.put("availability", rs.getString("availability"));
+					return result;
+				}
+				catch (SQLException e) {
+					throw new RuntimeException(e);
+				}
+			}
+		);
+		Map<String, Map<String, Object>> targets = queryAll(
+			"SELECT ab_name, target, class " +
+			"FROM antibody_targets WHERE source='structure'",
+			r -> (String) r.get("abName"),
+			rs -> {
+				try {
+					Map<String, Object> result = new LinkedHashMap<>();
+					result.put("abName", rs.getString("ab_name"));
+					result.put("abTarget", rs.getString("target"));
+					result.put("abClass", rs.getString("class"));
+					return result;
+				}
+				catch (SQLException e) {
+					throw new RuntimeException(e);
+				}
+			}
+		);
+		Map<String, List<Map<String, Object>>> synonyms = groupAll(
+			"SELECT ab_name, synonym " +
+			"FROM antibody_synonyms",
+			r -> (String) r.get("abName"),
+			rs -> {
+				try {
+					Map<String, Object> result = new LinkedHashMap<>();
+					result.put("abName", rs.getString("ab_name"));
+					result.put("synonym", rs.getString("synonym"));
+					return result;
+				}
+				catch (SQLException e) {
+					throw new RuntimeException(e);
+				}
+			}
+		);
+		for (Map<String, Object> ab : antibodies) {
+			ab.put(
+				"target", 
+				targets.getOrDefault(
+					ab.get("abName"), Collections.emptyMap()
+				)
+			);
+			ab.put(
+				"synonyms",
+				synonyms.getOrDefault(
+					ab.get("abName"), Collections.emptyList()
+				)
+			);
+		}
+		return antibodies;
+	}
+	
+	public List<Map<String, Object>> querySuscResultsForAntibodies(MutationSet<SARS2> mutations) {
+		List<Map<String, Object>> results = querySuscResults(
 			mutations,
 			
 			/* columns = */
@@ -141,6 +330,7 @@ public class DRDB {
 			"S.control_strain_name, " +
 			"S.strain_name, " +
 			"ordinal_number, " +
+			"assay, " +
 			"section, " +
 			"fold_cmp, " +
 			"fold, " +
@@ -150,16 +340,10 @@ public class DRDB {
 
 			"(SELECT GROUP_CONCAT(RXMAB.ab_name, '" + LIST_JOIN_UNIQ + "') " +
 			"  FROM rx_antibodies RXMAB" +
-			"  WHERE S.ref_name = RXMAb.ref_name AND S.rx_name = RXMAB.rx_name" +
+			"  WHERE S.ref_name = RXMAB.ref_name AND S.rx_name = RXMAB.rx_name" +
 			"  ORDER BY RXMAB.ab_name" +
-			") AS ab_names, " +
-			
-			"(SELECT GROUP_CONCAT(SMUT.gene || ':' || SMUT.position || SMUT.amino_acid, '" + LIST_JOIN_UNIQ + "') " +
-			"  FROM strain_mutations SMUT" +
-			"  WHERE S.strain_name = SMUT.strain_name" +
-			"  ORDER BY SMUT.gene, SMUT.position, SMUT.amino_acid" +
-			") AS mutations",
-			
+			") AS ab_names",
+
 			/* joins = */
 			"JOIN articles A ON S.ref_name = A.ref_name",
 
@@ -174,22 +358,22 @@ public class DRDB {
 					Map<String, Object> result = new LinkedHashMap<>();
 					String foldCmp = rs.getString("fold_cmp");
 					Double fold = rs.getDouble("fold");
-					String fbLevel = rs.getString("resistance_level");
 					result.put("refName", rs.getString("ref_name"));
 					result.put("refDOI", rs.getString("doi"));
 					result.put("refURL", rs.getString("url"));
 					result.put("rxName", rs.getString("rx_name"));
-					result.put("antibodies", rs.getString("ab_names").split(QUOTED_LIST_JOIN_UNIQ));
+					result.put("abNames", List.of(rs.getString("ab_names").split(QUOTED_LIST_JOIN_UNIQ)));
 					result.put("controlStrainName", rs.getString("control_strain_name"));
 					result.put("strainName", rs.getString("strain_name"));
-					result.put("mutations", rs.getString("mutations").split(QUOTED_LIST_JOIN_UNIQ));
+					result.put("assay", rs.getString("assay"));
 					result.put("section", rs.getString("section"));
 					result.put("ordinalNumber", rs.getInt("ordinal_number"));
 					result.put("foldCmp", foldCmp);
 					result.put("fold", fold);
 					result.put("ineffective", rs.getString("ineffective"));
-					result.put("resistanceLevel", calcResistanceLevel(foldCmp, fold, fbLevel));
-					result.put("cumulativeCount", rs.getString("cumulative_count"));
+					result.put("fbResistanceLevel", rs.getString("resistance_level"));
+					// result.put("resistanceLevel", calcResistanceLevel(foldCmp, fold, fbLevel));
+					result.put("cumulativeCount", rs.getInt("cumulative_count"));
 					return result;
 				}
 				catch (SQLException e) {
@@ -211,6 +395,7 @@ public class DRDB {
 			"S.rx_name, " +
 			"S.control_strain_name, " +
 			"S.strain_name, " +
+			"assay, " +
 			"section, " +
 			"ordinal_number, " +
 			"fold_cmp, " +
@@ -246,6 +431,7 @@ public class DRDB {
 					result.put("controlStrainName", rs.getString("control_strain_name"));
 					result.put("strainName", rs.getString("strain_name"));
 					result.put("mutations", rs.getString("mutations").split(QUOTED_LIST_JOIN_UNIQ));
+					result.put("assay", rs.getString("assay"));
 					result.put("section", rs.getString("section"));
 					result.put("ordinalNumber", rs.getString("ordinal_number"));
 					result.put("foldCmp", foldCmp);
@@ -275,6 +461,7 @@ public class DRDB {
 			"S.rx_name, " +
 			"S.control_strain_name, " +
 			"S.strain_name, " +
+			"assay, " +
 			"section, " +
 			"ordinal_number, " +
 			"fold_cmp, " +
@@ -312,6 +499,7 @@ public class DRDB {
 					result.put("controlStrainName", rs.getString("control_strain_name"));
 					result.put("strainName", rs.getString("strain_name"));
 					result.put("mutations", rs.getString("mutations").split(QUOTED_LIST_JOIN_UNIQ));
+					result.put("assay", rs.getString("assay"));
 					result.put("section", rs.getString("section"));
 					result.put("ordinalNumber", rs.getString("ordinal_number"));
 					result.put("foldCmp", foldCmp);

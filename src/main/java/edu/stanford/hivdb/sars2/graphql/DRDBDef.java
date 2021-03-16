@@ -29,33 +29,15 @@ import org.apache.commons.lang3.tuple.Triple;
 
 import edu.stanford.hivdb.mutations.MutationSet;
 import edu.stanford.hivdb.sars2.DRDB;
-import edu.stanford.hivdb.sars2.PangolinLambda;
 import edu.stanford.hivdb.sars2.SARS2;
 import edu.stanford.hivdb.seqreads.SequenceReads;
 import edu.stanford.hivdb.sequences.AlignedSequence;
-import edu.stanford.hivdb.sequences.Sequence;
 
 public class DRDBDef {
 
-	public static DataFetcher<PangolinLambda> pangolinDataFetcher = env -> {
-		Object seq = env.getSource();
-		if (seq instanceof AlignedSequence) {
-			Sequence inputSeq = ((AlignedSequence<?>) seq).getInputSequence();
-			return new PangolinLambda(inputSeq);
-		}
-		else if (seq instanceof SequenceReads) {
-			SequenceReads<?> seqReads = (SequenceReads<?>) seq;
-			String concatSeq = seqReads.getConcatenatedSeqForSubtyping();
-			Sequence inputSeq = new Sequence(seqReads.getName(), concatSeq);
-			return new PangolinLambda(inputSeq);
-		}
-		else {
-			throw new UnsupportedOperationException();
-		}
-	};
 	private static SARS2 sars2 = SARS2.getInstance();
 	
-	private static MutationSet<SARS2> getMutationSetFromSource(Object src) {
+	protected static MutationSet<SARS2> getMutationSetFromSource(Object src) {
 		MutationSet<?> mutations;
 		if (src instanceof AlignedSequence) {
 			mutations = ((AlignedSequence<?>) src).getMutations(); 
@@ -80,7 +62,7 @@ public class DRDBDef {
 		return sars2Mutations;
 	}
 	
-	public static DataFetcher<List<Map<String, ?>>> suscResultsForAntibodiesDataFetcher = env -> {
+	public static DataFetcher<List<Map<String, Object>>> suscResultsForAntibodiesDataFetcher = env -> {
 		DRDB drdb = sars2.getDRDBObj();
 		MutationSet<SARS2> mutations = getMutationSetFromSource(env.getSource());
 		return drdb.querySuscResultsForAntibodies(mutations);

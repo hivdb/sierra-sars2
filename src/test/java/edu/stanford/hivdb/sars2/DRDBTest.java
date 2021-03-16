@@ -20,7 +20,7 @@ public class DRDBTest {
 		MutationSet<SARS2> mutations = MutationSet.parseString(
 			virusIns, "S:484K"
 		);
-		List<Map<String, ?>> results = drdbObj.querySuscResultsForAntibodies(mutations);
+		List<Map<String, Object>> results = drdbObj.querySuscResultsForAntibodies(mutations);
 		assertTrue(results.size() > 330);
 		assertEquals(
 			Set.of(
@@ -64,6 +64,21 @@ public class DRDBTest {
 			),
 			results.get(0).keySet()
 		);
+	}
+
+	@Test
+	public void testAntibodies() {
+		assertTrue(Antibody.getAllInstances().size() >= 227);
+	}
+	
+	@Test
+	public void testArticles() {
+		assertTrue(Article.getAllInstances().size() >= 55);
+	}
+
+	@Test
+	public void testVirusStrains() {
+		assertTrue(VirusStrain.getAllInstances().size() >= 55);
 	}
 
 }

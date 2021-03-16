@@ -33,7 +33,8 @@
       "Other"
     ],
     "strainModifiers": {},
-    "nucaminoMinNumOfAA": 400
+    "nucaminoMinNumOfAA": 400,
+    "synonyms": ["SARS2PL", "SARS2nsp3"]
   },
   {
     "name": "SARS2nsp4",
@@ -57,7 +58,8 @@
       "Other"
     ],
     "strainModifiers": {},
-    "nucaminoMinNumOfAA": 60
+    "nucaminoMinNumOfAA": 60,
+    "synonyms": ["SARS23CL", "SARS23CLpro", "SARS2nsp5"]
   },
   {
     "name": "SARS2nsp6",
@@ -189,7 +191,8 @@
       "Other"
     ],
     "strainModifiers": {},
-    "nucaminoMinNumOfAA": 300
+    "nucaminoMinNumOfAA": 300,
+    "synonyms": ["SARS2Spike"]
   },
   {
     "name": "SARS2ORF3a",
