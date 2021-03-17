@@ -25,6 +25,7 @@ import static graphql.schema.GraphQLObjectType.newObject;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import edu.stanford.hivdb.graphql.MutationDef;
 import edu.stanford.hivdb.graphql.MutationSetDef;
 import edu.stanford.hivdb.mutations.MutationSet;
 import edu.stanford.hivdb.sars2.AntibodySuscResult;
@@ -98,6 +99,14 @@ public class AntibodySuscResultDef {
 		.field(field -> MutationSetDef.newMutationSet("SARS2", field, "missMutations")
 				.description("Mutations mismatched the query mutation set."))
 		.field(field -> field
+			.type(new GraphQLList(MutationDef.oGenePosition.get("SARS2")))
+			.name("hitPositions")
+			.description("Positions matched the query mutation set."))
+		.field(field -> field
+			.type(new GraphQLList(MutationDef.oGenePosition.get("SARS2")))
+			.name("missPositions")
+			.description("Positions mismatched the query mutation set."))	
+		.field(field -> field
 			.type(GraphQLInt)
 			.name("numHitMutations")
 			.description("Number of mutations that matched the query mutation set."))
@@ -105,6 +114,14 @@ public class AntibodySuscResultDef {
 			.type(GraphQLInt)
 			.name("numMissMutations")
 			.description("Number of mutations that mismatched the query mutation set."))
+		.field(field -> field
+			.type(GraphQLInt)
+			.name("numHitPositions")
+			.description("Number of positions that matched the query mutation set."))
+		.field(field -> field
+			.type(GraphQLInt)
+			.name("numMissPositions")
+			.description("Number of positions that mismatched the query mutation set."))
 		.field(field -> field
 			.type(GraphQLString)
 			.name("assay")
@@ -189,6 +206,10 @@ public class AntibodySuscResultDef {
 		.description("Susceptibility summary grouped by mutations")
 		.field(field -> MutationSetDef.newMutationSet("SARS2", field, "mutations"))
 		.field(field -> MutationSetDef.newMutationSet("SARS2", field, "hitMutations"))
+		.field(field -> field
+			.type(new GraphQLList(MutationDef.oGenePosition.get("SARS2")))
+			.name("hitPositions")
+			.description("Positions matched the query mutation set."))
 		.field(field -> field
 			.name("itemsByAntibody")
 			.type(new GraphQLList(oSuscSummaryByAntibody))

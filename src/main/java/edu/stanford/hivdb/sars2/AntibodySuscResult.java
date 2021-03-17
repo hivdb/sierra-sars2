@@ -2,8 +2,12 @@ package edu.stanford.hivdb.sars2;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
+import java.util.TreeSet;
 import java.util.stream.Collectors;
 
+import edu.stanford.hivdb.mutations.GenePosition;
+import edu.stanford.hivdb.mutations.Mutation;
 import edu.stanford.hivdb.mutations.MutationSet;
 
 public class AntibodySuscResult {
@@ -61,6 +65,10 @@ public class AntibodySuscResult {
 	private transient List<Antibody> antibodies;
 	private transient VirusStrain controlVirusStrain;
 	private transient VirusStrain virusStrain;
+	private transient MutationSet<SARS2> hitMutations;
+	private transient MutationSet<SARS2> missMutations;
+	private transient Set<GenePosition<SARS2>> hitPositions;
+	private transient Set<GenePosition<SARS2>> missPositions;
 	
 	public static List<AntibodySuscResult> query(MutationSet<SARS2> queryMuts) {
 		SARS2 sars2 = SARS2.getInstance();
@@ -74,15 +82,26 @@ public class AntibodySuscResult {
 		);
 		
 		results.sort((a, b) -> {
-			int aMiss = a.getNumMissMutations();
-			int bMiss = b.getNumMissMutations();
-			if (aMiss == bMiss) {
-				int aHit = a.getNumHitMutations();
-				int bHit = b.getNumHitMutations();
-				return bHit - aHit;  // descending order
+			// sorting order: [numMissPos, numMissMut, -numHitMut, -numHitPos]
+			int aMissPos = a.getNumMissPositions();
+			int bMissPos = b.getNumMissPositions();
+			if (aMissPos == bMissPos) {
+				int aMissMut = a.getNumMissMutations();
+				int bMissMut = b.getNumMissMutations();
+				if (aMissMut == bMissMut) {
+					int aHitMut = a.getNumHitMutations();
+					int bHitMut = b.getNumHitMutations();
+					if (aHitMut == bHitMut) {
+						int aHitPos = a.getNumHitPositions();
+						int bHitPos = b.getNumHitPositions();
+						return bHitPos - aHitPos;  // descending order
+					}
+					return bHitMut - aHitMut;  // descending order
+				}
+				return aMissMut - bMissMut;
 			}
 			else {
-				return aMiss - bMiss;
+				return aMissPos - bMissPos;
 			}
 		});
 		
@@ -161,26 +180,80 @@ public class AntibodySuscResult {
 	public Integer getCumulativeCount() { return cumulativeCount; }
 	
 	public MutationSet<SARS2> getHitMutations() {
-		return queryMuts.intersectsWith(getVirusStrain().getMutations());
+		if (hitMutations == null) {
+			hitMutations = queryMuts.intersectsWith(getVirusStrain().getMutations());
+		}
+		return hitMutations;
+	}
+	
+	public Set<GenePosition<SARS2>> getHitPositions() {
+		if (hitPositions == null) {
+			hitPositions = (
+				queryMuts.stream()
+				.map(Mutation::getGenePosition)
+				.collect(Collectors.toCollection(TreeSet::new))
+			);
+	
+			Set<GenePosition<SARS2>> strainPos = (
+				getVirusStrain().getMutations().stream()
+				.map(Mutation::getGenePosition)
+				.collect(Collectors.toCollection(TreeSet::new))
+			);
+			hitPositions.retainAll(strainPos);
+		}
+		return hitPositions;
 	}
 	
 	public Integer getNumHitMutations() {
 		return getHitMutations().size();
 	}
 	
+	public Integer getNumHitPositions() {
+		return getHitPositions().size();
+	}
+	
 	public MutationSet<SARS2> getMissMutations() {
-		MutationSet<SARS2> otherMuts = getVirusStrain().getMutations();
-		return (
-			queryMuts
-			.subtractsBy(otherMuts)
-			.mergesWith(
-				otherMuts
-				.subtractsBy(queryMuts)
-			)
-		);
+		if (missMutations == null) {
+			MutationSet<SARS2> otherMuts = getVirusStrain().getMutations();
+			missMutations = (
+				queryMuts
+				.subtractsBy(otherMuts)
+				.mergesWith(
+					otherMuts
+					.subtractsBy(queryMuts)
+				)
+			);
+		}
+		return missMutations;
+	}
+	
+	public Set<GenePosition<SARS2>> getMissPositions() {
+		if (missPositions == null) {
+			Set<GenePosition<SARS2>> queryPos = (
+				queryMuts.stream()
+				.map(Mutation::getGenePosition)
+				.collect(Collectors.toCollection(TreeSet::new))
+			);
+	
+			Set<GenePosition<SARS2>> strainPos = (
+				getVirusStrain().getMutations().stream()
+				.map(Mutation::getGenePosition)
+				.collect(Collectors.toCollection(TreeSet::new))
+			);
+			missPositions = new TreeSet<>();
+			missPositions.addAll(queryPos);
+			missPositions.addAll(strainPos);
+			queryPos.retainAll(strainPos);
+			missPositions.removeAll(queryPos);
+		}
+		return missPositions;
 	}
 	
 	public Integer getNumMissMutations() {
 		return getMissMutations().size();
+	}
+	
+	public Integer getNumMissPositions() {
+		return getMissPositions().size();
 	}
 }

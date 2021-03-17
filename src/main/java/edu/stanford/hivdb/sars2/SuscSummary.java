@@ -4,8 +4,12 @@ import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
+import java.util.TreeSet;
 import java.util.stream.Collectors;
 
+import edu.stanford.hivdb.mutations.GenePosition;
+import edu.stanford.hivdb.mutations.Mutation;
 import edu.stanford.hivdb.mutations.MutationSet;
 
 public class SuscSummary {
@@ -77,6 +81,7 @@ public class SuscSummary {
 	public static class SuscSummaryByMutationSet {
 		private MutationSet<SARS2> mutations;
 		private MutationSet<SARS2> hitMutations;
+		private Set<GenePosition<SARS2>> hitPositions;
 		private List<SuscSummaryByAntibody> itemsByAntibody;
 		private List<SuscSummaryByAntibodyClass> itemsByAntibodyClass;
 
@@ -88,6 +93,18 @@ public class SuscSummary {
 		) {
 			this.mutations = mutations;
 			this.hitMutations = queryMuts.intersectsWith(mutations);
+			hitPositions = (
+				queryMuts.stream()
+				.map(Mutation::getGenePosition)
+				.collect(Collectors.toCollection(TreeSet::new))
+			);
+			Set<GenePosition<SARS2>> strainPos = (
+				mutations.stream()
+				.map(Mutation::getGenePosition)
+				.collect(Collectors.toCollection(TreeSet::new))
+			);
+			hitPositions.retainAll(strainPos);
+			
 			this.itemsByAntibody = Collections.unmodifiableList(itemsByAntibody);
 			this.itemsByAntibodyClass = Collections.unmodifiableList(itemsByAntibodyClass);
 		}

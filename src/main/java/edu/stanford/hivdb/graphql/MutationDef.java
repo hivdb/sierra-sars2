@@ -51,42 +51,22 @@ public class MutationDef {
 			return mutationTypeBuilder.build();
 		}
 	);
-
-	public static GraphQLObjectType oAAPercent = newObject()
-		.name("AAPercent")
+	
+	public static GraphQLObjectType oAAReads = newObject()
+		.name("AAReads")
 		.field(field -> field
 			.type(GraphQLChar)
-			.name("AA")
+			.name("aminoAcid")
 			.description("A single amino acid."))
 		.field(field -> field
 			.type(GraphQLFloat)
 			.name("percent")
-			.description("Percent (max: 100) of this amino acid in the mutation."))
+			.description("Percent (range: 0 - 100) of this amino acid in the mutation."))
 		.field(field -> field
-			.type(GraphQLBoolean)
-			.name("isDRM")
+			.type(GraphQLLong)
+			.name("numReads")
 			.description(
-				"The mutated amino acid is a drug resistance mutation (DRM)."))
-		.field(field -> field
-			.type(GraphQLBoolean)
-			.name("isUnusual")
-			.description(
-				"The mutated amino acid is a low prevalence (unusual) mutation."))
-		.field(field -> field
-			.type(GraphQLBoolean)
-			.name("isApobecMutation")
-			.description("The mutated amino acid is a signature APOBEC-mediated hypermutation."))
-		.field(field -> field
-			.type(GraphQLBoolean)
-			.name("isApobecDRM")
-			.description(
-				"The mutated amino acid is a drug resistance mutation (DRM) might " +
-				"be caused by APOBEC-mediated G-to-A hypermutation."))
-		.field(field -> field
-			.type(GraphQLBoolean)
-			.name("isStop")
-			.description(
-				"The mutation is a stop codon."))
+				"The number of reads for this amino acid in the mutation."))
 		.build();
 
 	
@@ -96,6 +76,22 @@ public class MutationDef {
 			mutConsDataFetcher
 		)
 		.build();
+	
+	public static SimpleMemoizer<GraphQLObjectType> oGenePosition = new SimpleMemoizer<>(
+		name -> (
+				newObject()
+				.name("GenePosition")
+				.field(field -> field
+					.type(oGene.get(name))
+					.name("gene")
+					.description("Gene."))
+				.field(field -> field
+					.type(GraphQLInt)
+					.name("position")
+					.description("Position."))
+				.build()
+		)
+	);
 	
 	public static SimpleMemoizer<GraphQLObjectType> oMutation = new SimpleMemoizer<>(
 		name -> (
@@ -224,6 +220,11 @@ public class MutationDef {
 				.name("shortText")
 				.description(
 					"Formatted short text of the mutation (without gene)."))
+			.field(field -> field
+				.type(new GraphQLList(oAAReads))
+				.name("allAAReads")
+				.description(
+					"A list of read count / prevalence for each amino acid of this mutation."))
 			.build()
 		)
 	);
