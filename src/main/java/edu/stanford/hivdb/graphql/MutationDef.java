@@ -221,6 +221,11 @@ public class MutationDef {
 				.description(
 					"Formatted short text of the mutation (without gene)."))
 			.field(field -> field
+				.type(GraphQLLong)
+				.name("totalReads")
+				.description(
+					"Total reads at this position (only available for SequenceReadsAnalysis)"))
+			.field(field -> field
 				.type(new GraphQLList(oAAReads))
 				.name("allAAReads")
 				.description(
