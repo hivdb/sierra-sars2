@@ -7,32 +7,37 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+
 public class Antibody {
 
-	private final static Map<String, Antibody> singletons;
+	private final static Map<String, Map<String, Antibody>> singletons = DRDB.initVersionalSingletons();
 	
-	static {
-		SARS2 sars2 = SARS2.getInstance();
-		List<Map<String, Object>> allABs = sars2.getDRDBObj().queryAllAntibodies();
-		Map<String, Antibody> localSingletons = (
-			allABs.stream()
-			.map(Antibody::new)
-			.collect(Collectors.toMap(
-				ab -> ab.getName(),
-				ab -> ab,
-				(ab1, ab2) -> ab1,
-				LinkedHashMap::new
-			))
+	private static void updateSingletons(String drdbVersion) {
+		DRDB.addVersionToVersionalSingletons(
+			drdbVersion, singletons, drdb -> {
+				List<Map<String, Object>> allABs = drdb.queryAllAntibodies();
+				return (
+					allABs.stream()
+					.map(Antibody::new)
+					.collect(Collectors.toMap(
+						ab -> ab.getName(),
+						ab -> ab,
+						(ab1, ab2) -> ab1,
+						LinkedHashMap::new
+					))
+				);
+			}
 		);
-		singletons = Collections.unmodifiableMap(localSingletons);
 	}
 	
-	public static Antibody getInstance(String abName) {
-		return singletons.get(abName);
+	public static Antibody getInstance(String drdbVersion, String abName) {
+		updateSingletons(drdbVersion);
+		return singletons.get(drdbVersion).get(abName);
 	}
 	
-	public static Collection<Antibody> getAllInstances() {
-		return singletons.values();
+	public static Collection<Antibody> getAllInstances(String drdbVersion) {
+		updateSingletons(drdbVersion);
+		return singletons.get(drdbVersion).values();
 	}
 	
 	private final String abName;

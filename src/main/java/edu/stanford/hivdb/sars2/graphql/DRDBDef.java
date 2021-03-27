@@ -35,8 +35,6 @@ import edu.stanford.hivdb.sequences.AlignedSequence;
 
 public class DRDBDef {
 
-	private static SARS2 sars2 = SARS2.getInstance();
-	
 	protected static MutationSet<SARS2> getMutationSetFromSource(Object src) {
 		MutationSet<?> mutations;
 		if (src instanceof AlignedSequence) {
@@ -63,19 +61,22 @@ public class DRDBDef {
 	}
 	
 	public static DataFetcher<List<Map<String, Object>>> suscResultsForAntibodiesDataFetcher = env -> {
-		DRDB drdb = sars2.getDRDBObj();
+		String drdbVersion = env.getArgument("drdbVersion");
+		DRDB drdb = DRDB.getInstance(drdbVersion);
 		MutationSet<SARS2> mutations = getMutationSetFromSource(env.getSource());
 		return drdb.querySuscResultsForAntibodies(mutations);
 	};
 	
 	public static DataFetcher<List<Map<String, ?>>> suscResultsForConvPlasmaDataFetcher = env -> {
-		DRDB drdb = sars2.getDRDBObj();
+		String drdbVersion = env.getArgument("drdbVersion");
+		DRDB drdb = DRDB.getInstance(drdbVersion);
 		MutationSet<SARS2> mutations = getMutationSetFromSource(env.getSource());
 		return drdb.querySuscResultsForConvPlasma(mutations);
 	};
 
 	public static DataFetcher<List<Map<String, ?>>> suscResultsForImmuPlasmaDataFetcher = env -> {
-		DRDB drdb = sars2.getDRDBObj();
+		String drdbVersion = env.getArgument("drdbVersion");
+		DRDB drdb = DRDB.getInstance(drdbVersion);
 		MutationSet<SARS2> mutations = getMutationSetFromSource(env.getSource());
 		return drdb.querySuscResultsForImmuPlasma(mutations);
 	};
@@ -100,16 +101,16 @@ public class DRDBDef {
 				.description("Treatment free text name."))
 			.field(field -> field
 				.type(GraphQLString)
-				.name("controlStrainName")
-				.description("The control virus strain of the susceptibility testing."))
+				.name("controlVariantName")
+				.description("The control virus variant of the susceptibility testing."))
 			.field(field -> field
 				.type(GraphQLString)
-				.name("strainName")
-				.description("The experimental virus strain of the susceptibility testing."))
+				.name("variantName")
+				.description("The experimental virus variant of the susceptibility testing."))
 			.field(field -> field
 				.type(new GraphQLList(GraphQLString))
 				.name("mutations")
-				.description("Mutations contained by the target virus strain."))
+				.description("Mutations contained by the target virus variant."))
 			.field(field -> field
 				.type(GraphQLString)
 				.name("section")
@@ -117,7 +118,7 @@ public class DRDBDef {
 			.field(field -> field
 				.type(GraphQLInt)
 				.name("ordinalNumber")
-				.description("Tell apart results when multiple ones are available for the same `refName-rxName-controlStrainName-strainName` combinations."))
+				.description("Tell apart results when multiple ones are available for the same `refName-rxName-controlVariantName-variantName` combinations."))
 			.field(field -> field
 				.type(GraphQLString)
 				.name("foldCmp")
@@ -125,11 +126,11 @@ public class DRDBDef {
 			.field(field -> field
 				.type(GraphQLFloat)
 				.name("fold")
-				.description("Fold change: defined as the IC50 (IC80/IC90 if IC50 is not avaiable) number of experimental virus strain divided by the control virus strain."))
+				.description("Fold change: defined as the IC50 (IC80/IC90 if IC50 is not avaiable) number of experimental virus variant divided by the control virus variant."))
 			.field(field -> field
 				.type(GraphQLString)
 				.name("ineffective")
-				.description("When value is provided, the treatment has no effect on control strain or experimental strain."))
+				.description("When value is provided, the treatment has no effect on control variant or experimental variant."))
 			.field(field -> field
 				.type(GraphQLString)
 				.name("resistanceLevel")

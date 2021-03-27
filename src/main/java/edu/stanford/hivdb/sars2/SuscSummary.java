@@ -98,12 +98,12 @@ public class SuscSummary {
 				.map(Mutation::getGenePosition)
 				.collect(Collectors.toCollection(TreeSet::new))
 			);
-			Set<GenePosition<SARS2>> strainPos = (
+			Set<GenePosition<SARS2>> variantPos = (
 				mutations.stream()
 				.map(Mutation::getGenePosition)
 				.collect(Collectors.toCollection(TreeSet::new))
 			);
-			hitPositions.retainAll(strainPos);
+			hitPositions.retainAll(variantPos);
 			
 			this.itemsByAntibody = Collections.unmodifiableList(itemsByAntibody);
 			this.itemsByAntibodyClass = Collections.unmodifiableList(itemsByAntibodyClass);
@@ -196,7 +196,7 @@ public class SuscSummary {
 		Map<MutationSet<SARS2>, List<AntibodySuscResult>> byMutations = (
 			results.stream()
 			.collect(Collectors.groupingBy(
-				sr -> sr.getVirusStrain().getMutations(),
+				sr -> sr.getVirusVariant().getMutations(),
 				LinkedHashMap::new,
 				Collectors.toList()
 			))
@@ -213,10 +213,10 @@ public class SuscSummary {
 			.collect(Collectors.toList());
 	}		
 	
-	public static List<SuscSummaryByMutationSet> getAntibodySuscSummaryItems(MutationSet<SARS2> queryMuts) {
+	public static List<SuscSummaryByMutationSet> getAntibodySuscSummaryItems(String drdbVersion, MutationSet<SARS2> queryMuts) {
 		queryMuts = queryMuts.filterBy(mut -> !mut.isUnsequenced());
 		List<AntibodySuscResult> results = (
-			AntibodySuscResult.query(queryMuts)
+			AntibodySuscResult.query(drdbVersion, queryMuts)
 			.stream()
 			.filter(r -> (
 				r.getAntibodies().stream().allMatch(

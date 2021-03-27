@@ -12,8 +12,9 @@ import edu.stanford.hivdb.mutations.MutationSet;
 
 public class DRDBTest {
 
+	private final String drdbVer = "20210325";
 	private final SARS2 virusIns = SARS2.getInstance();
-	private final DRDB drdbObj = SARS2.getInstance().getDRDBObj();
+	private final DRDB drdbObj = DRDB.getInstance(drdbVer);
 
 	@Test
 	public void testQuerySuscResultsForAntibodies() {
@@ -24,9 +25,10 @@ public class DRDBTest {
 		assertTrue(results.size() > 330);
 		assertEquals(
 			Set.of(
-				"refName", "refDOI", "refURL", "rxName", "antibodies", "strainName",
-				"mutations", "section", "ordinalNumber", "foldCmp", "fold",
-				"resistanceLevel", "cumulativeCount"
+				"refName", "refDOI", "refURL", "rxName",
+				"abNames", "controlVariantName", "variantName", "assay",
+				"section", "ordinalNumber", "foldCmp", "fold", "ineffective",
+				"fbResistanceLevel", "cumulativeCount"
 			),
 			results.get(0).keySet()
 		);
@@ -41,9 +43,10 @@ public class DRDBTest {
 		assertTrue(results.size() > 3);
 		assertEquals(
 			Set.of(
-				"refName", "refDOI", "refURL", "rxName", "strainName", "mutations",
-				"section", "ordinalNumber", "foldCmp", "fold", "resistanceLevel",
-				"cumulativeCount", "cumulativeGroup"
+				"refName", "refDOI", "refURL", "rxName",
+				"controlVariantName", "variantName", "mutations", "assay",
+				"section", "ordinalNumber", "foldCmp", "fold", "ineffective",
+				"resistanceLevel", "cumulativeCount", "cumulativeGroup"
 			),
 			results.get(0).keySet()
 		);
@@ -58,9 +61,10 @@ public class DRDBTest {
 		assertTrue(results.size() > 14);
 		assertEquals(
 			Set.of(
-				"refName", "refDOI", "refURL", "rxName", "strainName", "mutations",
-				"section", "ordinalNumber", "foldCmp", "fold", "resistanceLevel",
-				"cumulativeCount", "cumulativeGroup", "vaccineName"
+				"refName", "refDOI", "refURL", "rxName", "vaccineName",
+				"controlVariantName", "variantName", "mutations", "assay",
+				"section", "ordinalNumber", "foldCmp", "fold", "ineffective",
+				"resistanceLevel", "cumulativeCount", "cumulativeGroup"
 			),
 			results.get(0).keySet()
 		);
@@ -68,17 +72,17 @@ public class DRDBTest {
 
 	@Test
 	public void testAntibodies() {
-		assertTrue(Antibody.getAllInstances().size() >= 227);
+		assertTrue(Antibody.getAllInstances(drdbVer).size() >= 227);
 	}
 	
 	@Test
 	public void testArticles() {
-		assertTrue(Article.getAllInstances().size() >= 55);
+		assertTrue(Article.getAllInstances(drdbVer).size() >= 55);
 	}
 
 	@Test
 	public void testVirusStrains() {
-		assertTrue(VirusStrain.getAllInstances().size() >= 55);
+		assertTrue(VirusVariant.getAllInstances(drdbVer).size() >= 55);
 	}
 
 }

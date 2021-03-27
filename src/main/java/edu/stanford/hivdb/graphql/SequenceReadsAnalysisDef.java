@@ -57,7 +57,6 @@ import static edu.stanford.hivdb.graphql.SequenceReadsHistogramDef.*;
 import static edu.stanford.hivdb.graphql.SequenceReadsHistogramByCodonReadsDef.*;
 import static edu.stanford.hivdb.graphql.DrugResistanceAlgorithmDef.*;
 import static edu.stanford.hivdb.graphql.DescriptiveStatisticsDef.*;
-import static edu.stanford.hivdb.graphql.VirusAnnotationQueryDef.*;
 
 public class SequenceReadsAnalysisDef {
 	
@@ -84,14 +83,6 @@ public class SequenceReadsAnalysisDef {
 			return new ArrayList<>(GeneDR.newFromGeneSequenceReads(allGeneSeqReads, alg).values());
 		};
 	};
-	
-	private static <VirusT extends Virus<VirusT>> DataFetcher<String> makeVirusAnnotationDataFetcher(VirusT virusIns) {
-		return env -> {
-			SequenceReads<VirusT> seqReads = env.getSource();
-			String funcName = env.getArgument("function");
-			return virusIns.execAnnotationFunction(funcName, seqReads.getMutations());
-		};
-	}
 	
 	public static <VirusT extends Virus<VirusT>> SequenceReads<VirusT> toSequenceReadsList(Map<String, Object> input) {
 		String name = (String) input.get("name");
@@ -240,10 +231,6 @@ public class SequenceReadsAnalysisDef {
 				seqReadsHistogramDataFetcher
 			)
 			.dataFetcher(
-				coordinates("SequenceReadsAnalysis", "virusAnnotation"),
-				makeVirusAnnotationDataFetcher(virusIns)
-			)
-			.dataFetcher(
 				coordinates("SequenceReadsAnalysis", "histogramByCodonReads"),
 				seqReadsHistogramByCodonReadsDataFetcher
 			)
@@ -366,19 +353,7 @@ public class SequenceReadsAnalysisDef {
 					.type(GraphQLString)
 					.name("internalJsonCodonReadsCoverage")
 					.description(
-						"Position codon reads in this gene sequence (json formated)."))
-				.field(field -> field
-					.type(GraphQLString)
-					.name("virusAnnotation")
-					.argument(arg -> arg
-						.name("function")
-						.type(oVirusAnnotationFunction.get(virusName))
-						.description("Virus annotation function name.")
-					)
-					.description(
-						"Querying virus-specific database for this sequence"
-					)
-				);
+						"Position codon reads in this gene sequence (json formated)."));
 			Virus<?> virus = Virus.getInstance(virusName);
 			builder = virus.getVirusGraphQLExtension().extendObjectBuilder("SequenceReadsAnalysis", builder);
 			return builder.build();

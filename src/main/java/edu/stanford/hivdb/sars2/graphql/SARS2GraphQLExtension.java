@@ -4,6 +4,7 @@ import static graphql.Scalars.*;
 import edu.stanford.hivdb.viruses.VirusGraphQLExtension;
 import graphql.schema.GraphQLCodeRegistry;
 import graphql.schema.GraphQLList;
+import graphql.schema.GraphQLNonNull;
 import graphql.schema.GraphQLObjectType;
 import static graphql.schema.FieldCoordinates.coordinates;
 
@@ -126,11 +127,27 @@ public class SARS2GraphQLExtension implements VirusGraphQLExtension {
 						"this argument to `true`, all results will be included."
 					)
 				)
+				.argument(arg -> arg
+					.type(new GraphQLNonNull(GraphQLString))
+					.name("drdbVersion")
+					.description(
+						"The version of DRDB to be used by this query. A full list of DRDB versions " +
+						"can be found here: https://github.com/hivdb/chiro-cms/tree/master/downloads/covid-drdb"
+					)
+				)
 				.description("Susceptilibity results for antibodies linked to this sequence/mutation set.")
 			)
 			.field(field -> field
 				.type(new GraphQLList(AntibodySuscResultDef.oSuscSummaryByMutationSet))
 				.name("antibodySuscSummary")
+				.argument(arg -> arg
+					.type(new GraphQLNonNull(GraphQLString))
+					.name("drdbVersion")
+					.description(
+						"The version of DRDB to be used by this query. A full list of DRDB versions " +
+						"can be found here: https://github.com/hivdb/chiro-cms/tree/master/downloads/covid-drdb"
+					)
+				)
 				.description("Susceptibility summary for antibodies linked to this sequence/mutation set.")
 			);
 	}
@@ -141,11 +158,27 @@ public class SARS2GraphQLExtension implements VirusGraphQLExtension {
 			.field(field -> field
 				.type(new GraphQLList(DRDBDef.oConvPlasmaSuscResult))
 				.name("suscResultsForConvPlasma")
+				.argument(arg -> arg
+					.type(new GraphQLNonNull(GraphQLString))
+					.name("drdbVersion")
+					.description(
+						"The version of DRDB to be used by this query. A full list of DRDB versions " +
+						"can be found here: https://github.com/hivdb/chiro-cms/tree/master/downloads/covid-drdb"
+					)
+				)
 				.description("Susceptilibity results for convalescent plasma linked to this sequence/mutation set.")
 			)
 			.field(field -> field
 				.type(new GraphQLList(DRDBDef.oImmuPlasmaSuscResult))
 				.name("suscResultsForImmuPlasma")
+				.argument(arg -> arg
+					.type(new GraphQLNonNull(GraphQLString))
+					.name("drdbVersion")
+					.description(
+						"The version of DRDB to be used by this query. A full list of DRDB versions " +
+						"can be found here: https://github.com/hivdb/chiro-cms/tree/master/downloads/covid-drdb"
+					)
+				)
 				.description("Susceptilibity results for vaccine-recipient plasma linked to this sequence/mutation set.")
 			);
 	}

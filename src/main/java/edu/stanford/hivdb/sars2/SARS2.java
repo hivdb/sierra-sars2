@@ -38,10 +38,7 @@ import edu.stanford.hivdb.mutations.MutationSet;
 import edu.stanford.hivdb.mutations.MutationType;
 import edu.stanford.hivdb.mutations.MutationTypePair;
 import edu.stanford.hivdb.sars2.graphql.SARS2GraphQLExtension;
-import edu.stanford.hivdb.seqreads.SequenceReads;
-import edu.stanford.hivdb.sequences.AlignedSequence;
 import edu.stanford.hivdb.sequences.AlignmentConfig;
-import edu.stanford.hivdb.utilities.Json;
 import edu.stanford.hivdb.viruses.Gene;
 import edu.stanford.hivdb.viruses.Strain;
 import edu.stanford.hivdb.viruses.Virus;
@@ -71,7 +68,6 @@ public class SARS2 implements Virus<SARS2> {
 	private static final String ALGORITHMS_RESPATH = "algorithms/%s_%s.xml";
 	private static final String CONDCOMMENTS_RESPATH = "conditional-comments.json";
 	private static final String ALIGNCONFIG_RESPATH = "alignment-config.json";
-	private static final String COVID_DRDB_RESPATH = "covid-drdb.db";
 
 	static {
 		Virus.registerInstance(new SARS2());
@@ -110,8 +106,7 @@ public class SARS2 implements Virus<SARS2> {
 			ALGORITHMS_INDEXPATH,
 			ALGORITHMS_RESPATH,
 			CONDCOMMENTS_RESPATH,
-			ALIGNCONFIG_RESPATH,
-			COVID_DRDB_RESPATH
+			ALIGNCONFIG_RESPATH
 		);
 	}
 
@@ -346,48 +341,6 @@ public class SARS2 implements Virus<SARS2> {
 	@Override
 	public AlignmentConfig<SARS2> getAlignmentConfig() {
 		return dl.getAlignmentConfig();
-	}
-	
-	@Override
-	public List<String> getAnnotationFunctionList() {
-		return List.of(
-			"antibodySuscResults",
-			"convPlasmaSuscResults",
-			"immuPlasmaSuscResults"
-		);	
-	}
-	
-	protected String execAnnotationFunctionForMutations(String funcName, MutationSet<SARS2> mutations) {
-		DRDB drdb = dl.getDRDBObj();
-		switch (funcName) {
-			case "antibodySuscResults":
-				return Json.dumpsUgly(drdb.querySuscResultsForAntibodies(mutations));
-			case "convPlasmaSuscResults":
-				return Json.dumpsUgly(drdb.querySuscResultsForConvPlasma(mutations));
-			case "immuPlasmaSuscResults":
-				return Json.dumpsUgly(drdb.querySuscResultsForImmuPlasma(mutations));
-			default:
-				throw new RuntimeException(String.format("Invalid function name %s", funcName));
-		}
-	}
-
-	@Override
-	public String execAnnotationFunction(String funcName, MutationSet<SARS2> mutations) {
-		return execAnnotationFunctionForMutations(funcName, mutations);
-	}
-	
-	@Override
-	public String execAnnotationFunction(String funcName, AlignedSequence<SARS2> alignedSeq) {
-		return execAnnotationFunctionForMutations(funcName, alignedSeq.getMutations()); 
-	}
-
-	@Override
-	public String execAnnotationFunction(String funcName, SequenceReads<SARS2> seqReads) {
-		return execAnnotationFunctionForMutations(funcName, seqReads.getMutations()); 
-	}
-	
-	public DRDB getDRDBObj() {
-		return dl.getDRDBObj();
 	}
 	
 	@Override

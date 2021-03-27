@@ -14,6 +14,7 @@ import java.util.function.Function;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
+import org.apache.commons.collections4.map.LRUMap;
 import org.apache.commons.lang3.tuple.Pair;
 
 import edu.stanford.hivdb.mutations.AAMutation;
@@ -23,15 +24,44 @@ import edu.stanford.hivdb.viruses.Gene;
 
 public class DRDB {
 	
+	private static final int MAX_ENTRIES = 20;
 	private static final double PARTIAL_RESIST_FOLD = 3;
 	private static final double RESIST_FOLD = 10;
 	private static final String LIST_JOIN_UNIQ = "$#\u0008#$";
 	private static final String QUOTED_LIST_JOIN_UNIQ = Pattern.quote(LIST_JOIN_UNIQ);
+	private static final String COVID_DRDB_RESURL_PREFIX = "https://s3-us-west-2.amazonaws.com/cms.hivdb.org/chiro-prod/downloads/covid-drdb";
+
+	private static final Map<String, DRDB> singletons = Collections.synchronizedMap(new LRUMap<String, DRDB>(MAX_ENTRIES));
+	
+	public static <T> Map<String, Map<String, T>> initVersionalSingletons() {
+		return Collections.synchronizedMap(new LRUMap<String, Map<String, T>>(MAX_ENTRIES));
+	}
+	
+	public static <T> void addVersionToVersionalSingletons(
+		String version,
+		Map<String, Map<String, T>> singletons,
+		Function<DRDB, Map<String, T>> getInstances
+	) {
+		if (!singletons.containsKey(version)) {
+			DRDB drdb = DRDB.getInstance(version);
+			singletons.put(version, Collections.unmodifiableMap(getInstances.apply(drdb)));
+		}
+		
+	}
+	
+	public static DRDB getInstance(String version) {
+		String resourcePath = String.format("%s/%s.db", COVID_DRDB_RESURL_PREFIX, version);
+		if (!singletons.containsKey(resourcePath)) {
+			DRDB instance = new DRDB(resourcePath);
+			singletons.put(resourcePath, instance);
+		}
+		return singletons.get(resourcePath);
+	}
 	
 	private final SARS2 virusIns;
 	private final Connection conn;
 	
-	public DRDB(String resourcePath) {
+	private DRDB(String resourcePath) {
 		virusIns = SARS2.getInstance();
 		try {
 			Class.forName("org.sqlite.JDBC");
@@ -129,13 +159,13 @@ public class DRDB {
 		return queryAll(
 			"SELECT " +
 			columns +
-			// "  ref_name, rx_name, strain_name, fold_cmp, " +
+			// "  ref_name, rx_name, variant_name, fold_cmp, " +
 			// "  fold, cumulative_count, date_added " +
 			"  FROM susc_results S " +
 			joins +
 			"  WHERE EXISTS(" +
-			"    SELECT 1 FROM strain_mutations M " +
-			"    WHERE S.strain_name = M.strain_name AND (" +
+			"    SELECT 1 FROM variant_mutations M " +
+			"    WHERE S.variant_name = M.variant_name AND (" +
 			genePosQuery +
 			"  )) AND " +
 			// exclude results that are ineffective to control
@@ -196,13 +226,13 @@ public class DRDB {
 		);
 	}
 	
-	public List<Map<String, Object>> queryAllVirusStrains() {
-		List<Map<String, Object>> strains = queryAll(
-			"SELECT strain_name FROM virus_strains",
+	public List<Map<String, Object>> queryAllVirusVariants() {
+		List<Map<String, Object>> variants = queryAll(
+			"SELECT variant_name FROM virus_variants",
 			rs -> {
 				try {
 					Map<String, Object> result = new LinkedHashMap<>();
-					result.put("strainName", rs.getString("strain_name"));
+					result.put("variantName", rs.getString("variant_name"));
 					return result;
 				}
 				catch(SQLException e) {
@@ -212,13 +242,13 @@ public class DRDB {
 		);
 		SARS2 sars2 = SARS2.getInstance();
 		Map<String, List<Pair<String, Mutation<SARS2>>>> mutations = groupAll(
-			"SELECT strain_name, gene, position, amino_acid " +
-			"FROM strain_mutations WHERE gene='S'",
+			"SELECT variant_name, gene, position, amino_acid " +
+			"FROM variant_mutations WHERE gene='S'",
 			r -> r.getLeft(),
 			rs -> {
 				try {
 					return Pair.of(
-						rs.getString("strain_name"),
+						rs.getString("variant_name"),
 						new AAMutation<>(
 							sars2.getMainStrain().getGene(rs.getString("gene")),
 							rs.getInt("position"),
@@ -235,11 +265,11 @@ public class DRDB {
 				}
 			}
 		);
-		for (Map<String, Object> strain : strains) {
-			strain.put(
+		for (Map<String, Object> variant : variants) {
+			variant.put(
 				"mutations",
 				mutations.getOrDefault(
-					(String) strain.get("strainName"),
+					(String) variant.get("variantName"),
 					Collections.emptyList()
 				)
 				.stream()
@@ -247,7 +277,7 @@ public class DRDB {
 				.collect(Collectors.toList())
 			);
 		}
-		return strains;
+		return variants;
 	}
 	
 	public List<Map<String, Object>> queryAllAntibodies() {
@@ -327,8 +357,8 @@ public class DRDB {
 			"A.doi, " +
 			"A.url, " +
 			"S.rx_name, " +
-			"S.control_strain_name, " +
-			"S.strain_name, " +
+			"S.control_variant_name, " +
+			"S.variant_name, " +
 			"ordinal_number, " +
 			"assay, " +
 			"section, " +
@@ -363,8 +393,8 @@ public class DRDB {
 					result.put("refURL", rs.getString("url"));
 					result.put("rxName", rs.getString("rx_name"));
 					result.put("abNames", List.of(rs.getString("ab_names").split(QUOTED_LIST_JOIN_UNIQ)));
-					result.put("controlStrainName", rs.getString("control_strain_name"));
-					result.put("strainName", rs.getString("strain_name"));
+					result.put("controlVariantName", rs.getString("control_variant_name"));
+					result.put("variantName", rs.getString("variant_name"));
 					result.put("assay", rs.getString("assay"));
 					result.put("section", rs.getString("section"));
 					result.put("ordinalNumber", rs.getInt("ordinal_number"));
@@ -393,8 +423,8 @@ public class DRDB {
 			"A.doi, " +
 			"A.url, " +
 			"S.rx_name, " +
-			"S.control_strain_name, " +
-			"S.strain_name, " +
+			"S.control_variant_name, " +
+			"S.variant_name, " +
 			"assay, " +
 			"section, " +
 			"ordinal_number, " +
@@ -406,8 +436,8 @@ public class DRDB {
 			"RXCP.cumulative_group, " +
 			
 			"(SELECT GROUP_CONCAT(SMUT.gene || ':' || SMUT.position || SMUT.amino_acid, '" + LIST_JOIN_UNIQ + "') " +
-			"  FROM strain_mutations SMUT" +
-			"  WHERE S.strain_name = SMUT.strain_name" +
+			"  FROM variant_mutations SMUT" +
+			"  WHERE S.variant_name = SMUT.variant_name" +
 			"  ORDER BY SMUT.gene, SMUT.position, SMUT.amino_acid" +
 			") AS mutations",
 			
@@ -428,8 +458,8 @@ public class DRDB {
 					result.put("refDOI", rs.getString("doi"));
 					result.put("refURL", rs.getString("url"));
 					result.put("rxName", rs.getString("rx_name"));
-					result.put("controlStrainName", rs.getString("control_strain_name"));
-					result.put("strainName", rs.getString("strain_name"));
+					result.put("controlVariantName", rs.getString("control_variant_name"));
+					result.put("variantName", rs.getString("variant_name"));
 					result.put("mutations", rs.getString("mutations").split(QUOTED_LIST_JOIN_UNIQ));
 					result.put("assay", rs.getString("assay"));
 					result.put("section", rs.getString("section"));
@@ -459,8 +489,8 @@ public class DRDB {
 			"A.doi, " +
 			"A.url, " +
 			"S.rx_name, " +
-			"S.control_strain_name, " +
-			"S.strain_name, " +
+			"S.control_variant_name, " +
+			"S.variant_name, " +
 			"assay, " +
 			"section, " +
 			"ordinal_number, " +
@@ -473,8 +503,8 @@ public class DRDB {
 			"RXIP.vaccine_name, " +
 			
 			"(SELECT GROUP_CONCAT(SMUT.gene || ':' || SMUT.position || SMUT.amino_acid, '" + LIST_JOIN_UNIQ + "') " +
-			"  FROM strain_mutations SMUT" +
-			"  WHERE S.strain_name = SMUT.strain_name" +
+			"  FROM variant_mutations SMUT" +
+			"  WHERE S.variant_name = SMUT.variant_name" +
 			"  ORDER BY SMUT.gene, SMUT.position, SMUT.amino_acid" +
 			") AS mutations",
 			
@@ -496,8 +526,8 @@ public class DRDB {
 					result.put("refURL", rs.getString("url"));
 					result.put("rxName", rs.getString("rx_name"));
 					result.put("vaccineName", rs.getString("vaccine_name"));
-					result.put("controlStrainName", rs.getString("control_strain_name"));
-					result.put("strainName", rs.getString("strain_name"));
+					result.put("controlVariantName", rs.getString("control_variant_name"));
+					result.put("variantName", rs.getString("variant_name"));
 					result.put("mutations", rs.getString("mutations").split(QUOTED_LIST_JOIN_UNIQ));
 					result.put("assay", rs.getString("assay"));
 					result.put("section", rs.getString("section"));

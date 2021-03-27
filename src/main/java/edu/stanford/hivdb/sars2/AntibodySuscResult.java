@@ -46,11 +46,12 @@ public class AntibodySuscResult {
 	}
 	private final MutationSet<SARS2> queryMuts;
 
+	private final String drdbVersion;
 	private final String refName;
 	private final String rxName;
 	private final List<String> abNames;
-	private final String controlStrainName;
-	private final String strainName;
+	private final String controlVariantName;
+	private final String variantName;
 	private final Integer ordinalNumber;
 	private final String section;
 	private final String assay;
@@ -63,21 +64,21 @@ public class AntibodySuscResult {
 	private transient Article reference;
 	private transient String resistanceLevel;
 	private transient List<Antibody> antibodies;
-	private transient VirusStrain controlVirusStrain;
-	private transient VirusStrain virusStrain;
+	private transient VirusVariant controlVirusVariant;
+	private transient VirusVariant virusVariant;
 	private transient MutationSet<SARS2> hitMutations;
 	private transient MutationSet<SARS2> missMutations;
 	private transient Set<GenePosition<SARS2>> hitPositions;
 	private transient Set<GenePosition<SARS2>> missPositions;
 	
-	public static List<AntibodySuscResult> query(MutationSet<SARS2> queryMuts) {
-		SARS2 sars2 = SARS2.getInstance();
+	public static List<AntibodySuscResult> query(String drdbVersion, MutationSet<SARS2> queryMuts) {
+		DRDB drdb = DRDB.getInstance(drdbVersion);
 		final MutationSet<SARS2> realQueryMuts = queryMuts.filterBy(mut -> !mut.isUnsequenced());
 		List<AntibodySuscResult> results = (
-			sars2.getDRDBObj()
+			drdb
 			.querySuscResultsForAntibodies(queryMuts)
 			.stream()
-			.map(d -> new AntibodySuscResult(realQueryMuts, d))
+			.map(d -> new AntibodySuscResult(drdbVersion, realQueryMuts, d))
 			.collect(Collectors.toList())
 		);
 		
@@ -108,7 +109,12 @@ public class AntibodySuscResult {
 		return results;
 	}
 	
-	private AntibodySuscResult(MutationSet<SARS2> queryMuts, Map<String, Object> suscData) {
+	private AntibodySuscResult(
+		String drdbVersion,
+		MutationSet<SARS2> queryMuts,
+		Map<String, Object> suscData
+	) {
+		this.drdbVersion = drdbVersion;
 		this.queryMuts = queryMuts;
 		
 		refName = (String) suscData.get("refName");
@@ -118,8 +124,8 @@ public class AntibodySuscResult {
 		List<String> abNames = (List<String>) suscData.get("abNames");
 		this.abNames = abNames;
 
-		controlStrainName = (String) suscData.get("controlStrainName");
-		strainName = (String) suscData.get("strainName");
+		controlVariantName = (String) suscData.get("controlVariantName");
+		variantName = (String) suscData.get("variantName");
 		ordinalNumber = (Integer) suscData.get("ordinalNumber");
 		assay = (String) suscData.get("assay");
 		section = (String) suscData.get("section");
@@ -139,7 +145,7 @@ public class AntibodySuscResult {
 
 	public Article getReference() {
 		if (reference == null) {
-			reference = Article.getInstance(refName);
+			reference = Article.getInstance(drdbVersion, refName);
 		}
 		return reference;
 	}
@@ -148,25 +154,25 @@ public class AntibodySuscResult {
 		if (antibodies == null) {
 			antibodies = (
 				abNames.stream()
-				.map(abName -> Antibody.getInstance(abName))
+				.map(abName -> Antibody.getInstance(drdbVersion, abName))
 				.collect(Collectors.toList())
 			);
 		}
 		return antibodies;
 	}
 
-	public VirusStrain getControlVirusStrain() {
-		if (controlVirusStrain == null) {
-			controlVirusStrain = VirusStrain.getInstance(controlStrainName);
+	public VirusVariant getControlVirusVariant() {
+		if (controlVirusVariant == null) {
+			controlVirusVariant = VirusVariant.getInstance(drdbVersion, controlVariantName);
 		}
-		return controlVirusStrain;
+		return controlVirusVariant;
 	}
 
-	public VirusStrain getVirusStrain() {
-		if (virusStrain == null) {
-			virusStrain = VirusStrain.getInstance(strainName);
+	public VirusVariant getVirusVariant() {
+		if (virusVariant == null) {
+			virusVariant = VirusVariant.getInstance(drdbVersion, variantName);
 		}
-		return virusStrain;
+		return virusVariant;
 	}
 
 	public String getRefName() { return refName; }
@@ -181,7 +187,7 @@ public class AntibodySuscResult {
 	
 	public MutationSet<SARS2> getHitMutations() {
 		if (hitMutations == null) {
-			hitMutations = queryMuts.intersectsWith(getVirusStrain().getMutations());
+			hitMutations = queryMuts.intersectsWith(getVirusVariant().getMutations());
 		}
 		return hitMutations;
 	}
@@ -194,12 +200,12 @@ public class AntibodySuscResult {
 				.collect(Collectors.toCollection(TreeSet::new))
 			);
 	
-			Set<GenePosition<SARS2>> strainPos = (
-				getVirusStrain().getMutations().stream()
+			Set<GenePosition<SARS2>> variantPos = (
+				getVirusVariant().getMutations().stream()
 				.map(Mutation::getGenePosition)
 				.collect(Collectors.toCollection(TreeSet::new))
 			);
-			hitPositions.retainAll(strainPos);
+			hitPositions.retainAll(variantPos);
 		}
 		return hitPositions;
 	}
@@ -214,7 +220,7 @@ public class AntibodySuscResult {
 	
 	public MutationSet<SARS2> getMissMutations() {
 		if (missMutations == null) {
-			MutationSet<SARS2> otherMuts = getVirusStrain().getMutations();
+			MutationSet<SARS2> otherMuts = getVirusVariant().getMutations();
 			missMutations = (
 				queryMuts
 				.subtractsBy(otherMuts)
@@ -235,15 +241,15 @@ public class AntibodySuscResult {
 				.collect(Collectors.toCollection(TreeSet::new))
 			);
 	
-			Set<GenePosition<SARS2>> strainPos = (
-				getVirusStrain().getMutations().stream()
+			Set<GenePosition<SARS2>> variantPos = (
+				getVirusVariant().getMutations().stream()
 				.map(Mutation::getGenePosition)
 				.collect(Collectors.toCollection(TreeSet::new))
 			);
 			missPositions = new TreeSet<>();
 			missPositions.addAll(queryPos);
-			missPositions.addAll(strainPos);
-			queryPos.retainAll(strainPos);
+			missPositions.addAll(variantPos);
+			queryPos.retainAll(variantPos);
 			missPositions.removeAll(queryPos);
 		}
 		return missPositions;

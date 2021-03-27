@@ -116,7 +116,6 @@ public class SARS2DataLoader<T extends Virus<T>> {
 	private final String ALGORITHMS_RESPATH;
 	private final String CONDCOMMENTS_RESPATH;
 	private final String ALIGNCONFIG_RESPATH;
-	private final String COVID_DRDB_RESPATH;
 
 	private transient Map<String, Strain<T>> strains;
 	private transient Map<String, Gene<T>> genes;
@@ -141,7 +140,6 @@ public class SARS2DataLoader<T extends Virus<T>> {
 	private transient Map<String, DrugResistanceAlgorithm<T>> drugResistAlgLookup;
 	private transient ConditionalComments<T> condComments;
 	private transient AlignmentConfig<T> alignmentConfig;
-	private transient DRDB drdbObj;
 	
 	public SARS2DataLoader(
 		T virus,
@@ -166,8 +164,7 @@ public class SARS2DataLoader<T extends Virus<T>> {
 		final String ALGORITHMS_INDEXPATH,
 		final String ALGORITHMS_RESPATH,
 		final String CONDCOMMENTS_RESPATH,
-		final String ALIGNCONFIG_RESPATH,
-		final String COVID_DRDB_RESPATH
+		final String ALIGNCONFIG_RESPATH
 	) {
 		this.virus = virus;
 		this.VIRUS_NAME = VIRUS_NAME;
@@ -192,7 +189,6 @@ public class SARS2DataLoader<T extends Virus<T>> {
 		this.ALGORITHMS_RESPATH = ALGORITHMS_RESPATH;
 		this.CONDCOMMENTS_RESPATH = CONDCOMMENTS_RESPATH;
 		this.ALIGNCONFIG_RESPATH = ALIGNCONFIG_RESPATH;
-		this.COVID_DRDB_RESPATH = COVID_DRDB_RESPATH;
 	}
 	
 	private MutationSet<T> loadMutationSetFromRes(String resPath, Collection<Strain<T>> strains) {
@@ -223,10 +219,6 @@ public class SARS2DataLoader<T extends Virus<T>> {
 			);
 		}
 		return Collections.unmodifiableMap(mutationsMap);
-	}
-	
-	private void initDRDB() {
-		drdbObj = new DRDB(COVID_DRDB_RESPATH);
 	}
 	
 	private void initCondComments() {
@@ -771,13 +763,6 @@ public class SARS2DataLoader<T extends Virus<T>> {
 			alignmentConfig = AlignmentConfig.loadJson(raw, virus);
 		}
 		return alignmentConfig;
-	}
-	
-	public DRDB getDRDBObj() {
-		if (drdbObj == null) {
-			initDRDB();
-		}
-		return drdbObj;
 	}
 	
 }

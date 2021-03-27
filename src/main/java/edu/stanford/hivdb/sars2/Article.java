@@ -1,7 +1,6 @@
 package edu.stanford.hivdb.sars2;
 
 import java.util.Collection;
-import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -9,30 +8,34 @@ import java.util.stream.Collectors;
 
 public class Article {
 
-	private final static Map<String, Article> singletons;
+	private final static Map<String, Map<String, Article>> singletons = DRDB.initVersionalSingletons();
 	
-	static {
-		SARS2 sars2 = SARS2.getInstance();
-		List<Map<String, Object>> allRefs = sars2.getDRDBObj().queryAllArticles();
-		Map<String, Article> localSingletons = (
-			allRefs.stream()
-			.map(Article::new)
-			.collect(Collectors.toMap(
-				ref -> ref.getRefName(),
-				ref -> ref,
-				(ref1, ref2) -> ref1,
-				LinkedHashMap::new
-			))
+	private static void updateSingletons(String drdbVersion) {
+		DRDB.addVersionToVersionalSingletons(
+			drdbVersion, singletons, drdb -> {
+				List<Map<String, Object>> allRefs = drdb.queryAllArticles();
+				return (
+					allRefs.stream()
+					.map(Article::new)
+					.collect(Collectors.toMap(
+						ref -> ref.getRefName(),
+						ref -> ref,
+						(ref1, ref2) -> ref1,
+						LinkedHashMap::new
+					))
+				);
+			}
 		);
-		singletons = Collections.unmodifiableMap(localSingletons);
 	}
 	
-	public static Article getInstance(String refName) {
-		return singletons.get(refName);
+	public static Article getInstance(String drdbVersion, String refName) {
+		updateSingletons(drdbVersion);
+		return singletons.get(drdbVersion).get(refName);
 	}
 	
-	public static Collection<Article> getAllInstances() {
-		return singletons.values();
+	public static Collection<Article> getAllInstances(String drdbVersion) {
+		updateSingletons(drdbVersion);
+		return singletons.get(drdbVersion).values();
 	}
 	
 	private final String refName;

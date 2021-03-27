@@ -24,18 +24,18 @@ import static graphql.schema.GraphQLObjectType.newObject;
 
 import edu.stanford.hivdb.graphql.MutationSetDef;
 
-public class VirusStrainDef {
+public class VirusVariantDef {
 
-	public static GraphQLObjectType oVirusStrain = newObject()
-		.name("VirusStrainObject")
-		.description("VirusStrain object")
+	public static GraphQLObjectType oVirusVariant = newObject()
+		.name("VirusVariantObject")
+		.description("VirusVariant object")
 		.field(field -> field
 			.type(GraphQLString)
 			.name("name")
-			.description("Virus strain name."))
+			.description("Virus variant name."))
 		.field(field -> MutationSetDef.newMutationSet(
 			"SARS2", field, "mutations"
-		).description("Mutations of this virus strain."))
+		).description("Mutations of this virus variant."))
 		.build();
 
 }

@@ -36,14 +36,16 @@ import edu.stanford.hivdb.sars2.SuscSummary.SuscSummaryByMutationSet;
 public class AntibodySuscResultDef {
 
 	public static DataFetcher<List<SuscSummaryByMutationSet>> antibodySuscSummaryFetcher = env -> {
+		String drdbVersion = env.getArgument("drdbVersion");
 		MutationSet<SARS2> mutations = DRDBDef.getMutationSetFromSource(env.getSource());
-		return SuscSummary.getAntibodySuscSummaryItems(mutations);
+		return SuscSummary.getAntibodySuscSummaryItems(drdbVersion, mutations);
 	};
 	
 	public static DataFetcher<List<AntibodySuscResult>> antibodySuscResultListFetcher = env -> {
+		String drdbVersion = env.getArgument("drdbVersion");
 		MutationSet<SARS2> mutations = DRDBDef.getMutationSetFromSource(env.getSource());
 		Boolean includeAll = env.getArgument("includeAll");
-		List<AntibodySuscResult> results = AntibodySuscResult.query(mutations);
+		List<AntibodySuscResult> results = AntibodySuscResult.query(drdbVersion, mutations);
 		if (!includeAll) {
 			results = results.stream()
 				.filter(r -> (
@@ -87,13 +89,13 @@ public class AntibodySuscResultDef {
 			.name("antibodies")
 			.description("Antibodies used in this treatment."))
 		.field(field -> field
-			.type(VirusStrainDef.oVirusStrain)
-			.name("controlVirusStrain")
-			.description("The control virus strain of the susceptibility testing."))
+			.type(VirusVariantDef.oVirusVariant)
+			.name("controlVirusVariant")
+			.description("The control virus varaint of the susceptibility testing."))
 		.field(field -> field
-			.type(VirusStrainDef.oVirusStrain)
-			.name("virusStrain")
-			.description("The experimental virus strain of the susceptibility testing."))
+			.type(VirusVariantDef.oVirusVariant)
+			.name("virusVariant")
+			.description("The experimental virus variant of the susceptibility testing."))
 		.field(field -> MutationSetDef.newMutationSet("SARS2", field, "hitMutations")
 			.description("Mutations matched the query mutation set."))
 		.field(field -> MutationSetDef.newMutationSet("SARS2", field, "missMutations")
@@ -133,7 +135,7 @@ public class AntibodySuscResultDef {
 		.field(field -> field
 			.type(GraphQLInt)
 			.name("ordinalNumber")
-			.description("Tell apart results when multiple ones are available for the same `refName-rxName-controlStrainName-strainName` combinations."))
+			.description("Tell apart results when multiple ones are available for the same `refName-rxName-controlVariantName-variantName` combinations."))
 		.field(field -> field
 			.type(GraphQLString)
 			.name("foldCmp")
@@ -141,11 +143,11 @@ public class AntibodySuscResultDef {
 		.field(field -> field
 			.type(GraphQLFloat)
 			.name("fold")
-			.description("Fold change: defined as the IC50 (IC80/IC90 if IC50 is not avaiable) number of experimental virus strain divided by the control virus strain."))
+			.description("Fold change: defined as the IC50 (IC80/IC90 if IC50 is not avaiable) number of experimental virus variant divided by the control virus variant."))
 		.field(field -> field
 			.type(GraphQLString)
 			.name("ineffective")
-			.description("When value is provided, the treatment has no effect on control strain or experimental strain."))
+			.description("When value is provided, the treatment has no effect on control variant or experimental variant."))
 		.field(field -> field
 			.type(GraphQLString)
 			.name("resistanceLevel")
