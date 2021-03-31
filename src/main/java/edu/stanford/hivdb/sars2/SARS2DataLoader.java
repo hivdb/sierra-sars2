@@ -66,9 +66,9 @@ import edu.stanford.hivdb.viruses.Virus;
 
 public class SARS2DataLoader<T extends Virus<T>> {
 
-	private static final Pattern HIV_MUTATION_PATTERN = Pattern.compile(
+	private static final Pattern SARS2_MUTATION_PATTERN = Pattern.compile(
 		"^\\s*" +
-		"(__ASI__)?((?i:RdRP|S))?[:_-]?" +
+		"(__ASI__)?((?i:nsp(?:1|2|3|4|5|6|7|8|9|10|13|14|15|16)|PLpro|PL|_?3CLpro|3CL|RdRP|S|Spike|E|M|N|ORF(?:3a|6|7a|7b|8|10)))?[:_-]?" +
 		"([AC-IK-NP-TV-Y])?" +
 		"(\\d{1,3})" +
 		"([AC-IK-NP-TV-Zid.*]+(?:[#_]?[AC-IK-NP-TV-Z.*]+)?|[id_#~-]|[iI]ns(?:ertion)?|[dD]el(?:etion)?)" +
@@ -462,7 +462,7 @@ public class SARS2DataLoader<T extends Virus<T>> {
 	
 	public Gene<T> extractMutationGene(String mutText) {
 		Gene<T> gene = null;
-		Matcher m = HIV_MUTATION_PATTERN.matcher(mutText);
+		Matcher m = SARS2_MUTATION_PATTERN.matcher(mutText);
 		if (m.matches()) {
 			try {
 				gene = getGene(MAIN_STRAIN + m.group(2).toUpperCase());
@@ -485,7 +485,7 @@ public class SARS2DataLoader<T extends Virus<T>> {
 	 */
 	
 	public Mutation<T> parseMutationString(Gene<T> defaultGene, String mutText) {
-		Matcher m = HIV_MUTATION_PATTERN.matcher(mutText);
+		Matcher m = SARS2_MUTATION_PATTERN.matcher(mutText);
 		Mutation<T> mut = null;
 		if (m.matches()) {
 			Gene<T> gene;
@@ -581,7 +581,7 @@ public class SARS2DataLoader<T extends Virus<T>> {
 	}
 
 	
-	public MutationSet<T>	newMutationSet(Gene<T> defaultGene, Collection<String> formattedMuts) {
+	public MutationSet<T> newMutationSet(Gene<T> defaultGene, Collection<String> formattedMuts) {
 		return MutationSet.parseString(
 			defaultGene, formattedMuts, (gene, mStr) -> parseMutationString(gene, mStr));
 	}

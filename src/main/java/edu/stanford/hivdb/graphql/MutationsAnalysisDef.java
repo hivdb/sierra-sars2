@@ -40,6 +40,7 @@ import edu.stanford.hivdb.mutations.MutationSet;
 import edu.stanford.hivdb.utilities.SimpleMemoizer;
 import edu.stanford.hivdb.utilities.ValidationResult;
 
+import static edu.stanford.hivdb.graphql.MutationSetDef.*;
 import static edu.stanford.hivdb.graphql.DrugResistanceDef.*;
 import static edu.stanford.hivdb.graphql.ValidationResultDef.*;
 import static edu.stanford.hivdb.graphql.MutationPrevalenceDef.*;
@@ -78,6 +79,19 @@ public class MutationsAnalysisDef {
 		Triple<Set<Gene<?>>, MutationSet<?>, String> data = env.getSource();
 		return data.getRight();
 	};
+	
+	private static <VirusT extends Virus<VirusT>> DataFetcher<List<Map<String, Object>>> makeMutAllGeneMutSetDataFetcher(VirusT virusIns) {
+		return env -> (
+			getMutationsByGeneFromSource(env)
+			.entrySet()
+			.stream()
+			.map(entry -> Map.of(
+				"gene", (Object) entry.getKey(),
+				"mutations", (Object) entry.getValue()
+			))
+			.collect(Collectors.toList())
+		);
+	}
 
 	private static <VirusT extends Virus<VirusT>> DataFetcher<List<GeneDR<VirusT>>> makeMutDRDataFetcher(VirusT virusIns) {
 		return env -> {
@@ -136,6 +150,10 @@ public class MutationsAnalysisDef {
 				makeMutValidationResultDataFetcher(virusIns)
 			)
 			.dataFetcher(
+				coordinates("MutationsAnalysis", "allGeneMutations"),
+				makeMutAllGeneMutSetDataFetcher(virusIns)
+			)
+			.dataFetcher(
 				coordinates("MutationsAnalysis", "drugResistance"),
 				makeMutDRDataFetcher(virusIns)
 			)
@@ -150,6 +168,20 @@ public class MutationsAnalysisDef {
 			.build()
 		);
 	};
+
+	public static SimpleMemoizer<GraphQLObjectType> oGeneMutations = new SimpleMemoizer<>(
+		virusName -> newObject()
+			.name("GeneMutations")
+			.field(field -> field
+				.type(new GraphQLTypeReference("Gene"))
+				.name("gene")
+				.description("Gene of the mutation set.")
+			)
+			.field(field -> newMutationSet(virusName, field, "mutations")
+				.description("All mutations of this gene.")
+			)
+			.build()
+	);
 	
 	public static SimpleMemoizer<GraphQLObjectType> oMutationsAnalysis = new SimpleMemoizer<>(
 		name -> {
@@ -163,6 +195,10 @@ public class MutationsAnalysisDef {
 				.type(new GraphQLList(oValidationResult))
 				.name("validationResults")
 				.description("Validation results for the mutation list."))
+			.field(field -> field
+				.type(new GraphQLList(oGeneMutations.get(name)))
+				.name("allGeneMutations")
+				.description("Mutations groupped by gene."))
 			.field(field -> field
 				.type(new GraphQLList(oDrugResistance.get(name)))
 				.name("drugResistance")
