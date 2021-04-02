@@ -200,71 +200,77 @@ public class SierraSchema {
 	
 	public static SimpleMemoizer<GraphQLObjectType> oRoot = new SimpleMemoizer<>(
 		name -> {
-			Supplier<graphql.schema.GraphQLObjectType.Builder> rootBuilder = () -> newObject()
-			.field(field -> field
-				.type(oDrugResistanceAlgorithm)
-				.name("currentVersion")
-				.description("Current HIVDB algorithm version."))
-			.field(field -> field
-				.type(oSierraVersion)
-				.name("currentProgramVersion")
-				.description("Current Sierra program version."))
-			.field(field -> field
-				.type(new GraphQLList(oSequenceAnalysis.get(name)))
-				.name("sequenceAnalysis")
-				.description("Analyze sequences and output results.")
-				.argument(arg -> arg
-					.name("sequences")
-					.type(new GraphQLList(iUnalignedSequence))
-					.description("Sequences to be analyzed.")))
-			.field(field -> field
-				.type(new GraphQLList(oSequenceReadsAnalysis.get(name)))
-				.name("sequenceReadsAnalysis")
-				.description("Analyze sequence reads and output results.")
-				.argument(newArgument()
-					.name("sequenceReads")
-					.type(new GraphQLList(iSequenceReads.get(name)))
-					.description("Sequence reads to be analyzed.")
-					.build()))
-			.field(field -> field
-				.type(oMutationsAnalysis.get(name))
-				.name("mutationsAnalysis")
-				.description("Analyze a list of mutations belong to a single sequence and output result.")
-				.argument(newArgument()
-					.name("mutations")
-					.type(new GraphQLList(GraphQLString))
-					.description("Mutations to be analyzed.")
-					.build()))
-			.field(field -> field
-				.type(new GraphQLList(oMutationsAnalysis.get(name)))
-				.name("patternAnalysis")
-				.description(
-					"Analyze mutation patterns (multiple lists of mutations) and output result.\n" +
-					"The output list will be in the same order as the input list.")
-				.argument(arg -> arg
-					.name("patterns")
-					.type(new GraphQLList(new GraphQLList(GraphQLString)))
-					.description("Lists of mutations to be analyzed.")
-				)
-				.argument(arg -> arg
-					.name("patternNames")
-					.type(new GraphQLList(GraphQLString))
-					.description("Optional name for each mutation set. Length must be same to patterns.")
-				))
-			.field(field -> field
-				.type(new GraphQLList(oGene.get(name)))
-				.name("genes")
-				.description("List all supported genes.")
-				.argument(arg -> arg
-					.name("names")
-					.type(new GraphQLList(enumGene.get(name)))
-					.description("Genes to be requested.")
-				))
-			.field(field -> field
-				.type(new GraphQLList(oMutationPrevalenceSubtype.get(name)))
-				.name("mutationPrevalenceSubtypes")
-				.description("List all supported virus subtypes by mutation prevalence.")
-			);
+			Virus<?> virusIns = Virus.getInstance(name);
+			Supplier<graphql.schema.GraphQLObjectType.Builder> rootBuilder = () -> {
+				graphql.schema.GraphQLObjectType.Builder builder = newObject()
+				.field(field -> field
+					.type(oDrugResistanceAlgorithm)
+					.name("currentVersion")
+					.description("Current HIVDB algorithm version."))
+				.field(field -> field
+					.type(oSierraVersion)
+					.name("currentProgramVersion")
+					.description("Current Sierra program version."))
+				.field(field -> field
+					.type(new GraphQLList(oSequenceAnalysis.get(name)))
+					.name("sequenceAnalysis")
+					.description("Analyze sequences and output results.")
+					.argument(arg -> arg
+						.name("sequences")
+						.type(new GraphQLList(iUnalignedSequence))
+						.description("Sequences to be analyzed.")))
+				.field(field -> field
+					.type(new GraphQLList(oSequenceReadsAnalysis.get(name)))
+					.name("sequenceReadsAnalysis")
+					.description("Analyze sequence reads and output results.")
+					.argument(newArgument()
+						.name("sequenceReads")
+						.type(new GraphQLList(iSequenceReads.get(name)))
+						.description("Sequence reads to be analyzed.")
+						.build()))
+				.field(field -> field
+					.type(oMutationsAnalysis.get(name))
+					.name("mutationsAnalysis")
+					.description("Analyze a list of mutations belong to a single sequence and output result.")
+					.argument(newArgument()
+						.name("mutations")
+						.type(new GraphQLList(GraphQLString))
+						.description("Mutations to be analyzed.")
+						.build()))
+				.field(field -> field
+					.type(new GraphQLList(oMutationsAnalysis.get(name)))
+					.name("patternAnalysis")
+					.description(
+						"Analyze mutation patterns (multiple lists of mutations) and output result.\n" +
+						"The output list will be in the same order as the input list.")
+					.argument(arg -> arg
+						.name("patterns")
+						.type(new GraphQLList(new GraphQLList(GraphQLString)))
+						.description("Lists of mutations to be analyzed.")
+					)
+					.argument(arg -> arg
+						.name("patternNames")
+						.type(new GraphQLList(GraphQLString))
+						.description("Optional name for each mutation set. Length must be same to patterns.")
+					))
+				.field(field -> field
+					.type(new GraphQLList(oGene.get(name)))
+					.name("genes")
+					.description("List all supported genes.")
+					.argument(arg -> arg
+						.name("names")
+						.type(new GraphQLList(enumGene.get(name)))
+						.description("Genes to be requested.")
+					))
+				.field(field -> field
+					.type(new GraphQLList(oMutationPrevalenceSubtype.get(name)))
+					.name("mutationPrevalenceSubtypes")
+					.description("List all supported virus subtypes by mutation prevalence.")
+				);
+				
+				virusIns.getVirusGraphQLExtension().extendObjectBuilder("Root", builder);
+				return builder;
+			};
 			
 			return rootBuilder.get()
 				.name("Root")

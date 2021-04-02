@@ -1,4 +1,4 @@
-package edu.stanford.hivdb.sars2;
+package edu.stanford.hivdb.sars2.drdb;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -10,7 +10,10 @@ import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
+import java.util.TreeSet;
 import java.util.function.Function;
+import java.util.function.Predicate;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
@@ -18,8 +21,10 @@ import org.apache.commons.collections4.map.LRUMap;
 import org.apache.commons.lang3.tuple.Pair;
 
 import edu.stanford.hivdb.mutations.AAMutation;
+import edu.stanford.hivdb.mutations.GenePosition;
 import edu.stanford.hivdb.mutations.Mutation;
 import edu.stanford.hivdb.mutations.MutationSet;
+import edu.stanford.hivdb.sars2.SARS2;
 import edu.stanford.hivdb.viruses.Gene;
 
 public class DRDB {
@@ -46,8 +51,21 @@ public class DRDB {
 			DRDB drdb = DRDB.getInstance(version);
 			singletons.put(version, Collections.unmodifiableMap(getInstances.apply(drdb)));
 		}
-		
 	}
+	
+	/**
+	 * Predicate if input mutation is a key mutation
+	 * 
+	 * @param mutation
+	 * @return
+	 */
+	public Predicate<Mutation<SARS2>> isKeyMutation = mutation -> {
+		return queryAllKeyMutations()
+			.stream()
+			.anyMatch(
+				mutSet -> mutSet.hasSharedAAMutation(mutation)
+			);
+	};
 	
 	public static DRDB getInstance(String version) {
 		String resourcePath = String.format("%s/%s.db", COVID_DRDB_RESURL_PREFIX, version);
@@ -60,6 +78,7 @@ public class DRDB {
 	
 	private final SARS2 virusIns;
 	private final Connection conn;
+	private transient Set<MutationSet<SARS2>> allKeyMutations;
 	
 	private DRDB(String resourcePath) {
 		virusIns = SARS2.getInstance();
@@ -132,41 +151,25 @@ public class DRDB {
 		String where,
 		Function<ResultSet, T> processor
 	) {
-		Map<Gene<SARS2>, MutationSet<SARS2>> mutsByGene = mutations.groupByGene();
-		String genePosQuery = (
-			mutsByGene.entrySet()
-			.stream()
-			//.filter(e -> e.getValue().size() > 0)
-			.filter(e -> (
-				// resistance data are currently only available for Spike gene
-				e.getKey() == virusIns.getGene("SARS2S") &&
-				e.getValue().size() > 0
-			))
-			.map(e -> String.format(
-				"(M.gene = '%s' AND M.position IN (%s))",
-				e.getKey().getAbstractGene().replace("'", "''"),
-				e.getValue()
-				.getPositions()
-				.stream()
-				.map(gpos -> String.valueOf(gpos.getPosition()))
-				.collect(Collectors.joining(","))
-			))
-			.collect(Collectors.joining(" OR "))
-		);
-		if (genePosQuery.length() == 0) {
-			genePosQuery = "false";
+		List<String> mutQueryList = new ArrayList<>();
+		for (GenePosition<SARS2> genePos : mutations.getPositions()) {
+			mutQueryList.add(String.format(
+				"(M.gene = '%s' AND M.position = '%d')",
+				genePos.getAbstractGene(),
+				genePos.getPosition()
+			));
 		}
+		String mutQuery = mutQueryList.size() > 0 ? String.join(" OR ", mutQueryList) : " false ";
+		
 		return queryAll(
 			"SELECT " +
 			columns +
-			// "  ref_name, rx_name, variant_name, fold_cmp, " +
-			// "  fold, cumulative_count, date_added " +
 			"  FROM susc_results S " +
 			joins +
 			"  WHERE EXISTS(" +
 			"    SELECT 1 FROM variant_mutations M " +
 			"    WHERE S.variant_name = M.variant_name AND (" +
-			genePosQuery +
+			mutQuery +
 			"  )) AND " +
 			// exclude results that are ineffective to control
 			"  (ineffective == 'experimental' OR ineffective IS NULL) AND " +
@@ -226,13 +229,47 @@ public class DRDB {
 		);
 	}
 	
+	public Set<MutationSet<SARS2>> queryAllKeyMutations() {
+		if (allKeyMutations == null) {
+			allKeyMutations = Collections.unmodifiableSet(new TreeSet<>(queryAll(
+				"SELECT gene, position, position_end, amino_acid FROM key_mutations",
+				rs -> {
+					try {
+						Gene<SARS2> gene = virusIns.getMainStrain().getGene(rs.getString("gene"));
+						int position = rs.getInt("position");
+						int posEnd = rs.getInt("position_end");
+						char[] aminoAcid = rs.getString("amino_acid")
+							.replaceAll("^del$", "-")
+							.replaceAll("^ins$", "_")
+							.replaceAll("^stop$", "*")
+							.toCharArray();
+						if (posEnd == 0) {
+							posEnd = position;
+						}
+						List<Mutation<SARS2>> mutations = new ArrayList<>();
+						for (int pos = position; pos <= posEnd; pos ++) {
+							mutations.add(new AAMutation<>(gene, pos, aminoAcid));
+						}
+						return new MutationSet<>(mutations);
+
+					}
+					catch (SQLException e) {
+						throw new RuntimeException(e);
+					}
+				}
+			)));
+		}
+		return allKeyMutations;
+	}
+	
 	public List<Map<String, Object>> queryAllVirusVariants() {
 		List<Map<String, Object>> variants = queryAll(
-			"SELECT variant_name FROM virus_variants",
+			"SELECT variant_name, display_name FROM virus_variants",
 			rs -> {
 				try {
 					Map<String, Object> result = new LinkedHashMap<>();
 					result.put("variantName", rs.getString("variant_name"));
+					result.put("displayName", rs.getString("display_name"));
 					return result;
 				}
 				catch(SQLException e) {
@@ -282,7 +319,7 @@ public class DRDB {
 	
 	public List<Map<String, Object>> queryAllAntibodies() {
 		List<Map<String, Object>> antibodies = queryAll(
-			"SELECT ab_name, pdb_id, abbreviation_name, availability " +
+			"SELECT ab_name, pdb_id, abbreviation_name, availability, priority, visibility " +
 			"FROM antibodies",
 			rs -> {
 				try {
@@ -291,6 +328,8 @@ public class DRDB {
 					result.put("pdbID", rs.getString("pdb_id"));
 					result.put("abbrName", rs.getString("abbreviation_name"));
 					result.put("availability", rs.getString("availability"));
+					result.put("priority", rs.getInt("priority"));
+					result.put("visibility", rs.getInt("visibility") == 1);
 					return result;
 				}
 				catch (SQLException e) {
@@ -392,7 +431,7 @@ public class DRDB {
 					result.put("refDOI", rs.getString("doi"));
 					result.put("refURL", rs.getString("url"));
 					result.put("rxName", rs.getString("rx_name"));
-					result.put("abNames", List.of(rs.getString("ab_names").split(QUOTED_LIST_JOIN_UNIQ)));
+					result.put("abNames", Set.of(rs.getString("ab_names").split(QUOTED_LIST_JOIN_UNIQ)));
 					result.put("controlVariantName", rs.getString("control_variant_name"));
 					result.put("variantName", rs.getString("variant_name"));
 					result.put("assay", rs.getString("assay"));
@@ -414,8 +453,8 @@ public class DRDB {
 		return results;
 	}
 
-	public List<Map<String, ?>> querySuscResultsForConvPlasma(MutationSet<SARS2> mutations) {
-		List<Map<String, ?>> results = querySuscResults(
+	public List<Map<String, Object>> querySuscResultsForConvPlasma(MutationSet<SARS2> mutations) {
+		List<Map<String, Object>> results = querySuscResults(
 			mutations,
 			
 			/* columns = */
@@ -425,9 +464,9 @@ public class DRDB {
 			"S.rx_name, " +
 			"S.control_variant_name, " +
 			"S.variant_name, " +
+			"ordinal_number, " +
 			"assay, " +
 			"section, " +
-			"ordinal_number, " +
 			"fold_cmp, " +
 			"fold, " +
 			"S.ineffective, " +

@@ -1,4 +1,4 @@
-package edu.stanford.hivdb.sars2;
+package edu.stanford.hivdb.sars2.drdb;
 
 import java.util.Collection;
 import java.util.Collections;
@@ -44,6 +44,8 @@ public class Antibody {
 	private final String pdbID;
 	private final String abbrName;
 	private final String availability;
+	private final Integer priority;
+	private final Boolean visibility;
 	private final String abTarget;
 	private final String abClass;
 	private final List<String> synonyms;
@@ -53,6 +55,8 @@ public class Antibody {
 		pdbID = (String) abData.get("pdbID");
 		abbrName = (String) abData.get("abbrName");
 		availability = (String) abData.get("availability");
+		priority = (Integer) abData.get("priority");
+		visibility = (Boolean) abData.get("visibility");
 		Map<?, ?> targetData = (Map<?, ?>) abData.get("target");
 		abTarget = (String) targetData.get("abTarget");
 		abClass = (String) targetData.get("abClass");
@@ -70,6 +74,10 @@ public class Antibody {
 	
 	public String getPDB() { return pdbID; }
 	public String getAvailability() { return availability; }
+	public Integer getPriority() { return priority; }
+	public Boolean getVisibility() { return visibility; }
+	
+	public Boolean isPhaseIII() { return "Phase 3".equals(availability); }
 
 	public String getTarget() { return abTarget; }
 	public String getAntibodyClass() { return abClass; }

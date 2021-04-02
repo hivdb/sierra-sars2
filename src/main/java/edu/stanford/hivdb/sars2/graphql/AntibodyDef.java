@@ -55,6 +55,14 @@ public class AntibodyDef {
 			.name("availability")
 			.description("Antibody availability."))
 		.field(field -> field
+			.type(GraphQLInt)
+			.name("priority")
+			.description("Antibody sorting order."))
+		.field(field -> field
+			.type(GraphQLBoolean)
+			.name("visibility")
+			.description("Antibody visibility for summary tables."))
+		.field(field -> field
 			.type(GraphQLString)
 			.name("target")
 			.description("Antibody target by structure."))

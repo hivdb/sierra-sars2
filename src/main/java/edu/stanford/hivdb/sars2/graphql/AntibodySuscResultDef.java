@@ -28,14 +28,16 @@ import java.util.stream.Collectors;
 import edu.stanford.hivdb.graphql.MutationDef;
 import edu.stanford.hivdb.graphql.MutationSetDef;
 import edu.stanford.hivdb.mutations.MutationSet;
-import edu.stanford.hivdb.sars2.AntibodySuscResult;
 import edu.stanford.hivdb.sars2.SARS2;
-import edu.stanford.hivdb.sars2.SuscSummary;
-import edu.stanford.hivdb.sars2.SuscSummary.SuscSummaryByMutationSet;
+import edu.stanford.hivdb.sars2.drdb.AntibodySuscResult;
+import edu.stanford.hivdb.sars2.drdb.SuscSummary;
+import edu.stanford.hivdb.sars2.drdb.SuscSummaryByKeyMutations;
+
+import static edu.stanford.hivdb.graphql.DescriptiveStatisticsDef.*;
 
 public class AntibodySuscResultDef {
 
-	public static DataFetcher<List<SuscSummaryByMutationSet>> antibodySuscSummaryFetcher = env -> {
+	public static DataFetcher<List<SuscSummaryByKeyMutations>> antibodySuscSummaryFetcher = env -> {
 		String drdbVersion = env.getArgument("drdbVersion");
 		MutationSet<SARS2> mutations = DRDBDef.getMutationSetFromSource(env.getSource());
 		return SuscSummary.getAntibodySuscSummaryItems(drdbVersion, mutations);
@@ -51,25 +53,13 @@ public class AntibodySuscResultDef {
 				.filter(r -> (
 					r.getAntibodies().stream().allMatch(
 						ab -> (
-							ab.getAvailability() != null ||
+							ab.getVisibility() ||
 							ab.getAntibodyClass() != null		
 						)
 					)
 				))
 				.collect(Collectors.toList());
 		}
-		results.sort((a, b) -> {
-			int aHit = a.getNumHitMutations();
-			int bHit = b.getNumHitMutations();
-			if (aHit == bHit) {
-				int aMiss = a.getNumMissMutations();
-				int bMiss = b.getNumMissMutations();
-				return aMiss - bMiss;
-			}
-			else {
-				return bHit - aHit;  // descending order
-			}
-		});
 		return results;
 	};
 
@@ -98,6 +88,8 @@ public class AntibodySuscResultDef {
 			.description("The experimental virus variant of the susceptibility testing."))
 		.field(field -> MutationSetDef.newMutationSet("SARS2", field, "hitMutations")
 			.description("Mutations matched the query mutation set."))
+		.field(field -> MutationSetDef.newMutationSet("SARS2", field, "hitKeyMutations")
+			.description("Key mutations matched the query mutation set."))
 		.field(field -> MutationSetDef.newMutationSet("SARS2", field, "missMutations")
 				.description("Mutations mismatched the query mutation set."))
 		.field(field -> field
@@ -172,6 +164,11 @@ public class AntibodySuscResultDef {
 			.type(GraphQLInt)
 			.description("Total number of experiments in this group."))
 		.field(field -> field
+			.name("cumulativeFold")
+			.type(oDescriptiveStatistics)
+			.description("Descriptive statistics of cumulative fold changes.")
+		)
+		.field(field -> field
 			.name("items")
 			.type(new GraphQLList(oAntibodySuscResult))
 			.description("Susc results"))
@@ -185,8 +182,17 @@ public class AntibodySuscResultDef {
 			.type(new GraphQLList(AntibodyDef.oAntibody))
 			.description("Group antibody/antibody combination"))
 		.field(field -> field
+			.name("cumulativeCount")
+			.type(GraphQLInt)
+			.description("Total number of experiments in this group."))
+		.field(field -> field
+			.name("cumulativeFold")
+			.type(oDescriptiveStatistics)
+			.description("Descriptive statistics of cumulative fold changes.")
+		)
+		.field(field -> field
 			.name("items")
-			.type(new GraphQLList(oSuscSummaryByRLevel))
+			.type(new GraphQLList(oAntibodySuscResult))
 			.description("Susc summary grouped by resistance level"))
 		.build();
 	
@@ -198,8 +204,17 @@ public class AntibodySuscResultDef {
 			.type(GraphQLString)
 			.description("Group antibody class"))
 		.field(field -> field
+			.name("cumulativeCount")
+			.type(GraphQLInt)
+			.description("Total number of experiments in this group."))
+		.field(field -> field
+			.name("cumulativeFold")
+			.type(oDescriptiveStatistics)
+			.description("Descriptive statistics of cumulative fold changes.")
+		)
+		.field(field -> field
 			.name("items")
-			.type(new GraphQLList(oSuscSummaryByRLevel))
+			.type(new GraphQLList(oAntibodySuscResult))
 			.description("Susc summary grouped by resistance level"))
 		.build();
 	
@@ -207,11 +222,10 @@ public class AntibodySuscResultDef {
 		.name("SuscSummaryByMutationSet")
 		.description("Susceptibility summary grouped by mutations")
 		.field(field -> MutationSetDef.newMutationSet("SARS2", field, "mutations"))
-		.field(field -> MutationSetDef.newMutationSet("SARS2", field, "hitMutations"))
 		.field(field -> field
-			.type(new GraphQLList(MutationDef.oGenePosition.get("SARS2")))
-			.name("hitPositions")
-			.description("Positions matched the query mutation set."))
+			.type(new GraphQLList(VirusVariantDef.oVirusVariant))
+			.name("hitVariants")
+			.description("Virus variants matched the query mutation set."))
 		.field(field -> field
 			.name("itemsByAntibody")
 			.type(new GraphQLList(oSuscSummaryByAntibody))

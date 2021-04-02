@@ -1,12 +1,18 @@
 package edu.stanford.hivdb.sars2.graphql;
 
 import static graphql.Scalars.*;
+
+import edu.stanford.hivdb.sars2.drdb.Antibody;
 import edu.stanford.hivdb.viruses.VirusGraphQLExtension;
+import graphql.schema.DataFetcher;
 import graphql.schema.GraphQLCodeRegistry;
 import graphql.schema.GraphQLList;
 import graphql.schema.GraphQLNonNull;
 import graphql.schema.GraphQLObjectType;
 import static graphql.schema.FieldCoordinates.coordinates;
+
+import java.util.Collection;
+import java.util.stream.Collectors;
 
 public class SARS2GraphQLExtension implements VirusGraphQLExtension {
 	
@@ -15,6 +21,20 @@ public class SARS2GraphQLExtension implements VirusGraphQLExtension {
 	public static SARS2GraphQLExtension getInstance() { return singleton; }
 	
 	private SARS2GraphQLExtension() {}
+
+	private static DataFetcher<Collection<Antibody>> antibodiesDataFetcher = env -> {
+		String drdbVersion = env.getArgument("drdbVersion");
+		Boolean fetchAll = env.getArgument("fetchAll");
+		Collection<Antibody> antibodies = Antibody.getAllInstances(drdbVersion);
+		if (!fetchAll) {
+			antibodies = (
+				antibodies.stream()
+				.filter(ab -> ab.getVisibility())
+				.collect(Collectors.toList())
+			);
+		}
+		return antibodies;
+	};
 
 	@Override
 	public GraphQLCodeRegistry getExtendedCodonRegistry() {
@@ -77,12 +97,23 @@ public class SARS2GraphQLExtension implements VirusGraphQLExtension {
 		)
 		.dataFetchers(AntibodyDef.antibodyCodeRegistry)
 		.dataFetchers(ArticleDef.articleCodeRegistry)
+		.dataFetcher(
+			coordinates("Root", "antibodies"),
+			antibodiesDataFetcher
+		)
+		.dataFetcher(
+			coordinates("Viewer", "antibodies"),
+			antibodiesDataFetcher
+		)
 		.build();
 	}
 	
 	@Override
 	public GraphQLObjectType.Builder extendObjectBuilder(String objectName, GraphQLObjectType.Builder builder) {
 		switch (objectName) {
+			case "Root":
+				builder = addAntibodiesField(builder);
+				break;
 			case "SequenceAnalysis":
 				builder = addPangolinField(builder);
 				builder = addSuscResultsForAntibodiesField(builder);
@@ -101,6 +132,29 @@ public class SARS2GraphQLExtension implements VirusGraphQLExtension {
 				throw new UnsupportedOperationException();
 		}
 		return builder;
+	}
+	
+	private GraphQLObjectType.Builder addAntibodiesField(GraphQLObjectType.Builder builder) {
+		return builder
+			.field(field -> field
+				.type(new GraphQLList(AntibodyDef.oAntibody))
+				.name("antibodies")
+				.argument(arg -> arg
+					.name("fetchAll")
+					.type(GraphQLBoolean)
+					.defaultValue(false)
+					.description("Also fetch antibodies that are not available in trial/treatment.")
+				)
+				.argument(arg -> arg
+					.type(new GraphQLNonNull(GraphQLString))
+					.name("drdbVersion")
+					.description(
+						"The version of DRDB to be used by this query. A full list of DRDB versions " +
+						"can be found here: https://github.com/hivdb/chiro-cms/tree/master/downloads/covid-drdb"
+					)
+				)
+				.description("List of all antibodies.")
+			);
 	}
 	
 	private GraphQLObjectType.Builder addPangolinField(GraphQLObjectType.Builder builder) {

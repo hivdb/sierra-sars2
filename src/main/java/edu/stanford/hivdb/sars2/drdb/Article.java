@@ -1,4 +1,4 @@
-package edu.stanford.hivdb.sars2;
+package edu.stanford.hivdb.sars2.drdb;
 
 import java.util.Collection;
 import java.util.LinkedHashMap;

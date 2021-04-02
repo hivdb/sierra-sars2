@@ -28,8 +28,8 @@ import java.util.Map;
 import org.apache.commons.lang3.tuple.Triple;
 
 import edu.stanford.hivdb.mutations.MutationSet;
-import edu.stanford.hivdb.sars2.DRDB;
 import edu.stanford.hivdb.sars2.SARS2;
+import edu.stanford.hivdb.sars2.drdb.DRDB;
 import edu.stanford.hivdb.seqreads.SequenceReads;
 import edu.stanford.hivdb.sequences.AlignedSequence;
 
@@ -67,7 +67,7 @@ public class DRDBDef {
 		return drdb.querySuscResultsForAntibodies(mutations);
 	};
 	
-	public static DataFetcher<List<Map<String, ?>>> suscResultsForConvPlasmaDataFetcher = env -> {
+	public static DataFetcher<List<Map<String, Object>>> suscResultsForConvPlasmaDataFetcher = env -> {
 		String drdbVersion = env.getArgument("drdbVersion");
 		DRDB drdb = DRDB.getInstance(drdbVersion);
 		MutationSet<SARS2> mutations = getMutationSetFromSource(env.getSource());

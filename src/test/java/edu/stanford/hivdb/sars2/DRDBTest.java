@@ -9,10 +9,14 @@ import java.util.Set;
 import org.junit.Test;
 
 import edu.stanford.hivdb.mutations.MutationSet;
+import edu.stanford.hivdb.sars2.drdb.Antibody;
+import edu.stanford.hivdb.sars2.drdb.Article;
+import edu.stanford.hivdb.sars2.drdb.DRDB;
+import edu.stanford.hivdb.sars2.drdb.VirusVariant;
 
 public class DRDBTest {
 
-	private final String drdbVer = "20210325";
+	private final String drdbVer = "20210331";
 	private final SARS2 virusIns = SARS2.getInstance();
 	private final DRDB drdbObj = DRDB.getInstance(drdbVer);
 
@@ -81,8 +85,16 @@ public class DRDBTest {
 	}
 
 	@Test
-	public void testVirusStrains() {
+	public void testVirusVariant() {
 		assertTrue(VirusVariant.getAllInstances(drdbVer).size() >= 55);
+		VirusVariant variant = VirusVariant.getInstance(drdbVer, "B.1.1.7 Spike");
+		assertEquals("B.1.1.7 Spike", variant.getName());
+		assertEquals("B.1.1.7", variant.getDisplayName());
+	}
+	
+	@Test
+	public void testQueryAllKeyMutations() {
+		assertTrue(drdbObj.queryAllKeyMutations().size() >= 17);
 	}
 
 }

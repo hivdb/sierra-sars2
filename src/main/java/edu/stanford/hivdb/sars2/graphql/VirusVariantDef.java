@@ -33,6 +33,10 @@ public class VirusVariantDef {
 			.type(GraphQLString)
 			.name("name")
 			.description("Virus variant name."))
+		.field(field -> field
+			.type(GraphQLString)
+			.name("displayName")
+			.description("Virus variant display name."))
 		.field(field -> MutationSetDef.newMutationSet(
 			"SARS2", field, "mutations"
 		).description("Mutations of this virus variant."))
