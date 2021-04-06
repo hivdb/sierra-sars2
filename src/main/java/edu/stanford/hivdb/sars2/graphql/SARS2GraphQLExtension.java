@@ -48,6 +48,18 @@ public class SARS2GraphQLExtension implements VirusGraphQLExtension {
 			PangolinDef.pangolinDataFetcher
 		)
 		.dataFetcher(
+			coordinates("SequenceAnalysis", "mutationComments"),
+			SARS2MutationCommentDef.boundMutationCommentsFetcher
+		)
+		.dataFetcher(
+			coordinates("MutationsAnalysis", "mutationComments"),
+			SARS2MutationCommentDef.boundMutationCommentsFetcher
+		)
+		.dataFetcher(
+			coordinates("SequenceReadsAnalysis", "mutationComments"),
+			SARS2MutationCommentDef.boundMutationCommentsFetcher
+		)
+		.dataFetcher(
 			coordinates("SequenceAnalysis", "suscResultsForAntibodies"),
 			AntibodySuscResultDef.antibodySuscResultListFetcher
 		)
@@ -117,15 +129,18 @@ public class SARS2GraphQLExtension implements VirusGraphQLExtension {
 			case "SequenceAnalysis":
 				builder = addPangolinField(builder);
 				builder = addSuscResultsForAntibodiesField(builder);
+				builder = addMutationCommentsField(builder);
 				builder = addDRDBFields(builder);
 				break;
 			case "SequenceReadsAnalysis":
 				builder = addPangolinField(builder);
 				builder = addSuscResultsForAntibodiesField(builder);
+				builder = addMutationCommentsField(builder);
 				builder = addDRDBFields(builder);
 				break;
 			case "MutationsAnalysis":
 				builder = addSuscResultsForAntibodiesField(builder);
+				builder = addMutationCommentsField(builder);
 				builder = addDRDBFields(builder);
 				break;
 			default:
@@ -163,6 +178,23 @@ public class SARS2GraphQLExtension implements VirusGraphQLExtension {
 				.type(PangolinDef.oPangolin)
 				.name("pangolin")
 				.description("Pangolin lineage result for this sequence.")
+			);
+	}
+	
+	private GraphQLObjectType.Builder addMutationCommentsField(GraphQLObjectType.Builder builder) {
+		return builder
+			.field(field -> field
+				.type(new GraphQLList(SARS2MutationCommentDef.oSARS2MutComment))
+				.name("mutationComments")
+				.argument(arg -> arg
+					.type(new GraphQLNonNull(GraphQLString))
+					.name("cmtVersion")
+					.description(
+						"The version of mutation comments to be used by this query. A full list of `cmtVersion`s " +
+						"can be found here: https://github.com/hivdb/chiro-cms/tree/master/downloads/mutation-comments"
+					)
+				)
+				.description("SARS-CoV-2 Mutation comments.")
 			);
 	}
 
