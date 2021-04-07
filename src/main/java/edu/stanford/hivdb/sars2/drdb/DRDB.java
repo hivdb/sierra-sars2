@@ -30,8 +30,6 @@ import edu.stanford.hivdb.viruses.Gene;
 public class DRDB {
 	
 	private static final int MAX_ENTRIES = 20;
-	private static final double PARTIAL_RESIST_FOLD = 3;
-	private static final double RESIST_FOLD = 10;
 	private static final String LIST_JOIN_UNIQ = "$#\u0008#$";
 	private static final String QUOTED_LIST_JOIN_UNIQ = Pattern.quote(LIST_JOIN_UNIQ);
 	private static final String COVID_DRDB_RESURL_PREFIX = "https://s3-us-west-2.amazonaws.com/cms.hivdb.org/chiro-prod/downloads/covid-drdb";
@@ -176,36 +174,6 @@ public class DRDB {
 			where,
 			processor
 		);
-	}
-	
-	private String calcResistanceLevel(String foldCmp, Double fold, String fallbackLevel) {
-		if (fallbackLevel == null) {
-			if (foldCmp.equals("<") || foldCmp.equals("~") || foldCmp.equals("=")) {
-				if (fold <= PARTIAL_RESIST_FOLD) {
-					return "susceptible";
-				}
-				else if (fold <= RESIST_FOLD) {
-					return "partial-resistance";
-				}
-				else {
-					return "resistance";
-				}
-			}
-			else {  // foldCmp.equals(">")
-				if (fold > RESIST_FOLD) {
-					return "resistance";
-				}
-				else if (fold > PARTIAL_RESIST_FOLD) {
-					return "gt-partial-resistance";
-				}
-				else {
-					return "gt-susceptible";
-				}
-			}
-		}
-		else {
-			return fallbackLevel;
-		}
 	}
 	
 	public List<Map<String, Object>> queryAllArticles() {
@@ -441,7 +409,6 @@ public class DRDB {
 					result.put("fold", fold);
 					result.put("ineffective", rs.getString("ineffective"));
 					result.put("fbResistanceLevel", rs.getString("resistance_level"));
-					// result.put("resistanceLevel", calcResistanceLevel(foldCmp, fold, fbLevel));
 					result.put("cumulativeCount", rs.getInt("cumulative_count"));
 					return result;
 				}
@@ -472,13 +439,8 @@ public class DRDB {
 			"S.ineffective, " +
 			"resistance_level, " +
 			"cumulative_count, " +
-			"RXCP.cumulative_group, " +
-			
-			"(SELECT GROUP_CONCAT(SMUT.gene || ':' || SMUT.position || SMUT.amino_acid, '" + LIST_JOIN_UNIQ + "') " +
-			"  FROM variant_mutations SMUT" +
-			"  WHERE S.variant_name = SMUT.variant_name" +
-			"  ORDER BY SMUT.gene, SMUT.position, SMUT.amino_acid" +
-			") AS mutations",
+			"RXCP.infection, " +
+			"RXCP.cumulative_group ",
 			
 			/* joins = */
 			"JOIN rx_conv_plasma RXCP ON S.ref_name = RXCP.ref_name AND S.rx_name = RXCP.rx_name " +
@@ -492,22 +454,21 @@ public class DRDB {
 					Map<String, Object> result = new LinkedHashMap<>();
 					String foldCmp = rs.getString("fold_cmp");
 					Double fold = rs.getDouble("fold");
-					String fbLevel = rs.getString("resistance_level");
 					result.put("refName", rs.getString("ref_name"));
 					result.put("refDOI", rs.getString("doi"));
 					result.put("refURL", rs.getString("url"));
 					result.put("rxName", rs.getString("rx_name"));
 					result.put("controlVariantName", rs.getString("control_variant_name"));
 					result.put("variantName", rs.getString("variant_name"));
-					result.put("mutations", rs.getString("mutations").split(QUOTED_LIST_JOIN_UNIQ));
 					result.put("assay", rs.getString("assay"));
 					result.put("section", rs.getString("section"));
-					result.put("ordinalNumber", rs.getString("ordinal_number"));
+					result.put("ordinalNumber", rs.getInt("ordinal_number"));
 					result.put("foldCmp", foldCmp);
 					result.put("fold", fold);
 					result.put("ineffective", rs.getString("ineffective"));
-					result.put("resistanceLevel", calcResistanceLevel(foldCmp, fold, fbLevel));
-					result.put("cumulativeCount", rs.getString("cumulative_count"));
+					result.put("fbResistanceLevel", rs.getString("resistance_level"));
+					result.put("cumulativeCount", rs.getInt("cumulative_count"));
+					result.put("infection", rs.getString("infection"));
 					result.put("cumulativeGroup", rs.getString("cumulative_group"));
 					return result;
 				}
@@ -519,8 +480,8 @@ public class DRDB {
 		return results;
 	}
 
-	public List<Map<String, ?>> querySuscResultsForImmuPlasma(MutationSet<SARS2> mutations) {
-		List<Map<String, ?>> results = querySuscResults(
+	public List<Map<String, Object>> querySuscResultsForImmuPlasma(MutationSet<SARS2> mutations) {
+		List<Map<String, Object>> results = querySuscResults(
 			mutations,
 			
 			/* columns = */
@@ -539,13 +500,7 @@ public class DRDB {
 			"resistance_level, " +
 			"cumulative_count, " +
 			"RXIP.cumulative_group, " +
-			"RXIP.vaccine_name, " +
-			
-			"(SELECT GROUP_CONCAT(SMUT.gene || ':' || SMUT.position || SMUT.amino_acid, '" + LIST_JOIN_UNIQ + "') " +
-			"  FROM variant_mutations SMUT" +
-			"  WHERE S.variant_name = SMUT.variant_name" +
-			"  ORDER BY SMUT.gene, SMUT.position, SMUT.amino_acid" +
-			") AS mutations",
+			"RXIP.vaccine_name ",
 			
 			/* joins = */
 			"JOIN rx_immu_plasma RXIP ON S.ref_name = RXIP.ref_name AND S.rx_name = RXIP.rx_name " +
@@ -559,7 +514,6 @@ public class DRDB {
 					Map<String, Object> result = new LinkedHashMap<>();
 					String foldCmp = rs.getString("fold_cmp");
 					Double fold = rs.getDouble("fold");
-					String fbLevel = rs.getString("resistance_level");
 					result.put("refName", rs.getString("ref_name"));
 					result.put("refDOI", rs.getString("doi"));
 					result.put("refURL", rs.getString("url"));
@@ -567,15 +521,14 @@ public class DRDB {
 					result.put("vaccineName", rs.getString("vaccine_name"));
 					result.put("controlVariantName", rs.getString("control_variant_name"));
 					result.put("variantName", rs.getString("variant_name"));
-					result.put("mutations", rs.getString("mutations").split(QUOTED_LIST_JOIN_UNIQ));
 					result.put("assay", rs.getString("assay"));
 					result.put("section", rs.getString("section"));
-					result.put("ordinalNumber", rs.getString("ordinal_number"));
+					result.put("ordinalNumber", rs.getInt("ordinal_number"));
 					result.put("foldCmp", foldCmp);
 					result.put("fold", fold);
 					result.put("ineffective", rs.getString("ineffective"));
-					result.put("resistanceLevel", calcResistanceLevel(foldCmp, fold, fbLevel));
-					result.put("cumulativeCount", rs.getString("cumulative_count"));
+					result.put("fbResistanceLevel", rs.getString("resistance_level"));
+					result.put("cumulativeCount", rs.getInt("cumulative_count"));
 					result.put("cumulativeGroup", rs.getString("cumulative_group"));
 					return result;
 				}

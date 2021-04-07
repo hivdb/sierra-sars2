@@ -60,52 +60,40 @@ public class SARS2GraphQLExtension implements VirusGraphQLExtension {
 			SARS2MutationCommentDef.boundMutationCommentsFetcher
 		)
 		.dataFetcher(
-			coordinates("SequenceAnalysis", "suscResultsForAntibodies"),
-			AntibodySuscResultDef.antibodySuscResultListFetcher
-		)
-		.dataFetcher(
 			coordinates("SequenceAnalysis", "antibodySuscSummary"),
-			AntibodySuscResultDef.antibodySuscSummaryFetcher
-		)
-		.dataFetcher(
-			coordinates("SequenceReadsAnalysis", "suscResultsForAntibodies"),
-			AntibodySuscResultDef.antibodySuscResultListFetcher
+			SuscResultDef.antibodySuscSummaryFetcher
 		)
 		.dataFetcher(
 			coordinates("SequenceReadsAnalysis", "antibodySuscSummary"),
-			AntibodySuscResultDef.antibodySuscSummaryFetcher
-		)
-		.dataFetcher(
-			coordinates("MutationsAnalysis", "suscResultsForAntibodies"),
-			AntibodySuscResultDef.antibodySuscResultListFetcher
+			SuscResultDef.antibodySuscSummaryFetcher
 		)
 		.dataFetcher(
 			coordinates("MutationsAnalysis", "antibodySuscSummary"),
-			AntibodySuscResultDef.antibodySuscSummaryFetcher
+			SuscResultDef.antibodySuscSummaryFetcher
 		)
 		.dataFetcher(
-			coordinates("SequenceAnalysis", "suscResultsForConvPlasma"),
-			DRDBDef.suscResultsForConvPlasmaDataFetcher
+			coordinates("SequenceAnalysis", "convPlasmaSuscSummary"),
+			SuscResultDef.convPlasmaSuscSummaryFetcher
 		)
 		.dataFetcher(
-			coordinates("SequenceReadsAnalysis", "suscResultsForConvPlasma"),
-			DRDBDef.suscResultsForConvPlasmaDataFetcher
+			coordinates("SequenceReadsAnalysis", "convPlasmaSuscSummary"),
+			SuscResultDef.convPlasmaSuscSummaryFetcher
 		)
 		.dataFetcher(
-			coordinates("MutationsAnalysis", "suscResultsForConvPlasma"),
-			DRDBDef.suscResultsForConvPlasmaDataFetcher
+			coordinates("MutationsAnalysis", "convPlasmaSuscSummary"),
+			SuscResultDef.convPlasmaSuscSummaryFetcher
 		)
 		.dataFetcher(
-			coordinates("SequenceAnalysis", "suscResultsForImmuPlasma"),
-			DRDBDef.suscResultsForImmuPlasmaDataFetcher
+			coordinates("SequenceAnalysis", "vaccPlasmaSuscSummary"),
+			SuscResultDef.vaccPlasmaSuscSummaryFetcher
 		)
 		.dataFetcher(
-			coordinates("SequenceReadsAnalysis", "suscResultsForImmuPlasma"),
-			DRDBDef.suscResultsForImmuPlasmaDataFetcher
+			coordinates("SequenceReadsAnalysis", "vaccPlasmaSuscSummary"),
+			SuscResultDef.vaccPlasmaSuscSummaryFetcher
 		)
 		.dataFetcher(
-			coordinates("MutationsAnalysis", "suscResultsForImmuPlasma"),
-			DRDBDef.suscResultsForImmuPlasmaDataFetcher
+			coordinates("MutationsAnalysis", "vaccPlasmaSuscSummary"),
+			SuscResultDef.vaccPlasmaSuscSummaryFetcher
 		)
 		.dataFetchers(AntibodyDef.antibodyCodeRegistry)
 		.dataFetchers(ArticleDef.articleCodeRegistry)
@@ -128,20 +116,17 @@ public class SARS2GraphQLExtension implements VirusGraphQLExtension {
 				break;
 			case "SequenceAnalysis":
 				builder = addPangolinField(builder);
-				builder = addSuscResultsForAntibodiesField(builder);
+				builder = addSuscResultsFields(builder);
 				builder = addMutationCommentsField(builder);
-				builder = addDRDBFields(builder);
 				break;
 			case "SequenceReadsAnalysis":
 				builder = addPangolinField(builder);
-				builder = addSuscResultsForAntibodiesField(builder);
+				builder = addSuscResultsFields(builder);
 				builder = addMutationCommentsField(builder);
-				builder = addDRDBFields(builder);
 				break;
 			case "MutationsAnalysis":
-				builder = addSuscResultsForAntibodiesField(builder);
+				builder = addSuscResultsFields(builder);
 				builder = addMutationCommentsField(builder);
-				builder = addDRDBFields(builder);
 				break;
 			default:
 				throw new UnsupportedOperationException();
@@ -198,33 +183,10 @@ public class SARS2GraphQLExtension implements VirusGraphQLExtension {
 			);
 	}
 
-	private GraphQLObjectType.Builder addSuscResultsForAntibodiesField(GraphQLObjectType.Builder builder) {
+	private GraphQLObjectType.Builder addSuscResultsFields(GraphQLObjectType.Builder builder) {
 		return builder
 			.field(field -> field
-				.type(new GraphQLList(AntibodySuscResultDef.oAntibodySuscResult))
-				.name("suscResultsForAntibodies")
-				.argument(arg -> arg
-					.type(GraphQLBoolean)
-					.name("includeAll")
-					.defaultValue(false)
-					.description(
-						"By default, this field only returns susceptibility results for " +
-						"antibodies in clinical trials/with structural data. By changing" +
-						"this argument to `true`, all results will be included."
-					)
-				)
-				.argument(arg -> arg
-					.type(new GraphQLNonNull(GraphQLString))
-					.name("drdbVersion")
-					.description(
-						"The version of DRDB to be used by this query. A full list of DRDB versions " +
-						"can be found here: https://github.com/hivdb/chiro-cms/tree/master/downloads/covid-drdb"
-					)
-				)
-				.description("Susceptilibity results for antibodies linked to this sequence/mutation set.")
-			)
-			.field(field -> field
-				.type(new GraphQLList(AntibodySuscResultDef.oSuscSummaryByMutationSet))
+				.type(SuscResultDef.oSuscSummary)
 				.name("antibodySuscSummary")
 				.argument(arg -> arg
 					.type(new GraphQLNonNull(GraphQLString))
@@ -235,28 +197,10 @@ public class SARS2GraphQLExtension implements VirusGraphQLExtension {
 					)
 				)
 				.description("Susceptibility summary for antibodies linked to this sequence/mutation set.")
-			);
-	}
-	
-	
-	private GraphQLObjectType.Builder addDRDBFields(GraphQLObjectType.Builder builder) {
-		return builder
-			.field(field -> field
-				.type(new GraphQLList(DRDBDef.oConvPlasmaSuscResult))
-				.name("suscResultsForConvPlasma")
-				.argument(arg -> arg
-					.type(new GraphQLNonNull(GraphQLString))
-					.name("drdbVersion")
-					.description(
-						"The version of DRDB to be used by this query. A full list of DRDB versions " +
-						"can be found here: https://github.com/hivdb/chiro-cms/tree/master/downloads/covid-drdb"
-					)
-				)
-				.description("Susceptilibity results for convalescent plasma linked to this sequence/mutation set.")
 			)
 			.field(field -> field
-				.type(new GraphQLList(DRDBDef.oImmuPlasmaSuscResult))
-				.name("suscResultsForImmuPlasma")
+				.type(SuscResultDef.oSuscSummary)
+				.name("convPlasmaSuscSummary")
 				.argument(arg -> arg
 					.type(new GraphQLNonNull(GraphQLString))
 					.name("drdbVersion")
@@ -265,8 +209,21 @@ public class SARS2GraphQLExtension implements VirusGraphQLExtension {
 						"can be found here: https://github.com/hivdb/chiro-cms/tree/master/downloads/covid-drdb"
 					)
 				)
-				.description("Susceptilibity results for vaccine-recipient plasma linked to this sequence/mutation set.")
+				.description("Susceptibility summary for convalescent plasma linked to this sequence/mutation set.")
+			)
+			.field(field -> field
+				.type(SuscResultDef.oSuscSummary)
+				.name("vaccPlasmaSuscSummary")
+				.argument(arg -> arg
+					.type(new GraphQLNonNull(GraphQLString))
+					.name("drdbVersion")
+					.description(
+						"The version of DRDB to be used by this query. A full list of DRDB versions " +
+						"can be found here: https://github.com/hivdb/chiro-cms/tree/master/downloads/covid-drdb"
+					)
+				)
+				.description("Susceptibility summary for vaccine-recipient plasma linked to this sequence/mutation set.")
 			);
 	}
-
+	
 }

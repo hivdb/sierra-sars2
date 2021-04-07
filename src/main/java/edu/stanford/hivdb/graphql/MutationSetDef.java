@@ -25,7 +25,12 @@ import graphql.schema.GraphQLFieldDefinition.Builder;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.lang3.tuple.Triple;
+
 import edu.stanford.hivdb.mutations.MutationSet;
+import edu.stanford.hivdb.sars2.SARS2;
+import edu.stanford.hivdb.seqreads.SequenceReads;
+import edu.stanford.hivdb.sequences.AlignedSequence;
 import edu.stanford.hivdb.viruses.Gene;
 import edu.stanford.hivdb.viruses.Virus;
 import edu.stanford.hivdb.viruses.WithGene;
@@ -290,5 +295,30 @@ public class MutationSetDef {
 					"included in this query if presented. Gene need to be " +
 					"prepend if the gene is not able to be inferred from " +
 					"the context."));
+	}
+
+	public static MutationSet<SARS2> getMutationSetFromSource(Object src) {
+		MutationSet<?> mutations;
+		if (src instanceof AlignedSequence) {
+			mutations = ((AlignedSequence<?>) src).getMutations(); 
+		}
+		else if (src instanceof SequenceReads) {
+			mutations = ((SequenceReads<?>) src).getMutations();
+		}
+		else if (src instanceof Triple) {
+			Object middle = ((Triple<?, ?, ?>) src).getMiddle();
+			if (middle instanceof MutationSet) {
+				mutations = (MutationSet<?>) middle;
+			}
+			else {
+				throw new UnsupportedOperationException();
+			}
+		}
+		else {
+			throw new UnsupportedOperationException();
+		}
+		@SuppressWarnings("unchecked")
+		MutationSet<SARS2> sars2Mutations = (MutationSet<SARS2>) mutations;
+		return sars2Mutations;
 	}
 }

@@ -7,38 +7,38 @@ import java.util.stream.Collectors;
 import edu.stanford.hivdb.mutations.MutationSet;
 import edu.stanford.hivdb.sars2.SARS2;
 
-public class ConvPlasmaSuscResult extends SuscResult {
+public class VaccPlasmaSuscResult extends SuscResult {
 
-	private final String infection;
+	private final String vaccineName;
 	private final String cumulativeGroup;
 	
-	public static List<ConvPlasmaSuscResult> query(String drdbVersion, MutationSet<SARS2> queryMuts) {
+	public static List<VaccPlasmaSuscResult> query(String drdbVersion, MutationSet<SARS2> queryMuts) {
 		DRDB drdb = DRDB.getInstance(drdbVersion);
 		final MutationSet<SARS2> realQueryMuts = queryMuts.filterBy(mut -> !mut.isUnsequenced());
-		List<ConvPlasmaSuscResult> results = (
+		List<VaccPlasmaSuscResult> results = (
 			drdb
-			.querySuscResultsForConvPlasma(queryMuts)
+			.querySuscResultsForImmuPlasma(queryMuts)
 			.stream()
-			.map(d -> new ConvPlasmaSuscResult(drdbVersion, realQueryMuts, d))
+			.map(d -> new VaccPlasmaSuscResult(drdbVersion, realQueryMuts, d))
 			.collect(Collectors.toList())
 		);
 		
 		return results;
 	}
 	
-	private ConvPlasmaSuscResult(
+	private VaccPlasmaSuscResult(
 		String drdbVersion,
 		MutationSet<SARS2> queryMuts,
 		Map<String, Object> suscData
 	) {
 		super(drdbVersion, queryMuts, suscData);
 
-		this.infection = (String) suscData.get("infection");
+		this.vaccineName = (String) suscData.get("vaccineName");
 		this.cumulativeGroup = (String) suscData.get("cumulativeGroup");
 	}
 	
-	public String getInfection() {
-		return infection;
+	public String getVaccineName() {
+		return vaccineName;
 	}
 	
 	public String getCumulativeGroup() {

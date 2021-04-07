@@ -1,9 +1,9 @@
 package edu.stanford.hivdb.sars2.drdb;
 
 import java.util.Map;
-import java.util.Set;
+// import java.util.Set;
 
-import edu.stanford.hivdb.mutations.GenePosition;
+// import edu.stanford.hivdb.mutations.GenePosition;
 import edu.stanford.hivdb.mutations.MutationSet;
 import edu.stanford.hivdb.sars2.SARS2;
 
@@ -12,35 +12,50 @@ public abstract class SuscResult {
 	private static final double PARTIAL_RESIST_FOLD = 3;
 	private static final double RESIST_FOLD = 10;
 
-	private static String calcResistanceLevel(String foldCmp, Double fold, String fallbackLevel) {
+	private static String calcResistanceLevel(String foldCmp, Double fold, String fallbackLevel, int cumulativeCount) {
 		if (fallbackLevel == null) {
-			if (foldCmp.equals("<") || foldCmp.equals("~") || foldCmp.equals("=")) {
+			if (foldCmp.equals("<")) {
 				if (fold <= PARTIAL_RESIST_FOLD) {
 					return "susceptible";
 				}
 				else if (fold <= RESIST_FOLD) {
+					return "lt-resistant";
+				}
+				else {
+					return "undetermined";
+				}
+			}
+			else if (foldCmp.equals(">")) {
+				if (fold >= RESIST_FOLD) {
+					return "resistant";
+				}
+				else if (fold >= PARTIAL_RESIST_FOLD) {
+					return "gt-partial-resistance";
+				}
+				else {
+					return "undetermined";
+				}
+			}
+			else if (cumulativeCount == 1) {
+				if (fold < PARTIAL_RESIST_FOLD) {
+					return "susceptible";
+				}
+				else if (fold < RESIST_FOLD) {
 					return "partial-resistance";
 				}
 				else {
 					return "resistant";
 				}
 			}
-			else {  // foldCmp.equals(">")
-				if (fold > RESIST_FOLD) {
-					return "resistant";
-				}
-				else if (fold > PARTIAL_RESIST_FOLD) {
-					return "gt-partial-resistance";
-				}
-				else {
-					return "gt-susceptible";
-				}
+			else {
+				return "undetermined";
 			}
 		}
 		else {
 			return fallbackLevel;
 		}
 	}
+
 	private final MutationSet<SARS2> queryMuts;
 
 	private final String drdbVersion;
@@ -62,9 +77,9 @@ public abstract class SuscResult {
 	private transient VirusVariant controlVirusVariant;
 	private transient VirusVariant virusVariant;
 	private transient MutationSet<SARS2> hitMutations;
-	private transient MutationSet<SARS2> missMutations;
-	private transient Set<GenePosition<SARS2>> hitPositions;
-	private transient Set<GenePosition<SARS2>> missPositions;
+	// private transient MutationSet<SARS2> missMutations;
+	// private transient Set<GenePosition<SARS2>> hitPositions;
+	// private transient Set<GenePosition<SARS2>> missPositions;
 	
 	protected SuscResult(
 		String drdbVersion,
@@ -90,7 +105,7 @@ public abstract class SuscResult {
 
 	public String getResistanceLevel() {
 		if (resistanceLevel == null) {
-			resistanceLevel = calcResistanceLevel(foldCmp, fold, fbResistanceLevel);
+			resistanceLevel = calcResistanceLevel(foldCmp, fold, fbResistanceLevel, cumulativeCount);
 		}
 		return resistanceLevel;
 	}
@@ -149,7 +164,7 @@ public abstract class SuscResult {
 		return getVirusVariant().isAllKeyMutationsMatched(queryMuts);
 	}
 	
-	public Set<GenePosition<SARS2>> getHitPositions() {
+	/*public Set<GenePosition<SARS2>> getHitPositions() {
 		if (hitPositions == null) {
 			hitPositions = getVirusVariant().getHitPositions(queryMuts);
 		}
@@ -188,5 +203,5 @@ public abstract class SuscResult {
 	
 	public Integer getNumMissPositions() {
 		return getMissPositions().size();
-	}
+	} */
 }

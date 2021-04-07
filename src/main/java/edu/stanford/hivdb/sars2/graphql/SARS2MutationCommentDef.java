@@ -36,7 +36,7 @@ public class SARS2MutationCommentDef {
 	
 	public static DataFetcher<List<SARS2BoundMutationComment>> boundMutationCommentsFetcher = env -> {
 		String cmtVersion = env.getArgument("cmtVersion");
-		MutationSet<SARS2> mutations = DRDBDef.getMutationSetFromSource(env.getSource());
+		MutationSet<SARS2> mutations = MutationSetDef.getMutationSetFromSource(env.getSource());
 		return SARS2MutationComment.query(cmtVersion, mutations);
 	};
 
