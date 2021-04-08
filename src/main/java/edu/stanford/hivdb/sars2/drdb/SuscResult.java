@@ -12,8 +12,11 @@ public abstract class SuscResult {
 	private static final double PARTIAL_RESIST_FOLD = 3;
 	private static final double RESIST_FOLD = 10;
 
-	private static String calcResistanceLevel(String foldCmp, Double fold, String fallbackLevel, int cumulativeCount) {
-		if (fallbackLevel == null) {
+	private String calcResistanceLevel() {
+		if (fbResistanceLevel == null) {
+			if (ineffective != null && (ineffective.equals("both") || ineffective.equals("control"))) {
+				return "undetermined";
+			}
 			if (foldCmp.equals("<")) {
 				if (fold <= PARTIAL_RESIST_FOLD) {
 					return "susceptible";
@@ -52,7 +55,7 @@ public abstract class SuscResult {
 			}
 		}
 		else {
-			return fallbackLevel;
+			return fbResistanceLevel;
 		}
 	}
 
@@ -105,7 +108,7 @@ public abstract class SuscResult {
 
 	public String getResistanceLevel() {
 		if (resistanceLevel == null) {
-			resistanceLevel = calcResistanceLevel(foldCmp, fold, fbResistanceLevel, cumulativeCount);
+			resistanceLevel = calcResistanceLevel();
 		}
 		return resistanceLevel;
 	}
