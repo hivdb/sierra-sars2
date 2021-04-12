@@ -287,13 +287,12 @@ public class DRDB {
 	
 	public List<Map<String, Object>> queryAllAntibodies() {
 		List<Map<String, Object>> antibodies = queryAll(
-			"SELECT ab_name, pdb_id, abbreviation_name, availability, priority, visibility " +
+			"SELECT ab_name, abbreviation_name, availability, priority, visibility " +
 			"FROM antibodies",
 			rs -> {
 				try {
 					Map<String, Object> result = new LinkedHashMap<>();
 					result.put("abName", rs.getString("ab_name"));
-					result.put("pdbID", rs.getString("pdb_id"));
 					result.put("abbrName", rs.getString("abbreviation_name"));
 					result.put("availability", rs.getString("availability"));
 					result.put("priority", rs.getInt("priority"));

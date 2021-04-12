@@ -48,10 +48,6 @@ public class AntibodyDef {
 			.description("Antibody abbreviation name."))
 		.field(field -> field
 			.type(GraphQLString)
-			.name("PDB")
-			.description("PDB ID of this antibody."))
-		.field(field -> field
-			.type(GraphQLString)
 			.name("availability")
 			.description("Antibody availability."))
 		.field(field -> field

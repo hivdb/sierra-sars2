@@ -41,7 +41,6 @@ public class Antibody {
 	}
 	
 	private final String abName;
-	private final String pdbID;
 	private final String abbrName;
 	private final String availability;
 	private final Integer priority;
@@ -52,7 +51,6 @@ public class Antibody {
 	
 	private Antibody(Map<String, Object> abData) {
 		abName = (String) abData.get("abName");
-		pdbID = (String) abData.get("pdbID");
 		abbrName = (String) abData.get("abbrName");
 		availability = (String) abData.get("availability");
 		priority = (Integer) abData.get("priority");
@@ -72,7 +70,6 @@ public class Antibody {
 	public String getName() { return abName; }
 	public String getAbbrName() { return abbrName; }
 	
-	public String getPDB() { return pdbID; }
 	public String getAvailability() { return availability; }
 	public Integer getPriority() { return priority; }
 	public Boolean getVisibility() { return visibility; }
