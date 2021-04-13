@@ -38,6 +38,8 @@ import edu.stanford.hivdb.mutations.MutationSet;
 import edu.stanford.hivdb.sequences.AlignedGeneSeq;
 import edu.stanford.hivdb.sequences.AlignedSequence;
 import edu.stanford.hivdb.sequences.SequenceValidator;
+import edu.stanford.hivdb.sequences.UnsequencedRegions;
+import edu.stanford.hivdb.sequences.UnsequencedRegions.UnsequencedRegion;
 import edu.stanford.hivdb.utilities.Json;
 import edu.stanford.hivdb.utilities.ValidationLevel;
 import edu.stanford.hivdb.utilities.ValidationResult;
@@ -164,7 +166,7 @@ public class SARS2DefaultSequenceValidator implements SequenceValidator<SARS2> {
 			"reverse-complement", "This report was derived from the reverse complement of input sequence.");
 
 		levels.put("unsequenced-region", ValidationLevel.WARNING);
-		messages.put("unsequenced-region", "There are %d %s positions located in unsequenced region(s): %s.");
+		messages.put("unsequenced-region", "Of %s gene, %d positions are unsequenced: %s.");
 
 		VALIDATION_RESULT_LEVELS = Collections.unmodifiableMap(levels);
 		VALIDATION_RESULT_MESSAGES = Collections.unmodifiableMap(messages);
@@ -187,9 +189,9 @@ public class SARS2DefaultSequenceValidator implements SequenceValidator<SARS2> {
 		results.addAll(validateLongGap(alignedSequence));
 		results.addAll(validateNAs(alignedSequence));
 		results.addAll(validateGaps(alignedSequence));
-		results.addAll(validateNotApobec(alignedSequence));
+		// results.addAll(validateNotApobec(alignedSequence));
 		results.addAll(validateNoStopCodons(alignedSequence));
-		results.addAll(validateNoTooManyUnusualMutations(alignedSequence));
+		// results.addAll(validateNoTooManyUnusualMutations(alignedSequence));
 		return results;
 	}
 
@@ -204,11 +206,17 @@ public class SARS2DefaultSequenceValidator implements SequenceValidator<SARS2> {
 	protected static List<ValidationResult> validateUnsequencedRegion(AlignedSequence<?> alignedSequence) {
 		List<ValidationResult> results = new ArrayList<>();
 		for (AlignedGeneSeq<?> geneSeq : alignedSequence.getAlignedGeneSequences()) {
-			MutationSet<?> unsequenced = geneSeq.getMutations().filterBy(Mutation::isUnsequenced);
+			UnsequencedRegions<?> unsequenced = geneSeq.getUnsequencedRegions();
 			if (unsequenced.size() > 2) {
 				results.add(newValidationResult(
-					"unsequenced-region", unsequenced.size(),
-					geneSeq.getAbstractGene(), unsequenced.join(", ")
+					"unsequenced-region",
+					geneSeq.getAbstractGene(),
+					unsequenced.size(),
+					unsequenced
+						.getRegions()
+						.stream()
+						.map(UnsequencedRegion::toString)
+						.collect(Collectors.joining(", "))
 				));
 			}
 		}
@@ -456,16 +464,16 @@ public class SARS2DefaultSequenceValidator implements SequenceValidator<SARS2> {
 		for (Gene<SARS2> gene : seqGenes) {
 			AlignedGeneSeq<SARS2> alignedGeneSeq = alignedGeneSeqs.get(gene);
 			List<FrameShift<SARS2>> frameShifts = alignedGeneSeq.getFrameShifts();
-			MutationSet<SARS2> insertions = alignedGeneSeq.getInsertions();
-			MutationSet<SARS2> deletions = alignedGeneSeq.getDeletions();
-			MutationSet<SARS2> unusualInsertions = insertions.getUnusualMutations();
-			MutationSet<SARS2> unusualDeletions = deletions.getUnusualMutations();
-			MutationSet<SARS2> unusualIndels = unusualInsertions.mergesWith(unusualDeletions);
-			int numTotal = frameShifts.size() + unusualInsertions.size() + unusualDeletions.size();
+			// MutationSet<SARS2> insertions = alignedGeneSeq.getInsertions();
+			// MutationSet<SARS2> deletions = alignedGeneSeq.getDeletions();
+			// MutationSet<SARS2> unusualInsertions = insertions.getUnusualMutations();
+			// MutationSet<SARS2> unusualDeletions = deletions.getUnusualMutations();
+			// MutationSet<SARS2> unusualIndels = unusualInsertions.mergesWith(unusualDeletions);
+			// int numTotal = frameShifts.size() + unusualInsertions.size() + unusualDeletions.size();
 			String frameShiftListText = FrameShift.joinFrameShifts(frameShifts);
-			String unusualIndelsListText = unusualIndels.join(", ");
+			// String unusualIndelsListText = unusualIndels.join(", ");
 
-			if (numTotal > 1) {
+			/* if (numTotal > 1) {
 				if (frameShifts.size() > 0 && unusualIndels.size() > 0) {
 					results.add(newValidationResult(
 						"two-or-more-unusual-indels-and-frameshifts", gene.getAbstractGene(),
@@ -480,16 +488,16 @@ public class SARS2DefaultSequenceValidator implements SequenceValidator<SARS2> {
 						unusualIndelsListText));
 				}
 
-			} else if (numTotal >0 ) {
+			} else if (numTotal > 0 ) {*/
 				if (frameShifts.size() > 0) {
 					results.add(newValidationResult(
 						"one-frameshift", gene.getAbstractGene(), frameShiftListText));
-				} else {
+				}/* else {
 					results.add(newValidationResult(
 						"one-unusual-indel", gene.getAbstractGene(), unusualIndelsListText));
 				}
 
-			}
+			}*/
 		}
 		return results;
 	}
