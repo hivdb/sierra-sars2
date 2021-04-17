@@ -80,9 +80,6 @@ public class SARS2 implements Virus<SARS2> {
 	private final SARS2DataLoader<SARS2> dl;
 
 	private SARS2() {
-		registerSequenceValidator(new SARS2DefaultSequenceValidator());
-		registerMutationsValidator(new SARS2DefaultMutationsValidator());
-		registerSequenceReadsValidator(new SARS2DefaultSequenceReadsValidator());
 		this.dl = new SARS2DataLoader<>(
 			this,
 			VIRUS_NAME,
@@ -108,6 +105,9 @@ public class SARS2 implements Virus<SARS2> {
 			CONDCOMMENTS_RESPATH,
 			ALIGNCONFIG_RESPATH
 		);
+		registerSequenceValidator(new SARS2DefaultSequenceValidator(this));
+		registerMutationsValidator(new SARS2DefaultMutationsValidator());
+		registerSequenceReadsValidator(new SARS2DefaultSequenceReadsValidator());
 	}
 
 	@Override

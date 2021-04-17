@@ -29,6 +29,7 @@ import java.util.stream.Collectors;
 
 
 import com.google.common.collect.Lists;
+import com.google.common.collect.Sets;
 
 import edu.stanford.hivdb.viruses.Gene;
 // import edu.stanford.hivdb.viruses.Strain;
@@ -48,6 +49,7 @@ public class SARS2DefaultSequenceValidator implements SequenceValidator<SARS2> {
 
 	private static final Map<String, ValidationLevel> VALIDATION_RESULT_LEVELS;
 	private static final Map<String, String> VALIDATION_RESULT_MESSAGES;
+	private final Set<Gene<SARS2>> geneFilters;
 
 	static {
 		Map<String, ValidationLevel> levels = new HashMap<>();
@@ -172,7 +174,10 @@ public class SARS2DefaultSequenceValidator implements SequenceValidator<SARS2> {
 		VALIDATION_RESULT_MESSAGES = Collections.unmodifiableMap(messages);
 	}
 	
-	protected SARS2DefaultSequenceValidator() {}
+	protected SARS2DefaultSequenceValidator(SARS2 virusIns) {
+		geneFilters = Set.of(virusIns.getGene("SARS2S"));
+		
+	}
 
 	@Override
 	public List<ValidationResult> validate(AlignedSequence<SARS2> alignedSequence) {
@@ -195,7 +200,7 @@ public class SARS2DefaultSequenceValidator implements SequenceValidator<SARS2> {
 		return results;
 	}
 
-	protected static ValidationResult newValidationResult(String key, Object... args) {
+	protected ValidationResult newValidationResult(String key, Object... args) {
 		ValidationLevel level = VALIDATION_RESULT_LEVELS.get(key);
 		String message = String.format(
 			VALIDATION_RESULT_MESSAGES.get(key),
@@ -203,9 +208,12 @@ public class SARS2DefaultSequenceValidator implements SequenceValidator<SARS2> {
 		return new ValidationResult(level, message);
 	}
 
-	protected static List<ValidationResult> validateUnsequencedRegion(AlignedSequence<?> alignedSequence) {
+	protected List<ValidationResult> validateUnsequencedRegion(AlignedSequence<?> alignedSequence) {
 		List<ValidationResult> results = new ArrayList<>();
 		for (AlignedGeneSeq<?> geneSeq : alignedSequence.getAlignedGeneSequences()) {
+			if (!geneFilters.contains(geneSeq.getGene())) {
+				continue;
+			}
 			UnsequencedRegions<?> unsequenced = geneSeq.getUnsequencedRegions();
 			if (unsequenced.size() > 2) {
 				results.add(newValidationResult(
@@ -223,21 +231,21 @@ public class SARS2DefaultSequenceValidator implements SequenceValidator<SARS2> {
 		return results;
 	}
 
-	protected static List<ValidationResult> validateNotEmpty(AlignedSequence<?> alignedSequence) {
+	protected List<ValidationResult> validateNotEmpty(AlignedSequence<?> alignedSequence) {
 		if (alignedSequence.isEmpty()) {
 			return Lists.newArrayList(newValidationResult("no-gene-found"));
 		}
 		return Collections.emptyList();
 	}
 
-	protected static List<ValidationResult> validateReverseComplement(AlignedSequence<?> alignedSequence) {
+	protected List<ValidationResult> validateReverseComplement(AlignedSequence<?> alignedSequence) {
 		if (alignedSequence.isReverseComplement()) {
 			return Lists.newArrayList(newValidationResult("reverse-complement"));
 		}
 		return Collections.emptyList();
 	}
 
-	protected static List<ValidationResult> validateGene(AlignedSequence<?> alignedSequence) {
+	protected List<ValidationResult> validateGene(AlignedSequence<?> alignedSequence) {
 		Set<Gene<?>> discardedGenes = new LinkedHashSet<>(alignedSequence.getDiscardedGenes().keySet());
 		int leftIgnored = 0x7fffffff;
 		int rightIgnored = 0;
@@ -259,16 +267,18 @@ public class SARS2DefaultSequenceValidator implements SequenceValidator<SARS2> {
 		if (!availableGenes.contains(strain.getGene("IN")) && rightIgnored > 600) {
 			discardedGenes.add(strain.getGene("IN"));
 		}*/
-		if (!discardedGenes.isEmpty()) {
+		if (!Sets.intersection(discardedGenes, geneFilters).isEmpty()) {
+		
 			String textDiscardedGenes = discardedGenes
 				.stream().map(g -> g.getName())
 				.collect(Collectors.joining(" or "));
 			return Lists.newArrayList(newValidationResult("not-aligned-gene", textDiscardedGenes));
 		}
+		
 		return Collections.emptyList();
 	}
 
-	protected static List<ValidationResult> validateSequenceSize(AlignedSequence<SARS2> alignedSequence) {
+	protected List<ValidationResult> validateSequenceSize(AlignedSequence<SARS2> alignedSequence) {
 		/* int size;
 		AlignedGeneSeq<?> geneSeq;
 		int[] muchTooShortSize = new int[] {60, 150, 100};
@@ -290,10 +300,13 @@ public class SARS2DefaultSequenceValidator implements SequenceValidator<SARS2> {
 		return result;
 	}
 
-	protected static List<ValidationResult> validateShrinkage(AlignedSequence<SARS2> alignedSequence) {
+	protected List<ValidationResult> validateShrinkage(AlignedSequence<SARS2> alignedSequence) {
 		List<ValidationResult> result = new ArrayList<>();
 		for (AlignedGeneSeq<SARS2> geneSeq : alignedSequence.getAlignedGeneSequences()) {
 			Gene<SARS2> gene = geneSeq.getGene();
+			if (!geneFilters.contains(gene)) {
+				continue;
+			}
 			int[] trimmed = geneSeq.getShrinkage();
 			int leftTrimmed = trimmed[0];
 			int rightTrimmed = trimmed[1];
@@ -307,11 +320,14 @@ public class SARS2DefaultSequenceValidator implements SequenceValidator<SARS2> {
 		return result;
 	}
 
-	protected static List<ValidationResult> validateLongGap(AlignedSequence<SARS2> alignedSequence) {
+	protected List<ValidationResult> validateLongGap(AlignedSequence<SARS2> alignedSequence) {
 		int gapLenThreshold = 10;
 		int continuousDels = 0;
 		List<ValidationResult> result = new ArrayList<>();
 		for (Mutation<SARS2> mut : alignedSequence.getMutations()) {
+			if (!geneFilters.contains(mut.getGene())) {
+				continue;
+			}
 			if (continuousDels > gapLenThreshold) {
 				result.add(newValidationResult("gap-too-long"));
 				break;
@@ -329,7 +345,7 @@ public class SARS2DefaultSequenceValidator implements SequenceValidator<SARS2> {
 		return result;
 	}
 
-	protected static List<ValidationResult> validateNAs(AlignedSequence<SARS2> alignedSequence) {
+	protected List<ValidationResult> validateNAs(AlignedSequence<SARS2> alignedSequence) {
 		List<String> invalids =
 			alignedSequence.getInputSequence().removedInvalidChars()
 			.stream().map(c -> "" + c)
@@ -343,11 +359,14 @@ public class SARS2DefaultSequenceValidator implements SequenceValidator<SARS2> {
 		return result;
 	}
 
-	protected static List<ValidationResult> validateNoStopCodons(AlignedSequence<SARS2> alignedSequence) {
+	protected List<ValidationResult> validateNoStopCodons(AlignedSequence<SARS2> alignedSequence) {
 		Map<Gene<SARS2>, AlignedGeneSeq<SARS2>> alignedGeneSeqs = alignedSequence.getAlignedGeneSequenceMap();
 		List<ValidationResult> result = new ArrayList<>();
 
 		for (Gene<SARS2> gene : alignedGeneSeqs.keySet()) {
+			if (!geneFilters.contains(gene)) {
+				continue;
+			}
 			MutationSet<SARS2> stopCodons = alignedGeneSeqs.get(gene).getStopCodons();
 			String stops = stopCodons.join(", ");
 			int numStopCodons = stopCodons.size();
@@ -363,11 +382,14 @@ public class SARS2DefaultSequenceValidator implements SequenceValidator<SARS2> {
 		return result;
 	}
 
-	protected static List<ValidationResult> validateNoTooManyUnusualMutations(AlignedSequence<SARS2> alignedSequence) {
+	protected List<ValidationResult> validateNoTooManyUnusualMutations(AlignedSequence<SARS2> alignedSequence) {
 		List<ValidationResult> result = new ArrayList<>();
 		Map<Gene<SARS2>, AlignedGeneSeq<SARS2>> alignedGeneSeqs = alignedSequence.getAlignedGeneSequenceMap();
 
 		for (Gene<SARS2> gene : alignedGeneSeqs.keySet()) {
+			if (!geneFilters.contains(gene)) {
+				continue;
+			}
 			AlignedGeneSeq<SARS2> alignedGeneSeq = alignedGeneSeqs.get(gene);
 			MutationSet<SARS2> unusualMutations = alignedGeneSeq.getUnusualMutations();
 			String text = unusualMutations.join(", ");
@@ -412,7 +434,7 @@ public class SARS2DefaultSequenceValidator implements SequenceValidator<SARS2> {
 		return subtyper.getClosestSubtype() == Subtype.N;
 	}*/
 
-	protected static List<ValidationResult> validateNotApobec(AlignedSequence<SARS2> alignedSequence) {
+	protected List<ValidationResult> validateNotApobec(AlignedSequence<SARS2> alignedSequence) {
 		MutationSet<SARS2> apobecs = alignedSequence.getMutations().getApobecMutations();
 		MutationSet<SARS2> apobecDRMs = alignedSequence.getMutations().getApobecDRMs();
 		List<ValidationResult> results = new ArrayList<>();
@@ -456,12 +478,15 @@ public class SARS2DefaultSequenceValidator implements SequenceValidator<SARS2> {
 		return results;
 	}
 
-	private static List<ValidationResult> validateGaps(AlignedSequence<SARS2> alignedSequence) {
+	private List<ValidationResult> validateGaps(AlignedSequence<SARS2> alignedSequence) {
 		Map<Gene<SARS2>, AlignedGeneSeq<SARS2>> alignedGeneSeqs = alignedSequence.getAlignedGeneSequenceMap();
 		List<Gene<SARS2>> seqGenes = alignedSequence.getAvailableGenes();
 		List<ValidationResult> results = new ArrayList<>();
 
 		for (Gene<SARS2> gene : seqGenes) {
+			if (!geneFilters.contains(gene)) {
+				continue;
+			}
 			AlignedGeneSeq<SARS2> alignedGeneSeq = alignedGeneSeqs.get(gene);
 			List<FrameShift<SARS2>> frameShifts = alignedGeneSeq.getFrameShifts();
 			// MutationSet<SARS2> insertions = alignedGeneSeq.getInsertions();
