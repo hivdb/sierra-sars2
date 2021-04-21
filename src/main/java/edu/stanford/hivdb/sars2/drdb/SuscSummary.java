@@ -19,19 +19,14 @@ public class SuscSummary {
 	private transient List<AntibodySuscSummary> itemsByAntibody;
 	private transient List<AntibodyClassSuscSummary> itemsByAntibodyClass;
 	private transient List<ResistLevelSuscSummary> itemsByResistLevel;
-	private transient List<KeyMutsSuscSummary> itemsByKeyMuts;
+	private transient List<MutsSuscSummary> itemsByKeyMuts;
 	private transient List<VaccineSuscSummary> itemsByVaccine;
 	
 	public static SuscSummary queryAntibodySuscSummary(String drdbVersion, MutationSet<SARS2> queryMuts) {
-		queryMuts = queryMuts.filterBy(mut -> !mut.isUnsequenced());
 		List<SuscResult> results = (
 			AntibodySuscResult.query(drdbVersion, queryMuts)
 			.stream()
 			.filter(r -> (
-				(
-					r.getVirusVariant().hasKeyMutations() &&
-					r.isEveryVariantKeyMutationHit()
-				) &&
 				r.getAntibodies().stream().allMatch(
 					ab -> (
 						ab.getVisibility() ||
@@ -45,39 +40,43 @@ public class SuscSummary {
 	}
 	
 	public static SuscSummary queryConvPlasmaSuscSummary(String drdbVersion, MutationSet<SARS2> queryMuts) {
-		queryMuts = queryMuts.filterBy(mut -> !mut.isUnsequenced());
 		List<SuscResult> results = (
 			ConvPlasmaSuscResult.query(drdbVersion, queryMuts)
 			.stream()
-			.filter(r -> (
-				r.getVirusVariant().hasKeyMutations() &&
-				r.isEveryVariantKeyMutationHit()
-			))
 			.collect(Collectors.toList())
 		);
 		return new SuscSummary(results);
 	}
 
 	public static SuscSummary queryVaccPlasmaSuscSummary(String drdbVersion, MutationSet<SARS2> queryMuts) {
-		queryMuts = queryMuts.filterBy(mut -> !mut.isUnsequenced());
 		List<SuscResult> results = (
 			VaccPlasmaSuscResult.query(drdbVersion, queryMuts)
 			.stream()
-			.filter(r -> (
-				r.getVirusVariant().hasKeyMutations() &&
-				r.isEveryVariantKeyMutationHit()
-			))
 			.collect(Collectors.toList())
 		);
 		return new SuscSummary(results);
 	}
 	
 	protected SuscSummary(List<SuscResult> items) {
-		this.items = Collections.unmodifiableList(items);
+		this.items = Collections.unmodifiableList(
+			items.stream()
+			.sorted((itemA, itemB) -> {
+				int cmp = itemA.getMatchType().compareTo(itemB.getMatchType());
+				if (cmp != 0) { return cmp; }
+				int cmpVariantOnly = itemA.getNumVariantOnlyMutations() - itemB.getNumVariantOnlyMutations();
+				int cmpQueryOnly = itemA.getNumQueryOnlyMutations() - itemB.getNumQueryOnlyMutations();
+				cmp = cmpVariantOnly + cmpQueryOnly;
+				if (cmp != 0) { return cmp; }
+				if (cmpVariantOnly != 0) { return cmpVariantOnly; }
+				if (cmpQueryOnly != 0) { return cmpQueryOnly; }
+				return itemA.getComparableVariantMutations().compareTo(itemB.getComparableVariantMutations());
+			})
+			.collect(Collectors.toList())
+		);
 	}
 	
 	public List<SuscResult> getItems() { return items; }
-	
+
 	public Set<Article> getReferences() {
 		return (
 			items.stream()
@@ -226,13 +225,12 @@ public class SuscSummary {
 		return itemsByVaccine;
 	}
 	
-	public List<KeyMutsSuscSummary> getItemsByKeyMutations() {
+	public List<MutsSuscSummary> getItemsByMutations() {
 		if (itemsByKeyMuts == null) {
-			
 			Map<MutationSet<SARS2>, List<SuscResult>> byMutations = (
 				items.stream()
 				.collect(Collectors.groupingBy(
-					sr -> sr.getVirusVariant().getKeyMutationGroups(),
+					sr -> sr.getComparableVariantMutations(),
 					LinkedHashMap::new,
 					Collectors.toList()
 				))
@@ -241,10 +239,14 @@ public class SuscSummary {
 				.collect(Collectors.toMap(
 					srs -> new MutationSet<>(
 						srs.stream()
-						.map(sr -> sr.getVirusVariant().getKeyMutations().getSplitted())
+						// We only display mutations that really exist in the variant;
+						// this is useful when not all range of a deletion is covered
+						// by the variant
+						.map(sr -> sr.getVirusVariant().getMutations().getSplitted())
 						.flatMap(Set::stream)
 						.collect(Collectors.toSet())
-					),
+					// except for excluded mutations such as D614G
+					).subtractsBy(SuscResult.EXCLUDE_MUTATIONS),
 					srs -> srs,
 					(a, b) -> {
 						throw new RuntimeException("Key mutations conflict");
@@ -253,29 +255,14 @@ public class SuscSummary {
 				))
 			);
 
-			List<KeyMutsSuscSummary> summaryResults = byMutations.entrySet()
+			List<MutsSuscSummary> summaryResults = byMutations.entrySet()
 				.stream()
-				.map(entry -> new KeyMutsSuscSummary(
+				.map(entry -> new MutsSuscSummary(
 					entry.getKey(),
 					entry.getValue()
 				))
 				.collect(Collectors.toList());
 
-			summaryResults.sort((a, b) -> {
-				// sorting order: [numKeyMutGroups, mutations]
-				int aNumKeyMutGroups = a.getNumKeyMutGroups();
-				int bNumKeyMutGroups = b.getNumKeyMutGroups();
-				int cmp = Math.min(2, aNumKeyMutGroups) - Math.min(2, bNumKeyMutGroups); 
-				if (cmp != 0) {
-					return cmp;
-				}
-				
-				MutationSet<SARS2> aMuts = a.getMutations();
-				MutationSet<SARS2> bMuts = b.getMutations();
-				cmp = aMuts.compareTo(bMuts);
-				return cmp;
-			});
-			
 			itemsByKeyMuts = Collections.unmodifiableList(summaryResults);
 		}
 		return itemsByKeyMuts;

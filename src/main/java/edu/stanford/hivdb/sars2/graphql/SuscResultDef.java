@@ -68,12 +68,6 @@ public class SuscResultDef {
 			.type(VirusVariantDef.oVirusVariant)
 			.name("virusVariant")
 			.description("The experimental virus variant of the susceptibility testing."))
-		.field(field -> MutationSetDef.newMutationSet("SARS2", field, "hitMutations")
-			.description("Mutations matched the query mutation set."))
-		.field(field -> MutationSetDef.newMutationSet("SARS2", field, "hitKeyMutations")
-			.description("Key mutations matched the query mutation set."))
-		.field(field -> MutationSetDef.newMutationSet("SARS2", field, "missMutations")
-				.description("Mutations mismatched the query mutation set."))
 		.field(field -> field
 			.type(GraphQLString)
 			.name("assay")
@@ -130,11 +124,23 @@ public class SuscResultDef {
 			.type(GraphQLString)
 			.description("Vaccine name (only available for `itemsByVaccine`)"))
 		.field(field -> MutationSetDef.newMutationSet("SARS2", field, "mutations")
-			.description("Hit key mutations (only available for `itemsByKeyMutations`)"))
+			.description("Variant mutations (only available for `itemsByMutations`)"))
 		.field(field -> field
 			.type(new GraphQLList(VirusVariantDef.oVirusVariant))
 			.name("hitVariants")
-			.description("Virus variants matched the query mutation set (only available for `itemsByKeyMutations`)."))
+			.description("Virus variants matched the query mutation set (only available for `itemsByMutations`)."))
+		.field(field -> field
+			.type(GraphQLString)
+			.name("variantMatchType")
+			.description("Type of how perfectly the query mutations matches variant mutations. Valid value: `EQUAL`, `SUPERSET`, `SUBSET`, and `OVERLAP`."))
+		.field(field -> field
+			.type(GraphQLInt)
+			.name("numVariantOnlyMutations")
+			.description("Number of mutations that are only appeared in variant mutations. D614G and ranged deletions are properly handled."))
+		.field(field -> field
+			.type(GraphQLInt)
+			.name("numQueryOnlyMutations")
+			.description("Number of mutations that are only appeared in query mutations. D614G and ranged deletions are properly handled."))
 		.field(field -> field
 			.type(new GraphQLList(ArticleDef.oArticle))
 			.name("references")
@@ -168,7 +174,7 @@ public class SuscResultDef {
 			.type(new GraphQLList(GraphQLTypeReference.typeRef("SuscSummary")))
 			.description("Susceptibility summary by vaccine."))
 		.field(field -> field
-			.name("itemsByKeyMutations")
+			.name("itemsByMutations")
 			.type(new GraphQLList(GraphQLTypeReference.typeRef("SuscSummary")))
 			.description("Susceptibility summary by key mutations."))
 		.build();

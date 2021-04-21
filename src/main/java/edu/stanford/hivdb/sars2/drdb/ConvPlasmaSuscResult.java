@@ -14,12 +14,12 @@ public class ConvPlasmaSuscResult extends SuscResult {
 	
 	public static List<ConvPlasmaSuscResult> query(String drdbVersion, MutationSet<SARS2> queryMuts) {
 		DRDB drdb = DRDB.getInstance(drdbVersion);
-		final MutationSet<SARS2> realQueryMuts = queryMuts.filterBy(mut -> !mut.isUnsequenced());
+		final MutationSet<SARS2> finalQueryMuts = prepareQueryMutations(queryMuts);
 		List<ConvPlasmaSuscResult> results = (
 			drdb
-			.querySuscResultsForConvPlasma(queryMuts)
+			.querySuscResultsForConvPlasma(finalQueryMuts)
 			.stream()
-			.map(d -> new ConvPlasmaSuscResult(drdbVersion, realQueryMuts, d))
+			.map(d -> new ConvPlasmaSuscResult(drdbVersion, finalQueryMuts, d))
 			.collect(Collectors.toList())
 		);
 		

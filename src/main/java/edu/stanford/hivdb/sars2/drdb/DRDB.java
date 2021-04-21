@@ -11,9 +11,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.TreeSet;
 import java.util.function.Function;
-import java.util.function.Predicate;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
@@ -21,11 +19,9 @@ import org.apache.commons.collections4.map.LRUMap;
 import org.apache.commons.lang3.tuple.Pair;
 
 import edu.stanford.hivdb.mutations.AAMutation;
-import edu.stanford.hivdb.mutations.GenePosition;
 import edu.stanford.hivdb.mutations.Mutation;
 import edu.stanford.hivdb.mutations.MutationSet;
 import edu.stanford.hivdb.sars2.SARS2;
-import edu.stanford.hivdb.viruses.Gene;
 
 public class DRDB {
 	
@@ -51,20 +47,6 @@ public class DRDB {
 		}
 	}
 	
-	/**
-	 * Predicate if input mutation is a key mutation
-	 * 
-	 * @param mutation
-	 * @return
-	 */
-	public Predicate<Mutation<SARS2>> isKeyMutation = mutation -> {
-		return queryAllKeyMutations()
-			.stream()
-			.anyMatch(
-				mutSet -> mutSet.hasSharedAAMutation(mutation)
-			);
-	};
-	
 	public static DRDB getInstance(String version) {
 		String resourcePath = String.format("%s/%s.db", COVID_DRDB_RESURL_PREFIX, version);
 		if (!singletons.containsKey(resourcePath)) {
@@ -74,12 +56,9 @@ public class DRDB {
 		return singletons.get(resourcePath);
 	}
 	
-	private final SARS2 virusIns;
 	private final Connection conn;
-	private transient Set<MutationSet<SARS2>> allKeyMutations;
 	
 	private DRDB(String resourcePath) {
-		virusIns = SARS2.getInstance();
 		try {
 			Class.forName("org.sqlite.JDBC");
 		} catch (ClassNotFoundException e1) {
@@ -140,7 +119,7 @@ public class DRDB {
 				)
 			)
 		);
-	}
+	}	
 	
 	protected <T> List<T> querySuscResults(
 		MutationSet<SARS2> mutations,
@@ -150,11 +129,28 @@ public class DRDB {
 		Function<ResultSet, T> processor
 	) {
 		List<String> mutQueryList = new ArrayList<>();
-		for (GenePosition<SARS2> genePos : mutations.getPositions()) {
+		for (Mutation<SARS2> mut : mutations) {
+			String aminoAcidArr = mut.getAAChars()
+				.stream()
+				.map(aa -> {
+					switch (aa) {
+						case '_':
+							return "'ins'";
+						case '-':
+							return "'del'";
+						case '*':
+							return "'stop'";
+						default:
+							return String.format("'%s'", aa);
+					}
+				})
+				.collect(Collectors.joining(", ")); 
+			
 			mutQueryList.add(String.format(
-				"(M.gene = '%s' AND M.position = '%d')",
-				genePos.getAbstractGene(),
-				genePos.getPosition()
+				"(M.gene = '%s' AND M.position = '%d' AND M.amino_acid IN (%s))",
+				mut.getAbstractGene(),
+				mut.getPosition(),
+				aminoAcidArr
 			));
 		}
 		String mutQuery = mutQueryList.size() > 0 ? String.join(" OR ", mutQueryList) : " false ";
@@ -195,39 +191,6 @@ public class DRDB {
 				}
 			}
 		);
-	}
-	
-	public Set<MutationSet<SARS2>> queryAllKeyMutations() {
-		if (allKeyMutations == null) {
-			allKeyMutations = Collections.unmodifiableSet(new TreeSet<>(queryAll(
-				"SELECT gene, position, position_end, amino_acid FROM key_mutations",
-				rs -> {
-					try {
-						Gene<SARS2> gene = virusIns.getMainStrain().getGene(rs.getString("gene"));
-						int position = rs.getInt("position");
-						int posEnd = rs.getInt("position_end");
-						char[] aminoAcid = rs.getString("amino_acid")
-							.replaceAll("^del$", "-")
-							.replaceAll("^ins$", "_")
-							.replaceAll("^stop$", "*")
-							.toCharArray();
-						if (posEnd == 0) {
-							posEnd = position;
-						}
-						List<Mutation<SARS2>> mutations = new ArrayList<>();
-						for (int pos = position; pos <= posEnd; pos ++) {
-							mutations.add(new AAMutation<>(gene, pos, aminoAcid));
-						}
-						return new MutationSet<>(mutations);
-
-					}
-					catch (SQLException e) {
-						throw new RuntimeException(e);
-					}
-				}
-			)));
-		}
-		return allKeyMutations;
 	}
 	
 	public List<Map<String, Object>> queryAllVirusVariants() {

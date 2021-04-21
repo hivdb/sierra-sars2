@@ -14,12 +14,12 @@ public class VaccPlasmaSuscResult extends SuscResult {
 	
 	public static List<VaccPlasmaSuscResult> query(String drdbVersion, MutationSet<SARS2> queryMuts) {
 		DRDB drdb = DRDB.getInstance(drdbVersion);
-		final MutationSet<SARS2> realQueryMuts = queryMuts.filterBy(mut -> !mut.isUnsequenced());
+		final MutationSet<SARS2> finalQueryMuts = prepareQueryMutations(queryMuts);
 		List<VaccPlasmaSuscResult> results = (
 			drdb
-			.querySuscResultsForImmuPlasma(queryMuts)
+			.querySuscResultsForImmuPlasma(finalQueryMuts)
 			.stream()
-			.map(d -> new VaccPlasmaSuscResult(drdbVersion, realQueryMuts, d))
+			.map(d -> new VaccPlasmaSuscResult(drdbVersion, finalQueryMuts, d))
 			.collect(Collectors.toList())
 		);
 		

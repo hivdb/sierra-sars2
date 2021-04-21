@@ -17,12 +17,12 @@ public class AntibodySuscResult extends SuscResult {
 	
 	public static List<AntibodySuscResult> query(String drdbVersion, MutationSet<SARS2> queryMuts) {
 		DRDB drdb = DRDB.getInstance(drdbVersion);
-		final MutationSet<SARS2> realQueryMuts = queryMuts.filterBy(mut -> !mut.isUnsequenced());
+		final MutationSet<SARS2> finalQueryMuts = prepareQueryMutations(queryMuts);
 		List<AntibodySuscResult> results = (
 			drdb
-			.querySuscResultsForAntibodies(queryMuts)
+			.querySuscResultsForAntibodies(finalQueryMuts)
 			.stream()
-			.map(d -> new AntibodySuscResult(drdbVersion, realQueryMuts, d))
+			.map(d -> new AntibodySuscResult(drdbVersion, finalQueryMuts, d))
 			.collect(Collectors.toList())
 		);
 		

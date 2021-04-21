@@ -1,16 +1,92 @@
 package edu.stanford.hivdb.sars2.drdb;
 
+import java.util.List;
 import java.util.Map;
 // import java.util.Set;
+import java.util.Set;
+import java.util.stream.Collectors;
 
+import edu.stanford.hivdb.mutations.AAMutation;
+import edu.stanford.hivdb.mutations.Mutation;
 // import edu.stanford.hivdb.mutations.GenePosition;
 import edu.stanford.hivdb.mutations.MutationSet;
 import edu.stanford.hivdb.sars2.SARS2;
+import edu.stanford.hivdb.viruses.Gene;
 
 public abstract class SuscResult {
 
 	private static final double PARTIAL_RESIST_FOLD = 3;
 	private static final double RESIST_FOLD = 10;
+
+	private static final Set<Gene<SARS2>> INCLUDE_GENES;
+	protected static final Set<Mutation<SARS2>> EXCLUDE_MUTATIONS;
+	private static final List<Set<Mutation<SARS2>>> RANGE_DELETIONS;
+	
+	static {
+		SARS2 sars2 = SARS2.getInstance();
+		Gene<SARS2> spikeGene = sars2.getGene("SARS2S");
+
+		INCLUDE_GENES = Set.of(spikeGene);
+		
+		EXCLUDE_MUTATIONS = Set.of(
+			new AAMutation<>(spikeGene, 614, 'G')
+		);
+
+		RANGE_DELETIONS = List.of(
+			Set.of(
+				new AAMutation<>(spikeGene, 69, '-'),
+				new AAMutation<>(spikeGene, 70, '-')
+			),
+			Set.of(
+				new AAMutation<>(spikeGene, 141, '-'),
+				new AAMutation<>(spikeGene, 142, '-'),
+				new AAMutation<>(spikeGene, 143, '-'),
+				new AAMutation<>(spikeGene, 144, '-'),
+				new AAMutation<>(spikeGene, 145, '-'),
+				new AAMutation<>(spikeGene, 146, '-')
+			),
+			Set.of(
+				new AAMutation<>(spikeGene, 242, '-'),
+				new AAMutation<>(spikeGene, 243, '-'),
+				new AAMutation<>(spikeGene, 244, '-')
+			)
+		);
+	}
+	
+	public enum VariantMatchType {
+		EQUAL,     // variant mutation set equals to query mutation set
+		SUPERSET,  //                      is the superset of query mutation set
+		SUBSET,    //                      is the subset of query mutation set
+		OVERLAP    //                      overlaps with query mutation set
+	}
+
+	protected static MutationSet<SARS2> prepareQueryMutations(MutationSet<SARS2> muts) {
+		// no unseq region
+		muts = muts.filterBy(mut -> !mut.isUnsequenced());
+	
+		// filter genes
+		muts = muts.filterBy(mut -> INCLUDE_GENES.contains(mut.getGene()));
+	
+		// remove excluded mutations
+		muts = muts.subtractsBy(EXCLUDE_MUTATIONS);
+		
+		// query all deletions in the range if at least one exists
+		for (Set<Mutation<SARS2>> rangeDel : RANGE_DELETIONS) {
+			if (!muts.intersectsWith(rangeDel).isEmpty()) {
+				muts = muts.mergesWith(rangeDel);
+			}
+		}		
+		
+		// remove refAA from mixtures
+		muts = new MutationSet<>(
+			muts.getSplitted()
+			.stream()
+			.filter(mut -> mut.getAAsWithoutReference().length() > 0)
+			.collect(Collectors.toList())
+		);
+		
+		return muts;
+	}
 
 	private String calcResistanceLevel() {
 		if (fbResistanceLevel == null) {
@@ -79,11 +155,8 @@ public abstract class SuscResult {
 	private transient String resistanceLevel;
 	private transient VirusVariant controlVirusVariant;
 	private transient VirusVariant virusVariant;
-	private transient MutationSet<SARS2> hitMutations;
-	// private transient MutationSet<SARS2> missMutations;
-	// private transient Set<GenePosition<SARS2>> hitPositions;
-	// private transient Set<GenePosition<SARS2>> missPositions;
-	
+	private transient MutationSet<SARS2> comparableVariantMutations;
+
 	protected SuscResult(
 		String drdbVersion,
 		MutationSet<SARS2> queryMuts,
@@ -143,68 +216,54 @@ public abstract class SuscResult {
 	public Double getFold() { return fold; }
 	public String getIneffective() { return ineffective; }
 	public Integer getCumulativeCount() { return cumulativeCount; }
-	
-	public MutationSet<SARS2> getHitMutations() {
-		if (hitMutations == null) {
-			hitMutations = getVirusVariant().getHitMutations(queryMuts);
+
+	public VariantMatchType getMatchType() {
+		MutationSet<SARS2> varMutations = getComparableVariantMutations();
+		if (varMutations.equals(queryMuts)) {
+			return VariantMatchType.EQUAL;
 		}
-		return hitMutations;
-	}
-	
-	public MutationSet<SARS2> getHitKeyMutations() {
-		return getVirusVariant().getHitKeyMutations(queryMuts);
-	}
-	
-	public Integer getNumHitKeyMutationGroups() {
-		return getVirusVariant().getNumHitKeyMutationGroups(queryMuts);
-	}
-	
-	public boolean isEveryVariantKeyMutationHit() {
-		return getVirusVariant().isEveryVariantKeyMutationHit(queryMuts);
-	}
-	
-	public boolean isAllKeyMutationsMatched() {
-		return getVirusVariant().isAllKeyMutationsMatched(queryMuts);
-	}
-	
-	/*public Set<GenePosition<SARS2>> getHitPositions() {
-		if (hitPositions == null) {
-			hitPositions = getVirusVariant().getHitPositions(queryMuts);
+		else if (varMutations.containsAll(queryMuts)) {
+			return VariantMatchType.SUPERSET;
 		}
-		return hitPositions;
-	}
-	
-	public Integer getNumHitKeyMutations() {
-		return getHitKeyMutations().size();
-	}
-	
-	public Integer getNumHitMutations() {
-		return getHitMutations().size();
-	}
-	
-	public Integer getNumHitPositions() {
-		return getHitPositions().size();
-	}
-	
-	public MutationSet<SARS2> getMissMutations() {
-		if (missMutations == null) {
-			missMutations = getVirusVariant().getMissMutations(queryMuts);
+		else if (queryMuts.containsAll(varMutations)) {
+			return VariantMatchType.SUBSET;
 		}
-		return missMutations;
+		return VariantMatchType.OVERLAP;
 	}
 	
-	public Set<GenePosition<SARS2>> getMissPositions() {
-		if (missPositions == null) {
-			missPositions = getVirusVariant().getMissPositions(queryMuts);
+	/**
+	 * Internal use only for providing comparable variant mutations (v.s. queryMuts)
+	 * of SuscSummary
+	 * 
+	 * @return MutationSet
+	 */
+	protected MutationSet<SARS2> getComparableVariantMutations() {
+		if (comparableVariantMutations == null) {
+			comparableVariantMutations = prepareQueryMutations(getVirusVariant().getMutations());
 		}
-		return missPositions;
+		return comparableVariantMutations;
 	}
 	
-	public Integer getNumMissMutations() {
-		return getMissMutations().size();
+	public Integer getNumVariantOnlyMutations() {
+		MutationSet<SARS2> variantOnlyMutations = getComparableVariantMutations().subtractsBy(queryMuts);
+		Integer numVariantOnlyMuts = variantOnlyMutations.getSplitted().size();
+		for (Set<Mutation<SARS2>> rangeDel : RANGE_DELETIONS) {
+			if (!variantOnlyMutations.intersectsWith(rangeDel).isEmpty()) {
+				numVariantOnlyMuts -= rangeDel.size() - 1;
+			}
+		}
+		return numVariantOnlyMuts;
 	}
 	
-	public Integer getNumMissPositions() {
-		return getMissPositions().size();
-	} */
+	public Integer getNumQueryOnlyMutations() {
+		MutationSet<SARS2> queryOnlyMutations = queryMuts.subtractsBy(getComparableVariantMutations());
+		Integer numQueryOnlyMuts = queryOnlyMutations.getSplitted().size();
+		for (Set<Mutation<SARS2>> rangeDel : RANGE_DELETIONS) {
+			if (!queryOnlyMutations.intersectsWith(rangeDel).isEmpty()) {
+				numQueryOnlyMuts -= rangeDel.size() - 1;
+			}
+		}
+		return numQueryOnlyMuts;
+	}
+	
 }

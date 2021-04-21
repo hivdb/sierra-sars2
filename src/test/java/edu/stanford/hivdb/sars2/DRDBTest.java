@@ -92,9 +92,4 @@ public class DRDBTest {
 		assertEquals("B.1.1.7", variant.getDisplayName());
 	}
 	
-	@Test
-	public void testQueryAllKeyMutations() {
-		assertTrue(drdbObj.queryAllKeyMutations().size() >= 17);
-	}
-
 }
