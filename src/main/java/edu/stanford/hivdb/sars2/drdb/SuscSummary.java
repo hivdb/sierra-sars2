@@ -29,8 +29,9 @@ public class SuscSummary {
 			.filter(r -> (
 				r.getAntibodies().stream().allMatch(
 					ab -> (
-						ab.getVisibility() ||
-						ab.getAntibodyClass() != null		
+						ab.getVisibility()/* ||
+						ab.getAntibodyClass() != null
+						*/		
 					)
 				)
 			))
