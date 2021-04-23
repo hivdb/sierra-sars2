@@ -461,11 +461,11 @@ public class DRDB {
 			"S.ineffective, " +
 			"resistance_level, " +
 			"cumulative_count, " +
-			"RXIP.cumulative_group, " +
-			"RXIP.vaccine_name ",
+			"RXVP.cumulative_group, " +
+			"RXVP.vaccine_name ",
 			
 			/* joins = */
-			"JOIN rx_immu_plasma RXIP ON S.ref_name = RXIP.ref_name AND S.rx_name = RXIP.rx_name " +
+			"JOIN rx_vacc_plasma RXVP ON S.ref_name = RXVP.ref_name AND S.rx_name = RXVP.rx_name " +
 			"JOIN articles A ON S.ref_name = A.ref_name",
 
 			/* where = */
