@@ -22,22 +22,38 @@ import graphql.schema.*;
 import static graphql.Scalars.*;
 import static graphql.schema.GraphQLObjectType.newObject;
 
+import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Set;
 
 import edu.stanford.hivdb.graphql.GeneDef;
 import edu.stanford.hivdb.graphql.MutationSetDef;
+import edu.stanford.hivdb.graphql.UnsequencedRegionsDef;
+import edu.stanford.hivdb.mutations.Mutation;
 import edu.stanford.hivdb.mutations.MutationSet;
 import edu.stanford.hivdb.sars2.SARS2;
 import edu.stanford.hivdb.sars2.SARS2MutationComment;
 import edu.stanford.hivdb.sars2.SARS2MutationComment.SARS2BoundMutationComment;
+import edu.stanford.hivdb.sequences.UnsequencedRegions;
+import edu.stanford.hivdb.viruses.Gene;
 
 
 public class SARS2MutationCommentDef {
 	
 	public static DataFetcher<List<SARS2BoundMutationComment>> boundMutationCommentsFetcher = env -> {
+		SARS2 sars2 = SARS2.getInstance(); 
 		String cmtVersion = env.getArgument("cmtVersion");
-		MutationSet<SARS2> mutations = MutationSetDef.getMutationSetFromSource(env.getSource());
-		return SARS2MutationComment.query(cmtVersion, mutations);
+		Object src = env.getSource();
+		MutationSet<SARS2> mutations = MutationSetDef.getMutationSetFromSource(src);
+		Set<Mutation<SARS2>> filteredMuts = new LinkedHashSet<>();
+		for (Gene<SARS2> gene : sars2.getMainStrain().getGenes()) {
+			UnsequencedRegions<SARS2> unseqRegions = UnsequencedRegionsDef.getUnsequencedRegionsFromSource(src, gene);
+			filteredMuts.addAll(
+				mutations.getGeneMutationsNoSplit(gene)
+				.filterByNoSplit(mut -> !mut.isUnsequenced(unseqRegions))
+			);
+		}
+		return SARS2MutationComment.query(cmtVersion, filteredMuts);
 	};
 
 	public static GraphQLObjectType oSARS2MutComment = newObject()

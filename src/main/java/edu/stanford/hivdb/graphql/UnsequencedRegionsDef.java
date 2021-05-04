@@ -22,7 +22,14 @@ import graphql.schema.*;
 import static graphql.Scalars.*;
 import static graphql.schema.GraphQLObjectType.newObject;
 
+import edu.stanford.hivdb.seqreads.GeneSequenceReads;
+import edu.stanford.hivdb.seqreads.SequenceReads;
+import edu.stanford.hivdb.sequences.AlignedGeneSeq;
+import edu.stanford.hivdb.sequences.AlignedSequence;
+import edu.stanford.hivdb.sequences.UnsequencedRegions;
 import edu.stanford.hivdb.utilities.SimpleMemoizer;
+import edu.stanford.hivdb.viruses.Gene;
+import edu.stanford.hivdb.viruses.Virus;
 
 public class UnsequencedRegionsDef {
 
@@ -69,5 +76,42 @@ public class UnsequencedRegionsDef {
 			.build()
 		)
 	);
+
+	public static <T extends Virus<T>> UnsequencedRegions<T> getUnsequencedRegionsFromSource(Object src, Gene<T> gene) {
+		UnsequencedRegions<T> unseqRegions = null;
+		if (src instanceof AlignedSequence) {
+			@SuppressWarnings("unchecked")
+			AlignedSequence<T> alignedSeq = (AlignedSequence<T>) src; 
+			AlignedGeneSeq<T> alignedGeneSeq = alignedSeq.getAlignedGeneSequence(gene); 
+			if (alignedGeneSeq != null) {
+				unseqRegions = alignedGeneSeq.getUnsequencedRegions();
+			}
+		}
+		else if (src instanceof SequenceReads) {
+			@SuppressWarnings("unchecked")
+			SequenceReads<T> seqReads = (SequenceReads<T>) src;
+			GeneSequenceReads<T> geneSeq = seqReads.getGeneSequenceReads(gene);
+			if (geneSeq != null) {
+				unseqRegions = geneSeq.getUnsequencedRegions();
+			}
+		}
+		else if (src instanceof AlignedGeneSeq) {
+			@SuppressWarnings("unchecked")
+			AlignedGeneSeq<T> alignedGeneSeq = (AlignedGeneSeq<T>) src; 
+			unseqRegions = alignedGeneSeq.getUnsequencedRegions();
+		}
+		else if (src instanceof GeneSequenceReads) {
+			@SuppressWarnings("unchecked")
+			GeneSequenceReads<T> geneSeq = (GeneSequenceReads<T>) src; 
+			unseqRegions = geneSeq.getUnsequencedRegions();
+		}
+		else if (src instanceof UnsequencedRegions) {
+			@SuppressWarnings("unchecked")
+			UnsequencedRegions<T> myUnseqRegions = (UnsequencedRegions<T>) src;
+			unseqRegions = myUnseqRegions;
+		}
+		return unseqRegions;
+	
+	}
 
 }

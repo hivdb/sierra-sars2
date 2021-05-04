@@ -26,7 +26,9 @@ import static graphql.schema.FieldCoordinates.coordinates;
 
 import edu.stanford.hivdb.mutations.Mutation;
 import edu.stanford.hivdb.mutations.MutationType;
+import edu.stanford.hivdb.sequences.UnsequencedRegions;
 import edu.stanford.hivdb.utilities.SimpleMemoizer;
+import edu.stanford.hivdb.viruses.Gene;
 import edu.stanford.hivdb.viruses.Virus;
 
 import static edu.stanford.hivdb.graphql.GeneDef.oGene;
@@ -37,6 +39,23 @@ public class MutationDef {
 	private static DataFetcher<String> mutConsDataFetcher = env -> {
 		Mutation<?> mutation = env.getSource();
 		return mutation.getReference();
+	};
+	
+	private static <T extends Virus<T>> Boolean isUnsequenced(DataFetchingEnvironment env) {
+		Mutation<T> mutation = env.getSource();
+		Gene<T> gene = mutation.getGene();
+		Object src = env.getLocalContext();
+		UnsequencedRegions<T> unseqRegions = UnsequencedRegionsDef.getUnsequencedRegionsFromSource(src, gene);
+		if (unseqRegions == null) {
+			return mutation.isUnsequenced();
+		}
+		else {
+			return mutation.isUnsequenced(unseqRegions);
+		}
+	}
+
+	private static DataFetcher<Boolean> isUnsequencedFetcher = env -> {
+		return isUnsequenced(env);
 	};
 
 	public static SimpleMemoizer<GraphQLEnumType> oMutationType = new SimpleMemoizer<>(
@@ -74,6 +93,10 @@ public class MutationDef {
 		.dataFetcher(
 			coordinates("Mutation", "consensus"),
 			mutConsDataFetcher
+		)
+		.dataFetcher(
+			coordinates("Mutation", "isUnsequenced"),
+			isUnsequencedFetcher
 		)
 		.build();
 	

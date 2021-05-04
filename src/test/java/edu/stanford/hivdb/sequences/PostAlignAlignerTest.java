@@ -1,11 +1,9 @@
 package edu.stanford.hivdb.sequences;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 import java.util.Collections;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Map;
-import java.util.Set;
 
 import org.junit.Test;
 
@@ -14,19 +12,17 @@ import com.google.common.collect.Lists;
 import edu.stanford.hivdb.mutations.MutationSet;
 import edu.stanford.hivdb.sars2.SARS2;
 import edu.stanford.hivdb.viruses.Gene;
-import edu.stanford.hivdb.viruses.Strain;
 
 public class PostAlignAlignerTest {
 	
 	private static SARS2 sars2 = SARS2.getInstance();
-	private static Strain<SARS2> sars2Strain = sars2.getStrain("SARS2");
 	private static Gene<SARS2> RDRP = sars2.getGene("SARS2RdRP");
 	private static Gene<SARS2> SPIKE = sars2.getGene("SARS2S");
 	
 	@Test
 	public void testExecute() {
 		PostAlignAligner<SARS2> postAlign = new PostAlignAligner<>(sars2);
-		List<Map<String, ?>> results = postAlign.execute(
+		postAlign.execute(
 			Lists.newArrayList(
 				new Sequence(
 					"TestSeq description",

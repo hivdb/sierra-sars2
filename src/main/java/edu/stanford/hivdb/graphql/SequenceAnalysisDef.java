@@ -172,7 +172,7 @@ public class SequenceAnalysisDef {
 			)
 			.dataFetcher(
 				coordinates("SequenceAnalysis", "mutations"),
-				new MutationSetDataFetcher<>(virusIns, "mutations")
+				newMutationSetDataFetcher(virusIns, "mutations")
 			)
 			.dataFetchers(makeAlignedGeneSequenceCodeRegistry(virusIns))
 			.build();

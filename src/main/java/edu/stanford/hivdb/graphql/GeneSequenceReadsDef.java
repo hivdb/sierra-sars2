@@ -70,7 +70,7 @@ public class GeneSequenceReadsDef {
 			)
 			.dataFetcher(
 				coordinates("GeneSequenceReads", "mutations"),
-				new MutationSetDataFetcher<>(virusIns, "mutations")
+				newMutationSetDataFetcher(virusIns, "mutations")
 			)
 			.dataFetchers(seqReadsHistogramCodeRegistry)
 			.build()

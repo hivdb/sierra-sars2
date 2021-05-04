@@ -236,7 +236,7 @@ public class SequenceReadsAnalysisDef {
 			)
 			.dataFetcher(
 				coordinates("SequenceReadsAnalysis", "mutations"),
-				new MutationSetDataFetcher<>(virusIns, "mutations")
+				newMutationSetDataFetcher(virusIns, "mutations")
 			)
 			.dataFetchers(oneCodonReadsCoverageCodeRegistry)
 			.dataFetchers(makeGeneSequenceReadsCodeRegistry(virusIns))

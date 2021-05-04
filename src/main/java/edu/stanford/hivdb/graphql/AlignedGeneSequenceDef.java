@@ -42,7 +42,7 @@ public class AlignedGeneSequenceDef {
 			newCodeRegistry()
 			.dataFetcher(
 				coordinates("AlignedGeneSequence", "mutations"),
-				new MutationSetDataFetcher<>(virusIns, "mutations")
+				newMutationSetDataFetcher(virusIns, "mutations")
 			)
 			.build()
 		);

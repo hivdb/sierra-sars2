@@ -27,6 +27,7 @@ import java.util.Set;
 import graphql.schema.DataFetcher;
 import graphql.schema.DataFetchingEnvironment;
 import graphql.schema.PropertyDataFetcher;
+import graphql.schema.PropertyDataFetcherHelper;
 
 public class ExtGraphQL {
 
@@ -46,12 +47,11 @@ public class ExtGraphQL {
 		@SuppressWarnings("unchecked")
 		@Override
 		public T get(DataFetchingEnvironment environment) {
-			T result = super.get(environment);
-			if (result == null) {
-				Object source = environment.getSource();
-		        if (source == null) return null;
-		        result = (T) getPropertyViaMethod(source, propertyName);
-			}
+      Object source = environment.getSource();
+      if (source == null) {
+          return null;
+      }
+			T result = (T) getPropertyViaMethod(propertyName, source, environment);
 			result = postProcess(result, environment);
 			if (result instanceof Set) {
 				// cast all set to list
@@ -70,31 +70,37 @@ public class ExtGraphQL {
 			return object;
 		}
 
-		private Object getPropertyViaMethod(Object object, String propertyName) {
-	        try {
-	            Method method = object.getClass().getMethod(propertyName);
-	            return method.invoke(object);
-	        } catch (NoSuchMethodException e) {
-	        	if (propertyName == "text") {
-	        		return getPropertyViaMethod(object, "toString");
-	        	}
-	            return getPropertyViaField(object, propertyName);
-	        } catch (IllegalAccessException e) {
-	            throw new RuntimeException(e);
-	        } catch (InvocationTargetException e) {
-	            throw new RuntimeException(e);
-	        }
-	    }
-
-		private Object getPropertyViaField(Object object, String propertyName) {
-			try {
-				Field field = object.getClass().getField(propertyName);
-				return field.get(object);
-			} catch (NoSuchFieldException e) {
-				return null;
-	        } catch (IllegalAccessException e) {
-	            throw new RuntimeException(e);
-	        }
+	}
+	
+	public static Object getPropertyViaMethod(String propertyName, Object source, DataFetchingEnvironment environment) {
+		Object defaultMethod = PropertyDataFetcherHelper.getPropertyValue(
+			propertyName, source, environment.getFieldType(), environment);
+		if (defaultMethod != null) {
+			return defaultMethod;
+		}
+		try {
+			Method method = source.getClass().getMethod(propertyName);
+      return method.invoke(source);
+		} catch (NoSuchMethodException e) {
+			if (propertyName == "text") {
+				return getPropertyViaMethod("toString", source, environment);
+			}
+			return getPropertyViaField(source, propertyName);
+		} catch (IllegalAccessException e) {
+			throw new RuntimeException(e);
+		} catch (InvocationTargetException e) {
+			throw new RuntimeException(e);
+		}	
+	}
+	
+	private static Object getPropertyViaField(Object object, String propertyName) {
+		try {
+			Field field = object.getClass().getField(propertyName);
+			return field.get(object);
+		} catch (NoSuchFieldException e) {
+			return null;
+		} catch (IllegalAccessException e) {
+			throw new RuntimeException(e);
 		}
 	}
 

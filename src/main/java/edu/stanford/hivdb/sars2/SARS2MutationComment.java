@@ -1,6 +1,7 @@
 package edu.stanford.hivdb.sars2;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
@@ -14,6 +15,7 @@ import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.http.exceptions.UnirestException;
 
+import edu.stanford.hivdb.mutations.Mutation;
 import edu.stanford.hivdb.mutations.MutationSet;
 import edu.stanford.hivdb.utilities.Json;
 import edu.stanford.hivdb.viruses.Gene;
@@ -46,7 +48,7 @@ public class SARS2MutationComment {
 		public String getVersion() { return commentObj.getVersion(); }
 	}
 	
-	public static List<SARS2BoundMutationComment> query(String cmtVersion, MutationSet<SARS2> mutations) {
+	public static List<SARS2BoundMutationComment> query(String cmtVersion, Collection<Mutation<SARS2>> mutations) {
 		List<SARS2MutationComment> instances = getInstances(cmtVersion);
 		List<SARS2BoundMutationComment> triggeredCmts = new ArrayList<>();
 		for (SARS2MutationComment cmtObj : instances) {
