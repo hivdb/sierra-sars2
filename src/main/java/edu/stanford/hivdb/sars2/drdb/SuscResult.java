@@ -93,22 +93,22 @@ public abstract class SuscResult {
 			if (ineffective != null && (ineffective.equals("both") || ineffective.equals("control"))) {
 				return "undetermined";
 			}
-			if (foldCmp.equals("<")) {
-				if (fold <= PARTIAL_RESIST_FOLD) {
+			if (foldCmp != null && foldCmp.equals("<")) {
+				if (fold != null && fold <= PARTIAL_RESIST_FOLD) {
 					return "susceptible";
 				}
-				else if (fold <= RESIST_FOLD) {
+				else if (fold != null && fold <= RESIST_FOLD) {
 					return "lt-resistant";
 				}
 				else {
 					return "undetermined";
 				}
 			}
-			else if (foldCmp.equals(">")) {
-				if (fold >= RESIST_FOLD) {
+			else if (foldCmp != null && foldCmp.equals(">")) {
+				if (fold != null && fold >= RESIST_FOLD) {
 					return "resistant";
 				}
-				else if (fold >= PARTIAL_RESIST_FOLD) {
+				else if (fold != null && fold >= PARTIAL_RESIST_FOLD) {
 					return "gt-partial-resistance";
 				}
 				else {
@@ -116,10 +116,10 @@ public abstract class SuscResult {
 				}
 			}
 			else if (cumulativeCount == 1) {
-				if (fold < PARTIAL_RESIST_FOLD) {
+				if (fold != null && fold < PARTIAL_RESIST_FOLD) {
 					return "susceptible";
 				}
-				else if (fold < RESIST_FOLD) {
+				else if (fold != null && fold < RESIST_FOLD) {
 					return "partial-resistance";
 				}
 				else {
