@@ -14,6 +14,7 @@ import edu.stanford.hivdb.sars2.SARS2;
 
 public class SuscSummary {
 	private List<SuscResult> items;
+	private String lastUpdate;
 	private transient DescriptiveStatistics cumulativeFold;
 	private transient Integer cumulativeCount;
 	private transient List<AntibodySuscSummary> itemsByAntibody;
@@ -23,6 +24,7 @@ public class SuscSummary {
 	private transient List<VaccineSuscSummary> itemsByVaccine;
 	
 	public static SuscSummary queryAntibodySuscSummary(String drdbVersion, MutationSet<SARS2> queryMuts) {
+		String lastUpdate = DRDB.getInstance(drdbVersion).queryLastUpdate();
 		List<SuscResult> results = (
 			AntibodySuscResult.query(drdbVersion, queryMuts)
 			.stream()
@@ -37,28 +39,30 @@ public class SuscSummary {
 			))
 			.collect(Collectors.toList())
 		);
-		return new SuscSummary(results);
+		return new SuscSummary(results, lastUpdate);
 	}
 	
 	public static SuscSummary queryConvPlasmaSuscSummary(String drdbVersion, MutationSet<SARS2> queryMuts) {
+		String lastUpdate = DRDB.getInstance(drdbVersion).queryLastUpdate();
 		List<SuscResult> results = (
 			ConvPlasmaSuscResult.query(drdbVersion, queryMuts)
 			.stream()
 			.collect(Collectors.toList())
 		);
-		return new SuscSummary(results);
+		return new SuscSummary(results, lastUpdate);
 	}
 
 	public static SuscSummary queryVaccPlasmaSuscSummary(String drdbVersion, MutationSet<SARS2> queryMuts) {
+		String lastUpdate = DRDB.getInstance(drdbVersion).queryLastUpdate();
 		List<SuscResult> results = (
 			VaccPlasmaSuscResult.query(drdbVersion, queryMuts)
 			.stream()
 			.collect(Collectors.toList())
 		);
-		return new SuscSummary(results);
+		return new SuscSummary(results, lastUpdate);
 	}
 	
-	protected SuscSummary(List<SuscResult> items) {
+	protected SuscSummary(List<SuscResult> items, String lastUpdate) {
 		this.items = Collections.unmodifiableList(
 			items.stream()
 			.sorted((itemA, itemB) -> {
@@ -74,7 +78,10 @@ public class SuscSummary {
 			})
 			.collect(Collectors.toList())
 		);
+		this.lastUpdate = lastUpdate;
 	}
+
+	public String getLastUpdate() {	return this.lastUpdate;	}
 	
 	public List<SuscResult> getItems() { return items; }
 
@@ -135,7 +142,8 @@ public class SuscSummary {
 				.stream()
 				.map(entry -> new AntibodySuscSummary(
 					entry.getKey(),
-					entry.getValue()
+					entry.getValue(),
+					this.lastUpdate
 				))
 				.collect(Collectors.toList());
 
@@ -167,7 +175,8 @@ public class SuscSummary {
 				.stream()
 				.map(entry -> new AntibodyClassSuscSummary(
 					entry.getKey(),
-					entry.getValue()
+					entry.getValue(),
+					this.lastUpdate
 				))
 				.collect(Collectors.toList());
 			
@@ -193,7 +202,8 @@ public class SuscSummary {
 				.stream()
 				.map(entry -> new ResistLevelSuscSummary(
 					entry.getKey(),
-					entry.getValue()
+					entry.getValue(),
+					this.lastUpdate
 				))
 				.collect(Collectors.toList());
 			
@@ -217,7 +227,8 @@ public class SuscSummary {
 				.stream()
 				.map(entry -> new VaccineSuscSummary(
 					entry.getKey(),
-					entry.getValue()
+					entry.getValue(),
+					this.lastUpdate
 				))
 				.collect(Collectors.toList());
 			
@@ -260,7 +271,8 @@ public class SuscSummary {
 				.stream()
 				.map(entry -> new MutsSuscSummary(
 					entry.getKey(),
-					entry.getValue()
+					entry.getValue(),
+					this.lastUpdate
 				))
 				.collect(Collectors.toList());
 

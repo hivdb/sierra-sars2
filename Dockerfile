@@ -1,10 +1,15 @@
-FROM hivdb/tomcat-with-nucamino:latest as builder
-WORKDIR /sierra
+FROM hivdb/tomcat-with-nucamino:latest as dependencies-installer
 COPY gradlew build.gradle settings.gradle /sierra/
+COPY gradle/wrapper/gradle-wrapper.jar gradle/wrapper/gradle-wrapper.properties /sierra/gradle/wrapper/
+WORKDIR /sierra
+RUN /sierra/gradlew dependencies
+
+FROM hivdb/tomcat-with-nucamino:latest as builder
+COPY --from=dependencies-installer /sierra/ /sierra/
+COPY --from=dependencies-installer /root/ /root/
+WORKDIR /sierra
 COPY sierra-core /sierra/sierra-core
 COPY asi_interpreter /sierra/asi_interpreter 
-COPY gradle /sierra/gradle
-RUN /sierra/gradlew dependencies
 COPY src /sierra/src
 RUN /sierra/gradlew assemble
 RUN mv build/libs/Sierra-SARS2-*.war build/libs/Sierra-SARS2.war 2>/dev/null

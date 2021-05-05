@@ -57,6 +57,7 @@ public class DRDB {
 	}
 	
 	private final Connection conn;
+	private String lastUpdate;
 	
 	private DRDB(String resourcePath) {
 		try {
@@ -440,6 +441,23 @@ public class DRDB {
 			}
 		);
 		return results;
+	}
+	
+	public String queryLastUpdate() {
+		if (this.lastUpdate == null) {
+			this.lastUpdate = queryAll(
+				"SELECT last_update FROM last_update WHERE scope='global'",
+				rs -> {
+					try {
+						return rs.getString("last_update");
+					}
+					catch (SQLException e) {
+						throw new RuntimeException(e);
+					}
+				}
+			).get(0);
+		}
+		return this.lastUpdate;
 	}
 
 	public List<Map<String, Object>> querySuscResultsForImmuPlasma(MutationSet<SARS2> mutations) {

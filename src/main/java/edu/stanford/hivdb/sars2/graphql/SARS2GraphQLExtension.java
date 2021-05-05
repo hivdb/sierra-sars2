@@ -3,6 +3,7 @@ package edu.stanford.hivdb.sars2.graphql;
 import static graphql.Scalars.*;
 
 import edu.stanford.hivdb.sars2.drdb.Antibody;
+import edu.stanford.hivdb.sars2.drdb.DRDB;
 import edu.stanford.hivdb.viruses.VirusGraphQLExtension;
 import graphql.schema.DataFetcher;
 import graphql.schema.GraphQLCodeRegistry;
@@ -34,6 +35,11 @@ public class SARS2GraphQLExtension implements VirusGraphQLExtension {
 			);
 		}
 		return antibodies;
+	};
+	
+	private static DataFetcher<String> drdbLastUpdateDataFetcher = env -> {
+		String drdbVersion = env.getArgument("drdbVersion");
+		return DRDB.getInstance(drdbVersion).queryLastUpdate();
 	};
 
 	@Override
@@ -105,6 +111,14 @@ public class SARS2GraphQLExtension implements VirusGraphQLExtension {
 			coordinates("Viewer", "antibodies"),
 			antibodiesDataFetcher
 		)
+		.dataFetcher(
+			coordinates("Root", "drdbLastUpdate"),
+			drdbLastUpdateDataFetcher		
+		)
+		.dataFetcher(
+			coordinates("Viewer", "drdbLastUpdate"),
+			drdbLastUpdateDataFetcher		
+		)
 		.build();
 	}
 	
@@ -112,6 +126,7 @@ public class SARS2GraphQLExtension implements VirusGraphQLExtension {
 	public GraphQLObjectType.Builder extendObjectBuilder(String objectName, GraphQLObjectType.Builder builder) {
 		switch (objectName) {
 			case "Root":
+				builder = addDRDBLastUpdateField(builder);
 				builder = addAntibodiesField(builder);
 				break;
 			case "SequenceAnalysis":
@@ -132,6 +147,23 @@ public class SARS2GraphQLExtension implements VirusGraphQLExtension {
 				throw new UnsupportedOperationException();
 		}
 		return builder;
+	}
+	
+	private GraphQLObjectType.Builder addDRDBLastUpdateField(GraphQLObjectType.Builder builder) {
+		return builder
+			.field(field -> field
+				.type(GraphQLString)
+				.name("drdbLastUpdate")
+				.argument(arg -> arg
+					.type(new GraphQLNonNull(GraphQLString))
+					.name("drdbVersion")
+					.description(
+						"The version of DRDB to be used by this query. A full list of DRDB versions " +
+						"can be found here: https://github.com/hivdb/chiro-cms/tree/master/downloads/covid-drdb"
+					)
+				)
+				.description("The last update time of Covid-DRDB.")
+			);
 	}
 	
 	private GraphQLObjectType.Builder addAntibodiesField(GraphQLObjectType.Builder builder) {

@@ -16,8 +16,12 @@ public class MutsSuscSummary extends SuscSummary {
 	private transient Integer numVariantOnlyMutations;
 	private transient Integer numQueryOnlyMutations;
 
-	public MutsSuscSummary(MutationSet<SARS2> mutations, List<SuscResult> suscResults) {
-		super(suscResults);
+	public MutsSuscSummary(
+		MutationSet<SARS2> mutations,
+		List<SuscResult> suscResults,
+		String lastUpdate
+	) {
+		super(suscResults, lastUpdate);
 		this.mutations = mutations;
 	}
 

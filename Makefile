@@ -5,7 +5,7 @@ sync-drdb:
 	@cp -v $$(ls ../chiro-cms/downloads/covid-drdb/*.db | sort -r | head -1) src/main/resources/covid-drdb.db
 
 build:
-	@docker build --no-cache -t ${DOCKERREPO} .
+	@docker build -t ${DOCKERREPO} .
 
 force-build:
 	@docker build --no-cache -t ${DOCKERREPO} .

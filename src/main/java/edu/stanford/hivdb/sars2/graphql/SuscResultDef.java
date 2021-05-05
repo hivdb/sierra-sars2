@@ -108,6 +108,10 @@ public class SuscResultDef {
 		.name("SuscSummary")
 		.description("Root susceptibility summary.")
 		.field(field -> field
+			.name("lastUpdate")
+			.type(GraphQLString)
+			.description("Last update of the database."))
+		.field(field -> field
 			.name("antibodies")
 			.type(new GraphQLList(AntibodyDef.oAntibody))
 			.description("Group antibody/antibody combination (only available for `itemsByAntibodies`)"))

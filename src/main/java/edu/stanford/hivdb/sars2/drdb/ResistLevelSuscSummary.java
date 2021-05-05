@@ -7,9 +7,10 @@ public class ResistLevelSuscSummary extends SuscSummary {
 
 	public ResistLevelSuscSummary(
 		String resistanceLevel,
-		List<SuscResult> items
+		List<SuscResult> items,
+		String lastUpdate
 	) {
-		super(items);
+		super(items, lastUpdate);
 		this.resistanceLevel = resistanceLevel;
 	}
 

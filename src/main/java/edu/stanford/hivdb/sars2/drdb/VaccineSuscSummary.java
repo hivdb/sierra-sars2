@@ -7,9 +7,10 @@ public class VaccineSuscSummary extends SuscSummary {
 
 	public VaccineSuscSummary(
 		String vaccineName,
-		List<SuscResult> items
+		List<SuscResult> items,
+		String lastUpdate
 	) {
-		super(items);
+		super(items, lastUpdate);
 		this.vaccineName = vaccineName;
 	}
 
