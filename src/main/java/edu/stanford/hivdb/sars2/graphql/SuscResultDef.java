@@ -127,6 +127,14 @@ public class SuscResultDef {
 			.name("vaccineName")
 			.type(GraphQLString)
 			.description("Vaccine name (only available for `itemsByVaccine`)"))
+		.field(field -> field
+			.name("vaccinePriority")
+			.type(GraphQLInt)
+			.description("Vaccine priority (only available for `itemsByVaccine`)"))
+		.field(field -> field
+			.name("vaccineType")
+			.type(GraphQLString)
+			.description("Vaccine type (only available for `itemsByVaccine`)"))
 		.field(field -> MutationSetDef.newMutationSet("SARS2", field, "mutations")
 			.description("Variant mutations (only available for `itemsByMutations`)"))
 		.field(field -> field

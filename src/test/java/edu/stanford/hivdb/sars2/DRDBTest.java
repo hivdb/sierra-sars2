@@ -61,7 +61,7 @@ public class DRDBTest {
 		MutationSet<SARS2> mutations = MutationSet.parseString(
 			virusIns, "S:452R"
 		);
-		List<Map<String, Object>> results = drdbObj.querySuscResultsForImmuPlasma(mutations);
+		List<Map<String, Object>> results = drdbObj.querySuscResultsForVaccPlasma(mutations);
 		assertTrue(results.size() > 14);
 		assertEquals(
 			Set.of(

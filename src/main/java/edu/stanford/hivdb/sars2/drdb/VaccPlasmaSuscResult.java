@@ -10,6 +10,8 @@ import edu.stanford.hivdb.sars2.SARS2;
 public class VaccPlasmaSuscResult extends SuscResult {
 
 	private final String vaccineName;
+	private final Integer vaccinePriority;
+	private final String vaccineType;
 	private final String cumulativeGroup;
 	
 	public static List<VaccPlasmaSuscResult> query(String drdbVersion, MutationSet<SARS2> queryMuts) {
@@ -17,9 +19,10 @@ public class VaccPlasmaSuscResult extends SuscResult {
 		final MutationSet<SARS2> finalQueryMuts = prepareQueryMutations(queryMuts);
 		List<VaccPlasmaSuscResult> results = (
 			drdb
-			.querySuscResultsForImmuPlasma(finalQueryMuts)
+			.querySuscResultsForVaccPlasma(finalQueryMuts)
 			.stream()
 			.map(d -> new VaccPlasmaSuscResult(drdbVersion, finalQueryMuts, d))
+			.sorted((a, b) -> a.getVaccinePriority() - b.getVaccinePriority())
 			.collect(Collectors.toList())
 		);
 		
@@ -34,11 +37,21 @@ public class VaccPlasmaSuscResult extends SuscResult {
 		super(drdbVersion, queryMuts, suscData);
 
 		this.vaccineName = (String) suscData.get("vaccineName");
+		this.vaccinePriority = (Integer) suscData.get("vaccinePriority");
+		this.vaccineType = (String) suscData.get("vaccineType");
 		this.cumulativeGroup = (String) suscData.get("cumulativeGroup");
 	}
 	
 	public String getVaccineName() {
 		return vaccineName;
+	}
+	
+	public Integer getVaccinePriority() {
+		return vaccinePriority;
+	}
+	
+	public String getVaccineType() {
+		return vaccineType;
 	}
 	
 	public String getCumulativeGroup() {

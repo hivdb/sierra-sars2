@@ -460,7 +460,7 @@ public class DRDB {
 		return this.lastUpdate;
 	}
 
-	public List<Map<String, Object>> querySuscResultsForImmuPlasma(MutationSet<SARS2> mutations) {
+	public List<Map<String, Object>> querySuscResultsForVaccPlasma(MutationSet<SARS2> mutations) {
 		List<Map<String, Object>> results = querySuscResults(
 			mutations,
 			
@@ -480,11 +480,14 @@ public class DRDB {
 			"resistance_level, " +
 			"cumulative_count, " +
 			"RXVP.cumulative_group, " +
-			"RXVP.vaccine_name ",
+			"RXVP.vaccine_name, " +
+			"V.priority AS vaccine_priority, " +
+			"V.vaccine_type",
 			
 			/* joins = */
 			"JOIN rx_vacc_plasma RXVP ON S.ref_name = RXVP.ref_name AND S.rx_name = RXVP.rx_name " +
-			"JOIN articles A ON S.ref_name = A.ref_name",
+			"JOIN articles A ON S.ref_name = A.ref_name " +
+			"JOIN vaccines V ON RXVP.vaccine_name = V.vaccine_name",
 
 			/* where = */
 			"TRUE",
@@ -499,6 +502,8 @@ public class DRDB {
 					result.put("refURL", rs.getString("url"));
 					result.put("rxName", rs.getString("rx_name"));
 					result.put("vaccineName", rs.getString("vaccine_name"));
+					result.put("vaccinePriority", rs.getInt("vaccine_priority"));
+					result.put("vaccineType", rs.getString("vaccine_type"));
 					result.put("controlVariantName", rs.getString("control_variant_name"));
 					result.put("variantName", rs.getString("variant_name"));
 					result.put("assay", rs.getString("assay"));
