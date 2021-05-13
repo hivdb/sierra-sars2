@@ -162,8 +162,8 @@ public class DRDB {
 			"  FROM susc_results S " +
 			joins +
 			"  WHERE EXISTS(" +
-			"    SELECT 1 FROM variant_mutations M " +
-			"    WHERE S.variant_name = M.variant_name AND (" +
+			"    SELECT 1 FROM isolate_mutations M " +
+			"    WHERE S.iso_name = M.iso_name AND (" +
 			mutQuery +
 			"  )) AND " +
 			// exclude results that are ineffective to control
@@ -194,14 +194,14 @@ public class DRDB {
 		);
 	}
 	
-	public List<Map<String, Object>> queryAllVirusVariants() {
-		List<Map<String, Object>> variants = queryAll(
-			"SELECT variant_name, display_name FROM virus_variants",
+	public List<Map<String, Object>> queryAllIsolates() {
+		List<Map<String, Object>> isolates = queryAll(
+			"SELECT iso_name, var_name FROM isolates",
 			rs -> {
 				try {
 					Map<String, Object> result = new LinkedHashMap<>();
-					result.put("variantName", rs.getString("variant_name"));
-					result.put("displayName", rs.getString("display_name"));
+					result.put("isoName", rs.getString("iso_name"));
+					result.put("varName", rs.getString("var_name"));
 					return result;
 				}
 				catch(SQLException e) {
@@ -211,13 +211,13 @@ public class DRDB {
 		);
 		SARS2 sars2 = SARS2.getInstance();
 		Map<String, List<Pair<String, Mutation<SARS2>>>> mutations = groupAll(
-			"SELECT variant_name, gene, position, amino_acid " +
-			"FROM variant_mutations WHERE gene='S'",
+			"SELECT iso_name, gene, position, amino_acid " +
+			"FROM isolate_mutations WHERE gene='S'",
 			r -> r.getLeft(),
 			rs -> {
 				try {
 					return Pair.of(
-						rs.getString("variant_name"),
+						rs.getString("iso_name"),
 						new AAMutation<>(
 							sars2.getMainStrain().getGene(rs.getString("gene")),
 							rs.getInt("position"),
@@ -234,11 +234,11 @@ public class DRDB {
 				}
 			}
 		);
-		for (Map<String, Object> variant : variants) {
-			variant.put(
+		for (Map<String, Object> isolate : isolates) {
+			isolate.put(
 				"mutations",
 				mutations.getOrDefault(
-					(String) variant.get("variantName"),
+					(String) isolate.get("isoName"),
 					Collections.emptyList()
 				)
 				.stream()
@@ -246,7 +246,7 @@ public class DRDB {
 				.collect(Collectors.toList())
 			);
 		}
-		return variants;
+		return isolates;
 	}
 	
 	public List<Map<String, Object>> queryAllAntibodies() {
@@ -327,8 +327,8 @@ public class DRDB {
 			"A.doi, " +
 			"A.url, " +
 			"S.rx_name, " +
-			"S.control_variant_name, " +
-			"S.variant_name, " +
+			"S.control_iso_name, " +
+			"S.iso_name, " +
 			"ordinal_number, " +
 			"assay, " +
 			"section, " +
@@ -363,8 +363,8 @@ public class DRDB {
 					result.put("refURL", rs.getString("url"));
 					result.put("rxName", rs.getString("rx_name"));
 					result.put("abNames", Set.of(rs.getString("ab_names").split(QUOTED_LIST_JOIN_UNIQ)));
-					result.put("controlVariantName", rs.getString("control_variant_name"));
-					result.put("variantName", rs.getString("variant_name"));
+					result.put("controlIsoName", rs.getString("control_iso_name"));
+					result.put("isoName", rs.getString("iso_name"));
 					result.put("assay", rs.getString("assay"));
 					result.put("section", rs.getString("section"));
 					result.put("ordinalNumber", rs.getInt("ordinal_number"));
@@ -392,8 +392,8 @@ public class DRDB {
 			"A.doi, " +
 			"A.url, " +
 			"S.rx_name, " +
-			"S.control_variant_name, " +
-			"S.variant_name, " +
+			"S.control_iso_name, " +
+			"S.iso_name, " +
 			"ordinal_number, " +
 			"assay, " +
 			"section, " +
@@ -421,8 +421,8 @@ public class DRDB {
 					result.put("refDOI", rs.getString("doi"));
 					result.put("refURL", rs.getString("url"));
 					result.put("rxName", rs.getString("rx_name"));
-					result.put("controlVariantName", rs.getString("control_variant_name"));
-					result.put("variantName", rs.getString("variant_name"));
+					result.put("controlIsoName", rs.getString("control_iso_name"));
+					result.put("isoName", rs.getString("iso_name"));
 					result.put("assay", rs.getString("assay"));
 					result.put("section", rs.getString("section"));
 					result.put("ordinalNumber", rs.getInt("ordinal_number"));
@@ -469,8 +469,8 @@ public class DRDB {
 			"A.doi, " +
 			"A.url, " +
 			"S.rx_name, " +
-			"S.control_variant_name, " +
-			"S.variant_name, " +
+			"S.control_iso_name, " +
+			"S.iso_name, " +
 			"assay, " +
 			"section, " +
 			"ordinal_number, " +
@@ -504,8 +504,8 @@ public class DRDB {
 					result.put("vaccineName", rs.getString("vaccine_name"));
 					result.put("vaccinePriority", rs.getInt("vaccine_priority"));
 					result.put("vaccineType", rs.getString("vaccine_type"));
-					result.put("controlVariantName", rs.getString("control_variant_name"));
-					result.put("variantName", rs.getString("variant_name"));
+					result.put("controlIsoName", rs.getString("control_iso_name"));
+					result.put("isoName", rs.getString("iso_name"));
 					result.put("assay", rs.getString("assay"));
 					result.put("section", rs.getString("section"));
 					result.put("ordinalNumber", rs.getInt("ordinal_number"));

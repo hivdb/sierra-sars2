@@ -53,8 +53,8 @@ public abstract class SuscResult {
 		);
 	}
 	
-	public enum VariantMatchType {
-		EQUAL,     // variant mutation set equals to query mutation set
+	public enum IsolateMatchType {
+		EQUAL,     // isolate mutation set equals to query mutation set
 		SUPERSET,  //                      is the superset of query mutation set
 		SUBSET,    //                      is the subset of query mutation set
 		OVERLAP    //                      overlaps with query mutation set
@@ -140,8 +140,8 @@ public abstract class SuscResult {
 	private final String drdbVersion;
 	private final String refName;
 	private final String rxName;
-	private final String controlVariantName;
-	private final String variantName;
+	private final String controlIsoName;
+	private final String isoName;
 	private final Integer ordinalNumber;
 	private final String section;
 	private final String assay;
@@ -153,9 +153,9 @@ public abstract class SuscResult {
 	
 	private transient Article reference;
 	private transient String resistanceLevel;
-	private transient VirusVariant controlVirusVariant;
-	private transient VirusVariant virusVariant;
-	private transient MutationSet<SARS2> comparableVariantMutations;
+	private transient Isolate controlIsolate;
+	private transient Isolate isolate;
+	private transient MutationSet<SARS2> comparableIsolateMutations;
 
 	protected SuscResult(
 		String drdbVersion,
@@ -167,8 +167,8 @@ public abstract class SuscResult {
 		
 		refName = (String) suscData.get("refName");
 		rxName = (String) suscData.get("rxName");
-		controlVariantName = (String) suscData.get("controlVariantName");
-		variantName = (String) suscData.get("variantName");
+		controlIsoName = (String) suscData.get("controlIsoName");
+		isoName = (String) suscData.get("isoName");
 		ordinalNumber = (Integer) suscData.get("ordinalNumber");
 		assay = (String) suscData.get("assay");
 		section = (String) suscData.get("section");
@@ -193,18 +193,18 @@ public abstract class SuscResult {
 		return reference;
 	}
 
-	public VirusVariant getControlVirusVariant() {
-		if (controlVirusVariant == null) {
-			controlVirusVariant = VirusVariant.getInstance(drdbVersion, controlVariantName);
+	public Isolate getControlIsolate() {
+		if (controlIsolate == null) {
+			controlIsolate = Isolate.getInstance(drdbVersion, controlIsoName);
 		}
-		return controlVirusVariant;
+		return controlIsolate;
 	}
 
-	public VirusVariant getVirusVariant() {
-		if (virusVariant == null) {
-			virusVariant = VirusVariant.getInstance(drdbVersion, variantName);
+	public Isolate getIsolate() {
+		if (isolate == null) {
+			isolate = Isolate.getInstance(drdbVersion, isoName);
 		}
-		return virusVariant;
+		return isolate;
 	}
 
 	public String getRefName() { return refName; }
@@ -217,46 +217,46 @@ public abstract class SuscResult {
 	public String getIneffective() { return ineffective; }
 	public Integer getCumulativeCount() { return cumulativeCount; }
 
-	public VariantMatchType getMatchType() {
-		MutationSet<SARS2> varMutations = getComparableVariantMutations();
+	public IsolateMatchType getMatchType() {
+		MutationSet<SARS2> varMutations = getComparableIsolateMutations();
 		if (varMutations.equals(queryMuts)) {
-			return VariantMatchType.EQUAL;
+			return IsolateMatchType.EQUAL;
 		}
 		else if (varMutations.containsAll(queryMuts)) {
-			return VariantMatchType.SUPERSET;
+			return IsolateMatchType.SUPERSET;
 		}
 		else if (queryMuts.containsAll(varMutations)) {
-			return VariantMatchType.SUBSET;
+			return IsolateMatchType.SUBSET;
 		}
-		return VariantMatchType.OVERLAP;
+		return IsolateMatchType.OVERLAP;
 	}
 	
 	/**
-	 * Internal use only for providing comparable variant mutations (v.s. queryMuts)
+	 * Internal use only for providing comparable isolate mutations (v.s. queryMuts)
 	 * of SuscSummary
 	 * 
 	 * @return MutationSet
 	 */
-	protected MutationSet<SARS2> getComparableVariantMutations() {
-		if (comparableVariantMutations == null) {
-			comparableVariantMutations = prepareQueryMutations(getVirusVariant().getMutations());
+	protected MutationSet<SARS2> getComparableIsolateMutations() {
+		if (comparableIsolateMutations == null) {
+			comparableIsolateMutations = prepareQueryMutations(getIsolate().getMutations());
 		}
-		return comparableVariantMutations;
+		return comparableIsolateMutations;
 	}
 	
-	public Integer getNumVariantOnlyMutations() {
-		MutationSet<SARS2> variantOnlyMutations = getComparableVariantMutations().subtractsBy(queryMuts);
-		Integer numVariantOnlyMuts = variantOnlyMutations.getSplitted().size();
+	public Integer getNumIsolateOnlyMutations() {
+		MutationSet<SARS2> isolateOnlyMutations = getComparableIsolateMutations().subtractsBy(queryMuts);
+		Integer numIsolateOnlyMuts = isolateOnlyMutations.getSplitted().size();
 		for (Set<Mutation<SARS2>> rangeDel : RANGE_DELETIONS) {
-			if (!variantOnlyMutations.intersectsWith(rangeDel).isEmpty()) {
-				numVariantOnlyMuts -= rangeDel.size() - 1;
+			if (!isolateOnlyMutations.intersectsWith(rangeDel).isEmpty()) {
+				numIsolateOnlyMuts -= rangeDel.size() - 1;
 			}
 		}
-		return numVariantOnlyMuts;
+		return numIsolateOnlyMuts;
 	}
 	
 	public Integer getNumQueryOnlyMutations() {
-		MutationSet<SARS2> queryOnlyMutations = queryMuts.subtractsBy(getComparableVariantMutations());
+		MutationSet<SARS2> queryOnlyMutations = queryMuts.subtractsBy(getComparableIsolateMutations());
 		Integer numQueryOnlyMuts = queryOnlyMutations.getSplitted().size();
 		for (Set<Mutation<SARS2>> rangeDel : RANGE_DELETIONS) {
 			if (!queryOnlyMutations.intersectsWith(rangeDel).isEmpty()) {

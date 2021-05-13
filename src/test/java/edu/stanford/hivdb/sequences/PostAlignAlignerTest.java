@@ -2,8 +2,9 @@ package edu.stanford.hivdb.sequences;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
+import java.util.Collection;
 import java.util.Collections;
-import java.util.List;
+import java.util.HashSet;
 
 import org.junit.Test;
 
@@ -66,7 +67,7 @@ public class PostAlignAlignerTest {
 			)
 		);
 		assertEquals(
-			"CRITICAL: There were no Protease, Reverse Transcriptase, or Integrase genes found, refuse to process.",
+			"CRITICAL: The input is probably not a SARS-CoV-2 sequence, refuse to process.",
 			alignResult.getValidationResults().get(0).toString()
 		);
 		assertEquals(Collections.emptyList(), alignResult.getAvailableGenes());
@@ -77,8 +78,8 @@ public class PostAlignAlignerTest {
 		Sequence testSeq = Sequence.fromGenbank("LR824523");
 		PostAlignAligner<SARS2> postAlign = new PostAlignAligner<>(sars2);
 		AlignedSequence<SARS2> alignResult = postAlign.align(testSeq);
-		List<Gene<SARS2>> expectedGenes = Lists.newArrayList(RDRP, SPIKE);
-		assertEquals(expectedGenes, alignResult.getAvailableGenes());
+		Collection<Gene<SARS2>> expectedGenes = sars2.getMainStrain().getGenes();
+		assertEquals(expectedGenes, new HashSet<>(alignResult.getAvailableGenes()));
 
 		AlignedGeneSeq<SARS2> rdrpGeneAlignedSeq = alignResult.getAlignedGeneSequence(RDRP);
 		assertEquals(1, rdrpGeneAlignedSeq.getFirstAA());

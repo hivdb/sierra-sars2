@@ -7,13 +7,13 @@ import java.util.stream.Collectors;
 
 import edu.stanford.hivdb.mutations.MutationSet;
 import edu.stanford.hivdb.sars2.SARS2;
-import edu.stanford.hivdb.sars2.drdb.SuscResult.VariantMatchType;
+import edu.stanford.hivdb.sars2.drdb.SuscResult.IsolateMatchType;
 
 public class MutsSuscSummary extends SuscSummary {
 	private final MutationSet<SARS2> mutations;
-	private transient Set<VirusVariant> hitVariants;
-	private transient VariantMatchType matchType;
-	private transient Integer numVariantOnlyMutations;
+	private transient Set<Isolate> hitIsolates;
+	private transient IsolateMatchType matchType;
+	private transient Integer numIsolateOnlyMutations;
 	private transient Integer numQueryOnlyMutations;
 
 	public MutsSuscSummary(
@@ -29,30 +29,30 @@ public class MutsSuscSummary extends SuscSummary {
 		return mutations;
 	}
 
-	public Set<VirusVariant> getHitVariants() {
-		if (hitVariants == null) {
-			hitVariants = Collections
+	public Set<Isolate> getHitIsolates() {
+		if (hitIsolates == null) {
+			hitIsolates = Collections
 				.unmodifiableSet(
 					getItems().stream()
-					.map(sr -> sr.getVirusVariant())
+					.map(sr -> sr.getIsolate())
 					.collect(Collectors.toSet())
 				);
 		}
-		return hitVariants;
+		return hitIsolates;
 	}
 	
-	public VariantMatchType getVariantMatchType() {
+	public IsolateMatchType getIsolateMatchType() {
 		if (matchType == null) {
 			matchType = getItems().get(0).getMatchType();
 		}
 		return matchType;
 	}
 	
-	public Integer getNumVariantOnlyMutations() {
-		if (numVariantOnlyMutations == null) {
-			numVariantOnlyMutations = getItems().get(0).getNumVariantOnlyMutations();
+	public Integer getNumIsolateOnlyMutations() {
+		if (numIsolateOnlyMutations == null) {
+			numIsolateOnlyMutations = getItems().get(0).getNumIsolateOnlyMutations();
 		}
-		return numVariantOnlyMutations;
+		return numIsolateOnlyMutations;
 	}
 
 	public Integer getNumQueryOnlyMutations() {

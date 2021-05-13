@@ -61,13 +61,13 @@ public class SuscResultDef {
 			.name("rxName")
 			.description("Treatment free text name."))
 		.field(field -> field
-			.type(VirusVariantDef.oVirusVariant)
-			.name("controlVirusVariant")
-			.description("The control virus varaint of the susceptibility testing."))
+			.type(IsolateDef.oIsolate)
+			.name("controlIsolate")
+			.description("The control isolate of the susceptibility testing."))
 		.field(field -> field
-			.type(VirusVariantDef.oVirusVariant)
-			.name("virusVariant")
-			.description("The experimental virus variant of the susceptibility testing."))
+			.type(IsolateDef.oIsolate)
+			.name("isolate")
+			.description("The experimental isolate of the susceptibility testing."))
 		.field(field -> field
 			.type(GraphQLString)
 			.name("assay")
@@ -79,7 +79,7 @@ public class SuscResultDef {
 		.field(field -> field
 			.type(GraphQLInt)
 			.name("ordinalNumber")
-			.description("Tell apart results when multiple ones are available for the same `refName-rxName-controlVariantName-variantName` combinations."))
+			.description("Tell apart results when multiple ones are available for the same `refName-rxName-controlIsoName-isoName` combinations."))
 		.field(field -> field
 			.type(GraphQLString)
 			.name("foldCmp")
@@ -87,11 +87,11 @@ public class SuscResultDef {
 		.field(field -> field
 			.type(GraphQLFloat)
 			.name("fold")
-			.description("Fold change: defined as the IC50 (IC80/IC90 if IC50 is not avaiable) number of experimental virus variant divided by the control virus variant."))
+			.description("Fold change: defined as the IC50 (IC80/IC90 if IC50 is not avaiable) number of experimental isolate divided by the control isolate."))
 		.field(field -> field
 			.type(GraphQLString)
 			.name("ineffective")
-			.description("When value is provided, the treatment has no effect on control variant or experimental variant."))
+			.description("When value is provided, the treatment has no effect on control isolate or experimental isolate."))
 		.field(field -> field
 			.type(GraphQLString)
 			.name("resistanceLevel")
@@ -136,19 +136,19 @@ public class SuscResultDef {
 			.type(GraphQLString)
 			.description("Vaccine type (only available for `itemsByVaccine`)"))
 		.field(field -> MutationSetDef.newMutationSet("SARS2", field, "mutations")
-			.description("Variant mutations (only available for `itemsByMutations`)"))
+			.description("Isolate mutations (only available for `itemsByMutations`)"))
 		.field(field -> field
-			.type(new GraphQLList(VirusVariantDef.oVirusVariant))
-			.name("hitVariants")
-			.description("Virus variants matched the query mutation set (only available for `itemsByMutations`)."))
+			.type(new GraphQLList(IsolateDef.oIsolate))
+			.name("hitIsolates")
+			.description("Isolates matched the query mutation set (only available for `itemsByMutations`)."))
 		.field(field -> field
 			.type(GraphQLString)
-			.name("variantMatchType")
-			.description("Type of how perfectly the query mutations matches variant mutations. Valid value: `EQUAL`, `SUPERSET`, `SUBSET`, and `OVERLAP`."))
+			.name("isolateMatchType")
+			.description("Type of how perfectly the query mutations matches isolate mutations. Valid value: `EQUAL`, `SUPERSET`, `SUBSET`, and `OVERLAP`."))
 		.field(field -> field
 			.type(GraphQLInt)
-			.name("numVariantOnlyMutations")
-			.description("Number of mutations that are only appeared in variant mutations. D614G and ranged deletions are properly handled."))
+			.name("numIsolateOnlyMutations")
+			.description("Number of mutations that are only appeared in isolate mutations. D614G and ranged deletions are properly handled."))
 		.field(field -> field
 			.type(GraphQLInt)
 			.name("numQueryOnlyMutations")

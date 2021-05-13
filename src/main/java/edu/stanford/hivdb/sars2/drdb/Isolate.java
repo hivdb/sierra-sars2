@@ -10,16 +10,16 @@ import edu.stanford.hivdb.mutations.Mutation;
 import edu.stanford.hivdb.mutations.MutationSet;
 import edu.stanford.hivdb.sars2.SARS2;
 
-public class VirusVariant {
+public class Isolate {
 
-	private final static Map<String, Map<String, VirusVariant>> singletons = DRDB.initVersionalSingletons();
+	private final static Map<String, Map<String, Isolate>> singletons = DRDB.initVersionalSingletons();
 
 	private static void updateSingletons(String drdbVersion) {
 		DRDB.addVersionToVersionalSingletons(drdbVersion, singletons, drdb -> {
-			List<Map<String, Object>> allVVs = drdb.queryAllVirusVariants();
+			List<Map<String, Object>> allVVs = drdb.queryAllIsolates();
 			return (
 				allVVs.stream()
-				.map(vv -> new VirusVariant(drdb, vv))
+				.map(vv -> new Isolate(drdb, vv))
 				.collect(Collectors.toMap(
 					vs -> vs.getName(),
 					vs -> vs,
@@ -30,23 +30,23 @@ public class VirusVariant {
 		});
 	}
 
-	public static VirusVariant getInstance(String drdbVersion, String variantName) {
+	public static Isolate getInstance(String drdbVersion, String isoName) {
 		updateSingletons(drdbVersion);
-		return singletons.get(drdbVersion).get(variantName);
+		return singletons.get(drdbVersion).get(isoName);
 	}
 
-	public static Collection<VirusVariant> getAllInstances(String drdbVersion) {
+	public static Collection<Isolate> getAllInstances(String drdbVersion) {
 		updateSingletons(drdbVersion);
 		return singletons.get(drdbVersion).values();
 	}
 
-	private final String variantName;
-	private final String displayName;
+	private final String isoName;
+	private final String varName;
 	private final MutationSet<SARS2> mutations;
 
-	private VirusVariant(DRDB drdb, Map<String, Object> refData) {
-		variantName = (String) refData.get("variantName");
-		displayName = (String) refData.get("displayName");
+	private Isolate(DRDB drdb, Map<String, Object> refData) {
+		isoName = (String) refData.get("isoName");
+		varName = (String) refData.get("varName");
 
 		@SuppressWarnings("unchecked")
 		List<Mutation<SARS2>> mutList = (List<Mutation<SARS2>>) refData.get("mutations");
@@ -54,9 +54,9 @@ public class VirusVariant {
 		mutations = new MutationSet<>(mutList);
 	}
 
-	public String name() { return variantName; }
-	public String getName() { return variantName; }
-	public String getDisplayName() { return displayName; }
+	public String name() { return isoName; }
+	public String getName() { return isoName; }
+	public String getVariantName() { return varName; }
 
 	public MutationSet<SARS2> getMutations() { return mutations; }
 	
@@ -66,7 +66,7 @@ public class VirusVariant {
 	
 	@Override
 	public String toString() {
-		return variantName;
+		return isoName;
 	}
 
 }

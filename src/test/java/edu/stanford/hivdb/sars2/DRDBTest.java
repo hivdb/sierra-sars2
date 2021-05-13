@@ -12,11 +12,11 @@ import edu.stanford.hivdb.mutations.MutationSet;
 import edu.stanford.hivdb.sars2.drdb.Antibody;
 import edu.stanford.hivdb.sars2.drdb.Article;
 import edu.stanford.hivdb.sars2.drdb.DRDB;
-import edu.stanford.hivdb.sars2.drdb.VirusVariant;
+import edu.stanford.hivdb.sars2.drdb.Isolate;
 
 public class DRDBTest {
 
-	private final String drdbVer = "20210331";
+	private final String drdbVer = "20210512-slim";
 	private final SARS2 virusIns = SARS2.getInstance();
 	private final DRDB drdbObj = DRDB.getInstance(drdbVer);
 
@@ -30,7 +30,7 @@ public class DRDBTest {
 		assertEquals(
 			Set.of(
 				"refName", "refDOI", "refURL", "rxName",
-				"abNames", "controlVariantName", "variantName", "assay",
+				"abNames", "controlIsoName", "isoName", "assay",
 				"section", "ordinalNumber", "foldCmp", "fold", "ineffective",
 				"fbResistanceLevel", "cumulativeCount"
 			),
@@ -48,9 +48,10 @@ public class DRDBTest {
 		assertEquals(
 			Set.of(
 				"refName", "refDOI", "refURL", "rxName",
-				"controlVariantName", "variantName", "mutations", "assay",
+				"controlIsoName", "isoName", "assay",
 				"section", "ordinalNumber", "foldCmp", "fold", "ineffective",
-				"resistanceLevel", "cumulativeCount", "cumulativeGroup"
+				"fbResistanceLevel", "cumulativeCount", "infection",
+				"cumulativeGroup"
 			),
 			results.get(0).keySet()
 		);
@@ -65,10 +66,11 @@ public class DRDBTest {
 		assertTrue(results.size() > 14);
 		assertEquals(
 			Set.of(
-				"refName", "refDOI", "refURL", "rxName", "vaccineName",
-				"controlVariantName", "variantName", "mutations", "assay",
+				"refName", "refDOI", "refURL", "rxName",
+				"vaccineName", "vaccinePriority", "vaccineType",
+				"controlIsoName", "isoName", "assay",
 				"section", "ordinalNumber", "foldCmp", "fold", "ineffective",
-				"resistanceLevel", "cumulativeCount", "cumulativeGroup"
+				"fbResistanceLevel", "cumulativeCount", "cumulativeGroup"
 			),
 			results.get(0).keySet()
 		);
@@ -85,11 +87,11 @@ public class DRDBTest {
 	}
 
 	@Test
-	public void testVirusVariant() {
-		assertTrue(VirusVariant.getAllInstances(drdbVer).size() >= 55);
-		VirusVariant variant = VirusVariant.getInstance(drdbVer, "B.1.1.7 Spike");
-		assertEquals("B.1.1.7 Spike", variant.getName());
-		assertEquals("B.1.1.7", variant.getDisplayName());
+	public void testIsolate() {
+		assertTrue(Isolate.getAllInstances(drdbVer).size() >= 55);
+		Isolate isolate = Isolate.getInstance(drdbVer, "B.1.1.7 Spike");
+		assertEquals("B.1.1.7 Spike", isolate.getName());
+		assertEquals("B.1.1.7", isolate.getVariantName());
 	}
 	
 }

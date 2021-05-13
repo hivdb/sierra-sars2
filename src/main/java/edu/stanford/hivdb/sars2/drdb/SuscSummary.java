@@ -68,13 +68,13 @@ public class SuscSummary {
 			.sorted((itemA, itemB) -> {
 				int cmp = itemA.getMatchType().compareTo(itemB.getMatchType());
 				if (cmp != 0) { return cmp; }
-				int cmpVariantOnly = itemA.getNumVariantOnlyMutations() - itemB.getNumVariantOnlyMutations();
+				int cmpIsolateOnly = itemA.getNumIsolateOnlyMutations() - itemB.getNumIsolateOnlyMutations();
 				int cmpQueryOnly = itemA.getNumQueryOnlyMutations() - itemB.getNumQueryOnlyMutations();
-				cmp = cmpVariantOnly + cmpQueryOnly;
+				cmp = cmpIsolateOnly + cmpQueryOnly;
 				if (cmp != 0) { return cmp; }
-				if (cmpVariantOnly != 0) { return cmpVariantOnly; }
+				if (cmpIsolateOnly != 0) { return cmpIsolateOnly; }
 				if (cmpQueryOnly != 0) { return cmpQueryOnly; }
-				return itemA.getComparableVariantMutations().compareTo(itemB.getComparableVariantMutations());
+				return itemA.getComparableIsolateMutations().compareTo(itemB.getComparableIsolateMutations());
 			})
 			.collect(Collectors.toList())
 		);
@@ -242,7 +242,7 @@ public class SuscSummary {
 			Map<MutationSet<SARS2>, List<SuscResult>> byMutations = (
 				items.stream()
 				.collect(Collectors.groupingBy(
-					sr -> sr.getComparableVariantMutations(),
+					sr -> sr.getComparableIsolateMutations(),
 					LinkedHashMap::new,
 					Collectors.toList()
 				))
@@ -251,10 +251,10 @@ public class SuscSummary {
 				.collect(Collectors.toMap(
 					srs -> new MutationSet<>(
 						srs.stream()
-						// We only display mutations that really exist in the variant;
+						// We only display mutations that really exist in the isolate;
 						// this is useful when not all range of a deletion is covered
-						// by the variant
-						.map(sr -> sr.getVirusVariant().getMutations().getSplitted())
+						// by the isolate
+						.map(sr -> sr.getIsolate().getMutations().getSplitted())
 						.flatMap(Set::stream)
 						.collect(Collectors.toSet())
 					// except for excluded mutations such as D614G
