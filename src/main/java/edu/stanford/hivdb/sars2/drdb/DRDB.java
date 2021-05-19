@@ -166,13 +166,18 @@ public class DRDB {
 			"    WHERE S.iso_name = M.iso_name AND (" +
 			mutQuery +
 			"  )) AND " +
+			// exclude SARS-CoV and WIV1
+			"  NOT EXISTS (" +
+			"    SELECT 1 FROM isolates I " +
+			"    WHERE S.iso_name=I.iso_name AND I.var_name IN ('SARS-CoV', 'WIV1')" +
+			"  ) AND " +
 			// exclude results that are ineffective to control
 			"  (ineffective == 'experimental' OR ineffective IS NULL) AND " +
 			where,
 			processor
 		);
 	}
-	
+
 	public List<Map<String, Object>> queryAllArticles() {
 		return queryAll(
 			"SELECT ref_name, doi, url, first_author, year " +
