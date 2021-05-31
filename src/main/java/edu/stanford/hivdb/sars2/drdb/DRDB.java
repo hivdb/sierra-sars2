@@ -28,7 +28,15 @@ public class DRDB {
 	private static final int MAX_ENTRIES = 20;
 	private static final String LIST_JOIN_UNIQ = "$#\u0008#$";
 	private static final String QUOTED_LIST_JOIN_UNIQ = Pattern.quote(LIST_JOIN_UNIQ);
-	private static final String COVID_DRDB_RESURL_PREFIX = "https://s3-us-west-2.amazonaws.com/cms.hivdb.org/chiro-prod/downloads/covid-drdb";
+	private static final String COVID_DRDB_RESURL_PREFIX;
+	
+	static {
+		String cmsStage = System.getenv("CMS_STAGE");
+		if (cmsStage == null || cmsStage.equals("")) {
+			cmsStage = "chiro-prod";
+		}
+		COVID_DRDB_RESURL_PREFIX = "https://s3-us-west-2.amazonaws.com/cms.hivdb.org/" + cmsStage + "/downloads/covid-drdb";
+	}
 
 	private static final Map<String, DRDB> singletons = Collections.synchronizedMap(new LRUMap<String, DRDB>(MAX_ENTRIES));
 	
@@ -407,7 +415,7 @@ public class DRDB {
 			"S.ineffective, " +
 			"resistance_level, " +
 			"cumulative_count, " +
-			"RXCP.infection, " +
+			"RXCP.infected_iso_name, " +
 			"RXCP.cumulative_group ",
 			
 			/* joins = */
@@ -436,7 +444,7 @@ public class DRDB {
 					result.put("ineffective", rs.getString("ineffective"));
 					result.put("fbResistanceLevel", rs.getString("resistance_level"));
 					result.put("cumulativeCount", rs.getInt("cumulative_count"));
-					result.put("infection", rs.getString("infection"));
+					result.put("infectedIsoName", rs.getString("infected_iso_name"));
 					result.put("cumulativeGroup", rs.getString("cumulative_group"));
 					return result;
 				}

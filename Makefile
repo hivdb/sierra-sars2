@@ -19,6 +19,7 @@ dev: build
 		--name=hivdb-sierra-sars2-dev \
 		--volume ~/.aws:/root/.aws:ro \
 		--env NUCAMINO_AWS_LAMBDA=nucamino-align-with:5 \
+		--env CMS_STAGE=chiro-dev2 \
 		--rm -it --publish=8113:8080 ${DOCKERREPO} dev
 
 release: build

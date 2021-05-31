@@ -9,7 +9,7 @@ import edu.stanford.hivdb.sars2.SARS2;
 
 public class ConvPlasmaSuscResult extends SuscResult {
 
-	private final String infection;
+	private final String infectedIsoName;
 	private final String cumulativeGroup;
 	
 	public static List<ConvPlasmaSuscResult> query(String drdbVersion, MutationSet<SARS2> queryMuts) {
@@ -33,12 +33,12 @@ public class ConvPlasmaSuscResult extends SuscResult {
 	) {
 		super(drdbVersion, queryMuts, suscData);
 
-		this.infection = (String) suscData.get("infection");
+		this.infectedIsoName = (String) suscData.get("infection");
 		this.cumulativeGroup = (String) suscData.get("cumulativeGroup");
 	}
 	
-	public String getInfection() {
-		return infection;
+	public String getInfectedIsoName() {
+		return infectedIsoName;
 	}
 	
 	public String getCumulativeGroup() {
