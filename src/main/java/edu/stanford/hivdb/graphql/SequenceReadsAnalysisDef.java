@@ -99,21 +99,16 @@ public class SequenceReadsAnalysisDef {
 		if (allReads == null) {
 			throw new GraphQLException("`allReads` is a required field but doesn't have value");
 		}
-		Double minPrevalence = (Double) input.get("minPrevalence");
-		Long minCodonReads = (Long) input.get("minCodonReads");
-		if (minPrevalence == null && minCodonReads == null) {
-			throw new GraphQLException(
-				"Must specify prevalence cutoff via `minPrevalence` (percentage) or `minCodonReads` (fixed number)"
-			);
-		}
 		
 		return SequenceReads.fromCodonReadsTable(
 			(String) input.get("name"),
 			strain,
 			allReads,
-			minPrevalence,
-			minCodonReads,
-			(Long) input.get("minPositionReads"));
+			(Double) input.get("maxMixturePcnt"),
+			(Double) input.get("minPrevalence"),
+			(Long) input.get("minCodonReads"),
+			(Long) input.get("minPositionReads")
+		);
 	}
 
 	public static SimpleMemoizer<GraphQLInputType> iSequenceReads = new SimpleMemoizer<>(
@@ -134,12 +129,20 @@ public class SequenceReadsAnalysisDef {
 				.description("List of all reads belong to this sequence."))
 			.field(field -> field
 				.type(GraphQLFloat)
+				.name("maxMixturePcnt")
+				.defaultValue(1.)
+				.description(
+					"The maximum allowed mixture percentage cutoff. " +
+					"Default to one if this field was left empty or had a " +
+					"negative number specified. Valid value ranges from 0 to 1."))
+			.field(field -> field
+				.type(GraphQLFloat)
 				.name("minPrevalence")
 				.defaultValue(0.)
 				.description(
 					"The minimal prevalence cutoff to apply on each **codon**. " +
 					"Default to zero if this field was left empty or had a " +
-					"negative number specified."))
+					"negative number specified. Valid value ranges from 0 to 1."))
 			.field(field -> field
 				.type(GraphQLLong)
 				.name("minCodonReads")
@@ -274,9 +277,15 @@ public class SequenceReadsAnalysisDef {
 					.description("Validation results for the sequence reads."))
 				.field(field -> field
 					.type(GraphQLFloat)
+					.name("actualMinPrevalence")
+					.description(
+						"The actual minimal prevalence cutoff applied on this sequence."
+					))
+				.field(field -> field
+					.type(GraphQLFloat)
 					.name("minPrevalence")
 					.description(
-						"The minimal prevalence cutoff applied on this sequence."
+						"The input minimal prevalence cutoff applied on this sequence."
 					))
 				.field(field -> field
 					.type(GraphQLLong)
@@ -317,10 +326,15 @@ public class SequenceReadsAnalysisDef {
 						"The best matching subtype."))
 				.field(field -> field
 					.type(GraphQLFloat)
+					.name("maxMixturePcnt")
+					.description(
+						"Maximum allowed mixture percentage specified by input."
+					))
+				.field(field -> field
+					.type(GraphQLFloat)
 					.name("mixturePcnt")
 					.description(
-						"Mixture pecentage of the consensus. Notes only RYMWKS " +
-						"are counted."))
+						"Post-filter nucleotide mixture percentage."))
 				.field(field -> newMutationSet(virusName, field, "mutations")
 					.description("All mutations found in the sequence reads."))
 				.field(field -> field

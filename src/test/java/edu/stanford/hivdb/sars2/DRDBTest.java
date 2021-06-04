@@ -16,7 +16,7 @@ import edu.stanford.hivdb.sars2.drdb.Isolate;
 
 public class DRDBTest {
 
-	private final String drdbVer = "20210512-slim";
+	private final String drdbVer = "20210531-slim";
 	private final SARS2 virusIns = SARS2.getInstance();
 	private final DRDB drdbObj = DRDB.getInstance(drdbVer);
 
@@ -50,7 +50,7 @@ public class DRDBTest {
 				"refName", "refDOI", "refURL", "rxName",
 				"controlIsoName", "isoName", "assay",
 				"section", "ordinalNumber", "foldCmp", "fold", "ineffective",
-				"fbResistanceLevel", "cumulativeCount", "infection",
+				"fbResistanceLevel", "cumulativeCount", "infectedIsoName",
 				"cumulativeGroup"
 			),
 			results.get(0).keySet()
