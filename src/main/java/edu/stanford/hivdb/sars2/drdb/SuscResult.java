@@ -57,9 +57,10 @@ public abstract class SuscResult {
 		EQUAL,     // isolate mutation set equals to query mutation set
 		SUPERSET,  //                      is the superset of query mutation set
 		SUBSET,    //                      is the subset of query mutation set
-		OVERLAP    //                      overlaps with query mutation set
+		OVERLAP,   //                      overlaps with query mutation set
+		MISMATCH   //                      mismatches to query mutation set
 	}
-
+	
 	protected static MutationSet<SARS2> prepareQueryMutations(MutationSet<SARS2> muts) {
 		// no unseq region
 		muts = muts.filterBy(mut -> !mut.isUnsequenced());
@@ -155,6 +156,7 @@ public abstract class SuscResult {
 	private transient String resistanceLevel;
 	private transient Isolate controlIsolate;
 	private transient Isolate isolate;
+	private transient IsolateMatchType matchType;
 	private transient MutationSet<SARS2> comparableIsolateMutations;
 
 	protected SuscResult(
@@ -218,17 +220,28 @@ public abstract class SuscResult {
 	public Integer getCumulativeCount() { return cumulativeCount; }
 
 	public IsolateMatchType getMatchType() {
-		MutationSet<SARS2> varMutations = getComparableIsolateMutations();
-		if (varMutations.equals(queryMuts)) {
-			return IsolateMatchType.EQUAL;
+		if (matchType == null) {
+			MutationSet<SARS2> varMutations = getComparableIsolateMutations();
+			if (queryMuts.size() == 0 || varMutations.size() == 0) {
+				matchType = IsolateMatchType.MISMATCH;
+			}
+			else if (varMutations.equals(queryMuts)) {
+				matchType = IsolateMatchType.EQUAL;
+			}
+			else if (varMutations.containsAll(queryMuts)) {
+				matchType = IsolateMatchType.SUPERSET;
+			}
+			else if (queryMuts.containsAll(varMutations)) {
+				matchType = IsolateMatchType.SUBSET;
+			}
+			else if (queryMuts.stream().anyMatch(mut -> varMutations.hasSharedAAMutation(mut))) {
+				matchType = IsolateMatchType.OVERLAP;
+			}
+			else {
+				matchType = IsolateMatchType.MISMATCH;
+			}
 		}
-		else if (varMutations.containsAll(queryMuts)) {
-			return IsolateMatchType.SUPERSET;
-		}
-		else if (queryMuts.containsAll(varMutations)) {
-			return IsolateMatchType.SUBSET;
-		}
-		return IsolateMatchType.OVERLAP;
+		return matchType;
 	}
 	
 	/**

@@ -8,7 +8,6 @@ import java.util.Set;
 
 import org.junit.Test;
 
-import edu.stanford.hivdb.mutations.MutationSet;
 import edu.stanford.hivdb.sars2.drdb.Antibody;
 import edu.stanford.hivdb.sars2.drdb.Article;
 import edu.stanford.hivdb.sars2.drdb.DRDB;
@@ -17,15 +16,11 @@ import edu.stanford.hivdb.sars2.drdb.Isolate;
 public class DRDBTest {
 
 	private final String drdbVer = "20210531-slim";
-	private final SARS2 virusIns = SARS2.getInstance();
 	private final DRDB drdbObj = DRDB.getInstance(drdbVer);
 
 	@Test
 	public void testQuerySuscResultsForAntibodies() {
-		MutationSet<SARS2> mutations = MutationSet.parseString(
-			virusIns, "S:484K"
-		);
-		List<Map<String, Object>> results = drdbObj.querySuscResultsForAntibodies(mutations);
+		List<Map<String, Object>> results = drdbObj.queryAllSuscResultsForAntibodies();
 		assertTrue(results.size() > 330);
 		assertEquals(
 			Set.of(
@@ -40,10 +35,7 @@ public class DRDBTest {
 
 	@Test
 	public void testQuerySuscResultsForConvPlasma() {
-		MutationSet<SARS2> mutations = MutationSet.parseString(
-			virusIns, "S:452R"
-		);
-		List<Map<String, Object>> results = drdbObj.querySuscResultsForConvPlasma(mutations);
+		List<Map<String, Object>> results = drdbObj.queryAllSuscResultsForConvPlasma();
 		assertTrue(results.size() > 3);
 		assertEquals(
 			Set.of(
@@ -59,10 +51,7 @@ public class DRDBTest {
 
 	@Test
 	public void testQuerySuscResultsForImmuPlasma() {
-		MutationSet<SARS2> mutations = MutationSet.parseString(
-			virusIns, "S:452R"
-		);
-		List<Map<String, Object>> results = drdbObj.querySuscResultsForVaccPlasma(mutations);
+		List<Map<String, Object>> results = drdbObj.queryAllSuscResultsForVaccPlasma();
 		assertTrue(results.size() > 14);
 		assertEquals(
 			Set.of(

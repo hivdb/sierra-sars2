@@ -20,7 +20,6 @@ import org.apache.commons.lang3.tuple.Pair;
 
 import edu.stanford.hivdb.mutations.AAMutation;
 import edu.stanford.hivdb.mutations.Mutation;
-import edu.stanford.hivdb.mutations.MutationSet;
 import edu.stanford.hivdb.sars2.SARS2;
 
 public class DRDB {
@@ -129,55 +128,23 @@ public class DRDB {
 			)
 		);
 	}	
-	
-	protected <T> List<T> querySuscResults(
-		MutationSet<SARS2> mutations,
+
+	protected <T> List<T> queryAllSuscResults(
 		String columns,
 		String joins,
 		String where,
 		Function<ResultSet, T> processor
 	) {
-		List<String> mutQueryList = new ArrayList<>();
-		for (Mutation<SARS2> mut : mutations) {
-			String aminoAcidArr = mut.getAAChars()
-				.stream()
-				.map(aa -> {
-					switch (aa) {
-						case '_':
-							return "'ins'";
-						case '-':
-							return "'del'";
-						case '*':
-							return "'stop'";
-						default:
-							return String.format("'%s'", aa);
-					}
-				})
-				.collect(Collectors.joining(", ")); 
-			
-			mutQueryList.add(String.format(
-				"(M.gene = '%s' AND M.position = '%d' AND M.amino_acid IN (%s))",
-				mut.getAbstractGene(),
-				mut.getPosition(),
-				aminoAcidArr
-			));
-		}
-		String mutQuery = mutQueryList.size() > 0 ? String.join(" OR ", mutQueryList) : " false ";
-		
 		return queryAll(
 			"SELECT " +
 			columns +
 			"  FROM susc_results S " +
 			joins +
-			"  WHERE EXISTS(" +
-			"    SELECT 1 FROM isolate_mutations M " +
-			"    WHERE S.iso_name = M.iso_name AND (" +
-			mutQuery +
-			"  )) AND " +
-			// exclude SARS-CoV and WIV1
+			"  WHERE " +
+			// exclude results of SARS-CoV, WIV1, B and B.1
 			"  NOT EXISTS (" +
 			"    SELECT 1 FROM isolates I " +
-			"    WHERE S.iso_name=I.iso_name AND I.var_name IN ('SARS-CoV', 'WIV1')" +
+			"    WHERE S.iso_name=I.iso_name AND I.var_name IN ('SARS-CoV', 'WIV1', 'B', 'B.1')" +
 			"  ) AND " +
 			// exclude results that are ineffective to control
 			"  (ineffective == 'experimental' OR ineffective IS NULL) AND " +
@@ -331,10 +298,8 @@ public class DRDB {
 		return antibodies;
 	}
 	
-	public List<Map<String, Object>> querySuscResultsForAntibodies(MutationSet<SARS2> mutations) {
-		List<Map<String, Object>> results = querySuscResults(
-			mutations,
-			
+	public List<Map<String, Object>> queryAllSuscResultsForAntibodies() {
+		List<Map<String, Object>> results = queryAllSuscResults(
 			/* columns = */
 			"S.ref_name, " +
 			"A.doi, " +
@@ -396,10 +361,8 @@ public class DRDB {
 		return results;
 	}
 
-	public List<Map<String, Object>> querySuscResultsForConvPlasma(MutationSet<SARS2> mutations) {
-		List<Map<String, Object>> results = querySuscResults(
-			mutations,
-			
+	public List<Map<String, Object>> queryAllSuscResultsForConvPlasma() {
+		List<Map<String, Object>> results = queryAllSuscResults(
 			/* columns = */
 			"S.ref_name, " +
 			"A.doi, " +
@@ -473,10 +436,8 @@ public class DRDB {
 		return this.lastUpdate;
 	}
 
-	public List<Map<String, Object>> querySuscResultsForVaccPlasma(MutationSet<SARS2> mutations) {
-		List<Map<String, Object>> results = querySuscResults(
-			mutations,
-			
+	public List<Map<String, Object>> queryAllSuscResultsForVaccPlasma() {
+		List<Map<String, Object>> results = queryAllSuscResults(
 			/* columns = */
 			"S.ref_name, " +
 			"A.doi, " +
