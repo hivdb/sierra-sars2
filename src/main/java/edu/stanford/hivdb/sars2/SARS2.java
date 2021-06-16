@@ -38,6 +38,7 @@ import edu.stanford.hivdb.mutations.MutationSet;
 import edu.stanford.hivdb.mutations.MutationType;
 import edu.stanford.hivdb.mutations.MutationTypePair;
 import edu.stanford.hivdb.sars2.graphql.SARS2GraphQLExtension;
+import edu.stanford.hivdb.seqreads.SequenceReadsAssembler;
 import edu.stanford.hivdb.sequences.AlignmentConfig;
 import edu.stanford.hivdb.viruses.Gene;
 import edu.stanford.hivdb.viruses.Strain;
@@ -68,6 +69,7 @@ public class SARS2 implements Virus<SARS2> {
 	private static final String ALGORITHMS_RESPATH = "algorithms/%s_%s.xml";
 	private static final String CONDCOMMENTS_RESPATH = "conditional-comments.json";
 	private static final String ALIGNCONFIG_RESPATH = "alignment-config.json";
+	private static final String ASSEMBLYCONFIG_RESPATH = "assembly-config.json";
 
 	static {
 		Virus.registerInstance(new SARS2());
@@ -103,7 +105,8 @@ public class SARS2 implements Virus<SARS2> {
 			ALGORITHMS_INDEXPATH,
 			ALGORITHMS_RESPATH,
 			CONDCOMMENTS_RESPATH,
-			ALIGNCONFIG_RESPATH
+			ALIGNCONFIG_RESPATH,
+			ASSEMBLYCONFIG_RESPATH
 		);
 		registerSequenceValidator(new SARS2DefaultSequenceValidator(this));
 		registerMutationsValidator(new SARS2DefaultMutationsValidator());
@@ -346,6 +349,11 @@ public class SARS2 implements Virus<SARS2> {
 	@Override
 	public VirusGraphQLExtension getVirusGraphQLExtension() {
 		return SARS2GraphQLExtension.getInstance();
+	}
+
+	@Override
+	public SequenceReadsAssembler<SARS2> getSequenceReadsAssembler() {
+		return dl.getAssemblyConfig();
 	}
 	
 

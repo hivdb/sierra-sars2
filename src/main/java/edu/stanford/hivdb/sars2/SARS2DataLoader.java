@@ -56,6 +56,7 @@ import edu.stanford.hivdb.mutations.MutationPrevalence;
 import edu.stanford.hivdb.mutations.MutationSet;
 import edu.stanford.hivdb.mutations.MutationType;
 import edu.stanford.hivdb.mutations.MutationTypePair;
+import edu.stanford.hivdb.seqreads.SequenceReadsAssembler;
 import edu.stanford.hivdb.sequences.AlignmentConfig;
 import edu.stanford.hivdb.utilities.AAUtils;
 import edu.stanford.hivdb.utilities.AssertUtils;
@@ -116,6 +117,7 @@ public class SARS2DataLoader<T extends Virus<T>> {
 	private final String ALGORITHMS_RESPATH;
 	private final String CONDCOMMENTS_RESPATH;
 	private final String ALIGNCONFIG_RESPATH;
+	private final String ASSEMBLYCONFIG_RESPATH;
 
 	private transient Map<String, Strain<T>> strains;
 	private transient Map<String, Gene<T>> genes;
@@ -140,6 +142,7 @@ public class SARS2DataLoader<T extends Virus<T>> {
 	private transient Map<String, DrugResistanceAlgorithm<T>> drugResistAlgLookup;
 	private transient ConditionalComments<T> condComments;
 	private transient AlignmentConfig<T> alignmentConfig;
+	private transient SequenceReadsAssembler<T> assemblyConfig;
 	
 	public SARS2DataLoader(
 		T virus,
@@ -164,7 +167,8 @@ public class SARS2DataLoader<T extends Virus<T>> {
 		final String ALGORITHMS_INDEXPATH,
 		final String ALGORITHMS_RESPATH,
 		final String CONDCOMMENTS_RESPATH,
-		final String ALIGNCONFIG_RESPATH
+		final String ALIGNCONFIG_RESPATH,
+		final String ASSEMBLYCONFIG_RESPATH
 	) {
 		this.virus = virus;
 		this.VIRUS_NAME = VIRUS_NAME;
@@ -189,6 +193,7 @@ public class SARS2DataLoader<T extends Virus<T>> {
 		this.ALGORITHMS_RESPATH = ALGORITHMS_RESPATH;
 		this.CONDCOMMENTS_RESPATH = CONDCOMMENTS_RESPATH;
 		this.ALIGNCONFIG_RESPATH = ALIGNCONFIG_RESPATH;
+		this.ASSEMBLYCONFIG_RESPATH = ASSEMBLYCONFIG_RESPATH;
 	}
 	
 	private MutationSet<T> loadMutationSetFromRes(String resPath, Collection<Strain<T>> strains) {
@@ -763,6 +768,14 @@ public class SARS2DataLoader<T extends Virus<T>> {
 			alignmentConfig = AlignmentConfig.loadJson(raw, virus);
 		}
 		return alignmentConfig;
+	}
+	
+	public SequenceReadsAssembler<T> getAssemblyConfig() {
+		if (assemblyConfig == null) {
+			String raw = loadResource(ASSEMBLYCONFIG_RESPATH);
+			assemblyConfig = SequenceReadsAssembler.loadJson(raw, virus);
+		}
+		return assemblyConfig;
 	}
 	
 }

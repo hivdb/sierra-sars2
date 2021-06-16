@@ -40,6 +40,7 @@ import edu.stanford.hivdb.mutations.PositionCodonReads;
 import edu.stanford.hivdb.seqreads.GeneSequenceReads;
 import edu.stanford.hivdb.seqreads.OneCodonReadsCoverage;
 import edu.stanford.hivdb.seqreads.SequenceReads;
+import edu.stanford.hivdb.seqreads.UntranslatedRegion;
 import edu.stanford.hivdb.utilities.Json;
 import edu.stanford.hivdb.utilities.SimpleMemoizer;
 import edu.stanford.hivdb.viruses.Strain;
@@ -100,16 +101,53 @@ public class SequenceReadsAnalysisDef {
 			throw new GraphQLException("`allReads` is a required field but doesn't have value");
 		}
 		
+		List<?> inputUntransRegions = (List<?>) input.get("untranslatedRegions");
+		List<UntranslatedRegion> untransRegions = (
+			inputUntransRegions == null ? Collections.emptyList() : inputUntransRegions
+			.stream()
+			.map(utr -> new UntranslatedRegion(
+				(String) (((Map<?, ?>) utr).get("name")),
+				(Long) (((Map<?, ?>) utr).get("refStart")),
+				(Long) (((Map<?, ?>) utr).get("refEnd")),
+				(String) (((Map<?, ?>) utr).get("consensus"))
+			))
+			.collect(Collectors.toList())
+		);
+		
 		return SequenceReads.fromCodonReadsTable(
 			(String) input.get("name"),
 			strain,
 			allReads,
+			untransRegions,
 			(Double) input.get("maxMixturePcnt"),
 			(Double) input.get("minPrevalence"),
 			(Long) input.get("minCodonReads"),
 			(Long) input.get("minPositionReads")
 		);
 	}
+
+	public static GraphQLInputObjectType iUntranslatedRegion = (
+		newInputObject()
+		.name("UntranslatedRegionInput")
+		.description("Optional untranslated region data.")
+		.field(field -> field
+			.type(GraphQLString)
+			.name("name")
+			.description("Name of untranslated region."))
+		.field(field -> field
+			.type(GraphQLLong)
+			.name("refStart")
+			.description("Absolute position (1-based) where this untranslated region started."))
+		.field(field -> field
+			.type(GraphQLLong)
+			.name("refEnd")
+			.description("Absolute position (1-based) where this untranslated region ended."))
+		.field(field -> field
+			.type(GraphQLString)
+			.name("consensus")
+			.description("NA Consensus of this untranslated region."))
+		.build()
+	);
 
 	public static SimpleMemoizer<GraphQLInputType> iSequenceReads = new SimpleMemoizer<>(
 		name -> (
@@ -127,6 +165,11 @@ public class SequenceReadsAnalysisDef {
 				.type(new GraphQLList(iPositionCodonReads.get(name)))
 				.name("allReads")
 				.description("List of all reads belong to this sequence."))
+			.field(field -> field
+				.type(new GraphQLList(iUntranslatedRegion))
+				.defaultValue(null)
+				.name("untranslatedRegions")
+				.description("Optional consensus information of untranslated regions to be added in assembled consensus sequence."))
 			.field(field -> field
 				.type(GraphQLFloat)
 				.name("maxMixturePcnt")
@@ -367,7 +410,13 @@ public class SequenceReadsAnalysisDef {
 					.type(GraphQLString)
 					.name("internalJsonCodonReadsCoverage")
 					.description(
-						"Position codon reads in this gene sequence (json formated)."));
+						"Position codon reads in this gene sequence (json formated)."))
+			  .field(field -> field
+			  	.type(GraphQLString)
+			  	.name("assembledConsensus")
+			  	.description(
+			  		"Unaligned sequence consensus assembled from codon reads and untranslated regions."));
+			  
 			Virus<?> virus = Virus.getInstance(virusName);
 			builder = virus.getVirusGraphQLExtension().extendObjectBuilder("SequenceReadsAnalysis", builder);
 			return builder.build();
