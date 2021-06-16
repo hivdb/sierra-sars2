@@ -16,16 +16,14 @@
         "codon-alignment", "27756", "27887",
         "codon-alignment", "27894", "28259",
         "codon-alignment", "28274", "29533",
-        "codon-alignment", "29558", "29674",
-        "apply-frameshift", "13468-1"
+        "codon-alignment", "29558", "29674"
       ]
     },
     {
       "fragmentName": "SARS2nsp1",
       "fromFragment": "Wuhan-Hu-1::NC_045512.2",
       "geneName": "SARS2nsp1",
-      "refStart": 266,
-      "refEnd": 805,
+      "refRanges": [[266, 805]],
       "minMatchPcnt": 60,
       "minNumOfAA": 50,
       "seqShrinkageWindow": 15,
@@ -35,8 +33,7 @@
       "fragmentName": "SARS2nsp2",
       "fromFragment": "Wuhan-Hu-1::NC_045512.2",
       "geneName": "SARS2nsp2",
-      "refStart": 806,
-      "refEnd": 2719,
+      "refRanges": [[806, 2719]],
       "minMatchPcnt": 60,
       "minNumOfAA": 150,
       "seqShrinkageWindow": 15,
@@ -46,8 +43,7 @@
       "fragmentName": "SARS2PLpro",
       "fromFragment": "Wuhan-Hu-1::NC_045512.2",
       "geneName": "SARS2PLpro",
-      "refStart": 2720,
-      "refEnd": 8554,
+      "refRanges": [[2720, 8554]],
       "minMatchPcnt": 60,
       "minNumOfAA": 400,
       "seqShrinkageWindow": 15,
@@ -57,8 +53,7 @@
       "fragmentName": "SARS2nsp4",
       "fromFragment": "Wuhan-Hu-1::NC_045512.2",
       "geneName": "SARS2nsp4",
-      "refStart": 8555,
-      "refEnd": 10054,
+      "refRanges": [[8555, 10054]],
       "minMatchPcnt": 60,
       "minNumOfAA": 100,
       "seqShrinkageWindow": 15,
@@ -68,8 +63,7 @@
       "fragmentName": "SARS2_3CLpro",
       "fromFragment": "Wuhan-Hu-1::NC_045512.2",
       "geneName": "SARS2_3CLpro",
-      "refStart": 10055,
-      "refEnd": 10972,
+      "refRanges": [[10055, 10972]],
       "minMatchPcnt": 60,
       "minNumOfAA": 60,
       "seqShrinkageWindow": 15,
@@ -79,8 +73,7 @@
       "fragmentName": "SARS2nsp6",
       "fromFragment": "Wuhan-Hu-1::NC_045512.2",
       "geneName": "SARS2nsp6",
-      "refStart": 10973,
-      "refEnd": 11842,
+      "refRanges": [[10973, 11842]],
       "minMatchPcnt": 60,
       "minNumOfAA": 60,
       "seqShrinkageWindow": 15,
@@ -90,8 +83,7 @@
       "fragmentName": "SARS2nsp7",
       "fromFragment": "Wuhan-Hu-1::NC_045512.2",
       "geneName": "SARS2nsp7",
-      "refStart": 11843,
-      "refEnd": 12091,
+      "refRanges": [[11843, 12091]],
       "minMatchPcnt": 60,
       "minNumOfAA": 20,
       "seqShrinkageWindow": 15,
@@ -101,8 +93,7 @@
       "fragmentName": "SARS2nsp8",
       "fromFragment": "Wuhan-Hu-1::NC_045512.2",
       "geneName": "SARS2nsp8",
-      "refStart": 12092,
-      "refEnd": 12685,
+      "refRanges": [[12092, 12685]],
       "minMatchPcnt": 60,
       "minNumOfAA": 40,
       "seqShrinkageWindow": 15,
@@ -112,8 +103,7 @@
       "fragmentName": "SARS2nsp9",
       "fromFragment": "Wuhan-Hu-1::NC_045512.2",
       "geneName": "SARS2nsp9",
-      "refStart": 12686,
-      "refEnd": 13024,
+      "refRanges": [[12686, 13024]],
       "minMatchPcnt": 60,
       "minNumOfAA": 20,
       "seqShrinkageWindow": 15,
@@ -123,8 +113,7 @@
       "fragmentName": "SARS2nsp10",
       "fromFragment": "Wuhan-Hu-1::NC_045512.2",
       "geneName": "SARS2nsp10",
-      "refStart": 13025,
-      "refEnd": 13441,
+      "refRanges": [[13025, 13441]],
       "minMatchPcnt": 60,
       "minNumOfAA": 20,
       "seqShrinkageWindow": 15,
@@ -134,8 +123,7 @@
       "fragmentName": "SARS2RdRP",
       "fromFragment": "Wuhan-Hu-1::NC_045512.2",
       "geneName": "SARS2RdRP",
-      "refStart": 13442,
-      "refEnd": 16236,
+      "refRanges": [[13442, 13468], [13468, 16236]],
       "minMatchPcnt": 60,
       "minNumOfAA": 200,
       "seqShrinkageWindow": 15,
@@ -145,8 +133,7 @@
       "fragmentName": "SARS2nsp13",
       "fromFragment": "Wuhan-Hu-1::NC_045512.2",
       "geneName": "SARS2nsp13",
-      "refStart": 16237,
-      "refEnd": 18039,
+      "refRanges": [[16237, 18039]],
       "minMatchPcnt": 60,
       "minNumOfAA": 120,
       "seqShrinkageWindow": 15,
@@ -156,8 +143,7 @@
       "fragmentName": "SARS2nsp14",
       "fromFragment": "Wuhan-Hu-1::NC_045512.2",
       "geneName": "SARS2nsp14",
-      "refStart": 18040,
-      "refEnd": 19620,
+      "refRanges": [[18040, 19620]],
       "minMatchPcnt": 60,
       "minNumOfAA": 100,
       "seqShrinkageWindow": 15,
@@ -167,8 +153,7 @@
       "fragmentName": "SARS2nsp15",
       "fromFragment": "Wuhan-Hu-1::NC_045512.2",
       "geneName": "SARS2nsp15",
-      "refStart": 19621,
-      "refEnd": 20658,
+      "refRanges": [[19621, 20658]],
       "minMatchPcnt": 60,
       "minNumOfAA": 70,
       "seqShrinkageWindow": 15,
@@ -178,8 +163,7 @@
       "fragmentName": "SARS2nsp16",
       "fromFragment": "Wuhan-Hu-1::NC_045512.2",
       "geneName": "SARS2nsp16",
-      "refStart": 20659,
-      "refEnd": 21552,
+      "refRanges": [[20659, 21552]],
       "minMatchPcnt": 60,
       "minNumOfAA": 60,
       "seqShrinkageWindow": 15,
@@ -189,8 +173,7 @@
       "fragmentName": "SARS2S",
       "fromFragment": "Wuhan-Hu-1::NC_045512.2",
       "geneName": "SARS2S",
-      "refStart": 21563,
-      "refEnd": 25381,
+      "refRanges": [[21563, 25381]],
       "minMatchPcnt": 60,
       "minNumOfAA": 300,
       "seqShrinkageWindow": 15,
@@ -200,8 +183,7 @@
       "fragmentName": "SARS2ORF3a",
       "fromFragment": "Wuhan-Hu-1::NC_045512.2",
       "geneName": "SARS2ORF3a",
-      "refStart": 25393,
-      "refEnd": 26217,
+      "refRanges": [[25393, 26217]],
       "minMatchPcnt": 60,
       "minNumOfAA": 60,
       "seqShrinkageWindow": 15,
@@ -211,8 +193,7 @@
       "fragmentName": "SARS2E",
       "fromFragment": "Wuhan-Hu-1::NC_045512.2",
       "geneName": "SARS2E",
-      "refStart": 26245,
-      "refEnd": 26469,
+      "refRanges": [[26245, 26469]],
       "minMatchPcnt": 60,
       "minNumOfAA": 20,
       "seqShrinkageWindow": 15,
@@ -222,8 +203,7 @@
       "fragmentName": "SARS2M",
       "fromFragment": "Wuhan-Hu-1::NC_045512.2",
       "geneName": "SARS2M",
-      "refStart": 26523,
-      "refEnd": 27188,
+      "refRanges": [[26523, 27188]],
       "minMatchPcnt": 60,
       "minNumOfAA": 50,
       "seqShrinkageWindow": 15,
@@ -233,8 +213,7 @@
       "fragmentName": "SARS2ORF6",
       "fromFragment": "Wuhan-Hu-1::NC_045512.2",
       "geneName": "SARS2ORF6",
-      "refStart": 27202,
-      "refEnd": 27384,
+      "refRanges": [[27202, 27384]],
       "minMatchPcnt": 60,
       "minNumOfAA": 50,
       "seqShrinkageWindow": 15,
@@ -244,8 +223,7 @@
       "fragmentName": "SARS2ORF7a",
       "fromFragment": "Wuhan-Hu-1::NC_045512.2",
       "geneName": "SARS2ORF7a",
-      "refStart": 27394,
-      "refEnd": 27756,
+      "refRanges": [[27394, 27756]],
       "minMatchPcnt": 60,
       "minNumOfAA": 30,
       "seqShrinkageWindow": 15,
@@ -255,8 +233,7 @@
       "fragmentName": "SARS2ORF7b",
       "fromFragment": "Wuhan-Hu-1::NC_045512.2",
       "geneName": "SARS2ORF7b",
-      "refStart": 27756,
-      "refEnd": 27884,
+      "refRanges": [[27756, 27884]],
       "minMatchPcnt": 60,
       "minNumOfAA": 20,
       "seqShrinkageWindow": 15,
@@ -266,8 +243,7 @@
       "fragmentName": "SARS2ORF8",
       "fromFragment": "Wuhan-Hu-1::NC_045512.2",
       "geneName": "SARS2ORF8",
-      "refStart": 27894,
-      "refEnd": 28256,
+      "refRanges": [[27894, 28256]],
       "minMatchPcnt": 60,
       "minNumOfAA": 20,
       "seqShrinkageWindow": 15,
@@ -277,8 +253,7 @@
       "fragmentName": "SARS2N",
       "fromFragment": "Wuhan-Hu-1::NC_045512.2",
       "geneName": "SARS2N",
-      "refStart": 28274,
-      "refEnd": 29530,
+      "refRanges": [[28274, 29530]],
       "minMatchPcnt": 60,
       "minNumOfAA": 80,
       "seqShrinkageWindow": 15,
@@ -288,157 +263,11 @@
       "fragmentName": "SARS2ORF10",
       "fromFragment": "Wuhan-Hu-1::NC_045512.2",
       "geneName": "SARS2ORF10",
-      "refStart": 29558,
-      "refEnd": 29671,
+      "refRanges": [[29558, 29671]],
       "minMatchPcnt": 60,
       "minNumOfAA": 20,
       "seqShrinkageWindow": 15,
       "seqShrinkageCutoffPcnt": 30
-    }
-  ],
-  "sequenceAssemblyConfig": [
-    {
-      "name": "5UTR",
-      "fromFragment": "Wuhan-Hu-1::NC_045512.2",
-      "refStart": 1,
-      "refEnd": 265
-    },
-    {
-      "geneName": "SARS2nsp1"
-    },
-    {
-      "geneName": "SARS2nsp2"
-    },
-    {
-      "geneName": "SARS2PLpro"
-    },
-    {
-      "geneName": "SARS2nsp4"
-    },
-    {
-      "geneName": "SARS2_3CLpro"
-    },
-    {
-      "geneName": "SARS2nsp6"
-    },
-    {
-      "geneName": "SARS2nsp7"
-    },
-    {
-      "geneName": "SARS2nsp8"
-    },
-    {
-      "geneName": "SARS2nsp9"
-    },
-    {
-      "geneName": "SARS2nsp10"
-    },
-    {
-      "geneName": "SARS2RdRP",
-      "trim": [27]
-    },
-    {
-      "geneName": "SARS2nsp13"
-    },
-    {
-      "geneName": "SARS2nsp14"
-    },
-    {
-      "geneName": "SARS2nsp15"
-    },
-    {
-      "geneName": "SARS2nsp16"
-    },
-    {
-      "name": "nsp16-S",
-      "fromFragment": "Wuhan-Hu-1::NC_045512.2",
-      "refStart": 21553,
-      "refEnd": 21562
-    },
-    {
-      "geneName": "SARS2S"
-    },
-    {
-      "name": "S-ORF3a",
-      "fromFragment": "Wuhan-Hu-1::NC_045512.2",
-      "refStart": 25382,
-      "refEnd": 25392
-    },
-    {
-      "geneName": "SARS2ORF3a"
-    },
-    {
-      "name": "ORF3a-E",
-      "fromFragment": "Wuhan-Hu-1::NC_045512.2",
-      "refStart": 26218,
-      "refEnd": 26244
-    },
-    {
-      "geneName": "SARS2E"
-    },
-    {
-      "name": "E-M",
-      "fromFragment": "Wuhan-Hu-1::NC_045512.2",
-      "refStart": 26470,
-      "refEnd": 26522
-    },
-    {
-      "geneName": "SARS2M"
-    },
-    {
-      "name": "M-ORF6",
-      "fromFragment": "Wuhan-Hu-1::NC_045512.2",
-      "refStart": 27189,
-      "refEnd": 27201
-    },
-    {
-      "geneName": "SARS2ORF6"
-    },
-    {
-      "name": "ORF6-ORF7a",
-      "fromFragment": "Wuhan-Hu-1::NC_045512.2",
-      "refStart": 27385,
-      "refEnd": 27393
-    },
-    {
-      "geneName": "SARS2ORF7a"
-    },
-    {
-      "geneName": "SARS2ORF7b",
-      "trim": [1]
-    },
-    {
-      "name": "ORF7b-ORF8",
-      "fromFragment": "Wuhan-Hu-1::NC_045512.2",
-      "refStart": 27885,
-      "refEnd": 27893
-    },
-    {
-      "geneName": "SARS2ORF8"
-    },
-    {
-      "name": "ORF8-N",
-      "fromFragment": "Wuhan-Hu-1::NC_045512.2",
-      "refStart": 28257,
-      "refEnd": 28273
-    },
-    {
-      "geneName": "SARS2N"
-    },
-    {
-      "name": "N-ORF10",
-      "fromFragment": "Wuhan-Hu-1::NC_045512.2",
-      "refStart": 29531,
-      "refEnd": 29557
-    },
-    {
-      "geneName": "SARS2ORF10"
-    },
-    {
-      "name": "ORF10-3UTR",
-      "fromFragment": "Wuhan-Hu-1::NC_045512.2",
-      "refStart": 29672,
-      "refEnd": 29903
     }
   ]
 }
