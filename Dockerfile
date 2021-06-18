@@ -9,6 +9,7 @@ COPY --from=dependencies-installer /sierra/ /sierra/
 COPY --from=dependencies-installer /root/ /root/
 WORKDIR /sierra
 COPY sierra-core /sierra/sierra-core
+COPY sierra-graphql /sierra/sierra-graphql
 COPY asi_interpreter /sierra/asi_interpreter 
 COPY src /sierra/src
 RUN /sierra/gradlew assemble

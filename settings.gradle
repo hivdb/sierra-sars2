@@ -1,2 +1,2 @@
-include 'sierra-core', 'asi_interpreter'
+include 'sierra-core', 'sierra-graphql', 'asi_interpreter'
 rootProject.name = 'Sierra-SARS2'

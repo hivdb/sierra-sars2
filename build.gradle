@@ -37,6 +37,7 @@ dependencies {
     implementation 'org.xerial:sqlite-jdbc:3.34.0'
     implementation 'software.amazon.awssdk:lambda:2.16.13'
     implementation 'software.amazon.awssdk:s3:2.16.13'
+    implementation project(':sierra-graphql')
     implementation project(':sierra-core')
 
     // Use JUnit test framework

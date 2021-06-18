@@ -18,6 +18,7 @@ import edu.stanford.hivdb.sequences.Aligner;
 import edu.stanford.hivdb.sequences.Sequence;
 import edu.stanford.hivdb.utilities.FastaUtils;
 import edu.stanford.hivdb.viruses.Gene;
+import edu.stanford.hivdb.viruses.Strain;
 import graphql.GraphQL;
 import graphql.schema.GraphQLSchema;
 
@@ -44,6 +45,8 @@ public class SARS2Test {
 		assertEquals("SARS2nsp1", genes.get(0).getName());
 		assertEquals("SARS2S", genes.get(15).getName());
 		assertEquals(25L, virusIns.getGenes(virusIns.getMainStrain()).size());
+		Strain<SARS2> strain = virusIns.getStrain("SARS2");
+		assertEquals(genes.get(0), strain.getGene("nsp1"));
 	}
 	
 	@Test
