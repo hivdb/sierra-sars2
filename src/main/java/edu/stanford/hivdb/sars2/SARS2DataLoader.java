@@ -142,7 +142,7 @@ public class SARS2DataLoader<T extends Virus<T>> {
 	private transient Map<String, DrugResistanceAlgorithm<T>> drugResistAlgLookup;
 	private transient ConditionalComments<T> condComments;
 	private transient AlignmentConfig<T> alignmentConfig;
-	private transient SequenceReadsAssembler<T> assemblyConfig;
+	private transient Map<Strain<T>, SequenceReadsAssembler<T>> seqReadsAssemblers;
 	
 	public SARS2DataLoader(
 		T virus,
@@ -770,12 +770,12 @@ public class SARS2DataLoader<T extends Virus<T>> {
 		return alignmentConfig;
 	}
 	
-	public SequenceReadsAssembler<T> getAssemblyConfig() {
-		if (assemblyConfig == null) {
+	public Map<Strain<T>, SequenceReadsAssembler<T>> getSeqReadsAssemblers() {
+		if (seqReadsAssemblers == null) {
 			String raw = loadResource(ASSEMBLYCONFIG_RESPATH);
-			assemblyConfig = SequenceReadsAssembler.loadJson(raw, virus);
+			seqReadsAssemblers = SequenceReadsAssembler.loadJson(raw, virus);
 		}
-		return assemblyConfig;
+		return seqReadsAssemblers;
 	}
 	
 }

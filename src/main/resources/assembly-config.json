@@ -1,195 +1,197 @@
-[
-  {
-    "name": "5UTR",
-    "type": "UNTRANS_REGION",
-    "refStart": 1,
-    "refEnd": 265
-  },
-  {
-    "name": "nsp1",
-    "geneName": "SARS2nsp1",
-    "type": "GENE"
-  },
-  {
-    "name": "nsp2",
-    "geneName": "SARS2nsp2",
-    "type": "GENE"
-  },
-  {
-    "name": "PLpro",
-    "geneName": "SARS2PLpro",
-    "type": "GENE"
-  },
-  {
-    "name": "nsp4",
-    "geneName": "SARS2nsp4",
-    "type": "GENE"
-  },
-  {
-    "name": "_3CLpro",
-    "geneName": "SARS2_3CLpro",
-    "type": "GENE"
-  },
-  {
-    "name": "nsp6",
-    "geneName": "SARS2nsp6",
-    "type": "GENE"
-  },
-  {
-    "name": "nsp7",
-    "geneName": "SARS2nsp7",
-    "type": "GENE"
-  },
-  {
-    "name": "nsp8",
-    "geneName": "SARS2nsp8",
-    "type": "GENE"
-  },
-  {
-    "name": "nsp9",
-    "geneName": "SARS2nsp9",
-    "type": "GENE"
-  },
-  {
-    "name": "nsp10",
-    "geneName": "SARS2nsp10",
-    "type": "GENE"
-  },
-  {
-    "name": "RdRP",
-    "geneName": "SARS2RdRP",
-    "type": "GENE",
-    "trim": [28]
-  },
-  {
-    "name": "nsp13",
-    "geneName": "SARS2nsp13",
-    "type": "GENE"
-  },
-  {
-    "name": "nsp14",
-    "geneName": "SARS2nsp14",
-    "type": "GENE"
-  },
-  {
-    "name": "nsp15",
-    "geneName": "SARS2nsp15",
-    "type": "GENE"
-  },
-  {
-    "name": "nsp16",
-    "geneName": "SARS2nsp16",
-    "type": "GENE"
-  },
-  {
-    "name": "nsp16-S",
-    "type": "UNTRANS_REGION",
-    "refStart": 21553,
-    "refEnd": 21562
-  },
-  {
-    "name": "S",
-    "geneName": "SARS2S",
-    "type": "GENE"
-  },
-  {
-    "name": "S-ORF3a",
-    "type": "UNTRANS_REGION",
-    "refStart": 25382,
-    "refEnd": 25392
-  },
-  {
-    "name": "ORF3a",
-    "geneName": "SARS2ORF3a",
-    "type": "GENE"
-  },
-  {
-    "name": "ORF3a-E",
-    "type": "UNTRANS_REGION",
-    "refStart": 26218,
-    "refEnd": 26244
-  },
-  {
-    "name": "E",
-    "geneName": "SARS2E",
-    "type": "GENE"
-  },
-  {
-    "name": "E-M",
-    "type": "UNTRANS_REGION",
-    "refStart": 26470,
-    "refEnd": 26522
-  },
-  {
-    "name": "M",
-    "geneName": "SARS2M",
-    "type": "GENE"
-  },
-  {
-    "name": "M-ORF6",
-    "type": "UNTRANS_REGION",
-    "refStart": 27189,
-    "refEnd": 27201
-  },
-  {
-    "name": "ORF6",
-    "geneName": "SARS2ORF6",
-    "type": "GENE"
-  },
-  {
-    "name": "ORF6-ORF7a",
-    "type": "UNTRANS_REGION",
-    "refStart": 27385,
-    "refEnd": 27393
-  },
-  {
-    "name": "ORF7a",
-    "geneName": "SARS2ORF7a",
-    "type": "GENE"
-  },
-  {
-    "name": "ORF7b",
-    "geneName": "SARS2ORF7b",
-    "type": "GENE",
-    "trim": [1]
-  },
-  {
-    "name": "ORF7b-ORF8",
-    "type": "UNTRANS_REGION",
-    "refStart": 27885,
-    "refEnd": 27893
-  },
-  {
-    "name": "ORF8",
-    "geneName": "SARS2ORF8",
-    "type": "GENE"
-  },
-  {
-    "name": "ORF8-N",
-    "type": "UNTRANS_REGION",
-    "refStart": 28257,
-    "refEnd": 28273
-  },
-  {
-    "name": "N",
-    "geneName": "SARS2N",
-    "type": "GENE"
-  },
-  {
-    "name": "N-ORF10",
-    "type": "UNTRANS_REGION",
-    "refStart": 29531,
-    "refEnd": 29557
-  },
-  {
-    "name": "ORF10",
-    "geneName": "SARS2ORF10",
-    "type": "GENE"
-  },
-  {
-    "name": "ORF10-3UTR",
-    "type": "UNTRANS_REGION",
-    "refStart": 29672,
-    "refEnd": 29903
-  }
-]
+{
+  "SARS2": [
+    {
+      "name": "5UTR",
+      "type": "UNTRANS_REGION",
+      "refStart": 1,
+      "refEnd": 265
+    },
+    {
+      "name": "nsp1",
+      "geneName": "SARS2nsp1",
+      "type": "GENE"
+    },
+    {
+      "name": "nsp2",
+      "geneName": "SARS2nsp2",
+      "type": "GENE"
+    },
+    {
+      "name": "PLpro",
+      "geneName": "SARS2PLpro",
+      "type": "GENE"
+    },
+    {
+      "name": "nsp4",
+      "geneName": "SARS2nsp4",
+      "type": "GENE"
+    },
+    {
+      "name": "_3CLpro",
+      "geneName": "SARS2_3CLpro",
+      "type": "GENE"
+    },
+    {
+      "name": "nsp6",
+      "geneName": "SARS2nsp6",
+      "type": "GENE"
+    },
+    {
+      "name": "nsp7",
+      "geneName": "SARS2nsp7",
+      "type": "GENE"
+    },
+    {
+      "name": "nsp8",
+      "geneName": "SARS2nsp8",
+      "type": "GENE"
+    },
+    {
+      "name": "nsp9",
+      "geneName": "SARS2nsp9",
+      "type": "GENE"
+    },
+    {
+      "name": "nsp10",
+      "geneName": "SARS2nsp10",
+      "type": "GENE"
+    },
+    {
+      "name": "RdRP",
+      "geneName": "SARS2RdRP",
+      "type": "GENE",
+      "trim": [28]
+    },
+    {
+      "name": "nsp13",
+      "geneName": "SARS2nsp13",
+      "type": "GENE"
+    },
+    {
+      "name": "nsp14",
+      "geneName": "SARS2nsp14",
+      "type": "GENE"
+    },
+    {
+      "name": "nsp15",
+      "geneName": "SARS2nsp15",
+      "type": "GENE"
+    },
+    {
+      "name": "nsp16",
+      "geneName": "SARS2nsp16",
+      "type": "GENE"
+    },
+    {
+      "name": "nsp16-S",
+      "type": "UNTRANS_REGION",
+      "refStart": 21553,
+      "refEnd": 21562
+    },
+    {
+      "name": "S",
+      "geneName": "SARS2S",
+      "type": "GENE"
+    },
+    {
+      "name": "S-ORF3a",
+      "type": "UNTRANS_REGION",
+      "refStart": 25382,
+      "refEnd": 25392
+    },
+    {
+      "name": "ORF3a",
+      "geneName": "SARS2ORF3a",
+      "type": "GENE"
+    },
+    {
+      "name": "ORF3a-E",
+      "type": "UNTRANS_REGION",
+      "refStart": 26218,
+      "refEnd": 26244
+    },
+    {
+      "name": "E",
+      "geneName": "SARS2E",
+      "type": "GENE"
+    },
+    {
+      "name": "E-M",
+      "type": "UNTRANS_REGION",
+      "refStart": 26470,
+      "refEnd": 26522
+    },
+    {
+      "name": "M",
+      "geneName": "SARS2M",
+      "type": "GENE"
+    },
+    {
+      "name": "M-ORF6",
+      "type": "UNTRANS_REGION",
+      "refStart": 27189,
+      "refEnd": 27201
+    },
+    {
+      "name": "ORF6",
+      "geneName": "SARS2ORF6",
+      "type": "GENE"
+    },
+    {
+      "name": "ORF6-ORF7a",
+      "type": "UNTRANS_REGION",
+      "refStart": 27385,
+      "refEnd": 27393
+    },
+    {
+      "name": "ORF7a",
+      "geneName": "SARS2ORF7a",
+      "type": "GENE"
+    },
+    {
+      "name": "ORF7b",
+      "geneName": "SARS2ORF7b",
+      "type": "GENE",
+      "trim": [1]
+    },
+    {
+      "name": "ORF7b-ORF8",
+      "type": "UNTRANS_REGION",
+      "refStart": 27885,
+      "refEnd": 27893
+    },
+    {
+      "name": "ORF8",
+      "geneName": "SARS2ORF8",
+      "type": "GENE"
+    },
+    {
+      "name": "ORF8-N",
+      "type": "UNTRANS_REGION",
+      "refStart": 28257,
+      "refEnd": 28273
+    },
+    {
+      "name": "N",
+      "geneName": "SARS2N",
+      "type": "GENE"
+    },
+    {
+      "name": "N-ORF10",
+      "type": "UNTRANS_REGION",
+      "refStart": 29531,
+      "refEnd": 29557
+    },
+    {
+      "name": "ORF10",
+      "geneName": "SARS2ORF10",
+      "type": "GENE"
+    },
+    {
+      "name": "ORF10-3UTR",
+      "type": "UNTRANS_REGION",
+      "refStart": 29672,
+      "refEnd": 29903
+    }
+  ]
+}

@@ -1,9 +1,6 @@
 VERSION=$(shell date -u +"%Y%m%d%H%M%S")
 DOCKERREPO=$(shell ./scripts/get-docker-repo.sh)
 
-sync-drdb:
-	@cp -v $$(ls ../chiro-cms/downloads/covid-drdb/*.db | sort -r | head -1) src/main/resources/covid-drdb.db
-
 build:
 	@docker build -t ${DOCKERREPO} .
 

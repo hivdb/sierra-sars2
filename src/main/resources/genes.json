@@ -8,8 +8,7 @@
     "mutationTypes": [
       "Other"
     ],
-    "strainModifiers": {},
-    "nucaminoMinNumOfAA": 50
+    "strainModifiers": {}
   },
   {
     "name": "SARS2nsp2",
@@ -20,8 +19,7 @@
     "mutationTypes": [
       "Other"
     ],
-    "strainModifiers": {},
-    "nucaminoMinNumOfAA": 150
+    "strainModifiers": {}
   },
   {
     "name": "SARS2PLpro",
@@ -33,7 +31,6 @@
       "Other"
     ],
     "strainModifiers": {},
-    "nucaminoMinNumOfAA": 400,
     "synonyms": ["SARS2PL", "SARS2nsp3"]
   },
   {
@@ -45,8 +42,7 @@
     "mutationTypes": [
       "Other"
     ],
-    "strainModifiers": {},
-    "nucaminoMinNumOfAA": 100
+    "strainModifiers": {}
   },
   {
     "name": "SARS2_3CLpro",
@@ -58,7 +54,6 @@
       "Other"
     ],
     "strainModifiers": {},
-    "nucaminoMinNumOfAA": 60,
     "synonyms": ["SARS23CL", "SARS23CLpro", "SARS2nsp5"]
   },
   {
@@ -70,8 +65,7 @@
     "mutationTypes": [
       "Other"
     ],
-    "strainModifiers": {},
-    "nucaminoMinNumOfAA": 60
+    "strainModifiers": {}
   },
   {
     "name": "SARS2nsp7",
@@ -82,8 +76,7 @@
     "mutationTypes": [
       "Other"
     ],
-    "strainModifiers": {},
-    "nucaminoMinNumOfAA": 20
+    "strainModifiers": {}
   },
   {
     "name": "SARS2nsp8",
@@ -94,8 +87,7 @@
     "mutationTypes": [
       "Other"
     ],
-    "strainModifiers": {},
-    "nucaminoMinNumOfAA": 40
+    "strainModifiers": {}
   },
   {
     "name": "SARS2nsp9",
@@ -106,8 +98,7 @@
     "mutationTypes": [
       "Other"
     ],
-    "strainModifiers": {},
-    "nucaminoMinNumOfAA": 20
+    "strainModifiers": {}
   },
   {
     "name": "SARS2nsp10",
@@ -118,8 +109,7 @@
     "mutationTypes": [
       "Other"
     ],
-    "strainModifiers": {},
-    "nucaminoMinNumOfAA": 20
+    "strainModifiers": {}
   },
   {
     "name": "SARS2RdRP",
@@ -130,8 +120,7 @@
     "mutationTypes": [
       "Other"
     ],
-    "strainModifiers": {},
-    "nucaminoMinNumOfAA": 200
+    "strainModifiers": {}
   },
   {
     "name": "SARS2nsp13",
@@ -142,8 +131,7 @@
     "mutationTypes": [
       "Other"
     ],
-    "strainModifiers": {},
-    "nucaminoMinNumOfAA": 120
+    "strainModifiers": {}
   },
   {
     "name": "SARS2nsp14",
@@ -154,8 +142,7 @@
     "mutationTypes": [
       "Other"
     ],
-    "strainModifiers": {},
-    "nucaminoMinNumOfAA": 100
+    "strainModifiers": {}
   },
   {
     "name": "SARS2nsp15",
@@ -166,8 +153,7 @@
     "mutationTypes": [
       "Other"
     ],
-    "strainModifiers": {},
-    "nucaminoMinNumOfAA": 70
+    "strainModifiers": {}
   },
   {
     "name": "SARS2nsp16",
@@ -178,8 +164,7 @@
     "mutationTypes": [
       "Other"
     ],
-    "strainModifiers": {},
-    "nucaminoMinNumOfAA": 60
+    "strainModifiers": {}
   },
   {
     "name": "SARS2S",
@@ -191,7 +176,6 @@
       "Other"
     ],
     "strainModifiers": {},
-    "nucaminoMinNumOfAA": 300,
     "synonyms": ["SARS2Spike"]
   },
   {
@@ -203,8 +187,7 @@
     "mutationTypes": [
       "Other"
     ],
-    "strainModifiers": {},
-    "nucaminoMinNumOfAA": 60
+    "strainModifiers": {}
   },
   {
     "name": "SARS2E",
@@ -215,8 +198,7 @@
     "mutationTypes": [
       "Other"
     ],
-    "strainModifiers": {},
-    "nucaminoMinNumOfAA": 20
+    "strainModifiers": {}
   },
   {
     "name": "SARS2M",
@@ -227,8 +209,7 @@
     "mutationTypes": [
       "Other"
     ],
-    "strainModifiers": {},
-    "nucaminoMinNumOfAA": 50
+    "strainModifiers": {}
   },
   {
     "name": "SARS2ORF6",
@@ -239,8 +220,7 @@
     "mutationTypes": [
       "Other"
     ],
-    "strainModifiers": {},
-    "nucaminoMinNumOfAA": 20
+    "strainModifiers": {}
   },
   {
     "name": "SARS2ORF7a",
@@ -251,8 +231,7 @@
     "mutationTypes": [
       "Other"
     ],
-    "strainModifiers": {},
-    "nucaminoMinNumOfAA": 30
+    "strainModifiers": {}
   },
   {
     "name": "SARS2ORF7b",
@@ -263,8 +242,7 @@
     "mutationTypes": [
       "Other"
     ],
-    "strainModifiers": {},
-    "nucaminoMinNumOfAA": 20
+    "strainModifiers": {}
   },
   {
     "name": "SARS2ORF8",
@@ -275,8 +253,7 @@
     "mutationTypes": [
       "Other"
     ],
-    "strainModifiers": {},
-    "nucaminoMinNumOfAA": 20
+    "strainModifiers": {}
   },
   {
     "name": "SARS2N",
@@ -287,8 +264,7 @@
     "mutationTypes": [
       "Other"
     ],
-    "strainModifiers": {},
-    "nucaminoMinNumOfAA": 80
+    "strainModifiers": {}
   },
   {
     "name": "SARS2ORF10",
@@ -299,7 +275,6 @@
     "mutationTypes": [
       "Other"
     ],
-    "strainModifiers": {},
-    "nucaminoMinNumOfAA": 20
+    "strainModifiers": {}
   }
 ]

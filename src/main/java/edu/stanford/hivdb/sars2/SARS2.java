@@ -352,8 +352,8 @@ public class SARS2 implements Virus<SARS2> {
 	}
 
 	@Override
-	public SequenceReadsAssembler<SARS2> getSequenceReadsAssembler() {
-		return dl.getAssemblyConfig();
+	public SequenceReadsAssembler<SARS2> getSequenceReadsAssembler(Strain<SARS2> strain) {
+		return dl.getSeqReadsAssemblers().get(strain);
 	}
 	
 
