@@ -145,7 +145,7 @@ public abstract class SuscResult {
 	private final String isoName;
 	private final Integer ordinalNumber;
 	private final String section;
-	private final String assay;
+	private final String assayName;
 	private final String foldCmp;
 	private final Double fold;
 	private final String fbResistanceLevel;
@@ -172,7 +172,7 @@ public abstract class SuscResult {
 		controlIsoName = (String) suscData.get("controlIsoName");
 		isoName = (String) suscData.get("isoName");
 		ordinalNumber = (Integer) suscData.get("ordinalNumber");
-		assay = (String) suscData.get("assay");
+		assayName = (String) suscData.get("assayName");
 		section = (String) suscData.get("section");
 		foldCmp = (String) suscData.get("foldCmp");
 		fold = (Double) suscData.get("fold");
@@ -212,7 +212,7 @@ public abstract class SuscResult {
 	public String getRefName() { return refName; }
 	public String getRxName() { return rxName; }
 	public Integer getOrdinalNumber() { return ordinalNumber; }
-	public String getAssay() { return assay; }
+	public String getAssayName() { return assayName; }
 	public String getSection() { return section; }
 	public String getFoldCmp() { return foldCmp; }
 	public Double getFold() { return fold; }

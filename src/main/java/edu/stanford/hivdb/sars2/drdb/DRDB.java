@@ -308,7 +308,7 @@ public class DRDB {
 			"S.control_iso_name, " +
 			"S.iso_name, " +
 			"ordinal_number, " +
-			"assay, " +
+			"assay_name, " +
 			"section, " +
 			"fold_cmp, " +
 			"fold, " +
@@ -343,7 +343,7 @@ public class DRDB {
 					result.put("abNames", Set.of(rs.getString("ab_names").split(QUOTED_LIST_JOIN_UNIQ)));
 					result.put("controlIsoName", rs.getString("control_iso_name"));
 					result.put("isoName", rs.getString("iso_name"));
-					result.put("assay", rs.getString("assay"));
+					result.put("assayName", rs.getString("assay_name"));
 					result.put("section", rs.getString("section"));
 					result.put("ordinalNumber", rs.getInt("ordinal_number"));
 					result.put("foldCmp", foldCmp);
@@ -371,7 +371,7 @@ public class DRDB {
 			"S.control_iso_name, " +
 			"S.iso_name, " +
 			"ordinal_number, " +
-			"assay, " +
+			"assay_name, " +
 			"section, " +
 			"fold_cmp, " +
 			"fold, " +
@@ -399,7 +399,7 @@ public class DRDB {
 					result.put("rxName", rs.getString("rx_name"));
 					result.put("controlIsoName", rs.getString("control_iso_name"));
 					result.put("isoName", rs.getString("iso_name"));
-					result.put("assay", rs.getString("assay"));
+					result.put("assayName", rs.getString("assay_name"));
 					result.put("section", rs.getString("section"));
 					result.put("ordinalNumber", rs.getInt("ordinal_number"));
 					result.put("foldCmp", foldCmp);
@@ -445,7 +445,7 @@ public class DRDB {
 			"S.rx_name, " +
 			"S.control_iso_name, " +
 			"S.iso_name, " +
-			"assay, " +
+			"assay_name, " +
 			"section, " +
 			"ordinal_number, " +
 			"fold_cmp, " +
@@ -480,7 +480,7 @@ public class DRDB {
 					result.put("vaccineType", rs.getString("vaccine_type"));
 					result.put("controlIsoName", rs.getString("control_iso_name"));
 					result.put("isoName", rs.getString("iso_name"));
-					result.put("assay", rs.getString("assay"));
+					result.put("assayName", rs.getString("assay_name"));
 					result.put("section", rs.getString("section"));
 					result.put("ordinalNumber", rs.getInt("ordinal_number"));
 					result.put("foldCmp", foldCmp);

@@ -70,7 +70,7 @@ public class SuscResultDef {
 			.description("The experimental isolate of the susceptibility testing."))
 		.field(field -> field
 			.type(GraphQLString)
-			.name("assay")
+			.name("assayName")
 			.description("Indicate if the test was against psuedovirus or authentic virus."))
 		.field(field -> field
 			.type(GraphQLString)
