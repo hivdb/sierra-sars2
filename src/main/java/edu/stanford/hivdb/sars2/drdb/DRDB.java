@@ -1,5 +1,15 @@
 package edu.stanford.hivdb.sars2.drdb;
 
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -14,8 +24,10 @@ import java.util.Set;
 import java.util.function.Function;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
+import java.util.zip.GZIPInputStream;
 
 import org.apache.commons.collections4.map.LRUMap;
+import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang3.tuple.Pair;
 
 import edu.stanford.hivdb.mutations.AAMutation;
@@ -72,8 +84,28 @@ public class DRDB {
 		} catch (ClassNotFoundException e1) {
 			throw new RuntimeException(e1);
 		}
+		File targetDir = new File("/tmp/drdb-payload");
+		if (!targetDir.exists()) {
+			targetDir.mkdirs();
+		}
+    File targetFile = new File("/tmp/drdb-payload/" + FilenameUtils.getName(resourcePath));
 		try {
-			conn = DriverManager.getConnection("jdbc:sqlite::resource:" + resourcePath);
+			URL url = new URL(resourcePath);
+			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+			conn.setRequestProperty("Accept-Encoding", "gzip, deflate");
+			InputStream dbStream;
+      if ("gzip".equals(conn.getContentEncoding())) {
+         dbStream = new GZIPInputStream(conn.getInputStream());
+      }
+      else {
+         dbStream = conn.getInputStream();
+      }
+      Files.copy(dbStream, targetFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
+		} catch (IOException e) {
+			throw new RuntimeException(e);
+		}
+		try {
+			conn = DriverManager.getConnection("jdbc:sqlite:" + targetFile.getAbsolutePath());
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			throw new RuntimeException(e);
