@@ -3,10 +3,7 @@ package edu.stanford.hivdb.sars2.drdb;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.Reader;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
@@ -42,11 +39,7 @@ public class DRDB {
 	private static final String COVID_DRDB_RESURL_PREFIX;
 	
 	static {
-		String cmsStage = System.getenv("CMS_STAGE");
-		if (cmsStage == null || cmsStage.equals("")) {
-			cmsStage = "chiro-prod";
-		}
-		COVID_DRDB_RESURL_PREFIX = "https://s3-us-west-2.amazonaws.com/cms.hivdb.org/" + cmsStage + "/downloads/covid-drdb";
+		COVID_DRDB_RESURL_PREFIX = "https://s3-us-west-2.amazonaws.com/cms.hivdb.org/covid-drdb";
 	}
 
 	private static final Map<String, DRDB> singletons = Collections.synchronizedMap(new LRUMap<String, DRDB>(MAX_ENTRIES));
@@ -67,7 +60,7 @@ public class DRDB {
 	}
 	
 	public static DRDB getInstance(String version) {
-		String resourcePath = String.format("%s/%s.db", COVID_DRDB_RESURL_PREFIX, version);
+		String resourcePath = String.format("%s/covid-drdb-%s.db", COVID_DRDB_RESURL_PREFIX, version);
 		if (!singletons.containsKey(resourcePath)) {
 			DRDB instance = new DRDB(resourcePath);
 			singletons.put(resourcePath, instance);
