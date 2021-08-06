@@ -332,7 +332,6 @@ public class DRDB {
 			"S.rx_name, " +
 			"S.control_iso_name, " +
 			"S.iso_name, " +
-			"ordinal_number, " +
 			"assay_name, " +
 			"section, " +
 			"fold_cmp, " +
@@ -370,7 +369,6 @@ public class DRDB {
 					result.put("isoName", rs.getString("iso_name"));
 					result.put("assayName", rs.getString("assay_name"));
 					result.put("section", rs.getString("section"));
-					result.put("ordinalNumber", rs.getInt("ordinal_number"));
 					result.put("foldCmp", foldCmp);
 					result.put("fold", fold);
 					result.put("ineffective", rs.getString("ineffective"));
@@ -395,7 +393,6 @@ public class DRDB {
 			"S.rx_name, " +
 			"S.control_iso_name, " +
 			"S.iso_name, " +
-			"ordinal_number, " +
 			"assay_name, " +
 			"section, " +
 			"fold_cmp, " +
@@ -426,7 +423,6 @@ public class DRDB {
 					result.put("isoName", rs.getString("iso_name"));
 					result.put("assayName", rs.getString("assay_name"));
 					result.put("section", rs.getString("section"));
-					result.put("ordinalNumber", rs.getInt("ordinal_number"));
 					result.put("foldCmp", foldCmp);
 					result.put("fold", fold);
 					result.put("ineffective", rs.getString("ineffective"));
@@ -472,7 +468,6 @@ public class DRDB {
 			"S.iso_name, " +
 			"assay_name, " +
 			"section, " +
-			"ordinal_number, " +
 			"fold_cmp, " +
 			"fold, " +
 			"S.ineffective, " +
@@ -507,7 +502,6 @@ public class DRDB {
 					result.put("isoName", rs.getString("iso_name"));
 					result.put("assayName", rs.getString("assay_name"));
 					result.put("section", rs.getString("section"));
-					result.put("ordinalNumber", rs.getInt("ordinal_number"));
 					result.put("foldCmp", foldCmp);
 					result.put("fold", fold);
 					result.put("ineffective", rs.getString("ineffective"));

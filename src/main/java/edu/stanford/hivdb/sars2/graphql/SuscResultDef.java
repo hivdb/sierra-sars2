@@ -77,10 +77,6 @@ public class SuscResultDef {
 			.name("section")
 			.description("Data source section(s) from the reference."))
 		.field(field -> field
-			.type(GraphQLInt)
-			.name("ordinalNumber")
-			.description("Tell apart results when multiple ones are available for the same `refName-rxName-controlIsoName-isoName` combinations."))
-		.field(field -> field
 			.type(GraphQLString)
 			.name("foldCmp")
 			.description("Indicate if the `fold` is precise or a range."))
