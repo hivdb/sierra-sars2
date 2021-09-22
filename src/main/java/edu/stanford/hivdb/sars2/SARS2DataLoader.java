@@ -58,6 +58,7 @@ import edu.stanford.hivdb.mutations.MutationType;
 import edu.stanford.hivdb.mutations.MutationTypePair;
 import edu.stanford.hivdb.seqreads.SequenceReadsAssembler;
 import edu.stanford.hivdb.sequences.AlignmentConfig;
+import edu.stanford.hivdb.sequences.SequenceAssembler;
 import edu.stanford.hivdb.utilities.AAUtils;
 import edu.stanford.hivdb.utilities.AssertUtils;
 import edu.stanford.hivdb.utilities.Json;
@@ -143,6 +144,7 @@ public class SARS2DataLoader<T extends Virus<T>> {
 	private transient ConditionalComments<T> condComments;
 	private transient AlignmentConfig<T> alignmentConfig;
 	private transient Map<Strain<T>, SequenceReadsAssembler<T>> seqReadsAssemblers;
+	private transient Map<Strain<T>, SequenceAssembler<T>> sequenceAssemblers;
 	
 	public SARS2DataLoader(
 		T virus,
@@ -771,11 +773,26 @@ public class SARS2DataLoader<T extends Virus<T>> {
 	}
 	
 	public Map<Strain<T>, SequenceReadsAssembler<T>> getSeqReadsAssemblers() {
-		if (seqReadsAssemblers == null) {
+		if (this.seqReadsAssemblers == null) {
 			String raw = loadResource(ASSEMBLYCONFIG_RESPATH);
-			seqReadsAssemblers = SequenceReadsAssembler.loadJson(raw, virus);
+			Map<Strain<T>, SequenceReadsAssembler<T>> seqReadsAssemblers = SequenceReadsAssembler.loadJson(
+				raw,
+				virus
+			);
+			this.seqReadsAssemblers = seqReadsAssemblers;
 		}
-		return seqReadsAssemblers;
+		return this.seqReadsAssemblers;
+	}
+
+	public Map<Strain<T>, SequenceAssembler<T>> getSequenceAssemblers() {
+		if (sequenceAssemblers == null) {
+			String raw = loadResource(ASSEMBLYCONFIG_RESPATH);
+			Map<Strain<T>, SequenceAssembler<T>> sequenceAssemblers = SequenceAssembler.loadJson(
+				raw,
+				virus);
+			this.sequenceAssemblers = sequenceAssemblers;
+		}
+		return sequenceAssemblers;
 	}
 	
 }

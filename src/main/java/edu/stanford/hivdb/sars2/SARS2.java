@@ -40,6 +40,7 @@ import edu.stanford.hivdb.mutations.MutationTypePair;
 import edu.stanford.hivdb.sars2.graphql.SARS2GraphQLExtension;
 import edu.stanford.hivdb.seqreads.SequenceReadsAssembler;
 import edu.stanford.hivdb.sequences.AlignmentConfig;
+import edu.stanford.hivdb.sequences.SequenceAssembler;
 import edu.stanford.hivdb.viruses.Gene;
 import edu.stanford.hivdb.viruses.Strain;
 import edu.stanford.hivdb.viruses.Virus;
@@ -355,6 +356,10 @@ public class SARS2 implements Virus<SARS2> {
 	public SequenceReadsAssembler<SARS2> getSequenceReadsAssembler(Strain<SARS2> strain) {
 		return dl.getSeqReadsAssemblers().get(strain);
 	}
-	
+
+	@Override
+	public SequenceAssembler<SARS2> getSequenceAssembler(Strain<SARS2> strain) {
+		return dl.getSequenceAssemblers().get(strain);
+	}
 
 }

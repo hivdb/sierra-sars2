@@ -7,5 +7,113 @@
     "name": "U",
     "parentGenotypes": null,
     "regions": null
+  },
+  "Alpha": {
+    "classificationLevel": "SUBTYPE",
+    "displayName": "VOC Alpha",
+    "distanceUpperLimit": 0.05,
+    "isSimpleCRF": false,
+    "name": "Alpha",
+    "parentGenotypes": null,
+    "regions": null
+  },
+  "Beta": {
+    "classificationLevel": "SUBTYPE",
+    "displayName": "VOC Beta",
+    "distanceUpperLimit": 0.05,
+    "isSimpleCRF": false,
+    "name": "Beta",
+    "parentGenotypes": null,
+    "regions": null
+  },
+  "Gamma": {
+    "classificationLevel": "SUBTYPE",
+    "displayName": "VOC Gamma",
+    "distanceUpperLimit": 0.05,
+    "isSimpleCRF": false,
+    "name": "Gamma",
+    "parentGenotypes": null,
+    "regions": null
+  },
+  "Delta": {
+    "classificationLevel": "SUBTYPE",
+    "displayName": "VOC Delta",
+    "distanceUpperLimit": 0.05,
+    "isSimpleCRF": false,
+    "name": "Delta",
+    "parentGenotypes": null,
+    "regions": null
+  },
+  "Epsilon": {
+    "classificationLevel": "SUBTYPE",
+    "displayName": "B.1.427/9 (former VOI Epsilon)",
+    "distanceUpperLimit": 0.05,
+    "isSimpleCRF": false,
+    "name": "Epsilon",
+    "parentGenotypes": null,
+    "regions": null
+  },
+  "Zeta": {
+    "classificationLevel": "SUBTYPE",
+    "displayName": "P.2 (former VOI Zeta)",
+    "distanceUpperLimit": 0.05,
+    "isSimpleCRF": false,
+    "name": "Zeta",
+    "parentGenotypes": null,
+    "regions": null
+  },
+  "Theta": {
+    "classificationLevel": "SUBTYPE",
+    "displayName": "P.3 (former VOI Theta)",
+    "distanceUpperLimit": 0.05,
+    "isSimpleCRF": false,
+    "name": "Theta",
+    "parentGenotypes": null,
+    "regions": null
+  },
+  "Eta": {
+    "classificationLevel": "SUBTYPE",
+    "displayName": "VOI Eta (B.1.525)",
+    "distanceUpperLimit": 0.05,
+    "isSimpleCRF": false,
+    "name": "Eta",
+    "parentGenotypes": null,
+    "regions": null
+  },
+  "Iota": {
+    "classificationLevel": "SUBTYPE",
+    "displayName": "VOI Iota (B.1.526)",
+    "distanceUpperLimit": 0.05,
+    "isSimpleCRF": false,
+    "name": "Iota",
+    "parentGenotypes": null,
+    "regions": null
+  },
+  "Kappa": {
+    "classificationLevel": "SUBTYPE",
+    "displayName": "VOI Kappa (B.1.617.1)",
+    "distanceUpperLimit": 0.05,
+    "isSimpleCRF": false,
+    "name": "Kappa",
+    "parentGenotypes": null,
+    "regions": null
+  },
+  "Lambda": {
+    "classificationLevel": "SUBTYPE",
+    "displayName": "VOI Lambda (C.37)",
+    "distanceUpperLimit": 0.05,
+    "isSimpleCRF": false,
+    "name": "Lambda",
+    "parentGenotypes": null,
+    "regions": null
+  },
+  "Mu": {
+    "classificationLevel": "SUBTYPE",
+    "displayName": "VOI Mu (B.1.621)",
+    "distanceUpperLimit": 0.05,
+    "isSimpleCRF": false,
+    "name": "Mu",
+    "parentGenotypes": null,
+    "regions": null
   }
 }
