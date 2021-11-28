@@ -133,5 +133,14 @@
     "name": "Mu",
     "parentGenotypes": "D614G",
     "regions": null
+  },
+  "Omicron": {
+    "classificationLevel": "SUBTYPE",
+    "displayName": "Omicron",
+    "distanceUpperLimit": 0.005,
+    "isSimpleCRF": false,
+    "name": "Omicron",
+    "parentGenotypes": "D614G",
+    "regions": null
   }
 }
