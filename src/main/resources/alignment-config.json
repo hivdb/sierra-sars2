@@ -27,7 +27,7 @@
       "minMatchPcnt": 60,
       "minNumOfAA": 50,
       "seqShrinkageWindow": 15,
-      "seqShrinkageCutoffPcnt": 30
+      "seqShrinkageCutoffPcnt": 50
     },
     {
       "fragmentName": "SARS2nsp2",
@@ -37,7 +37,7 @@
       "minMatchPcnt": 60,
       "minNumOfAA": 150,
       "seqShrinkageWindow": 15,
-      "seqShrinkageCutoffPcnt": 30
+      "seqShrinkageCutoffPcnt": 50
     },
     {
       "fragmentName": "SARS2PLpro",
@@ -47,7 +47,7 @@
       "minMatchPcnt": 60,
       "minNumOfAA": 400,
       "seqShrinkageWindow": 15,
-      "seqShrinkageCutoffPcnt": 30
+      "seqShrinkageCutoffPcnt": 50
     },
     {
       "fragmentName": "SARS2nsp4",
@@ -57,7 +57,7 @@
       "minMatchPcnt": 60,
       "minNumOfAA": 100,
       "seqShrinkageWindow": 15,
-      "seqShrinkageCutoffPcnt": 30
+      "seqShrinkageCutoffPcnt": 50
     },
     {
       "fragmentName": "SARS2_3CLpro",
@@ -67,7 +67,7 @@
       "minMatchPcnt": 60,
       "minNumOfAA": 60,
       "seqShrinkageWindow": 15,
-      "seqShrinkageCutoffPcnt": 30
+      "seqShrinkageCutoffPcnt": 50
     },
     {
       "fragmentName": "SARS2nsp6",
@@ -77,7 +77,7 @@
       "minMatchPcnt": 60,
       "minNumOfAA": 60,
       "seqShrinkageWindow": 15,
-      "seqShrinkageCutoffPcnt": 30
+      "seqShrinkageCutoffPcnt": 50
     },
     {
       "fragmentName": "SARS2nsp7",
@@ -87,7 +87,7 @@
       "minMatchPcnt": 60,
       "minNumOfAA": 20,
       "seqShrinkageWindow": 15,
-      "seqShrinkageCutoffPcnt": 30
+      "seqShrinkageCutoffPcnt": 50
     },
     {
       "fragmentName": "SARS2nsp8",
@@ -97,7 +97,7 @@
       "minMatchPcnt": 60,
       "minNumOfAA": 40,
       "seqShrinkageWindow": 15,
-      "seqShrinkageCutoffPcnt": 30
+      "seqShrinkageCutoffPcnt": 50
     },
     {
       "fragmentName": "SARS2nsp9",
@@ -107,7 +107,7 @@
       "minMatchPcnt": 60,
       "minNumOfAA": 20,
       "seqShrinkageWindow": 15,
-      "seqShrinkageCutoffPcnt": 30
+      "seqShrinkageCutoffPcnt": 50
     },
     {
       "fragmentName": "SARS2nsp10",
@@ -117,7 +117,7 @@
       "minMatchPcnt": 60,
       "minNumOfAA": 20,
       "seqShrinkageWindow": 15,
-      "seqShrinkageCutoffPcnt": 30
+      "seqShrinkageCutoffPcnt": 50
     },
     {
       "fragmentName": "SARS2RdRP",
@@ -127,7 +127,7 @@
       "minMatchPcnt": 60,
       "minNumOfAA": 200,
       "seqShrinkageWindow": 15,
-      "seqShrinkageCutoffPcnt": 30
+      "seqShrinkageCutoffPcnt": 50
     },
     {
       "fragmentName": "SARS2nsp13",
@@ -137,7 +137,7 @@
       "minMatchPcnt": 60,
       "minNumOfAA": 120,
       "seqShrinkageWindow": 15,
-      "seqShrinkageCutoffPcnt": 30
+      "seqShrinkageCutoffPcnt": 50
     },
     {
       "fragmentName": "SARS2nsp14",
@@ -147,7 +147,7 @@
       "minMatchPcnt": 60,
       "minNumOfAA": 100,
       "seqShrinkageWindow": 15,
-      "seqShrinkageCutoffPcnt": 30
+      "seqShrinkageCutoffPcnt": 50
     },
     {
       "fragmentName": "SARS2nsp15",
@@ -157,7 +157,7 @@
       "minMatchPcnt": 60,
       "minNumOfAA": 70,
       "seqShrinkageWindow": 15,
-      "seqShrinkageCutoffPcnt": 30
+      "seqShrinkageCutoffPcnt": 50
     },
     {
       "fragmentName": "SARS2nsp16",
@@ -167,7 +167,7 @@
       "minMatchPcnt": 60,
       "minNumOfAA": 60,
       "seqShrinkageWindow": 15,
-      "seqShrinkageCutoffPcnt": 30
+      "seqShrinkageCutoffPcnt": 50
     },
     {
       "fragmentName": "SARS2S",
@@ -177,7 +177,7 @@
       "minMatchPcnt": 60,
       "minNumOfAA": 300,
       "seqShrinkageWindow": 15,
-      "seqShrinkageCutoffPcnt": 30
+      "seqShrinkageCutoffPcnt": 50
     },
     {
       "fragmentName": "SARS2ORF3a",
@@ -187,7 +187,7 @@
       "minMatchPcnt": 60,
       "minNumOfAA": 60,
       "seqShrinkageWindow": 15,
-      "seqShrinkageCutoffPcnt": 30
+      "seqShrinkageCutoffPcnt": 50
     },
     {
       "fragmentName": "SARS2E",
@@ -197,7 +197,7 @@
       "minMatchPcnt": 60,
       "minNumOfAA": 20,
       "seqShrinkageWindow": 15,
-      "seqShrinkageCutoffPcnt": 30
+      "seqShrinkageCutoffPcnt": 50
     },
     {
       "fragmentName": "SARS2M",
@@ -207,7 +207,7 @@
       "minMatchPcnt": 60,
       "minNumOfAA": 50,
       "seqShrinkageWindow": 15,
-      "seqShrinkageCutoffPcnt": 30
+      "seqShrinkageCutoffPcnt": 50
     },
     {
       "fragmentName": "SARS2ORF6",
@@ -217,7 +217,7 @@
       "minMatchPcnt": 60,
       "minNumOfAA": 50,
       "seqShrinkageWindow": 15,
-      "seqShrinkageCutoffPcnt": 30
+      "seqShrinkageCutoffPcnt": 50
     },
     {
       "fragmentName": "SARS2ORF7a",
@@ -227,7 +227,7 @@
       "minMatchPcnt": 60,
       "minNumOfAA": 30,
       "seqShrinkageWindow": 15,
-      "seqShrinkageCutoffPcnt": 30
+      "seqShrinkageCutoffPcnt": 50
     },
     {
       "fragmentName": "SARS2ORF7b",
@@ -237,7 +237,7 @@
       "minMatchPcnt": 60,
       "minNumOfAA": 20,
       "seqShrinkageWindow": 15,
-      "seqShrinkageCutoffPcnt": 30
+      "seqShrinkageCutoffPcnt": 50
     },
     {
       "fragmentName": "SARS2ORF8",
@@ -247,7 +247,7 @@
       "minMatchPcnt": 60,
       "minNumOfAA": 20,
       "seqShrinkageWindow": 15,
-      "seqShrinkageCutoffPcnt": 30
+      "seqShrinkageCutoffPcnt": 50
     },
     {
       "fragmentName": "SARS2N",
@@ -257,7 +257,7 @@
       "minMatchPcnt": 60,
       "minNumOfAA": 80,
       "seqShrinkageWindow": 15,
-      "seqShrinkageCutoffPcnt": 30
+      "seqShrinkageCutoffPcnt": 50
     },
     {
       "fragmentName": "SARS2ORF10",
@@ -267,7 +267,7 @@
       "minMatchPcnt": 60,
       "minNumOfAA": 20,
       "seqShrinkageWindow": 15,
-      "seqShrinkageCutoffPcnt": 30
+      "seqShrinkageCutoffPcnt": 50
     }
   ]
 }
