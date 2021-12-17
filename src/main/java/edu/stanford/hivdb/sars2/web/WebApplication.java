@@ -21,23 +21,18 @@ package edu.stanford.hivdb.sars2.web;
 import java.util.HashSet;
 import java.util.Set;
 
-import javax.ws.rs.ApplicationPath;
-import javax.ws.rs.core.Application;
-import javax.ws.rs.core.Context;
+import jakarta.ws.rs.ApplicationPath;
+import jakarta.ws.rs.core.Application;
 
-import org.jboss.resteasy.core.Dispatcher;
-import org.jboss.resteasy.plugins.interceptors.CorsFilter;
 @ApplicationPath("/")
 public class WebApplication extends Application {
 
 	private Set<Object> singletons = new HashSet<>();
 	private Set<Class<?>> classes = new HashSet<>();
-
-	public WebApplication(@Context Dispatcher dispatcher) {
+	
+	public WebApplication() {
 		singletons.add(new GraphQLService());
-	    CorsFilter corsFilter = new CorsFilter();
-	    corsFilter.getAllowedOrigins().add("*");
-	    singletons.add(corsFilter);
+		classes.add(CorsFilter.class);
 	}
 
 	@Override

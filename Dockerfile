@@ -29,6 +29,7 @@ FROM hivdb/tomcat-with-nucamino:latest
 COPY --from=builder /usr/local/minimap2 /usr/local/minimap2
 COPY --from=builder /usr/local/postalign /usr/local/postalign
 COPY --from=builder /sierra/build/libs/Sierra-SARS2.war /usr/share/tomcat/webapps
+RUN sed -i 's/<Context>/<Context privileged="true">/' /usr/share/tomcat/conf/context.xml
 RUN cd /usr/local/bin && \
     ln -s ../minimap2/minimap2 && \
     ln -s ../minimap2/k8 && \
