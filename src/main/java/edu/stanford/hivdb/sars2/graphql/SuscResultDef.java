@@ -33,20 +33,35 @@ public class SuscResultDef {
 
 	public static DataFetcher<SuscSummary> antibodySuscSummaryFetcher = env -> {
 		String drdbVersion = env.getArgument("drdbVersion");
+		long start = System.currentTimeMillis();
 		MutationSet<SARS2> mutations = MutationSetDef.getMutationSetFromSource(env.getSource());
-		return SuscSummary.queryAntibodySuscSummary(drdbVersion, mutations);
+		long ts1 = System.currentTimeMillis() - start;
+		SuscSummary r = SuscSummary.queryAntibodySuscSummary(drdbVersion, mutations);
+		long ts2 = System.currentTimeMillis() - start;
+		System.out.println("antibodySuscSummaryFetcher: " + ts1 + ", " + ts2);
+		return r;
 	};
 
 	public static DataFetcher<SuscSummary> convPlasmaSuscSummaryFetcher = env -> {
 		String drdbVersion = env.getArgument("drdbVersion");
+		long start = System.currentTimeMillis();
 		MutationSet<SARS2> mutations = MutationSetDef.getMutationSetFromSource(env.getSource());
-		return SuscSummary.queryConvPlasmaSuscSummary(drdbVersion, mutations);
+		long ts1 = System.currentTimeMillis() - start;
+		SuscSummary r = SuscSummary.queryConvPlasmaSuscSummary(drdbVersion, mutations);
+		long ts2 = System.currentTimeMillis() - start;
+		System.out.println("covPlasmaSuscSummaryFetcher: " + ts1 + ", " + ts2);
+		return r;
 	};
 
 	public static DataFetcher<SuscSummary> vaccPlasmaSuscSummaryFetcher = env -> {
 		String drdbVersion = env.getArgument("drdbVersion");
+		long start = System.currentTimeMillis();
 		MutationSet<SARS2> mutations = MutationSetDef.getMutationSetFromSource(env.getSource());
-		return SuscSummary.queryVaccPlasmaSuscSummary(drdbVersion, mutations);
+		long ts1 = System.currentTimeMillis() - start;
+		SuscSummary r = SuscSummary.queryVaccPlasmaSuscSummary(drdbVersion, mutations);
+		long ts2 = System.currentTimeMillis() - start;
+		System.out.println("vaccPlasmaSuscSummaryFetcher: " + ts1 + ", " + ts2);
+		return r;
 	};
 
 	public static GraphQLObjectType oSuscResult = newObject()

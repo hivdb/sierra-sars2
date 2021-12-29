@@ -19,7 +19,6 @@ RUN cd /tmp && \
     curl -sSL https://github.com/lh3/minimap2/releases/download/v2.17/minimap2-${MINIMAP2_VERSION}_x64-linux.tar.bz2 -o minimap2.tar.bz2 && \
     tar jxf minimap2.tar.bz2 && \
     mv minimap2-${MINIMAP2_VERSION}_x64-linux /usr/local/minimap2
-COPY docker-payload/postalign_linux-amd64.tar.gz /tmp
 
 FROM hivdb/tomcat-with-nucamino:latest as postalign-builder
 RUN apt-get -q update && apt-get install -qqy python3.9-full python3.9-dev gcc

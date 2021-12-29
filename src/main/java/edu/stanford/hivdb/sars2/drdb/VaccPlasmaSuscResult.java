@@ -1,8 +1,10 @@
 package edu.stanford.hivdb.sars2.drdb;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.stream.Collectors;
 
 import edu.stanford.hivdb.mutations.MutationSet;
@@ -10,46 +12,54 @@ import edu.stanford.hivdb.sars2.SARS2;
 
 public class VaccPlasmaSuscResult extends SuscResult {
 
-	private static final Map<String, List<Map<String, Object>>> rawResults = new HashMap<>();
+	private static final Map<String, Map<MutationSet<SARS2>, List<VaccPlasmaSuscResult>>> singletons = new HashMap<>();
 
 	private final String vaccineName;
 	private final Integer vaccinePriority;
 	private final String vaccineType;
 	private final String cumulativeGroup;
 	
-	private static void prepareRawResults(String drdbVersion) {
-		if (rawResults.containsKey(drdbVersion)) {
+	private static void prepareSingletons(String drdbVersion) {
+		if (singletons.containsKey(drdbVersion)) {
 			return;
 		}
 		DRDB drdb = DRDB.getInstance(drdbVersion);
-		List<Map<String, Object>> allSuscResults = (
+		Map<MutationSet<SARS2>, List<VaccPlasmaSuscResult>> allSuscResults = (
 			drdb
 			.queryAllSuscResultsForVaccPlasma()
+			.stream()
+			.map(d -> new VaccPlasmaSuscResult(drdbVersion, d))
+			.collect(Collectors.groupingBy(d -> d.getComparableIsolateMutations()))
 		);
-		rawResults.put(drdbVersion, allSuscResults);
+		singletons.put(drdbVersion, allSuscResults);
 	}
 	
-	public static List<VaccPlasmaSuscResult> query(String drdbVersion, MutationSet<SARS2> queryMuts) {
-		prepareRawResults(drdbVersion);
+	public static List<BoundSuscResult> query(String drdbVersion, MutationSet<SARS2> queryMuts) {
+		prepareSingletons(drdbVersion);
 		final MutationSet<SARS2> finalQueryMuts = prepareQueryMutations(queryMuts);
-		List<VaccPlasmaSuscResult> results = (
-			rawResults.get(drdbVersion)
-			.stream()
-			.map(d -> new VaccPlasmaSuscResult(drdbVersion, finalQueryMuts, d))
-			.filter(d -> d.getMatchType() != IsolateMatchType.MISMATCH)
-			.sorted((a, b) -> a.getVaccinePriority() - b.getVaccinePriority())
-			.collect(Collectors.toList())
-		);
 		
+		List<BoundSuscResult> results = new ArrayList<>();
+		for (Entry<MutationSet<SARS2>, List<VaccPlasmaSuscResult>> pair : singletons.get(drdbVersion).entrySet()) {
+				IsolateMatchType matchType = SuscResult.calcMatchType(pair.getKey(), finalQueryMuts); 
+				if (matchType == IsolateMatchType.MISMATCH) {
+					continue;
+				}
+				for (SuscResult sr : pair.getValue()) {
+					results.add(new BoundSuscResult(matchType, finalQueryMuts, sr));
+				}
+		}
+		results.sort((a, b) -> (
+			((VaccPlasmaSuscResult) a.getSuscResult()).getVaccinePriority() - 
+			((VaccPlasmaSuscResult) b.getSuscResult()).getVaccinePriority()
+		));
 		return results;
 	}
 	
 	private VaccPlasmaSuscResult(
 		String drdbVersion,
-		MutationSet<SARS2> queryMuts,
 		Map<String, Object> suscData
 	) {
-		super(drdbVersion, queryMuts, suscData);
+		super(drdbVersion, suscData);
 
 		this.vaccineName = (String) suscData.get("vaccineName");
 		this.vaccinePriority = (Integer) suscData.get("vaccinePriority");

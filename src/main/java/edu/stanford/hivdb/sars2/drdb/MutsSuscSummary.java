@@ -18,7 +18,7 @@ public class MutsSuscSummary extends SuscSummary {
 
 	public MutsSuscSummary(
 		MutationSet<SARS2> mutations,
-		List<SuscResult> suscResults,
+		List<BoundSuscResult> suscResults,
 		String lastUpdate
 	) {
 		super(suscResults, lastUpdate);
@@ -50,14 +50,14 @@ public class MutsSuscSummary extends SuscSummary {
 	
 	public Integer getNumIsolateOnlyMutations() {
 		if (numIsolateOnlyMutations == null) {
-			numIsolateOnlyMutations = getItems().get(0).getNumIsolateOnlyMutations();
+			numIsolateOnlyMutations = getFirstItem().getNumIsolateOnlyMutations();
 		}
 		return numIsolateOnlyMutations;
 	}
 
 	public Integer getNumQueryOnlyMutations() {
 		if (numQueryOnlyMutations == null) {
-			numQueryOnlyMutations = getItems().get(0).getNumQueryOnlyMutations();
+			numQueryOnlyMutations = getFirstItem().getNumQueryOnlyMutations();
 		}
 		return numQueryOnlyMutations;
 	}

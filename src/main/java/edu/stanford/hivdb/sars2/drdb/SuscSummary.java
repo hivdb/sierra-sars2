@@ -13,7 +13,7 @@ import edu.stanford.hivdb.mutations.MutationSet;
 import edu.stanford.hivdb.sars2.SARS2;
 
 public class SuscSummary {
-	private List<SuscResult> items;
+	private List<BoundSuscResult> items;
 	private String lastUpdate;
 	private transient DescriptiveStatistics cumulativeFold;
 	private transient Integer cumulativeCount;
@@ -25,7 +25,7 @@ public class SuscSummary {
 	
 	public static SuscSummary queryAntibodySuscSummary(String drdbVersion, MutationSet<SARS2> queryMuts) {
 		String lastUpdate = DRDB.getInstance(drdbVersion).queryLastUpdate();
-		List<SuscResult> results = (
+		List<BoundSuscResult> results = (
 			AntibodySuscResult.query(drdbVersion, queryMuts)
 			.stream()
 			.filter(r -> (
@@ -44,7 +44,7 @@ public class SuscSummary {
 	
 	public static SuscSummary queryConvPlasmaSuscSummary(String drdbVersion, MutationSet<SARS2> queryMuts) {
 		String lastUpdate = DRDB.getInstance(drdbVersion).queryLastUpdate();
-		List<SuscResult> results = (
+		List<BoundSuscResult> results = (
 			ConvPlasmaSuscResult.query(drdbVersion, queryMuts)
 			.stream()
 			.collect(Collectors.toList())
@@ -54,7 +54,7 @@ public class SuscSummary {
 
 	public static SuscSummary queryVaccPlasmaSuscSummary(String drdbVersion, MutationSet<SARS2> queryMuts) {
 		String lastUpdate = DRDB.getInstance(drdbVersion).queryLastUpdate();
-		List<SuscResult> results = (
+		List<BoundSuscResult> results = (
 			VaccPlasmaSuscResult.query(drdbVersion, queryMuts)
 			.stream()
 			.collect(Collectors.toList())
@@ -62,7 +62,7 @@ public class SuscSummary {
 		return new SuscSummary(results, lastUpdate);
 	}
 	
-	protected SuscSummary(List<SuscResult> items, String lastUpdate) {
+	protected SuscSummary(List<BoundSuscResult> items, String lastUpdate) {
 		this.items = Collections.unmodifiableList(
 			items.stream()
 			.sorted((itemA, itemB) -> {
@@ -83,7 +83,9 @@ public class SuscSummary {
 
 	public String getLastUpdate() {	return this.lastUpdate;	}
 	
-	public List<SuscResult> getItems() { return items; }
+	public List<BoundSuscResult> getItems() { return items; }
+	
+	public BoundSuscResult getFirstItem() { return items.get(0); }
 
 	public Set<Article> getReferences() {
 		return (
@@ -123,16 +125,16 @@ public class SuscSummary {
 
 	public List<AntibodySuscSummary> getItemsByAntibody() {
 		if (itemsByAntibody == null) {
-			Map<Set<Antibody>, List<SuscResult>> byAntibodies = (
+			Map<Set<Antibody>, List<BoundSuscResult>> byAntibodies = (
 				items.stream()
 				.filter(sr -> (
-					(sr instanceof AntibodySuscResult) &&
-					((AntibodySuscResult) sr).getAntibodies()
+					sr.isAntibody() &&
+					sr.getAntibodies()
 					.stream()
 					.allMatch(ab -> ab.getVisibility())
 				))
 				.collect(Collectors.groupingBy(
-					sr -> ((AntibodySuscResult) sr).getAntibodies(),
+					sr -> sr.getAntibodies(),
 					LinkedHashMap::new,
 					Collectors.toList()
 				))
@@ -155,17 +157,17 @@ public class SuscSummary {
 		if (itemsByAntibodyClass == null) {
 			
 			
-			Map<String, List<SuscResult>> byAntibodyClass = (
+			Map<String, List<BoundSuscResult>> byAntibodyClass = (
 				items.stream()
 				.filter(sr -> (
-					(sr instanceof AntibodySuscResult) &&
-					((AntibodySuscResult) sr).getAntibodies().size() == 1 &&
-					((AntibodySuscResult) sr).getAntibodies()
+					sr.isAntibody() &&
+					sr.getAntibodies().size() == 1 &&
+					sr.getAntibodies()
 					.stream()
 					.allMatch(ab -> ab.getAntibodyClass() != null)
 				))
 				.collect(Collectors.groupingBy(
-					sr -> ((AntibodySuscResult) sr).getAntibodies().iterator().next().getAntibodyClass(),
+					sr -> sr.getAntibodies().iterator().next().getAntibodyClass(),
 					LinkedHashMap::new,
 					Collectors.toList()
 				))
@@ -189,7 +191,7 @@ public class SuscSummary {
 	public List<ResistLevelSuscSummary> getItemsByResistLevel() {
 		if (itemsByResistLevel == null) {
 			
-			Map<String, List<SuscResult>> byRLevel = (
+			Map<String, List<BoundSuscResult>> byRLevel = (
 				items.stream()
 				.collect(Collectors.groupingBy(
 					sr -> sr.getResistanceLevel(),
@@ -214,10 +216,10 @@ public class SuscSummary {
 	
 	public List<VaccineSuscSummary> getItemsByVaccine() {
 		if (itemsByVaccine == null) {
-			Map<String, List<SuscResult>> byVaccine = (
+			Map<String, List<BoundSuscResult>> byVaccine = (
 				items.stream()
 				.collect(Collectors.groupingBy(
-					sr -> ((VaccPlasmaSuscResult) sr).getVaccineName(),
+					sr -> sr.getVaccineName(),
 					LinkedHashMap::new,
 					Collectors.toList()
 				))
@@ -239,7 +241,7 @@ public class SuscSummary {
 	
 	public List<MutsSuscSummary> getItemsByMutations() {
 		if (itemsByKeyMuts == null) {
-			Map<MutationSet<SARS2>, List<SuscResult>> byMutations = (
+			Map<MutationSet<SARS2>, List<BoundSuscResult>> byMutations = (
 				items.stream()
 				.collect(Collectors.groupingBy(
 					sr -> sr.getComparableIsolateMutations(),

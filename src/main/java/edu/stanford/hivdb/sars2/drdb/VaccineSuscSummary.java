@@ -9,12 +9,12 @@ public class VaccineSuscSummary extends SuscSummary {
 
 	public VaccineSuscSummary(
 		String vaccineName,
-		List<SuscResult> items,
+		List<BoundSuscResult> items,
 		String lastUpdate
 	) {
 		super(items, lastUpdate);
 		this.vaccineName = vaccineName;
-		VaccPlasmaSuscResult firstItem = ((VaccPlasmaSuscResult) items.get(0));
+		BoundSuscResult firstItem = items.get(0);
 		this.vaccinePriority = firstItem.getVaccinePriority();
 		this.vaccineType = firstItem.getVaccineType();
 	}

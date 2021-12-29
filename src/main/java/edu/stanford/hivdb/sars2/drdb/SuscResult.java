@@ -6,6 +6,8 @@ import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import com.google.common.collect.Sets;
+
 import edu.stanford.hivdb.mutations.AAMutation;
 import edu.stanford.hivdb.mutations.Mutation;
 // import edu.stanford.hivdb.mutations.GenePosition;
@@ -52,6 +54,34 @@ public abstract class SuscResult {
 			)
 		);
 	}
+	
+	public static IsolateMatchType calcMatchType(MutationSet<SARS2> isoMuts, MutationSet<SARS2> queryMuts) {
+		IsolateMatchType matchType;
+		if (queryMuts.size() == 0 || isoMuts.size() == 0) {
+			matchType = IsolateMatchType.MISMATCH;
+		}
+		else if (isoMuts.equals(queryMuts)) {
+			matchType = IsolateMatchType.EQUAL;
+		}
+		else {
+			Integer numSharedMuts = Sets.intersection(isoMuts, queryMuts).size();
+
+			if (numSharedMuts == queryMuts.size()) {
+				matchType = IsolateMatchType.SUPERSET;
+			}
+			else if (numSharedMuts == isoMuts.size()) {
+				matchType = IsolateMatchType.SUBSET;
+			}
+			else if (numSharedMuts > 0) {
+				matchType = IsolateMatchType.OVERLAP;
+			}
+			else {
+				matchType = IsolateMatchType.MISMATCH;
+			}
+		}
+		return matchType;
+	}
+
 	
 	public enum IsolateMatchType {
 		EQUAL,     // isolate mutation set equals to query mutation set
@@ -136,8 +166,6 @@ public abstract class SuscResult {
 		}
 	}
 
-	private final MutationSet<SARS2> queryMuts;
-
 	private final String drdbVersion;
 	private final String refName;
 	private final String rxName;
@@ -155,16 +183,13 @@ public abstract class SuscResult {
 	private transient String resistanceLevel;
 	private transient Isolate controlIsolate;
 	private transient Isolate isolate;
-	private transient IsolateMatchType matchType;
 	private transient MutationSet<SARS2> comparableIsolateMutations;
 
 	protected SuscResult(
 		String drdbVersion,
-		MutationSet<SARS2> queryMuts,
 		Map<String, Object> suscData
 	) {
 		this.drdbVersion = drdbVersion;
-		this.queryMuts = queryMuts;
 		
 		refName = (String) suscData.get("refName");
 		rxName = (String) suscData.get("rxName");
@@ -216,31 +241,6 @@ public abstract class SuscResult {
 	public String getIneffective() { return ineffective; }
 	public Integer getCumulativeCount() { return cumulativeCount; }
 
-	public IsolateMatchType getMatchType() {
-		if (matchType == null) {
-			MutationSet<SARS2> varMutations = getComparableIsolateMutations();
-			if (queryMuts.size() == 0 || varMutations.size() == 0) {
-				matchType = IsolateMatchType.MISMATCH;
-			}
-			else if (varMutations.equals(queryMuts)) {
-				matchType = IsolateMatchType.EQUAL;
-			}
-			else if (varMutations.containsAll(queryMuts)) {
-				matchType = IsolateMatchType.SUPERSET;
-			}
-			else if (queryMuts.containsAll(varMutations)) {
-				matchType = IsolateMatchType.SUBSET;
-			}
-			else if (queryMuts.stream().anyMatch(mut -> varMutations.hasSharedAAMutation(mut))) {
-				matchType = IsolateMatchType.OVERLAP;
-			}
-			else {
-				matchType = IsolateMatchType.MISMATCH;
-			}
-		}
-		return matchType;
-	}
-	
 	/**
 	 * Internal use only for providing comparable isolate mutations (v.s. queryMuts)
 	 * of SuscSummary
@@ -254,7 +254,7 @@ public abstract class SuscResult {
 		return comparableIsolateMutations;
 	}
 	
-	public Integer getNumIsolateOnlyMutations() {
+	public Integer getNumIsolateOnlyMutations(MutationSet<SARS2> queryMuts) {
 		MutationSet<SARS2> isolateOnlyMutations = getComparableIsolateMutations().subtractsBy(queryMuts);
 		Integer numIsolateOnlyMuts = isolateOnlyMutations.getSplitted().size();
 		for (Set<Mutation<SARS2>> rangeDel : RANGE_DELETIONS) {
@@ -265,7 +265,7 @@ public abstract class SuscResult {
 		return numIsolateOnlyMuts;
 	}
 	
-	public Integer getNumQueryOnlyMutations() {
+	public Integer getNumQueryOnlyMutations(MutationSet<SARS2> queryMuts) {
 		MutationSet<SARS2> queryOnlyMutations = queryMuts.subtractsBy(getComparableIsolateMutations());
 		Integer numQueryOnlyMuts = queryOnlyMutations.getSplitted().size();
 		for (Set<Mutation<SARS2>> rangeDel : RANGE_DELETIONS) {

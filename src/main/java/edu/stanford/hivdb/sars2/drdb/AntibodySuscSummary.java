@@ -8,7 +8,7 @@ public class AntibodySuscSummary extends SuscSummary {
 
 	protected AntibodySuscSummary(
 		Set<Antibody> antibodies,
-		List<SuscResult> items,
+		List<BoundSuscResult> items,
 		String lastUpdate
 	) {
 		super(items, lastUpdate);
