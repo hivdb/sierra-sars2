@@ -2,9 +2,11 @@ VERSION=$(shell date -u +"%Y%m%d%H%M%S")
 DOCKERREPO=$(shell ./scripts/get-docker-repo.sh)
 
 build:
+	@docker pull hivdb/tomcat-with-nucamino:latest
 	@docker build -t ${DOCKERREPO} .
 
 force-build:
+	@docker pull hivdb/tomcat-with-nucamino:latest
 	@docker build --no-cache -t ${DOCKERREPO} .
 
 inspect-dev:
