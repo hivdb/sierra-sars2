@@ -9,18 +9,19 @@ import edu.stanford.hivdb.sars2.drdb.SuscResult.IsolateMatchType;
 public class BoundSuscResult {
 	
 	private final IsolateMatchType matchType;
-	private final MutationSet<SARS2> queryMuts;
+	private final Integer numIsoOnlyMuts;
+	private final Integer numQueryOnlyMuts;
 	private final SuscResult suscResult;
-	private transient Integer numIsolateOnlyMutations;
-	private transient Integer numQueryOnlyMutations;
 	
 	protected BoundSuscResult(
 		IsolateMatchType matchType,
-		MutationSet<SARS2> queryMuts,
+		Integer numIsoOnlyMuts,
+		Integer numQueryOnlyMuts,
 		SuscResult suscResult
 	) {
 		this.matchType = matchType;
-		this.queryMuts = queryMuts;
+		this.numIsoOnlyMuts = numIsoOnlyMuts;
+		this.numQueryOnlyMuts = numQueryOnlyMuts;
 		this.suscResult = suscResult;
 	}
 	
@@ -53,19 +54,9 @@ public class BoundSuscResult {
 	public Integer getCumulativeCount() { return suscResult.getCumulativeCount(); }
 	public MutationSet<SARS2> getComparableIsolateMutations() { return suscResult.getComparableIsolateMutations(); }
 	
-	public Integer getNumIsolateOnlyMutations() { 
-		if (numIsolateOnlyMutations == null) {
-			numIsolateOnlyMutations = suscResult.getNumIsolateOnlyMutations(queryMuts);
-		}
-		return numIsolateOnlyMutations;
-	}
+	public Integer getNumIsolateOnlyMutations() { return numIsoOnlyMuts; } 
 	
-	public Integer getNumQueryOnlyMutations() {
-		if (numQueryOnlyMutations == null) {
-			numQueryOnlyMutations = suscResult.getNumQueryOnlyMutations(queryMuts);
-		}
-		return numQueryOnlyMutations;
-	}
+	public Integer getNumQueryOnlyMutations() { return numQueryOnlyMuts; }
 	
 	public Set<Antibody> getAntibodies() {
 		return ((AntibodySuscResult) suscResult).getAntibodies();

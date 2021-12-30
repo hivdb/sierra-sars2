@@ -1,12 +1,13 @@
 package edu.stanford.hivdb.sars2.drdb;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 // import java.util.Set;
 import java.util.Set;
 import java.util.stream.Collectors;
-
-import com.google.common.collect.Sets;
 
 import edu.stanford.hivdb.mutations.AAMutation;
 import edu.stanford.hivdb.mutations.Mutation;
@@ -55,33 +56,66 @@ public abstract class SuscResult {
 		);
 	}
 	
-	public static IsolateMatchType calcMatchType(MutationSet<SARS2> isoMuts, MutationSet<SARS2> queryMuts) {
-		IsolateMatchType matchType;
-		if (queryMuts.size() == 0 || isoMuts.size() == 0) {
-			matchType = IsolateMatchType.MISMATCH;
+	public static Map<Mutation<SARS2>, List<SuscResult>> buildSuscResultSearchTree(List<SuscResult> suscResults) {
+		Map<Mutation<SARS2>, List<SuscResult>> tree = new HashMap<>();
+		for (SuscResult sr : suscResults) {
+			for (Mutation<SARS2> mut : sr.getComparableIsolateMutations()) {
+				if (!tree.containsKey(mut)) {
+					tree.put(mut, new ArrayList<>());
+				}
+				tree.get(mut).add(sr);
+			}
 		}
-		else if (isoMuts.equals(queryMuts)) {
-			matchType = IsolateMatchType.EQUAL;
+		return tree;
+	}
+	
+	public static List<BoundSuscResult> query(Map<Mutation<SARS2>, List<SuscResult>> tree, MutationSet<SARS2> queryMuts) {
+		Map<SuscResult, Integer> counter = new HashMap<>();
+		Set<Mutation<SARS2>> splittedQueryMuts = queryMuts.getSplitted();
+		int numQueryMuts = splittedQueryMuts.size(); 
+		for (Mutation<SARS2> mut : splittedQueryMuts) {
+			if (!tree.containsKey(mut)) {
+				continue;
+			}
+			for (SuscResult sr : tree.get(mut)) {
+				if (!counter.containsKey(sr)) {
+					counter.put(sr, 0);
+				}
+				counter.put(sr, counter.get(sr) + 1);
+			}
 		}
-		else {
-			Integer numSharedMuts = Sets.intersection(isoMuts, queryMuts).size();
-
-			if (numSharedMuts == queryMuts.size()) {
+		List<BoundSuscResult> results = new ArrayList<>();
+		for (Entry<SuscResult, Integer> pair : counter.entrySet()) {
+			IsolateMatchType matchType;
+			SuscResult sr = pair.getKey();
+			int numIsoMuts = sr.getComparableIsolateMutations().getSplitted().size();
+			int numSharedMuts = pair.getValue();
+			int numIsoOnlyMuts = numIsoMuts - numSharedMuts;
+			int numQueryOnlyMuts = numQueryMuts - numSharedMuts;
+			if (numIsoOnlyMuts == 0 && numQueryOnlyMuts == 0) {
+				matchType = IsolateMatchType.EQUAL;
+			}
+			else if (numIsoOnlyMuts > 0 && numQueryOnlyMuts == 0) {
 				matchType = IsolateMatchType.SUPERSET;
 			}
-			else if (numSharedMuts == isoMuts.size()) {
+			else if (numIsoOnlyMuts == 0 && numQueryOnlyMuts > 0) {
 				matchType = IsolateMatchType.SUBSET;
 			}
-			else if (numSharedMuts > 0) {
+			else { // numIsoOnlyMuts > 0 || numQueryOnlyMuts > 0
 				matchType = IsolateMatchType.OVERLAP;
 			}
-			else {
-				matchType = IsolateMatchType.MISMATCH;
-			}
-		}
-		return matchType;
-	}
 
+			results.add(new BoundSuscResult(
+				matchType,
+				numIsoOnlyMuts,
+				numQueryOnlyMuts,
+				sr
+			));
+			
+		}
+		
+		return results;
+	}
 	
 	public enum IsolateMatchType {
 		EQUAL,     // isolate mutation set equals to query mutation set
@@ -252,28 +286,6 @@ public abstract class SuscResult {
 			comparableIsolateMutations = prepareQueryMutations(getIsolate().getMutations());
 		}
 		return comparableIsolateMutations;
-	}
-	
-	public Integer getNumIsolateOnlyMutations(MutationSet<SARS2> queryMuts) {
-		MutationSet<SARS2> isolateOnlyMutations = getComparableIsolateMutations().subtractsBy(queryMuts);
-		Integer numIsolateOnlyMuts = isolateOnlyMutations.getSplitted().size();
-		for (Set<Mutation<SARS2>> rangeDel : RANGE_DELETIONS) {
-			if (!isolateOnlyMutations.intersectsWith(rangeDel).isEmpty()) {
-				numIsolateOnlyMuts -= rangeDel.size() - 1;
-			}
-		}
-		return numIsolateOnlyMuts;
-	}
-	
-	public Integer getNumQueryOnlyMutations(MutationSet<SARS2> queryMuts) {
-		MutationSet<SARS2> queryOnlyMutations = queryMuts.subtractsBy(getComparableIsolateMutations());
-		Integer numQueryOnlyMuts = queryOnlyMutations.getSplitted().size();
-		for (Set<Mutation<SARS2>> rangeDel : RANGE_DELETIONS) {
-			if (!queryOnlyMutations.intersectsWith(rangeDel).isEmpty()) {
-				numQueryOnlyMuts -= rangeDel.size() - 1;
-			}
-		}
-		return numQueryOnlyMuts;
 	}
 	
 }

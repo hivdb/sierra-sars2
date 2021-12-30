@@ -1,52 +1,40 @@
 package edu.stanford.hivdb.sars2.drdb;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.stream.Collectors;
 
+import edu.stanford.hivdb.mutations.Mutation;
 import edu.stanford.hivdb.mutations.MutationSet;
 import edu.stanford.hivdb.sars2.SARS2;
 
 public class ConvPlasmaSuscResult extends SuscResult {
 
-	private static final Map<String, Map<MutationSet<SARS2>, List<ConvPlasmaSuscResult>>> singletons = new HashMap<>();
+	private static final Map<String, Map<Mutation<SARS2>, List<SuscResult>>> searchTrees = new HashMap<>();
 
 	private final String infectedIsoName;
 	private final String cumulativeGroup;
 
-	private static void prepareSingletons(String drdbVersion) {
-		if (singletons.containsKey(drdbVersion)) {
+	private static void prepareSearchTree(String drdbVersion) {
+		if (searchTrees.containsKey(drdbVersion)) {
 			return;
 		}
 		DRDB drdb = DRDB.getInstance(drdbVersion);
-		Map<MutationSet<SARS2>, List<ConvPlasmaSuscResult>> allSuscResults = (
+		List<SuscResult> allSuscResults = (
 			drdb
 			.queryAllSuscResultsForConvPlasma()
 			.stream()
 			.map(d -> new ConvPlasmaSuscResult(drdbVersion, d))
-			.collect(Collectors.groupingBy(d -> d.getComparableIsolateMutations()))
+			.collect(Collectors.toList())
 		);
-		singletons.put(drdbVersion, allSuscResults);
+		searchTrees.put(drdbVersion, SuscResult.buildSuscResultSearchTree(allSuscResults));
 	}
 	
 	public static List<BoundSuscResult> query(String drdbVersion, MutationSet<SARS2> queryMuts) {
-		prepareSingletons(drdbVersion);
+		prepareSearchTree(drdbVersion);
 		final MutationSet<SARS2> finalQueryMuts = prepareQueryMutations(queryMuts);
-		
-		List<BoundSuscResult> results = new ArrayList<>();
-		for (Entry<MutationSet<SARS2>, List<ConvPlasmaSuscResult>> pair : singletons.get(drdbVersion).entrySet()) {
-				IsolateMatchType matchType = SuscResult.calcMatchType(pair.getKey(), finalQueryMuts); 
-				if (matchType == IsolateMatchType.MISMATCH) {
-					continue;
-				}
-				for (SuscResult sr : pair.getValue()) {
-					results.add(new BoundSuscResult(matchType, finalQueryMuts, sr));
-				}
-		}
-		return results;
+		return SuscResult.query(searchTrees.get(drdbVersion), finalQueryMuts);
 	}
 	
 	private ConvPlasmaSuscResult(

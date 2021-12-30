@@ -74,7 +74,9 @@ public class SuscSummary {
 				if (cmp != 0) { return cmp; }
 				if (cmpIsolateOnly != 0) { return cmpIsolateOnly; }
 				if (cmpQueryOnly != 0) { return cmpQueryOnly; }
-				return itemA.getComparableIsolateMutations().compareTo(itemB.getComparableIsolateMutations());
+				// the MutationSet comparison is too heavy and we gained too few from it
+				// return itemA.getComparableIsolateMutations().compareTo(itemB.getComparableIsolateMutations());
+				return cmp;
 			})
 			.collect(Collectors.toList())
 		);
@@ -248,7 +250,7 @@ public class SuscSummary {
 					LinkedHashMap::new,
 					Collectors.toList()
 				))
-				.values()
+				 .values()
 				.stream()
 				.collect(Collectors.toMap(
 					srs -> new MutationSet<>(
