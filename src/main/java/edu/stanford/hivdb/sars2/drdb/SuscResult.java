@@ -217,6 +217,7 @@ public abstract class SuscResult {
 	private transient String resistanceLevel;
 	private transient Isolate controlIsolate;
 	private transient Isolate isolate;
+	private transient Variant variant;
 	private transient MutationSet<SARS2> comparableIsolateMutations;
 
 	protected SuscResult(
@@ -257,6 +258,14 @@ public abstract class SuscResult {
 			controlIsolate = Isolate.getInstance(drdbVersion, controlIsoName);
 		}
 		return controlIsolate;
+	}
+	
+	public Variant getVariant() {
+		if (variant == null) {
+			String varName = getIsolate().getVariantName();
+			variant = Variant.getInstance(drdbVersion, varName);
+		}
+		return variant;
 	}
 
 	public Isolate getIsolate() {

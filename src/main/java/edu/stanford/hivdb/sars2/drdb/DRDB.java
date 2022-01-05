@@ -199,6 +199,24 @@ public class DRDB {
 		);
 	}
 	
+	public List<Map<String, Object>> queryAllVariants() {
+		List<Map<String, Object>> variants = queryAll(
+			"SELECT var_name, as_wildtype FROM variants",
+			rs -> {
+				try {
+					Map<String, Object> result = new LinkedHashMap<>();
+					result.put("varName", rs.getString("var_name"));
+					result.put("asWildtype", rs.getBoolean("as_wildtype"));
+					return result;
+				}
+				catch (SQLException e) {
+					throw new RuntimeException(e);
+				}
+			}
+		);
+		return variants;
+	}
+	
 	public List<Map<String, Object>> queryAllIsolates() {
 		List<Map<String, Object>> isolates = queryAll(
 			"SELECT iso_name, var_name FROM isolates",

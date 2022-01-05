@@ -43,6 +43,7 @@ public class BoundSuscResult {
 	public String getResistanceLevel() { return suscResult.getResistanceLevel(); }
 	public Article getReference() { return suscResult.getReference(); }
 	public Isolate getControlIsolate() { return suscResult.getControlIsolate(); }
+	public Variant getVariant() { return suscResult.getVariant(); }
 	public Isolate getIsolate() { return suscResult.getIsolate(); }
 	public String getRefName() { return suscResult.getRefName(); }
 	public String getRxName() { return suscResult.getRxName(); }

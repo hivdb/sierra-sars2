@@ -9,20 +9,27 @@ import edu.stanford.hivdb.mutations.MutationSet;
 import edu.stanford.hivdb.sars2.SARS2;
 import edu.stanford.hivdb.sars2.drdb.SuscResult.IsolateMatchType;
 
-public class MutsSuscSummary extends SuscSummary {
+public class VarMutsSuscSummary extends SuscSummary {
+	private final Variant variant;
 	private final MutationSet<SARS2> mutations;
 	private transient Set<Isolate> hitIsolates;
 	private transient IsolateMatchType matchType;
 	private transient Integer numIsolateOnlyMutations;
 	private transient Integer numQueryOnlyMutations;
 
-	public MutsSuscSummary(
+	public VarMutsSuscSummary(
+		Variant variant,
 		MutationSet<SARS2> mutations,
 		List<BoundSuscResult> suscResults,
 		String lastUpdate
 	) {
 		super(suscResults, lastUpdate);
+		this.variant = variant;
 		this.mutations = mutations;
+	}
+	
+	public Variant getVariant() {
+		return variant;
 	}
 
 	public MutationSet<SARS2> getMutations() {

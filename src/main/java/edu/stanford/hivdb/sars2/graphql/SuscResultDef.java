@@ -131,8 +131,12 @@ public class SuscResultDef {
 			.name("vaccineType")
 			.type(GraphQLString)
 			.description("Vaccine type (only available for `itemsByVaccine`)"))
+		.field(field -> field
+			.name("variant")
+			.type(VariantDef.oVariant)
+			.description("Variant (only available for `itemsByVariantOrMutations`)"))
 		.field(field -> MutationSetDef.newMutationSet("SARS2", field, "mutations")
-			.description("Isolate mutations (only available for `itemsByMutations`)"))
+			.description("Isolate mutations (only available for `itemsByMutations` and `itemsByVariantOrMutations`)"))
 		.field(field -> field
 			.type(new GraphQLList(IsolateDef.oIsolate))
 			.name("hitIsolates")
@@ -183,6 +187,10 @@ public class SuscResultDef {
 			.description("Susceptibility summary by vaccine."))
 		.field(field -> field
 			.name("itemsByMutations")
+			.type(new GraphQLList(GraphQLTypeReference.typeRef("SuscSummary")))
+			.description("Susceptibility summary by key mutations."))
+		.field(field -> field
+			.name("itemsByVariantOrMutations")
 			.type(new GraphQLList(GraphQLTypeReference.typeRef("SuscSummary")))
 			.description("Susceptibility summary by key mutations."))
 		.build();
