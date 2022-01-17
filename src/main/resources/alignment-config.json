@@ -7,7 +7,10 @@
       "postProcessors": [
         "codon-alignment", "266", "13468",
         "codon-alignment", "13468", "21555",
-        "codon-alignment", "--gap-placement-score", "23603/12del:8", "21563", "25384",
+        "# For Spike, 1-213 and 214-1274 are codon aligned separately to",
+        "# prevent S:212del being joined with 3 codons S:214ins of Omicron.",
+        "codon-alignment", "--gap-placement-score", "22196/3del:6", "21563", "22201",
+        "codon-alignment", "--gap-placement-score", ",23603/12del:8", "22202", "25384",
         "codon-alignment", "25393", "26220",
         "codon-alignment", "26245", "26472",
         "codon-alignment", "26523", "27191",
