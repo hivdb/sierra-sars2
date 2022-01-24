@@ -30,20 +30,26 @@ import edu.stanford.hivdb.sequences.Sequence;
 public class PangolinDef {
 
 	public static DataFetcher<PangolinLambda> pangolinDataFetcher = env -> {
+		PangolinLambda instance;
 		Object seq = env.getSource();
+		Boolean syncFetch = env.getArgument("syncFetch");
 		if (seq instanceof AlignedSequence) {
 			Sequence inputSeq = ((AlignedSequence<?>) seq).getInputSequence();
-			return new PangolinLambda(inputSeq);
+			instance = new PangolinLambda(inputSeq);
 		}
 		else if (seq instanceof SequenceReads) {
 			SequenceReads<?> seqReads = (SequenceReads<?>) seq;
 			String concatSeq = seqReads.getAssembledConsensus();
 			Sequence inputSeq = new Sequence(seqReads.getName(), concatSeq);
-			return new PangolinLambda(inputSeq);
+			instance = new PangolinLambda(inputSeq);
 		}
 		else {
 			throw new UnsupportedOperationException();
 		}
+		if (syncFetch) {
+			instance.join();
+		}
+		return instance;
 	};
 
 	public static GraphQLObjectType oPangolin = newObject()

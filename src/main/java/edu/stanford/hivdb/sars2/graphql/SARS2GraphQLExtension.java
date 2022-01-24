@@ -194,6 +194,14 @@ public class SARS2GraphQLExtension implements VirusGraphQLExtension {
 			.field(field -> field
 				.type(PangolinDef.oPangolin)
 				.name("pangolin")
+				.argument(arg -> arg
+					.name("syncFetch")
+					.type(GraphQLBoolean)
+					.defaultValue(false)
+					.description(
+						"True to await for the Pangolin software to return a PANGO lineage (slow)"
+					)
+				)
 				.description("Pangolin lineage result for this sequence.")
 			);
 	}
