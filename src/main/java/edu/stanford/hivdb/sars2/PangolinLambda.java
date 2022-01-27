@@ -175,7 +175,7 @@ public class PangolinLambda {
 		);
 		GetObjectPresignRequest presignRequest = (
 			GetObjectPresignRequest.builder()
-			.signatureDuration(Duration.ofHours(1))
+			.signatureDuration(Duration.ofHours(24))
 			.getObjectRequest(request)
 			.build()
 		);
