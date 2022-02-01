@@ -20,7 +20,7 @@
   "WT": {
     "classificationLevel": "SUBTYPE",
     "displayName": "Wild type",
-    "distanceUpperLimit": 0.001,
+    "distanceUpperLimit": 0.01,
     "isSimpleCRF": false,
     "name": "WT",
     "parentGenotypes": null,
