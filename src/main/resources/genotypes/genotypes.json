@@ -11,7 +11,7 @@
   "SARS1": {
     "classificationLevel": "SPECIES",
     "displayName": "SARS-CoV-1",
-    "distanceUpperLimit": 0.02,
+    "distanceUpperLimit": 0.1,
     "isSimpleCRF": false,
     "name": "SARS1",
     "parentGenotypes": null,
@@ -20,7 +20,7 @@
   "WT": {
     "classificationLevel": "SUBTYPE",
     "displayName": "Wild type",
-    "distanceUpperLimit": 0.01,
+    "distanceUpperLimit": 0.05,
     "isSimpleCRF": false,
     "name": "WT",
     "parentGenotypes": null,
@@ -29,7 +29,7 @@
   "Alpha": {
     "classificationLevel": "SUBTYPE",
     "displayName": "Alpha",
-    "distanceUpperLimit": 0.005,
+    "distanceUpperLimit": 0.01,
     "isSimpleCRF": false,
     "name": "Alpha",
     "parentGenotypes": "WT",
@@ -38,7 +38,7 @@
   "Beta": {
     "classificationLevel": "SUBTYPE",
     "displayName": "Beta",
-    "distanceUpperLimit": 0.005,
+    "distanceUpperLimit": 0.01,
     "isSimpleCRF": false,
     "name": "Beta",
     "parentGenotypes": "WT",
@@ -47,7 +47,7 @@
   "Gamma": {
     "classificationLevel": "SUBTYPE",
     "displayName": "Gamma",
-    "distanceUpperLimit": 0.005,
+    "distanceUpperLimit": 0.01,
     "isSimpleCRF": false,
     "name": "Gamma",
     "parentGenotypes": "WT",
@@ -56,7 +56,7 @@
   "Delta": {
     "classificationLevel": "SUBTYPE",
     "displayName": "Delta",
-    "distanceUpperLimit": 0.005,
+    "distanceUpperLimit": 0.01,
     "isSimpleCRF": false,
     "name": "Delta",
     "parentGenotypes": "WT",
@@ -65,7 +65,7 @@
   "Epsilon": {
     "classificationLevel": "SUBTYPE",
     "displayName": "Epsilon",
-    "distanceUpperLimit": 0.005,
+    "distanceUpperLimit": 0.01,
     "isSimpleCRF": false,
     "name": "Epsilon",
     "parentGenotypes": "WT",
@@ -74,7 +74,7 @@
   "Zeta": {
     "classificationLevel": "SUBTYPE",
     "displayName": "Zeta",
-    "distanceUpperLimit": 0.005,
+    "distanceUpperLimit": 0.01,
     "isSimpleCRF": false,
     "name": "Zeta",
     "parentGenotypes": "WT",
@@ -83,7 +83,7 @@
   "Theta": {
     "classificationLevel": "SUBTYPE",
     "displayName": "Theta",
-    "distanceUpperLimit": 0.005,
+    "distanceUpperLimit": 0.01,
     "isSimpleCRF": false,
     "name": "Theta",
     "parentGenotypes": "WT",
@@ -92,7 +92,7 @@
   "Eta": {
     "classificationLevel": "SUBTYPE",
     "displayName": "Eta",
-    "distanceUpperLimit": 0.005,
+    "distanceUpperLimit": 0.01,
     "isSimpleCRF": false,
     "name": "Eta",
     "parentGenotypes": "WT",
@@ -101,7 +101,7 @@
   "Iota": {
     "classificationLevel": "SUBTYPE",
     "displayName": "Iota",
-    "distanceUpperLimit": 0.005,
+    "distanceUpperLimit": 0.01,
     "isSimpleCRF": false,
     "name": "Iota",
     "parentGenotypes": "WT",
@@ -110,7 +110,7 @@
   "Kappa": {
     "classificationLevel": "SUBTYPE",
     "displayName": "Kappa",
-    "distanceUpperLimit": 0.005,
+    "distanceUpperLimit": 0.01,
     "isSimpleCRF": false,
     "name": "Kappa",
     "parentGenotypes": "WT",
@@ -119,7 +119,7 @@
   "Lambda": {
     "classificationLevel": "SUBTYPE",
     "displayName": "Lambda",
-    "distanceUpperLimit": 0.005,
+    "distanceUpperLimit": 0.01,
     "isSimpleCRF": false,
     "name": "Lambda",
     "parentGenotypes": "WT",
@@ -128,7 +128,7 @@
   "Mu": {
     "classificationLevel": "SUBTYPE",
     "displayName": "Mu",
-    "distanceUpperLimit": 0.005,
+    "distanceUpperLimit": 0.01,
     "isSimpleCRF": false,
     "name": "Mu",
     "parentGenotypes": "WT",
@@ -137,7 +137,7 @@
   "Omicron": {
     "classificationLevel": "SUBTYPE",
     "displayName": "Omicron",
-    "distanceUpperLimit": 0.005,
+    "distanceUpperLimit": 0.01,
     "isSimpleCRF": false,
     "name": "Omicron",
     "parentGenotypes": "WT",

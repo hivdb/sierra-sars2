@@ -332,7 +332,12 @@ public class SARS2 implements Virus<SARS2> {
 	
 	@Override
 	public Double getGenotypeUnknownThreshold() {
-		return 0.02;
+		return 0.01;
+	}
+	
+	@Override
+	public Double getGenotypeMaxFallbackToSecondaryDistanceDiff() {
+		return 0.001;
 	}
 
 	@Override
