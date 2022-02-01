@@ -329,6 +329,11 @@ public class SARS2 implements Virus<SARS2> {
 	public Genotyper<SARS2> getGenotyper() {
 		return dl.getGenotyper();
 	}
+	
+	@Override
+	public Double getGenotypeUnknownThreshold() {
+		return 0.02;
+	}
 
 	@Override
 	public boolean equals(Object o) {

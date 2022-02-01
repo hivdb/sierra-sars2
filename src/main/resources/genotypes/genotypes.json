@@ -8,22 +8,22 @@
     "parentGenotypes": null,
     "regions": null
   },
-  "WT": {
-    "classificationLevel": "SUBTYPE",
-    "displayName": "Wild type",
-    "distanceUpperLimit": 0,
+  "SARS1": {
+    "classificationLevel": "SPECIES",
+    "displayName": "SARS-CoV-1",
+    "distanceUpperLimit": 0.02,
     "isSimpleCRF": false,
-    "name": "WT",
+    "name": "SARS1",
     "parentGenotypes": null,
     "regions": null
   },
-  "D614G": {
+  "WT": {
     "classificationLevel": "SUBTYPE",
-    "displayName": "D614G",
-    "distanceUpperLimit": 0,
+    "displayName": "Wild type",
+    "distanceUpperLimit": 0.001,
     "isSimpleCRF": false,
-    "name": "D614G",
-    "parentGenotypes": "WT",
+    "name": "WT",
+    "parentGenotypes": null,
     "regions": null
   },
   "Alpha": {
@@ -32,7 +32,7 @@
     "distanceUpperLimit": 0.005,
     "isSimpleCRF": false,
     "name": "Alpha",
-    "parentGenotypes": "D614G",
+    "parentGenotypes": "WT",
     "regions": null
   },
   "Beta": {
@@ -41,7 +41,7 @@
     "distanceUpperLimit": 0.005,
     "isSimpleCRF": false,
     "name": "Beta",
-    "parentGenotypes": "D614G",
+    "parentGenotypes": "WT",
     "regions": null
   },
   "Gamma": {
@@ -50,7 +50,7 @@
     "distanceUpperLimit": 0.005,
     "isSimpleCRF": false,
     "name": "Gamma",
-    "parentGenotypes": "D614G",
+    "parentGenotypes": "WT",
     "regions": null
   },
   "Delta": {
@@ -59,7 +59,7 @@
     "distanceUpperLimit": 0.005,
     "isSimpleCRF": false,
     "name": "Delta",
-    "parentGenotypes": "D614G",
+    "parentGenotypes": "WT",
     "regions": null
   },
   "Epsilon": {
@@ -68,7 +68,7 @@
     "distanceUpperLimit": 0.005,
     "isSimpleCRF": false,
     "name": "Epsilon",
-    "parentGenotypes": "D614G",
+    "parentGenotypes": "WT",
     "regions": null
   },
   "Zeta": {
@@ -77,7 +77,7 @@
     "distanceUpperLimit": 0.005,
     "isSimpleCRF": false,
     "name": "Zeta",
-    "parentGenotypes": "D614G",
+    "parentGenotypes": "WT",
     "regions": null
   },
   "Theta": {
@@ -86,7 +86,7 @@
     "distanceUpperLimit": 0.005,
     "isSimpleCRF": false,
     "name": "Theta",
-    "parentGenotypes": "D614G",
+    "parentGenotypes": "WT",
     "regions": null
   },
   "Eta": {
@@ -95,7 +95,7 @@
     "distanceUpperLimit": 0.005,
     "isSimpleCRF": false,
     "name": "Eta",
-    "parentGenotypes": "D614G",
+    "parentGenotypes": "WT",
     "regions": null
   },
   "Iota": {
@@ -104,7 +104,7 @@
     "distanceUpperLimit": 0.005,
     "isSimpleCRF": false,
     "name": "Iota",
-    "parentGenotypes": "D614G",
+    "parentGenotypes": "WT",
     "regions": null
   },
   "Kappa": {
@@ -113,7 +113,7 @@
     "distanceUpperLimit": 0.005,
     "isSimpleCRF": false,
     "name": "Kappa",
-    "parentGenotypes": "D614G",
+    "parentGenotypes": "WT",
     "regions": null
   },
   "Lambda": {
@@ -122,7 +122,7 @@
     "distanceUpperLimit": 0.005,
     "isSimpleCRF": false,
     "name": "Lambda",
-    "parentGenotypes": "D614G",
+    "parentGenotypes": "WT",
     "regions": null
   },
   "Mu": {
@@ -131,7 +131,7 @@
     "distanceUpperLimit": 0.005,
     "isSimpleCRF": false,
     "name": "Mu",
-    "parentGenotypes": "D614G",
+    "parentGenotypes": "WT",
     "regions": null
   },
   "Omicron": {
@@ -140,7 +140,7 @@
     "distanceUpperLimit": 0.005,
     "isSimpleCRF": false,
     "name": "Omicron",
-    "parentGenotypes": "D614G",
+    "parentGenotypes": "WT",
     "regions": null
   }
 }
