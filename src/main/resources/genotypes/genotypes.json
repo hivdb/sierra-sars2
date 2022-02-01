@@ -26,6 +26,15 @@
     "parentGenotypes": null,
     "regions": null
   },
+  "nonVOC": {
+    "classificationLevel": "SUBTYPE",
+    "displayName": "Non-VOC/VOI",
+    "distanceUpperLimit": 0.05,
+    "isSimpleCRF": false,
+    "name": "nonVOC",
+    "parentGenotypes": "WT",
+    "regions": null
+  },
   "Alpha": {
     "classificationLevel": "SUBTYPE",
     "displayName": "Alpha",
