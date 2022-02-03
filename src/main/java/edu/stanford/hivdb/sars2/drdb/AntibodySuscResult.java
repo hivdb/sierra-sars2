@@ -37,7 +37,7 @@ public class AntibodySuscResult extends SuscResult {
 	public static List<BoundSuscResult> query(String drdbVersion, MutationSet<SARS2> queryMuts) {
 		prepareSearchTree(drdbVersion);
 		final MutationSet<SARS2> finalQueryMuts = prepareQueryMutations(queryMuts);
-		return SuscResult.query(searchTrees.get(drdbVersion), finalQueryMuts);
+		return SuscResult.query(drdbVersion, searchTrees.get(drdbVersion), finalQueryMuts);
 	}
 	
 	private AntibodySuscResult(

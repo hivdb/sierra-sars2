@@ -36,7 +36,7 @@ public class VaccPlasmaSuscResult extends SuscResult {
 	public static List<BoundSuscResult> query(String drdbVersion, MutationSet<SARS2> queryMuts) {
 		prepareSearchTree(drdbVersion);
 		final MutationSet<SARS2> finalQueryMuts = prepareQueryMutations(queryMuts);
-		List<BoundSuscResult> results = SuscResult.query(searchTrees.get(drdbVersion), finalQueryMuts);
+		List<BoundSuscResult> results = SuscResult.query(drdbVersion, searchTrees.get(drdbVersion), finalQueryMuts);
 		results.sort((a, b) -> (
 			((VaccPlasmaSuscResult) a.getSuscResult()).getVaccinePriority() - 
 			((VaccPlasmaSuscResult) b.getSuscResult()).getVaccinePriority()

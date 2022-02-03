@@ -69,10 +69,17 @@ public abstract class SuscResult {
 		return tree;
 	}
 	
-	public static List<BoundSuscResult> query(Map<Mutation<SARS2>, List<SuscResult>> tree, MutationSet<SARS2> queryMuts) {
+	public static List<BoundSuscResult> query(
+		String drdbVersion,
+		Map<Mutation<SARS2>, List<SuscResult>> tree,
+		MutationSet<SARS2> queryMuts
+	) {
 		Map<SuscResult, Integer> counter = new HashMap<>();
+		Map<SuscResult, Integer> resistMutsCounter = new HashMap<>();
+		MutationSet<SARS2> allResistMuts = ResistanceMutations.get(drdbVersion);
 		Set<Mutation<SARS2>> splittedQueryMuts = queryMuts.getSplitted();
 		int numQueryMuts = splittedQueryMuts.size(); 
+		int numQueryResistMuts = 0;
 		for (Mutation<SARS2> mut : splittedQueryMuts) {
 			if (!tree.containsKey(mut)) {
 				continue;
@@ -83,19 +90,44 @@ public abstract class SuscResult {
 				}
 				counter.put(sr, counter.get(sr) + 1);
 			}
+			if (allResistMuts.hasSharedAAMutation(mut)) {
+				numQueryResistMuts ++;
+				for (SuscResult sr : tree.get(mut)) {
+					if (!resistMutsCounter.containsKey(sr)) {
+						resistMutsCounter.put(sr, 0);
+					}
+					resistMutsCounter.put(sr, resistMutsCounter.get(sr) + 1);
+				}
+			}
 		}
 		List<BoundSuscResult> results = new ArrayList<>();
 		for (Entry<SuscResult, Integer> pair : counter.entrySet()) {
 			IsolateMatchType matchType;
 			SuscResult sr = pair.getKey();
-			int numIsoMuts = sr.getComparableIsolateMutations().getSplitted().size();
+			Set<Mutation<SARS2>> isoMuts = sr.getComparableIsolateMutations().getSplitted();
+			int numIsoMuts = isoMuts.size();
+			int numIsoResistMuts = allResistMuts.intersectsWith(isoMuts).getSplitted().size();
 			int numSharedMuts = pair.getValue();
+			int numSharedResistMuts = resistMutsCounter.getOrDefault(sr, 0);
 			int numIsoOnlyMuts = numIsoMuts - numSharedMuts;
+			int numIsoOnlyResistMuts = numIsoResistMuts - numSharedResistMuts;
 			int numQueryOnlyMuts = numQueryMuts - numSharedMuts;
+			int numQueryOnlyResistMuts = numQueryResistMuts - numSharedResistMuts;
 			if (numIsoOnlyMuts == 0 && numQueryOnlyMuts == 0) {
 				matchType = IsolateMatchType.EQUAL;
 			}
+			else if (numIsoOnlyResistMuts == 0 && numQueryOnlyResistMuts == 0) {
+				// consider "EQUAL" match if all resistance mutations matched
+				numIsoOnlyMuts = numIsoOnlyResistMuts;
+				numQueryOnlyMuts = numQueryOnlyResistMuts;
+				matchType = IsolateMatchType.EQUAL;
+			}
 			else if (numIsoOnlyMuts > 0 && numQueryOnlyMuts == 0) {
+				matchType = IsolateMatchType.SUPERSET;
+			}
+			else if (numIsoOnlyResistMuts > 0 && numQueryOnlyResistMuts == 0) {
+				numIsoOnlyMuts = numIsoOnlyResistMuts;
+				numQueryOnlyMuts = numQueryOnlyResistMuts;
 				matchType = IsolateMatchType.SUPERSET;
 			}
 			else if (numIsoOnlyMuts == 0 && numQueryOnlyMuts > 0) {

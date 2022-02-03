@@ -144,7 +144,7 @@ public class SuscResultDef {
 		.field(field -> field
 			.type(GraphQLString)
 			.name("isolateMatchType")
-			.description("Type of how perfectly the query mutations matches isolate mutations. Valid value: `EQUAL`, `SUPERSET`, `SUBSET`, and `OVERLAP`."))
+			.description("Type of how perfectly the query mutations matches isolate mutations. Valid value: `EQUAL`, `DRM_EQUAL`, `SUPERSET`, `SUBSET`, and `OVERLAP`."))
 		.field(field -> field
 			.type(GraphQLInt)
 			.name("numIsolateOnlyMutations")
