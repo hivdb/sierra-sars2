@@ -8,8 +8,12 @@ import java.util.stream.Collectors;
 import edu.stanford.hivdb.mutations.MutationSet;
 import edu.stanford.hivdb.sars2.SARS2;
 import edu.stanford.hivdb.sars2.drdb.SuscResult.IsolateMatchType;
+import edu.stanford.hivdb.viruses.Gene;
 
 public class VarMutsSuscSummary extends SuscSummary {
+
+	private static final Gene<SARS2> SPIKE = SARS2.getInstance().getMainStrain().getGene("S");
+
 	private final Variant variant;
 	private final MutationSet<SARS2> mutations;
 	private transient Set<Isolate> hitIsolates;
@@ -21,9 +25,11 @@ public class VarMutsSuscSummary extends SuscSummary {
 		Variant variant,
 		MutationSet<SARS2> mutations,
 		List<BoundSuscResult> suscResults,
-		String lastUpdate
+		MutationSet<SARS2> queryMuts,
+		String lastUpdate,
+		String drdbVersion
 	) {
-		super(suscResults, lastUpdate);
+		super(suscResults, queryMuts, lastUpdate, drdbVersion);
 		this.variant = variant;
 		this.mutations = mutations;
 	}
@@ -35,7 +41,29 @@ public class VarMutsSuscSummary extends SuscSummary {
 	public MutationSet<SARS2> getMutations() {
 		return mutations;
 	}
-
+	
+	public MutationSet<SARS2> getVariantExtraMutations() {
+		if (variant == null) {
+			return null;
+		}
+		return mutations
+			.filterBy(mut -> mut.getGene() == SPIKE)
+			.subtractsBy(
+				queryMuts.filterBy(mut -> !mut.isUnsequenced())
+			)
+			.subtractsBy(SuscResult.EXCLUDE_MUTATIONS);
+	}
+	
+	public MutationSet<SARS2> getVariantMissingMutations() {
+		if (variant == null) {
+			return null;
+		}
+		return queryMuts
+			.filterBy(mut -> mut.getGene() == SPIKE && !mut.isUnsequenced())
+			.subtractsBy(mutations)
+			.subtractsBy(SuscResult.EXCLUDE_MUTATIONS);
+	}
+	
 	public Set<Isolate> getHitIsolates() {
 		if (hitIsolates == null) {
 			hitIsolates = Collections

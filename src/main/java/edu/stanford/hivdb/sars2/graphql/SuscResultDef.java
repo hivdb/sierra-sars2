@@ -137,6 +137,18 @@ public class SuscResultDef {
 			.description("Variant (only available for `itemsByVariantOrMutations`)"))
 		.field(field -> MutationSetDef.newMutationSet("SARS2", field, "mutations")
 			.description("Isolate mutations (only available for `itemsByMutations` and `itemsByVariantOrMutations`)"))
+		.field(field -> MutationSetDef.newMutationSet("SARS2", field, "variantExtraMutations")
+			.description(
+				"For `itemsByVariantOrMutations`, if a named variant is available, " +
+				"this field list mutations that only present in this variant; otherwise returns null"
+			)
+		)
+		.field(field -> MutationSetDef.newMutationSet("SARS2", field, "variantMissingMutations")
+			.description(
+				"For `itemsByVariantOrMutations`, if a named variant is available, " +
+				"this field list mutations that only present in input mutations/sequence/sequence reads; otherwise returns null"
+			)
+		)
 		.field(field -> field
 			.type(new GraphQLList(IsolateDef.oIsolate))
 			.name("hitIsolates")

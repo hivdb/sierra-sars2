@@ -326,6 +326,9 @@ def global_range_definition():
 
 
 def comment_definitions(species):
+    if not ConditionalCommentData.DATA[species]:
+        return []
+
     tree = E.COMMENT_DEFINITIONS()
 
     for comment in ConditionalCommentData.DATA[species]:

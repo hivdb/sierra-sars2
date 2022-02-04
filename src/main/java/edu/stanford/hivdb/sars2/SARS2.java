@@ -54,7 +54,7 @@ public class SARS2 implements Virus<SARS2> {
 	private static final String GENES_RESPATH = "genes.json";
 	private static final String DRUG_CLASSES_RESPATH = "drug-classes.json";
 	private static final String DRUGS_RESPATH = "drugs.json";
-	private static final String DRMS_RESPATH = "drms.json";
+	private static final String DRMS_RESPATH = "https://s3-us-west-2.amazonaws.com/cms.hivdb.org/chiro-prod/downloads/resistance-mutations/latest.json";
 	private static final String SDRMS_RESPATH = "sdrms.json";
 	private static final String TSMS_RESPATH = "tsms.json";
 	private static final String APOBECS_RESPATH = "apobecs/apobecs.json";
@@ -78,6 +78,10 @@ public class SARS2 implements Virus<SARS2> {
 		
 	public static SARS2 getInstance() {
 		return Virus.getInstance(SARS2.class);
+	}
+
+	public static Boolean purgeCache() {
+		return getInstance().dl.purgeCache();
 	}
 	
 	private final SARS2DataLoader<SARS2> dl;

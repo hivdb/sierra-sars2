@@ -20,6 +20,8 @@ package edu.stanford.hivdb.sars2;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -33,6 +35,7 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
+import java.util.zip.GZIPInputStream;
 
 import org.apache.commons.io.IOUtils;
 
@@ -82,18 +85,39 @@ public class SARS2DataLoader<T extends Virus<T>> {
 	);
 
 	protected static String loadResource(String resPath) {
-		try (
-			InputStream stream = SARS2DataLoader.class
-				.getClassLoader()
-				.getResourceAsStream(resPath);
-		) {
-			return IOUtils.toString(stream, StandardCharsets.UTF_8);
-		} catch (IOException|NullPointerException e) {
-			throw new ExceptionInInitializerError(
-				String.format("Invalid resource name (%s)", resPath)
-			);
+		if (resPath.toLowerCase().startsWith("https://")) {
+			try {
+				URL url = new URL(resPath);
+				HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+				conn.setRequestProperty("Accept-Encoding", "gzip, deflate");
+				InputStream stream;
+    	  if ("gzip".equals(conn.getContentEncoding())) {
+    	     stream = new GZIPInputStream(conn.getInputStream());
+    	  }
+    	  else {
+    	     stream = conn.getInputStream();
+    	  }
+				return IOUtils.toString(stream, StandardCharsets.UTF_8);
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+		}
+		else {
+			try (
+				InputStream stream = SARS2DataLoader.class
+					.getClassLoader()
+					.getResourceAsStream(resPath);
+			) {
+				return IOUtils.toString(stream, StandardCharsets.UTF_8);
+			} catch (IOException|NullPointerException e) {
+				throw new ExceptionInInitializerError(
+					String.format("Invalid resource name (%s)", resPath)
+				);
+			}
 		}
 	}
+	
+	private static final String URL_ALLOW_PURGING_CACHE = "https://s3-us-west-2.amazonaws.com/cms.hivdb.org/sierra-sars2-allow-purging-cache";
 
 	private final T virus;
 	private final String VIRUS_NAME;
@@ -793,6 +817,25 @@ public class SARS2DataLoader<T extends Virus<T>> {
 			this.sequenceAssemblers = sequenceAssemblers;
 		}
 		return sequenceAssemblers;
+	}
+
+	public Boolean purgeCache() {
+		// check if purging cache is allowed
+		try {
+			URL url = new URL(URL_ALLOW_PURGING_CACHE);
+			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+			conn.connect();
+			int code = conn.getResponseCode();
+			if (code != 200) {
+				return false;
+			}
+		} catch (IOException e) {
+			throw new RuntimeException(e);
+		}
+		
+		drugResistMutations = null;
+		
+		return true;
 	}
 	
 }

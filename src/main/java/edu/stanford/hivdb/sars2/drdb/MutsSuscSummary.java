@@ -19,16 +19,18 @@ public class MutsSuscSummary extends SuscSummary {
 	public MutsSuscSummary(
 		MutationSet<SARS2> mutations,
 		List<BoundSuscResult> suscResults,
-		String lastUpdate
+		MutationSet<SARS2> queryMuts,
+		String lastUpdate,
+		String drdbVersion
 	) {
-		super(suscResults, lastUpdate);
+		super(suscResults, queryMuts, lastUpdate, drdbVersion);
 		this.mutations = mutations;
 	}
 
 	public MutationSet<SARS2> getMutations() {
 		return mutations;
 	}
-
+	
 	public Set<Isolate> getHitIsolates() {
 		if (hitIsolates == null) {
 			hitIsolates = Collections

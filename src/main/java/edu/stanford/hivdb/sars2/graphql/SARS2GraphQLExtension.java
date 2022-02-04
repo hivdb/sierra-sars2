@@ -2,6 +2,7 @@ package edu.stanford.hivdb.sars2.graphql;
 
 import static graphql.Scalars.*;
 
+import edu.stanford.hivdb.sars2.SARS2;
 import edu.stanford.hivdb.sars2.drdb.Antibody;
 import edu.stanford.hivdb.sars2.drdb.DRDB;
 import edu.stanford.hivdb.viruses.VirusGraphQLExtension;
@@ -40,6 +41,10 @@ public class SARS2GraphQLExtension implements VirusGraphQLExtension {
 	private static DataFetcher<String> drdbLastUpdateDataFetcher = env -> {
 		String drdbVersion = env.getArgument("drdbVersion");
 		return DRDB.getInstance(drdbVersion).queryLastUpdate();
+	};
+
+	private static DataFetcher<Boolean> purgeCacheDataFetcher = env -> {
+		return SARS2.purgeCache();
 	};
 
 	@Override
@@ -119,6 +124,10 @@ public class SARS2GraphQLExtension implements VirusGraphQLExtension {
 			coordinates("Viewer", "drdbLastUpdate"),
 			drdbLastUpdateDataFetcher		
 		)
+		.dataFetcher(
+			coordinates("Root", "purgeCache"),
+			purgeCacheDataFetcher
+		)
 		.build();
 	}
 	
@@ -128,6 +137,7 @@ public class SARS2GraphQLExtension implements VirusGraphQLExtension {
 			case "Root":
 				builder = addDRDBLastUpdateField(builder);
 				builder = addAntibodiesField(builder);
+				builder = addPurgeCacheField(builder);
 				break;
 			case "SequenceAnalysis":
 				builder = addPangolinField(builder);
@@ -188,6 +198,16 @@ public class SARS2GraphQLExtension implements VirusGraphQLExtension {
 				.description("List of all antibodies.")
 			);
 	}
+	
+	private GraphQLObjectType.Builder addPurgeCacheField(GraphQLObjectType.Builder builder) {
+		return builder
+			.field(field -> field
+				.type(GraphQLBoolean)
+				.name("purgeCache")
+				.description("Purge server-side cached objects.")
+			);
+	}
+	
 	
 	private GraphQLObjectType.Builder addPangolinField(GraphQLObjectType.Builder builder) {
 		return builder

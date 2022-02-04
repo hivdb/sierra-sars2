@@ -6,10 +6,13 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
+
 import org.junit.Test;
 
 import com.google.common.collect.Lists;
 
+import edu.stanford.hivdb.drugs.DrugClass;
 import edu.stanford.hivdb.graphql.SierraSchema;
 import edu.stanford.hivdb.mutations.Mutation;
 import edu.stanford.hivdb.mutations.MutationSet;
@@ -86,6 +89,15 @@ public class SARS2Test {
 	public void testUnusualMutation() {
 		Mutation<SARS2> mutation = virusIns.parseMutationString("RdRP:164V");
 		assertTrue(mutation.isUnusual());
+	}
+	
+	@Test
+	public void testDRMs() {
+		Map<DrugClass<SARS2>, MutationSet<SARS2>> drms = virusIns.getDrugResistMutations();
+		assertTrue(drms.containsKey(virusIns.getDrugClass("MAB")));
+		assertTrue(
+			drms.get(virusIns.getDrugClass("MAB"))
+			.hasSharedAAMutation(virusIns.parseMutationString("S:484K")));
 	}
 	
 }

@@ -76,7 +76,6 @@ public abstract class SuscResult {
 	) {
 		Map<SuscResult, Integer> counter = new HashMap<>();
 		Map<SuscResult, Integer> resistMutsCounter = new HashMap<>();
-		MutationSet<SARS2> allResistMuts = ResistanceMutations.get(drdbVersion);
 		Set<Mutation<SARS2>> splittedQueryMuts = queryMuts.getSplitted();
 		int numQueryMuts = splittedQueryMuts.size(); 
 		int numQueryResistMuts = 0;
@@ -90,7 +89,8 @@ public abstract class SuscResult {
 				}
 				counter.put(sr, counter.get(sr) + 1);
 			}
-			if (allResistMuts.hasSharedAAMutation(mut)) {
+			
+			if (mut.isDRM()) {
 				numQueryResistMuts ++;
 				for (SuscResult sr : tree.get(mut)) {
 					if (!resistMutsCounter.containsKey(sr)) {
@@ -104,9 +104,9 @@ public abstract class SuscResult {
 		for (Entry<SuscResult, Integer> pair : counter.entrySet()) {
 			IsolateMatchType matchType;
 			SuscResult sr = pair.getKey();
-			Set<Mutation<SARS2>> isoMuts = sr.getComparableIsolateMutations().getSplitted();
-			int numIsoMuts = isoMuts.size();
-			int numIsoResistMuts = allResistMuts.intersectsWith(isoMuts).getSplitted().size();
+			MutationSet<SARS2> isoMuts = sr.getComparableIsolateMutations();
+			int numIsoMuts = isoMuts.getSplitted().size();
+			int numIsoResistMuts = isoMuts.getDRMs().getSplitted().size();
 			int numSharedMuts = pair.getValue();
 			int numSharedResistMuts = resistMutsCounter.getOrDefault(sr, 0);
 			int numIsoOnlyMuts = numIsoMuts - numSharedMuts;

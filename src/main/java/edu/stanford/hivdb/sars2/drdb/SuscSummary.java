@@ -16,8 +16,10 @@ import edu.stanford.hivdb.mutations.MutationSet;
 import edu.stanford.hivdb.sars2.SARS2;
 
 public class SuscSummary {
-	private List<BoundSuscResult> items;
-	private String lastUpdate;
+	private final List<BoundSuscResult> items;
+	protected final MutationSet<SARS2> queryMuts;
+	private final String lastUpdate;
+	private final String drdbVersion;
 	private transient DescriptiveStatistics cumulativeFold;
 	private transient Integer cumulativeCount;
 	private transient List<AntibodySuscSummary> itemsByAntibody;
@@ -43,7 +45,7 @@ public class SuscSummary {
 			))
 			.collect(Collectors.toList())
 		);
-		return new SuscSummary(results, lastUpdate);
+		return new SuscSummary(results, queryMuts, lastUpdate, drdbVersion);
 	}
 	
 	public static SuscSummary queryConvPlasmaSuscSummary(String drdbVersion, MutationSet<SARS2> queryMuts) {
@@ -53,7 +55,7 @@ public class SuscSummary {
 			.stream()
 			.collect(Collectors.toList())
 		);
-		return new SuscSummary(results, lastUpdate);
+		return new SuscSummary(results, queryMuts, lastUpdate, drdbVersion);
 	}
 
 	public static SuscSummary queryVaccPlasmaSuscSummary(String drdbVersion, MutationSet<SARS2> queryMuts) {
@@ -63,10 +65,10 @@ public class SuscSummary {
 			.stream()
 			.collect(Collectors.toList())
 		);
-		return new SuscSummary(results, lastUpdate);
+		return new SuscSummary(results, queryMuts, lastUpdate, drdbVersion);
 	}
 	
-	protected SuscSummary(List<BoundSuscResult> items, String lastUpdate) {
+	protected SuscSummary(List<BoundSuscResult> items, MutationSet<SARS2> queryMuts, String lastUpdate, String drdbVersion) {
 		this.items = Collections.unmodifiableList(
 			items.stream()
 			.sorted((itemA, itemB) -> {
@@ -84,7 +86,9 @@ public class SuscSummary {
 			})
 			.collect(Collectors.toList())
 		);
+		this.queryMuts = queryMuts;
 		this.lastUpdate = lastUpdate;
+		this.drdbVersion =drdbVersion;
 	}
 
 	public String getLastUpdate() {	return this.lastUpdate;	}
@@ -151,7 +155,9 @@ public class SuscSummary {
 				.map(entry -> new AntibodySuscSummary(
 					entry.getKey(),
 					entry.getValue(),
-					this.lastUpdate
+					queryMuts,
+					this.lastUpdate,
+					this.drdbVersion
 				))
 				.collect(Collectors.toList());
 
@@ -184,7 +190,9 @@ public class SuscSummary {
 				.map(entry -> new AntibodyClassSuscSummary(
 					entry.getKey(),
 					entry.getValue(),
-					this.lastUpdate
+					queryMuts,
+					this.lastUpdate,
+					this.drdbVersion
 				))
 				.collect(Collectors.toList());
 			
@@ -211,7 +219,9 @@ public class SuscSummary {
 				.map(entry -> new ResistLevelSuscSummary(
 					entry.getKey(),
 					entry.getValue(),
-					this.lastUpdate
+					queryMuts,
+					this.lastUpdate,
+					this.drdbVersion
 				))
 				.collect(Collectors.toList());
 			
@@ -236,7 +246,9 @@ public class SuscSummary {
 				.map(entry -> new VaccineSuscSummary(
 					entry.getKey(),
 					entry.getValue(),
-					this.lastUpdate
+					queryMuts,
+					this.lastUpdate,
+					this.drdbVersion
 				))
 				.collect(Collectors.toList());
 			
@@ -281,8 +293,10 @@ public class SuscSummary {
 					variant,
 					muts,
 					entry.getValue(),
-					this.lastUpdate)
-				);
+					queryMuts,
+					this.lastUpdate,
+					this.drdbVersion
+				));
 			}
 			itemsByVarOrMuts = Collections.unmodifiableList(summaryResults);
 		}
@@ -315,7 +329,9 @@ public class SuscSummary {
 					// except for excluded mutations such as D614G
 					).subtractsBy(SuscResult.EXCLUDE_MUTATIONS),
 					entry.getValue(),
-					this.lastUpdate
+					queryMuts,
+					this.lastUpdate,
+					this.drdbVersion
 				))
 				.collect(Collectors.toList());
 
