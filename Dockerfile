@@ -29,6 +29,7 @@ ARG POSTALIGN_VERSION=c612c6067ae7a9091e1f691262e38f1b709ab360
 RUN pip install https://github.com/hivdb/post-align/archive/${POSTALIGN_VERSION}.zip
 
 FROM hivdb/tomcat-with-nucamino:latest
+ENV CATALINA_OPTS "-Xms1024M -Xmx6144M"
 RUN apt-get -q update && apt-get install -qqy python3.9
 COPY --from=builder /usr/local/minimap2 /usr/local/minimap2
 COPY --from=builder /sierra/build/libs/Sierra-SARS2.war /usr/share/tomcat/webapps
