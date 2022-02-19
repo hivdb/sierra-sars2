@@ -118,16 +118,12 @@ public abstract class SuscResult {
 			}
 			else if (numIsoOnlyResistMuts == 0 && numQueryOnlyResistMuts == 0) {
 				// consider "EQUAL" match if all resistance mutations matched
-				numIsoOnlyMuts = numIsoOnlyResistMuts;
-				numQueryOnlyMuts = numQueryOnlyResistMuts;
 				matchType = IsolateMatchType.EQUAL;
 			}
 			else if (numIsoOnlyMuts > 0 && numQueryOnlyMuts == 0) {
 				matchType = IsolateMatchType.SUPERSET;
 			}
 			else if (numIsoOnlyResistMuts > 0 && numQueryOnlyResistMuts == 0) {
-				numIsoOnlyMuts = numIsoOnlyResistMuts;
-				numQueryOnlyMuts = numQueryOnlyResistMuts;
 				matchType = IsolateMatchType.SUPERSET;
 			}
 			else if (numIsoOnlyMuts == 0 && numQueryOnlyMuts > 0) {
@@ -141,6 +137,8 @@ public abstract class SuscResult {
 				matchType,
 				numIsoOnlyMuts,
 				numQueryOnlyMuts,
+				numIsoOnlyResistMuts,
+				numQueryOnlyResistMuts,
 				sr
 			));
 			

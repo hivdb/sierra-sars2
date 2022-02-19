@@ -74,12 +74,21 @@ public class SuscSummary {
 			.sorted((itemA, itemB) -> {
 				int cmp = itemA.getMatchType().compareTo(itemB.getMatchType());
 				if (cmp != 0) { return cmp; }
-				int cmpIsolateOnly = itemA.getNumIsolateOnlyMutations() - itemB.getNumIsolateOnlyMutations();
-				int cmpQueryOnly = itemA.getNumQueryOnlyMutations() - itemB.getNumQueryOnlyMutations();
+
+				int cmpIsolateOnly = itemA.getNumIsolateOnlyDRMs() - itemB.getNumIsolateOnlyDRMs();
+				int cmpQueryOnly = itemA.getNumQueryOnlyDRMs() - itemB.getNumQueryOnlyDRMs();
 				cmp = cmpIsolateOnly + cmpQueryOnly;
 				if (cmp != 0) { return cmp; }
 				if (cmpIsolateOnly != 0) { return cmpIsolateOnly; }
 				if (cmpQueryOnly != 0) { return cmpQueryOnly; }
+
+				cmpIsolateOnly = itemA.getNumIsolateOnlyMutations() - itemB.getNumIsolateOnlyMutations();
+				cmpQueryOnly = itemA.getNumQueryOnlyMutations() - itemB.getNumQueryOnlyMutations();
+				cmp = cmpIsolateOnly + cmpQueryOnly;
+				if (cmp != 0) { return cmp; }
+				if (cmpIsolateOnly != 0) { return cmpIsolateOnly; }
+				if (cmpQueryOnly != 0) { return cmpQueryOnly; }
+
 				// the MutationSet comparison is too heavy and we gained too few from it
 				// return itemA.getComparableIsolateMutations().compareTo(itemB.getComparableIsolateMutations());
 				return cmp;

@@ -11,17 +11,23 @@ public class BoundSuscResult {
 	private final IsolateMatchType matchType;
 	private final Integer numIsoOnlyMuts;
 	private final Integer numQueryOnlyMuts;
+	private final Integer numIsoOnlyResistMuts;
+	private final Integer numQueryOnlyResistMuts;
 	private final SuscResult suscResult;
 	
 	protected BoundSuscResult(
 		IsolateMatchType matchType,
 		Integer numIsoOnlyMuts,
 		Integer numQueryOnlyMuts,
+		Integer numIsoOnlyResistMuts,
+		Integer numQueryOnlyResistMuts,
 		SuscResult suscResult
 	) {
 		this.matchType = matchType;
 		this.numIsoOnlyMuts = numIsoOnlyMuts;
 		this.numQueryOnlyMuts = numQueryOnlyMuts;
+		this.numIsoOnlyResistMuts = numIsoOnlyResistMuts;
+		this.numQueryOnlyResistMuts = numQueryOnlyResistMuts;
 		this.suscResult = suscResult;
 	}
 	
@@ -58,6 +64,10 @@ public class BoundSuscResult {
 	public Integer getNumIsolateOnlyMutations() { return numIsoOnlyMuts; } 
 	
 	public Integer getNumQueryOnlyMutations() { return numQueryOnlyMuts; }
+
+	public Integer getNumIsolateOnlyDRMs() { return numIsoOnlyResistMuts; } 
+	
+	public Integer getNumQueryOnlyDRMs() { return numQueryOnlyResistMuts; }
 	
 	public Set<Antibody> getAntibodies() {
 		return ((AntibodySuscResult) suscResult).getAntibodies();
