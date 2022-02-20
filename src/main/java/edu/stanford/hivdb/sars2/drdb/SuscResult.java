@@ -18,8 +18,8 @@ import edu.stanford.hivdb.viruses.Gene;
 
 public abstract class SuscResult {
 
-	private static final double PARTIAL_RESIST_FOLD = 3;
-	private static final double RESIST_FOLD = 10;
+	private static final double PARTIAL_RESIST_FOLD = 5;
+	private static final double RESIST_FOLD = 25;
 
 	private static final Set<Gene<SARS2>> INCLUDE_GENES;
 	protected static final Set<Mutation<SARS2>> EXCLUDE_MUTATIONS;
