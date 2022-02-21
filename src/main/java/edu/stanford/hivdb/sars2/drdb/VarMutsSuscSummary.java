@@ -76,7 +76,10 @@ public class VarMutsSuscSummary extends SuscSummary {
 				for (VarMutsSuscSummary item : results) {
 					Integer displayOrder = item.displayOrder;
 					Integer numMiss = item.getNumMissMutations();
-					if (
+					if (displayOrder == null) {
+						continue;
+					}
+					else if (
 						displayOrder == 1 &&
 						numMiss < subsetMinNumMiss &&
 						numMiss - overlapMinNumMiss < subsetMinNumMiss - numMiss
