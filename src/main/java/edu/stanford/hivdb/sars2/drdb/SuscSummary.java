@@ -309,7 +309,7 @@ public class SuscSummary {
 			}
 			itemsByVarOrMuts = Collections.unmodifiableList(summaryResults);
 		}
-		return itemsByVarOrMuts;
+		return VarMutsSuscSummary.decideDisplayPriority(itemsByVarOrMuts);
 	}
 	
 	public List<MutsSuscSummary> getItemsByMutations() {

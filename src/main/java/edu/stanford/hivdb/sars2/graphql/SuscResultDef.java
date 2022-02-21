@@ -159,6 +159,10 @@ public class SuscResultDef {
 			.description("Type of how perfectly the query mutations matches isolate mutations. Valid value: `EQUAL`, `DRM_EQUAL`, `SUPERSET`, `SUBSET`, and `OVERLAP`."))
 		.field(field -> field
 			.type(GraphQLInt)
+			.name("displayOrder")
+			.description("Display order of `itemsByVariantOrMutations`. 0 = display by default; 1 = collapsed by default."))
+		.field(field -> field
+			.type(GraphQLInt)
 			.name("numIsolateOnlyMutations")
 			.description("Number of mutations that are only appeared in isolate mutations. D614G and ranged deletions are properly handled."))
 		.field(field -> field
