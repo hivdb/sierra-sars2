@@ -14,6 +14,7 @@ import edu.stanford.hivdb.viruses.Gene;
 
 public class VarMutsSuscSummary extends SuscSummary {
 
+	private static final Integer MAX_NUM_MISS = 100;
 	private static final Gene<SARS2> SPIKE = SARS2.getInstance().getMainStrain().getGene("S");
 
 	private final Variant variant;
@@ -50,7 +51,10 @@ public class VarMutsSuscSummary extends SuscSummary {
 				subsetMinNumMiss = subsetMinNumMiss < numMiss ? subsetMinNumMiss : numMiss;
 			}
 			
-			if (matchType == defaultType) {
+			if (numMiss > MAX_NUM_MISS) {
+				displayOrder = null;
+			}
+			else if (matchType == defaultType) {
 				displayOrder = 0;
 			}
 			else if (expandableTypes.contains(matchType)) {
