@@ -33,6 +33,9 @@ public class VarMutsSuscSummary extends SuscSummary {
 			.filter(item -> item.getNumDiffMutations() <= MAX_NUM_MISS)
 			.map(item -> item.getIsolateMatchType())
 			.collect(Collectors.toCollection(LinkedHashSet::new));
+		if (matchTypes.size() == 0) {
+			return new ArrayList<>(items);
+		}
 		IsolateMatchType defaultType = matchTypes.stream().findFirst().get();
 		Set<IsolateMatchType> expandableTypes = matchTypes.stream()
 			.skip(1).limit(2).collect(Collectors.toSet());
