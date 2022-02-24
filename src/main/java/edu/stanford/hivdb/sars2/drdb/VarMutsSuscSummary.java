@@ -30,6 +30,7 @@ public class VarMutsSuscSummary extends SuscSummary {
 			return Collections.emptyList();
 		}
 		LinkedHashSet<IsolateMatchType> matchTypes = items.stream()
+			.filter(item -> item.getNumDiffMutations() <= MAX_NUM_MISS)
 			.map(item -> item.getIsolateMatchType())
 			.collect(Collectors.toCollection(LinkedHashSet::new));
 		IsolateMatchType defaultType = matchTypes.stream().findFirst().get();
@@ -42,34 +43,34 @@ public class VarMutsSuscSummary extends SuscSummary {
 		boolean hasOverlap = false;
 
 		for (VarMutsSuscSummary item : items) {
-			IsolateMatchType matchType = item.getIsolateMatchType();
-			Integer numDiff = item.getNumDiffDRMs();
-			Integer displayOrder = null;
 
-			if (matchType == IsolateMatchType.SUBSET) {
-				subsetMaxNumDiff = subsetMaxNumDiff > numDiff ? subsetMaxNumDiff : numDiff;
-				subsetMinNumDiff = subsetMinNumDiff < numDiff ? subsetMinNumDiff : numDiff;
-			}
+			if (item.getNumDiffMutations() <= MAX_NUM_MISS) {
+				Integer displayOrder = null;
+				Integer numDiff = item.getNumDiffDRMs();
+				IsolateMatchType matchType = item.getIsolateMatchType();
+				if (matchType == IsolateMatchType.SUBSET) {
+					subsetMaxNumDiff = subsetMaxNumDiff > numDiff ? subsetMaxNumDiff : numDiff;
+					subsetMinNumDiff = subsetMinNumDiff < numDiff ? subsetMinNumDiff : numDiff;
+				}
 			
-			if (numDiff > MAX_NUM_MISS) {
-				displayOrder = null;
-			}
-			else if (matchType == defaultType) {
-				displayOrder = 0;
-			}
-			else if (expandableTypes.contains(matchType)) {
-				displayOrder = 1;
-			}
-			if (displayOrder != null && matchType == IsolateMatchType.OVERLAP) {
-				if (numDiff >= subsetMaxNumDiff) {
-					displayOrder = null;
+				if (matchType == defaultType) {
+					displayOrder = 0;
 				}
-				else {
-					hasOverlap = true;
-					overlapMinNumDiff = overlapMinNumDiff < numDiff ? overlapMinNumDiff : numDiff;
+				else if (expandableTypes.contains(matchType)) {
+					displayOrder = 1;
 				}
+				if (displayOrder != null && matchType == IsolateMatchType.OVERLAP) {
+					if (numDiff >= subsetMaxNumDiff) {
+						displayOrder = null;
+					}
+					else {
+						hasOverlap = true;
+						overlapMinNumDiff = overlapMinNumDiff < numDiff ? overlapMinNumDiff : numDiff;
+					}
+				}
+				item.displayOrder = displayOrder;
 			}
-			item.displayOrder = displayOrder;
+
 			results.add(item);
 		}
 		
