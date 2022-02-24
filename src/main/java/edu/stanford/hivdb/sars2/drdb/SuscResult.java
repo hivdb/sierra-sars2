@@ -129,6 +129,9 @@ public abstract class SuscResult {
 			else if (numIsoOnlyMuts == 0 && numQueryOnlyMuts > 0) {
 				matchType = IsolateMatchType.SUBSET;
 			}
+			else if (numIsoOnlyResistMuts == 0 && numQueryOnlyResistMuts > 0) {
+				matchType = IsolateMatchType.SUBSET;
+			}
 			else { // numIsoOnlyMuts > 0 || numQueryOnlyMuts > 0
 				matchType = IsolateMatchType.OVERLAP;
 			}

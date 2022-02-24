@@ -112,10 +112,6 @@ public class SuscResultDef {
 			.type(new GraphQLList(AntibodyDef.oAntibody))
 			.description("Group antibody/antibody combination (only available for `itemsByAntibodies`)"))
 		.field(field -> field
-			.name("antibodyClass")
-			.type(GraphQLString)
-			.description("Group antibody class (only available for `itemsByAntibodyClass`)"))
-		.field(field -> field
 			.name("resistanceLevel")
 			.type(GraphQLString)
 			.description("Resistance level (only available for `itemsByResistLevel`)"))
@@ -149,6 +145,12 @@ public class SuscResultDef {
 				"this field list mutations that only present in input mutations/sequence/sequence reads; otherwise returns null"
 			)
 		)
+		.field(field -> MutationSetDef.newMutationSet("SARS2", field, "variantMatchingMutations")
+			.description(
+				"For `itemsByVariantOrMutations`, if a named variant is available, " +
+				"this field list mutations that present in both input mutations/sequence/sequence reads and this variant; otherwise returns null"
+			)
+		)
 		.field(field -> field
 			.type(new GraphQLList(IsolateDef.oIsolate))
 			.name("hitIsolates")
@@ -163,12 +165,12 @@ public class SuscResultDef {
 			.description("Display order of `itemsByVariantOrMutations`. 0 = display by default; 1 = collapsed by default."))
 		.field(field -> field
 			.type(GraphQLInt)
-			.name("numIsolateOnlyMutations")
-			.description("Number of mutations that are only appeared in isolate mutations. D614G and ranged deletions are properly handled."))
+			.name("numDiffMutations")
+			.description("Total number of additional/missing mutations. D614G and ranged deletions are properly handled."))
 		.field(field -> field
 			.type(GraphQLInt)
-			.name("numQueryOnlyMutations")
-			.description("Number of mutations that are only appeared in query mutations. D614G and ranged deletions are properly handled."))
+			.name("numDiffDRMs")
+			.description("Total number of additional/missing DRMs. D614G and ranged deletions are properly handled."))
 		.field(field -> field
 			.type(new GraphQLList(ArticleDef.oArticle))
 			.name("references")
@@ -189,10 +191,6 @@ public class SuscResultDef {
 			.name("itemsByAntibody")
 			.type(new GraphQLList(GraphQLTypeReference.typeRef("SuscSummary")))
 			.description("Susceptibility summary by antibody."))
-		.field(field -> field
-			.name("itemsByAntibodyClass")
-			.type(new GraphQLList(GraphQLTypeReference.typeRef("SuscSummary")))
-			.description("Susceptibility summary by antibody class."))
 		.field(field -> field
 			.name("itemsByResistLevel")
 			.type(new GraphQLList(GraphQLTypeReference.typeRef("SuscSummary")))

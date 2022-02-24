@@ -23,7 +23,6 @@ public class SuscSummary {
 	private transient DescriptiveStatistics cumulativeFold;
 	private transient Integer cumulativeCount;
 	private transient List<AntibodySuscSummary> itemsByAntibody;
-	private transient List<AntibodyClassSuscSummary> itemsByAntibodyClass;
 	private transient List<ResistLevelSuscSummary> itemsByResistLevel;
 	private transient List<MutsSuscSummary> itemsByKeyMuts;
 	private transient List<VarMutsSuscSummary> itemsByVarOrMuts;
@@ -174,43 +173,7 @@ public class SuscSummary {
 		}
 		return itemsByAntibody;
 	}
-	public List<AntibodyClassSuscSummary> getItemsByAntibodyClass() {
-		if (itemsByAntibodyClass == null) {
-			
-			
-			Map<String, List<BoundSuscResult>> byAntibodyClass = (
-				items.stream()
-				.filter(sr -> (
-					sr.isAntibody() &&
-					sr.getAntibodies().size() == 1 &&
-					sr.getAntibodies()
-					.stream()
-					.allMatch(ab -> ab.getAntibodyClass() != null)
-				))
-				.collect(Collectors.groupingBy(
-					sr -> sr.getAntibodies().iterator().next().getAntibodyClass(),
-					LinkedHashMap::new,
-					Collectors.toList()
-				))
-			);
-			
-			List<AntibodyClassSuscSummary> summaryResults = byAntibodyClass.entrySet()
-				.stream()
-				.map(entry -> new AntibodyClassSuscSummary(
-					entry.getKey(),
-					entry.getValue(),
-					queryMuts,
-					this.lastUpdate,
-					this.drdbVersion
-				))
-				.collect(Collectors.toList());
-			
-			
-			itemsByAntibodyClass = Collections.unmodifiableList(summaryResults);
-		}
-		return itemsByAntibodyClass;
-	}
-	
+
 	public List<ResistLevelSuscSummary> getItemsByResistLevel() {
 		if (itemsByResistLevel == null) {
 			

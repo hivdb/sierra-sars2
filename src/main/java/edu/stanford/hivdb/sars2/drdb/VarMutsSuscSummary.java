@@ -21,8 +21,8 @@ public class VarMutsSuscSummary extends SuscSummary {
 	private final MutationSet<SARS2> mutations;
 	private transient Set<Isolate> hitIsolates;
 	private transient IsolateMatchType matchType;
-	private transient Integer numIsolateOnlyMutations;
-	private transient Integer numQueryOnlyMutations;
+	private transient Integer numDiffMutations;
+	private transient Integer numDiffDRMs;
 	private Integer displayOrder;
 	
 	static List<VarMutsSuscSummary> decideDisplayPriority(List <VarMutsSuscSummary> items) {
@@ -36,22 +36,22 @@ public class VarMutsSuscSummary extends SuscSummary {
 		Set<IsolateMatchType> expandableTypes = matchTypes.stream()
 			.skip(1).limit(2).collect(Collectors.toSet());
 		List<VarMutsSuscSummary> results = new ArrayList<>();
-		Integer subsetMaxNumMiss = 0;
-		Integer subsetMinNumMiss = Integer.MAX_VALUE;
-		Integer overlapMinNumMiss = Integer.MAX_VALUE;
+		Integer subsetMaxNumDiff = 0;
+		Integer subsetMinNumDiff = Integer.MAX_VALUE;
+		Integer overlapMinNumDiff = Integer.MAX_VALUE;
 		boolean hasOverlap = false;
 
 		for (VarMutsSuscSummary item : items) {
 			IsolateMatchType matchType = item.getIsolateMatchType();
-			Integer numMiss = item.getNumMissMutations();
+			Integer numDiff = item.getNumDiffDRMs();
 			Integer displayOrder = null;
 
 			if (matchType == IsolateMatchType.SUBSET) {
-				subsetMaxNumMiss = subsetMaxNumMiss > numMiss ? subsetMaxNumMiss : numMiss;
-				subsetMinNumMiss = subsetMinNumMiss < numMiss ? subsetMinNumMiss : numMiss;
+				subsetMaxNumDiff = subsetMaxNumDiff > numDiff ? subsetMaxNumDiff : numDiff;
+				subsetMinNumDiff = subsetMinNumDiff < numDiff ? subsetMinNumDiff : numDiff;
 			}
 			
-			if (numMiss > MAX_NUM_MISS) {
+			if (numDiff > MAX_NUM_MISS) {
 				displayOrder = null;
 			}
 			else if (matchType == defaultType) {
@@ -61,12 +61,12 @@ public class VarMutsSuscSummary extends SuscSummary {
 				displayOrder = 1;
 			}
 			if (displayOrder != null && matchType == IsolateMatchType.OVERLAP) {
-				if (numMiss >= subsetMaxNumMiss) {
+				if (numDiff >= subsetMaxNumDiff) {
 					displayOrder = null;
 				}
 				else {
 					hasOverlap = true;
-					overlapMinNumMiss = overlapMinNumMiss < numMiss ? overlapMinNumMiss : numMiss;
+					overlapMinNumDiff = overlapMinNumDiff < numDiff ? overlapMinNumDiff : numDiff;
 				}
 			}
 			item.displayOrder = displayOrder;
@@ -76,17 +76,17 @@ public class VarMutsSuscSummary extends SuscSummary {
 		if (hasOverlap && defaultType == IsolateMatchType.SUBSET) {
 			// check if we should switch place of SUBSET and some OVERLAP
 			// when some OVERLAP have general better results than SUBSET
-			if (overlapMinNumMiss < subsetMinNumMiss) {
+			if (overlapMinNumDiff < subsetMinNumDiff) {
 				for (VarMutsSuscSummary item : results) {
 					Integer displayOrder = item.displayOrder;
-					Integer numMiss = item.getNumMissMutations();
+					Integer numDiff = item.getNumDiffDRMs();
 					if (displayOrder == null) {
 						continue;
 					}
 					else if (
 						displayOrder == 1 &&
-						numMiss < subsetMinNumMiss &&
-						numMiss - overlapMinNumMiss < subsetMinNumMiss - numMiss
+						numDiff < subsetMinNumDiff &&
+						numDiff - overlapMinNumDiff < subsetMinNumDiff - numDiff
 					) {
 						item.displayOrder = 0;
 					}
@@ -100,15 +100,15 @@ public class VarMutsSuscSummary extends SuscSummary {
 		
 		if (
 			defaultType == IsolateMatchType.SUBSET &&
-			subsetMaxNumMiss - subsetMinNumMiss > 3 &&
-			subsetMinNumMiss < 4
+			subsetMaxNumDiff - subsetMinNumDiff > 3 &&
+			subsetMinNumDiff < 4
 		) {
 			for (VarMutsSuscSummary item : results) {
 				if (item.getIsolateMatchType() == IsolateMatchType.SUBSET) {
 					// subsetMinNumMiss is close to EQUAL,
 					// hide imperfect matches by default
-					Integer numMiss = item.getNumMissMutations();
-					item.displayOrder = numMiss > subsetMinNumMiss ? 1 : 0;
+					Integer numDiff = item.getNumDiffDRMs();
+					item.displayOrder = numDiff > subsetMinNumDiff ? 1 : 0;
 				}
 			}
 		}
@@ -125,7 +125,11 @@ public class VarMutsSuscSummary extends SuscSummary {
 				if (cmp != 0) {
 					return cmp;
 				}
-				cmp = itemA.getNumMissMutations().compareTo(itemB.getNumMissMutations());
+				cmp = itemA.getNumDiffDRMs().compareTo(itemB.getNumDiffDRMs());
+				if (cmp != 0) {
+					return cmp;
+				}
+				cmp = itemA.getNumDiffMutations().compareTo(itemB.getNumDiffMutations());
 				if (cmp != 0) {
 					return cmp;
 				}
@@ -180,6 +184,16 @@ public class VarMutsSuscSummary extends SuscSummary {
 			.subtractsBy(SuscResult.EXCLUDE_MUTATIONS);
 	}
 	
+	public MutationSet<SARS2> getVariantMatchingMutations() {
+		if (variant == null) {
+			return null;
+		}
+		return queryMuts
+			.filterBy(mut -> mut.getGene() == SPIKE && !mut.isUnsequenced())
+			.intersectsWith(mutations)
+			.subtractsBy(SuscResult.EXCLUDE_MUTATIONS);
+	}
+	
 	public Set<Isolate> getHitIsolates() {
 		if (hitIsolates == null) {
 			hitIsolates = Collections
@@ -199,22 +213,24 @@ public class VarMutsSuscSummary extends SuscSummary {
 		return matchType;
 	}
 	
-	public Integer getNumIsolateOnlyMutations() {
-		if (numIsolateOnlyMutations == null) {
-			numIsolateOnlyMutations = getFirstItem().getNumIsolateOnlyMutations();
+	public Integer getNumDiffMutations() {
+		if (numDiffMutations == null) {
+			numDiffMutations = getItems().stream()
+				.map(item -> item.getNumIsolateOnlyMutations() + item.getNumQueryOnlyMutations())
+				.min(Integer::compare)
+				.get();
 		}
-		return numIsolateOnlyMutations;
-	}
-
-	public Integer getNumQueryOnlyMutations() {
-		if (numQueryOnlyMutations == null) {
-			numQueryOnlyMutations = getFirstItem().getNumQueryOnlyMutations();
-		}
-		return numQueryOnlyMutations;
+		return numDiffMutations;
 	}
 	
-	public Integer getNumMissMutations() {
-		return getNumIsolateOnlyMutations() + getNumQueryOnlyMutations();
+	public Integer getNumDiffDRMs() {
+		if (numDiffDRMs == null) {
+			numDiffDRMs = getItems().stream()
+				.map(item -> item.getNumIsolateOnlyDRMs() + item.getNumQueryOnlyDRMs())
+				.min(Integer::compare)
+				.get();
+		}
+		return numDiffDRMs;
 	}
 	
 	public Integer getDisplayOrder() {

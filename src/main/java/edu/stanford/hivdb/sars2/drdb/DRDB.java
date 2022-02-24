@@ -369,8 +369,12 @@ public class DRDB {
 
 			/* where = */
 			"EXISTS(" +
-			"  SELECT 1 FROM rx_antibodies RXMAB" +
-			"  WHERE S.ref_name = RXMAB.ref_name AND S.rx_name = RXMAB.rx_name" +
+			"  SELECT 1 FROM rx_antibodies RXMAB, antibodies MAB" +
+			"  WHERE" +
+			"    S.ref_name = RXMAB.ref_name AND" +
+			"    S.rx_name = RXMAB.rx_name AND" +
+			"    RXMAB.ab_name = MAB.ab_name AND" +
+			"    MAB.visibility = 1" +
 			")",
 			/* processor = */
 			rs -> {
