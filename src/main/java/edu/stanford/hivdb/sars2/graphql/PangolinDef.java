@@ -39,7 +39,7 @@ public class PangolinDef {
 		}
 		else if (seq instanceof SequenceReads) {
 			SequenceReads<?> seqReads = (SequenceReads<?>) seq;
-			String concatSeq = seqReads.getAssembledConsensus();
+			String concatSeq = seqReads.getAssembledUnambiguousConsensus();
 			Sequence inputSeq = new Sequence(seqReads.getName(), concatSeq);
 			instance = new PangolinLambda(inputSeq);
 		}
