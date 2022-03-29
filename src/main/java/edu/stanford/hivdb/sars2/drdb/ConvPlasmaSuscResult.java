@@ -13,7 +13,7 @@ public class ConvPlasmaSuscResult extends SuscResult {
 
 	private static final Map<String, Map<Mutation<SARS2>, List<SuscResult>>> searchTrees = new HashMap<>();
 
-	private final String infectedIsoName;
+	private final String infectedVarName;
 	private final String cumulativeGroup;
 
 	private static void prepareSearchTree(String drdbVersion) {
@@ -43,12 +43,12 @@ public class ConvPlasmaSuscResult extends SuscResult {
 	) {
 		super(drdbVersion, suscData);
 
-		this.infectedIsoName = (String) suscData.get("infection");
+		this.infectedVarName = (String) suscData.get("infectedVarName");
 		this.cumulativeGroup = (String) suscData.get("cumulativeGroup");
 	}
 	
-	public String getInfectedIsoName() {
-		return infectedIsoName;
+	public String getInfectedVarName() {
+		return infectedVarName;
 	}
 	
 	public String getCumulativeGroup() {

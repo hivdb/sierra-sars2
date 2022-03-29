@@ -422,7 +422,7 @@ public class DRDB {
 			"S.ineffective, " +
 			"resistance_level, " +
 			"cumulative_count, " +
-			"RXCP.infected_iso_name, " +
+			"RXCP.infected_var_name, " +
 			"RXCP.cumulative_group ",
 			
 			/* joins = */
@@ -450,7 +450,7 @@ public class DRDB {
 					result.put("ineffective", rs.getString("ineffective"));
 					result.put("fbResistanceLevel", rs.getString("resistance_level"));
 					result.put("cumulativeCount", rs.getInt("cumulative_count"));
-					result.put("infectedIsoName", rs.getString("infected_iso_name"));
+					result.put("infectedVarName", rs.getString("infected_var_name"));
 					result.put("cumulativeGroup", rs.getString("cumulative_group"));
 					return result;
 				}

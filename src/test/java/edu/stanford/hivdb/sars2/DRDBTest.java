@@ -15,7 +15,7 @@ import edu.stanford.hivdb.sars2.drdb.Isolate;
 
 public class DRDBTest {
 
-	private final String drdbVer = "20210531-slim";
+	private final String drdbVer = "20220328-162024-slim";
 	private final DRDB drdbObj = DRDB.getInstance(drdbVer);
 
 	@Test
@@ -40,9 +40,9 @@ public class DRDBTest {
 		assertEquals(
 			Set.of(
 				"refName", "refDOI", "refURL", "rxName",
-				"controlIsoName", "isoName", "assay",
-				"section", "ordinalNumber", "foldCmp", "fold", "ineffective",
-				"fbResistanceLevel", "cumulativeCount", "infectedIsoName",
+				"controlIsoName", "isoName", "assayName",
+				"section", "foldCmp", "fold", "ineffective",
+				"fbResistanceLevel", "cumulativeCount", "infectedVarName",
 				"cumulativeGroup"
 			),
 			results.get(0).keySet()

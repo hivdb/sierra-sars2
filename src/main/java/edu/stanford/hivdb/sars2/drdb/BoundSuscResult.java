@@ -73,8 +73,8 @@ public class BoundSuscResult {
 		return ((AntibodySuscResult) suscResult).getAntibodies();
 	}
 	
-	public String getInfectedIsoName() {
-		return ((ConvPlasmaSuscResult) suscResult).getInfectedIsoName();
+	public String getInfectedVarName() {
+		return ((ConvPlasmaSuscResult) suscResult).getInfectedVarName();
 	}
 	
 	public Integer getVaccinePriority() {
