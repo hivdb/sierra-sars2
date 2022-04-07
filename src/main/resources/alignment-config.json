@@ -9,7 +9,7 @@
         "codon-alignment", "13468", "21555",
         "# For Spike, 1-213 and 214-1274 are codon aligned separately to",
         "# prevent S:212del being joined with 3 codons S:214ins of Omicron.",
-        "codon-alignment", "--gap-placement-score", "22031/6del:1,22196/3del:6", "21563", "22201",
+        "codon-alignment", "--gap-placement-score", "21635/9del:4,22031/6del:1,22196/3del:6", "21563", "22201",
         "codon-alignment", "--gap-placement-score", ",23603/12del:8", "22202", "25384",
         "codon-alignment", "25393", "26220",
         "codon-alignment", "26245", "26472",
