@@ -19,6 +19,7 @@
 package edu.stanford.hivdb.sars2;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
@@ -91,7 +92,7 @@ public class SARS2DefaultMutationsValidator implements MutationsValidator<SARS2>
 	}
 
 	@Override
-	public List<ValidationResult> validate(MutationSet<SARS2> mutations) {
+	public List<ValidationResult> validate(MutationSet<SARS2> mutations, Collection<String> includeGenes) {
 		List<ValidationResult> validationResults = new ArrayList<>();
 		validationResults.addAll(validateNoStopCodons(mutations));
 		validationResults.addAll(validateNotApobec(mutations));

@@ -10,7 +10,7 @@ import edu.stanford.hivdb.mutations.MutationSet;
 import edu.stanford.hivdb.viruses.Gene;
 import edu.stanford.hivdb.sars2.SARS2;
 
-public class UnsequencedRegionsTest {
+public class GeneRegionsTest {
 
 	@Test
 	public void testAdjacentUnseq() {
@@ -22,7 +22,7 @@ public class UnsequencedRegionsTest {
 			new CodonMutation<>(spike, 1246, "X", "NNN"),
 			p1247
 		);
-		UnsequencedRegions<SARS2> unseqs = new UnsequencedRegions<>(spike, 1, 1273, muts);
+		GeneRegions<SARS2> unseqs = GeneRegions.newUnsequencedRegions(spike, 1, 1273, muts);
 		assertEquals(1, unseqs.getRegions().size());
 		assertEquals(Long.valueOf(1246L), unseqs.getRegions().get(0).getPosStart());
 		assertEquals(Long.valueOf(1247L), unseqs.getRegions().get(0).getPosEnd());
@@ -36,7 +36,7 @@ public class UnsequencedRegionsTest {
 			new CodonMutation<>(spike, 1245, "X", "NAA"),
 			new CodonMutation<>(spike, 1246, "X", "NNN")
 		);
-		UnsequencedRegions<SARS2> unseqs = new UnsequencedRegions<>(spike, 1, 1246, muts);
+		GeneRegions<SARS2> unseqs = GeneRegions.newUnsequencedRegions(spike, 1, 1246, muts);
 		assertEquals(1, unseqs.getRegions().size());
 		assertEquals(Long.valueOf(1246L), unseqs.getRegions().get(0).getPosStart());
 		assertEquals(Long.valueOf(1273L), unseqs.getRegions().get(0).getPosEnd());

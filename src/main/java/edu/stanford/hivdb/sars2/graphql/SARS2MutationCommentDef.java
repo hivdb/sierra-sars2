@@ -34,7 +34,7 @@ import edu.stanford.hivdb.mutations.MutationSet;
 import edu.stanford.hivdb.sars2.SARS2;
 import edu.stanford.hivdb.sars2.SARS2MutationComment;
 import edu.stanford.hivdb.sars2.SARS2MutationComment.SARS2BoundMutationComment;
-import edu.stanford.hivdb.sequences.UnsequencedRegions;
+import edu.stanford.hivdb.sequences.GeneRegions;
 import edu.stanford.hivdb.viruses.Gene;
 
 
@@ -47,7 +47,7 @@ public class SARS2MutationCommentDef {
 		MutationSet<SARS2> mutations = MutationSetDef.getMutationSetFromSource(src);
 		Set<Mutation<SARS2>> filteredMuts = new LinkedHashSet<>();
 		for (Gene<SARS2> gene : sars2.getMainStrain().getGenes()) {
-			UnsequencedRegions<SARS2> unseqRegions = UnsequencedRegionsDef.getUnsequencedRegionsFromSource(src, gene);
+			GeneRegions<SARS2> unseqRegions = UnsequencedRegionsDef.getUnsequencedRegionsFromSource(src, gene);
 			filteredMuts.addAll(
 				mutations.getGeneMutationsNoSplit(gene)
 				.filterByNoSplit(mut -> !mut.isUnsequenced(unseqRegions))

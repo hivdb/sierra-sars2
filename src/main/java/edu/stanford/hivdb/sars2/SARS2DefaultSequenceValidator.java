@@ -19,6 +19,7 @@
 package edu.stanford.hivdb.sars2;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.LinkedHashSet;
@@ -39,8 +40,8 @@ import edu.stanford.hivdb.mutations.MutationSet;
 import edu.stanford.hivdb.sequences.AlignedGeneSeq;
 import edu.stanford.hivdb.sequences.AlignedSequence;
 import edu.stanford.hivdb.sequences.SequenceValidator;
-import edu.stanford.hivdb.sequences.UnsequencedRegions;
-import edu.stanford.hivdb.sequences.UnsequencedRegions.UnsequencedRegion;
+import edu.stanford.hivdb.sequences.GeneRegions;
+import edu.stanford.hivdb.sequences.GeneRegions.GeneRegion;
 import edu.stanford.hivdb.utilities.Json;
 import edu.stanford.hivdb.utilities.ValidationLevel;
 import edu.stanford.hivdb.utilities.ValidationResult;
@@ -180,7 +181,7 @@ public class SARS2DefaultSequenceValidator implements SequenceValidator<SARS2> {
 	}
 
 	@Override
-	public List<ValidationResult> validate(AlignedSequence<SARS2> alignedSequence) {
+	public List<ValidationResult> validate(AlignedSequence<SARS2> alignedSequence, Collection<String> includeGenes) {
 		List<ValidationResult> results = new ArrayList<>();
 		results.addAll(validateNotEmpty(alignedSequence));
 		if (results.size() > 0) {
@@ -214,7 +215,7 @@ public class SARS2DefaultSequenceValidator implements SequenceValidator<SARS2> {
 			if (!geneFilters.contains(geneSeq.getGene())) {
 				continue;
 			}
-			UnsequencedRegions<?> unsequenced = geneSeq.getUnsequencedRegions();
+			GeneRegions<?> unsequenced = geneSeq.getUnsequencedRegions();
 			if (unsequenced.size() > 2) {
 				results.add(newValidationResult(
 					"unsequenced-region",
@@ -223,7 +224,7 @@ public class SARS2DefaultSequenceValidator implements SequenceValidator<SARS2> {
 					unsequenced
 						.getRegions()
 						.stream()
-						.map(UnsequencedRegion::toString)
+						.map(GeneRegion::toString)
 						.collect(Collectors.joining(", "))
 				));
 			}
