@@ -113,7 +113,7 @@ public class SARS2 implements Virus<SARS2> {
 			ALIGNCONFIG_RESPATH,
 			ASSEMBLYCONFIG_RESPATH
 		);
-		registerSequenceValidator(new SARS2DefaultSequenceValidator(this));
+		registerSequenceValidator(new SARS2DefaultSequenceValidator());
 		registerMutationsValidator(new SARS2DefaultMutationsValidator());
 		registerSequenceReadsValidator(new SARS2DefaultSequenceReadsValidator());
 	}
@@ -374,6 +374,23 @@ public class SARS2 implements Virus<SARS2> {
 	@Override
 	public SequenceAssembler<SARS2> getSequenceAssembler(Strain<SARS2> strain) {
 		return dl.getSequenceAssemblers().get(strain);
+	}
+	
+	@Override
+	public String getGeneDisplay(String geneName) {
+		switch (geneName) {
+			case "S":
+				return "Spike";
+			case "_3CLpro":
+				return "3CLpro";
+			default:
+				return geneName;
+		}
+	}
+	
+	@Override
+	public String getGeneDisplay(Gene<SARS2> gene) {
+		return getGeneDisplay(gene.getAbstractGene());
 	}
 
 }

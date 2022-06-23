@@ -1,6 +1,6 @@
 /*
 
-    Copyright (C) 2020 Stanford HIVDB team
+    Copyright (C) 2022 Stanford HIVDB team
 
     Sierra is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -21,513 +21,376 @@ package edu.stanford.hivdb.sars2;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
-import java.util.HashMap;
-import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import org.apache.commons.lang3.StringUtils;
 
 import com.google.common.collect.Lists;
-import com.google.common.collect.Sets;
 
 import edu.stanford.hivdb.viruses.Gene;
-// import edu.stanford.hivdb.viruses.Strain;
+import edu.stanford.hivdb.viruses.Strain;
 import edu.stanford.hivdb.mutations.Mutation;
 import edu.stanford.hivdb.mutations.FrameShift;
+import edu.stanford.hivdb.mutations.GenePosition;
 import edu.stanford.hivdb.mutations.MutationSet;
 import edu.stanford.hivdb.sequences.AlignedGeneSeq;
 import edu.stanford.hivdb.sequences.AlignedSequence;
 import edu.stanford.hivdb.sequences.SequenceValidator;
 import edu.stanford.hivdb.sequences.GeneRegions;
-import edu.stanford.hivdb.sequences.GeneRegions.GeneRegion;
 import edu.stanford.hivdb.utilities.Json;
+import edu.stanford.hivdb.utilities.MyStringUtils;
 import edu.stanford.hivdb.utilities.ValidationLevel;
 import edu.stanford.hivdb.utilities.ValidationResult;
 
 public class SARS2DefaultSequenceValidator implements SequenceValidator<SARS2> {
 
-	private static final Map<String, ValidationLevel> VALIDATION_RESULT_LEVELS;
-	private static final Map<String, String> VALIDATION_RESULT_MESSAGES;
-	private final Set<Gene<SARS2>> geneFilters;
-
-	static {
-		Map<String, ValidationLevel> levels = new HashMap<>();
-		Map<String, String> messages = new HashMap<>();
-
-		levels.put("no-gene-found", ValidationLevel.CRITICAL);
-		messages.put("no-gene-found",
-					"The input is probably not a SARS-CoV-2 sequence, " +
-					"refuse to process.");
-
-		levels.put("not-aligned-gene", ValidationLevel.SEVERE_WARNING);
-		messages.put(
-			"not-aligned-gene",
-			"This sequence may also have nucleotides belonging to %s. " +
-			"Analysis of this part of the input sequence was suppressed " +
-			"due to poor quality, insufficient size or " +
-			"improper concatenation of multiple partial sequences.");
-
-		levels.put("gap-too-long", ValidationLevel.CRITICAL);
-		messages.put(
-			"gap-too-long",
-			"This sequence has critical potentially correctable errors. It has a large sequence gap, " +
-			"defined as an insertion or deletion of >30 bps. One possible cause of this error is that " +
-			"the input sequence was concatenated from multiple partial sequences. Adding 'N's in place " +
-			"of the missing sequence will allow the sequence to be processed.");
-
-		levels.put("sequence-trimmed", ValidationLevel.WARNING);
-		messages.put(
-			"sequence-trimmed",
-			"The %s sequence had %d amino acids trimmed from its %s-end due to poor quality.");
-
-		levels.put("sequence-much-too-short", ValidationLevel.SEVERE_WARNING);
-		messages.put(
-			"sequence-much-too-short",
-			"The %s sequence contains just %d codons, " +
-			"which is not sufficient for a comprehensive interpretation.");
-
-		levels.put("sequence-too-short", ValidationLevel.WARNING);
-		messages.put(
-			"sequence-too-short",
-			"The %s sequence contains just %d codons, " +
-			"which is not sufficient for a comprehensive interpretation.");
-
-		levels.put("invalid-nas-removed", ValidationLevel.NOTE);
-		messages.put(
-			"invalid-nas-removed",
-			"Non-NA character(s) %s were found and removed from the sequence.");
-
-		levels.put("severe-warning-too-many-stop-codons", ValidationLevel.SEVERE_WARNING);
-		messages.put("severe-warning-too-many-stop-codons", "There are %d stop codons in %s: %s.");
-
-		levels.put("note-stop-codon", ValidationLevel.NOTE);
-		messages.put("note-stop-codon", "There is %d stop codon in %s: %s.");
-
-		levels.put("much-too-many-unusual-mutations", ValidationLevel.SEVERE_WARNING);
-		messages.put("much-too-many-unusual-mutations", "There are %d unusual mutations in %s: %s.");
-
-		levels.put("too-many-unusual-mutations", ValidationLevel.WARNING);
-		messages.put("too-many-unusual-mutations", "There are %d unusual mutations in %s: %s.");
-
-		levels.put("some-unusual-mutations", ValidationLevel.NOTE);
-		messages.put("some-unusual-mutations", "There are %d unusual mutations in %s: %s.");
-
-		levels.put("unusual-mutation-at-DRP-plural", ValidationLevel.WARNING);
-		messages.put("unusual-mutation-at-DRP-plural",
-				     "There are %d unusual mutations at drug-resistance positions in %s: %s.");
-
-		levels.put("unusual-mutation-at-DRP", ValidationLevel.NOTE);
-		messages.put("unusual-mutation-at-DRP",
-				     "There is %d unusual mutation at a drug-resistance position in %s: %s.");
-
-		levels.put("severe-APOBEC", ValidationLevel.SEVERE_WARNING);
-		messages.put("severe-APOBEC", "The following %d APOBEC muts were present in the sequence.%s");
-
-		levels.put("definite-APOBEC", ValidationLevel.WARNING);
-		messages.put("definite-APOBEC", "The following %d APOBEC muts were present in the sequence.%s");
-
-		levels.put("possible-APOBEC-influence", ValidationLevel.NOTE);
-		messages.put("possible-APOBEC-influence", "The following %d APOBEC muts were present in the sequence.%s");
-
-		levels.put("multiple-apobec-at-DRP", ValidationLevel.SEVERE_WARNING);
-		messages.put("multiple-apobec-at-DRP",
-				     "There are %d APOBEC-associated mutations at drug-resistance positions: %s.");
-
-		levels.put("single-apobec-at-DRP", ValidationLevel.WARNING);
-		messages.put("single-apobec-at-DRP",
-				     "There is %d APOBEC-associated mutation at a drug-resistance position: %s.");
-
-		levels.put("two-or-more-unusual-indels-and-frameshifts", ValidationLevel.SEVERE_WARNING);
-		messages.put("two-or-more-unusual-indels-and-frameshifts",
-				"The %s gene has %d unusual indels and/or frameshifts. " +
-				"The indels include %s. The frameshifts include %s.");
-
-		levels.put("two-or-more-frameshifts", ValidationLevel.SEVERE_WARNING);
-		messages.put("two-or-more-frameshifts", "The %s gene has %d frameshifts: %s.");
-
-		levels.put("two-or-more-unusual-indels", ValidationLevel.SEVERE_WARNING);
-		messages.put("two-or-more-unusual-indels", "The %s gene has %d unusual indels: %s.");
-
-		levels.put("one-frameshift", ValidationLevel.WARNING);
-		messages.put("one-frameshift", "The %s gene has a frameshift: %s.");
-
-		levels.put("one-unusual-indel", ValidationLevel.WARNING);
-		messages.put("one-unusual-indel", "The %s gene has an unusual indel: %s.");
-
-		levels.put("hiv-2", ValidationLevel.WARNING);
-		messages.put("hiv-2", "The sequence is from an SARS2-2 virus");
-
-		levels.put("overlap", ValidationLevel.WARNING);
-		messages.put(
-			"overlap", "Alignment overlap detected at the begining of %s " +
-			"sequence (\"%s\"). Try insert Ns between partial sequences.");
-
-		levels.put("reverse-complement", ValidationLevel.WARNING);
-		messages.put(
-			"reverse-complement", "This report was derived from the reverse complement of input sequence.");
-
-		levels.put("unsequenced-region", ValidationLevel.WARNING);
-		messages.put("unsequenced-region", "Of %s gene, %d positions are unsequenced: %s.");
-
-		VALIDATION_RESULT_LEVELS = Collections.unmodifiableMap(levels);
-		VALIDATION_RESULT_MESSAGES = Collections.unmodifiableMap(messages);
-	}
-	
-	protected SARS2DefaultSequenceValidator(SARS2 virusIns) {
-		geneFilters = Set.of(virusIns.getGene("SARS2S"));
-		
-	}
+	protected SARS2DefaultSequenceValidator() {}
 
 	@Override
 	public List<ValidationResult> validate(AlignedSequence<SARS2> alignedSequence, Collection<String> includeGenes) {
 		List<ValidationResult> results = new ArrayList<>();
-		results.addAll(validateNotEmpty(alignedSequence));
+		results.addAll(validateNotEmpty(alignedSequence, includeGenes));
 		if (results.size() > 0) {
 			return results;
 		}
 		results.addAll(validateReverseComplement(alignedSequence));
-		results.addAll(validateGene(alignedSequence));
-		results.addAll(validateSequenceSize(alignedSequence));
-		results.addAll(validateUnsequencedRegion(alignedSequence));
-		results.addAll(validateShrinkage(alignedSequence));
-		results.addAll(validateLongGap(alignedSequence));
+		results.addAll(validateNoMissingPositions(alignedSequence, includeGenes));
+		results.addAll(validateShrinkage(alignedSequence, includeGenes));
+		results.addAll(validateLongGap(alignedSequence, includeGenes));
 		results.addAll(validateNAs(alignedSequence));
-		results.addAll(validateGaps(alignedSequence));
-		// results.addAll(validateNotApobec(alignedSequence));
-		results.addAll(validateNoStopCodons(alignedSequence));
-		// results.addAll(validateNoTooManyUnusualMutations(alignedSequence));
+		results.addAll(validateGaps(alignedSequence, includeGenes));
+		results.addAll(validateNoStopCodons(alignedSequence, includeGenes));
+		results.addAll(validateNoTooManyUnusualMutations(alignedSequence, includeGenes));
 		return results;
 	}
 
-	protected ValidationResult newValidationResult(String key, Object... args) {
-		ValidationLevel level = VALIDATION_RESULT_LEVELS.get(key);
-		String message = String.format(
-			VALIDATION_RESULT_MESSAGES.get(key),
-			args);
-		return new ValidationResult(level, message);
-	}
-
-	protected List<ValidationResult> validateUnsequencedRegion(AlignedSequence<?> alignedSequence) {
-		List<ValidationResult> results = new ArrayList<>();
-		for (AlignedGeneSeq<?> geneSeq : alignedSequence.getAlignedGeneSequences()) {
-			if (!geneFilters.contains(geneSeq.getGene())) {
-				continue;
-			}
-			GeneRegions<?> unsequenced = geneSeq.getUnsequencedRegions();
-			if (unsequenced.size() > 2) {
-				results.add(newValidationResult(
-					"unsequenced-region",
-					geneSeq.getAbstractGene(),
-					unsequenced.size(),
-					unsequenced
-						.getRegions()
-						.stream()
-						.map(GeneRegion::toString)
-						.collect(Collectors.joining(", "))
-				));
-			}
-		}
-		return results;
-	}
-
-	protected List<ValidationResult> validateNotEmpty(AlignedSequence<?> alignedSequence) {
-		if (alignedSequence.isEmpty()) {
-			return Lists.newArrayList(newValidationResult("no-gene-found"));
+	protected static List<ValidationResult> validateNotEmpty(
+		AlignedSequence<?> alignedSequence,
+		Collection<String> includeGenes
+	) {
+		SARS2 virusIns = SARS2.getInstance();
+		boolean isNotEmpty = alignedSequence.getAvailableGenes().stream()
+			.anyMatch(gene -> includeGenes.contains(gene.getAbstractGene()));
+		if (!isNotEmpty) {
+			List<String> includeGeneDisplays = includeGenes.stream()
+				.map(geneName -> virusIns.getGeneDisplay(geneName))
+				.collect(Collectors.toList());
+			return Lists.newArrayList(
+				SARS2ValidationMessage.NoGeneFound.format(
+					MyStringUtils.andListFormat(includeGeneDisplays)
+				)
+			);
 		}
 		return Collections.emptyList();
 	}
 
-	protected List<ValidationResult> validateReverseComplement(AlignedSequence<?> alignedSequence) {
+	protected static List<ValidationResult> validateReverseComplement(AlignedSequence<?> alignedSequence) {
 		if (alignedSequence.isReverseComplement()) {
-			return Lists.newArrayList(newValidationResult("reverse-complement"));
+			return Lists.newArrayList(SARS2ValidationMessage.FASTAReverseComplement.format());
 		}
 		return Collections.emptyList();
 	}
 
-	protected List<ValidationResult> validateGene(AlignedSequence<?> alignedSequence) {
-		Set<Gene<?>> discardedGenes = new LinkedHashSet<>(alignedSequence.getDiscardedGenes().keySet());
-		int leftIgnored = 0x7fffffff;
-		int rightIgnored = 0;
-		// Strain<?> strain = alignedSequence.getStrain();
-		// List<?> availableGenes = alignedSequence.getAvailableGenes();
-		for (AlignedGeneSeq<?> geneSeq : alignedSequence.getAlignedGeneSequences()) {
-			leftIgnored = Math.min(leftIgnored, geneSeq.getFirstNA() - 1);
-			rightIgnored = Math.max(rightIgnored, geneSeq.getLastNA());
-		}
-		rightIgnored = alignedSequence.getInputSequence().getLength() - rightIgnored;
-		/*if (!availableGenes.contains(strain.getGene("PR")) && leftIgnored > 210) {
-			discardedGenes.add(strain.getGene("PR"));
-		}
-		if (!availableGenes.contains(strain.getGene("RT")) && leftIgnored > 800) {
-			discardedGenes.add(strain.getGene("RT"));
-		} else if (!availableGenes.contains(strain.getGene("RT")) && rightIgnored > 800) {
-			discardedGenes.add(strain.getGene("RT"));
-		}
-		if (!availableGenes.contains(strain.getGene("IN")) && rightIgnored > 600) {
-			discardedGenes.add(strain.getGene("IN"));
-		}*/
-		if (!Sets.intersection(discardedGenes, geneFilters).isEmpty()) {
+	protected static List<ValidationResult> validateNoMissingPositions(
+		final Set<GenePosition<SARS2>> needGenePositions,
+		final Set<GenePosition<SARS2>> needDRGenePositions,
+		final Set<GenePosition<SARS2>> availableGenePositions
+	) {
+		List<ValidationResult> results = new ArrayList<>();
+
+		List<GenePosition<SARS2>> missingPositions = needGenePositions.stream()
+				.filter(gp -> !availableGenePositions.contains(gp))
+				.collect(Collectors.toList());
+		long numMissingPositions = missingPositions.size();
+
+		List<GenePosition<SARS2>> missingDRPs = needDRGenePositions.stream()
+				.filter(gp -> !availableGenePositions.contains(gp))
+				.collect(Collectors.toList());
+		long numMissingDRPs = missingDRPs.size();
 		
-			String textDiscardedGenes = discardedGenes
-				.stream().map(g -> g.getName())
-				.collect(Collectors.joining(" or "));
-			return Lists.newArrayList(newValidationResult("not-aligned-gene", textDiscardedGenes));
-		}
+		String textMissingPositions = StringUtils.join(
+			GeneRegions.newListOfGeneRegions(missingPositions),
+			"; "
+		);
+
+		String textMissingDRPs = StringUtils.join(
+			GeneRegions.newListOfGeneRegions(missingDRPs),
+			"; "
+		);
 		
-		return Collections.emptyList();
+		if (numMissingDRPs > 1) {
+			results.add(SARS2ValidationMessage.MultiplePositionsMissingWithMultipleDRPs.formatWithLevel(
+				numMissingDRPs > 5 ? ValidationLevel.SEVERE_WARNING : ValidationLevel.WARNING,
+				numMissingPositions,
+				textMissingPositions,
+				numMissingDRPs,
+				textMissingDRPs
+			));
+		}
+		else if (numMissingDRPs > 0 && numMissingPositions > 1) {
+			results.add(SARS2ValidationMessage.MultiplePositionsMissingWithSingleDRP.formatWithLevel(
+				ValidationLevel.WARNING,
+				numMissingPositions,
+				textMissingPositions,
+				textMissingDRPs
+			));
+		}
+		else if (numMissingDRPs > 0) {
+			results.add(SARS2ValidationMessage.SingleDRPMissing.formatWithLevel(
+				ValidationLevel.NOTE,
+				textMissingDRPs
+			));
+		}
+		else if (numMissingPositions > 1) {
+			results.add(SARS2ValidationMessage.MultiplePositionsMissingWithoutDRP.formatWithLevel(
+				ValidationLevel.WARNING,
+				numMissingPositions,
+				textMissingPositions
+			));
+		}
+		else if (numMissingPositions > 0) {
+			results.add(SARS2ValidationMessage.SinglePositionMissingWithoutDRP.formatWithLevel(
+				ValidationLevel.NOTE,
+				textMissingPositions
+			));
+		}
+		return results;
 	}
 
-	protected List<ValidationResult> validateSequenceSize(AlignedSequence<SARS2> alignedSequence) {
-		/* int size;
-		AlignedGeneSeq<?> geneSeq;
-		int[] muchTooShortSize = new int[] {60, 150, 100};
-		int[] tooShortSize = new int[] {80, 200, 200};
-		String[] geneNames = new String[] {"PR", "RT", "IN"}; */
-		List<ValidationResult> result = new ArrayList<>();
-		
-		/*for (int i = 0; i < 3; i ++) {
-			geneSeq = alignedSequence.getAlignedGeneSequence(geneNames[i]);
-			if (geneSeq != null) {
-				size = geneSeq.getSize();
-				if (size < muchTooShortSize[i]) {
-					result.add(newValidationResult("sequence-much-too-short", geneNames[i], size));
-				} else if (size < tooShortSize[i]) {
-					result.add(newValidationResult("sequence-too-short", geneNames[i], size));
+	protected static List<ValidationResult> validateNoMissingPositions(
+		AlignedSequence<SARS2> alignedSequence,
+		Collection<String> includeGenes
+	) {
+		List<AlignedGeneSeq<SARS2>> geneSeqs = alignedSequence.getAlignedGeneSequences(includeGenes);
+		if (geneSeqs.isEmpty()) {
+			return Collections.emptyList();
+		}
+		AlignedGeneSeq<SARS2> geneSeq = geneSeqs.get(0);
+		GenePosition<SARS2> leftMost = new GenePosition<>(geneSeq.getGene(), 1);
+		geneSeq = geneSeqs.get(geneSeqs.size() - 1);
+		GenePosition<SARS2> rightMost = new GenePosition<>(geneSeq.getGene(), geneSeq.getGene().getAASize());
+		Strain<SARS2> strain = alignedSequence.getStrain();
+		Map<Gene<SARS2>, GeneRegions<SARS2>> unseqRegions = includeGenes.stream()
+			.map(absGene -> strain.getGene(absGene))
+			.collect(Collectors.toMap(
+				gene -> gene,
+				gene -> {
+					AlignedGeneSeq<SARS2> gs = alignedSequence.getAlignedGeneSequence(gene);
+					return gs == null ? (
+						GeneRegions.newGeneRegions(gene, 1, gene.getAASize())
+					) : gs.getUnsequencedRegions();
 				}
-			}
-		}*/
-		return result;
+			));
+			
+		Set<GenePosition<SARS2>> needGenePositions = GenePosition
+			.getGenePositionsBetween(leftMost, rightMost, includeGenes);
+		
+		// For DRPs, the leftMost must be the begining of the first gene and the rightMost must be the ending of the last gene
+		Set<GenePosition<SARS2>> needDRGenePositions = GenePosition
+			.getDRGenePositionsBetween(leftMost, rightMost, includeGenes);
+
+		Set<GenePosition<SARS2>> availableGenePositions = needGenePositions.stream()
+			.filter(gpos -> {
+				Gene<SARS2> gene = gpos.getGene();
+				GeneRegions<SARS2> geneUnseqRegions = unseqRegions.get(gene);
+				if (geneUnseqRegions == null) {
+					return true;
+				}
+				if (geneUnseqRegions.contains(gpos.getPosition())) {
+					return false;
+				}
+				return true;
+			})	
+			.collect(Collectors.toSet());
+		return validateNoMissingPositions(
+			needGenePositions,
+			needDRGenePositions,
+			availableGenePositions
+		);
 	}
 
-	protected List<ValidationResult> validateShrinkage(AlignedSequence<SARS2> alignedSequence) {
+	protected static List<ValidationResult> validateShrinkage(
+		AlignedSequence<SARS2> alignedSequence,
+		Collection<String> includeGenes
+	) {
 		List<ValidationResult> result = new ArrayList<>();
 		for (AlignedGeneSeq<SARS2> geneSeq : alignedSequence.getAlignedGeneSequences()) {
-			Gene<SARS2> gene = geneSeq.getGene();
-			if (!geneFilters.contains(gene)) {
+			String geneName = geneSeq.getAbstractGene();
+			if (!includeGenes.contains(geneName)) {
 				continue;
 			}
+			String geneDisplay = geneSeq.getGeneDisplay();
 			int[] trimmed = geneSeq.getShrinkage();
 			int leftTrimmed = trimmed[0];
 			int rightTrimmed = trimmed[1];
 			if (leftTrimmed > 0) {
-				result.add(newValidationResult("sequence-trimmed", gene.getAbstractGene(), leftTrimmed, "5′"));
+				result.add(SARS2ValidationMessage.FASTASequenceTrimmed.format(geneDisplay, leftTrimmed, "5′"));
 			}
 			if (rightTrimmed > 0) {
-				result.add(newValidationResult("sequence-trimmed", gene.getAbstractGene(), rightTrimmed, "3′"));
+				result.add(SARS2ValidationMessage.FASTASequenceTrimmed.format(geneDisplay, rightTrimmed, "3′"));
 			}
 		}
 		return result;
 	}
 
-	protected List<ValidationResult> validateLongGap(AlignedSequence<SARS2> alignedSequence) {
-		int gapLenThreshold = 10;
-		int continuousDels = 0;
+	protected static List<ValidationResult> validateLongGap(
+		AlignedSequence<SARS2> alignedSequence,
+		Collection<String> includeGenes
+	) {
+		int gapLenThreshold = 20;
+		int totalIndels = 0;
 		List<ValidationResult> result = new ArrayList<>();
 		for (Mutation<SARS2> mut : alignedSequence.getMutations()) {
-			if (!geneFilters.contains(mut.getGene())) {
+			if (!includeGenes.contains(mut.getAbstractGene())) {
 				continue;
 			}
-			if (continuousDels > gapLenThreshold) {
-				result.add(newValidationResult("gap-too-long"));
+			if (totalIndels > gapLenThreshold) {
+				result.add(SARS2ValidationMessage.FASTAGapTooLong.format());
 				break;
 			}
 			if (mut.getInsertedNAs().length() > gapLenThreshold * 3) {
-				result.add(newValidationResult("gap-too-long"));
+				result.add(SARS2ValidationMessage.FASTAGapTooLong.format());
 				break;
 			}
 			if (mut.isDeletion()) {
-				continuousDels ++;
-			} else {
-				continuousDels = 0;
+				totalIndels ++;
+			}
+			else if (mut.isInsertion()) {
+				totalIndels += Math.round(mut.getInsertedNAs().length() / 3);
+			}
+			else {
+				totalIndels = 0;
 			}
 		}
 		return result;
 	}
 
-	protected List<ValidationResult> validateNAs(AlignedSequence<SARS2> alignedSequence) {
+	protected static List<ValidationResult> validateNAs(AlignedSequence<SARS2> alignedSequence) {
 		List<String> invalids =
 			alignedSequence.getInputSequence().removedInvalidChars()
 			.stream().map(c -> "" + c)
 			.collect(Collectors.toList());
 		List<ValidationResult> result = new ArrayList<>();
 		if (!invalids.isEmpty()) {
-			result.add(newValidationResult(
-				"invalid-nas-removed", Json.dumps(String.join("", invalids)))
-			);
+			result.add(SARS2ValidationMessage.FASTAInvalidNAsRemoved.format(
+				Json.dumps(String.join("", invalids))
+			));
 		}
 		return result;
 	}
 
-	protected List<ValidationResult> validateNoStopCodons(AlignedSequence<SARS2> alignedSequence) {
-		Map<Gene<SARS2>, AlignedGeneSeq<SARS2>> alignedGeneSeqs = alignedSequence.getAlignedGeneSequenceMap();
-		List<ValidationResult> result = new ArrayList<>();
-
-		for (Gene<SARS2> gene : alignedGeneSeqs.keySet()) {
-			if (!geneFilters.contains(gene)) {
-				continue;
-			}
-			MutationSet<SARS2> stopCodons = alignedGeneSeqs.get(gene).getStopCodons();
-			String stops = stopCodons.join(", ");
-			int numStopCodons = stopCodons.size();
-			if (numStopCodons > 1) {
-				result.add(newValidationResult(
-					"severe-warning-too-many-stop-codons",
-					numStopCodons, gene.getAbstractGene(), stops));
-			} else if (numStopCodons > 0) {
-				result.add(newValidationResult(
-					"note-stop-codon", numStopCodons, gene.getAbstractGene(), stops));
-			}
-		}
-		return result;
-	}
-
-	protected List<ValidationResult> validateNoTooManyUnusualMutations(AlignedSequence<SARS2> alignedSequence) {
-		List<ValidationResult> result = new ArrayList<>();
-		Map<Gene<SARS2>, AlignedGeneSeq<SARS2>> alignedGeneSeqs = alignedSequence.getAlignedGeneSequenceMap();
-
-		for (Gene<SARS2> gene : alignedGeneSeqs.keySet()) {
-			if (!geneFilters.contains(gene)) {
-				continue;
-			}
-			AlignedGeneSeq<SARS2> alignedGeneSeq = alignedGeneSeqs.get(gene);
-			MutationSet<SARS2> unusualMutations = alignedGeneSeq.getUnusualMutations();
-			String text = unusualMutations.join(", ");
-			int numUnusual = unusualMutations.size();
-			if (numUnusual > 8) {
-				result.add(newValidationResult(
-					"much-too-many-unusual-mutations",
-					numUnusual, gene.getAbstractGene(), text));
-			} else if (numUnusual > 4) {
-				result.add(newValidationResult(
-					"too-many-unusual-mutations",
-					numUnusual, gene.getAbstractGene(), text));
-			} else if (numUnusual > 2) {
-				result.add(newValidationResult(
-					"some-unusual-mutations",
-					numUnusual, gene.getAbstractGene(), text));
-			}
-			MutationSet<SARS2> unusualMutAtDRP = alignedGeneSeq.getUnusualMutationsAtDrugResistancePositions();
-			int numUnusualAtDRP = unusualMutAtDRP.size();
-			if (numUnusualAtDRP > 1) {
-				result.add(newValidationResult(
-					"unusual-mutation-at-DRP-plural",
-					numUnusualAtDRP, gene.getAbstractGene(), unusualMutAtDRP.join(", ")));
-			} else if (numUnusualAtDRP == 1) {
-				result.add(newValidationResult(
-					"unusual-mutation-at-DRP",
-					numUnusualAtDRP, gene.getAbstractGene(), unusualMutAtDRP.join(", ")));
-			}
-		}
-		return result;
-	}
-
-	/*@SuppressWarnings("unused")
-	private boolean validateGroupO() {
-		Subtyper subtyper = alignedSequence.getSubtyper();
-		return subtyper.getClosestSubtype() == Subtype.O;
-	}
-
-	@SuppressWarnings("unused")
-	private boolean validateGroupN() {
-		Subtyper subtyper = alignedSequence.getSubtyper();
-		return subtyper.getClosestSubtype() == Subtype.N;
-	}*/
-
-	protected List<ValidationResult> validateNotApobec(AlignedSequence<SARS2> alignedSequence) {
-		MutationSet<SARS2> apobecs = alignedSequence.getMutations().getApobecMutations();
-		MutationSet<SARS2> apobecDRMs = alignedSequence.getMutations().getApobecDRMs();
+	protected static List<ValidationResult> validateNoStopCodons(
+		AlignedSequence<SARS2> alignedSequence,
+		Collection<String> includeGenes
+	) {
 		List<ValidationResult> results = new ArrayList<>();
-		int numApobecMuts = apobecs.size();
-		int numApobecDRMs = apobecDRMs.size();
-		String extraCmt = "";
+		MutationSet<SARS2> stopCodons = (
+			alignedSequence.getMutations()
+			.getStopCodons()
+			.filterBy(mut -> includeGenes.contains(mut.getAbstractGene()))
+		);
+		for (Map.Entry<Gene<SARS2>, MutationSet<SARS2>> entry : stopCodons.groupByGene().entrySet()) {
+			String geneDisplay = entry.getKey().getDisplay();
+			MutationSet<SARS2> geneStopCodons = entry.getValue();
+			int numGeneStopCodons = geneStopCodons.size();
+			String geneStopText = geneStopCodons.join(", ", Mutation::getHumanFormat);
+			if (numGeneStopCodons > 1) {
+				results.add(SARS2ValidationMessage.MultipleStopCodons.formatWithLevel(
+					ValidationLevel.SEVERE_WARNING,
+					numGeneStopCodons,
+					geneDisplay,
+					geneStopText
+				));
+			} else if (numGeneStopCodons > 0) {
+				results.add(SARS2ValidationMessage.SingleStopCodon.formatWithLevel(
+					ValidationLevel.NOTE,
+					geneDisplay,
+					geneStopText
+				));
+			}
+		}
 		
-		if (numApobecDRMs > 0) {
-			extraCmt = String.format(
-				" The following %d DRMs in this sequence could reflect APOBEC activity: %s.",
-				numApobecDRMs,
-				apobecDRMs.groupByGene()
-				.entrySet()
-				.stream()
-				.map(e -> String.format(
-					"%s: %s", e.getKey().getAbstractGene(),
-					e.getValue().join(", ")
-				))
-			);
-		}
-
-		if (numApobecMuts > 4) {
-			results.add(newValidationResult("severe-APOBEC", numApobecMuts, extraCmt));
-		} else if (numApobecMuts > 2) {
-			results.add(newValidationResult("definite-APOBEC", numApobecMuts, extraCmt));
-		} else if (numApobecMuts == 2) {
-			results.add(newValidationResult("possible-APOBEC-influence", numApobecMuts, extraCmt));
-		}
-
-		MutationSet<SARS2> apobecMutsAtDRP = apobecs.getAtDRPMutations();
-		int numApobecMutsAtDRP = apobecMutsAtDRP.size();
-		if (numApobecMutsAtDRP > 1) {
-			results.add(newValidationResult(
-				"multiple-apobec-at-DRP", numApobecMutsAtDRP,
-				apobecMutsAtDRP.join(", ", Mutation::getHumanFormatWithGene)));
-		} else if (numApobecMutsAtDRP == 1) {
-			results.add(newValidationResult(
-				"single-apobec-at-DRP", numApobecMutsAtDRP,
-				apobecMutsAtDRP.join(", ", Mutation::getHumanFormatWithGene)));
-		}
 		return results;
 	}
 
-	private List<ValidationResult> validateGaps(AlignedSequence<SARS2> alignedSequence) {
+	protected static List<ValidationResult> validateNoTooManyUnusualMutations(
+		AlignedSequence<SARS2> alignedSequence,
+		Collection<String> includeGenes
+	) {
+		return SARS2DefaultMutationsValidator.validateNoTooManyUnusualMutations(alignedSequence.getMutations(), includeGenes);
+	}
+
+	private static List<ValidationResult> validateGaps(
+		AlignedSequence<SARS2> alignedSequence,
+		Collection<String> includeGenes
+	) {
 		Map<Gene<SARS2>, AlignedGeneSeq<SARS2>> alignedGeneSeqs = alignedSequence.getAlignedGeneSequenceMap();
 		List<Gene<SARS2>> seqGenes = alignedSequence.getAvailableGenes();
 		List<ValidationResult> results = new ArrayList<>();
 
 		for (Gene<SARS2> gene : seqGenes) {
-			if (!geneFilters.contains(gene)) {
+			String geneName = gene.getAbstractGene();
+			if (!includeGenes.contains(geneName)) {
 				continue;
 			}
+			String geneDisplay = gene.getDisplay();
 			AlignedGeneSeq<SARS2> alignedGeneSeq = alignedGeneSeqs.get(gene);
 			List<FrameShift<SARS2>> frameShifts = alignedGeneSeq.getFrameShifts();
-			// MutationSet<SARS2> insertions = alignedGeneSeq.getInsertions();
-			// MutationSet<SARS2> deletions = alignedGeneSeq.getDeletions();
-			// MutationSet<SARS2> unusualInsertions = insertions.getUnusualMutations();
-			// MutationSet<SARS2> unusualDeletions = deletions.getUnusualMutations();
-			// MutationSet<SARS2> unusualIndels = unusualInsertions.mergesWith(unusualDeletions);
-			// int numTotal = frameShifts.size() + unusualInsertions.size() + unusualDeletions.size();
+			MutationSet<SARS2> insertions = alignedGeneSeq.getInsertions();
+			MutationSet<SARS2> deletions = alignedGeneSeq.getDeletions();
+			MutationSet<SARS2> unusualInsertions = insertions.getUnusualMutations();
+			MutationSet<SARS2> unusualDeletions = deletions.getUnusualMutations();
+			MutationSet<SARS2> unusualIndels = unusualInsertions.mergesWith(unusualDeletions);
+			int numTotal = frameShifts.size() + unusualInsertions.size() + unusualDeletions.size();
 			String frameShiftListText = FrameShift.joinFrameShifts(frameShifts);
-			// String unusualIndelsListText = unusualIndels.join(", ");
+			String unusualIndelsListText = unusualIndels.join(", ");
 
-			/* if (numTotal > 1) {
+			if (numTotal > 1) {
 				if (frameShifts.size() > 0 && unusualIndels.size() > 0) {
-					results.add(newValidationResult(
-						"two-or-more-unusual-indels-and-frameshifts", gene.getAbstractGene(),
-						numTotal, unusualIndelsListText, frameShiftListText));
+					results.add(SARS2ValidationMessage.MultipleUnusualIndelsAndFrameshifts.formatWithLevel(
+						ValidationLevel.SEVERE_WARNING,
+						geneDisplay,
+						numTotal,
+						unusualIndelsListText,
+						frameShiftListText
+					));
 				} else if (frameShifts.size() > 0) {
-					results.add(newValidationResult(
-						"two-or-more-frameshifts", gene.getAbstractGene(), numTotal,
-						frameShiftListText));
+					results.add(SARS2ValidationMessage.MultipleFrameShifts.formatWithLevel(
+						ValidationLevel.SEVERE_WARNING,
+						geneDisplay,
+						numTotal,
+						frameShiftListText
+					));
 				} else {
-					results.add(newValidationResult(
-						"two-or-more-unusual-indels", gene.getAbstractGene(), numTotal,
-						unusualIndelsListText));
+					results.add(SARS2ValidationMessage.MultipleUnusualIndels.formatWithLevel(
+						ValidationLevel.SEVERE_WARNING,
+						geneDisplay,
+						numTotal,
+						unusualIndelsListText
+					));
 				}
 
-			} else if (numTotal > 0 ) {*/
+			} else if (numTotal >0 ) {
 				if (frameShifts.size() > 0) {
-					results.add(newValidationResult(
-						"one-frameshift", gene.getAbstractGene(), frameShiftListText));
-				}/* else {
-					results.add(newValidationResult(
-						"one-unusual-indel", gene.getAbstractGene(), unusualIndelsListText));
+					results.add(SARS2ValidationMessage.SingleFrameshift.formatWithLevel(
+						ValidationLevel.WARNING,
+						geneDisplay,
+						frameShiftListText
+					));
+				} else {
+					results.add(SARS2ValidationMessage.SingleUnusualIndel.formatWithLevel(
+						ValidationLevel.WARNING,
+						geneDisplay,
+						unusualIndelsListText
+					));
 				}
 
-			}*/
+			}
 		}
 		return results;
 	}
-
-
 
 }
