@@ -38,7 +38,7 @@ public class IsolateDef {
 			.name("variantName")
 			.description("Variant name."))
 		.field(field -> MutationSetDef.newMutationSet(
-			"SARS2", field, "mutations"
+			"SARS2", field, "mutations", false
 		).description("Isolate mutations."))
 		.build();
 

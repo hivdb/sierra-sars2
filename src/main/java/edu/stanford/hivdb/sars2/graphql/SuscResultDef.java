@@ -131,21 +131,21 @@ public class SuscResultDef {
 			.name("variant")
 			.type(VariantDef.oVariant)
 			.description("Variant (only available for `itemsByVariantOrMutations`)"))
-		.field(field -> MutationSetDef.newMutationSet("SARS2", field, "mutations")
+		.field(field -> MutationSetDef.newMutationSet("SARS2", field, "mutations", false)
 			.description("Isolate mutations (only available for `itemsByMutations` and `itemsByVariantOrMutations`)"))
-		.field(field -> MutationSetDef.newMutationSet("SARS2", field, "variantExtraMutations")
+		.field(field -> MutationSetDef.newMutationSet("SARS2", field, "variantExtraMutations", false)
 			.description(
 				"For `itemsByVariantOrMutations`, if a named variant is available, " +
 				"this field list mutations that only present in this variant; otherwise returns null"
 			)
 		)
-		.field(field -> MutationSetDef.newMutationSet("SARS2", field, "variantMissingMutations")
+		.field(field -> MutationSetDef.newMutationSet("SARS2", field, "variantMissingMutations", false)
 			.description(
 				"For `itemsByVariantOrMutations`, if a named variant is available, " +
 				"this field list mutations that only present in input mutations/sequence/sequence reads; otherwise returns null"
 			)
 		)
-		.field(field -> MutationSetDef.newMutationSet("SARS2", field, "variantMatchingMutations")
+		.field(field -> MutationSetDef.newMutationSet("SARS2", field, "variantMatchingMutations", false)
 			.description(
 				"For `itemsByVariantOrMutations`, if a named variant is available, " +
 				"this field list mutations that present in both input mutations/sequence/sequence reads and this variant; otherwise returns null"

@@ -59,7 +59,7 @@ public class SARS2MutationCommentDef {
 	public static GraphQLObjectType oSARS2MutComment = newObject()
 		.name("SARS2BoundMutationComment")
 		.description("SARS-CoV-2 mutation comments")
-		.field(field -> MutationSetDef.newMutationSet("SARS2", field, "triggeredMutations")
+		.field(field -> MutationSetDef.newMutationSet("SARS2", field, "triggeredMutations", false)
 			.description("Mutations matched this comment."))
 		.field(field -> field
 			.type(new GraphQLList(GeneDef.oGene.get("SARS2")))
