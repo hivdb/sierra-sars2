@@ -25,7 +25,7 @@ RUN apt-get -q update && apt-get install -qqy python3.9-full python3.9-dev gcc
 ADD https://bootstrap.pypa.io/get-pip.py /tmp/get-pip.py
 RUN python3.9 /tmp/get-pip.py
 RUN pip install cython
-ARG POSTALIGN_VERSION=a1ae475ed54697759e250355d12e651d6a8bc4a4
+ARG POSTALIGN_VERSION=4613ebe0f6e37727f9eaab71b76d18cd6488907b
 RUN pip install https://github.com/hivdb/post-align/archive/${POSTALIGN_VERSION}.zip
 
 FROM hivdb/tomcat-with-nucamino:latest
