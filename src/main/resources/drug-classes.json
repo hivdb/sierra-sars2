@@ -7,5 +7,23 @@
     "strains": ["SARS2"],
     "synonyms": [],
     "mutationTypes": ["Major", "Accessory", "Other"]
+  },
+  {
+    "name": "_3CLPI",
+    "ordinal": 2,
+    "abstractGene": "_3CLpro",
+    "fullName": "3C-like protease inhibitor",
+    "strains": ["SARS2"],
+    "synonyms": [],
+    "mutationTypes": ["Major", "Accessory", "Other"]
+  },
+  {
+    "name": "RdRPI",
+    "ordinal": 3,
+    "abstractGene": "RdRP",
+    "fullName": "RNA-dependent RNA polymerase inhibitor",
+    "strains": ["SARS2"],
+    "synonyms": [],
+    "mutationTypes": ["Major", "Accessory", "Other"]
   }
 ]
