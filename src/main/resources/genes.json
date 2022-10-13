@@ -54,7 +54,7 @@
       "Other"
     ],
     "strainModifiers": {},
-    "synonyms": ["SARS23CL", "SARS23CLpro", "SARS2nsp5"]
+    "synonyms": ["SARS23CL", "SARS23CLpro", "SARS2nsp5", "SARS2Mpro"]
   },
   {
     "name": "SARS2nsp6",
