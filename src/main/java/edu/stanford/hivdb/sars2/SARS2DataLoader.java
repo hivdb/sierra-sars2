@@ -73,7 +73,7 @@ public class SARS2DataLoader<T extends Virus<T>> {
 
 	private static final Pattern SARS2_MUTATION_PATTERN = Pattern.compile(
 		"^\\s*" +
-		"(__ASI__)?((?i:nsp(?:1|2|3|4|5|6|7|8|9|10|13|14|15|16)|PLpro|PL|_?3CLpro|3CL|RdRP|S|Spike|E|M|N|ORF(?:3a|6|7a|7b|8|10)))?[:_-]?" +
+		"(__ASI__)?((?i:nsp(?:1|2|3|4|5|6|7|8|9|10|13|14|15|16)|PLpro|PL|_?3CLpro|3CL|Mpro|RdRP|S|Spike|E|M|N|ORF(?:3a|6|7a|7b|8|10)))?[:_-]?" +
 		"([AC-IK-NP-TV-Y])?" +
 		"(\\d{1,4})" +
 		"([AC-IK-NP-TV-Zid.*]+(?:[#_]?[AC-IK-NP-TV-Z.*]+)?|[id_#~-]|[iI]ns(?:ertion)?|[dD]el(?:etion)?)" +
