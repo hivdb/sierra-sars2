@@ -20,7 +20,8 @@
         "codon-alignment", "27894", "28259",
         "codon-alignment", "28274", "29533",
         "codon-alignment", "29558", "29674"
-      ]
+      ],
+      "minimap2Opts": "-w 5 --score-N 0 --secondary no"
     },
     {
       "fragmentName": "SARS2nsp1",
