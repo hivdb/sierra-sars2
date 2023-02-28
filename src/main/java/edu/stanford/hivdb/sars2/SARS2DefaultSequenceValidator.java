@@ -58,7 +58,6 @@ public class SARS2DefaultSequenceValidator implements SequenceValidator<SARS2> {
 		}
 		results.addAll(validateReverseComplement(alignedSequence));
 		results.addAll(validateNoMissingPositions(alignedSequence, includeGenes));
-		results.addAll(validateShrinkage(alignedSequence, includeGenes));
 		results.addAll(validateLongGap(alignedSequence, includeGenes));
 		results.addAll(validateNAs(alignedSequence));
 		results.addAll(validateGaps(alignedSequence, includeGenes));
@@ -210,30 +209,6 @@ public class SARS2DefaultSequenceValidator implements SequenceValidator<SARS2> {
 			needDRGenePositions,
 			availableGenePositions
 		);
-	}
-
-	protected static List<ValidationResult> validateShrinkage(
-		AlignedSequence<SARS2> alignedSequence,
-		Collection<String> includeGenes
-	) {
-		List<ValidationResult> result = new ArrayList<>();
-		for (AlignedGeneSeq<SARS2> geneSeq : alignedSequence.getAlignedGeneSequences()) {
-			String geneName = geneSeq.getAbstractGene();
-			if (!includeGenes.contains(geneName)) {
-				continue;
-			}
-			String geneDisplay = geneSeq.getGeneDisplay();
-			int[] trimmed = geneSeq.getShrinkage();
-			int leftTrimmed = trimmed[0];
-			int rightTrimmed = trimmed[1];
-			if (leftTrimmed > 0) {
-				result.add(SARS2ValidationMessage.FASTASequenceTrimmed.format(geneDisplay, leftTrimmed, "5′"));
-			}
-			if (rightTrimmed > 0) {
-				result.add(SARS2ValidationMessage.FASTASequenceTrimmed.format(geneDisplay, rightTrimmed, "3′"));
-			}
-		}
-		return result;
 	}
 
 	protected static List<ValidationResult> validateLongGap(
